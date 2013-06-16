@@ -55,6 +55,7 @@ body {
   overflow: hidden; }
 
 .tag_box li {
+  font-size: 0.75em;
   line-height: 28px; }
 
 .tag_box li i {
@@ -74,7 +75,7 @@ body {
 
 .tag_box a span {
   vertical-align: super;
-  font-size: 0.8em; }
+  font-size: 0.6em; }
 
 .tag_box a:hover {
   background-color: #e5e5e5; }

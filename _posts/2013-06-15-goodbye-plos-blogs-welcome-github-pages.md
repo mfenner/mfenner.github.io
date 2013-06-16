@@ -2,8 +2,8 @@
 layout: post
 title: "Goodbye PLOS Blogs, Welcome Github Pages"
 description: ""
-category: 
-tags: [markdown]
+category:
+tags: [markdown, github, plos]
 ---
 This is the last [Gobbledygook](http://blogs.plos.org/mfenner) post on PLOS Blogs, and at the same time the first post at the [new Github blog location](http://blog.martinfenner.org). I have been blogging at PLOS Blogs since the [PLOS Blogs Network](http://blogs.plos.org/blogosphere/) was launched in September 2010, so this step wasn't easy. But I have two good reasons.
 
