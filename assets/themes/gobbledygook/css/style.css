@@ -35,6 +35,14 @@ body {
   margin: 0;
 }
 
+h2 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.25em;
+}
+
 .about img {
   float: left;
   margin-top: 12px;
