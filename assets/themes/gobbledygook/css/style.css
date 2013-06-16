@@ -17,8 +17,12 @@ body {
   font-size: 1em;
 }
 
-.content p {
+.content p, .content ul, .content ol {
   margin-bottom: 1.5em;
+}
+
+.content ul li, .content ol li {
+  line-height: 1.5em;
 }
 
 .post-full {
