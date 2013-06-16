@@ -3,8 +3,13 @@ body {
   font-size: 1em;
 }
 
-.nav, .brand, .pagination {
+.nav, .brand, .pagination li {
   font-family: helvetica, arial, sans-serif;
+  font-size: 1em;
+}
+
+.content p {
+  margin-bottom: 1.5em;
 }
 
 .post-full {
@@ -15,7 +20,7 @@ body {
 /* Custom container */
 .container-narrow {
   margin: 0 auto;
-  max-width: 800px; }
+  max-width: 750px; }
 
 .container-narrow > hr {
   margin: 30px 0; }
@@ -39,7 +44,7 @@ body {
 
 /* post-full*/
 .post-full .date {
-  margin-bottom: 20px;
+  margin-bottom: 1em;
   font-weight: bold; }
 
 /* tag_box */
