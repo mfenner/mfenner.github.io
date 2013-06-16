@@ -27,7 +27,7 @@ url: http://blog.martinfenner.org
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 
 ## Markdown Parser (standard Jekyll argument, extended to special parser)
-markdown: rdiscount
+markdown: kramdown
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
