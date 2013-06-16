@@ -25,25 +25,27 @@
   <body>
   
   <body>
-    <div class="navbar">
-      <div class="navbar-inner">
-        <div class="container-narrow">
-          <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
-          <ul class="nav">
-            {% assign pages_list = site.pages %}
-            {% assign group = 'navigation' %}
-            {% include JB/pages_list %}
-          </ul>
+    <div class="container">
+      <div class="row-fluid">
+        <div class="offset1 span11">
+          <div class="page-header">
+            <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
+            {% if page.date %}<span class="date">{{ page.date | date_to_long_string }}</span>{% endif %}
+          </div>
+        </div>
+      
+        <div class="content">
+          <div class="offset1 span8">
+            {{ content }}
+          </div>
+        
+          <div class="span3 about">
+            <img src="http://www.gravatar.com/avatar/abfd3f212a9252ecb14687a2c62f934b" />
+            <h3><a href="{{ HOME_PATH }}">{{ site.title }}</a></h3>
+            <em><a href="http://twitter.com/mfenner">Martin Fenner</a> writes about how the internet is changing scholarly communication.</em>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="container-narrow">
-
-      <div class="content">
-        {{ content }}
-      </div>
-
     </div>
 
     {% include JB/analytics %}

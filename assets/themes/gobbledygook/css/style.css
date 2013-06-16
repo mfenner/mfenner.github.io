@@ -4,6 +4,14 @@ body {
   font-size: 1em;
 }
 
+.page-header {
+  border-bottom: 0;
+}
+
+.page-header .date {
+  font-weight: bold; 
+}
+
 .nav, .brand, .pagination li {
   font-family: helvetica, arial, sans-serif;
   font-size: 1em;
@@ -18,35 +26,26 @@ body {
   line-height: 1.5em;
 }
 
-/* Custom container */
-.container-narrow {
-  margin: 0 auto;
-  max-width: 720px; }
+.about h3 {
+  padding-left: 96px;
+  margin: 0;
+}
 
-.container-narrow > hr {
-  margin: 30px 0; }
-
-.navbar .nav {
-  float: right; }
+.about img {
+  float: left;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 36px;
+}
 
 /* posts index */
 .post > h3.title {
   position: relative;
   padding-top: 10px; }
 
-.post > h3.title span.date {
-  position: absolute;
-  right: 0;
-  font-size: 0.9em; }
-
 .post > .more {
   margin: 10px 0;
   text-align: left; }
-
-/* post-full*/
-.post-full .date {
-  margin-bottom: 1em;
-  font-weight: bold; }
 
 /* tag_box */
 .tag_box {
@@ -55,6 +54,7 @@ body {
   overflow: hidden; }
 
 .tag_box li {
+  font-family: helvetica, arial, sans-serif;
   font-size: 0.75em;
   line-height: 28px; }
 
@@ -67,11 +67,9 @@ body {
 .tag_box a {
   padding: 3px 6px;
   margin: 2px;
-  background: #eee;
   color: #555;
   border-radius: 3px;
-  text-decoration: none;
-  border: 1px dashed #cccccc; }
+  text-decoration: none; }
 
 .tag_box a span {
   vertical-align: super;
