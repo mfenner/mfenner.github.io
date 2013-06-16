@@ -33,9 +33,12 @@ body {
 
 .about img {
   float: left;
-  padding-top: 12px;
-  padding-right: 16px;
-  padding-bottom: 36px;
+  margin-top: 12px;
+  margin-right: 16px;
+  margin-bottom: 36px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  border-radius: 40px;
 }
 
 /* posts index */
