@@ -31,8 +31,8 @@
   
   <body>
     <div class="container">
-      <div class="row-fluid">
-        <div class="offset1 span11">
+      <div class="row">
+        <div class="span12">
           <div class="page-header">
             <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
             {% if page.date %}<span class="date">{{ page.date | date_to_long_string }}</span>{% endif %}
@@ -40,11 +40,11 @@
         </div>
       
         <div class="content">
-          <div class="offset1 span8">
+          <div class="span8">
             {{ content }}
           </div>
         
-          <div class="span3 about visible-desktop">
+          <div class="span4 about">
             <img src="http://www.gravatar.com/avatar/abfd3f212a9252ecb14687a2c62f934b" width="80" height="80"/>
             <h3><a href="{{ HOME_PATH }}">{{ site.title }}</a></h3>
             <em><a href="http://twitter.com/mfenner">Martin Fenner</a> writes about how the internet is changing scholarly communication.</em>
