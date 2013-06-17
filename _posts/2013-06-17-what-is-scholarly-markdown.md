@@ -25,47 +25,49 @@ We called this the **Google Docs for Scientists** (Google Docs is a good collabo
 
 This definition almost sounds like a definition for Open Science, and assumes that data - and increasingly software - are an integral part of reporting science. This makes [reproducibility][5] of scientific results much easier, and one nice example how this can be done is the integration of markdown into the R statistical software, using the [knitr package][6]. Using the [May 2013 PLOS article-level metrics data][7] which are freely available for download, the R code below can be embedded into a markdown file and will produce the bar plot below when the markdown file is run in R (to try this yourself, download the ALM data and [markdown file for this article][8]).
 
-    # Load required libraries
-    library(reshape2)
+```r
+# Load required libraries
+library(reshape2)
 
-    # Options
-    report_date <- "2013-05-20"
+# Options
+report_date <- "2013-05-20"
 
-    # Load the data from the bulk download, filter out DOIs that are not from PLoS journals
-    alm <- read.csv("data-alm/alm_report_2013-05-20.csv", encoding = "UTF8", sep = ",", stringsAsFactors=FALSE, na.strings=c("0"))
-    alm <- subset(alm, (substr(alm$doi,1,15) == "10.1371/journal"))
-    alm$publication_date <- as.Date(alm$publication_date)
-    alm$counter_html <- as.numeric(alm$counter_html)
+# Load the data from the bulk download, filter out DOIs that are not from PLoS journals
+alm <- read.csv("data-alm/alm_report_2013-05-20.csv", encoding = "UTF8", sep = ",", stringsAsFactors=FALSE, na.strings=c("0"))
+alm <- subset(alm, (substr(alm$doi,1,15) == "10.1371/journal"))
+alm$publication_date <- as.Date(alm$publication_date)
+alm$counter_html <- as.numeric(alm$counter_html)
 
-    # Options
-    plos.start_date <- NA
-    plos.end_date <- NA
-    plos.colors <- c("#304345","#304345","#789aa1","#789aa1","#789aa1","#ad9a27","#ad9a27","#ad9a27","#ad9a27","#ad9a27","#ad9a27","#ad9a27")
-    plos.title <- c("Proportion of articles covered by source")
-    plos.description <- c("Article-level metrics for all 80,602 PLOS journal articles published until May 20, 2013.")
+# Options
+plos.start_date <- NA
+plos.end_date <- NA
+plos.colors <- c("#304345","#304345","#789aa1","#789aa1","#789aa1","#ad9a27","#ad9a27","#ad9a27","#ad9a27","#ad9a27","#ad9a27","#ad9a27")
+plos.title <- c("Proportion of articles covered by source")
+plos.description <- c("Article-level metrics for all 80,602 PLOS journal articles published until May 20, 2013.")
 
-    # Aggregate notes and comments
-    alm$comments <- as.numeric(alm$comments)
+# Aggregate notes and comments
+alm$comments <- as.numeric(alm$comments)
 
-    # Aggregate Mendeley
-    alm$mendeley <- rowSums(subset(alm, select=c("mendeley_readers","mendeley_groups")), na.rm=TRUE)
-    alm$mendeley[alm$mendeley == 0] <- NA
+# Aggregate Mendeley
+alm$mendeley <- rowSums(subset(alm, select=c("mendeley_readers","mendeley_groups")), na.rm=TRUE)
+alm$mendeley[alm$mendeley == 0] <- NA
 
-    # Use subset of columns
-    alm <- subset(alm, select=c("counter_html","pmc_html","crossref","scopus","pubmed","mendeley","citeulike","comments","researchblogging","facebook","twitter","wikipedia"))
+# Use subset of columns
+alm <- subset(alm, select=c("counter_html","pmc_html","crossref","scopus","pubmed","mendeley","citeulike","comments","researchblogging","facebook","twitter","wikipedia"))
 
-    # Calculate percentage of values that are not missing (i.e. have a count of at least 1)
-    colSums <- colSums(!is.na(alm)) * 100 / length(alm$counter_html)
-    exactSums <- sum(as.numeric(alm$pmc_html),na.rm =TRUE)
+# Calculate percentage of values that are not missing (i.e. have a count of at least 1)
+colSums <- colSums(!is.na(alm)) * 100 / length(alm$counter_html)
+exactSums <- sum(as.numeric(alm$pmc_html),na.rm =TRUE)
 
-    # Plot the chart. 
-    opar <- par(mar=c(1,7,2,1)+0.1,omi=c(1,0.3,1,1))
-    plos.names <- c("PLoS HTML Views", "PMC HTML Views","CrossRef","Scopus","PubMed Citations", "Mendeley","CiteULike","PLoS Comments","Research Blogging","Facebook","Twitter","Wikipedia")
-    y <- barplot(colSums,horiz=TRUE,col=plos.colors, border = NA, xlab=plos.names, xlim=c(0,120), axes=FALSE, names.arg=plos.names,las=1, adj=0)
-    text(colSums+6,y,labels=sprintf("%1.0f%%", colSums))
-    title(main=plos.title, cex.main=2, outer=TRUE, line=1, adj=0)
-    mtext(paste(strwrap(plos.description,width=90), collapse="\n"), side=3, outer=TRUE, line=-.5, adj=0)
-    
+# Plot the chart. 
+opar <- par(mar=c(1,7,2,1)+0.1,omi=c(1,0.3,1,1))
+plos.names <- c("PLoS HTML Views", "PMC HTML Views","CrossRef","Scopus","PubMed Citations", "Mendeley","CiteULike","PLoS Comments","Research Blogging","Facebook","Twitter","Wikipedia")
+y <- barplot(colSums,horiz=TRUE,col=plos.colors, border = NA, xlab=plos.names, xlim=c(0,120), axes=FALSE, names.arg=plos.names,las=1, adj=0)
+text(colSums+6,y,labels=sprintf("%1.0f%%", colSums))
+title(main=plos.title, cex.main=2, outer=TRUE, line=1, adj=0)
+mtext(paste(strwrap(plos.description,width=90), collapse="\n"), side=3, outer=TRUE, line=-.5, adj=0)
+```
+ 
 ![barplot][9]
 
 In a way this approach to scholarly markdown is much more difficult than building a nice online collaborative writing tool. But for me scholarly markdown is not about competing with Microsoft Word, it is about building something new that scholars want to use because it allows them to do something that is impossible with the existing tools. For the same reason my todo item at the end of the workshop was *think about document type where markdown shines*. The R example above is a great example where markdown shines. If you can think of additional examples, please add them to the comments.
