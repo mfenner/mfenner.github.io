@@ -10,6 +10,8 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title: Gobbledygook
+name: Gobbledygook
+description: Martin Fenner writes about how the internet is changing scholarly communication.
 tagline: 
 author:
   name: Martin Fenner
