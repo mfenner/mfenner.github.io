@@ -3,7 +3,7 @@ layout: post
 title: "What is Scholarly Markdown?" 
 description: "" 
 category:
-tags: [markdown, workshop] 
+tags: [markdown, meeting] 
 ---
 
 One of the important discussions taking place at the [Markdown for Science][1] workshop last weekend was about the definition of Scholarly Markdown. We came up with [this][2]:
