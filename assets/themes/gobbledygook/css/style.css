@@ -25,6 +25,12 @@ body {
   line-height: 1.5em;
 }
 
+blockquote p {
+  font-size: 1em;
+  line-height: 1.25em;
+  font-style: italic;
+}
+
 .post-full, .index p {
   font-size: 1.25em;
   line-height: 1.5em;
