@@ -15,7 +15,8 @@
      <![endif]-->
 
      <!-- Le styles -->
-     <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
      <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
      <!-- Typekit -->
@@ -31,25 +32,32 @@
   
   <body>
     <div class="container">
-      <div class="row">
-        <div class="span12">
-          <div class="page-header">
-            <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
-            {% if page.date %}<span class="date">{{ page.date | date_to_long_string }}</span>{% endif %}
-          </div>
-        </div>
+      <div class="page-header">
+        <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
+        {% if page.date %}<span class="date">{{ page.date | date_to_long_string }}</span>{% endif %}
+      </div>
       
-        <div class="content">
+      <div class="content">
+        <div class="row">
           <div class="span8">
             {{ content }}
           </div>
-        
+      
           <div class="span4 about">
             <img src="http://www.gravatar.com/avatar/abfd3f212a9252ecb14687a2c62f934b" width="80" height="80"/>
             <h3><a href="{{ HOME_PATH }}">{{ site.title }}</a></h3>
             <em><a href="http://twitter.com/mfenner">Martin Fenner</a> writes about how the internet is changing scholarly communication.</em>
           </div>
         </div>
+      </div>
+      <hr>
+      <div class="footer">
+        <ul class="footer">
+          <li><a href="/"><i class="icon-home"></i> Home</a></li>
+          <li><a href="/feed.xml"><i class="icon-rss"></i> RSS</a></li>
+          <li><a href="http://github.com/mfenner/mfenner.github.io"><i class="icon-github"></i> Source Code</a></li>
+          <li class="cc"><a href="http://creativecommons.org/licenses/by/3.0/deed.en"><img src="http://i.creativecommons.org/l/by/3.0/80x15.png" class="cc"></li>
+        </ul>
       </div>
     </div>
 

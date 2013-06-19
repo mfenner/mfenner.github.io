@@ -73,10 +73,31 @@ h4 {
   text-align: left; }
 
 /* tag_box */
-.tag_box {
+.tag_box, ul.footer {
   list-style: none;
   margin: 0;
   overflow: hidden; }
+  
+ul.footer {
+  list-style: none;
+  margin: 0;
+  overflow: hidden; 
+  margin-bottom: 1em;
+}
+  
+ul.footer li {
+  font-family: helvetica, arial, sans-serif;
+  float: left;
+  margin-right: 2em;
+}
+
+li.cc {
+  margin-left: 8em;
+}
+
+img.cc {
+  padding-bottom: 3px;
+}
 
 .tag_box li {
   font-family: helvetica, arial, sans-serif;
