@@ -5,9 +5,9 @@ description: ""
 category: 
 tags: [markdown, citation, crossref]
 ---
-In the comments on [Monday's blog post][1] about the Markdown for Science workshop, [Carl Boettiger][2] had some good arguments against the proposal for how to do [citations][3] that we came up with during the workshop. As this is a complex topic, I decided to write this blog post.
+In the comments on Monday's blog post[^1] about the Markdown for Science workshop, Carl Boettiger[^2] had some good arguments against the proposal for how to do citations[^3] that we came up with during the workshop. As this is a complex topic, I decided to write this blog post.
 
-Citations of the scholarly literature are an essential part of scholarly texts and therefore have to be supported by scholarly markdown. Both the [Pandoc][4] and [Multimarkdown][5] flavors of markdown support citations, using a bibtex file that contains citations, placeholders for citekeys – ```[@smith04]``` for Pandoc and ```[#smith04]``` for Multimarkdown – and the [Citation Style Language][6] for citation formatting (Pandoc). A very reasonable approach would therefore be to use this functionality, with a preference for Pandoc because of the Citation Style Language support. All reference managers can export to the bibtex format, and some of them (e.g. [Papers][7]) make it very easy to copy and paste citekeys.
+Citations of the scholarly literature are an essential part of scholarly texts and therefore have to be supported by scholarly markdown. Both the Pandoc[^4] and Multimarkdown[^5] flavors of markdown support citations, using a bibtex file that contains citations, placeholders for citekeys – ```[@smith04]``` for Pandoc and ```[#smith04]``` for Multimarkdown – and the [Citation Style Language][6] for citation formatting (Pandoc). A very reasonable approach would therefore be to use this functionality, with a preference for Pandoc because of the Citation Style Language support. All reference managers can export to the bibtex format, and some of them (e.g. [Papers][7]) make it very easy to copy and paste citekeys.
 
 Ten days after the workshop I'm not so sure anymore this is the best approach. For four reasons:
 
@@ -39,11 +39,11 @@ Or we break away from standard markdown and display reference-style links at the
 
 There is obviously a need for tools that make adding citations to scholarly markdown easier. This could be accomplished by relatively small changes to existing reference managers (enabling copy/paste of citations in reference-style markdown format), or by tools similar to the [knitcitations][9] and [kcite][10] mentioned above.
 
-[1]: <http://blog.martinfenner.org/2013/06/17/what-is-scholarly-markdown/>
-[2]: <http://carlboettiger.info>
-[3]: <https://github.com/scholmd/scholmd/wiki/citations>
-[4]: <http://johnmacfarlane.net/pandoc/README.html>
-[5]: <https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide>
+[^1]: <http://blog.martinfenner.org/2013/06/17/what-is-scholarly-markdown/>
+[^2]: <http://carlboettiger.info>
+[^3]: <https://github.com/scholmd/scholmd/wiki/citations>
+[^4]: <http://johnmacfarlane.net/pandoc/README.html>
+[^5]: <https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide>
 [6]: <http://citationstyles.org>
 [7]: <http://www.papersapp.com/papers/>
 [8]: <http://blogs.plos.org/mfenner/2010/12/11/citations-are-links-so-where-is-the-problem/>
