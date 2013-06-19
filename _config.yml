@@ -31,9 +31,6 @@ url: http://blog.martinfenner.org
 ## Markdown Parser (standard Jekyll argument, extended to special parser)
 markdown: rdiscount
 
-rdiscount:
-  extensions: [ footnotes ]
-
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :
