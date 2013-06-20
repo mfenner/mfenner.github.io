@@ -2,7 +2,6 @@
 /archive.html
 /atom.xml
 /categories.html
-/feed.xml
 /index.html
 /pages.html
 /rss.xml
