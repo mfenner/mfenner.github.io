@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Gobbledygook</title>
+ <link href="/" rel="self"/>
+ <link href=""/>
+ <updated>2013-06-20T09:58:40+02:00</updated>
+ <id></id>
+ <author>
+   <name>Martin Fenner</name>
+   <email>mfenner@plos.org</email>
+ </author>
+
+ 
+ <entry>
+   <title>Citations in Scholarly Markdown</title>
+   <link href="/2013/06/19/citations-in-scholarly-markdown"/>
+   <updated>2013-06-19T00:00:00+02:00</updated>
+   <id>/2013/06/19/citations-in-scholarly-markdown</id>
+   <content type="html">&lt;p&gt;In the comments on &lt;a href=&quot;http://blog.martinfenner.org/2013/06/17/what-is-scholarly-markdown/&quot;&gt;Monday&amp;#39;s blog post&lt;/a&gt; about the Markdown for Science workshop, &lt;a href=&quot;http://carlboettiger.info&quot;&gt;Carl Boettiger&lt;/a&gt; had some good arguments against the proposal for how to do &lt;a href=&quot;https://github.com/scholmd/scholmd/wiki/citations&quot;&gt;citations&lt;/a&gt; that we came up with during the workshop. As this is a complex topic, I decided to write this blog post.&lt;/p&gt;
+
+&lt;p&gt;Citations of the scholarly literature are an essential part of scholarly texts and therefore have to be supported by scholarly markdown. Both the &lt;a href=&quot;http://johnmacfarlane.net/pandoc/README.html&quot;&gt;Pandoc&lt;/a&gt; and &lt;a href=&quot;https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide&quot;&gt;Multimarkdown&lt;/a&gt; flavors of markdown support citations, using a bibtex file that contains citations, placeholders for citekeys – &lt;code&gt;[@smith04]&lt;/code&gt; for Pandoc and &lt;code&gt;[#smith04]&lt;/code&gt; for Multimarkdown – and the &lt;a href=&quot;http://citationstyles.org&quot;&gt;Citation Style Language&lt;/a&gt; for citation formatting (Pandoc). A very reasonable approach would therefore be to use this functionality, with a preference for Pandoc because of the Citation Style Language support. All reference managers can export to the bibtex format, and some of them (e.g. &lt;a href=&quot;http://www.papersapp.com/papers/&quot;&gt;Papers&lt;/a&gt;) make it very easy to copy and paste citekeys.&lt;/p&gt;
+
+&lt;p&gt;Ten days after the workshop I&amp;#39;m not so sure anymore this is the best approach. For four reasons:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;YFNS&lt;/strong&gt;. This approach failed the YFNS (your friendly neighborhood scientist) test. We came up with this term during the workshop and it means that our ideas about authoring should make sense to the workflow of the average scientist. I thought that using citekeys is a good idea, but my wife (my YFNS) tells me that she never uses citekeys because there are just too many &lt;code&gt;[@smith04]&lt;/code&gt;, and it is too easy get out of sync with the reference manager. She therefore prefers to put the complete reference information into the text while writing.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Snippets&lt;/strong&gt;. As I said &lt;a href=&quot;http://blog.martinfenner.org/2013/06/17/what-is-scholarly-markdown/&quot;&gt;previously&lt;/a&gt;, I think that scholarly markdown has great potential not so much for writing full papers, but for all the little scientific documents we write on a daily basis. For this reason the citation information should ideally be embedded in the document if it is short, and that is difficult with bibtex (which is not human-readable).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Citations as links&lt;/strong&gt;. Carl Boettiger reminded me that I wrote a &lt;a href=&quot;http://blogs.plos.org/mfenner/2010/12/11/citations-are-links-so-where-is-the-problem/&quot;&gt;blog post in 2010&lt;/a&gt; stating that citations are nothing else than links, and that we should treat them accordingly. He has written a tool (&lt;a href=&quot;http://carlboettiger.info/2012/05/30/knitcitations.html&quot;&gt;knitcitations&lt;/a&gt;) for R that does just that, and Phil Lord and colleagues have written a similar tool (&lt;a href=&quot;http://wordpress.org/plugins/kcite/&quot;&gt;kcite&lt;/a&gt;) for Wordpress. In 2010 I wrote a tool for Wordpress (&lt;a href=&quot;http://wordpress.org/plugins/link-to-link/&quot;&gt;Link to Link&lt;/a&gt;) that takes a different approach but also treats citations as links. All that we need is the DOI (or URL) for the article.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vendor lock-in&lt;/strong&gt;. Although a number of excellent reference managers are available now, users are still limited in their choices because everyone has to use the same reference manager when multiple authors work on the same document. This has always annoyed me. It would no longer be the case if we embed the citation information in the document in a standard format.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Part of the motivation for using scholarly markdown is that we can come up with best practices that make sense for digital content and don&amp;#39;t need to support conventions from an era when articles were still printed on paper. Reference information in the form of volumes and pages, and 1000s of citation styles certainly have outlived their purpose. Citation styles are a particular pain point, as they are nothing more than a visual representation of a citation - we should care much more about the machine-readable metadata, in particular the DOI or other identifier.&lt;/p&gt;
+
+&lt;p&gt;The best practice for scholarly markdown could therefore be to treat citations as links, using DOIs or other standard identifiers (PMID, ArXiV, etc.) where possible. Because we typically want to list the citations as references at the end of the document, reference-style links should be preferred over inline links. From the &lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax#link&quot;&gt;markdown syntax documentation&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;This is [an example][id] reference-style link.
+
+This is [an example](http://example.com/ &amp;quot;Title&amp;quot;) inline link.
+[id]: http://example.com/  &amp;quot;Optional Title Here&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It might be tempting to use sequential numbers as id for the reference-style links, but the order of links can of course change during writing. It may make sense to think of the id in reference-style links as a citekey, and people should be free use that functionality of their reference manager. The citekey is used to link to the reference list at the bottom of the document, different from linking to the citekey in a separate bibtex file.&lt;/p&gt;
+
+&lt;p&gt;All of the above can be done in any text editor. This also includes the text editor that scholars spend most of their time with - their email program. Reference-style citations in an email are very readable, and also actionable since they are links and not text with bibliographic information.&lt;/p&gt;
+
+&lt;p&gt;One problem with this approach is of course that all links are inline in the resulting HTML, without a references section at the end of the document. This may be fine, as we can provide citation information in the title attribute, available upon hovering over the link (try hovering over &lt;a href=&quot;http://dx.doi.org/10.1371/journal.pmed.0020124&quot; title=&quot;Ioannidis JPA. Why Most Published Research Findings Are False. PLoS Medicine. Public Library of Science; 2005;2(8):e124. Available from: http://dx.doi.org/10.1371/journal.pmed.0020124&quot;&gt;this link&lt;/a&gt;, the journal eLife is doing &lt;a href=&quot;http://dx.doi.org/10.7554/eLife.00633&quot;&gt;something similar&lt;/a&gt;). The markdown could look like this (using the &lt;em&gt;Vancouver&lt;/em&gt; citation style):&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;[@Ioannidis2005]: http://dx.doi.org/10.1371/journal.pmed.0020124 &amp;quot;Ioannidis JPA. Why Most Published Research Findings Are False. PLoS Medicine. Public Library of Science; 2005;2(8):e124. Available from: http://dx.doi.org/10.1371/journal.pmed.0020124&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The title attribute now of course uses a citation style, but this is optional information and can easily be reformatted as we have the DOI.&lt;/p&gt;
+
+&lt;p&gt;Or we break away from standard markdown and display reference-style links at the end of the document - similar to &lt;a href=&quot;http://rephrase.net/box/word/footnotes/syntax/&quot;&gt;footnotes&lt;/a&gt;, which are also not part of standard markdown. But this is just a display issue that can be solved, and the solution might look different depending on whether the output is HTML, PDF or XML. This document for example contains 14 reference-style citations.&lt;/p&gt;
+
+&lt;p&gt;There is obviously a need for tools that make adding citations to scholarly markdown easier. This could be accomplished by relatively small changes to existing reference managers (enabling copy/paste of citations in reference-style markdown format), or by tools similar to the &lt;a href=&quot;http://carlboettiger.info/2012/05/30/knitcitations.html&quot;&gt;knitcitations&lt;/a&gt; and &lt;a href=&quot;http://wordpress.org/plugins/kcite/&quot;&gt;kcite&lt;/a&gt; mentioned above.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>What is Scholarly Markdown?</title>
+   <link href="/2013/06/17/what-is-scholarly-markdown"/>
+   <updated>2013-06-17T00:00:00+02:00</updated>
+   <id>/2013/06/17/what-is-scholarly-markdown</id>
+   <content type="html">&lt;p&gt;One of the important discussions taking place at the &lt;a href=&quot;https://github.com/scholmd/scholmd/wiki&quot;&gt;Markdown for Science&lt;/a&gt; workshop last weekend was about the definition of Scholarly Markdown. We came up with &lt;a href=&quot;https://github.com/scholmd/scholmd/wiki/What-is-Markdown&quot;&gt;this&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Markdown that supports the requirements of scientific texts&lt;/li&gt;
+&lt;li&gt;Markdown as format that glues open scientific text resources together&lt;/li&gt;
+&lt;li&gt;A reference implementation with documentation and tests&lt;/li&gt;
+&lt;li&gt;A community&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;We also agreed that &lt;strong&gt;Scholarly Markdown&lt;/strong&gt; is a better term than &lt;strong&gt;Markdown for Science&lt;/strong&gt;, as it also includes the Social Sciences and Humanities. And we agreed on a hashtag, &lt;a href=&quot;https://twitter.com/search?q=%23scholmd&amp;amp;src=typd&quot;&gt;#scholmd&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I like #3 and #4, and I was not surprised to see #1. #2 is one of the most important outcomes of the workshop for me personally, and was reflected in the discussion we had in the breakout session on &lt;em&gt;What is needed for Markdown to be adopted by the scientific community?&lt;/em&gt; One important strategy is the following:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;We need an online tool that makes it easy for scholars to write scholarly markdown in a collaborative manner.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We called this the &lt;strong&gt;Google Docs for Scientists&lt;/strong&gt; (Google Docs is a good collaborative tool, but is lacking some important features required for scientific documents, e.g. integrated citation management). &lt;a href=&quot;https://www.authorea.com&quot;&gt;Authorea&lt;/a&gt; was mentioned as a promising example of this concept. It was also noted that some previous efforts failed, because the tool looked too different from Microsoft Word. But building such a tool wouldn&amp;#39;t really require markdown as a file format, and could for example also be done directly in HTML5. This would be a reasonable strategy, but in my mind is falling short because I think the problem we need to solve is more complicated than making collaboration easier with tools that look like Microsoft Word. We therefore also discussed a different strategy:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;We need multiple tools that make it easy for scholars to create scholarly markdown documents and openly share them. This collaborative work is not limited to authoring scholarly papers, but also includes shorter scholarly texts, e.g. experimental results, lab notebooks, lecture notes, blog posts and working papers. Ease of use is not only defined by the writing experience, but also how easy it is to share documents with others.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This definition almost sounds like a definition for Open Science, and assumes that data - and increasingly software - are an integral part of reporting science. This makes &lt;a href=&quot;https://www.scienceexchange.com/reproducibility&quot;&gt;reproducibility&lt;/a&gt; of scientific results much easier, and one nice example how this can be done is the integration of markdown into the R statistical software, using the &lt;a href=&quot;http://yihui.name/knitr/&quot;&gt;knitr package&lt;/a&gt;. Using the &lt;a href=&quot;http://article-level-metrics.plos.org/plos-alm-data/&quot;&gt;May 2013 PLOS article-level metrics data&lt;/a&gt; which are freely available for download, the R code below can be embedded into a markdown file and will produce the bar plot below when the markdown file is run in R (to try this yourself, download the ALM data and &lt;a href=&quot;https://github.com/articlemetrics/plosOpenR/blob/master/barPlotSummary.Rmd&quot;&gt;markdown file for this article&lt;/a&gt;).&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Load required libraries&lt;/span&gt;
+library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;reshape2&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Options&lt;/span&gt;
+report_date &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;2013-05-20&amp;quot;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Load the data from the bulk download, filter out DOIs that are not from PLoS journals&lt;/span&gt;
+alm &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; read.csv&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;data-alm/alm_report_2013-05-20.csv&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; encoding &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;UTF8&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; sep &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;,&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; stringsAsFactors&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; na.strings&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;0&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+alm &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; subset&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alm&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;substr&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alm&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;doi&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;10.1371/journal&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+alm&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;publication_date &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; as.Date&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alm&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;publication_date&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+alm&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;counter_html &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; as.numeric&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alm&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;counter_html&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Options&lt;/span&gt;
+plos.start_date &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NA&lt;/span&gt;
+plos.end_date &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NA&lt;/span&gt;
+plos.colors &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#304345&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#304345&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#789aa1&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#789aa1&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#789aa1&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#ad9a27&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#ad9a27&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#ad9a27&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#ad9a27&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#ad9a27&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#ad9a27&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#ad9a27&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+plos.title &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Proportion of articles covered by source&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+plos.description &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Article-level metrics for all 80,602 PLOS journal articles published until May 20, 2013.&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Aggregate notes and comments&lt;/span&gt;
+alm&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;comments &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; as.numeric&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alm&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;comments&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Aggregate Mendeley&lt;/span&gt;
+alm&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;mendeley &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; rowSums&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;subset&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alm&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; select&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;mendeley_readers&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;mendeley_groups&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt; na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+alm&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;mendeley&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;alm&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;mendeley &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NA&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Use subset of columns&lt;/span&gt;
+alm &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; subset&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alm&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; select&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;counter_html&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;pmc_html&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;crossref&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;scopus&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;pubmed&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;mendeley&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;citeulike&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;comments&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;researchblogging&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;facebook&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;twitter&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;wikipedia&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Calculate percentage of values that are not missing (i.e. have a count of at least 1)&lt;/span&gt;
+colSums &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; colSums&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;is.na&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alm&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alm&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;counter_html&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+exactSums &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;as.numeric&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alm&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;pmc_html&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;na.rm &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Plot the chart. &lt;/span&gt;
+opar &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; par&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mar&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;+0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;omi&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+plos.names &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;PLoS HTML Views&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;PMC HTML Views&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;CrossRef&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Scopus&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;PubMed Citations&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Mendeley&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;CiteULike&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;PLoS Comments&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Research Blogging&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Facebook&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Twitter&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Wikipedia&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+y &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; barplot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;colSums&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;horiz&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;col&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;plos.colors&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; border &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; xlab&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;plos.names&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; xlim&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;120&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; axes&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; names.arg&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;plos.names&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;las&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; adj&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+text&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;colSums&lt;span class=&quot;m&quot;&gt;+6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;y&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;labels&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sprintf&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%1.0f%%&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; colSums&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+title&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;main&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;plos.title&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; cex.main&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; outer&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; line&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; adj&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+mtext&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;paste&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;strwrap&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;plos.description&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;width&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; collapse&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; side&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; outer&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; line&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; adj&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/images/barplot-2013-06-17.png&quot; alt=&quot;barplot&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;In a way this approach to scholarly markdown is much more difficult than building a nice online collaborative writing tool. But for me scholarly markdown is not about competing with Microsoft Word, it is about building something new that scholars want to use because it allows them to do something that is impossible with the existing tools. For the same reason my todo item at the end of the workshop was &lt;em&gt;think about document type where markdown shines&lt;/em&gt;. The R example above is a great example where markdown shines. If you can think of additional examples, please add them to the comments.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Goodbye PLOS Blogs, Welcome Github Pages</title>
+   <link href="/2013/06/15/goodbye-plos-blogs-welcome-github-pages"/>
+   <updated>2013-06-15T00:00:00+02:00</updated>
+   <id>/2013/06/15/goodbye-plos-blogs-welcome-github-pages</id>
+   <content type="html">&lt;p&gt;This is the last &lt;a href=&quot;http://blogs.plos.org/mfenner&quot;&gt;Gobbledygook&lt;/a&gt; post on PLOS Blogs, and at the same time the first post at the &lt;a href=&quot;http://blog.martinfenner.org&quot;&gt;new Github blog location&lt;/a&gt;. I have been blogging at PLOS Blogs since the &lt;a href=&quot;http://blogs.plos.org/blogosphere/&quot;&gt;PLOS Blogs Network&lt;/a&gt; was launched in September 2010, so this step wasn&amp;#39;t easy. But I have two good reasons.&lt;/p&gt;
+
+&lt;p&gt;In May 2012 I started to work as technical lead for the &lt;a href=&quot;http://article-level-metrics.plos.org&quot;&gt;PLOS Article-Level Metrics&lt;/a&gt; project. Although this is contract work, and I also do other things - including spending 5% of my time as clinical researcher at Hannover Medical School - this created the awkward situation that I was never quite sure whether I was blogging as Martin Fenner or as someone working for PLOS. This was all in my head, as I never had any restrictions in my blogging from PLOS. With the recent launch of the &lt;a href=&quot;http://blogs.plos.org/tech/&quot;&gt;PLOS Tech Blog&lt;/a&gt; there is now a good venue for the kind of topics I like to write about, and I have started to work on two posts for this new blog. &lt;/p&gt;
+
+&lt;p&gt;There will always be topics for which the PLOS Tech Blog is not a good fit, and for these posts I have launched the new personal blog at Github. But the main reason for this new blog is a technical one: I&amp;#39;m moving away from blogging on Wordpress to writing my posts in &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;markdown&lt;/a&gt; (a lightweight markup language), that are then transformed into static HTML pages using &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; and &lt;a href=&quot;http://johnmacfarlane.net/pandoc/&quot;&gt;Pandoc&lt;/a&gt;. Last weekend I co-organized the workshop &lt;a href=&quot;https://github.com/scholmd/markdown_science/wiki&quot;&gt;&lt;strong&gt;Scholarly Markdown&lt;/strong&gt;&lt;/a&gt; together with &lt;a href=&quot;http://twitter.com/houshuang&quot;&gt;Stian Håklev&lt;/a&gt;. A full workshop report will follow in another post, but the discussions before, at and after the workshop convinced me that &lt;strong&gt;Scholarly Markdown&lt;/strong&gt; has a bright future and that it is time to move more of my writing to markdown. At the end of the workshop each participant suggested a &lt;a href=&quot;https://github.com/scholmd/markdown_science/wiki/Todo-list-from-workshop&quot;&gt;todo item&lt;/a&gt; that he/she would be working on, and my todo item was &amp;quot;Think about document type where MD shines&amp;quot;. Markdown might be good for writing scientific papers, but I think it really shines in shorter scientific documents that can easily be shared with others. And blog posts are a perfect fit.&lt;/p&gt;
+
+&lt;p&gt;The new site is work in progress. Over time I will copy over all old blog posts from PLOS Blogs, and will work on the layout as well as additional features. Special thanks to &lt;a href=&quot;http://carlboettiger.info&quot;&gt;Carl Boettiger&lt;/a&gt; for helping me to get started with Jekyll and Github pages.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Announcing Markdown for Science Workshop on June 8th</title>
+   <link href="/2013/05/08/announcing-markdown-for-science-workshop-on-june-8th"/>
+   <updated>2013-05-08T00:00:00+02:00</updated>
+   <id>/2013/05/08/announcing-markdown-for-science-workshop-on-june-8th</id>
+   <content type="html">&lt;p&gt;On Saturday June 8th – exactly a month from today – the PLOS San
+Francisco offices will host a workshop/hackathon about using markdown
+for science. A lot of people are experimenting with markdown for
+authoring scientific articles – see blog
+posts &lt;a href=&quot;http://blog.yoavram.com/markx/&quot;&gt;here&lt;/a&gt;, &lt;a href=&quot;http://inundata.org/2012/06/01/markdown-and-the-future-of-collaborative-manuscript-writing/&quot;&gt;here&lt;/a&gt; or
+my post
+&lt;a href=&quot;/2012/12/13/a-call-for-scholarly-markdown/&quot;&gt;here&lt;/a&gt;,
+and the scientific manuscript
+&lt;a href=&quot;https://github.com/weecology/data-sharing-paper/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Markdown is a simple markup language for text, and is primarily used for
+HTML content on the web, but can also be converted to PDF, LaTeX and
+others. One challenge with markdown is that there are a number of
+slightly different “flavors” out there, from the original markdown to
+multimarkdown, github-flavored markdown and pandoc. Some of the advanced
+formatting of scientific documents – tables, citations, math – is still
+a challenge for markdown.&lt;/p&gt;
+
+&lt;p&gt;Will markdown become our next authoring format for scientific content?
+Will there be yet another flavor, scholarly markdown? How will markdown
+writing tools be different from LaTeX tools or Microsoft Word? If you
+care about any of these questions and are in or near San Francisco, join
+us on for all full day on June 8th. Free registration is open at
+&lt;a href=&quot;http://mdsci13.eventbrite.com&quot;&gt;http://mdsci13.eventbrite.com&lt;/a&gt;. We are
+collecting workshop ideas
+at &lt;a href=&quot;https://github.com/karthikram/markdown_science/wiki/workshop&quot;&gt;https://github.com/karthikram/markdown_science/wiki/workshop&lt;/a&gt;,
+the Twitter hashtag is #mdsci13.&lt;/p&gt;
+
+&lt;p&gt;This event is organized by &lt;a href=&quot;http://twitter.com/houshuang&quot; title=&quot;Stian Håklev&quot;&gt;Stian
+Håklev&lt;/a&gt; and myself, with
+generous support by a &lt;a href=&quot;http://www.force11.org/node/4358&quot;&gt;1K Challenge prize from
+Force11&lt;/a&gt;, and hosting provided by
+PLOS.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Additional Markdown we need in Scholarly Texts</title>
+   <link href="/2012/12/18/additional-markdown-we-need-in-scholarly-texts"/>
+   <updated>2012-12-18T00:00:00+01:00</updated>
+   <id>/2012/12/18/additional-markdown-we-need-in-scholarly-texts</id>
+   <content type="html">&lt;p&gt;Following up from &lt;a href=&quot;/2012/12/13/a-call-for-scholarly-markdown/&quot;&gt;my post last
+week&lt;/a&gt;,
+below is a suggested list of features that should be supported in
+documents written in scholarly markdown. Please provide feedback via the
+comments, or by editing the Wiki version I have set up
+&lt;a href=&quot;https://github.com/mfenner/scholarly-markdown/wiki&quot;&gt;here&lt;/a&gt;. Listed are
+features that go beyond the &lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot;&gt;standard markdown
+syntax&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The goals of scholarly markdown are&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt; to support writing of complete scholarly articles,&lt;/li&gt;
+&lt;li&gt; don’t make the syntax more complicated than it is today, and&lt;/li&gt;
+&lt;li&gt; don’t rely on HTML as the fallback mechanism.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In practice this means that scholarly markdown should support most, but
+not all scholarly texts – documents that are heavy in math formulas,
+have complicated tables, etc. may be better written with LaTeX or
+Microsoft Word. It also means that scholarly markdown will probably
+contain only limited semantic markup, as this is difficult to do with a
+lightweight markup language and much easier with XML or a binary file
+format.&lt;/p&gt;
+
+&lt;h2&gt;Cover Page&lt;/h2&gt;
+
+&lt;p&gt;Optional metadata about a document. Typically used for title, authors
+(including affiliation), and publication date, but should be flexible
+enough to handle any kind of metadata (keywords, copyright, etc.).&lt;/p&gt;
+
+&lt;h2&gt;Typography&lt;/h2&gt;
+
+&lt;p&gt;Scholarly markdown should support superscript and subscript text, and
+provide an easy way to enter greek letters.&lt;/p&gt;
+
+&lt;h2&gt;Tables&lt;/h2&gt;
+
+&lt;p&gt;Tables should work as anchors (i.e. you can link to them) and table
+captions should support styled text. Unless the table is very simple,
+tables are probably better written as CSV files with another tool, and
+then imported into the scholarly markdown document similar to figures.&lt;/p&gt;
+
+&lt;h2&gt;Figures&lt;/h2&gt;
+
+&lt;p&gt;Figures in scholarly works are separated from the text, and have a
+figure caption (which can contain styled text). Figures should work as
+anchors (i.e. you can link to them). Figures can be in different file
+formats, including TIFF and PDF, and those formats have to be converted
+into web-friendly formats when exporting to HTML (e.g. PNG and SVG).&lt;/p&gt;
+
+&lt;h2&gt;Citations and Links&lt;/h2&gt;
+
+&lt;p&gt;Scholarly articles typically don’t have inline links, but rather
+citations. The external links (both scholarly identifiers such as DOIs
+and regular web URLs) are collected in a bibliography at the end of the
+document, and the citations in the text link to this bibliography. This
+functionality is similar to footnotes.&lt;/p&gt;
+
+&lt;p&gt;Citations should include a citation key in the text (e.g. [@Smith2006]
+or [#Smith2006]) and a separate bibliography file in BibTeX (or RIS)
+format that contains references for all citations. Inserting citations
+and creating the bibliography can best be done with a reference manager.&lt;/p&gt;
+
+&lt;p&gt;Cross-links – i.e. links within a document – are important for scholarly
+texts. It should be possible to link to section headers (e.g. the
+beginning of the discussion section), figures and tables.&lt;/p&gt;
+
+&lt;h2&gt;Math&lt;/h2&gt;
+
+&lt;p&gt;Complicated math is probably best done in a different authoring
+environment, but simple formulas – both inline and as block elements –
+should be supported by scholarly markdown.&lt;/p&gt;
+
+&lt;h2&gt;Comments&lt;/h2&gt;
+
+&lt;p&gt;Comments are important for multi-author documents and if reviewer
+feedback should be included. Comments should be linked to a particular
+part of a document to provide context, or attached at the end of a
+document for general comments. It would also be helpful to “comment out”
+parts of a document, e.g. to indicate parts that are incomplete and need
+more work. Revisions of a markdown document are best handled using a
+version control system such as git.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>A Call for Scholarly Markdown</title>
+   <link href="/2012/12/13/a-call-for-scholarly-markdown"/>
+   <updated>2012-12-13T00:00:00+01:00</updated>
+   <id>/2012/12/13/a-call-for-scholarly-markdown</id>
+   <content type="html">&lt;p&gt;Markdown is a lightweight markup language, originally created by John
+Gruber for writing content for the web. Other popular lightweight markup
+languages are Textile and Mediawiki. Whereas Mediawiki markup is of
+course popular thanks to the ubiquitous Wikipedia, Markdown seems to
+have gained momentum among scholars. Markdown really focuses on writing
+content, many of the features of today’s word processors are just a
+distraction (e.g. fonts, line spacing or style sheets). Adding markup
+for document structure (e.g. title, authors or abstract) on the other
+hand is overly complicated with tools such as Microsft Word.&lt;/p&gt;
+
+&lt;p&gt;Fortunately or unfortunately there are several versions (or flavors) of
+Markdown. The original specification by John Gruber hasn’t been updated
+for years. Github uses Markdown with some minor modifications.
+Multimarkdown and Pandoc provide features important for scholarly
+content, e.g. citations, superscript and tables.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;  Markdown&lt;/li&gt;
+&lt;li&gt;  Github-flavored Markdown&lt;/li&gt;
+&lt;li&gt;  Multimarkdown&lt;/li&gt;
+&lt;li&gt;  Pandoc&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The Pandoc flavor of Markdown probably comes closest to the requirements
+of a scholar, but still has limitations, e.g. support for metadata and
+tables isn’t very flexible. I propose that we as a community create a
+new Scholarly Markdown flavor, which takes into account most of the use
+cases important for scholarly content.&lt;/p&gt;
+
+&lt;p&gt;One of the big advantages of Markdown is that the format can not only be
+translated to HTML, but also to other formats, and Pandoc is
+particularly good in translating to and from many different formats. We
+want to make sure that Scholarly Markdown not only translates into nice
+Scholarly HTML (with good support for HTML5 tags relevant for scholars),
+but also into Microsot Word, LaTeX and PDF, as these are the formats
+typically required by manuscript tracking systems.&lt;/p&gt;
+
+&lt;p&gt;Some of the features required for Scholarly Markdown include:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;  Superscript and subscript&lt;/li&gt;
+&lt;li&gt;  Highlighting text (supporting the HTML tag &lt;code&gt;&amp;lt;mark&amp;gt;&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;  Captions for tables and figures (with support for the HTML tags
+&lt;code&gt;&amp;lt;caption&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;figcaption&amp;gt;&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;  Support for document sections (the HTML5 tags &lt;code&gt;&amp;lt;article&amp;gt;&lt;/code&gt;,
+&lt;code&gt;&amp;lt;header&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;footer&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;  Good table support&lt;/li&gt;
+&lt;li&gt;  Math support&lt;/li&gt;
+&lt;li&gt;  Good citation support&lt;/li&gt;
+&lt;li&gt;  Support for comments and annotations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Multimarkdown and Pandoc of course already support many of these
+features. Tables and citations are two examples where it is important to
+not only support them, but support them in a non-intrusive way that
+doesn’t get in the way of the flow of writing.&lt;/p&gt;
+
+&lt;p&gt;BTW, this wouldn’t be the first community flavor for Markdown. The
+screenwriting community has done this already with
+&lt;a href=&quot;http://fountain.io&quot;&gt;Fountain&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>
