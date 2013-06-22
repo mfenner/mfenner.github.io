@@ -68,7 +68,7 @@ title(main=plos.title, cex.main=2, outer=TRUE, line=1, adj=0)
 mtext(paste(strwrap(plos.description,width=90), collapse="\n"), side=3, outer=TRUE, line=-.5, adj=0)
 ```
  
-![barplot][9]
+![**Fig. 1**. Proportion of articles covered by source][9]
 
 In a way this approach to scholarly markdown is much more difficult than building a nice online collaborative writing tool. But for me scholarly markdown is not about competing with Microsoft Word, it is about building something new that scholars want to use because it allows them to do something that is impossible with the existing tools. For the same reason my todo item at the end of the workshop was *think about document type where markdown shines*. The R example above is a great example where markdown shines. If you can think of additional examples, please add them to the comments.
 

@@ -6,12 +6,13 @@ body {
 
 .page-header {
   border-bottom: 0;
+  margin-bottom: 0.5em;
 }
 
-.page-header .date {
+.page-header .date, .page-header p {
   font-family: "myriad-pro", arial, sans-serif;
   font-weight: 400; 
-  font-color: "#999999";
+  color: #999;
 }
 
 .nav, .brand, .pagination li, .pagination a {
@@ -23,7 +24,8 @@ body {
   margin-bottom: 1.5em;
 }
 
-.content ul li, .content ol li {
+.content p, .content ul li, .content ol li {
+  font-size: 1.25em;
   line-height: 1.5em;
 }
 
@@ -31,11 +33,6 @@ blockquote p {
   font-size: 1em;
   line-height: 1.25em;
   font-style: italic;
-}
-
-.post-full, .index p {
-  font-size: 1.25em;
-  line-height: 1.5em;
 }
 
 .about {
@@ -56,6 +53,8 @@ h2 {
 }
 
 h3 {
+  font-size: 1.25em;
+  line-height: 1.5em;
   margin: 0;
 }
 
@@ -63,14 +62,17 @@ h4 {
   font-size: 1.25em;
 }
 
-.about img {
+img.about {
   float: left;
-  margin-top: 12px;
+  margin-top: 32px;
   margin-right: 16px;
-  margin-bottom: 36px;
   -webkit-border-radius: 40px;
   -moz-border-radius: 40px;
   border-radius: 40px;
+}
+
+figcaption {
+  font-family: "myriad-pro", arial, sans-serif;
 }
 
 /* posts index */
@@ -97,16 +99,9 @@ ul.footer {
   
 ul.footer li {
   font-family: "myriad-pro", arial, sans-serif;
+  font-size: 1em;
   float: left;
   margin-right: 2em;
-}
-
-li.cc {
-  margin-left: 8em;
-}
-
-img.cc {
-  padding-bottom: 3px;
 }
 
 .tag_box li {
