@@ -1,6 +1,6 @@
 body {
-  font-family: "chaparral-pro", arial, sans-serif;
-  font-weight: 300; 
+  font-family: "minion-pro", serif;
+  font-weight: 400; 
   font-size: 1em;
 }
 
@@ -9,11 +9,13 @@ body {
 }
 
 .page-header .date {
-  font-weight: bold; 
+  font-family: "myriad-pro", arial, sans-serif;
+  font-weight: 400; 
+  font-color: "#999999";
 }
 
-.nav, .brand, .pagination li {
-  font-family: helvetica, arial, sans-serif;
+.nav, .brand, .pagination li, .pagination a {
+  font-family: "myriad-pro", arial, sans-serif;
   font-size: 1em;
 }
 
@@ -36,9 +38,17 @@ blockquote p {
   line-height: 1.5em;
 }
 
+.about {
+  font-family: "myriad-pro", arial, sans-serif;
+}
+
 .about h3 {
   padding-left: 96px;
   margin: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: "myriad-pro", arial, sans-serif;
 }
 
 h2 {
@@ -86,7 +96,7 @@ ul.footer {
 }
   
 ul.footer li {
-  font-family: helvetica, arial, sans-serif;
+  font-family: "myriad-pro", arial, sans-serif;
   float: left;
   margin-right: 2em;
 }
@@ -100,7 +110,7 @@ img.cc {
 }
 
 .tag_box li {
-  font-family: helvetica, arial, sans-serif;
+  font-family: "myriad-pro", arial, sans-serif;
   font-size: 0.75em;
   line-height: 28px; }
 
