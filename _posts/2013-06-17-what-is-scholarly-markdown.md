@@ -29,9 +29,6 @@ This definition almost sounds like a definition for Open Science, and assumes th
 # Load required libraries
 library(reshape2)
 
-# Options
-report_date <- "2013-05-20"
-
 # Load the data from the bulk download, filter out DOIs that are not from PLoS journals
 alm <- read.csv("data-alm/alm_report_2013-05-20.csv", encoding = "UTF8", sep = ",", stringsAsFactors=FALSE, na.strings=c("0"))
 alm <- subset(alm, (substr(alm$doi,1,15) == "10.1371/journal"))
@@ -42,8 +39,6 @@ alm$counter_html <- as.numeric(alm$counter_html)
 plos.start_date <- NA
 plos.end_date <- NA
 plos.colors <- c("#304345","#304345","#789aa1","#789aa1","#789aa1","#ad9a27","#ad9a27","#ad9a27","#ad9a27","#ad9a27","#ad9a27","#ad9a27")
-plos.title <- c("Proportion of articles covered by source")
-plos.description <- c("Article-level metrics for all 80,602 PLOS journal articles published until May 20, 2013.")
 
 # Aggregate notes and comments
 alm$comments <- as.numeric(alm$comments)
@@ -64,8 +59,6 @@ opar <- par(mar=c(1,7,2,1)+0.1,omi=c(1,0.3,1,1))
 plos.names <- c("PLoS HTML Views", "PMC HTML Views","CrossRef","Scopus","PubMed Citations", "Mendeley","CiteULike","PLoS Comments","Research Blogging","Facebook","Twitter","Wikipedia")
 y <- barplot(colSums,horiz=TRUE,col=plos.colors, border = NA, xlab=plos.names, xlim=c(0,120), axes=FALSE, names.arg=plos.names,las=1, adj=0)
 text(colSums+6,y,labels=sprintf("%1.0f%%", colSums))
-title(main=plos.title, cex.main=2, outer=TRUE, line=1, adj=0)
-mtext(paste(strwrap(plos.description,width=90), collapse="\n"), side=3, outer=TRUE, line=-.5, adj=0)
 ```
  
 ![**Proportion of articles covered by source**. Article-level metrics for all 80,602 PLOS journal articles published until May 20, 2013.][9]
