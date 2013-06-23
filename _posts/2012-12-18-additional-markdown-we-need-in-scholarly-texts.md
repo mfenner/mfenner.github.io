@@ -38,8 +38,8 @@ enough to handle any kind of metadata (keywords, copyright, etc.).
 Typography
 ----------
 
-Scholarly markdown should support superscript and subscript text, and
-provide an easy way to enter greek letters.
+Scholarly markdown should support ^superscript^ and ~subscript~ text, and
+should provide an easy way to enter greek $\zeta$ letters.
 
 Tables
 ------
@@ -48,6 +48,18 @@ Tables should work as anchors (i.e. you can link to them) and table
 captions should support styled text. Unless the table is very simple,
 tables are probably better written as CSV files with another tool, and
 then imported into the scholarly markdown document similar to figures.
+
+-----------------------------------------------------
+ Centered             Right Left
+  Header            Aligned Aligned
+----------- --------------- -------------------------
+   First               12.0 Example of a row that
+                            spans multiple lines.
+
+  Second                5.0 Here's another one. Note
+                            the blank line between
+                            rows.
+-----------------------------------------------------
 
 Figures
 -------
@@ -80,7 +92,10 @@ Math
 ----
 
 Complicated math is probably best done in a different authoring
-environment, but simple formulas – both inline and as block elements –
+environment, but simple formulas, both inline $\sqrt2x$ and block elements 
+
+>  ${\frac {d}{dx}}\arctan(\sin({x}^{2}))=-2\,{\frac {\cos({x}^{2})x}{-2+\left (\cos({x}^{2})\right )^{2}}}$
+
 should be supported by scholarly markdown.
 
 Comments
