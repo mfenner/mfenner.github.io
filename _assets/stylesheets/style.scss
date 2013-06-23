@@ -1,7 +1,29 @@
-body {
-  font-family: "minion-pro", serif;
-  font-weight: 400; 
-  font-size: 1em;
+/* Bootstrap */
+$sansFontFamily: "myriad-pro", Arial, sans-serif;
+$serifFontFamily: "minion-pro", Georgia, serif;
+$baseFontFamily: $serifFontFamily;
+$baseFontSize: 16px;
+$baseLineHeight: 20px;
+$headingsFontFamily: $sansFontFamily;
+
+@import "bootstrap";
+@import "bootstrap-responsive";
+
+/* Font Awesome */
+$FontAwesomePath:   "../../font";
+@import "font-awesome/scss/font-awesome.scss";
+
+/* Pandoc syntax highlighting */
+@import "syntax";
+
+/* Custom container */
+.container-narrow {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
 }
 
 .page-header {
@@ -10,13 +32,13 @@ body {
 }
 
 .page-header .date, .page-header p {
-  font-family: "myriad-pro", arial, sans-serif;
+  font-family: $sansFontFamily;
   font-weight: 400; 
   color: #999;
 }
 
 .nav, .brand, .pagination li, .pagination a {
-  font-family: "myriad-pro", arial, sans-serif;
+  font-family: $sansFontFamily;
   font-size: 1em;
 }
 
@@ -33,19 +55,6 @@ blockquote p {
   font-size: 1em;
   line-height: 1.25em;
   font-style: italic;
-}
-
-.about {
-  font-family: "myriad-pro", arial, sans-serif;
-}
-
-.about h3 {
-  padding-left: 96px;
-  margin: 0;
-}
-
-h1, h2, h3, h4 {
-  font-family: "myriad-pro", arial, sans-serif;
 }
 
 h2 {
@@ -72,17 +81,8 @@ img.about {
 }
 
 figcaption {
-  font-family: "myriad-pro", arial, sans-serif;
+  font-family: $sansFontFamily;
 }
-
-/* posts index */
-.post > h3.title {
-  position: relative;
-  padding-top: 10px; }
-
-.post > .more {
-  margin: 10px 0;
-  text-align: left; }
 
 /* tag_box */
 .tag_box, ul.footer {
@@ -98,14 +98,14 @@ ul.footer {
 }
   
 ul.footer li {
-  font-family: "myriad-pro", arial, sans-serif;
+  font-family: $sansFontFamily;
   font-size: 1em;
   float: left;
   margin-right: 2em;
 }
 
 .tag_box li {
-  font-family: "myriad-pro", arial, sans-serif;
+  font-family: $sansFontFamily;
   font-size: 0.75em;
   line-height: 28px; }
 
