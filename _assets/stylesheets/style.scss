@@ -42,7 +42,7 @@ $FontAwesomePath:   "../../font";
   font-size: 1em;
 }
 
-.content p, .content ul, .content ol {
+.content p, .content ul, .content ol, figcaption {
   margin-bottom: 1.5em;
 }
 
@@ -81,6 +81,8 @@ img.about {
 }
 
 figcaption {
+  font-size: 1.1em;
+  line-height: 1.3em;
   font-family: $sansFontFamily;
 }
 
