@@ -33,6 +33,8 @@ pandoc:
   extensions: 
     - smart
     - mathjax
+#    - auto_identifiers
+#    - startnum
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
