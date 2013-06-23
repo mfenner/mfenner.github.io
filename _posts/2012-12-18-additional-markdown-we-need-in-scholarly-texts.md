@@ -61,6 +61,8 @@ then imported into the scholarly markdown document similar to figures.
                             rows.
 -----------------------------------------------------
 
+Table: **This is the table caption**. We can explain the table here.
+
 Figures
 -------
 

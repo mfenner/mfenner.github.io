@@ -142,14 +142,22 @@ table {
   background-color: $tableBackground;
   border-collapse: collapse;
   border-spacing: 0;
-  
   width: 100%;
   margin-bottom: $baseLineHeight;
+  
+  caption {
+    text-align: left;
+    vertical-align: top;
+    font-size: 1.1em;
+    line-height: 1.3em;
+    margin-bottom: 1em;
+  }
+  
   // Cells
-  th,
-  td {
+  th, td, thead th, tbody td {
+    font-size: 0.9em;
+    line-height: 1.1em;
     padding: 8px;
-    line-height: $baseLineHeight;
     text-align: left;
     vertical-align: top;
     border-top: 1px solid $tableBorder;
