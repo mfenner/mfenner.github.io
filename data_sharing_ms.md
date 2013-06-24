@@ -1,25 +1,20 @@
 ---
 layout: page
 title: "Nine simple ways to make it easier to (re)use your data"
-description: ""
-category: 
-tags: [example]
+tags: []
+authors:
+ - name: Ethan P. White, 
+   orcid: 0000-0001-6728-7745
+ - name: Elita Baldrige
+   orcid: 0000-0003-1639-5951
+ - name: Zachary T. Brym
+ - name: Kenneth J. Locey
+ - name: Daniel J. McGlinn
+ - name: Sarah R. Supp
 ---
 > This paper in markdown format and the associated bibliogaphy and figure files are available from a [Github repository of the paper](https://github.com/weecology/data-sharing-paper), using [this](https://github.com/weecology/data-sharing-paper/commit/b5a73eb0942a18bb29810025a528aea48a8465e7) version.  An earlier version was published as [PeerJ Preprint](http://dx.doi.org/10.7287/peerj.preprints.7v1). The paper is used here as an example document to show how markdown can handle scholarly documents, in particular tables, figures and citations. The document was slightly modified from the orginal: added YAML frontmatter (needed by jekyll), and changed the anchor text for some links.
 
 ### Ethan P. White, Elita Baldridge, Zachary T. Brym, Kenneth J. Locey, Daniel J. McGlinn, and Sarah R. Supp
-
-*[Ethan P. White](mailto:ethan.white@usu.edu), Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341*
-
-*[Elita Baldridge](mailto:elita.baldridge@usu.edu), Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341*
-
-*[Zachary T. Brym](mailto:zachary.brym@usu.edu), Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341*
-
-*[Kenneth J. Locey](mailto:kenneth.locey@usu.edu), Dept. of Biology, Utah State University, Logan, UT, USA, 84341*
-
-*[Daniel J. McGlinn](mailto:daniel.mcglinn@usu.edu), Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341*
-
-*[Sarah R. Supp](mailto:sarah.supp@usu.edu), Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341*
 
 Abstract
 --------
@@ -35,30 +30,24 @@ Introduction
 ------------
 
 Sharing data is increasingly recognized as an important component of the scientific process [@whitlock2010].
-The sharing of scientific data is beneficial because it allows replication of research results and reuse in meta-analyses and projects not originally intended by the data collectors [@poisot2013].
-In ecology and evolutionary biology, sharing occurs through a combination of formal data repositories like [GenBank](http://www.ncbi.nlm.nih.gov/genbank/) and [Dryad](http://datadryad.org/), and through individual and institutional websites.
+The sharing of scientific data is beneficial because it allows replication of research results and reuse in meta-analyses and projects not originally intended by the data collectors [@poisot2013]. In ecology and evolutionary biology, sharing occurs through a combination of formal data repositories like [GenBank](http://www.ncbi.nlm.nih.gov/genbank/) and [Dryad](http://datadryad.org/), and through individual and institutional websites.
 
-While data sharing is increasingly common and straightforward, much of the shared data in ecology and evolutionary biology are not easily reused because they do not follow best practices in terms of data structure, metadata, and licensing [@jones2006].
-This makes it more difficult to work with existing data and therefore makes the data less useful than it could be [@jones2006; @reichman2011].
-Here we provide a list of 9 simple ways to make it easier to reuse the data that you share.
+While data sharing is increasingly common and straightforward, much of the shared data in ecology and evolutionary biology are not easily reused because they do not follow best practices in terms of data structure, metadata, and licensing [@jones2006]. This makes it more difficult to work with existing data and therefore makes the data less useful than it could be [@jones2006; @reichman2011]. Here we provide a list of 9 simple ways to make it easier to reuse the data that you share.
 
-Our recommendations focus on making your data understandable, easy to work with, and available to the wider community of scientists.
-They are designed to be simple and straightforward to implement, and as such represent an introduction to good data practices rather than a comprehensive treatment.
-We contextualize our recommendations with examples from ecology and evolutionary biology, though many of the recommendations apply broadly across scientific disciplines.
-Following these recommendations makes it easier for anyone to reuse your data including other members of your lab and even yourself.
+Our recommendations focus on making your data understandable, easy to work with, and available to the wider community of scientists. They are designed to be simple and straightforward to implement, and as such represent an introduction to good data practices rather than a comprehensive treatment. We contextualize our recommendations with examples from ecology and evolutionary biology, though many of the recommendations apply broadly across scientific disciplines. Following these recommendations makes it easier for anyone to reuse your data including other members of your lab and even yourself.
 
 1. Share your data
 ------------------
 
-The first and most important step in sharing your data is to share your data.
-The recommendations below will help make your data more useful, but sharing it in any form is a big step forward.
-So, why should you share your data?
+The first and most important step in sharing your data is to share your data. The recommendations below will help make your data more useful, but sharing it in any form is a big step forward. So, why should you share your data?
 
-Data sharing provides substantial benefits to the scientific community [@fienberg1985].
-It allows 1) the results of existing analyses to be reproduced and improved upon [@fienberg1985; @poisot2013],
-2) data to be combined in meta-analyses to reach general conclusions [@fienberg1985],
-3) new approaches to be applied to the data and new questions asked using it [@fienberg1985], and
-4) approaches to scientific inquiry that couldn't even be considered without broad scale data sharing [@hampton2013].
+Data sharing provides substantial benefits to the scientific community [@fienberg1985]. It allows 
+
+1. the results of existing analyses to be reproduced and improved upon [@fienberg1985; @poisot2013],
+2. data to be combined in meta-analyses to reach general conclusions [@fienberg1985],
+3. new approaches to be applied to the data and new questions asked using it [@fienberg1985], and
+4. approaches to scientific inquiry that couldn't even be considered without broad scale data sharing [@hampton2013].
+
 As a result, data sharing is increasingly required by funding agencies (@poisot2013; e.g., [NSF](http://www.nsf.gov/bfa/dias/policy/dmp.jsp), [NIH](http://grants.nih.gov/grants/guide/notice-files/NOT-OD-03-032.html), [NSERC](http://www.nserc-crsng.gc.ca/Professors-Professeurs/FinancialAdminGuide-GuideAdminFinancier/Responsibilities-Responsabilites_eng.asp), [FWF](http://www.fwf.ac.at/en/public_relations/oai/index.html)), journals [@whitlock2010], and potentially by law (e.g. [FASTR](http://doyle.house.gov/sites/doyle.house.gov/files/documents/2013%2002%2014%20DOYLE%20FASTR%20FINAL.pdf)). 
 
 Despite these potential benefits to the community, many scientists are still reluctant to share data. 

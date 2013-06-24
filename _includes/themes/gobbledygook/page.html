@@ -1,5 +1,13 @@
 {{ content }}
 
+{% unless page.tags == empty or page.title == "Tags" %}
+<ul class="tag_box inline">
+  <li><i class="icon-tags"></i></li>
+  {% assign tags_list = page.tags %}
+  {% include JB/tags_list %}
+</ul>
+{% endunless %} 
+
 <a href="http://creativecommons.org/licenses/by/3.0/deed.en" class="pull-right"><img src="http://i.creativecommons.org/l/by/3.0/80x15.png">
 
 <div class="footer">
