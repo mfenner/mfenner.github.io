@@ -33,7 +33,7 @@ pandoc:
   extensions: 
     - smart
     - mathjax
-    - csl: 'styles/vancouver.csl'
+    - csl: 'styles/apa.csl'
     - bibliography: 'references/data_sharing_refs.bib'
 #    - auto_identifiers
 #    - startnum
