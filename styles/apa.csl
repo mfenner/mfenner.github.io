@@ -125,10 +125,7 @@
       </if>
       <else>
         <choose>
-          <if variable="DOI">
-            <text variable="DOI" prefix="doi:"/>
-          </if>
-          <else>
+          <if variable="URL">
             <choose>
               <if type="webpage">
                 <group delimiter=" ">
@@ -148,6 +145,9 @@
                 </group>
               </else>
             </choose>
+          </if>
+          <else>
+            <text variable="DOI" prefix="doi:"/>
           </else>
         </choose>
       </else>
