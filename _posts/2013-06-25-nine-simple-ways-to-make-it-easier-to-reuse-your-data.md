@@ -1,20 +1,18 @@
 ---
-layout: page
+layout: post
 title: "Nine simple ways to make it easier to (re)use your data"
-tags: []
+tags: [example, citation]
 authors:
- - name: Ethan P. White, 
-   orcid: 0000-0001-6728-7745
- - name: Elita Baldrige
-   orcid: 0000-0003-1639-5951
- - name: Zachary T. Brym
- - name: Kenneth J. Locey
- - name: Daniel J. McGlinn
- - name: Sarah R. Supp
+  - Ethan P. White 
+  - Elita Baldrige
+  - Zachary T. Brym
+  - Kenneth J. Locey
+  - Daniel J. McGlinn
+  - Sarah R. Supp
 ---
-> This paper in markdown format and the associated bibliogaphy and figure files are available from a [Github repository of the paper](https://github.com/weecology/data-sharing-paper), using [this](https://github.com/weecology/data-sharing-paper/commit/b5a73eb0942a18bb29810025a528aea48a8465e7) version.  An earlier version was published as [PeerJ Preprint](http://dx.doi.org/10.7287/peerj.preprints.7v1). The paper is used here as an example document to show how markdown can handle scholarly documents, in particular tables, figures and citations. The document was slightly modified from the orginal: added YAML frontmatter (needed by jekyll), and changed the anchor text for some links.
+>This paper in markdown format was written by Ethan White et al.  The markdown file and the associated bibliogaphy and figure files are available from the [Github repository of the paper](https://github.com/weecology/data-sharing-paper). 
 
-### Ethan P. White, Elita Baldridge, Zachary T. Brym, Kenneth J. Locey, Daniel J. McGlinn, and Sarah R. Supp
+>I used [this](https://github.com/weecology/data-sharing-paper/commit/b5a73eb0942a18bb29810025a528aea48a8465e7) version, an earlier version was published as [PeerJ Preprint](http://dx.doi.org/10.7287/peerj.preprints.7v1). Special thanks to Ethan White for allowing me to reuse this paper. The paper is used here as an example document to show how markdown can handle scholarly documents, in particular tables, figures and citations. The document was slightly modified from the orginal: added YAML frontmatter (needed by jekyll, author names are also stored there), and changed the anchor text for some links.  This post is using the APA citation style. Please restrict your comments to issues related to Scholarly Markdown, for the content of the article contact Ethan directly.
 
 Abstract
 --------
@@ -146,7 +144,7 @@ We provide three simple recommendations to help ensure that tabular data are pro
 * There should only be one column for each type of information [@borer2009; @strasser2011; @strasser2012].
   The most common violation of this rule is [cross-tab structured data](http://en.wikipedia.org/wiki/Cross_tabulation), where different columns contain measurements of the same variable (e.g., in different sites, treatments, etc.; Figure 1).
 
-![**Figure 1. Examples of how to restructure two common issues with tabular data**. (a) Each cell should only contain a single value. If more than one value is present then the data should be split into multiple columns. (b) There should be only one column for each type of information. If there are multiple columns then the column header should be stored in one column and the values from each column should be stored in a single column.](images/Data_formatting.jpg)
+![**Figure 1. Examples of how to restructure two common issues with tabular data**. (a) Each cell should only contain a single value. If more than one value is present then the data should be split into multiple columns. (b) There should be only one column for each type of information. If there are multiple columns then the column header should be stored in one column and the values from each column should be stored in a single column.](/images/Data_formatting.jpg)
 
 While cross-tab data can be useful for its readability, and may be appropriate for data collection, this format makes it difficult to link the records with additional data (e.g., the location and environmental conditions at a site) and it cannot be properly used by most common database management and analysis tools (e.g., relational databases, dataframes in R and Python, etc.).
 If tabular data are currently in a cross-tab structure, there are tools to help restructure the data including functions in Excel, R (e.g., melt() function in the R package reshape; @wickham2007), and Python (e.g., melt() function in the [Pandas](http://pandas.pydata.org/) Python module.
@@ -309,11 +307,7 @@ When choosing a repository you should consider where other researchers in your d
 This helps you quickly identify the community's standard approach to sharing and increases the likelihood that other scientists will discover your data.
 In particular, if there is a centralized repository for a specific kind of data (e.g., GenBank for sequence data) then you should use that repository.
 
-In cases where there is no *de facto* standard it is worth considering differences among repositories in terms of use, data rights, and licensing (Table 3) and whether your funding agency or journal has explicit requirements or restrictions related to repositories.
-We also recommend that you use a repository that allows your dataset to be easily cited.
-Most repositories will describe how this works, but an easy way to guarantee that your data are citable is to confirm that the repository associates it with a persistent identifier, the most popular of which is the digital object identifier (DOI).
-DOIs are permanent unique identifiers that are independent of physical location and site ownership.
-There are also online tools for finding good repositories for your data including [Databib](http://databib.org) and [re3data](http://re3data.org).
+In cases where there is no *de facto* standard it is worth considering differences among repositories in terms of use, data rights, and licensing (Table 2) and whether your funding agency or journal has explicit requirements or restrictions related to repositories. We also recommend that you use a repository that allows your dataset to be easily cited. Most repositories will describe how this works, but an easy way to guarantee that your data are citable is to confirm that the repository associates it with a persistent identifier, the most popular of which is the digital object identifier (DOI). DOIs are permanent unique identifiers that are independent of physical location and site ownership. There are also online tools for finding good repositories for your data including [Databib](http://databib.org) and [re3data](http://re3data.org).
 
 Table: **Table 2. Popular repositories for scientific datasets**. This table does not include well-known molecular repositories (e.g. GenBank, EMBL, MG-RAST) that have become *de facto* standards in molecular and evolutionary biology. Consequently, several of these primarily serve the ecological community. These repositories are not exclusively used by members of specific institutions or museums, but accept data from the general scientific community.
 
