@@ -6,11 +6,11 @@
     <meta name="author" content="{{ site.author.name }}" />
     <meta name="keywords" content="{{ page.tags | join: ', ' }}" />
      
-    <!-- Google Scholar Metadata -->{% if page.authors != null %}
-    <meta name="citation_author" content="{{ page.authors | join: ', ' }}"/>{% else %}
-    <meta name="citation_author" content="{{ site.author.name }}"/>{% endif %}{% if post != null %}
-    <meta name="citation_date" content="{{ post.date | date: "%Y-%m-%d" }}"/>{% else %}
-    <meta name="citation_date" content="{{ page.date | date: "%Y-%m-%d" }}"/>{% endif %}
+    <!-- Google Scholar Metadata -->{% if page.authors %}{% for author in page.authors %}
+    <meta name="citation_author" content="{{ author.name }}"/>{% endfor %}{% else %}
+    <meta name="citation_author" content="{{ site.author.name }}"/>{% endif %}{% if post %}
+    <meta name="citation_publication_date" content="{{ post.date | date: "%Y-%m-%d" }}"/>{% else %}
+    <meta name="citation_publication_date" content="{{ page.date | date: "%Y-%m-%d" }}"/>{% endif %}
     <meta name="citation_title" content="{{ page.title }}"/>
     <meta name="citation_journal_title" content="{{ site.title }}"/>
      
@@ -50,12 +50,13 @@
   <body>
     <div class="container-narrow">
       <div class="page-header">
-        <h1>{{ page.title }}</h1>
-        {% if page.title == "Gobbledygook" %}
-          <p>A blog about how the internet is changing scholarly communication.</p>
-        {% else %}
-          <p>{% if page.date %}{{ page.date | date_to_long_string }} by {{ page.authors | join: ', ' }}{% endif %} </p>
-        {% endif %}
+        <h1>{{ page.title }}</h1>{% if page.title == "Gobbledygook" %}
+        <p>A blog about how the internet is changing scholarly communication.</p>{% else %}
+        <p>{% if page.date %}{{ page.date | date_to_long_string }} by 
+          {% if page.authors %}{% for author in page.authors %}
+{% if author.orcid %}<a href="http://orcid.org/{{author.orcid}}" title="{{author.affiliation}}">{{ author.name }}</a>{% else %}<a href="mailto:{{ author.email }}" title="{{author.affiliation}}" >{{ author.name }}</a>{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}{% else %}
+          <a href="/about.html">{{ site.author.name }}</a>{% endif %}{% endif %}
+        </p>{% endif %}
       </div>
       
       <div class="content">

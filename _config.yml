@@ -12,12 +12,14 @@ title: Gobbledygook
 name: Gobbledygook
 description: Martin Fenner writes about how the internet is changing scholarly communication.
 tagline: 
+url: http://blog.martinfenner.org
 author:
   name: Martin Fenner
+  orcid: 0000-0003-1419-2405
   email: mfenner@plos.org
+  affiliation:
   github: mfenner
   twitter: mfenner
-url: http://blog.martinfenner.org
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 

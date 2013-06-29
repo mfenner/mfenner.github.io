@@ -3,12 +3,26 @@ layout: post
 title: "Nine simple ways to make it easier to (re)use your data"
 tags: [example, citation]
 authors:
-  - Ethan P. White 
-  - Elita Baldrige
-  - Zachary T. Brym
-  - Kenneth J. Locey
-  - Daniel J. McGlinn
-  - Sarah R. Supp
+ - name: Ethan P. White
+   orcid: 0000-0001-6728-7745
+   email: ethan.white@usu.edu
+   affiliation: Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341
+ - name: Elita Baldrige
+   orcid: 0000-0003-1639-5951
+   email: elita.baldridge@usu.edu
+   affiliation: Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341
+ - name: Zachary T. Brym
+   email: zachary.brym@usu.edu
+   affiliation: Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341
+ - name: Kenneth J. Locey
+   email: kenneth.locey@usu.edu
+   affiliation: Dept. of Biology, Utah State University, Logan, UT, USA, 84341
+ - name: Daniel J. McGlinn
+   email: daniel.mcglinn@usu.edu
+   affiliation: Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341
+ - name: Sarah R. Supp
+   email: sarah.supp@usu.edu
+   affiliation: Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341
 ---
 >This paper in markdown format was written by Ethan White et al.  The markdown file and the associated bibliogaphy and figure files are available from the [Github repository of the paper](https://github.com/weecology/data-sharing-paper). 
 
