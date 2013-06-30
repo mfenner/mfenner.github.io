@@ -35,6 +35,18 @@ Optional metadata about a document. Typically used for title, authors
 (including affiliation), and publication date, but should be flexible
 enough to handle any kind of metadata (keywords, copyright, etc.).
 
+```yaml
+---
+layout: post
+title: "Additional Markdown we need in Scholarly Texts"
+tags: [markdown]
+authors:
+ - name: Martin Fenner
+   orcid: 0000-0003-1419-2405
+copyright: http://creativecommons.org/licenses/by/3.0/deed.en
+---
+```
+
 Typography
 ----------
 
@@ -72,6 +84,8 @@ anchors (i.e. you can link to them). Figures can be in different file
 formats, including TIFF and PDF, and those formats have to be converted
 into web-friendly formats when exporting to HTML (e.g. PNG and SVG).
 
+![**Set operations illustrated with Venn diagrams**. Example taken from [TeXample.net](http://www.texample.net/tikz/examples/set-operations-illustrated-with-venn-diagrams/).](/images/set-operations-illustrated-with-venn-diagrams.png)
+
 Citations and Links
 -------------------
 
@@ -81,10 +95,7 @@ and regular web URLs) are collected in a bibliography at the end of the
 document, and the citations in the text link to this bibliography. This
 functionality is similar to footnotes.
 
-Citations should include a citation key in the text (e.g. [@Smith2006]
-or [\#Smith2006]) and a separate bibliography file in BibTeX (or RIS)
-format that contains references for all citations. Inserting citations
-and creating the bibliography can best be done with a reference manager.
+Citations should include a citation key in the text, e.g. `[@kowalczyk2011]`, parsed as [@kowalczyk2011], and a separate bibliography file in BibTeX (or RIS) format that contains references for all citations. Inserting citations and creating the bibliography can best be done with a reference manager.
 
 Cross-links – i.e. links within a document – are important for scholarly
 texts. It should be possible to link to section headers (e.g. the
@@ -110,3 +121,6 @@ document for general comments. It would also be helpful to “comment out”
 parts of a document, e.g. to indicate parts that are incomplete and need
 more work. Revisions of a markdown document are best handled using a
 version control system such as git.
+
+References
+----------
