@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Gobbledygook
-tagline: 
 ---
 <div class="index">
 {% for post in site.posts %}

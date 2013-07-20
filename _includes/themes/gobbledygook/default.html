@@ -5,6 +5,19 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="{{ site.author.name }}" />
     <meta name="keywords" content="{{ page.tags | join: ', ' }}" />
+
+    <!-- RDFa Metadata (in DublinCore) -->
+    <meta property="dc:title" content="{{ page.title }}" />
+    <meta property="dc:creator" content="{{ site.author.name }}" />{% if post %}
+    <meta name="citation_publication_date" content="{{ post.date | date: "%FT%T%:z" }}"/>{% else %}
+    <meta name="citation_publication_date" content="{{ page.date | date: "%FT%T%:z" }}"/>{% endif %}
+    <meta property="dc:format" content="text/html" />
+    <meta property="dc:language" content="en" />
+    <meta property="dc:identifier" content="{{ page.url }}" />
+    <meta property="dc:rights" content="CC-BY" />
+    <meta property="dc:source" content="{{ site.title }}" />
+    <meta property="dc:subject" content="Scholarly Communication" /> 
+    <meta property="dc:type" content="website" /> 
      
     <!-- Google Scholar Metadata -->{% if page.authors %}{% for author in page.authors %}
     <meta name="citation_author" content="{{ author.name }}"/>{% endfor %}{% else %}

@@ -1,7 +1,6 @@
 ---
 layout: page
 title: "About"
-description: ""
 ---
 <img src="http://www.gravatar.com/avatar/abfd3f212a9252ecb14687a2c62f934b" width="80" height="80" class="about"/>
 
