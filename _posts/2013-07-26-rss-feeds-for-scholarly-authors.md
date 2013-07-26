@@ -22,7 +22,7 @@ Although the library usually takes care of the larger publication lists and can 
 * use persistent identifiers
 * use standards
 * don't worry about citation styles
-* keep everything upstream, not on your local hard drive
+* keep everything upstream, not locally
 
 Don't try to invent a new way of managing publication lists. Other people have worked on this problem before, and there are many tools available. This doesn't mean you shouldn't try something new, but please build it on top of all the infrastructure and services we have already.
 
