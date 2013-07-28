@@ -43,3 +43,10 @@ RSS was invented to publish information about frequently updated works, and a go
 Unfortunately there is one missing piece in this workflow: turning ORCID profiles into RSS feeds. At the [SpotOn London hackathon](http://occamstypewriter.org/trading-knowledge/2012/11/13/solo-hackday/) last November I worked with [Eva Amsen](http://twitter.com/easternblot) and [Graeme Moffat](http://twitter.com/graemedmoffat) to hack this workflow together using available tools. But we really need a more mature solution. Until RSS feeds are provided by the core ORCID service - and there is so much other stuff to do right now that this will take time - the best solution might be a web service that turns ORCID profiles into scholarly RSS as described above for journal articles.
 
 Today I finally came around implementing a first version of this - hacking together a Ruby Sinatra application hosted on Amazon Web Services ([#hack4ac](http://hack4ac.com) attendees know why). The application takes an ORCID ID (e.g. mine: [http://feed.labs.orcid-eu.org/0000-0003-1419-2405](http://feed.labs.orcid-eu.org/0000-0003-1419-2405)) and returns an RSS feed. The first version just returns just the name and biography from the profile, but I only started working on this today. ORCID Feed can be found at [http://feed.labs.orcid-eu.org](http://feed.labs.orcid-eu.org) and the source code is available at [Github](https://github.com/mfenner/orcid-feed). Please add suggestions and comments to the Github issue tracker [here](https://github.com/mfenner/orcid-feed/issues).
+
+**Update 7/28/13**: I've added a few additional content types. Use them as extension (e.g. `.json`), as format parameter (e.g. `?format=rss`), or use an accept-header, e.g. `Accept: application/x-bibtex`. I've also added basic error checking with cleanup of names and removal of duplicates.
+
+* html (the default): forward to profile on the ORCID website
+* rss - RSS feed
+* bib - bibtex file
+* json - Citeproc JSON
