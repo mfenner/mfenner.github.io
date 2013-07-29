@@ -40,8 +40,8 @@ pandoc:
   skip: true
   flags: '--smart --mathjax --bibliography=bibliography/references.bib --csl=_styles/apa.csl'
   outputs:
-    pdf: '--latex-engine=latex'
     epub:
+    pdf:
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
