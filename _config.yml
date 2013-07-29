@@ -8,6 +8,8 @@ paginate_path: "page:num"
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 pygments: true
 
+destination: ../mfenner.github.io/
+
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
@@ -35,13 +37,11 @@ author:
 ## Markdown Parser (standard Jekyll argument, extended to special parser)
 markdown: pandoc
 pandoc:
-  extensions: 
-    - smart
-    - mathjax
-    - csl: 'styles/apa.csl'
-    - bibliography: 'references/data_sharing_refs.bib'
-#    - auto_identifiers
-#    - startnum
+  skip: true
+  flags: '--smart --mathjax --bibliography=bibliography/references.bib --csl=_styles/apa.csl'
+  outputs:
+    pdf: '--latex-engine=latex'
+    epub:
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
