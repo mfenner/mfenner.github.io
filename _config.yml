@@ -55,3 +55,6 @@ analytics :
     provider : google
     google :
         tracking_id : 'UA-36379104-1'
+
+scholar:
+  style: ./_styles/apa.csl

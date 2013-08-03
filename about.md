@@ -10,3 +10,7 @@ Martin Fenner has for many years worked as medical doctor and cancer researcher 
 [Hannover Medical School Cancer Center]: http://www.mh-hannover.de/index.php?id=2&L=1
 [Article Level Metrics project]: http://article-level-metrics.plos.org/
 [@mfenner]: http://twitter.com/mfenner
+
+## Publications in the last 5 years
+
+{% bibliography -f about -q @*[year>=2009] %}
