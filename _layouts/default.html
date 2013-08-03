@@ -1,6 +1,29 @@
----
-theme :
-  name : gobbledygook
----
-{% include JB/setup %}
-{% include themes/gobbledygook/default.html %}
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body>
+    <div class="container-narrow">
+      <div class="page-header">
+        <h1>{{ page.title }}</h1>{% if page.title == "Gobbledygook" %}
+        <p>A blog about how the internet is changing scholarly communication.</p>{% else %}
+        <p>{% if page.date %}{{ page.date | date_to_long_string }} by
+          {% if page.authors %}{% for author in page.authors %}
+{% if author.orcid %}<a href="http://orcid.org/{{author.orcid}}" title="{{author.affiliation}}">{{ author.name }}</a>{% else %}<a href="mailto:{{ author.email }}" title="{{author.affiliation}}" >{{ author.name }}</a>{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}{% else %}
+          <a href="/about.html">{{ site.author.name }}</a>{% endif %}{% endif %}
+        </p>{% endif %}
+      </div>
+
+      <div class="content">
+        {{ content | to_scholmd }}
+
+        {% include coins.html %}
+        {% include navigation.html %}
+      </div>
+      <hr>
+      {% include comments.html %}
+      {% include analytics.html %}
+    </div>
+  </body>
+</html>

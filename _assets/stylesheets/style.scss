@@ -35,7 +35,7 @@ $FontAwesomePath:   "../../font";
   font-family: $sansFontFamily;
   font-size: 1.1em;
   line-height: 1.3em;
-  font-weight: 400; 
+  font-weight: 400;
   color: #999;
 }
 
@@ -93,14 +93,14 @@ figcaption {
   list-style: none;
   margin: 0;
   overflow: hidden; }
-  
+
 ul.footer {
   list-style: none;
   margin: 0;
-  overflow: hidden; 
+  overflow: hidden;
   margin-bottom: 1em;
 }
-  
+
 ul.footer li {
   font-family: $sansFontFamily;
   font-size: 1em;
@@ -137,7 +137,7 @@ ul.footer li {
   background: #57A957;
   border: 1px solid #4c964d;
   color: #FFF; }
-  
+
 table {
   font-family: $sansFontFamily;
   max-width: 100%;
@@ -146,7 +146,7 @@ table {
   border-spacing: 0;
   width: 100%;
   margin-bottom: $baseLineHeight;
-  
+
   caption {
     text-align: left;
     vertical-align: top;
@@ -154,7 +154,7 @@ table {
     line-height: 1.3em;
     margin-bottom: 1em;
   }
-  
+
   // Cells
   th, td, thead th, tbody td {
     font-size: 0.9em;
