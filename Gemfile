@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 1.0.3"
+gem "jekyll", "~> 1.1.1"
 gem 'jekyll-asset-pipeline', :require => 'jekyll_asset_pipeline', :git => 'git://github.com/cs/jekyll-asset-pipeline.git', :branch => 'loosen-dependency-on-jekyll-to-work-with-1.0.0'
 gem 'jekyll-scholar', "~> 1.2.2"
 
