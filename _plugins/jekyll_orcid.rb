@@ -35,8 +35,10 @@ url: #{url}
 
     def generate(site)
       if site.config['author']['orcid']
-        dir = site.config['scholar'] ? site.config['scholar']['source'] : "/_bibliography"
-        site.static_files << BibliographyFile.new(site, site.source, dir, "me.bib")
+        dir = site.config['scholar'] ? site.config['scholar']['source'] : "./bibliography"
+        name = site.config['scholar'] && site.config['scholar']['my_bibliography'] ? site.config['scholar']['my_bibliography'] : "me.bib"
+        bib = BibliographyFile.new(site, site.source, dir, name)
+        site.static_files << bib if dir.match /^(.*?\/)?[^_]\w*$/
       end
     end
   end

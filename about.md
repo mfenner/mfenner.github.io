@@ -14,6 +14,7 @@ Martin Fenner has for many years worked as medical doctor and cancer researcher 
 ## Publications
 
 <ul class="nav nav-tabs">
+  <a href ="/bibliography/me.bib" class="pull-right"><img src="/images/bibtex.png"></a>
   <li class="active">
     <a href="#article" data-toggle="tab">Articles</a>
   </li>
