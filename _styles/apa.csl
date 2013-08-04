@@ -2,7 +2,8 @@
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never">
   <!-- This style was edited with the Visual CSL Editor (http://steveridout.com/csl/visualEditor/) -->
   <info>
-    <title>American Psychological Association 6th Edition</title>
+    <title>American Psychological Association</title>
+    <title-short>APA</title-short>
     <id>http://www.zotero.org/styles/apa</id>
     <link href="http://www.zotero.org/styles/apa" rel="self"/>
     <link href="http://owl.english.purdue.edu/owl/resource/560/01/" rel="documentation"/>
@@ -27,7 +28,7 @@
     <category citation-format="author-date"/>
     <category field="psychology"/>
     <category field="generic-base"/>
-    <updated>2012-09-27T22:06:38+00:00</updated>
+    <updated>2013-07-17T13:57:54+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -54,7 +55,7 @@
   </macro>
   <macro name="secondary-contributors">
     <choose>
-      <if type="chapter paper-conference" match="none">
+      <if type="article-journal chapter paper-conference" match="none">
         <names variable="translator editor" delimiter=", " prefix=" (" suffix=")">
           <name and="symbol" initialize-with=". " delimiter=", "/>
           <label form="short" prefix=", " text-case="title" suffix=""/>
@@ -125,7 +126,10 @@
       </if>
       <else>
         <choose>
-          <if variable="URL">
+          <if variable="DOI">
+            <text variable="DOI" prefix="doi:"/>
+          </if>
+          <else>
             <choose>
               <if type="webpage">
                 <group delimiter=" ">
@@ -145,9 +149,6 @@
                 </group>
               </else>
             </choose>
-          </if>
-          <else>
-            <text variable="DOI" prefix="doi:"/>
           </else>
         </choose>
       </else>

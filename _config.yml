@@ -41,7 +41,7 @@ atom_path:       /atom.xml
 markdown: pandoc
 pandoc:
   skip: true
-  flags: '--smart --mathjax --bibliography=bibliography/references.bib --bibliography=bibliography/me.bib --csl=_styles/apa.csl'
+  flags: '--smart --mathjax --bibliography=bibliography/references.bib --bibliography=bibliography/me.bib --csl=_styles/vancouver.csl'
   outputs:
     epub:
     pdf:
@@ -57,5 +57,5 @@ analytics :
         tracking_id : 'UA-36379104-1'
 
 scholar:
-  style: ./_styles/apa.csl
+  style: ./_styles/vancouver.csl
   source: ./bibliography

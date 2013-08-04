@@ -9,8 +9,8 @@ module Jekyll
       def reference_tag(entry)
         return missing_reference unless entry
 
-        # Change URLs so that Pandoc can generate links
-        entry["url"] = "<#{entry["url"]}>" if entry["url"]
+        # Change URLs into markdown links
+        entry["url"] = "[#{entry["url"]}](#{entry["url"]})" if entry["url"]
 
         entry = entry.convert(*bibtex_filters) unless bibtex_filters.empty?
         reference = CiteProc.process entry.to_citeproc,
