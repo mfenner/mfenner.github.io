@@ -16,7 +16,7 @@ Publications
 ------------
 
 <ul class="nav nav-tabs">
-  <a href ="/bibliography/me.bib" class="pull-right"><img src="/images/bibtex.png"></a>
+  <a href ="/bibliography/0000-0003-1419-2405.bib" class="pull-right"><img src="/images/bibtex.png"></a>
   <li class="active">
     <a href="#article" data-toggle="tab">Articles</a>
   </li>
@@ -26,12 +26,12 @@ Publications
 
 <div class="tab-content">
   <div class="tab-pane active" id="article">
-    {% bibliography -f me -q @article %}
+    {% bibliography -q @article %}
   </div>
   <div class="tab-pane" id="book">
-    {% bibliography -f me -q @book %}
+    {% bibliography -q @book %}
   </div>
     <div class="tab-pane" id="misc">
-    {% bibliography -f me -q @misc %}
+    {% bibliography -q @misc %}
   </div>
 </div>
