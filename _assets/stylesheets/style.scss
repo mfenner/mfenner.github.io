@@ -16,6 +16,9 @@ $FontAwesomePath:   "../../font";
 /* Pandoc syntax highlighting */
 @import "syntax";
 
+/* jekyll-scholar bibliography */
+ol.bibliography { padding-left: 1em; }
+
 /* Custom container */
 .container-narrow {
   margin: 0 auto;

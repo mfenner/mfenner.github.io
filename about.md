@@ -11,6 +11,24 @@ Martin Fenner has for many years worked as medical doctor and cancer researcher 
 [Article Level Metrics project]: http://article-level-metrics.plos.org/
 [@mfenner]: http://twitter.com/mfenner
 
-## Publications in the last 5 years
+## Publications
 
-{% bibliography -f about -q @*[year>=2009] %}
+<ul class="nav nav-tabs">
+  <li class="active">
+    <a href="#article" data-toggle="tab">Articles</a>
+  </li>
+  <li><a href="#book" data-toggle="tab">Books</a></li>
+  <li><a href="#misc" data-toggle="tab">Other</a></li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="article">
+    {% bibliography -f me -q @article %}
+  </div>
+  <div class="tab-pane" id="book">
+    {% bibliography -f me -q @book %}
+  </div>
+    <div class="tab-pane" id="misc">
+    {% bibliography -f me -q @misc %}
+  </div>
+</div>
