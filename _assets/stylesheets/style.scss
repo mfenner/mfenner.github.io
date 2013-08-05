@@ -197,3 +197,29 @@ table {
     background-color: $bodyBackground;
   }
 }
+
+/* d3.js */
+.chart div {
+  background-color: white;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+}
+
+.chart a {
+  fill: $linkColor;
+}
+
+.chart .title { font-size: 24px; }
+.chart .subtitle { fill: grey; }
+
+.chart .line {
+  fill: none;
+  stroke: #999;
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
+}
+
+.signpost { padding-top: 0.8em; }
+.year-label, .tooltip { font-family: $sansFontFamily; }

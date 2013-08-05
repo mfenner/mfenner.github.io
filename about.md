@@ -14,6 +14,13 @@ Martin Fenner has for many years worked as medical doctor and cancer researcher 
 
 Publications
 ------------
+<div class="row" id="year"></div>
+
+<script type="text/javascript">
+  var orcid = "0000-0003-1419-2405";
+
+  {% include by_year.js %}
+</script>
 
 <ul class="nav nav-tabs">
   <a href ="/bibliography/0000-0003-1419-2405.bib" class="pull-right"><img src="/images/bibtex.png"></a>
