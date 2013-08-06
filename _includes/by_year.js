@@ -1,8 +1,19 @@
-d3.json("/bibliography/" + orcid + ".json", function(error, data) {
+d3.json("http://feed.labs.orcid-eu.org/" + orcid + ".json", function(error, data) {
   // extract the publication year
   // data = data.map(function(d) { return { "year": d["issued"]["date-parts"][0][0],
   //                                        "type": d["type"],
   //                                        "author_number": d["author"].length }});
+
+  if (error || data.length == 0) {
+    d3.select("div#year").append("div")
+      .attr("class", "span7")
+      .attr("id", "year-label");
+    d3.select("div#year-label").append("p")
+      .attr("class", "muted")
+      .text("No publications found.");
+      return
+  }
+
   var nest = d3.nest()
     .key(function(d) { return d["issued"]["date-parts"][0][0]; })
     .rollup(function(d) { return d.length; })
@@ -15,6 +26,7 @@ d3.json("/bibliography/" + orcid + ".json", function(error, data) {
   var h = 100; // height
   var first_year = d3.min(nest, function(d) { return d.key; });
   var this_year = (new Date).getFullYear();
+  var width = w * (this_year - first_year) + l + r;
   var length = data.length;
   var format_number = d3.format("d")
 
@@ -33,7 +45,7 @@ d3.json("/bibliography/" + orcid + ".json", function(error, data) {
       .attr("id", "year-chart");
 
   var chart = d3.select("div#year-chart").append("svg")
-    .attr("width", w * (this_year - first_year) + l + r)
+    .attr("width", width)
     .attr("height", h + t )
     .attr("class", "chart")
     .append("g")
@@ -61,10 +73,4 @@ d3.json("/bibliography/" + orcid + ".json", function(error, data) {
   chart.selectAll("rect").each(
     function(d,i){ $(this).tooltip({title: format_number(d.values) + " in " + d.key, container: "body"});
   });
-
-  if (d3.selectAll("div.row")[0].length == 0) {
-    d3.select("div#year").append("p")
-      .attr("class", "muted")
-      .text("No publications found.");
-  }
 });
