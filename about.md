@@ -10,19 +10,19 @@ Martin Fenner has for many years worked as medical doctor and cancer researcher 
 [Hannover Medical School Cancer Center]: http://www.mh-hannover.de/index.php?id=2&L=1
 [Article Level Metrics project]: http://article-level-metrics.plos.org/
 [@mfenner]: http://twitter.com/mfenner
-[ORCID profile]: http://orcid.org/0000-0003-1419-2405
+[ORCID profile]: http://orcid.org/{{ site.author.orcid }}
 
 Publications
 ------------
 <div class="row" id="year"></div>
 
 <script type="text/javascript">
-  var orcid = "0000-0003-1419-2405";
+  var orcid = "{{ site.author.orcid }}";
 </script>
 <script src="/js/by_year.js" type="text/javascript"></script>
 
 <ul class="nav nav-tabs">
-  <a href ="/bibliography/0000-0003-1419-2405.bib" class="pull-right"><img src="/images/bibtex.png"></a>
+  <a href ="/bibliography/{{ site.author.orcid }}.bib" class="pull-right"><img src="/images/bibtex.png"></a>
   <li class="active">
     <a href="#article" data-toggle="tab">Articles</a>
   </li>
