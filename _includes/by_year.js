@@ -1,4 +1,4 @@
-d3.json("bibliography/" + orcid + ".json", function(error, data) {
+d3.json("/bibliography/" + orcid + ".json", function(error, data) {
   // extract the publication year
   // data = data.map(function(d) { return { "year": d["issued"]["date-parts"][0][0],
   //                                        "type": d["type"],
@@ -7,7 +7,7 @@ d3.json("bibliography/" + orcid + ".json", function(error, data) {
     .key(function(d) { return d["issued"]["date-parts"][0][0]; })
     .rollup(function(d) { return d.length; })
     .entries(data);
-    console.log(nest);
+
   var l = 20; // left margin
   var r = 50; // right margin
   var t = 50;  // top margin
