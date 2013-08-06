@@ -18,9 +18,8 @@ Publications
 
 <script type="text/javascript">
   var orcid = "0000-0003-1419-2405";
-
-  {% include by_year.js %}
 </script>
+<script src="/js/by_year.js" type="text/javascript"></script>
 
 <ul class="nav nav-tabs">
   <a href ="/bibliography/0000-0003-1419-2405.bib" class="pull-right"><img src="/images/bibtex.png"></a>
