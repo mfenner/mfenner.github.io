@@ -1589,7 +1589,7 @@
   - family: Isselbacher
     given: K.J.
   DOI: 10.1002/(SICI)1096-9098(199702)64:2<122::AID-JSO6>3.0.CO;2-D
-  URL: http://dx.doi.org/10.1002/(SICI)1096-9098(199702)64:2<122::AID-JSO6>3.0.CO;2-D
+  URL: http://dx.doi.org/10.1002/(SICI)1096-9098(199702)64:2%3C122::AID-JSO6%3E3.0.CO;2-D
   id: shioda1997b
   type: article-journal
   issued:
@@ -1803,9 +1803,3 @@
     date-parts:
     - - 1993
       - 2
-: article-journal
-  issued:
-    date-parts:
-    - - 1993
-      - 2
-
