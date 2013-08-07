@@ -60,3 +60,6 @@ scholar:
   style: ./_styles/plos.csl
   source: ./bibliography
   bibliography: 0000-0003-1419-2405.bib
+  bibtex_filters:
+    - latex
+    - markdown

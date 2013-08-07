@@ -1,24 +1,11 @@
 require 'jekyll/scholar'
+require 'uri'
 
-module Jekyll
-  class Scholar
-    module Utilities
-
-      alias_method :original_reference_tag, :reference_tag
-
-      def reference_tag(entry)
-        return missing_reference unless entry
-
-        # Change URLs into markdown links
-        entry["url"] = "[#{entry["url"]}](#{entry["url"]})" if entry["url"]
-
-        entry = entry.convert(*bibtex_filters) unless bibtex_filters.empty?
-        reference = CiteProc.process entry.to_citeproc,
-          :style => style, :locale => config['locale'], :format => 'html'
-
-        content_tag reference_tagname, reference,
-          :id => [prefix, entry.key].compact.join('-')
-      end
+module MarkdownFilter
+  class Markdown < BibTeX::Filter
+    def apply(value)
+      url = value.to_s.slice(URI.regexp(['http','https','ftp']))
+      value = url ? "[#{url}](#{url})" : value
     end
   end
 end
