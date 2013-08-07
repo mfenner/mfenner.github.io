@@ -1,23 +1,33 @@
-d3.json("http://feed.labs.orcid-eu.org/" + orcid + ".json", function(error, data) {
-  // extract the publication year
-  // data = data.map(function(d) { return { "year": d["issued"]["date-parts"][0][0],
-  //                                        "type": d["type"],
-  //                                        "author_number": d["author"].length }});
+d3.xhr("http://feed.labs.orcid-eu.org/" + orcid + ".yml", function(error, request) {
+  var profile = jsyaml.safeLoad(request["response"]);
+  var references = profile["references"];
 
-  if (error || data.length == 0) {
-    d3.select("div#year").append("div")
-      .attr("class", "span7")
-      .attr("id", "year-label");
-    d3.select("div#year-label").append("p")
-      .attr("class", "muted")
-      .text("No publications found.");
-      return
+  if (error) {
+    d3.select("div#biography").append("p")
+      .text("No biography found.");
+    if (references.length == 0) {
+      d3.select("div#year").append("div")
+        .attr("class", "span7")
+        .attr("id", "year-label");
+      d3.select("div#year-label").append("p")
+        .attr("class", "muted")
+        .text("No publications found.");
+        return
+    }
   }
+
+  d3.select("div#biography").append("p")
+    .text(profile["biography"]);
 
   var nest = d3.nest()
     .key(function(d) { return d["issued"]["date-parts"][0][0]; })
     .rollup(function(d) { return d.length; })
-    .entries(data);
+    .entries(references);
+
+  // extract the publication year
+  // references = references.map(function(d) { return { "year": d["issued"]["date-parts"][0][0],
+  //                                        "type": d["type"],
+  //                                        "author_number": d["author"].length }});
 
   var l = 20; // left margin
   var r = 50; // right margin
@@ -27,7 +37,7 @@ d3.json("http://feed.labs.orcid-eu.org/" + orcid + ".json", function(error, data
   var first_year = d3.min(nest, function(d) { return d.key; });
   var this_year = (new Date).getFullYear();
   var width = w * (this_year - first_year) + l + r;
-  var length = data.length;
+  var length = references.length;
   var format_number = d3.format("d")
 
   d3.select("div#year").append("div")

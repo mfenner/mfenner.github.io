@@ -1,4 +1,15 @@
 ---
+orcid: 0000-0003-1419-2405
+created_at: '2012-10-08T20:49:20+00:00'
+updated_at: '2013-08-07T09:15:09+00:00'
+biography: Martin Fenner has for many years worked as medical doctor and cancer researcher
+  at the Hannover Medical School Cancer Center in Germany. In May 2012 he started
+  contract work as technical lead for the PLOS Article Level Metrics project. He believes
+  that open standards that enable collaboration between people and software tools
+  will make the internet a friendlier and more productive place for science and scientists.
+given_names: Martin
+family_name: Fenner
+references:
 - DOI: 10.6084/M9.FIGSHARE.681737
   URL: http://dx.doi.org/10.6084/M9.FIGSHARE.681737
   author:
