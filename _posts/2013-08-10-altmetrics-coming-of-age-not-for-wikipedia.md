@@ -14,3 +14,5 @@ Unfortunately Wikipedia - which is of course an important source of altmetrics i
 ![Wikipedia doesn't think Altmetrics need their own page](/images/wikipedia_redirect.png)
 
 In other words, you are redicted to a short section on the [Impact Factor](https://en.wikipedia.org/wiki/Impact_factor#Article_level_metrics_and_altmetrics) page. I would go and start an altmetrics (and article-level metrics) page, but with my professional involvement in altmetrics it is difficult to write from a [neutral point of view](http://en.wikipedia.org/wiki/Wikipedia:Neutral_point_of_view), one of the core Wikipedia policies.
+
+*Update August 13, 2013: We now have a nice [altmetrics](http://en.wikipedia.org/wiki/Altmetrics) Wikipedia page thanks to the hard work of [Egon Willighagen](http://en.wikipedia.org/wiki/User:Egonw) and others.*
