@@ -1,7 +1,7 @@
 ---
 orcid: 0000-0003-1419-2405
 created_at: '2012-10-08T20:49:20+00:00'
-updated_at: '2013-08-10T07:52:49+00:00'
+updated_at: '2013-09-11T17:51:27+00:00'
 biography: Martin Fenner has for many years worked as medical doctor and cancer researcher
   at the Hannover Medical School Cancer Center in Germany. In May 2012 he started
   contract work as technical lead for the PLOS Article Level Metrics project. He believes
@@ -10,6 +10,26 @@ biography: Martin Fenner has for many years worked as medical doctor and cancer 
 given_names: Martin
 family_name: Fenner
 references:
+- title: ! 'Altmetrics in Evolution: Defining and Redefining the Ontology of Article-Level
+    Metrics'
+  volume: '25'
+  URL: http://dx.doi.org/10.3789/isqv25no2.2013.04
+  DOI: 10.3789/isqv25no2.2013.04
+  issue: '2'
+  container-title: Information Standards Quarterly
+  publisher: National Information Standards Organization
+  author:
+  - family: Lin
+    given: Jennifer
+  - family: Fenner
+    given: Martin
+  page: '20'
+  id: lin2013a
+  type: article-journal
+  issued:
+    date-parts:
+    - - 2013
+      - 6
 - DOI: 10.6084/M9.FIGSHARE.681737
   URL: http://dx.doi.org/10.6084/M9.FIGSHARE.681737
   author:
@@ -37,6 +57,18 @@ references:
   title: D2.1 Kick off preparation, Communication plan and Website
   id: odin2013a
   type: article
+  issued:
+    date-parts:
+    - - 2013
+- title: ! 'Letter from the Guest Content Editor: Altmetrics Have Come of Age'
+  author:
+  - family: Fenner
+    given: Martin
+  container-title: Information Standards Quarterly
+  DOI: 10.3789/isqv25no2.2013.01
+  URL: http://dx.doi.org/10.3789/isqv25no2.2013.01
+  id: fenner2013a
+  type: article-journal
   issued:
     date-parts:
     - - 2013
@@ -180,20 +212,36 @@ references:
     given: Martin
   publisher: Figshare
   title: Metrics and Attribution
-  id: fenner2013a
+  id: fenner2013b
   type: article
   issued:
     date-parts:
     - - 2013
-- DOI: 10.5281/ZENODO.1239
-  URL: http://dx.doi.org/10.5281/ZENODO.1239
+- DOI: 10.6084/M9.FIGSHARE.107019
+  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.107019
+  author:
+  - family: Consortium
+    given: ODIN
+  - family: Fenner
+    given: Martin
+  - family: Thorisson
+    given: Gudmundur
+  publisher: Figshare
+  title: TEST Kickoff report
+  id: odin2013b
+  type: article
+  issued:
+    date-parts:
+    - - 2013
+- title: The many faces of article-level metrics
   author:
   - family: Fenner
     given: Martin
-  publisher: OpenAIRE Orphan Record Repository
-  title: Publication FP7 Funding Acknowledgment - PLOS OpenAIRE
-  id: fenner2013b
-  type: data
+  container-title: Bulletin of the American Society for Information Science and Technology
+  DOI: 10.1002/bult.2013.1720390409
+  URL: http://dx.doi.org/10.1002/bult.2013.1720390409
+  id: fenner2013c
+  type: article-journal
   issued:
     date-parts:
     - - 2013
