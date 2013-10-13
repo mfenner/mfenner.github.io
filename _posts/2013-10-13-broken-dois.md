@@ -14,9 +14,7 @@ The basic idea behind DOI names is summarized well in the [Wikipedia entry](http
 
 DOIs for journal articles should provide users with a URL specific for that journal article. This URL could point to a digital copy of the journal article in HTML or PDF format, or could point to a landing page (with an abstract or other basic metadata) for journal articles that require a subscription. This should work not only for humans using a web browser, but also for automated services using command line tools such as [curl](http://curl.haxx.se/) as scientific infrastructure depends heavily on automation and computers talking to each other. In our use case we want to find content linking to a specific article, and as some services (e.g. social media) will use the URL and not DOI of an article, we need to find out that URL.
 
-> Unfortunately it was impossible to find a URL for more than 25% of the DOIs in our reference set using automated tools.
-
-All these DOIs resolve to URLs for human users using a web browser, but for automated tools there are a number of challenges:
+Unfortunately it was difficult to find a URL for many DOIs in our reference set using automated tools. All these DOIs resolve to URLs for human users using a web browser, but for automated tools there are a number of challenges:
 
 ### Requiring a cookie
 Some publishers require a cookie, and that can cause problems for automated tools. We can use the popular command line tool `curl` with the options `-L` to follow redirects and `-I` to only send the header (as we care about the location and not the content of the page).
