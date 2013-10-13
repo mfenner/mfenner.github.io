@@ -1,15 +1,39 @@
 ---
 orcid: 0000-0003-1419-2405
 created_at: '2012-10-08T20:49:20+00:00'
-updated_at: '2013-09-11T17:51:27+00:00'
+updated_at: '2013-10-13T13:38:20+00:00'
 biography: Martin Fenner has for many years worked as medical doctor and cancer researcher
   at the Hannover Medical School Cancer Center in Germany. In May 2012 he started
-  contract work as technical lead for the PLOS Article Level Metrics project. He believes
-  that open standards that enable collaboration between people and software tools
-  will make the internet a friendlier and more productive place for science and scientists.
+  contract work as technical lead for the PLOS Article-Level Metrics project.
 given_names: Martin
 family_name: Fenner
 references:
+- DOI: 10.6084/M9.FIGSHARE.821209
+  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.821209
+  author:
+  - family: Zahedi
+  - family: Zohreh
+    given: Martin Fenner Juan Pablo Alperin
+  publisher: Figshare
+  title: 5000 random journal article CrossRef DOIs from 2011
+  id: zahedi2013a
+  type: article
+  issued:
+    date-parts:
+    - - 2013
+- DOI: 10.6084/M9.FIGSHARE.821213
+  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.821213
+  author:
+  - family: Zahedi
+  - family: Zohreh
+    given: Martin Fenner
+  publisher: Figshare
+  title: 5000 random journal article CrossRef DOIs from 2012
+  id: zahedi2013b
+  type: article
+  issued:
+    date-parts:
+    - - 2013
 - title: ! 'Altmetrics in Evolution: Defining and Redefining the Ontology of Article-Level
     Metrics'
   volume: '25'
@@ -44,6 +68,31 @@ references:
   issued:
     date-parts:
     - - 2013
+- DOI: 10.6084/M9.FIGSHARE.816961
+  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.816961
+  author:
+  - family: Fenner
+    given: Martin
+  publisher: Figshare
+  title: Cumulative usage statistics for PLOS papers from PubMed Central
+  id: fenner2013a
+  type: article
+  issued:
+    date-parts:
+    - - 2013
+- DOI: 10.6084/M9.FIGSHARE.816962
+  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.816962
+  author:
+  - family: Lin
+  - family: Jennifer
+    given: Martin Fenner
+  publisher: Figshare
+  title: Cumulative usage statistics for PLOS website
+  id: lin2013b
+  type: article
+  issued:
+    date-parts:
+    - - 2013
 - DOI: 10.6084/M9.FIGSHARE.154691
   URL: http://dx.doi.org/10.6084/M9.FIGSHARE.154691
   author:
@@ -67,7 +116,7 @@ references:
   container-title: Information Standards Quarterly
   DOI: 10.3789/isqv25no2.2013.01
   URL: http://dx.doi.org/10.3789/isqv25no2.2013.01
-  id: fenner2013a
+  id: fenner2013b
   type: article-journal
   issued:
     date-parts:
@@ -212,7 +261,7 @@ references:
     given: Martin
   publisher: Figshare
   title: Metrics and Attribution
-  id: fenner2013b
+  id: fenner2013c
   type: article
   issued:
     date-parts:
@@ -240,7 +289,7 @@ references:
   container-title: Bulletin of the American Society for Information Science and Technology
   DOI: 10.1002/bult.2013.1720390409
   URL: http://dx.doi.org/10.1002/bult.2013.1720390409
-  id: fenner2013c
+  id: fenner2013d
   type: article-journal
   issued:
     date-parts:
