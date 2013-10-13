@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Broken DOIs"
+title: "Challenges in automated DOI resolution"
 tags: [doi, metadata, crossref, altmetrics]
 ---
 
@@ -14,7 +14,9 @@ The basic idea behind DOI names is summarized well in the [Wikipedia entry](http
 
 DOIs for journal articles should provide users with a URL specific for that journal article. This URL could point to a digital copy of the journal article in HTML or PDF format, or could point to a landing page (with an abstract or other basic metadata) for journal articles that require a subscription. This should work not only for humans using a web browser, but also for automated services using command line tools such as [curl](http://curl.haxx.se/) as scientific infrastructure depends heavily on automation and computers talking to each other. In our use case we want to find content linking to a specific article, and as some services (e.g. social media) will use the URL and not DOI of an article, we need to find out that URL.
 
-> Unfortunately it was impossible to find a URL for more than 25% of the DOIs in our reference set.
+> Unfortunately it was impossible to find a URL for more than 25% of the DOIs in our reference set using automated tools.
+
+All these DOIs resolve to URLs for human users using a web browser, but for automated tools there are a number of challenges:
 
 ### Requiring a cookie
 Some publishers require a cookie, and that can cause problems for automated tools. We can use the popular command line tool `curl` with the options `-L` to follow redirects and `-I` to only send the header (as we care about the location and not the content of the page).
@@ -28,14 +30,14 @@ This command will lead us not to a page specific for that article, but to a "Coo
 Unfortunately not all tools do this. The way Facebook tracks likes, shares, comments, etc. is a prominent example.
 
 ### Too many redirects
-Some DOIs never resolve, and curl stops after 50 redirects:
+Some DOIs never resolve using a HEAD request, and curl stops after 50 redirects:
 
     curl -I -L "http://dx.doi.org/10.1097/SLA.0b013e318235e525"
 
 This error may relate to the "requiring a cookie" error above.
 
 ### Method not allowed
-Some DOis result in a "405 Method Not Allowed" error. The reason is that the journal platform doesn't accept the HEAD request, but wants a GET instead.
+Some DOis HEAD requests result in a "405 Method Not Allowed" error. The reason is that the journal platform doesn't accept the HEAD request, but wants a GET instead.
 
     curl -I -L "http://dx.doi.org/10.1002/sam.10120"
 
@@ -44,14 +46,14 @@ The [HTTP 1.1 protocol](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) s
 > The HEAD method is identical to GET except that the server MUST NOT return a message-body in the response. …
 This method is often used for testing hypertext links for validity, accessibility, and recent modification.
 
-We can work around this error, but would then move away from what the HTTP protocol recommends.
+We can work around this error by using a GET request, which unfortunately creates extra overhead and is not the recommended way to obtain this kind of information.
 
 ### Empty reply from server
-Some DOIs never resolve because curl reports "Empty reply from server" and we don't get a HTTP 200 status code.
+Some DOIs never resolve using a HEAD because curl reports "Empty reply from server" and we don't get a HTTP 200 status code.
 
     curl -I -L "http://dx.doi.org/10.1016/j.cca.2011.04.012"
 
-You can again work around this by using the location information before the last redirect, but resolving a DOI should not result in curl routinely throwing an error. It looks as if this error is related to "method not allowed", as a GET request resolves to a landing page.
+You can again work around this by using the location information before the last redirect, but maybe resolving a DOI should not result in curl routinely throwing an error. It looks as if this error is related to "method not allowed", as a GET request resolves to a landing page.
 
 This problem is not specific to the `curl` tool, we get exactly the same error with `wget`:
 
@@ -63,5 +65,16 @@ Some DOI resolutions resulted in timeout errors, but this was temporary and much
 ### Resource not found
 We didn't specifically look into this error, which is a well-known problem with URLs. The DOI names we used were from 2011 and 2012, and it is known that [link rot](http://en.wikipedia.org/wiki/Link_rot) is more common the older the resource is.
 
+### Content negotiation
+As Karl Ward has pointed out in the comments there are other ways to get an URL for an article, e.g. using content negotiation:
+
+    curl -LH "Accept: application/vnd.crossref.unixref+xml" "http://dx.doi.org/10.1016/j.cca.2011.04.012"
+
+The URL is stored in the `doi_data/resource` attribute. The URL stored there is unfortunately not always the final landing page for the article, e.g. for the DOI name used in the example above.
+
 ### Conclusions
-We created a reference set of 10,000 DOIs to collect metrics around them. The first conclusion from this exercise is that we can't do this properly for one in four journal articles. This does not seem to relate to a permission problem for subscription content, but rather to a neglect of standard HTTP protocols and tools. In my mind one essential building block for scientific infrastructure is that the command `curl -I -L "http://dx.doi.org/DOI_NAME"` always resolves to a URL specific for the article.
+We created a reference set of 10,000 DOIs to collect metrics around them. The first conclusion from this exercise is that getting the URL for these articles is for one in four journal articles. This does not seem to relate to a permission problem for subscription content, but rather how the HTTP HEAD request is handled. Content negotiation is one alternative, but sometimes leads to different URLs for the landing page than where the user would get via the browser.
+
+*Update 10/13/13: Updated the title and the text to make it clear that I am not talking about DOIs that don't resolve for human users, but rather about the problems automating this process using command-line tools.*
+
+
