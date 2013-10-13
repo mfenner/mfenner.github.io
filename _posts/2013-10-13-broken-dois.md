@@ -71,7 +71,7 @@ As Karl Ward has pointed out in the comments there are other ways to get to the 
 The URL is stored in the `doi_data/resource` attribute. The URL stored there is unfortunately not always the final landing page for the article, e.g. for the DOI name used in the example above.
 
 ### Conclusions
-We created a reference set of 10,000 DOIs to collect metrics around them. The first conclusion from this exercise is that getting the URL for these articles is for one in four journal articles. This does not seem to relate to a permission problem for subscription content, but rather how the HTTP HEAD request is handled. Content negotiation is one alternative, but sometimes leads to different URLs for the landing page than where the user would get via the browser.
+We created a reference set of 10,000 DOIs to collect metrics around them. The first conclusion from this exercise is that getting the URL for these articles is a challenge in many cases. This does not seem to relate to a permission problem for subscription content, but rather how the HTTP HEAD request is handled. Content negotiation is one alternative, but sometimes leads to different URLs for the landing page than where the user would get via the browser. We therefore have to rewrite our code to use GET requests and to better handle the scenarios above.
 
 *Update 10/13/13: Updated the title and the text to make it clear that I am not talking about DOIs that don't resolve for human users, but rather about the problems automating this process using command-line tools.*
 
