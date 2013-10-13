@@ -66,7 +66,7 @@ Some DOI resolutions resulted in timeout errors, but this was temporary and much
 We didn't specifically look into this error, which is a well-known problem with URLs. The DOI names we used were from 2011 and 2012, and it is known that [link rot](http://en.wikipedia.org/wiki/Link_rot) is more common the older the resource is.
 
 ### Content negotiation
-As Karl Ward has pointed out in the comments there are other ways to get an URL for an article, e.g. using content negotiation:
+As Karl Ward has pointed out in the comments there are other ways to get to the URL from the DOI name, e.g. using content negotiation:
 
     curl -LH "Accept: application/vnd.crossref.unixref+xml" "http://dx.doi.org/10.1016/j.cca.2011.04.012"
 
