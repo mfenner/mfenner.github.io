@@ -287,8 +287,6 @@ references:
   - family: Fenner
     given: Martin
   container-title: Bulletin of the American Society for Information Science and Technology
-  DOI: 10.1002/bult.2013.1720390409
-  URL: http://dx.doi.org/10.1002/bult.2013.1720390409
   id: fenner2013d
   type: article-journal
   issued:
@@ -1829,8 +1827,8 @@ references:
     - - 1993
 - title: Lack of therapeutic efficacy of tamoxifen in advanced renal cell carcinoma
   volume: '29'
-  URL: http://dx.doi.org/10.1016/s0959-8049(05)80357-0
-  DOI: 10.1016/s0959-8049(05)80357-0
+  URL: http://dx.doi.org/10.1016/S0959-8049(05)80357-0
+  DOI: 10.1016/S0959-8049(05)80357-0
   issue: '5'
   container-title: European Journal of Cancer
   publisher: Elsevier
@@ -1888,8 +1886,8 @@ references:
       - 1
 - title: Neuropsychiatric symptoms during treatment with interleukin-2 and interferon-Î±
   volume: '341'
-  URL: http://dx.doi.org/10.1016/0140-6736(93)90172-d
-  DOI: 10.1016/0140-6736(93)90172-d
+  URL: http://dx.doi.org/10.1016/0140-6736(93)90172-D
+  DOI: 10.1016/0140-6736(93)90172-D
   issue: '8841'
   container-title: The Lancet
   publisher: Elsevier
@@ -1906,6 +1904,12 @@ references:
     given: Jens
   page: '372'
   id: fenner1993a
+  type: article-journal
+  issued:
+    date-parts:
+    - - 1993
+      - 2
+ id: fenner1993a
   type: article-journal
   issued:
     date-parts:
