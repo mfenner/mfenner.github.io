@@ -26,6 +26,6 @@ PubMed Commons is still a pilot project and in order to read or write comments y
 * Access to PubMed Commons is restricted to researchers, and this is one strategy to have the comments focus on scientific discourse. It has to be seen whether the process of registering for PubMed Commons (which currently is a bit more involved than most commenting systems) is a barrier for scientists to take part in the discussion, or whether it generates an audience that makes it more likely that scientists contribute.
 * For people signing in with their My NCBI account (I don't know the percentage of PubMed users that do that on a regular basis), commenting is really easy and the interface is straightforward. The comment editor uses markdown, which makes it easy to format comments and to include links.
 
-*10/26/13: added link to the recently launched [PeerJ Questions](http://blog.peerj.com/post/62886292466/peerj-questions-a-new-way-to-never-publish-forget) which uses a question and ansawer format (thanks to Jason Hoyt for reminding me).*
+*10/26/13: added link to the recently launched [PeerJ Questions](http://blog.peerj.com/post/62886292466/peerj-questions-a-new-way-to-never-publish-forget) which uses a question and answer format (thanks to Jason Hoyt for reminding me).*
 
 ## References
