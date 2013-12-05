@@ -1,13 +1,38 @@
 ---
 orcid: 0000-0003-1419-2405
 created_at: '2012-10-08T20:49:20+00:00'
-updated_at: '2013-11-13T22:16:38+00:00'
+updated_at: '2013-12-05T20:37:49+00:00'
 biography: Martin Fenner has for many years worked as medical doctor and cancer researcher
   at the Hannover Medical School Cancer Center in Germany. In May 2012 he started
   contract work as technical lead for the PLOS Article-Level Metrics project.
 given_names: Martin
 family_name: Fenner
 references:
+- title: What can article-level metrics do for you?
+  author:
+  - family: Fenner
+    given: Martin
+  DOI: 10.1371/journal.pbio.1001687
+  URL: http://dx.doi.org/10.1371/journal.pbio.1001687
+  id: fenner2013a
+  type: article-journal
+  issued:
+    date-parts:
+    - - 2013
+- title: Prospective randomized double-blind multicenter phase II study comparing
+    chemotherapy with gemcitabine and cisplatin plus sorafenib vs gemcitabine and
+    cisplatin plus placebo in locally advanced and/or metastasized urothelial cancer
+    - SUSE - (AUO-AB 31/05).
+  author:
+  - family: Fenner
+    given: Martin
+  DOI: 10.1111/bju.12437
+  URL: http://dx.doi.org/10.1111/bju.12437
+  id: fenner2013b
+  type: article-journal
+  issued:
+    date-parts:
+    - - 2013
 - DOI: 10.6084/M9.FIGSHARE.821209
   URL: http://dx.doi.org/10.6084/M9.FIGSHARE.821209
   author:
@@ -75,7 +100,7 @@ references:
     given: Martin
   publisher: Figshare
   title: Cumulative usage statistics for PLOS papers from PubMed Central
-  id: fenner2013a
+  id: fenner2013c
   type: article
   issued:
     date-parts:
@@ -109,6 +134,20 @@ references:
   issued:
     date-parts:
     - - 2013
+- DOI: 10.6084/M9.FIGSHARE.824314
+  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.824314
+  author:
+  - family: brase
+    non-dropping-particle: jan
+  - family: Ruiz
+    given: ODIN Consortium Martin Fenner Gudmundur Thorisson Sergio
+  publisher: Figshare
+  title: D4.1 Conceptual model of interoperability
+  id: jan2013a
+  type: article
+  issued:
+    date-parts:
+    - - 2013
 - title: ! 'Letter from the Guest Content Editor: Altmetrics Have Come of Age'
   author:
   - family: Fenner
@@ -116,7 +155,7 @@ references:
   container-title: Information Standards Quarterly
   DOI: 10.3789/isqv25no2.2013.01
   URL: http://dx.doi.org/10.3789/isqv25no2.2013.01
-  id: fenner2013b
+  id: fenner2013d
   type: article-journal
   issued:
     date-parts:
@@ -261,7 +300,7 @@ references:
     given: Martin
   publisher: Figshare
   title: Metrics and Attribution
-  id: fenner2013c
+  id: fenner2013e
   type: article
   issued:
     date-parts:
@@ -287,7 +326,7 @@ references:
   - family: Fenner
     given: Martin
   container-title: Bulletin of the American Society for Information Science and Technology
-  id: fenner2013d
+  id: fenner2013f
   type: article-journal
   issued:
     date-parts:
@@ -738,6 +777,17 @@ references:
   issued:
     date-parts:
     - - 2009
+- title: Targeted therapies for patients with germ cell tumors.
+  author:
+  - family: Fenner
+    given: Martin
+  DOI: 10.1517/13543784.17.4.511
+  URL: http://dx.doi.org/10.1517/13543784.17.4.511
+  id: fenner2008a
+  type: article-journal
+  issued:
+    date-parts:
+    - - 2008
 - title: Blogs, Wikis und Podcasts im Unterricht
   volume: '38'
   URL: http://dx.doi.org/10.1002/biuz.200890080
@@ -749,7 +799,7 @@ references:
   - family: Fenner
     given: Martin
   page: 284-286
-  id: fenner2008a
+  id: fenner2008b
   type: article-journal
   issued:
     date-parts:
@@ -947,7 +997,7 @@ references:
     given: Martin
   DOI: 10.1038/452029a
   URL: http://dx.doi.org/10.1038/452029a
-  id: fenner2008b
+  id: fenner2008c
   type: article-journal
   issued:
     date-parts:
@@ -964,7 +1014,7 @@ references:
     given: A.
   DOI: 10.1097/CCO.0b013e3283136971
   URL: http://dx.doi.org/10.1097/CCO.0b013e3283136971
-  id: fenner2008c
+  id: fenner2008d
   type: article-journal
   issued:
     date-parts:
@@ -1353,7 +1403,7 @@ references:
     given: V.
   DOI: 10.1517/13543784.17.4.511
   URL: http://dx.doi.org/10.1517/13543784.17.4.511
-  id: fenner2008d
+  id: fenner2008e
   type: article-journal
   issued:
     date-parts:
@@ -1771,6 +1821,15 @@ references:
   issued:
     date-parts:
     - - 1994
+- title: European studies of interleukin-2 in metastatic renal cell carcinoma.
+  author:
+  - family: Fenner
+    given: Martin
+  id: fenner1993a
+  type: article-journal
+  issued:
+    date-parts:
+    - - 1993
 - title: European studies of interleukin-2 in metastatic renal cell carcinoma
   container-title: Seminars in Oncology
   volume: '20'
@@ -1903,13 +1962,7 @@ references:
   - family: Atzpodien
     given: Jens
   page: '372'
-  id: fenner1993a
-  type: article-journal
-  issued:
-    date-parts:
-    - - 1993
-      - 2
- id: fenner1993a
+  id: fenner1993b
   type: article-journal
   issued:
     date-parts:
