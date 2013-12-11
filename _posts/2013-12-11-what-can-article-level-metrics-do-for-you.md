@@ -113,7 +113,7 @@ articles [@Eysenbach2006], one of the 10 most-viewed
 articles published in *PLOS Biology*).
 
 ![**Figure 2. Article-level metrics used by PLOS in August 2013 and their
-categories.** Taken from [@Lin2013] with permission by the authors.](/images/pbio_2.png)
+categories.** Taken from [@Lin2013] with permission by the authors.](/images/2013-12-11_figure_2.png)
 
 A bubble chart showing all 2010 *PLOS Biology* articles (**Figure
 3**) gives a good overview of the year's views and
