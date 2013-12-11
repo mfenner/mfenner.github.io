@@ -72,11 +72,52 @@ function Doc(body, metadata, variables)
     table.insert(buffer, s)
   end
   add('<?xml version="1.0" encoding="UTF-8"?>')
-  add('<!DOCTYPE article PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">')
-  add('<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="en">')
+  add('<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.0 20120330//EN" "http://jats.nlm.nih.gov/publishing/1.0/JATS-journalpublishing1.dtd">')
+  add('<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" article-type="research-article" dtd-version="1.0">')
   add('<front>')
+
+  add('<journal-meta>')
+  add('<journal-id journal-id-type="publisher-id">' .. (metadata['journal']['publisher-id'] or '') .. '</journal-id>')
+  add('<journal-id journal-id-type="nlm-ta">' .. (metadata['journal']['nlm-ta'] or '') .. '</journal-id>')
+  add('<journal-id journal-id-type="pmc">' .. (metadata['journal']['pmc'] or '') .. '</journal-id>')
+  add('<journal-title-group>')
+  add('<journal-title>' .. (metadata['journal']['title'] or '') .. '</journal-title>')
+  add('</journal-title-group>')
+  if metadata['journal']['pissn'] then
+    add('<issn pub-type="ppub">' .. metadata['journal']['pissn'] .. '</issn>')
+  end
+  add('<issn pub-type="epub">' .. (metadata['journal']['eissn'] or '') .. '</issn>')
+  add('<publisher>')
+  add('<publisher-name>' .. (metadata['publisher']['name'] or '') .. '</publisher-name>')
+  add('<publisher-loc>' .. (metadata['publisher']['loc'] or '') .. '</publisher-loc>')
+  add('</publisher>')
+  add('</journal-meta>')
+
+  add('<article-meta>')
+  add('<article-id pub-id-type="publisher-id">' .. (metadata['article']['publisher-id'] or '') .. '</article-id>')
+  add('<article-id pub-id-type="doi">' .. (metadata['article']['doi'] or '') .. '</article-id>')
+
+  add('<article-categories>')
+  if metadata['headings'] then
+    add('<subj-group subj-group-type="headings">')
+    for _, heading in pairs(metadata['headings']) do
+      add('<subject>' .. heading .. '</subject>')
+    end
+    add('</subj-group>')
+  end
+  if metadata['categories'] then
+    add('<subj-group subj-group-type="categories">')
+    for _, category in pairs(metadata['categories']) do
+      add('<subject>' .. category .. '</subject>')
+    end
+    add('</subj-group>')
+  end
+  add('</article-categories>')
+
   add('<title-group><article-title>' .. (metadata['title'] or '') .. '</article-title></title-group>')
+  add('</article-meta>')
   add('</front>')
+
   add('<body>')
   if metadata['title'] and metadata['title'] ~= "" then
     add('<h1 class="title">' .. metadata['title'] .. '</h1>')

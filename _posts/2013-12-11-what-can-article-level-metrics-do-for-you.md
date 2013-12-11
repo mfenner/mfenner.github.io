@@ -2,6 +2,21 @@
 layout: post
 title: "What Can Article Level Metrics Do for You?"
 tags: [example, markdown, article-level metrics, reproducibility]
+journal:
+  - publisher-id: plos
+  - nlm-ta: PLoS Biol
+  - pmc: plosbiol
+  - title: PLoS Biology
+  - eissn: 1545-7885
+  - pissn: 1544-9173
+publisher:
+  - name: Public Library of Science
+  - loc: San Francisco, USA
+article:
+  - publisher-id: PBIOLOGY-D-13-03338
+  - doi: 10.1371/journal.pbio.1001687
+headings: [Essay]
+
 authors:
  - name: Martin Fenner
    orcid: 0000-0003-1419-2405
