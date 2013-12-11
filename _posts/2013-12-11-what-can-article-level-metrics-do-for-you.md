@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What Can Article Level Metrics Do for You?"
-tags: [example, markdown, article-level metrics]
+tags: [example, markdown, article-level metrics, reproducibility]
 authors:
  - name: Martin Fenner
    orcid: 0000-0003-1419-2405
