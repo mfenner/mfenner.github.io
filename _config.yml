@@ -3,7 +3,12 @@ permalink: /:categories/:year/:month/:day/:title
 paginate: 10
 paginate_path: "page:num"
 
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
+exclude:
+  - README.md
+  - Rakefile
+  - changelog.md
+  - "*.Rmd"
+
 pygments: true
 
 destination: ../mfenner.github.io/
@@ -42,7 +47,7 @@ atom_path:       /atom.xml
 markdown: pandoc
 pandoc:
   skip: true
-  flags: '--smart --mathjax --bibliography=bibliography/references.bib --bibliography=bibliography/0000-0003-1419-2405.bib --csl=_styles/plos.csl'
+  flags: '--smart --mathjax --filter pandoc-citeproc --bibliography=bibliography/references.bib --bibliography=bibliography/0000-0003-1419-2405.bib --csl=_styles/plos.csl'
   outputs:
     epub:
     pdf:
