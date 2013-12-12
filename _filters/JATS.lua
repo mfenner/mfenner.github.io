@@ -91,6 +91,7 @@ function Doc(body, metadata, variables)
 
   -- defaults
   article['type'] = article['type'] or 'other'
+  article['heading'] = article['heading'] or 'Other'
 
    -- use today's date if no pub-date in ISO 8601 format is given
   if not (article['pub-date'] and string.len(article['pub-date']) == 10) then
@@ -149,13 +150,9 @@ function Doc(body, metadata, variables)
   end
 
   add('<article-categories>')
-  if metadata['headings'] then
-    add('<subj-group subj-group-type="headings">')
-    for _, heading in pairs(metadata['headings']) do
-      add('<subject>' .. heading .. '</subject>')
-    end
-    add('</subj-group>')
-  end
+  add('<subj-group subj-group-type="heading">')
+  add('<subject>' .. article['heading'] .. '</subject>')
+  add('</subj-group>')
   if metadata['categories'] then
     add('<subj-group subj-group-type="categories">')
     for _, category in pairs(metadata['categories']) do
@@ -251,31 +248,33 @@ function Superscript(s)
 end
 
 function SmallCaps(s)
-  return '<span style="font-variant: small-caps;">' .. s .. '</span>'
+  return s
 end
 
 function Strikeout(s)
-  return '<del>' .. s .. '</del>'
+  return '<strike>' .. s .. '</strike>'
 end
 
 function Link(s, src, tit)
   return '<ext-link ext-link-type="uri" xlink:href="' .. escape(src,true) .. '" xlink:type="simple">' .. s .. '</ext-link>'
 end
 
-function Image(s, src, tit)
-  return '<fig><caption>' ..
-         '<title>' .. escape(tit,true) .. '</title>' ..
-         '</caption>' ..
-         "<graphic mimetype='image' xlink:href='".. escape(src,true) .. "' xlink:type='simple'/>" ..
-         "</fig>"
+function Image(src, tit, s)
+  -- if s begins with <bold> text, make it the <title>
+  s = string.gsub(s, "^<bold>(.-)</bold>%s", "<title>%1</title>\n<p>")
+  return '<fig>\n' ..
+         '<caption>\n' .. s .. '</p>\n</caption>\n' ..
+         "<graphic mimetype='image' xlink:href='".. escape(src,true) .. "' xlink:type='simple'/>\n" ..
+         '</fig>'
 end
 
-function CaptionedImage(s, src, tit)
-  return '<fig><caption>' ..
-         '<title>' .. escape(tit,true) .. '</title>' ..
-         '</caption>' ..
-         "<graphic mimetype='image' xlink:href='".. escape(src,true) .. "' xlink:type='simple'/>" ..
-         "</fig>"
+function CaptionedImage(src, tit, s)
+  -- if s begins with <bold> text, make it the <title>
+  s = string.gsub('<p>' .. s, "^<p><bold>(.-)</bold>%s", "<title>%1</title>\n<p>")
+  return '<fig>\n' ..
+         '<caption>\n' .. s .. '</p>\n</caption>\n' ..
+         "<graphic mimetype='image' xlink:href='".. escape(src,true) .. "' xlink:type='simple'/>\n" ..
+         '</fig>'
 end
 
 function Code(s, attr)
@@ -355,7 +354,7 @@ function BulletList(items)
   for _, item in pairs(items) do
     table.insert(buffer, "<list-item>" .. item .. "</list-item>")
   end
-  return '<list list-type="bullet">\n' .. table.concat(buffer, "\n") .. '\n</ol>'
+  return '<list list-type="bullet">\n' .. table.concat(buffer, "\n") .. '\n</list>'
 end
 
 function OrderedList(items)
@@ -363,7 +362,7 @@ function OrderedList(items)
   for _, item in pairs(items) do
     table.insert(buffer, "<list-item>" .. item .. "</list-item>")
   end
-  return '<list list-type="order">\n' .. table.concat(buffer, "\n") .. '\n</ol>'
+  return '<list list-type="order">\n' .. table.concat(buffer, "\n") .. '\n</list>'
 end
 
 -- Revisit association list STackValue instance.
