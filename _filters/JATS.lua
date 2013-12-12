@@ -1,5 +1,6 @@
 -- This is a JATS custom writer for pandoc.  It produces output
--- that is very similar to that of pandoc's HTML writer.
+-- that tries to conform to the JATS 1.0 specification
+-- http://jats.nlm.nih.gov/archiving/tag-library/1.0/index.html
 --
 -- Invoke with: pandoc -t JATS.lua
 --
@@ -71,31 +72,81 @@ function Doc(body, metadata, variables)
   local function add(s)
     table.insert(buffer, s)
   end
+
+  article = metadata['article'] or {}
+  journal = metadata['journal'] or {}
+  publisher = metadata['publisher'] or {}
+
+  -- abort if any required variables are missing
+  if not (article['publisher-id'] or article['doi'] or article['pmid'] or article['pmcid'] or article['art-access-id']) then
+    error("no article id specified")
+  end
+  if not (journal['pissn'] or journal['eissn']) then
+    error("no issn specified")
+  end
+  if not (journal['publisher-id'] or journal['nlm-ta'] or journal['pmc']) then
+    error("no journal id specified")
+  end
+  if not publisher['name'] then error("publisher name not specified") end
+
+  -- defaults
+  article['type'] = article['type'] or 'other'
+
+   -- use today's date if no pub-date in ISO 8601 format is given
+  if not (article['pub-date'] and string.len(article['pub-date']) == 10) then
+    article['pub-date'] = os.date('%Y-%m-%d')
+  end
+
   add('<?xml version="1.0" encoding="UTF-8"?>')
   add('<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.0 20120330//EN" "http://jats.nlm.nih.gov/publishing/1.0/JATS-journalpublishing1.dtd">')
-  add('<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" article-type="research-article" dtd-version="1.0">')
+  add('<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" article-type="' ..
+    article['type'] .. '" dtd-version="1.0">')
   add('<front>')
 
   add('<journal-meta>')
-  add('<journal-id journal-id-type="publisher-id">' .. (metadata['journal']['publisher-id'] or '') .. '</journal-id>')
-  add('<journal-id journal-id-type="nlm-ta">' .. (metadata['journal']['nlm-ta'] or '') .. '</journal-id>')
-  add('<journal-id journal-id-type="pmc">' .. (metadata['journal']['pmc'] or '') .. '</journal-id>')
-  add('<journal-title-group>')
-  add('<journal-title>' .. (metadata['journal']['title'] or '') .. '</journal-title>')
-  add('</journal-title-group>')
-  if metadata['journal']['pissn'] then
-    add('<issn pub-type="ppub">' .. metadata['journal']['pissn'] .. '</issn>')
+  if journal['publisher-id'] then
+    add('<journal-id journal-id-type="publisher-id">' .. journal['publisher-id'] .. '</journal-id>')
   end
-  add('<issn pub-type="epub">' .. (metadata['journal']['eissn'] or '') .. '</issn>')
+  if journal['nlm-ta'] then
+    add('<journal-id journal-id-type="nlm-ta">' .. journal['nlm-ta'] .. '</journal-id>')
+  end
+  if journal['pmc'] then
+    add('<journal-id journal-id-type="pmc">' .. journal['pmc'] .. '</journal-id>')
+  end
+  if journal['title'] then
+    add('<journal-title-group><journal-title>' .. journal['title'] .. '</journal-title></journal-title-group>')
+  end
+  if journal['pissn'] then
+    add('<issn pub-type="ppub">' .. journal['pissn'] .. '</issn>')
+  end
+  if journal['eissn'] then
+    add('<issn pub-type="epub">' .. journal['eissn'] .. '</issn>')
+    add('<issn-l>' .. journal['eissn'] .. '</issn-l>')
+  end
   add('<publisher>')
-  add('<publisher-name>' .. (metadata['publisher']['name'] or '') .. '</publisher-name>')
-  add('<publisher-loc>' .. (metadata['publisher']['loc'] or '') .. '</publisher-loc>')
+  add('<publisher-name>' .. publisher['name'] .. '</publisher-name>')
+  if publisher['loc'] then
+    add('<publisher-loc>' .. publisher['loc'] .. '</publisher-loc>')
+  end
   add('</publisher>')
   add('</journal-meta>')
 
   add('<article-meta>')
-  add('<article-id pub-id-type="publisher-id">' .. (metadata['article']['publisher-id'] or '') .. '</article-id>')
-  add('<article-id pub-id-type="doi">' .. (metadata['article']['doi'] or '') .. '</article-id>')
+  if article['publisher-id'] then
+    add('<article-id pub-id-type="publisher-id">' .. article['publisher-id'] .. '</article-id>')
+  end
+  if article['doi'] then
+    add('<article-id pub-id-type="doi">' .. article['doi'] .. '</article-id>')
+  end
+  if article['pmid'] then
+    add('<article-id pub-id-type="pmid">' .. article['pmid'] .. '</article-id>')
+  end
+  if article['pmcid'] then
+    add('<article-id pub-id-type="pmcid">' .. article['pmcid'] .. '</article-id>')
+  end
+  if article['art-access-id'] then
+    add('<article-id pub-id-type="art-access-id">' .. article['art-access-id'] .. '</article-id>')
+  end
 
   add('<article-categories>')
   if metadata['headings'] then
@@ -115,28 +166,53 @@ function Doc(body, metadata, variables)
   add('</article-categories>')
 
   add('<title-group><article-title>' .. (metadata['title'] or '') .. '</article-title></title-group>')
+  if metadata['authors'] then
+    add('<contrib-group content-type="authors">')
+    for i, author in pairs(metadata['authors']) do
+      add('<contrib id="author-' .. i .. '" contrib-type="author"' ..
+        (author['corresp'] and ' corresp="yes"' or '') .. '>')
+      add('<name>')
+      add('<surname>' .. (author['surname'] or '') .. '</surname>')
+      add('<given-names>' .. (author['given-names'] or '') .. '</given-names>')
+      add('</name>')
+      add('<email>' .. (author['email'] or '') .. '</email>')
+      add('</contrib>')
+    end
+    add('</contrib-group>')
+  end
+
+  if metadata['editors'] then
+    add('<contrib-group content-type="editors">')
+    for i, editor in pairs(metadata['editors']) do
+      add('<contrib id="editor-' .. i .. '" contrib-type="editor">')
+      add('<name>')
+      add('<surname>' .. (editor['surname'] or '') .. '</surname>')
+      add('<given-names>' .. (editor['given-names'] or '') .. '</given-names>')
+      add('</name>')
+      add('<email>' .. (editor['email'] or '') .. '</email>')
+      add('</contrib>')
+    end
+    add('</contrib-group>')
+  end
+
+  add('<pub-date pub-type="epub" date-type="pub" iso-8601-date="' .. article['pub-date'] .. '">')
+  add('<day>' .. string.sub(article['pub-date'], 9, 10) .. '</day>')
+  add('<month>' .. string.sub(article['pub-date'], 6, 7) .. '</month>')
+  add('<year>' .. string.sub(article['pub-date'], 1, 4) .. '</year>')
+  add('</pub-date>')
+
   add('</article-meta>')
   add('</front>')
 
   add('<body>')
-  if metadata['title'] and metadata['title'] ~= "" then
-    add('<h1 class="title">' .. metadata['title'] .. '</h1>')
-  end
-  for _, author in pairs(metadata['author'] or {}) do
-    add('<h2 class="author">' .. author .. '</h2>')
-  end
-  if metadata['date'] and metadata['date'] ~= "" then
-    add('<h3 class="date">' .. metadata.date .. '</h3>')
-  end
+  add('<sec><title/>')
+
   add(body)
-  if #notes > 0 then
-    add('<ol class="footnotes">')
-    for _,note in pairs(notes) do
-      add(note)
-    end
-    add('</ol>')
-  end
+
+  add('</sec>')
   add('</body>')
+  add('<back>')
+  add('</back>')
   add('</article>')
   return table.concat(buffer,'\n')
 end
@@ -244,13 +320,20 @@ end
 
 -- lev is an integer, the header level.
 function Header(lev, s, attr)
-  return "<h" .. lev .. attributes(attr) ..  ">" .. s .. "</h" .. lev .. ">"
+  if attr.id then
+    return '</sec><sec id="' .. attr.id .. '">' ..
+           '<title>' .. s .. '</title>'
+  else
+    return '</sec><sec>' ..
+           '<title>' .. s .. '</title>'
+  end
 end
 
 function BlockQuote(s)
-  return "<blockquote>\n" .. s .. "\n</blockquote>"
+  return "<boxed-text>\n" .. s .. "\n</boxed-text>"
 end
 
+-- Should be restricted to use inside table cells (<td> and <th>)
 function HorizontalRule()
   return "<hr/>"
 end
@@ -263,25 +346,24 @@ function CodeBlock(s, attr)
     return '<img src="data:image/png;base64,' .. png .. '"/>'
   -- otherwise treat as code (one could pipe through a highlighter)
   else
-    return "<pre><code" .. attributes(attr) .. ">" .. escape(s) ..
-           "</code></pre>"
+    return '<preformat>' .. escape(s) .. '</preformat>'
   end
 end
 
 function BulletList(items)
   local buffer = {}
   for _, item in pairs(items) do
-    table.insert(buffer, "<li>" .. item .. "</li>")
+    table.insert(buffer, "<list-item>" .. item .. "</list-item>")
   end
-  return "<ul>\n" .. table.concat(buffer, "\n") .. "\n</ul>"
+  return '<list list-type="bullet">\n' .. table.concat(buffer, "\n") .. '\n</ol>'
 end
 
 function OrderedList(items)
   local buffer = {}
   for _, item in pairs(items) do
-    table.insert(buffer, "<li>" .. item .. "</li>")
+    table.insert(buffer, "<list-item>" .. item .. "</list-item>")
   end
-  return "<ol>\n" .. table.concat(buffer, "\n") .. "\n</ol>"
+  return '<list list-type="order">\n' .. table.concat(buffer, "\n") .. '\n</ol>'
 end
 
 -- Revisit association list STackValue instance.
@@ -357,7 +439,7 @@ function Table(caption, aligns, widths, headers, rows)
 end
 
 function Div(s, attr)
-  return "<div" .. attributes(attr) .. ">\n" .. s .. "</div>"
+  return "<sec" .. attributes(attr) .. ">\n" .. s .. "</sec>"
 end
 
 -- The following code will produce runtime warnings when you haven't defined
@@ -370,4 +452,3 @@ meta.__index =
     return function() return "" end
   end
 setmetatable(_G, meta)
-
