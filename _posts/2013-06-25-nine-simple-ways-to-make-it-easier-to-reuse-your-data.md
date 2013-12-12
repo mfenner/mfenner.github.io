@@ -3,28 +3,43 @@ layout: post
 title: "Nine simple ways to make it easier to (re)use your data"
 tags: [example, citation]
 authors:
- - name: Ethan P. White
-   orcid: 0000-0001-6728-7745
+ - surname: White
+   given-names: Ethan P.
+   orcid: http://orcid.org/0000-0001-6728-7745
    email: ethan.white@usu.edu
+   corresp: true
    affiliation: Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341
- - name: Elita Baldrige
-   orcid: 0000-0003-1639-5951
+ - surname: Baldrige
+   given-names: Elita
+   orcid: http://orcid.org/0000-0003-1639-5951
    email: elita.baldridge@usu.edu
    affiliation: Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341
- - name: Zachary T. Brym
+ - surname: Brym
+   given-names: Zachary T.
    email: zachary.brym@usu.edu
    affiliation: Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341
- - name: Kenneth J. Locey
+ - surname: Locey
+   given-names: Kenneth J.
    email: kenneth.locey@usu.edu
    affiliation: Dept. of Biology, Utah State University, Logan, UT, USA, 84341
- - name: Daniel J. McGlinn
+ - surname: McGlinn
+   given-names: Daniel J.
    email: daniel.mcglinn@usu.edu
    affiliation: Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341
- - name: Sarah R. Supp
+ - surname: Supp
+   given-names: Sarah R.
    email: sarah.supp@usu.edu
    affiliation: Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341
+article:
+  doi: 10.7287/peerj.preprints.7v2
+journal:
+  title: PeerJ Preprints
+  publisher-id: peerj-preprints
+  eissn: 2167-9843
+publisher:
+  name: PeerJ Inc.
 ---
->This paper in markdown format was written by Ethan White et al.  The markdown file and the associated bibliogaphy and figure files are available from the [Github repository of the paper](https://github.com/weecology/data-sharing-paper). 
+>This paper in markdown format was written by Ethan White et al.  The markdown file and the associated bibliogaphy and figure files are available from the [Github repository of the paper](https://github.com/weecology/data-sharing-paper).
 
 >I used [this](https://github.com/weecology/data-sharing-paper/commit/b5a73eb0942a18bb29810025a528aea48a8465e7) version, an earlier version was published as [PeerJ Preprint](http://dx.doi.org/10.7287/peerj.preprints.7v1). Special thanks to Ethan White for allowing me to reuse this paper. The paper is used here as an example document to show how markdown can handle scholarly documents, in particular tables, figures and citations. The document was slightly modified from the orginal: added YAML frontmatter (needed by jekyll, author names are also stored there), and changed the anchor text for some links.  This post is using the APA citation style. Please restrict your comments to issues related to Scholarly Markdown, for the content of the article contact Ethan directly.
 
@@ -53,16 +68,16 @@ Our recommendations focus on making your data understandable, easy to work with,
 
 The first and most important step in sharing your data is to share your data. The recommendations below will help make your data more useful, but sharing it in any form is a big step forward. So, why should you share your data?
 
-Data sharing provides substantial benefits to the scientific community [@fienberg1985]. It allows 
+Data sharing provides substantial benefits to the scientific community [@fienberg1985]. It allows
 
 1. the results of existing analyses to be reproduced and improved upon [@fienberg1985; @poisot2013],
 2. data to be combined in meta-analyses to reach general conclusions [@fienberg1985],
 3. new approaches to be applied to the data and new questions asked using it [@fienberg1985], and
 4. approaches to scientific inquiry that couldn't even be considered without broad scale data sharing [@hampton2013].
 
-As a result, data sharing is increasingly required by funding agencies (@poisot2013; e.g., [NSF](http://www.nsf.gov/bfa/dias/policy/dmp.jsp), [NIH](http://grants.nih.gov/grants/guide/notice-files/NOT-OD-03-032.html), [NSERC](http://www.nserc-crsng.gc.ca/Professors-Professeurs/FinancialAdminGuide-GuideAdminFinancier/Responsibilities-Responsabilites_eng.asp), [FWF](http://www.fwf.ac.at/en/public_relations/oai/index.html)), journals [@whitlock2010], and potentially by law (e.g. [FASTR](http://doyle.house.gov/sites/doyle.house.gov/files/documents/2013%2002%2014%20DOYLE%20FASTR%20FINAL.pdf)). 
+As a result, data sharing is increasingly required by funding agencies (@poisot2013; e.g., [NSF](http://www.nsf.gov/bfa/dias/policy/dmp.jsp), [NIH](http://grants.nih.gov/grants/guide/notice-files/NOT-OD-03-032.html), [NSERC](http://www.nserc-crsng.gc.ca/Professors-Professeurs/FinancialAdminGuide-GuideAdminFinancier/Responsibilities-Responsabilites_eng.asp), [FWF](http://www.fwf.ac.at/en/public_relations/oai/index.html)), journals [@whitlock2010], and potentially by law (e.g. [FASTR](http://doyle.house.gov/sites/doyle.house.gov/files/documents/2013%2002%2014%20DOYLE%20FASTR%20FINAL.pdf)).
 
-Despite these potential benefits to the community, many scientists are still reluctant to share data. 
+Despite these potential benefits to the community, many scientists are still reluctant to share data.
 This reluctance is largely due to perceived fears of 1) competition for publications based on the shared data, 2) technical barriers, and 3) a lack of recognition for sharing data [@palmer2004; @hampton2013].
 These concerns are often not as serious as they first appear, and the minimal costs associated with data sharing are frequently offset by individual benefits to the data sharer [@parr2005; @hampton2013].
 Many data sharing initiatives allow for data embargoes or limitations on direct competition that can last for several years while the authors develop their publications and thus avoid competition for deriving publications from the data.
@@ -74,26 +89,26 @@ As a result, it is increasingly beneficial to the individual researcher to share
 2. Provide metadata
 -------------------
 
-The first key to using data is understanding it. 
+The first key to using data is understanding it.
 Metadata is information about the data including how it was collected, what the units of measurement are, and descriptions of how to best use the data.
 Clear metadata makes it easier to figure out if a dataset is appropriate for a project.
 It also makes data easier to use by both the original investigators and by other scientists by making it easy to figure out how to work with the data.
-Without clear metadata, datasets can be overlooked or not used due to the difficulty of understanding the data [@fraser1999; @zimmerman2003], 
+Without clear metadata, datasets can be overlooked or not used due to the difficulty of understanding the data [@fraser1999; @zimmerman2003],
 and the data becomes less useful over time [@michener1997].
 
-Metadata can take several forms, including descriptive file and column names, a written description of the data, images (_i.e.,_ maps, photographs), and specially structured information that can be read by computers. 
+Metadata can take several forms, including descriptive file and column names, a written description of the data, images (_i.e.,_ maps, photographs), and specially structured information that can be read by computers.
 Good metadata should provide 1) the what, when, where, and how of data collection,
 2) how to find and access the data,
 3) suggestions on the suitability of the data for answering specific questions,
 4) warnings about known problems or inconsistencies in the data, and 5) information to check that the data are properly imported, such as the number of rows and columns in the dataset and the total sum of numerical columns [@michener1997; @zimmerman2003; @strasser2012].
 
 Just like any other scientific publication, metadata should be logically organized, complete, and clear enough to enable interpretation and use of the data [@zimmerman2007].
-Specific metadata standards exist (_e.g.,_ Ecological Metadata Language [EML](http://knb.ecoinformatics.org/software/eml/), 
-Directory Interchange Format [DIF](http://gcmd.gsfc.nasa.gov/add/difguide/index.html), 
+Specific metadata standards exist (_e.g.,_ Ecological Metadata Language [EML](http://knb.ecoinformatics.org/software/eml/),
+Directory Interchange Format [DIF](http://gcmd.gsfc.nasa.gov/add/difguide/index.html),
 Darwin Core [DWC](http://rs.tdwg.org/dwc/) [@wieczorek2012],
 Dublin Core Metadata Initiative [DCMI](http://dublincore.org/metadata-basics/),
 Federal Geographic Data Committee [FGDC](http://www.fgdc.gov/metadata/geospatial-metadata-standards)
-[@reichman2011; @whitlock2011].
+[@reichman2011; @Whitlock2011].
 These standards are designed to provide consistency in metadata across different datasets and also to allow computers to interpret the metadata automatically.
 This allows broader and more efficient use of shared data [@brunt2002; @jones2006].
 While following these standards is valuable, the most important thing is to have metadata at all.
@@ -198,7 +213,7 @@ NA and NULL are reasonable null values, but they are only handled automatically 
 NA can also be problematic if it is also used as an abbreviation (e.g., North America, Namibia, _Neotoma albigula_, sodium, etc.).
 We recommend against using numerical values to indicate nulls (e.g., 999, -999, etc.) because they typically require an extra step to remove from analyses and can be accidentally included in calculations.
 We also recommend against using non-standard text indications (e.g., No data, ND, missing, ---) because they can cause issues with software that requires consistent data types within columns).
-Whichever null value that you use, only use one, use it consistently throughout the data set, and indicate it clearly in the metadata. 
+Whichever null value that you use, only use one, use it consistently throughout the data set, and indicate it clearly in the metadata.
 
 Table: **Tabel 1. Commonly used null values, limitations, compatibility with common software and a recommendation regarding whether or not it is a good option**. Null values are indicated as being a null value for specific software if they work consistently and correctly with that software. For example, the null value "NULL" works correctly for certain applications in R, but does not work in others, so it is not presented as part of the table.
 
@@ -290,15 +305,15 @@ However, it is particularly important for data that will be shared because scien
 
 At its most basic, quality control can consist of a few quick sanity checks of the data.
 More advanced quality control can include automated checks on data as it is entered and double-entry of data [@lampe1998; @paulsen2012].
-This additional effort can be time consuming, but is valuable because it increases data accuracy by catching typographical errors, reader/recorder error, out-of-range values, and questionable data in general [@lampe1998; @paulsen2012]. 
+This additional effort can be time consuming, but is valuable because it increases data accuracy by catching typographical errors, reader/recorder error, out-of-range values, and questionable data in general [@lampe1998; @paulsen2012].
 
 Before sharing your data we recommend performing a quick "data review".
 Start by performing some basic sanity checks on your data.
 For example:
 
-* If a column should contain numeric values, check that there are no non-numeric values in the data. 
-* Check that empty cells actually represent missing data, and not mistakes in data entry, and indicate that they are empty using the appropriate null values (see recommendation 6). 
-* Check for consistency in unit of measurement, data type (e.g., numeric, character), naming scheme (e.g., taxonomy, location), etc. 
+* If a column should contain numeric values, check that there are no non-numeric values in the data.
+* Check that empty cells actually represent missing data, and not mistakes in data entry, and indicate that they are empty using the appropriate null values (see recommendation 6).
+* Check for consistency in unit of measurement, data type (e.g., numeric, character), naming scheme (e.g., taxonomy, location), etc.
 
 These checks can be performed by carefully looking at the data or can be automated using common programming and analysis tools like R or Python.
 
@@ -315,7 +330,7 @@ This guarantees that the data will be available in the same location for a long 
 There are repositories available for sharing almost any type of biological or environmental data.
 Repositories that host specific data types, such as molecular sequences (e.g., DDBJ, GenBank, MG-RAST), are often highly standardized in data type, format, and quality control approaches.
 Other repositories host a wide array of data types and are less standardized (e.g., Dryad, KNB, PANGAEA).
-In addition to the repositories focused on the natural sciences there are also all purpose repositories where data of any kind can be shared (e.g., figshare). 
+In addition to the repositories focused on the natural sciences there are also all purpose repositories where data of any kind can be shared (e.g., figshare).
 
 When choosing a repository you should consider where other researchers in your discipline are sharing their data.
 This helps you quickly identify the community's standard approach to sharing and increases the likelihood that other scientists will discover your data.
@@ -369,7 +384,7 @@ Table: **Table 2. Popular repositories for scientific datasets**. This table doe
 |             |       |     |         |        |datasets    |
 +-------------+-------+-----+---------+--------+------------+
 
-9. Use an established and liberal license 
+9. Use an established and liberal license
 -----------------------------------------
 
 Including an explicit license with your data is the best way to let others know exactly what they can and cannot do with the data you shared.
@@ -404,14 +419,14 @@ This is particularly true when returning to your own data for further analysis m
 In addition, data sharing often occurs within a lab or research group.
 Good data sharing practices make these in-house collaborations faster, easier, and less dependent on lab members who may have graduated or moved on to other things.
 
-By following these practices we can assure that the data collected in ecology and evolution can be used to its full potential to improve our understanding of biological systems. 
+By following these practices we can assure that the data collected in ecology and evolution can be used to its full potential to improve our understanding of biological systems.
 
 
 Acknowledgments
 ---------------
 Thanks to Karthik Ram for organizing this special section and inviting us to contribute.
 Carly Strasser and Kara Woo recommended important references and David Harris and Carly Strasser provided valuable feedback on null values, all via Twitter.
-Carl Boettiger, Matt Davis, Daniel Hocking, Heinz Pampel, Karthik Ram, Thiago Silva, Carly Strasser, Tom Webb, and @beroe (Twitter handle) provided value comments on the manuscript.
+Carl Boettiger, Matt Davis, Daniel Hocking, Heinz Pampel, Karthik Ram, Thiago Silva, Carly Strasser, Tom Webb, and beroe (Twitter handle) provided value comments on the manuscript.
 Many of these comments were part of the informal review process facilitated by posting this manuscript as a preprint.
 The writing of this paper was supported by a CAREER grant from the U.S. National Science Foundation (DEB 0953694) to EPW.
 
