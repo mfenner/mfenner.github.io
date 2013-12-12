@@ -43,7 +43,7 @@ tags_path:       /tags.html
 rss_path:        /rss.xml
 atom_path:       /atom.xml
 
-## Markdown Parser (standard Jekyll argument, extended to special parser)
+# Markdown Parser (standard Jekyll argument, extended to special parser)
 markdown: pandoc
 pandoc:
   skip: true

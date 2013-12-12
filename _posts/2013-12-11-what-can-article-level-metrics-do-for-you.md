@@ -3,24 +3,27 @@ layout: post
 title: "What Can Article Level Metrics Do for You?"
 tags: [example, markdown, article-level metrics, reproducibility]
 journal:
-  - publisher-id: plos
-  - nlm-ta: PLoS Biol
-  - pmc: plosbiol
-  - title: PLoS Biology
-  - eissn: 1545-7885
-  - pissn: 1544-9173
+  publisher-id: plos
+  nlm-ta: PLoS Biol
+  pmc: plosbiol
+  title: PLoS Biology
+  eissn: 1545-7885
+  pissn: 1544-9173
 publisher:
-  - name: Public Library of Science
-  - loc: San Francisco, USA
+  name: Public Library of Science
+  loc: San Francisco, USA
 article:
-  - publisher-id: PBIOLOGY-D-13-03338
-  - doi: 10.1371/journal.pbio.1001687
+  type: research-article
+  publisher-id: PBIOLOGY-D-13-03338
+  doi: 10.1371/journal.pbio.1001687
+  pub-date: 2013-10-22
 headings: [Essay]
-
 authors:
- - name: Martin Fenner
-   orcid: 0000-0003-1419-2405
+ - surname: Fenner
+   given-names: Martin
+   orcid: http://orcid.org/0000-0003-1419-2405
    email: mfenner@plos.org
+   corresp: true
 ---
 *Article-level metrics (ALMs) provide a wide range of metrics about the
 uptake of an individual journal article by the scientific community
@@ -411,5 +414,3 @@ R scripts that were used to produce figures.** The data were collected
 on May 20, 2013 and include all *PLOS Biology* articles published up to
 that day. Data for F1000Prime were collected on August 15, 2013. All
 charts were produced with R version 3.0.0.
-
-### References
