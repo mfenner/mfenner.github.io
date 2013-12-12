@@ -18,7 +18,7 @@
     <meta property="dc:type" content="website" />
 
     <!-- Google Scholar Metadata -->{% if page.authors %}{% for author in page.authors %}
-    <meta name="citation_author" content="{{ author.name }}"/>{% endfor %}{% else %}
+    <meta name="citation_author" content="{{ author.given-names }} {{ author.surname }}"/>{% endfor %}{% else %}
     <meta name="citation_author" content="{{ site.author.name }}"/>{% endif %}{% if post %}
     <meta name="citation_publication_date" content="{{ post.date | date: "%Y-%m-%d" }}"/>{% else %}
     <meta name="citation_publication_date" content="{{ page.date | date: "%Y-%m-%d" }}"/>{% endif %}

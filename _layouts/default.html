@@ -10,7 +10,7 @@
         <p>A blog about how the internet is changing scholarly communication.</p>{% else %}
         <p>{% if page.date %}{{ page.date | date_to_long_string }} by
           {% if page.authors %}{% for author in page.authors %}
-{% if author.orcid %}<a href="http://orcid.org/{{author.orcid}}" title="{{author.affiliation}}">{{ author.name }}</a>{% else %}<a href="mailto:{{ author.email }}" title="{{author.affiliation}}" >{{ author.name }}</a>{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}{% else %}
+{% if author.orcid %}<a href="{{author.orcid}}" title="{{author.affiliation}}">{{ author.given-names }} {{ author.surname }}</a>{% else %}<a href="mailto:{{ author.email }}" title="{{author.affiliation}}" >{{ author.given-names }} {{ author.surname }}</a>{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}{% else %}
           <a href="/about.html">{{ site.author.name }}</a>{% endif %}{% endif %}
         </p>{% endif %}
       </div>
