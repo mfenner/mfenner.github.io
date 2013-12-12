@@ -73,25 +73,36 @@ function Doc(body, metadata, variables)
     table.insert(buffer, s)
   end
 
+  -- put references into back
+  local offset = string.find(body, '<ref-')
+  if (offset == nil) then
+    back = ''
+  else
+    back = string.sub(body, offset)
+    body = string.sub(body, 1, offset - 1)
+  end
+
+  body = '<sec>\n<title/>' .. body .. '</sec>\n'
+
   article = metadata['article'] or {}
   journal = metadata['journal'] or {}
   publisher = metadata['publisher'] or {}
 
-  -- abort if any required variables are missing
+  -- variables required for validation
   if not (article['publisher-id'] or article['doi'] or article['pmid'] or article['pmcid'] or article['art-access-id']) then
-    error("no article id specified")
+    article['art-access-id'] = ''
   end
-  if not (journal['pissn'] or journal['eissn']) then
-    error("no issn specified")
-  end
+  if not (journal['pissn'] or journal['eissn']) then journal['eissn'] = '' end
   if not (journal['publisher-id'] or journal['nlm-ta'] or journal['pmc']) then
-    error("no journal id specified")
+    journal['publisher-id'] = ''
   end
-  if not publisher['name'] then error("publisher name not specified") end
+  if not journal['title'] then journal['title'] = '' end
+  if not publisher['name'] then publisher['name'] = '' end
 
   -- defaults
   article['type'] = article['type'] or 'other'
   article['heading'] = article['heading'] or 'Other'
+  article['elocation-id'] = article['elocation-id'] or article['doi'] or 'Other'
 
    -- use today's date if no pub-date in ISO 8601 format is given
   if not (article['pub-date'] and string.len(article['pub-date']) == 10) then
@@ -114,9 +125,7 @@ function Doc(body, metadata, variables)
   if journal['pmc'] then
     add('<journal-id journal-id-type="pmc">' .. journal['pmc'] .. '</journal-id>')
   end
-  if journal['title'] then
-    add('<journal-title-group><journal-title>' .. journal['title'] .. '</journal-title></journal-title-group>')
-  end
+  add('<journal-title-group><journal-title>' .. journal['title'] .. '</journal-title></journal-title-group>')
   if journal['pissn'] then
     add('<issn pub-type="ppub">' .. journal['pissn'] .. '</issn>')
   end
@@ -168,11 +177,15 @@ function Doc(body, metadata, variables)
     for i, author in pairs(metadata['authors']) do
       add('<contrib id="author-' .. i .. '" contrib-type="author"' ..
         (author['corresp'] and ' corresp="yes"' or '') .. '>')
+      if author['orcid'] then
+        add('<contrib-id contrib-id-type="orcid">' .. author['orcid'] .. '</contrib-id>')
+      end
       add('<name>')
       add('<surname>' .. (author['surname'] or '') .. '</surname>')
       add('<given-names>' .. (author['given-names'] or '') .. '</given-names>')
       add('</name>')
       add('<email>' .. (author['email'] or '') .. '</email>')
+
       add('</contrib>')
     end
     add('</contrib-group>')
@@ -198,18 +211,14 @@ function Doc(body, metadata, variables)
   add('<year>' .. string.sub(article['pub-date'], 1, 4) .. '</year>')
   add('</pub-date>')
 
+  add('<elocation-id>' .. article['elocation-id'] .. '</elocation-id>')
+
   add('</article-meta>')
   add('</front>')
 
-  add('<body>')
-  add('<sec><title/>')
+  add('<body>' .. body .. '</body>')
+  add('<back>' .. back .. '</back>')
 
-  add(body)
-
-  add('</sec>')
-  add('</body>')
-  add('<back>')
-  add('</back>')
   add('</article>')
   return table.concat(buffer,'\n')
 end
@@ -261,7 +270,7 @@ end
 
 function Image(src, tit, s)
   -- if s begins with <bold> text, make it the <title>
-  s = string.gsub(s, "^<bold>(.-)</bold>%s", "<title>%1</title>\n<p>")
+  s = string.gsub('<p>' .. s, "^<bold>(.-)</bold>%s", "<title>%1</title>\n<p>")
   return '<fig>\n' ..
          '<caption>\n' .. s .. '</p>\n</caption>\n' ..
          "<graphic mimetype='image' xlink:href='".. escape(src,true) .. "' xlink:type='simple'/>\n" ..
@@ -278,7 +287,7 @@ function CaptionedImage(src, tit, s)
 end
 
 function Code(s, attr)
-  return "<code" .. attributes(attr) .. ">" .. escape(s) .. "</code>"
+  return "<preformat>" .. escape(s) .. "</preformat>"
 end
 
 function InlineMath(s)
@@ -302,7 +311,7 @@ function Note(s)
 end
 
 function Span(s, attr)
-  return "<span" .. attributes(attr) .. ">" .. s .. "</span>"
+  return s
 end
 
 function Plain(s)
@@ -319,11 +328,13 @@ end
 
 -- lev is an integer, the header level.
 function Header(lev, s, attr)
-  if attr.id then
-    return '</sec><sec id="' .. attr.id .. '">' ..
+  if attr.id and string.match(' ' .. attr.id .. ' ',' references ') then
+    return ''
+  elseif attr.id then
+    return '</sec>\n<sec id="' .. attr.id .. '">\n' ..
            '<title>' .. s .. '</title>'
   else
-    return '</sec><sec>' ..
+    return '</sec>\n<sec>\n' ..
            '<title>' .. s .. '</title>'
   end
 end
@@ -352,7 +363,7 @@ end
 function BulletList(items)
   local buffer = {}
   for _, item in pairs(items) do
-    table.insert(buffer, "<list-item>" .. item .. "</list-item>")
+    table.insert(buffer, "<list-item><p>" .. item .. "</p></list-item>")
   end
   return '<list list-type="bullet">\n' .. table.concat(buffer, "\n") .. '\n</list>'
 end
@@ -360,7 +371,7 @@ end
 function OrderedList(items)
   local buffer = {}
   for _, item in pairs(items) do
-    table.insert(buffer, "<list-item>" .. item .. "</list-item>")
+    table.insert(buffer, "<list-item><p>" .. item .. "</p></list-item>")
   end
   return '<list list-type="order">\n' .. table.concat(buffer, "\n") .. '\n</list>'
 end
@@ -399,10 +410,13 @@ function Table(caption, aligns, widths, headers, rows)
   local function add(s)
     table.insert(buffer, s)
   end
-  add("<table>")
+  add("<table-wrap>\n")
   if caption ~= "" then
-    add("<caption>" .. caption .. "</caption>")
+    -- if caption begins with <bold> text, make it the <title>
+    caption = string.gsub('<p>' .. caption, "^<p><bold>(.-)</bold>%s", "<title>%1</title>\n<p>")
+    add('<caption>\n' .. caption .. '</p>\n</caption>\n')
   end
+  add("<table>")
   if widths and widths[1] ~= 0 then
     for _, w in pairs(widths) do
       add('<col width="' .. string.format("%d%%", w * 100) .. '" />')
@@ -418,27 +432,42 @@ function Table(caption, aligns, widths, headers, rows)
   if empty_header then
     head = ""
   else
-    add('<tr class="header">')
+    add('<tr>')
     for _,h in pairs(header_row) do
       add(h)
     end
     add('</tr>')
   end
-  local class = "even"
   for _, row in pairs(rows) do
-    class = (class == "even" and "odd") or "even"
-    add('<tr class="' .. class .. '">')
+    add('<tr>')
     for i,c in pairs(row) do
+      -- remove <p> tag
+      c = string.gsub(c, "^<p>(.-)</p>", "%1")
       add('<td align="' .. html_align(aligns[i]) .. '">' .. c .. '</td>')
     end
     add('</tr>')
   end
-  add('</table')
+  add('</table>\n</table-wrap>')
   return table.concat(buffer,'\n')
 end
 
 function Div(s, attr)
-  return "<sec" .. attributes(attr) .. ">\n" .. s .. "</sec>"
+  -- parse references
+  if attr.class and string.match(' ' .. attr.class .. ' ',' references ') then
+    local i = 0
+    s = string.gsub(s, "<p>(.-)</p>", function (c)
+          i = i + 1
+          return '<ref id="ref-' .. i .. '">\n<mixed-citation>' .. c .. '</mixed-citation>\n</ref>'
+        end)
+    return '<ref-list>\n<title>References</title>\n' .. s .. '\n</ref-list>'
+  else
+    return s
+  end
+end
+
+function Reference(s)
+  return s
+  --return '<ref>\n<mixed-citation>' .. s .. '</mixed-citation>\n</ref>'
 end
 
 -- The following code will produce runtime warnings when you haven't defined
