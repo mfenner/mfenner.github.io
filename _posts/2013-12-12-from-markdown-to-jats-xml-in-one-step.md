@@ -8,7 +8,7 @@ The Journal Article Tag Suite ([JATS](http://jats.nlm.nih.gov/)) is a NISO stand
 
 For many publishers the *version of record* of an article is stored in XML, and other formats (currently HTML, PDF and increasingly ePub) are generated from this XML. Unfortunately the process of converting author-submitted manuscripts into JATS-compliant XML is time-consuming and costly, and this is a problem in particular for small publishers.
 
-In a recent blog post ([The Grammar of Scholarly Communication](/the-grammar-of-scholarly-communication/)) I argued that publishers should accept manuscripts in any reasonable file format, including Microsoft Word, Open Office, LaTeX, Markdown, HTML and PDF. Readers of this blog know that I am a big fan of [markdown](/tags.html#markdown-ref) for scholarly documents, but I am of course well aware that at the end of the day these documents have to be converted into JATS.
+In a recent blog post ([The Grammar of Scholarly Communication](/2013/11/17/the-grammar-of-scholarly-communication/)) I argued that publishers should accept manuscripts in any reasonable file format, including Microsoft Word, Open Office, LaTeX, Markdown, HTML and PDF. Readers of this blog know that I am a big fan of [markdown](/tags.html#markdown-ref) for scholarly documents, but I am of course well aware that at the end of the day these documents have to be converted into JATS.
 
 As a small step towards that goal I have today released the first public version of [pandoc-jats](https://github.com/mfenner/pandoc-jats), a [custom writer for Pandoc](http://johnmacfarlane.net/pandoc/README.html#custom-writers) that converts markdown documents into JATS XML with a single command, e.g.
 
