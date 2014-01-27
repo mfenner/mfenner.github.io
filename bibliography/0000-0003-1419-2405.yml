@@ -1,13 +1,60 @@
 ---
 orcid: 0000-0003-1419-2405
 created_at: '2012-10-08T20:49:20+00:00'
-updated_at: '2013-12-06T21:09:37+00:00'
-biography: Martin Fenner has for many years worked as medical doctor and cancer researcher
-  at the Hannover Medical School Cancer Center in Germany. In April 2012 he started
-  contract work as technical lead for the PLOS Article-Level Metrics project.
+updated_at: '2014-01-26T20:09:20+00:00'
+biography: Martin Fenner is the technical lead for the PLOS Article-Level Metrics
+  project. Before taking this position in 2012 he worked as a medical oncologist at
+  the Hannover Medical School Cancer Center in Germany. He has served on the ORCID
+  Board from 2010 to 2012 and is a member of the ORCID Outreach Steering Group.
 given_names: Martin
 family_name: Fenner
 references:
+- title: Altmetrics and Other Novel Measures for Scientific Impact
+  ISBN: 978-3-319-00025-1
+  URL: http://dx.doi.org/10.1007/978-3-319-00026-8_12
+  DOI: 10.1007/978-3-319-00026-8_12
+  publisher: Springer-Verlag
+  author:
+  - family: Fenner
+    given: Martin
+  page: 179-189
+  genre: book
+  id: fenner2014a
+  type: ''
+  issued:
+    date-parts:
+    - - 2014
+      - 12
+- title: Reference Management
+  author:
+  - family: Fenner
+    given: Martin
+  container-title: Opening Science
+  DOI: 10.1007/978-3-319-00026-8_8
+  URL: http://dx.doi.org/10.1007/978-3-319-00026-8_8
+  id: fenner2014b
+  type: article
+  issued:
+    date-parts:
+    - - 2014
+- title: Unique Identifiers for Researchers
+  ISBN: 978-3-319-00025-1
+  URL: http://dx.doi.org/10.1007/978-3-319-00026-8_21
+  DOI: 10.1007/978-3-319-00026-8_21
+  publisher: Springer-Verlag
+  author:
+  - family: Fenner
+    given: Martin
+  - family: Haak
+    given: Laure
+  page: 293-296
+  genre: book
+  id: fenner2014c
+  type: ''
+  issued:
+    date-parts:
+    - - 2014
+      - 12
 - title: What can article-level metrics do for you?
   author:
   - family: Fenner
@@ -41,8 +88,9 @@ references:
     given: Martin Fenner Juan Pablo Alperin
   publisher: Figshare
   title: 5000 random journal article CrossRef DOIs from 2011
+  genre: misc
   id: zahedi2013a
-  type: article
+  type: ''
   issued:
     date-parts:
     - - 2013
@@ -54,8 +102,9 @@ references:
     given: Martin Fenner
   publisher: Figshare
   title: 5000 random journal article CrossRef DOIs from 2012
+  genre: misc
   id: zahedi2013b
-  type: article
+  type: ''
   issued:
     date-parts:
     - - 2013
@@ -73,8 +122,9 @@ references:
   - family: Fenner
     given: Martin
   page: '20'
+  genre: article
   id: lin2013a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2013
@@ -88,8 +138,9 @@ references:
     given: Jennifer
   publisher: Figshare
   title: Article-Level Metrics Hannover Medical School
+  genre: misc
   id: martin2013a
-  type: article
+  type: ''
   issued:
     date-parts:
     - - 2013
@@ -100,8 +151,9 @@ references:
     given: Martin
   publisher: Figshare
   title: Cumulative usage statistics for PLOS papers from PubMed Central
+  genre: misc
   id: fenner2013c
-  type: article
+  type: ''
   issued:
     date-parts:
     - - 2013
@@ -113,8 +165,9 @@ references:
     given: Martin Fenner
   publisher: Figshare
   title: Cumulative usage statistics for PLOS website
+  genre: misc
   id: lin2013b
-  type: article
+  type: ''
   issued:
     date-parts:
     - - 2013
@@ -129,8 +182,9 @@ references:
     given: Martin
   publisher: Figshare
   title: D2.1 Kick off preparation, Communication plan and Website
+  genre: misc
   id: odin2013a
-  type: article
+  type: ''
   issued:
     date-parts:
     - - 2013
@@ -143,8 +197,9 @@ references:
     given: ODIN Consortium Martin Fenner Gudmundur Thorisson Sergio
   publisher: Figshare
   title: D4.1 Conceptual model of interoperability
+  genre: misc
   id: jan2013a
-  type: article
+  type: ''
   issued:
     date-parts:
     - - 2013
@@ -286,10 +341,11 @@ references:
     given: C.
   - family: Wittekind
     given: C.
+  genre: article
   DOI: 10.1093/annonc/mds579
   URL: http://dx.doi.org/10.1093/annonc/mds579
   id: beyer2013a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2013
@@ -300,8 +356,9 @@ references:
     given: Martin
   publisher: Figshare
   title: Metrics and Attribution
+  genre: misc
   id: fenner2013e
-  type: article
+  type: ''
   issued:
     date-parts:
     - - 2013
@@ -316,8 +373,9 @@ references:
     given: Gudmundur
   publisher: Figshare
   title: TEST Kickoff report
+  genre: misc
   id: odin2013b
-  type: article
+  type: ''
   issued:
     date-parts:
     - - 2013
@@ -331,6 +389,24 @@ references:
   issued:
     date-parts:
     - - 2013
+- title: What Can Article-Level Metrics Do for You?
+  volume: '11'
+  URL: http://dx.doi.org/10.1371/journal.pbio.1001687
+  DOI: 10.1371/journal.pbio.1001687
+  issue: '10'
+  container-title: PLoS Biology
+  publisher: Public Library of Science
+  author:
+  - family: Fenner
+    given: Martin
+  page: e1001687
+  genre: article
+  id: fenner2013g
+  type: ''
+  issued:
+    date-parts:
+    - - 2013
+      - 10
 - DOI: 10.6084/M9.FIGSHARE.90829
   URL: http://dx.doi.org/10.6084/M9.FIGSHARE.90829
   author:
@@ -340,8 +416,9 @@ references:
     given: Euan
   publisher: Figshare
   title: CrowdoMeter Tweet Classifications
+  genre: data
   id: martin2012a
-  type: data
+  type: ''
   issued:
     date-parts:
     - - 2012
@@ -354,8 +431,9 @@ references:
     given: Euan
   publisher: Figshare
   title: CrowdoMeter Tweets
+  genre: misc
   id: martin2012b
-  type: article
+  type: ''
   issued:
     date-parts:
     - - 2012
@@ -376,10 +454,11 @@ references:
     given: A.
   - family: Grünwald
     given: V.
+  genre: article
   DOI: 10.1186/1471-2407-12-186
   URL: http://dx.doi.org/10.1186/1471-2407-12-186
   id: seidel2012a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2012
@@ -391,10 +470,11 @@ references:
   author:
   - family: Fenner
     given: Martin
+  genre: article
   DOI: 10.1038/nmat3283
   URL: http://dx.doi.org/10.1038/nmat3283
   id: fenner2012a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2012
@@ -414,10 +494,11 @@ references:
     given: E.
   - family: Ratner
     given: H.
+  genre: article
   DOI: 10.1087/20120404
   URL: http://dx.doi.org/10.1087/20120404
   id: haak2012a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2012
@@ -443,10 +524,11 @@ references:
     given: A.
   - family: Grünwald
     given: V.
+  genre: article
   DOI: 10.1016/j.ejca.2012.02.048
   URL: http://dx.doi.org/10.1016/j.ejca.2012.02.048
   id: seidel2012b
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2012
@@ -457,8 +539,9 @@ references:
     given: Martin
   publisher: German Medical Science GMS Publishing House
   title: Wie kann die Bibliothek die Sichtbarkeit ihrer Wissenschaftler erhöhen?
+  genre: misc
   id: fenner2012b
-  type: article
+  type: ''
   issued:
     date-parts:
     - - 2012
@@ -487,10 +570,11 @@ references:
     given: A.
   - family: Johannsen
     given: M.
+  genre: article
   DOI: 10.1159/000328575
   URL: http://dx.doi.org/10.1159/000328575
   id: gr2011a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2011
@@ -507,10 +591,11 @@ references:
     given: C.G.
   - family: Thorisson
     given: G.A.
+  genre: article
   DOI: 10.1629/24277
   URL: http://dx.doi.org/10.1629/24277
   id: fenner2011a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2011
@@ -525,29 +610,13 @@ references:
   - family: Fenner
     given: Martin H.
   page: 253-261
+  genre: book
   id: daugaard2011a
-  type: book
+  type: ''
   issued:
     date-parts:
     - - 2011
       - 8
-- title: ! 'ORCID: Unique Identifiers for Authors and Contributors'
-  volume: '23'
-  URL: http://dx.doi.org/10.3789/isqv23n3.2011.3
-  DOI: 10.3789/isqv23n3.2011.3
-  issue: '3'
-  container-title: Information Standards Quarterly
-  publisher: National Information Standards Organization
-  author:
-  - family: Fenner
-    given: Martin
-  page: '10'
-  id: fenner2011b
-  type: article-journal
-  issued:
-    date-parts:
-    - - 2011
-      - 6
 - title: ! 'Preclinical and clinical activity of sunitinib in patients with cisplatin-refractory
     or multiply relapsed germ cell tumors: A Canadian Urologic Oncology Group/German
     Testicular Cancer Study Group cooperative study'
@@ -582,10 +651,11 @@ references:
     given: C.
   - family: Kollmannsberger
     given: C.
+  genre: article
   DOI: 10.1093/annonc/mdr026
   URL: http://dx.doi.org/10.1093/annonc/mdr026
   id: oechsle2011a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2011
@@ -613,36 +683,11 @@ references:
     given: A.
   - family: Grünwald
     given: V.
+  genre: article
   DOI: 10.1007/s00345-010-0642-3
   URL: http://dx.doi.org/10.1007/s00345-010-0642-3
   id: seidel2011a
-  type: article-journal
-  issued:
-    date-parts:
-    - - 2011
-- title: Retrospective analyses of patient characteristics having predictive impact
-    on survival under everolimus
-  container-title: Onkologie
-  volume: '34'
-  issue: '3'
-  page: 111-114
-  author:
-  - family: Seidel
-    given: C.
-  - family: Fenner
-    given: Martin
-  - family: Reuter
-    given: C.
-  - family: Merseburger
-    given: A.S.
-  - family: Ganser
-    given: A.
-  - family: Grünwald
-    given: V.
-  DOI: 10.1159/000324668
-  URL: http://dx.doi.org/10.1159/000324668
-  id: seidel2011b
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2011
@@ -665,39 +710,14 @@ references:
     given: J.
   - family: Weikert
     given: S.
+  genre: article
   DOI: 10.1038/bjc.2011.389
   URL: http://dx.doi.org/10.1038/bjc.2011.389
   id: gr2011b
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2011
-- title: Carboplatin plus weekly docetaxel as salvage chemotherapy in docetaxel-resistant
-    and castration-resistant prostate cancer
-  container-title: World Journal of Urology
-  volume: '28'
-  issue: '3'
-  page: 391-398
-  author:
-  - family: Reuter
-    given: C.W.M.
-  - family: Morgan
-    given: M.A.
-  - family: Ivanyi
-    given: P.
-  - family: Fenner
-    given: Martin
-  - family: Ganser
-    given: A.
-  - family: Grünwald
-    given: V.
-  DOI: 10.1007/s00345-010-0527-5
-  URL: http://dx.doi.org/10.1007/s00345-010-0527-5
-  id: reuter2010a
-  type: article-journal
-  issued:
-    date-parts:
-    - - 2010
 - title: Reference management meets web 2.0
   container-title: Cellular Therapy and Transplantation
   volume: '2'
@@ -705,10 +725,11 @@ references:
   author:
   - family: Fenner
     given: Martin
+  genre: article
   DOI: 10.3205/ctt-2010-en-000087.01
   URL: http://dx.doi.org/10.3205/ctt-2010-en-000087.01
   id: fenner2010a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2010
@@ -716,8 +737,8 @@ references:
     carcinoma (mRCC) treated with sunitinib â\x80\x93 a single center retrospective
     analysis"
   volume: '7'
-  URL: http://dx.doi.org/10.1016/s1359-6349(09)71483-1
-  DOI: 10.1016/s1359-6349(09)71483-1
+  URL: http://dx.doi.org/10.1016/S1359-6349(09)71483-1
+  DOI: 10.1016/S1359-6349(09)71483-1
   issue: '2'
   container-title: European Journal of Cancer Supplements
   publisher: Elsevier
@@ -735,8 +756,9 @@ references:
   - family: GrÃ¼nwald
     given: V.
   page: '438'
+  genre: article
   id: seidel2009a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2009
@@ -770,10 +792,11 @@ references:
     given: A.
   - family: Kreipe
     given: H.
+  genre: article
   DOI: 10.1007/s00277-008-0584-7
   URL: http://dx.doi.org/10.1007/s00277-008-0584-7
   id: lehmann2009a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2009
@@ -799,8 +822,9 @@ references:
   - family: Fenner
     given: Martin
   page: 284-286
+  genre: article
   id: fenner2008b
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2008
@@ -981,10 +1005,11 @@ references:
   - family: Maase
     given: H.
     non-dropping-particle: von der
+  genre: article
   DOI: 10.1016/j.eururo.2008.03.017
   URL: http://dx.doi.org/10.1016/j.eururo.2008.03.017
   id: krege2008a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2008
@@ -995,10 +1020,11 @@ references:
   author:
   - family: Fenner
     given: Martin
+  genre: article
   DOI: 10.1038/452029a
   URL: http://dx.doi.org/10.1038/452029a
   id: fenner2008c
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2008
@@ -1012,10 +1038,11 @@ references:
     given: M.H.
   - family: Ganser
     given: A.
+  genre: article
   DOI: 10.1097/CCO.0b013e3283136971
   URL: http://dx.doi.org/10.1097/CCO.0b013e3283136971
   id: fenner2008d
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2008
@@ -1197,10 +1224,11 @@ references:
   - family: Maase
     given: H.
     non-dropping-particle: von der
+  genre: article
   DOI: 10.1016/j.eururo.2007.12.024
   URL: http://dx.doi.org/10.1016/j.eururo.2007.12.024
   id: krege2008b
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2008
@@ -1382,10 +1410,11 @@ references:
   - family: Maase
     given: H.
     non-dropping-particle: von der
+  genre: article
   DOI: 10.1016/j.eururo.2007.12.025
   URL: http://dx.doi.org/10.1016/j.eururo.2007.12.025
   id: krege2008c
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2008
@@ -1401,10 +1430,11 @@ references:
     given: G.
   - family: Grünwald
     given: V.
+  genre: article
   DOI: 10.1517/13543784.17.4.511
   URL: http://dx.doi.org/10.1517/13543784.17.4.511
   id: fenner2008e
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2008
@@ -1429,10 +1459,11 @@ references:
     given: H.P.
   - family: Elstner
     given: E.
+  genre: article
   DOI: 10.1182/blood-2005-05-2103
   URL: http://dx.doi.org/10.1182/blood-2005-05-2103
   id: liu2006a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2006
@@ -1447,10 +1478,11 @@ references:
     given: M.H.
   - family: Elstner
     given: E.
+  genre: article
   DOI: 10.1517/13543784.14.6.557
   URL: http://dx.doi.org/10.1517/13543784.14.6.557
   id: fenner2005a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2005
@@ -1481,10 +1513,11 @@ references:
     given: H.P.
   - family: Elstner
     given: E.
+  genre: article
   DOI: 10.1016/j.leukres.2003.07.005
   URL: http://dx.doi.org/10.1016/j.leukres.2003.07.005
   id: zang2004a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2004
@@ -1517,10 +1550,11 @@ references:
     given: H.P.
   - family: Elstner
     given: E.
+  genre: article
   DOI: 10.1023/B:NEON.0000003728.80052.a8
   URL: http://dx.doi.org/10.1023/B:NEON.0000003728.80052.a8
   id: zang2003a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2003
@@ -1541,10 +1575,11 @@ references:
     given: K.
   - family: Elstner
     given: E.
+  genre: article
   DOI: 10.1023/A:1023366117157
   URL: http://dx.doi.org/10.1023/A:1023366117157
   id: liu2003a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2003
@@ -1558,10 +1593,11 @@ references:
     given: M.H.
   - family: Possinger
     given: K.
+  genre: article
   DOI: 10.1159/000067443
   URL: http://dx.doi.org/10.1159/000067443
   id: fenner2002a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2002
@@ -1588,10 +1624,11 @@ references:
     given: K.
   - family: Koeffler
     given: H.P.
+  genre: article
   DOI: 10.1023/A:1016114026769
   URL: http://dx.doi.org/10.1023/A:1016114026769
   id: elstner2002a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2002
@@ -1614,10 +1651,11 @@ references:
     given: T.
   - family: Li
     given: E.
+  genre: article
   DOI: 10.1006/dbio.2000.9823
   URL: http://dx.doi.org/10.1006/dbio.2000.9823
   id: sado2000a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 2000
@@ -1644,10 +1682,11 @@ references:
     given: K.J.
   - family: Shioda
     given: T.
+  genre: article
   DOI: 10.1006/geno.1998.5383
   URL: http://dx.doi.org/10.1006/geno.1998.5383
   id: fenner1998a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 1998
@@ -1670,10 +1709,11 @@ references:
     given: K.J.
   - family: Shioda
     given: T.
+  genre: article
   DOI: 10.1006/excr.1998.4123
   URL: http://dx.doi.org/10.1006/excr.1998.4123
   id: li1998a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 1998
@@ -1703,8 +1743,9 @@ references:
     given: A.B.
   - family: Isselbacher
     given: K.J.
+  genre: article
   id: shioda1998a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 1998
@@ -1726,8 +1767,9 @@ references:
     given: R.K.
   - family: Isselbacher
     given: K.J.
+  genre: article
   id: shioda1997a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 1997
@@ -1744,10 +1786,11 @@ references:
     given: M.H.
   - family: Isselbacher
     given: K.J.
+  genre: article
   DOI: 10.1002/(SICI)1096-9098(199702)64:2<122::AID-JSO6>3.0.CO;2-D
   URL: http://dx.doi.org/10.1002/(SICI)1096-9098(199702)64:2%3C122::AID-JSO6%3E3.0.CO;2-D
   id: shioda1997b
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 1997
@@ -1763,10 +1806,11 @@ references:
     given: M.H.
   - family: Isselbacher
     given: K.J.
+  genre: article
   DOI: 10.1016/S0378-1119(97)00551-9
   URL: http://dx.doi.org/10.1016/S0378-1119(97)00551-9
   id: shioda1997c
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 1997
@@ -1784,10 +1828,11 @@ references:
     given: M.H.
   - family: Isselbacher
     given: K.J.
+  genre: article
   DOI: 10.1073/pnas.93.22.12298
   URL: http://dx.doi.org/10.1073/pnas.93.22.12298
   id: shioda1996a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 1996
@@ -1816,8 +1861,9 @@ references:
     given: H.
   - family: Atzpodien
     given: J.
+  genre: article
   id: schomburg1994a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 1994
@@ -1856,31 +1902,9 @@ references:
     given: U.
   - family: Poliwoda
     given: H.
+  genre: article
   id: atzpodien1993a
-  type: article-journal
-  issued:
-    date-parts:
-    - - 1993
-- title: Interleukin-2 in combination with interferon-α and 5-fluorouracil for metastatic
-    renal cell cancer
-  container-title: ! 'European Journal of Cancer Part A: General Topics'
-  volume: '29'
-  issue: SUPPL. 5
-  author:
-  - family: Atzpodien
-    given: J.
-  - family: Kirchner
-    given: H.
-  - family: Lopez Hanninen
-    given: E.
-  - family: Deckert
-    given: M.
-  - family: Fenner
-    given: Martin
-  - family: Poliwoda
-    given: H.
-  id: atzpodien1993b
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 1993
@@ -1905,8 +1929,9 @@ references:
   - family: Atzpodien
     given: Jens
   page: 737-740
+  genre: article
   id: schomburg1993a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 1993
@@ -1937,8 +1962,9 @@ references:
   - family: Atzpodien
     given: Jens
   page: 301-306
+  genre: article
   id: hanninen1993a
-  type: article-journal
+  type: ''
   issued:
     date-parts:
     - - 1993
@@ -1949,6 +1975,27 @@ references:
   DOI: 10.1016/0140-6736(93)90172-D
   issue: '8841'
   container-title: The Lancet
+  publisher: Elsevier
+  author:
+  - family: Fenner
+    given: MartinH.
+  - family: Lopez HÃ¤nninen
+    given: Enrique
+  - family: Kirchner
+    given: HartmutH.
+  - family: Poliwoda
+    given: Hubert
+  - family: Atzpodien
+    given: Jens
+  page: '372'
+  genre: article
+  id: fenner1993b
+  type: ''
+  issued:
+    date-parts:
+    - - 1993
+      - 2
+Lancet
   publisher: Elsevier
   author:
   - family: Fenner

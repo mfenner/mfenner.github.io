@@ -84,6 +84,22 @@ function Doc(body, metadata, variables)
 
   body = '<sec>\n<title/>' .. body .. '</sec>\n'
 
+  front = Front(metadata)
+  add(front)
+
+  add('<body>' .. body .. '</body>')
+  add('<back>' .. back .. '</back>')
+
+  add('</article>')
+  return table.concat(buffer,'\n')
+end
+
+function Front(metadata)
+  local buffer = {}
+  local function add(s)
+    table.insert(buffer, s)
+  end
+
   article = metadata['article'] or {}
   journal = metadata['journal'] or {}
   publisher = metadata['publisher'] or {}
@@ -216,10 +232,6 @@ function Doc(body, metadata, variables)
   add('</article-meta>')
   add('</front>')
 
-  add('<body>' .. body .. '</body>')
-  add('<back>' .. back .. '</back>')
-
-  add('</article>')
   return table.concat(buffer,'\n')
 end
 
