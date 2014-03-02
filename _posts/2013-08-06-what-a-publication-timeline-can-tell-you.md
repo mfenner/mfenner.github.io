@@ -3,7 +3,7 @@ layout: post
 title: "What a publication timeline can tell you"
 tags: [citation, d3.js, career]
 ---
-Now that I can [automatically import my publications from my ORCID profile and display them](/2013/08/04/automatically-list-all-your-publications-in-your-blog/) in this blog, I also want to visualize them. I have started with [d3.js code](https://github.com/mfenner/blog/blob/master/_includes/by_year.js) that displays the number of publications per year - using the list of my publications in Citeproc JSON format. The chart is displayed on my [About page](/about.html), but I have also embedded the Javascript here:
+Now that I can [automatically import my publications from my ORCID profile and display them](/2013/08/04/automatically-list-all-your-publications-in-your-blog/) in this blog, I also want to visualize them. I have started with [d3.js code](https://github.com/mfenner/blog/blob/master/_includes/by_year.js) that displays the number of publications per year - using the list of my publications in Citeproc JSON format.<!--more--> The chart is displayed on my [About page](/about.html), but I have also embedded the Javascript here:
 
 <div class="row" id="year"></div>
 <script type="text/javascript">

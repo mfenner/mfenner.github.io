@@ -2,7 +2,7 @@
 layout: post
 title: "Additional Markdown we need in Scholarly Texts"
 description: ""
-category: 
+category:
 tags: [markdown]
 ---
 Following up from [my post last
@@ -12,7 +12,7 @@ documents written in scholarly markdown. Please provide feedback via the
 comments, or by editing the Wiki version I have set up
 [here](https://github.com/mfenner/scholarly-markdown/wiki). Listed are
 features that go beyond the [standard markdown
-syntax](http://daringfireball.net/projects/markdown/syntax).
+syntax](http://daringfireball.net/projects/markdown/syntax).<!--more-->
 
 The goals of scholarly markdown are
 
@@ -105,9 +105,9 @@ Math
 ----
 
 Complicated math is probably best done in a different authoring
-environment, but simple formulas, both inline $\sqrt2x$ and block elements 
+environment, but simple formulas, both inline $\sqrt2x$ and block elements
 
->  ${\frac {d}{dx}}\arctan(\sin({x}^{2}))=-2\,{\frac {\cos({x}^{2})x}{-2+\left (\cos({x}^{2})\right )^{2}}}$
+${\frac {d}{dx}}\arctan(\sin({x}^{2}))=-2\,{\frac {\cos({x}^{2})x}{-2+\left (\cos({x}^{2})\right )^{2}}}$
 
 should be supported by scholarly markdown.
 

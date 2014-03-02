@@ -3,7 +3,7 @@ layout: post
 title: "Automatically list all your publications in your blog"
 tags: [citation, orcid]
 ---
-A common feature of blogs written by scientists is a listing of all their publications. Publication lists are a great way to provide background information about your research. Publication lists should provide links to the fulltext versions of these publications, should be nicely formatted - e.g. using a common citation style such as APA - and should be easy to maintain. A number of tools for a variety of blogging platforms (including Wordpress and Jekyll) are available to help with this task, but maintaining the list of publications has remained difficult.
+A common feature of blogs written by scientists is a listing of all their publications. Publication lists are a great way to provide background information about your research. Publication lists should provide links to the fulltext versions of these publications, should be nicely formatted - e.g. using a common citation style such as APA - and should be easy to maintain. A number of tools for a variety of blogging platforms (including Wordpress and Jekyll) are available to help with this task, but maintaining the list of publications has remained difficult.<!--more-->
 
 Publication lists are best maintained in a system built for this purpose. This could be either a reference manager, or a profile page in a social network for scientists. Even better suited for this task is your Open Researcher & Contributor ID ([ORCID](http://orcid.org)) profile, as this service [@haak2012a] directly integrates with a number of bibliographic databases and makes the profile information available via an open API.
 

@@ -4,7 +4,7 @@ title: "The Complete Article"
 tags: [reproducibility, data, article]
 ---
 
-Open access to research data is becoming increasingly important, as manifested by memos or press releases from the [Wellcome Trust](http://www.wellcome.ac.uk/About-us/Policy/Policy-and-position-statements/WTX035043.htm), the [European Commission](http://europa.eu/rapid/press-release_IP-12-790_en.htm), and the [the Office of Science and Technology Policy](http://www.whitehouse.gov/blog/2013/02/22/expanding-public-access-results-federally-funded-research) (OSTP) from the White House.
+Open access to research data is becoming increasingly important, as manifested by memos or press releases from the [Wellcome Trust](http://www.wellcome.ac.uk/About-us/Policy/Policy-and-position-statements/WTX035043.htm), the [European Commission](http://europa.eu/rapid/press-release_IP-12-790_en.htm), and the [the Office of Science and Technology Policy](http://www.whitehouse.gov/blog/2013/02/22/expanding-public-access-results-federally-funded-research) (OSTP) from the White House.<!--more-->
 
 Open access to research data is important as this makes it easier for other researchers to reproduce the research, and to build upon the research by others by re-analysis of data or combination with other research data. In other words, [Science as an open enterprise](http://royalsociety.org/policy/projects/science-public-enterprise/report/).
 

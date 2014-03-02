@@ -2,10 +2,10 @@
 layout: post
 title: "What Flavor is Scholarly Markdown?"
 description: ""
-category: 
+category:
 tags: [markdown]
 ---
-One important outcome of the recent [Markdown for Science] workshop was an overall agreement that all the different implementations (or flavors) of markdown that currently exist are a big problem for the adoption of Scholarly Markdown and that we [need]: 
+One important outcome of the recent [Markdown for Science] workshop was an overall agreement that all the different implementations (or flavors) of markdown that currently exist are a big problem for the adoption of Scholarly Markdown<!--more--> and that we [need]:
 
 > A reference implementation with documentation and tests
 

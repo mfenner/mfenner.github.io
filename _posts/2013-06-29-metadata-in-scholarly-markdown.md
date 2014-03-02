@@ -10,7 +10,7 @@
 }
 ---
 
-Scholarly documents often need metadata that describe them: typically author(s), title and location (DOI or URL), but possibly many other things. For some metadata it makes sense to store them in the document text, e.g. as is typically done for citations. The problem is that this can make it hard to make the metadata machine-readable. The worst place for metadata is of course outside of the document, and unfortunately that it is the most common way of doing this. Two examples:
+Scholarly documents often need metadata that describe them: typically author(s), title and location (DOI or URL), but possibly many other things. For some metadata it makes sense to store them in the document text, e.g. as is typically done for citations. The problem is that this can make it hard to make the metadata machine-readable. The worst place for metadata is of course outside of the document, and unfortunately that it is the most common way of doing this.<!--more--> Two examples:
 
 * Manuscript submission. Papers submitted to scholarly journals contain the metadata in the text, but authors are required to enter the information again into a webform. You can add metadata ([property information]) to Microsoft Word documents, but it seems that nobody is doing it.
 * PDFs and image files. Even though we have at least one good standard with [XMP] to store metadata in these documents, it is not a common practice. Information about these documents is therefore stored somewhere else and doesn't automatically travel with them.
@@ -47,7 +47,7 @@ authors:
    affiliation: Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341
 ---
 ```
-    
+
 In JSON the same information would look like this (and Jekyll is able to parse it, since JSON is a subset of YAML 1.2):
 
 ```json
@@ -90,8 +90,8 @@ In JSON the same information would look like this (and Jekyll is able to parse i
 }
 ---
 ```
-    
-You can see that the author information required for manuscript submission can easily be written in YAML (email addresses were removed to protect privacy). JSON is also possible for people where this is a better fit into their workflow, but it is more difficult to write for humans because of the curly braces, and because all strings need to be in double quotes. 
+
+You can see that the author information required for manuscript submission can easily be written in YAML (email addresses were removed to protect privacy). JSON is also possible for people where this is a better fit into their workflow, but it is more difficult to write for humans because of the curly braces, and because all strings need to be in double quotes.
 
 Once the ORCID Registry [adds affiliation] information, we no longer need to provide email and affiliation when submitting manuscripts. I have stored my own name, orcid, email and affiliation in my site configuration file so that I don't have to provide this info for every blog post.
 
@@ -105,7 +105,7 @@ Metadata are important, and Scholarly Markdown makes it easy to embed them.
 
 References
 ----------
-    
+
 [property information]: http://office.microsoft.com/en-001/word-help/add-property-information-to-a-document-HA010163766.aspx
 [XMP]: http://blogs.plos.org/mfenner/2008/12/22/just_doi_it/
 [title block]: http://johnmacfarlane.net/pandoc/README.html

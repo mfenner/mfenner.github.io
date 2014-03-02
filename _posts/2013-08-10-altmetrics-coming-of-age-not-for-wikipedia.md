@@ -3,7 +3,7 @@ layout: post
 title: "Altmetrics coming of age? Not for Wikipedia"
 tags: [altmetrics, wikipedia]
 ---
-Ten days ago Information Standards Quarterly (ISQ) published a [special issue on altmetrics](http://www.niso.org/publications/isq/2013/v25no2/). I was the guest editor for the five altmetrics articles, and in the [editorial](http://dx.doi.org/10.3789/isqv25no2.2013.01) that I titled **Altmetrics have come of age** I argued that
+Ten days ago Information Standards Quarterly (ISQ) published a [special issue on altmetrics](http://www.niso.org/publications/isq/2013/v25no2/). I was the guest editor for the five altmetrics articles<!--more-->, and in the [editorial](http://dx.doi.org/10.3789/isqv25no2.2013.01) that I titled **Altmetrics have come of age** I argued that
 
 >We no longer need to talk about whether it is possible to reliably collect altmetrics, or whether this is valuable information that can complement citations and usage statistics.
 

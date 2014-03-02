@@ -24,6 +24,14 @@ authors:
    orcid: http://orcid.org/0000-0003-1419-2405
    email: mfenner@plos.org
    corresp: true
+excerpt: "The scientific impact of a particular piece of research is reflected in
+how this work is taken up by the scientific community. The first
+systematic approach that was used to assess impact, based on the
+technology available at the time, was to track citations and aggregate
+them by journal. This strategy is not only no longer necessary — since now
+we can easily track citations for individual articles — but also, and more
+importantly, journal-based metrics are now considered a poor performance
+measure for individual articles."
 ---
 *Article-level metrics (ALMs) provide a wide range of metrics about the
 uptake of an individual journal article by the scientific community
@@ -34,7 +42,7 @@ are an important extension of traditional citation-based journal metrics
 and provide a number of example from ALM data collected for PLOS
 Biology.*
 
-> This is an open-access article distributed under the terms of the Creative Commons Attribution License, authored by me and [originally published Oct 22, 2013 in PLOS Biology](http://dx.doi.org/10.1371/journal.pbio.1001687).
+*This is an open-access article distributed under the terms of the Creative Commons Attribution License, authored by me and [originally published Oct 22, 2013 in PLOS Biology](http://dx.doi.org/10.1371/journal.pbio.1001687).*
 
 The scientific impact of a particular piece of research is reflected in
 how this work is taken up by the scientific community. The first
@@ -414,3 +422,5 @@ R scripts that were used to produce figures.** The data were collected
 on May 20, 2013 and include all *PLOS Biology* articles published up to
 that day. Data for F1000Prime were collected on August 15, 2013. All
 charts were produced with R version 3.0.0.
+
+## References

@@ -4,7 +4,7 @@ title: "Challenges in automated DOI resolution"
 tags: [doi, metadata, crossref, altmetrics]
 ---
 
-Yesterday we created a set of roughly 10,000 DOIs for journal articles published in 2011 or 2012. We used these DOIs as a reference set in a [data hackathon](http://almdatachallenge.eventbrite.com/) around article-level metrics/altmetrics - material for another blog post.
+Yesterday we created a set of roughly 10,000 DOIs for journal articles published in 2011 or 2012. We used these DOIs as a reference set in a [data hackathon](http://almdatachallenge.eventbrite.com/) around article-level metrics/altmetrics - material for another blog post.<!--more-->
 
 The random DOis were generated using the [CrossRef RanDOIm service](http://random.labs.crossref.org/), with article titles fetched from the [CrossRef OpenURL API](http://labs.crossref.org/openurl/). We didn't have time to properly parse the publication date and only used the publication year. We used the `crossref_r` and `crossref` functions from the rOpenSci [rplos package](http://ropensci.github.io/rplos/) (and some extra help from Scott Chamberlain) to achieve this, the datasets were deposited to figshare and can be found [here](http://dx.doi.org/10.6084/m9.figshare.821209) (2011) and [here](http://dx.doi.org/10.6084/m9.figshare.821213) (2012).
 

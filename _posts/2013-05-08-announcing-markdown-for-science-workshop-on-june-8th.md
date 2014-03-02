@@ -2,7 +2,7 @@
 layout: post
 title: "Announcing Markdown for Science Workshop on June 8th"
 description: ""
-category: 
+category:
 tags: [markdown, meeting]
 ---
 On Saturday June 8th – exactly a month from today – the PLOS San
@@ -13,7 +13,7 @@ posts [here](http://blog.yoavram.com/markx/), [here](http://inundata.org/2012/
 my post
 [here](/2012/12/13/a-call-for-scholarly-markdown/),
 and the scientific manuscript
-[here](https://github.com/weecology/data-sharing-paper/).
+[here](https://github.com/weecology/data-sharing-paper/).<!--more-->
 
 Markdown is a simple markup language for text, and is primarily used for
 HTML content on the web, but can also be converted to PDF, LaTeX and

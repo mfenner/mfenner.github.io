@@ -4,11 +4,11 @@ title: "RSS Feeds for Scholarly Authors"
 tags: [orcid, metadata, rss]
 ---
 
-Open Researcher & Contributor ID ([ORCID](https://speakerdeck.com/mfenner/orcid-connecting-research-and-researchers-1)) provides a persistent identifier for researchers and lets them claim their research outputs in the ORCID Registry. I have been involved with ORCID since early 2010 and I am happy to see that nine months after launch 200,000 researchers have signed up for the service, and the organisation has more than [70 member organizations](http://orcid.org/about/community/members).
+Open Researcher & Contributor ID ([ORCID](https://speakerdeck.com/mfenner/orcid-connecting-research-and-researchers-1)) provides a persistent identifier for researchers and lets them claim their research outputs in the ORCID Registry. I have been involved with ORCID since early 2010 and I am happy to see that nine months after launch 200,000 researchers have signed up for the service, and the organisation has more than [70 member organizations](http://orcid.org/about/community/members).<!--more-->
 
 <iframe src="http://s3.datawrapper.de/BZBSQ/" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="600" height="400"></iframe>
 
-[Registering for an ORCID identifier](https://orcid.org/register) is easy, and can be done in a few minutes. Claiming works in the profile is also straighforward, and works by integration with CrossRef Search, Scopus, Web of Science, DataCite Metadata Search, and other services. Even though about 1.5 million works have been claimed by now, many users have still not claimed any works or added profile information in other ways. 
+[Registering for an ORCID identifier](https://orcid.org/register) is easy, and can be done in a few minutes. Claiming works in the profile is also straighforward, and works by integration with CrossRef Search, Scopus, Web of Science, DataCite Metadata Search, and other services. Even though about 1.5 million works have been claimed by now, many users have still not claimed any works or added profile information in other ways.
 
 These numbers should go up as more academic institutions sign up for ORCID and help their researchers create ORCIDs and claim works. In the meantime we need more incentives for researchers to add publications to their ORCID profile. Publication lists are a very good reason to add your papers and other research outputs to your ORCID profile.
 
@@ -28,7 +28,7 @@ Don't try to invent a new way of managing publication lists. Other people have w
 
 Managing publication lists becomes much easier when you use persistent identifiers such as DOIs. They make it much easier to obtain metadata (e.g. authors, title, journal) and the fulltext version. Some disciplines use other identifiers, but a local identifier such as a URL is usually a bad idea.
 
-Use standard protocols, standard file formats and standard metadata. BibTex and RIS are file formats for references that almost every piece of software handling references understands. 
+Use standard protocols, standard file formats and standard metadata. BibTex and RIS are file formats for references that almost every piece of software handling references understands.
 
 Citation styles come from a time when publications were printed on paper. They make no real sense anymore, and as a researcher you shouldn't bother which one of 3000+ styles is the appropriate one.
 
@@ -36,7 +36,7 @@ The last recommendation is the most important one. Don't try to manage publicati
 
 ### ORCID Profiles as RSS Feeds
 
-ORCID is a good place to manage publication lists, but it is often not easy to get the information out of the system. The standard way is via a REST API (XML or JSON). This might work really well for a software developer who wants to connect his system to ORCID, but most researchers have other things to do. 
+ORCID is a good place to manage publication lists, but it is often not easy to get the information out of the system. The standard way is via a REST API (XML or JSON). This might work really well for a software developer who wants to connect his system to ORCID, but most researchers have other things to do.
 
 RSS was invented to publish information about frequently updated works, and a good example are Tables of Content (TOC) for journals. RSS is also a great tool to manage publication lists, as it can be easily integrated into content management systems such as Wordpress or Drupal. There is a [Recommendation  on RSS Feeds for Scholarly Publishers](http://oxford.crossref.org/best_practice/rss/), and we can apply the same guidelines to **RSS Feeds for Scholarly Authors**. With [OPML](http://en.wikipedia.org/wiki/OPML) we also have a standard format to aggregate multiple RSS feeds, and this is true not only for journal RSS feeds, but also author RSS feeds.
 

@@ -2,10 +2,10 @@
 layout: post
 title: "Citations in Markdown Part 3"
 description: ""
-category: 
+category:
 tags: [markdown, citation]
 ---
-After the [post last week] and the crazy discussion that followed I would understand that you feel you have heard enough about citations in markdown. But I had the feeling last week that something was still missing, and I have done some more thinking. What we have so far:
+After the [post last week] and the crazy discussion that followed I would understand that you feel you have heard enough about citations in markdown. But I had the feeling last week that something was still missing, and I have done some more thinking.<!--more--> What we have so far:
 
 - Pandoc has nice support for citations, including Citation Style Language support (i.e. it is using the same 5000+ citation styles as Zotero, Mendeley and Papers).
 - Pandoc requires a separate file to store the citations, typically in bibtex format. This is fine for some people, but can make the workflow complicated for short documents or when several people work on the bibliography at the same time.
@@ -21,7 +21,7 @@ We also want to support a simpler solution for shorter texts or when people don'
 
     [@Johnson2006]: http://dx.doi.org/10.1002/aris.201 "Data sharing in the sciences"
 
-We need to write a tool that parses the markdown before Pandoc, fetches the citation metadata for these links in bibtex format (e.g. using  CrossRef Content Negotiation), and adds them to the existing bibtex file (or creates a new bibtex file). The next time the markdown is parsed, the citation is already "cached" in the bibtex file. Those people who don't have such a tool would see the citation as link [@Johnson2006], with the essential information (DOI or URL) preserved so that a downstream tool can fetch the bibliographic information. Some people were worried about typos in DOIs and URLs. They can add additional information - e.g. the title of the paper - in double quotes to allow checking of the correct DOI. 
+We need to write a tool that parses the markdown before Pandoc, fetches the citation metadata for these links in bibtex format (e.g. using  CrossRef Content Negotiation), and adds them to the existing bibtex file (or creates a new bibtex file). The next time the markdown is parsed, the citation is already "cached" in the bibtex file. Those people who don't have such a tool would see the citation as link [@Johnson2006], with the essential information (DOI or URL) preserved so that a downstream tool can fetch the bibliographic information. Some people were worried about typos in DOIs and URLs. They can add additional information - e.g. the title of the paper - in double quotes to allow checking of the correct DOI.
 
 This workflow now makes a lot of sense to me, as it uses existing solutions, but also allows for easy entering of citation information in a way similar to the [knitcitations] and [kcite] tools. As I use jekyll and am a Ruby developer, I will implement the citation parsing as a jekyll plugin.
 

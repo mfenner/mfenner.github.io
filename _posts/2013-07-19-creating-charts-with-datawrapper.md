@@ -4,7 +4,7 @@ title: "Creating charts with Datawrapper"
 tags: [chart, data visualization, reproducibility]
 ---
 
-Figures are an important part of any scientific document. While the kind of figure commonly used obviously varies between disciplines, charts are an important part of many publications. There are two problems in how charts are currently used:
+Figures are an important part of any scientific document. While the kind of figure commonly used obviously varies between disciplines, charts are an important part of many publications.<!--more--> There are two problems in how charts are currently used:
 
 * the data used to draw the chart are not available or difficult to obtain
 * charts are drawn as static images with no interactivity, e.g. to see the values of individual data points

@@ -2,10 +2,10 @@
 layout: post
 title: "Citations in Scholarly Markdown"
 description: ""
-category: 
+category:
 tags: [markdown, citation, crossref]
 ---
-In the comments on [Monday's blog post][1] about the Markdown for Science workshop, [Carl Boettiger][2] had some good arguments against the proposal for how to do [citations][3] that we came up with during the workshop. As this is a complex topic, I decided to write this blog post.
+In the comments on [Monday's blog post][1] about the Markdown for Science workshop, [Carl Boettiger][2] had some good arguments against the proposal for how to do [citations][3] that we came up with during the workshop. As this is a complex topic, I decided to write this blog post.<!--more-->
 
 Citations of the scholarly literature are an essential part of scholarly texts and therefore have to be supported by scholarly markdown. Both the [Pandoc][4] and [Multimarkdown][5] flavors of markdown support citations, using a bibtex file that contains citations, placeholders for citekeys – ```[@smith04]``` for Pandoc and ```[#smith04]``` for Multimarkdown – and the [Citation Style Language][6] for citation formatting (Pandoc). A very reasonable approach would therefore be to use this functionality, with a preference for Pandoc because of the Citation Style Language support. All reference managers can export to the bibtex format, and some of them (e.g. [Papers][7]) make it very easy to copy and paste citekeys.
 
@@ -21,10 +21,10 @@ Part of the motivation for using scholarly markdown is that we can come up with 
 The best practice for scholarly markdown could therefore be to treat citations as links, using DOIs or other standard identifiers (PMID, ArXiV, etc.) where possible. Because we typically want to list the citations as references at the end of the document, reference-style links should be preferred over inline links. From the [markdown syntax documentation][12]:
 
     This is [an example][id] reference-style link.
-    
+
     This is [an example](http://example.com/ "Title") inline link.
     [id]: http://example.com/  "Optional Title Here"
-    
+
 It might be tempting to use sequential numbers as id for the reference-style links, but the order of links can of course change during writing. It may make sense to think of the id in reference-style links as a citekey, and people should be free use that functionality of their reference manager. The citekey is used to link to the reference list at the bottom of the document, different from linking to the citekey in a separate bibtex file.
 
 All of the above can be done in any text editor. This also includes the text editor that scholars spend most of their time with - their email program. Reference-style citations in an email are very readable, and also actionable since they are links and not text with bibliographic information.
@@ -52,5 +52,5 @@ There is obviously a need for tools that make adding citations to scholarly mark
 [11]: <http://wordpress.org/plugins/link-to-link/>
 [12]: <http://daringfireball.net/projects/markdown/syntax#link>
 [13]: <http://dx.doi.org/10.1371/journal.pmed.0020124> "Ioannidis JPA. Why Most Published Research Findings Are False. PLoS Medicine. Public Library of Science; 2005;2(8):e124. Available from: http://dx.doi.org/10.1371/journal.pmed.0020124"
-[14]: <http://dx.doi.org/10.7554/eLife.00633> 
+[14]: <http://dx.doi.org/10.7554/eLife.00633>
 [15]: <http://rephrase.net/box/word/footnotes/syntax/>

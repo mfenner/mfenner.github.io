@@ -4,7 +4,7 @@ title: "The Grammar of Scholarly Communication"
 tags: [markdown, authoring]
 ---
 
-Authoring of scholarly articles is a recurring theme in this blog since it started in 2008. Authoring is still in desperate need for improvement, and nobody has convincingly figured out how to solve this problem. Authoring involves several steps, and it helps to think about them separately:
+Authoring of scholarly articles is a recurring theme in this blog since it started in 2008. Authoring is still in desperate need for improvement, and nobody has convincingly figured out how to solve this problem.<!--more--> Authoring involves several steps, and it helps to think about them separately:
 
 * **Writing**. Manuscript writing, including formatting, collaborative authoring
 * **Submission**. Formatting a manuscript according to a publisher's author guidelines, and handing it over to a publishing platform

@@ -2,6 +2,7 @@
 layout: post
 title: "What Can Article Level Metrics Do for You?"
 tags: [alm, altmetrics, plos, reproducibility]
+excerpt: "<p>Yesterday PLOS Biology published an essay by me: What Can Article Level Metrics Do for You? (Fenner, 2013). I had help from many others in writing the essay, in particular PLOS Biology editor Emma Ganley. I hope that the essay can help researchers get introduced to article-level metrics, and I am honored that the essay is part of the PLOS Biology 10th anniversary collection.</p>"
 ---
 
 Yesterday PLOS Biology published an essay by me: [What Can Article Level Metrics Do for You?](http://dx.doi.org/10.1371/journal.pbio.1001687) [@fenner2013]. I had help from many others in writing the essay, in particular PLOS Biology editor Emma Ganley. I hope that the essay can help researchers get introduced to article-level metrics, and I am honored that the essay is part of the [PLOS Biology 10th anniversary collection](http://dx.doi.org/10.1371/journal.pbio.1001688).

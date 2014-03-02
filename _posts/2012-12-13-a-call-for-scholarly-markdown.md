@@ -2,7 +2,7 @@
 layout: post
 title: "A Call for Scholarly Markdown"
 description: ""
-category: 
+category:
 tags: [markdown]
 ---
 Markdown is a lightweight markup language, originally created by John
@@ -11,7 +11,7 @@ languages are Textile and Mediawiki. Whereas Mediawiki markup is of
 course popular thanks to the ubiquitous Wikipedia, Markdown seems to
 have gained momentum among scholars. Markdown really focuses on writing
 content, many of the features of today’s word processors are just a
-distraction (e.g. fonts, line spacing or style sheets). Adding markup
+distraction (e.g. fonts, line spacing or style sheets).<!--more--> Adding markup
 for document structure (e.g. title, authors or abstract) on the other
 hand is overly complicated with tools such as Microsft Word.
 

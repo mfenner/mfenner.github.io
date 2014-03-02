@@ -4,7 +4,7 @@ title: "From Markdown to JATS XML in one Step"
 tags: [markdown, jats, pandoc]
 ---
 
-The Journal Article Tag Suite ([JATS](http://jats.nlm.nih.gov/)) is a NISO standard that defines a set of XML elements and attributes for tagging journal articles. JATS is not only used for fulltext content at PubMed Central (and JATS has evolved from the NLM Archiving and Interchange Tag Suite originally developed for PubMed Central), but is also increasinly used by publishers.
+The Journal Article Tag Suite ([JATS](http://jats.nlm.nih.gov/)) is a NISO standard that defines a set of XML elements and attributes for tagging journal articles. JATS is not only used for fulltext content at PubMed Central (and JATS has evolved from the NLM Archiving and Interchange Tag Suite originally developed for PubMed Central), but is also increasinly used by publishers.<!--more-->
 
 For many publishers the *version of record* of an article is stored in XML, and other formats (currently HTML, PDF and increasingly ePub) are generated from this XML. Unfortunately the process of converting author-submitted manuscripts into JATS-compliant XML is time-consuming and costly, and this is a problem in particular for small publishers.
 

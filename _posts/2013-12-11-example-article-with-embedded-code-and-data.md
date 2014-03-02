@@ -2,9 +2,10 @@
 layout: post
 title: "Example article with embedded code and data"
 tags: [example, markdown, reproducibility]
+excerpt: "In October I published an essay on Article-Level Metrics (ALM) in PLOS Biology (Fenner, 2013). The essay is a good introduction into Article-Level Metrics, and I am proud that it is part of the Tenth Anniversary PLOS Biology Collection. Like all PLOS content, the article was published with a Creative Commons attribution license, allowing me to republish the article on this blog. I have now done so and the article is available here."
 ---
 
-In October I published an essay on Article-Level Metrics (ALM) in PLOS Biology [@fenner2013]. The essay is a good introduction into Article-Level Metrics, and I am proud that it is part of the [Tenth Anniversary PLOS Biology Collection](http://dx.doi.org/10.1371/issue.pcol.v06.i03). Like all PLOS content, the article was published with a [Creative Commons attribution license](http://blogs.plos.org/tech/creative-commons-for-science-interview-with-puneet-kishor/), allowing me to republish the article on this blog. I have now done so and the article is available [here](/2013/12/11/what-can-article-level-metrics-do-for-you/).
+In October I published an essay on Article-Level Metrics (ALM) in PLOS Biology [@fenner2013]. The essay is a good introduction into Article-Level Metrics, and I am proud that it is part of the [Tenth Anniversary PLOS Biology Collection](http://dx.doi.org/10.1371/issue.pcol.v06.i03). Like all PLOS content, the article was published with a [Creative Commons attribution license](http://blogs.plos.org/tech/creative-commons-for-science-interview-with-puneet-kishor/), allowing me to republish the article on this blog. I have now done so and the article is available [here](/2013/12/11/what-can-article-level-metrics-do-for-you/).<!--more-->
 
 Of course I didn't want to simply republish the article, but I wanted to publish an improved version. The article has five figures, four of them show visualizations of ALM data that were generated using R (the fifth figure is a table reproduced from another article). The PLOS article includes the ALM dataset and the R scripts used to generate the figures as [supplementary information](http://dx.doi.org/10.1371/journal.pbio.1001687.s001). What I have done now is to recreate the article as a single markdown file (available [here](https://github.com/mfenner/blog/blob/master/_posts/2013-12-11-what-can-article-level-metrics-do-for-you.Rmd)) that has all R code embedded. Using R and [knitr](http://yihui.name/knitr/) - and the [CSV file with the ALM data](/data/alm_report_plos_biology_2013-05-20.csv) - everyone can now reproduce the figures from the paper by simply running the embedded code, and can dig deeper into the data.
 
@@ -16,4 +17,4 @@ Like all content on this blog, the article was created using [Pandoc](http://joh
 
 Lastly, I wanted to generate nicer HTML for a better online reading experience. I haven't done anything fancy, but most publishers seem to focus on navigation around an article, so that very little screen real estate is left for the actual content of the article. I've tried to improve readability by reducing the navigation areas to a minimum, by using readable fonts in larger sizes: [Adobe Minion Pro](https://typekit.com/fonts/minion-pro) for the body text and [Adobe Myriad Pro](https://typekit.com/fonts/myriad-pro) for headings, tables and figure legends.
 
-### References
+## References

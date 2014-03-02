@@ -1,12 +1,12 @@
---- 
-layout: post 
-title: "What is Scholarly Markdown?" 
-description: "" 
+---
+layout: post
+title: "What is Scholarly Markdown?"
+description: ""
 category:
-tags: [markdown, meeting] 
+tags: [markdown, meeting]
 ---
 
-One of the important discussions taking place at the [Markdown for Science][1] workshop last weekend was about the definition of Scholarly Markdown. We came up with [this][2]:
+One of the important discussions taking place at the [Markdown for Science][1] workshop last weekend was about the definition of Scholarly Markdown.<!--more--> We came up with [this][2]:
 
 1. Markdown that supports the requirements of scientific texts
 2. Markdown as format that glues open scientific text resources together
@@ -54,13 +54,13 @@ alm <- subset(alm, select=c("counter_html","pmc_html","crossref","scopus","pubme
 colSums <- colSums(!is.na(alm)) * 100 / length(alm$counter_html)
 exactSums <- sum(as.numeric(alm$pmc_html),na.rm =TRUE)
 
-# Plot the chart. 
+# Plot the chart.
 opar <- par(mar=c(1,7,2,1)+0.1,omi=c(1,0.3,1,1))
 plos.names <- c("PLoS HTML Views", "PMC HTML Views","CrossRef","Scopus","PubMed Citations", "Mendeley","CiteULike","PLoS Comments","Research Blogging","Facebook","Twitter","Wikipedia")
 y <- barplot(colSums,horiz=TRUE,col=plos.colors, border = NA, xlab=plos.names, xlim=c(0,120), axes=FALSE, names.arg=plos.names,las=1, adj=0)
 text(colSums+6,y,labels=sprintf("%1.0f%%", colSums))
 ```
- 
+
 ![**Proportion of articles covered by source**. Article-level metrics for all 80,602 PLOS journal articles published until May 20, 2013.][9]
 
 In a way this approach to scholarly markdown is much more difficult than building a nice online collaborative writing tool. But for me scholarly markdown is not about competing with Microsoft Word, it is about building something new that scholars want to use because it allows them to do something that is impossible with the existing tools. For the same reason my todo item at the end of the workshop was *think about document type where markdown shines*. The R example above is a great example where markdown shines. If you can think of additional examples, please add them to the comments.

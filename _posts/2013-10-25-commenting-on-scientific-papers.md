@@ -3,7 +3,7 @@ layout: post
 title: "Commenting on scientific papers"
 tags: [comment, alm, altmetrics]
 ---
-I think it is fair to say that commenting on scientific papers is broken. And with commenting I mean online comments that are publicly available, not informal discussions in journal clubs or at meetings. This definition would include discussions of papers on social media such as Twitter or Facebook. Why do I think that commenting is broken?
+I think it is fair to say that commenting on scientific papers is broken. And with commenting I mean online comments that are publicly available, not informal discussions in journal clubs or at meetings. This definition would include discussions of papers on social media such as Twitter or Facebook. Why do I think that commenting is broken?<!--more-->
 
 * the number of papers with online comments is low. For PLOS Biology we have comments on the journal platform for 11% of articles, tweets for 14% of articles and Facebook activity for 22% of articles [@fenner2013]. The numbers for Twitter and Facebook are much higher for more recently published articles, but are nowhere close to every article having at least one comment.
 * even though there is a fair amount of social media activity around articles, the quality of the discussion is varied. Twitter for example seems to work mostly as an alerting service for interesting articles with little more than the title of the article in the tweet text and not much discussion.

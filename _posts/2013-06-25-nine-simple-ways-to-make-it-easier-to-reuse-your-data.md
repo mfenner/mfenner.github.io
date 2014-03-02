@@ -38,6 +38,9 @@ journal:
   eissn: 2167-9843
 publisher:
   name: PeerJ Inc.
+excerpt: "<p>Sharing data is increasingly considered to be an important part of the scientific process.
+Making your data publicly available allows original results to be reproduced and new analyses to be conducted.
+While sharing your data is the first step in allowing reuse, it is also important that the data be easy to understand and use.</p>"
 ---
 >This paper in markdown format was written by Ethan White et al.  The markdown file and the associated bibliogaphy and figure files are available from the [Github repository of the paper](https://github.com/weecology/data-sharing-paper).
 

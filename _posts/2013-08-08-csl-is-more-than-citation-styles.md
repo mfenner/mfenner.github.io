@@ -3,7 +3,7 @@ layout: post
 title: "CSL is more than citation styles"
 tags: [citation, csl]
 ---
-According to the [description](http://citationstyles.org) on the Citation Style Language (CSL) website, CSL *is an open XML-based language to describe the formatting of citations and bibliographies*. We use reference managers such as **Zotero**, **Mendeley**, or **Papers** to format our references in manuscripts we submit for publication, and underneath a CSL processor such as [Citeproc-js](https://bitbucket.org/fbennett/citeproc-js/wiki/Home) - together with a CSL file for a particular citation style - is doing the work:
+According to the [description](http://citationstyles.org) on the Citation Style Language (CSL) website, CSL *is an open XML-based language to describe the formatting of citations and bibliographies*.<!--more--> We use reference managers such as **Zotero**, **Mendeley**, or **Papers** to format our references in manuscripts we submit for publication, and underneath a CSL processor such as [Citeproc-js](https://bitbucket.org/fbennett/citeproc-js/wiki/Home) - together with a CSL file for a particular citation style - is doing the work:
 
 ![Citation processing during manuscript writing](/images/csl.png)
 

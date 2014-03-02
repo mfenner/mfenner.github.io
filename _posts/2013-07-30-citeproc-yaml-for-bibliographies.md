@@ -3,7 +3,7 @@ layout: post
 title: "Citeproc YAML for bibliographies"
 tags: [citation, csl, yaml]
 ---
-The standard local file formats for bibliographic data are probably bibtex and RIS. They have been around for a long time, and are supported by all reference managers and many other tools and services. Unfortunately these formats are far from perfect:
+The standard local file formats for bibliographic data are probably bibtex and RIS. They have been around for a long time, and are supported by all reference managers and many other tools and services. Unfortunately these formats are far from perfect<!--more-->:
 
 * neither bibtex nor RIS use a web-friendly data interchange format such as XML or JSON, which makes it harder to work with these formats
 * bibtex - and to a lesser extend RIS - don't support all entry types that we need, e.g. datasets, or new standards such as ORCID author identifiers
@@ -26,7 +26,7 @@ The standard local file formats for bibliographic data are probably bibtex and R
 }
 ```
 
-One obvious solution would be to store bibliographic data in XML or JSON. These formats have very good support in all programming languages, and they are the formats used by APIs on the web. There have been some efforts to standardize these formats for bibliographic data, e.g. [BibJSON](http://www.bibjson.org/), [MODS](http://www.loc.gov/standards/mods/), [BibTeX XML](http://bibtexml.sourceforge.net/) or Endnote XML. 
+One obvious solution would be to store bibliographic data in XML or JSON. These formats have very good support in all programming languages, and they are the formats used by APIs on the web. There have been some efforts to standardize these formats for bibliographic data, e.g. [BibJSON](http://www.bibjson.org/), [MODS](http://www.loc.gov/standards/mods/), [BibTeX XML](http://bibtexml.sourceforge.net/) or Endnote XML.
 
 ### BibTeX XML
 ```xml
@@ -56,7 +56,7 @@ When you have too many standards and are not happy with any of them, you of cour
 
 ![**How Standards Proliferate**. Taken from [http://xkcd.com/927/](http://xkcd.com/927/)](http://imgs.xkcd.com/comics/standards.png)
 
-My suggestion for a new bibliographic file format is twofold: a) use YAML for data serialization and b) use CSL as data format. [YAML](http://www.yaml.org/spec/1.2/spec.html) is a data format popular with Ruby Developers and is described on the [YAML website](http://yaml.org) as 
+My suggestion for a new bibliographic file format is twofold: a) use YAML for data serialization and b) use CSL as data format. [YAML](http://www.yaml.org/spec/1.2/spec.html) is a data format popular with Ruby Developers and is described on the [YAML website](http://yaml.org) as
 
 > YAML is a human friendly data serialization standard for all programming languages.
 
@@ -86,7 +86,7 @@ Although some commercial applications still use proprietary citation styles, CSL
   type: article-journal
   issued:
     date-parts:
-    - - 2012
+      - 2012
       - 3
 ```
 

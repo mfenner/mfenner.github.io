@@ -4,7 +4,7 @@ title: "What is holding us back?"
 tags: [solo13]
 ---
 
-Last Friday and Saturday the 6th [SpotOn London conference](http://www.nature.com/spoton/event/spoton-london2013/) tool place at the British Library. I had a great time with many interesting sessions and good conversations both in and between sessions. But I might be biased, since I helped organize the event, and in particular did help put the [sessions for the Tools strand](http://www.nature.com/spoton/?cat=11) together.
+Last Friday and Saturday the 6th [SpotOn London conference](http://www.nature.com/spoton/event/spoton-london2013/) tool place at the British Library. I had a great time with many interesting sessions and good conversations both in and between sessions. But I might be biased, since I helped organize the event, and in particular did help put the [sessions for the Tools strand](http://www.nature.com/spoton/?cat=11) together.<!--more-->
 
 ![**SpotOn London name tags**. Flickr photo by [keatl](http://www.flickr.com/photos/keatl/10739125344/in/photolist-hmYPPw-9CVkfd/).](/images/blendology.jpg)
 
