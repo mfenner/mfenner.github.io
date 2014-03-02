@@ -43,11 +43,13 @@ tags_path:       /tags.html
 rss_path:        /rss.xml
 atom_path:       /atom.xml
 
+excerpt_separator: <!--more-->
+
 # Markdown Parser (standard Jekyll argument, extended to special parser)
 markdown: pandoc
 pandoc:
   skip: true
-  flags: '--smart --mathjax --filter pandoc-citeproc --bibliography=bibliography/references.bib --bibliography=bibliography/0000-0003-1419-2405.bib --csl=_styles/apa.csl'
+  flags: '--smart --mathjax --filter pandoc-citeproc --bibliography=bibliography/references.bib --csl=_styles/apa.csl'
   outputs:
     epub:
     pdf:

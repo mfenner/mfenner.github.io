@@ -7,7 +7,7 @@ d3.xhr("http://feed.labs.orcid-eu.org/" + orcid + ".yml", function(error, reques
       .text("No biography found.");
     if (references.length == 0) {
       d3.select("div#year").append("div")
-        .attr("class", "span7")
+        .attr("class", "col-md-7")
         .attr("id", "year-label");
       d3.select("div#year-label").append("p")
         .attr("class", "muted")
@@ -41,9 +41,9 @@ d3.xhr("http://feed.labs.orcid-eu.org/" + orcid + ".yml", function(error, reques
   var format_number = d3.format("d")
 
   d3.select("div#year").append("div")
-    .attr("class", "span3 text-center")
+    .attr("class", "col-md-3 text-center")
     .attr("id", "year-label");
-  d3.select("div#year-label").append("h1")
+  d3.select("div#year-label").append("h2")
     .attr("class", "signpost")
     .attr("id", "year-signpost")
     .text(length);
@@ -51,7 +51,7 @@ d3.xhr("http://feed.labs.orcid-eu.org/" + orcid + ".yml", function(error, reques
     .attr("class", "year-label")
     .text("Publications since " + format_number(first_year));
   d3.select("div#year").append("div")
-      .attr("class", "span4")
+      .attr("class", "col-md-4")
       .attr("id", "year-chart");
 
   var chart = d3.select("div#year-chart").append("svg")
@@ -69,7 +69,7 @@ d3.xhr("http://feed.labs.orcid-eu.org/" + orcid + ".yml", function(error, reques
   chart.selectAll("rect")
     .data(nest)
     .enter().append("rect")
-    .attr("fill", "#789aa1")
+    .attr("fill", "#1abc9c")
     .attr("x", function(d) { return x(d.key); })
     .attr("y", function(d) { return h - y(d.values); })
     .attr("width", w)
