@@ -26,7 +26,7 @@ We have to be very careful that we keep the right balance of simplicity and feat
 [WYSIWYG](http://en.wikipedia.org/wiki/WYSIWYG) - What You See Is What You Get - is a user interface metaphor that is both a blessing and a curse. We desperately need better writing tools, and this of course also means user interfaces that help with that task. But the focus on creating a new authoring environment that focusses too much on WYSIWYG creates several problems:
 
 * WYSIWYG is not always a good metaphor for scholarly documents. Typographic features such as fonts, line spacing, etc. are not something that belong into an authoring environment - this is done during the publishing step, as is the formatting of references according to a specific citation style.
-* WYSIWYG is for human interactions, but content in scholarly documents is increasingly created by computers. Two good examples are statistics and figures created in [R/knitr](http://yihui.name/knitr/) or [iPthyon Notebook](http://ipython.org/notebook.html). Scholarly Markdown works perfectly with these workflows.
+* WYSIWYG is for human interactions, but content in scholarly documents is increasingly created by computers. Two good examples are statistics and figures created in [R/knitr](http://yihui.name/knitr/) or [iPython Notebook](http://ipython.org/notebook.html). Scholarly Markdown works perfectly with these workflows.
 * WYSIWYG authoring environments run the high risk of vendor lock-in. This is understandable if you run a startup and want to promote your tool, but is not in the best interest of the scholarly community.
 
 Version control via git is central to Scholarly Markdown, and this can also be challenging for a WYSIWYG environment. But there are many good examples of how to make this work.
