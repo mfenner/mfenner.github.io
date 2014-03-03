@@ -3,7 +3,7 @@ layout: post
 title: "Six Misunderstandings about Scholarly Markdown"
 tags: [markdown]
 ---
-In this post I want to talk about some of the misunderstandings I frequently encounter when discussing [markdown as a format for authoring scholarly documents](http://localhost:4000/2013/06/17/what-is-scholarly-markdown/).<!--more-->
+In this post I want to talk about some of the misunderstandings I frequently encounter when discussing [markdown as a format for authoring scholarly documents](/2013/06/17/what-is-scholarly-markdown/).<!--more-->
 
 ## Scholars will always use Microsoft Word
 Microsoft Word is of course what almost all authors use in the life sciences and many other disciplines. One big reason for this is the file formats accepted my manuscript submission systems. By limiting the options to Microsoft Word (and maybe LaTeX), you make it impossible for authors to use other tools, even if they wanted to. Publishers should accept manuscripts in any reasonable file format, as I have [argued before](http://blog.martinfenner.org/2013/11/17/the-grammar-of-scholarly-communication/).
