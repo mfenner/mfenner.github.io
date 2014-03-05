@@ -1,2 +1,6 @@
-language: ruby
+language: haskell
+before_install:
+ - cabal update
+ - cabal install pandoc pandoc-citeproc
+install: bundle install
 script: bundle exec jekyll build
