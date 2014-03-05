@@ -3,7 +3,7 @@ layout: post
 title: "Are static Websites the Future or the Past?"
 tags: [jekyll, git, markdown]
 ---
-Last week I had a little discussion on Twitter about a great blog post by Zach Holman: [Only 90s Web Developers Remember This](http://zachholman.com/posts/only-90s-developers/). The post is not only fun to read, but also reminded me that it is now almost 20 years (1995) that I built my first website - of course using some of the techniques (the one pixel gif!, the `&nbsp;` tag!) described in the post.
+Last week I had a little discussion on Twitter about a great blog post by Zach Holman: [Only 90s Web Developers Remember This](http://zachholman.com/posts/only-90s-developers/). The post is not only fun to read, but also reminded me that it is now almost 20 years (1995) that I built my first website - of course using some of the techniques (the one pixel gif!, the `&nbsp;` tag!) described in the post.<!--more-->
 
 ![ScriptWeb logo, 1995](/images/scriptwebtitle.gif)
 
