@@ -1,17 +1,29 @@
-permalink: /:categories/:year/:month/:day/:title
+safe: false
+lsi: false
+pygments: true
 
-paginate: 10
-paginate_path: "page:num"
+relative_source: ../blog/
+destination: ../mfenner.github.io/
+
+# Settings for deploy rake task
+github_user: mfenner
+source_repo: blog
+destination_repo: mfenner.github.io
 
 exclude:
   - README.md
   - Rakefile
+  - Gemfile
+  - Gemfile.lock
   - changelog.md
   - "*.Rmd"
+  - vendor
+  - .travis.yml
 
-pygments: true
+permalink: /:categories/:year/:month/:day/:title
 
-destination: ../mfenner.github.io/
+paginate: 10
+paginate_path: "page:num"
 
 title: Gobbledygook
 name: Gobbledygook
