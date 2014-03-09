@@ -200,11 +200,11 @@ namespace :site do
     source_branch = CONFIG['branch']
     if source_branch == "master"
       destination_branch = "gh-pages"
-      Dir.chdir(CONFIG["destination"]) { sh "git checkout #{destination_branch}" }
     else
       destination_branch = "master"
-      sh "git checkout #{source_branch}"
     end
+    sh "git checkout #{source_branch}"
+    Dir.chdir(CONFIG["destination"]) { sh "git checkout #{destination_branch}" }
 
     # Generate the site
     sh "bundle exec jekyll build"
