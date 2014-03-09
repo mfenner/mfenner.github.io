@@ -203,7 +203,7 @@ namespace :site do
       Dir.chdir(CONFIG["destination"]) { sh "git checkout #{destination_branch}" }
     else
       destination_branch = "master"
-      { sh "git checkout #{source_branch}" }
+      sh "git checkout #{source_branch}"
     end
 
     # Generate the site
