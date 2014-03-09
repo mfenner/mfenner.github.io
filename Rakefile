@@ -74,7 +74,7 @@ end
 
 def check_destination
   unless Dir.exist? CONFIG["destination"]
-    sh "git clone https://#{ENV['GIT_NAME']}:#{ENV['GH_TOKEN']}@github.com/#{CONFIG["github_user"]}/#{CONFIG["destination_repo"]}.git #{CONFIG["destination"]}"
+    sh "git clone https://#{ENV['GIT_NAME']}:#{ENV['GH_TOKEN']}@github.com/#{CONFIG["username"]}/#{CONFIG["repo"]}.git #{CONFIG["destination"]}"
   end
 end
 
@@ -193,6 +193,12 @@ namespace :site do
     # Make sure destination folder exists as git repo
     check_destination
 
+    # Optionally switch to gh-pages branch
+    branch = CONFIG['branch'] || "master"
+    if branch != "master"
+      Dir.chdir(CONFIG["destination"]) { sh "git checkout #{branch}" }
+    end
+
     # Generate the site
     sh "bundle exec jekyll build"
 
@@ -200,9 +206,9 @@ namespace :site do
     sha = `git log`.match(/[a-z0-9]{40}/)[0]
     Dir.chdir(CONFIG["destination"]) do
       sh "git add --all ."
-      sh "git commit -m 'Updating to #{CONFIG['github_user']}/#{CONFIG['source_repo']}@#{sha}.'"
-      sh "git push origin master"
-      puts "Updated destination repo pushed to GitHub Pages"
+      sh "git commit -m 'Updating to #{CONFIG['username']}/#{CONFIG['repo']}@#{sha}.'"
+      sh "git push origin #{branch}"
+      puts "Pushed updated branch #{branch} to GitHub Pages"
     end
   end
 
