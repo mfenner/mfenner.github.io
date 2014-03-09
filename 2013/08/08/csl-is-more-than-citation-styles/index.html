@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <title>CSL is more than citation styles</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="citation, csl" />
+
+    <!-- RDFa Metadata (in DublinCore) -->
+    <meta property="dc:title" content="CSL is more than citation styles" />
+    <meta property="dc:format" content="text/html" />
+    <meta property="dc:language" content="en" />
+    <meta property="dc:identifier" content="/2013/08/08/csl-is-more-than-citation-styles" />
+    <meta property="dc:rights" content="CC-BY-NC" />
+    <meta property="dc:source" content="Gobbledygook" />
+    <meta property="dc:subject" content="Scholarly Communication" />
+    <meta property="dc:type" content="website" />
+
+    <!-- Google Scholar Metadata -->
+    <meta name="citation_title" content="CSL is more than citation styles"/>
+    <meta name="citation_journal_title" content="Gobbledygook"/>
+
+    <link rel="alternate" type="application/rss+xml" title="Gobbledygook" href="/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Gobbledygook" href="/atom.xml" />
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/app-2ede78d982a336815e0fa8679d916f64.css">
+    <link rel="stylesheet" href="/assets/jasny-bootstrap.min-858066d22662d38bbc0ba337e5dfdfbb.css">
+    <link rel="stylesheet" href="/assets/navmenu-push-c329adc0d101e9cdd11fef0c95fdd43e.css">
+
+    <!-- d3.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.min.js"></script>
+
+    <!-- Adobe Web Fonts -->
+    <script src="//use.edgefonts.net/rosario.js"></script>
+  </head>
+
+
+  <body>
+    <nav id="navmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+  <a class="navmenu-brand" href="#">Gobbledygook</a>
+  <ul class="nav navmenu-nav">
+  
+    <li><span class="glyphicon glyphicon-time"></span> <a href="http://github.com/mfenner/blog/commits/master/_posts/2013-08-08-csl-is-more-than-citation-styles.md">Version History</a></li>
+    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#openingscience/book/edit/master/_posts/2013-08-08-csl-is-more-than-citation-styles.md">Send Edit Request</a></li>
+    
+    <li><span class="glyphicon glyphicon-tags"></span> Tags
+      <ul class="tag-list">
+        
+        
+  
+  	<li><a href="/tags.html#citation-ref">citation</a></li>
+  
+  	<li><a href="/tags.html#csl-ref">csl</a></li>
+  
+
+
+
+      </ul>
+    </li>
+    
+    <li><span class="glyphicon glyphicon-home"></span> <a href="/">Home</a></li>
+    <li><span class="glyphicon glyphicon-info-sign"></span> <a href="/about.html">About</a></li>
+    <li><span class="glyphicon glyphicon-tags"></span> <a href="/tags.html">All Tags</a></li>
+  </ul>
+</nav>
+
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#navmenu" data-canvas="body">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="page-header">
+            <h1>CSL is more than citation styles</h1>
+            <p>08 August 2013 by
+            
+            <a href="/about.html">Martin Fenner</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <p>According to the <a href="http://citationstyles.org">description</a> on the Citation Style Language (CSL) website, CSL <em>is an open XML-based language to describe the formatting of citations and bibliographies</em>.<!--more--> We use reference managers such as <strong>Zotero</strong>, <strong>Mendeley</strong>, or <strong>Papers</strong> to format our references in manuscripts we submit for publication, and underneath a CSL processor such as <a href="https://bitbucket.org/fbennett/citeproc-js/wiki/Home">Citeproc-js</a> - together with a CSL file for a particular citation style - is doing the work:</p>
+<figure>
+<img src="/images/csl.png" alt="Citation processing during manuscript writing" /><figcaption>Citation processing during manuscript writing</figcaption>
+</figure>
+<p>When the journal article is accepted the publisher takes the text with the formatted text citation and turns it into XML, a process that is error-prone and takes time:</p>
+<figure>
+<img src="/images/csl2.png" alt="Citation processing by the publisher" /><figcaption>Citation processing by the publisher</figcaption>
+</figure>
+<p>It is not hard to see that something is very wrong here:</p>
+<ul>
+<li>Authors are required to use a specific citation style (there are probably about 1,000 different citation styles and many more dependent styles) even though the publisher doesn’t directly use the formatted text. The publisher eLife <a href="http://www.elifesciences.org/elife-references/">accepts references in any format</a>.</li>
+<li>Turning structured information into plain text and back into structured XML is always a bad idea. <a href="http://twitter.com/kaveh1000">Kaveh Bazargan</a> is a typesetter who has gone on record for saying that we should stop this nonsense and put him out of business.</li>
+</ul>
+<p>It is also obvious how the ideal workflow should look like:</p>
+<figure>
+<img src="/images/csl3.png" alt="Ideal workflow of citation processing" /><figcaption>Ideal workflow of citation processing</figcaption>
+</figure>
+<p>We go from structured content to structured content, and never use citations formatted as text as intermediary steps in the workflow.</p>
+<p>What is surprising is that this is an ideal workflow and not something that publishers actually do. Most journal author instructions don’t even mention CSL styles (I work for PLOS and they are no exception). There are some issues to be solved, but they are all minor:</p>
+<ul>
+<li>The Citeproc JSON citation format isn’t really an official standard, but rather something invented for the most popular CSL processor, Citeproc-js.</li>
+<li>People like to fight over standards, and there are always people you prefer bibtex, RIS, MODS or BibJSON over Citeproc JSON, or want authors to to use JATS XML.</li>
+</ul>
+<p>I would really like to push Citeproc JSON as a standard bibliographic exchange format for authors. There are several things I like about Citeproc JSON:</p>
+<ul>
+<li>It is the native format to format citations, so it is used internally by many reference managers anyway.</li>
+<li>Citeproc JSON is really good in handling all the possible variations of author names. Putting all authors into a single text field as in bibtex requires a lot of trickery to get it right.</li>
+<li>JSON is a standard serialization format and there are a kinds of libraries in different programming languages to do things like searching, sorting or finding of duplicates. And JSON is easily extensible, e.g. if we would want to add ORCID identifiers for authors.</li>
+</ul>
+<p>I have five suggestions to move forward:</p>
+<ul>
+<li>Make a specification for Citeproc JSON that is as clear as the CSL specification.</li>
+<li>Consider extending the specification to include content other than citations. Ideally we should be able to add arbitrary <a href="/2013/06/29/metadata-in-scholarly-markdown/">metadata about a manuscript</a>.</li>
+<li>Consider other serialization formats besides JSON. I particularly <a href="/2013/07/30/citeproc-yaml-for-bibliographies/">like YAML</a> as it is very similar to JSON, but human-readable, but other people might prefer XML. It is relatively easy to transform data between these serialization formats, in particular between JSON and YAML. In my <a href="/about.html">About page</a> I only need the <a href="https://github.com/nodeca/js-yaml">js-yaml</a> library and one extra line of code to use Citeproc YAML instead of Citeproc JSON (in the d3.js visualization).</li>
+<li>Add Citeproc JSON (and YAML) support to reference managers. Zotero is already doing this, but it should be an easy to add feature if the reference manager is already using CSL internally (Mendeley and Papers).</li>
+<li>Push publishers to accept Citeproc JSON with manuscript submissions.</li>
+</ul>
+<div class="references">
+
+</div>
+
+            <div class="license">
+              
+                <hr>
+                <div class="toc-item">
+                  <h3>Next: <a href="/2013/08/10/altmetrics-coming-of-age-not-for-wikipedia">Altmetrics coming of age? Not for Wikipedia</a></h3>
+                  
+                  <p>Ten days ago Information Standards Quarterly (ISQ) published a special issue on altmetrics. I was the guest editor for the five altmetrics articles
+
+
+</p>
+                </div>
+              
+            </div>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gobbledy'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+          </div>
+        </div>
+
+        <!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+<span
+  class="Z3988"
+  title="ctx_ver=Z39.88-2004
+  &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+  &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+  &amp;rft.title=CSL is more than citation styles
+  &amp;rft.creator=Martin Fenner
+  &amp;rft.date=2013-08-08
+  &amp;rft.language=EN
+  &amp;rft.rights=CC0
+  &amp;rft_id=http://blog.martinfenner.org/2013/08/08/csl-is-more-than-citation-styles">
+</span>
+
+        <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36379104-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/js/js-yaml.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/jasny-bootstrap.min.js"></script>
+
+    <!-- MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <title>Challenges in automated DOI resolution</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="doi, metadata, crossref, altmetrics" />
+
+    <!-- RDFa Metadata (in DublinCore) -->
+    <meta property="dc:title" content="Challenges in automated DOI resolution" />
+    <meta property="dc:format" content="text/html" />
+    <meta property="dc:language" content="en" />
+    <meta property="dc:identifier" content="/2013/10/13/broken-dois" />
+    <meta property="dc:rights" content="CC-BY-NC" />
+    <meta property="dc:source" content="Gobbledygook" />
+    <meta property="dc:subject" content="Scholarly Communication" />
+    <meta property="dc:type" content="website" />
+
+    <!-- Google Scholar Metadata -->
+    <meta name="citation_title" content="Challenges in automated DOI resolution"/>
+    <meta name="citation_journal_title" content="Gobbledygook"/>
+
+    <link rel="alternate" type="application/rss+xml" title="Gobbledygook" href="/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Gobbledygook" href="/atom.xml" />
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/app-2ede78d982a336815e0fa8679d916f64.css">
+    <link rel="stylesheet" href="/assets/jasny-bootstrap.min-858066d22662d38bbc0ba337e5dfdfbb.css">
+    <link rel="stylesheet" href="/assets/navmenu-push-c329adc0d101e9cdd11fef0c95fdd43e.css">
+
+    <!-- d3.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.min.js"></script>
+
+    <!-- Adobe Web Fonts -->
+    <script src="//use.edgefonts.net/rosario.js"></script>
+  </head>
+
+
+  <body>
+    <nav id="navmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+  <a class="navmenu-brand" href="#">Gobbledygook</a>
+  <ul class="nav navmenu-nav">
+  
+    <li><span class="glyphicon glyphicon-time"></span> <a href="http://github.com/mfenner/blog/commits/master/_posts/2013-10-13-broken-dois.md">Version History</a></li>
+    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#openingscience/book/edit/master/_posts/2013-10-13-broken-dois.md">Send Edit Request</a></li>
+    
+    <li><span class="glyphicon glyphicon-tags"></span> Tags
+      <ul class="tag-list">
+        
+        
+  
+  	<li><a href="/tags.html#doi-ref">doi</a></li>
+  
+  	<li><a href="/tags.html#metadata-ref">metadata</a></li>
+  
+  	<li><a href="/tags.html#crossref-ref">crossref</a></li>
+  
+  	<li><a href="/tags.html#altmetrics-ref">altmetrics</a></li>
+  
+
+
+
+      </ul>
+    </li>
+    
+    <li><span class="glyphicon glyphicon-home"></span> <a href="/">Home</a></li>
+    <li><span class="glyphicon glyphicon-info-sign"></span> <a href="/about.html">About</a></li>
+    <li><span class="glyphicon glyphicon-tags"></span> <a href="/tags.html">All Tags</a></li>
+  </ul>
+</nav>
+
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#navmenu" data-canvas="body">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="page-header">
+            <h1>Challenges in automated DOI resolution</h1>
+            <p>13 October 2013 by
+            
+            <a href="/about.html">Martin Fenner</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <p>Yesterday we created a set of roughly 10,000 DOIs for journal articles published in 2011 or 2012. We used these DOIs as a reference set in a <a href="http://almdatachallenge.eventbrite.com/">data hackathon</a> around article-level metrics/altmetrics - material for another blog post.<!--more--></p>
+<p>The random DOis were generated using the <a href="http://random.labs.crossref.org/">CrossRef RanDOIm service</a>, with article titles fetched from the <a href="http://labs.crossref.org/openurl/">CrossRef OpenURL API</a>. We didn’t have time to properly parse the publication date and only used the publication year. We used the <code>crossref_r</code> and <code>crossref</code> functions from the rOpenSci <a href="http://ropensci.github.io/rplos/">rplos package</a> (and some extra help from Scott Chamberlain) to achieve this, the datasets were deposited to figshare and can be found <a href="http://dx.doi.org/10.6084/m9.figshare.821209">here</a> (2011) and <a href="http://dx.doi.org/10.6084/m9.figshare.821213">here</a> (2012).</p>
+<p>The basic idea behind DOI names is summarized well in the <a href="http://en.wikipedia.org/wiki/Digital_object_identifier">Wikipedia entry</a>:</p>
+<blockquote>
+<p>A digital object identifier (DOI) is a character string (a “digital identifier”) used to uniquely identify an object such as an electronic document. Metadata about the object is stored in association with the DOI name and this metadata may include a location, such as a URL, where the object can be found. The DOI for a document is permanent, whereas its location and other metadata may change. Referring to an online document by its DOI provides more stable linking than simply referring to it by its URL, because if its URL changes, the publisher need only update the metadata for the DOI to link to the new URL.</p>
+</blockquote>
+<p>DOIs for journal articles should provide users with a URL specific for that journal article. This URL could point to a digital copy of the journal article in HTML or PDF format, or could point to a landing page (with an abstract or other basic metadata) for journal articles that require a subscription. This should work not only for humans using a web browser, but also for automated services using command line tools such as <a href="http://curl.haxx.se/">curl</a> as scientific infrastructure depends heavily on automation and computers talking to each other. In our use case we want to find content linking to a specific article, and as some services (e.g. social media) will use the URL and not DOI of an article, we need to find out that URL.</p>
+<p>Unfortunately it was difficult to find a URL for many DOIs in our reference set using automated tools. All these DOIs resolve to URLs for human users using a web browser, but for automated tools there are a number of challenges:</p>
+<h3 id="requiring-a-cookie">Requiring a cookie</h3>
+<p>Some publishers require a cookie, and that can cause problems for automated tools. We can use the popular command line tool <code>curl</code> with the options <code>-L</code> to follow redirects and <code>-I</code> to only send the header (as we care about the location and not the content of the page).</p>
+<pre><code>curl -I -L &quot;http://dx.doi.org/10.1080/13658816.2010.531020&quot;</code></pre>
+<p>This command will lead us not to a page specific for that article, but to a “Cookie absent” page. You can work around this by having curl accept cookies:</p>
+<pre><code>curl -I -L --cookie &quot;tmp&quot; &quot;http://dx.doi.org/10.1080/13658816.2010.531020&quot;</code></pre>
+<p>Unfortunately not all tools do this. The way Facebook tracks likes, shares, comments, etc. is a prominent example.</p>
+<h3 id="too-many-redirects">Too many redirects</h3>
+<p>Some DOIs never resolve using a HEAD request, and curl stops after 50 redirects:</p>
+<pre><code>curl -I -L &quot;http://dx.doi.org/10.1097/SLA.0b013e318235e525&quot;</code></pre>
+<p>This error may relate to the “requiring a cookie” error above.</p>
+<h3 id="method-not-allowed">Method not allowed</h3>
+<p>Some DOis HEAD requests result in a “405 Method Not Allowed” error. The reason is that the journal platform doesn’t accept the HEAD request, but wants a GET instead.</p>
+<pre><code>curl -I -L &quot;http://dx.doi.org/10.1002/sam.10120&quot;</code></pre>
+<p>The <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html">HTTP 1.1 protocol</a> says about HEAD:</p>
+<blockquote>
+<p>The HEAD method is identical to GET except that the server MUST NOT return a message-body in the response. … This method is often used for testing hypertext links for validity, accessibility, and recent modification.</p>
+</blockquote>
+<p>We can work around this error by using a GET request, which unfortunately creates extra overhead and is not the recommended way to obtain this kind of information.</p>
+<h3 id="empty-reply-from-server">Empty reply from server</h3>
+<p>Some DOIs never resolve using a HEAD because curl reports “Empty reply from server” and we don’t get a HTTP 200 status code.</p>
+<pre><code>curl -I -L &quot;http://dx.doi.org/10.1016/j.cca.2011.04.012&quot;</code></pre>
+<p>You can again work around this by using the location information before the last redirect, but maybe resolving a DOI should not result in curl routinely throwing an error. It looks as if this error is related to “method not allowed”, as a GET request resolves to a landing page.</p>
+<p>This problem is not specific to the <code>curl</code> tool, we get exactly the same error with <code>wget</code>:</p>
+<pre><code>wget -S --spider &quot;http://dx.doi.org/10.1016/j.cca.2011.04.012&quot;</code></pre>
+<h3 id="timeout-errors">Timeout errors</h3>
+<p>Some DOI resolutions resulted in timeout errors, but this was temporary and much less frequent than the errors above.</p>
+<h3 id="resource-not-found">Resource not found</h3>
+<p>We didn’t specifically look into this error, which is a well-known problem with URLs. The DOI names we used were from 2011 and 2012, and it is known that <a href="http://en.wikipedia.org/wiki/Link_rot">link rot</a> is more common the older the resource is.</p>
+<h3 id="content-negotiation">Content negotiation</h3>
+<p>As Karl Ward has pointed out in the comments there are other ways to get to the URL from the DOI name, e.g. using content negotiation:</p>
+<pre><code>curl -LH &quot;Accept: application/vnd.crossref.unixref+xml&quot; &quot;http://dx.doi.org/10.1016/j.cca.2011.04.012&quot;</code></pre>
+<p>The URL is stored in the <code>doi_data/resource</code> attribute. The URL stored there is unfortunately not always the final landing page for the article, e.g. for the DOI name used in the example above.</p>
+<h3 id="conclusions">Conclusions</h3>
+<p>We created a reference set of 10,000 DOIs to collect metrics around them. The first conclusion from this exercise is that getting the URL for these articles is a challenge in many cases. This does not seem to relate to a permission problem for subscription content, but rather how the HTTP HEAD request is handled. Content negotiation is one alternative, but sometimes leads to different URLs for the landing page than where the user would get via the browser. We therefore have to rewrite our code to use GET requests and to better handle the scenarios above.</p>
+<p><em>Update 10/13/13: Updated the title and the text to make it clear that I am not talking about DOIs that don’t resolve for human users, but rather about the problems automating this process using command-line tools.</em></p>
+<div class="references">
+
+</div>
+
+            <div class="license">
+              
+                <hr>
+                <div class="toc-item">
+                  <h3>Next: <a href="/2013/10/20/the-complete-article">The Complete Article</a></h3>
+                  
+                  <p>Open access to research data is becoming increasingly important, as manifested by memos or press releases from the Wellcome Trust, the European Commission, and the the Office of Science and Technology Policy (OSTP) from the White House.
+
+
+</p>
+                </div>
+              
+            </div>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gobbledy'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+          </div>
+        </div>
+
+        <!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+<span
+  class="Z3988"
+  title="ctx_ver=Z39.88-2004
+  &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+  &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+  &amp;rft.title=Challenges in automated DOI resolution
+  &amp;rft.creator=Martin Fenner
+  &amp;rft.date=2013-10-13
+  &amp;rft.language=EN
+  &amp;rft.rights=CC0
+  &amp;rft_id=http://blog.martinfenner.org/2013/10/13/broken-dois">
+</span>
+
+        <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36379104-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/js/js-yaml.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/jasny-bootstrap.min.js"></script>
+
+    <!-- MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>

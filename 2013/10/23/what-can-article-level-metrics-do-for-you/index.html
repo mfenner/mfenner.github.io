@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <title>What Can Article Level Metrics Do for You?</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="alm, altmetrics, plos, reproducibility" />
+
+    <!-- RDFa Metadata (in DublinCore) -->
+    <meta property="dc:title" content="What Can Article Level Metrics Do for You?" />
+    <meta property="dc:format" content="text/html" />
+    <meta property="dc:language" content="en" />
+    <meta property="dc:identifier" content="/2013/10/23/what-can-article-level-metrics-do-for-you" />
+    <meta property="dc:rights" content="CC-BY-NC" />
+    <meta property="dc:source" content="Gobbledygook" />
+    <meta property="dc:subject" content="Scholarly Communication" />
+    <meta property="dc:type" content="website" />
+
+    <!-- Google Scholar Metadata -->
+    <meta name="citation_title" content="What Can Article Level Metrics Do for You?"/>
+    <meta name="citation_journal_title" content="Gobbledygook"/>
+
+    <link rel="alternate" type="application/rss+xml" title="Gobbledygook" href="/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Gobbledygook" href="/atom.xml" />
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/app-2ede78d982a336815e0fa8679d916f64.css">
+    <link rel="stylesheet" href="/assets/jasny-bootstrap.min-858066d22662d38bbc0ba337e5dfdfbb.css">
+    <link rel="stylesheet" href="/assets/navmenu-push-c329adc0d101e9cdd11fef0c95fdd43e.css">
+
+    <!-- d3.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.min.js"></script>
+
+    <!-- Adobe Web Fonts -->
+    <script src="//use.edgefonts.net/rosario.js"></script>
+  </head>
+
+
+  <body>
+    <nav id="navmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+  <a class="navmenu-brand" href="#">Gobbledygook</a>
+  <ul class="nav navmenu-nav">
+  
+    <li><span class="glyphicon glyphicon-time"></span> <a href="http://github.com/mfenner/blog/commits/master/_posts/2013-10-23-what-can-article-level-metrics-do-for-you.md">Version History</a></li>
+    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#openingscience/book/edit/master/_posts/2013-10-23-what-can-article-level-metrics-do-for-you.md">Send Edit Request</a></li>
+    
+    <li><span class="glyphicon glyphicon-tags"></span> Tags
+      <ul class="tag-list">
+        
+        
+  
+  	<li><a href="/tags.html#alm-ref">alm</a></li>
+  
+  	<li><a href="/tags.html#altmetrics-ref">altmetrics</a></li>
+  
+  	<li><a href="/tags.html#plos-ref">plos</a></li>
+  
+  	<li><a href="/tags.html#reproducibility-ref">reproducibility</a></li>
+  
+
+
+
+      </ul>
+    </li>
+    
+    <li><span class="glyphicon glyphicon-home"></span> <a href="/">Home</a></li>
+    <li><span class="glyphicon glyphicon-info-sign"></span> <a href="/about.html">About</a></li>
+    <li><span class="glyphicon glyphicon-tags"></span> <a href="/tags.html">All Tags</a></li>
+  </ul>
+</nav>
+
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#navmenu" data-canvas="body">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="page-header">
+            <h1>What Can Article Level Metrics Do for You?</h1>
+            <p>23 October 2013 by
+            
+            <a href="/about.html">Martin Fenner</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <p>Yesterday PLOS Biology published an essay by me: <a href="http://dx.doi.org/10.1371/journal.pbio.1001687">What Can Article Level Metrics Do for You?</a> <span class="citation" data-cites="fenner2013">(Fenner, 2013)</span>. I had help from many others in writing the essay, in particular PLOS Biology editor Emma Ganley. I hope that the essay can help researchers get introduced to article-level metrics, and I am honored that the essay is part of the <a href="http://dx.doi.org/10.1371/journal.pbio.1001688">PLOS Biology 10th anniversary collection</a>.</p>
+<p>The essay is an Open Access article published under a CC-BY license, so not only can everyone read it, but the text and figures can be freely reused, as long as proper attribution is provided, e.g. Fig. 5:</p>
+<figure>
+<img src="/images/venndiagram_plos_biology.png" alt="PLOS Biology articles: sites of recommendation and discussion. Number of PLOS Biology research articles published until May 20, 2013 that have been recommended by F1000Prime (red) and/or mentioned in Wikipedia (blue). Taken from doi:10.1371/journal.pbio.1001687.g005" /><figcaption><strong>PLOS Biology articles: sites of recommendation and discussion</strong>. Number of PLOS Biology research articles published until May 20, 2013 that have been recommended by F1000Prime (red) and/or mentioned in Wikipedia (blue). Taken from <a href="http://dx.doi.org/10.1371/journal.pbio.1001687.g005">doi:10.1371/journal.pbio.1001687.g005</a></figcaption>
+</figure>
+<p>Although this is an essay and not a research article, I’ve added the data and R scripts used to generate the figures (1, 3-5) as <a href="http://dx.doi.org/10.1371/journal.pbio.1001687.s001">supporting information</a>. As I <a href="/2013/10/20/the-complete-article/">have said earlier</a>, I think it is important that an article contains more than the text. With the open source software <a href="http://www.r-project.org/">R</a> or <a href="http://www.rstudio.com/">RStudio</a> everyone can recreate the figures, and can look at the data underlying the figures in the essay. One can for example look into the data behind Fig. 5 to better understand how articles with F1000Prime recommendations <strong>and</strong> Wikipedia mentions differ from those <strong>only</strong> recommended in F1000Prime. Feel free to ask for help getting started in the comments.</p>
+<p>Incidentally this is also my first PLOS article (my wife is way ahead of me with 5 research articles), so that I can finally look at PLOS article-level metrics as an author - after being the technical lead for this project since May 2012.</p>
+<div class="references">
+<h2>References</h2>
+<p>Fenner, M. (2013). What can article-level metrics do for you? <em>PLoS Biol</em>, <em>11</em>(10), e1001687. doi:<a href="http://dx.doi.org/10.1371/journal.pbio.1001687">10.1371/journal.pbio.1001687</a></p>
+</div>
+
+            <div class="license">
+              
+                <hr>
+                <div class="toc-item">
+                  <h3>Next: <a href="/2013/10/25/commenting-on-scientific-papers">Commenting on scientific papers</a></h3>
+                  
+                  <p>I think it is fair to say that commenting on scientific papers is broken. And with commenting I mean online comments that are publicly available, not informal discussions in journal clubs or at meetings. This definition would include discussions of papers on social media such as Twitter or Facebook. Why do I think that commenting is broken?
+
+
+</p>
+                </div>
+              
+            </div>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gobbledy'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+          </div>
+        </div>
+
+        <!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+<span
+  class="Z3988"
+  title="ctx_ver=Z39.88-2004
+  &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+  &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+  &amp;rft.title=What Can Article Level Metrics Do for You?
+  &amp;rft.creator=Martin Fenner
+  &amp;rft.date=2013-10-23
+  &amp;rft.language=EN
+  &amp;rft.rights=CC0
+  &amp;rft_id=http://blog.martinfenner.org/2013/10/23/what-can-article-level-metrics-do-for-you">
+</span>
+
+        <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36379104-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/js/js-yaml.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/jasny-bootstrap.min.js"></script>
+
+    <!-- MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>

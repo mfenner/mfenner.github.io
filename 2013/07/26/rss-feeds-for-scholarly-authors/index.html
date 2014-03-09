@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <title>RSS Feeds for Scholarly Authors</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="orcid, metadata, rss" />
+
+    <!-- RDFa Metadata (in DublinCore) -->
+    <meta property="dc:title" content="RSS Feeds for Scholarly Authors" />
+    <meta property="dc:format" content="text/html" />
+    <meta property="dc:language" content="en" />
+    <meta property="dc:identifier" content="/2013/07/26/rss-feeds-for-scholarly-authors" />
+    <meta property="dc:rights" content="CC-BY-NC" />
+    <meta property="dc:source" content="Gobbledygook" />
+    <meta property="dc:subject" content="Scholarly Communication" />
+    <meta property="dc:type" content="website" />
+
+    <!-- Google Scholar Metadata -->
+    <meta name="citation_title" content="RSS Feeds for Scholarly Authors"/>
+    <meta name="citation_journal_title" content="Gobbledygook"/>
+
+    <link rel="alternate" type="application/rss+xml" title="Gobbledygook" href="/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Gobbledygook" href="/atom.xml" />
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/app-2ede78d982a336815e0fa8679d916f64.css">
+    <link rel="stylesheet" href="/assets/jasny-bootstrap.min-858066d22662d38bbc0ba337e5dfdfbb.css">
+    <link rel="stylesheet" href="/assets/navmenu-push-c329adc0d101e9cdd11fef0c95fdd43e.css">
+
+    <!-- d3.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.min.js"></script>
+
+    <!-- Adobe Web Fonts -->
+    <script src="//use.edgefonts.net/rosario.js"></script>
+  </head>
+
+
+  <body>
+    <nav id="navmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+  <a class="navmenu-brand" href="#">Gobbledygook</a>
+  <ul class="nav navmenu-nav">
+  
+    <li><span class="glyphicon glyphicon-time"></span> <a href="http://github.com/mfenner/blog/commits/master/_posts/2013-07-26-rss-feeds-for-scholarly-authors.md">Version History</a></li>
+    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#openingscience/book/edit/master/_posts/2013-07-26-rss-feeds-for-scholarly-authors.md">Send Edit Request</a></li>
+    
+    <li><span class="glyphicon glyphicon-tags"></span> Tags
+      <ul class="tag-list">
+        
+        
+  
+  	<li><a href="/tags.html#orcid-ref">orcid</a></li>
+  
+  	<li><a href="/tags.html#metadata-ref">metadata</a></li>
+  
+  	<li><a href="/tags.html#rss-ref">rss</a></li>
+  
+
+
+
+      </ul>
+    </li>
+    
+    <li><span class="glyphicon glyphicon-home"></span> <a href="/">Home</a></li>
+    <li><span class="glyphicon glyphicon-info-sign"></span> <a href="/about.html">About</a></li>
+    <li><span class="glyphicon glyphicon-tags"></span> <a href="/tags.html">All Tags</a></li>
+  </ul>
+</nav>
+
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#navmenu" data-canvas="body">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="page-header">
+            <h1>RSS Feeds for Scholarly Authors</h1>
+            <p>26 July 2013 by
+            
+            <a href="/about.html">Martin Fenner</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <p>Open Researcher &amp; Contributor ID (<a href="https://speakerdeck.com/mfenner/orcid-connecting-research-and-researchers-1">ORCID</a>) provides a persistent identifier for researchers and lets them claim their research outputs in the ORCID Registry. I have been involved with ORCID since early 2010 and I am happy to see that nine months after launch 200,000 researchers have signed up for the service, and the organisation has more than <a href="http://orcid.org/about/community/members">70 member organizations</a>.<!--more--></p>
+<iframe src="http://s3.datawrapper.de/BZBSQ/" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="600" height="400"></iframe>
+
+<p><a href="https://orcid.org/register">Registering for an ORCID identifier</a> is easy, and can be done in a few minutes. Claiming works in the profile is also straighforward, and works by integration with CrossRef Search, Scopus, Web of Science, DataCite Metadata Search, and other services. Even though about 1.5 million works have been claimed by now, many users have still not claimed any works or added profile information in other ways.</p>
+<p>These numbers should go up as more academic institutions sign up for ORCID and help their researchers create ORCIDs and claim works. In the meantime we need more incentives for researchers to add publications to their ORCID profile. Publication lists are a very good reason to add your papers and other research outputs to your ORCID profile.</p>
+<h3 id="publication-lists">Publication Lists</h3>
+<p>Every researcher maintains a list of his publications in some form. These publication lists are used for grant and job applications, for academic websites to attract collaborators and students, and more. Publication lists can be generated in many different ways, but I have never heard that someone finds this process fun or easy. The challenge is multiplied when the publication list is not generated for an individual, but for a research group, department or institution (my university goes through this process every year uisng RefWorks and produces an <a href="http://www.refworks.com/RefShare2?site=047931198213200000/RWWS6A619751/2013%20Hochschulbibliografie">annual institutional bibliography</a>).</p>
+<p>Although the library usually takes care of the larger publication lists and can help researchers setting up their own lists, there still is much that needs to be done by individual researchers, and the process needs to be easier. Some recommendations are:</p>
+<ul>
+<li>don’t reinvent the wheel</li>
+<li>use persistent identifiers</li>
+<li>use standards</li>
+<li>don’t worry about citation styles</li>
+<li>keep everything upstream, not locally</li>
+</ul>
+<p>Don’t try to invent a new way of managing publication lists. Other people have worked on this problem before, and there are many tools available. This doesn’t mean you shouldn’t try something new, but please build it on top of all the infrastructure and services we have already.</p>
+<p>Managing publication lists becomes much easier when you use persistent identifiers such as DOIs. They make it much easier to obtain metadata (e.g. authors, title, journal) and the fulltext version. Some disciplines use other identifiers, but a local identifier such as a URL is usually a bad idea.</p>
+<p>Use standard protocols, standard file formats and standard metadata. BibTex and RIS are file formats for references that almost every piece of software handling references understands.</p>
+<p>Citation styles come from a time when publications were printed on paper. They make no real sense anymore, and as a researcher you shouldn’t bother which one of 3000+ styles is the appropriate one.</p>
+<p>The last recommendation is the most important one. Don’t try to manage publication lists in your local system, or your department, but rather do this as much upstream as possible. ORCID is an ideal service for this. But don’t try to manually add or edit publications in the ORCID registry, but rather claim them from CrossRef, DataCite or similar services, because these are the places that have authoritative information about publication. If you try to “fix” information (because all metadata can contain mistakes), nobody will notice. If something is wrong with your works, notify the publisher so that the CrossRef metadata can be updated.</p>
+<h3 id="orcid-profiles-as-rss-feeds">ORCID Profiles as RSS Feeds</h3>
+<p>ORCID is a good place to manage publication lists, but it is often not easy to get the information out of the system. The standard way is via a REST API (XML or JSON). This might work really well for a software developer who wants to connect his system to ORCID, but most researchers have other things to do.</p>
+<p>RSS was invented to publish information about frequently updated works, and a good example are Tables of Content (TOC) for journals. RSS is also a great tool to manage publication lists, as it can be easily integrated into content management systems such as Wordpress or Drupal. There is a <a href="http://oxford.crossref.org/best_practice/rss/">Recommendation on RSS Feeds for Scholarly Publishers</a>, and we can apply the same guidelines to <strong>RSS Feeds for Scholarly Authors</strong>. With <a href="http://en.wikipedia.org/wiki/OPML">OPML</a> we also have a standard format to aggregate multiple RSS feeds, and this is true not only for journal RSS feeds, but also author RSS feeds.</p>
+<p>Unfortunately there is one missing piece in this workflow: turning ORCID profiles into RSS feeds. At the <a href="http://occamstypewriter.org/trading-knowledge/2012/11/13/solo-hackday/">SpotOn London hackathon</a> last November I worked with <a href="http://twitter.com/easternblot">Eva Amsen</a> and <a href="http://twitter.com/graemedmoffat">Graeme Moffat</a> to hack this workflow together using available tools. But we really need a more mature solution. Until RSS feeds are provided by the core ORCID service - and there is so much other stuff to do right now that this will take time - the best solution might be a web service that turns ORCID profiles into scholarly RSS as described above for journal articles.</p>
+<p>Today I finally came around implementing a first version of this - hacking together a Ruby Sinatra application hosted on Amazon Web Services (<a href="http://hack4ac.com">#hack4ac</a> attendees know why). The application takes an ORCID ID (e.g. mine: <a href="http://feed.labs.orcid-eu.org/0000-0003-1419-2405.rss">http://feed.labs.orcid-eu.org/0000-0003-1419-2405.rss</a>) and returns an RSS feed. <del>The first version just returns just the name and biography from the profile, but I only started working on this today.</del> ORCID Feed can be found at <a href="http://feed.labs.orcid-eu.org">http://feed.labs.orcid-eu.org</a> and the source code is available at <a href="https://github.com/mfenner/orcid-feed">Github</a>. Please add suggestions and comments to the Github issue tracker <a href="https://github.com/mfenner/orcid-feed/issues">here</a>.</p>
+<p><strong>Update 7/28/13</strong>: <em>I’ve added publications to the output, and additional content types. Use them as extension (e.g. <code>.json</code>), as format parameter (e.g. <code>?format=rss</code>), or use an accept-header, e.g. <code>Accept: application/x-bibtex</code>. I’ve also added basic error checking with cleanup of names and removal of duplicates.</em></p>
+<ul>
+<li>html (the default): forward to profile on the ORCID website</li>
+<li>rss - RSS feed</li>
+<li>bib - bibtex file</li>
+<li>json - Citeproc JSON</li>
+</ul>
+<div class="references">
+
+</div>
+
+            <div class="license">
+              
+                <hr>
+                <div class="toc-item">
+                  <h3>Next: <a href="/2013/07/30/citeproc-yaml-for-bibliographies">Citeproc YAML for bibliographies</a></h3>
+                  
+                  <p>The standard local file formats for bibliographic data are probably bibtex and RIS. They have been around for a long time, and are supported by all reference managers and many other tools and services. Unfortunately these formats are far from perfect
+
+
+</p>
+                </div>
+              
+            </div>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gobbledy'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+          </div>
+        </div>
+
+        <!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+<span
+  class="Z3988"
+  title="ctx_ver=Z39.88-2004
+  &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+  &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+  &amp;rft.title=RSS Feeds for Scholarly Authors
+  &amp;rft.creator=Martin Fenner
+  &amp;rft.date=2013-07-26
+  &amp;rft.language=EN
+  &amp;rft.rights=CC0
+  &amp;rft_id=http://blog.martinfenner.org/2013/07/26/rss-feeds-for-scholarly-authors">
+</span>
+
+        <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36379104-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/js/js-yaml.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/jasny-bootstrap.min.js"></script>
+
+    <!-- MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>

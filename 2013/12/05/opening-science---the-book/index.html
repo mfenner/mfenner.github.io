@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <title>Opening Science - the Book</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="markdown, github, open science" />
+
+    <!-- RDFa Metadata (in DublinCore) -->
+    <meta property="dc:title" content="Opening Science - the Book" />
+    <meta property="dc:format" content="text/html" />
+    <meta property="dc:language" content="en" />
+    <meta property="dc:identifier" content="/2013/12/05/opening-science---the-book" />
+    <meta property="dc:rights" content="CC-BY-NC" />
+    <meta property="dc:source" content="Gobbledygook" />
+    <meta property="dc:subject" content="Scholarly Communication" />
+    <meta property="dc:type" content="website" />
+
+    <!-- Google Scholar Metadata -->
+    <meta name="citation_title" content="Opening Science - the Book"/>
+    <meta name="citation_journal_title" content="Gobbledygook"/>
+
+    <link rel="alternate" type="application/rss+xml" title="Gobbledygook" href="/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Gobbledygook" href="/atom.xml" />
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/app-2ede78d982a336815e0fa8679d916f64.css">
+    <link rel="stylesheet" href="/assets/jasny-bootstrap.min-858066d22662d38bbc0ba337e5dfdfbb.css">
+    <link rel="stylesheet" href="/assets/navmenu-push-c329adc0d101e9cdd11fef0c95fdd43e.css">
+
+    <!-- d3.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.min.js"></script>
+
+    <!-- Adobe Web Fonts -->
+    <script src="//use.edgefonts.net/rosario.js"></script>
+  </head>
+
+
+  <body>
+    <nav id="navmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+  <a class="navmenu-brand" href="#">Gobbledygook</a>
+  <ul class="nav navmenu-nav">
+  
+    <li><span class="glyphicon glyphicon-time"></span> <a href="http://github.com/mfenner/blog/commits/master/_posts/2013-12-05-opening-science---the-book.md">Version History</a></li>
+    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#openingscience/book/edit/master/_posts/2013-12-05-opening-science---the-book.md">Send Edit Request</a></li>
+    
+    <li><span class="glyphicon glyphicon-tags"></span> Tags
+      <ul class="tag-list">
+        
+        
+  
+  	<li><a href="/tags.html#markdown-ref">markdown</a></li>
+  
+  	<li><a href="/tags.html#github-ref">github</a></li>
+  
+  	<li><a href="/tags.html#open science-ref">open science</a></li>
+  
+
+
+
+      </ul>
+    </li>
+    
+    <li><span class="glyphicon glyphicon-home"></span> <a href="/">Home</a></li>
+    <li><span class="glyphicon glyphicon-info-sign"></span> <a href="/about.html">About</a></li>
+    <li><span class="glyphicon glyphicon-tags"></span> <a href="/tags.html">All Tags</a></li>
+  </ul>
+</nav>
+
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#navmenu" data-canvas="body">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="page-header">
+            <h1>Opening Science - the Book</h1>
+            <p>05 December 2013 by
+            
+            <a href="/about.html">Martin Fenner</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <p><a href="http://www.openingscience.org/get-the-book/">Opening Science: The Evolving Guide on How the Internet is Changing Research, Collaboration and Scholarly Publishing</a> is a SpringerOpen book (using a <a href="http://book.openingscience.org/cases_recipes_howtos/creative_commons_licences">Creative Commons Attribution-NonCommercial license</a>) that will be published in a few weeks. If you can’t wait for the book to be published and/or you want to make comments or suggestions, go to the dynamic book online version at <a href="http://book.openingscience.org">http://book.openingscience.org</a>.<!--more--> I am an author or co-author of three chapters (<a href="http://book.openingscience.org/tools/reference_management">Reference Management</a>, <a href="http://book.openingscience.org/vision/altmetrics">Altmetrics and Other Novel Measures for Scientific Impact</a>, <a href="http://book.openingscience.org/cases_recipes_howtos/unique_identifiers_for_researchers">Unique Identifiers for Researchers</a>) and have helped put the dynamic book together. The book is generated from markdown files hosted in a <a href="https://github.com/openingscience/book/">public Github repo</a> using <a href="http://jekyllrb.com/">Jekyll</a> and <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>, and we use <a href="http://prose.io/">Prose</a> to enable online editing of the content.</p>
+<!--more-->
+
+<p>Using markdown, github, jekyll and pandoc is nothing new for blogs, but this is probably one of the first scholarly books using this workflow. The dynamic book is therefore still very much work in progress and feedback is greatly appreciated.</p>
+<p>Another great example using a very similar workflow is the upcoming book <a href="http://adv-r.had.co.nz/">Advanced R Programming</a> by Hadley Wickham, but he is of course using R and <a href="http://yihui.name/knitr/">knitr</a> to create most of the markdown. In contrast to Hadley we stored the individual chapters as Jekyll posts rather than pages, as this better integrates with other Jekyll functionality, e.g. tags.</p>
+<div class="references">
+
+</div>
+
+            <div class="license">
+              
+                <hr>
+                <div class="toc-item">
+                  <h3>Next: <a href="/2013/12/11/example-article-with-embedded-code-and-data">Example article with embedded code and data</a></h3>
+                  
+                  <p>In October I published an essay on Article-Level Metrics (ALM) in PLOS Biology (Fenner, 2013). The essay is a good introduction into Article-Level Metrics, and I am proud that it is part of the Tenth Anniversary PLOS Biology Collection. Like all PLOS content, the article was published with a Creative Commons attribution license, allowing me to republish the article on this blog. I have now done so and the article is available here.
+
+
+</p>
+                </div>
+              
+            </div>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gobbledy'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+          </div>
+        </div>
+
+        <!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+<span
+  class="Z3988"
+  title="ctx_ver=Z39.88-2004
+  &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+  &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+  &amp;rft.title=Opening Science - the Book
+  &amp;rft.creator=Martin Fenner
+  &amp;rft.date=2013-12-05
+  &amp;rft.language=EN
+  &amp;rft.rights=CC0
+  &amp;rft_id=http://blog.martinfenner.org/2013/12/05/opening-science---the-book">
+</span>
+
+        <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36379104-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/js/js-yaml.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/jasny-bootstrap.min.js"></script>
+
+    <!-- MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>

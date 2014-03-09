@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <title>Citations in Markdown Part 3</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="markdown, citation" />
+
+    <!-- RDFa Metadata (in DublinCore) -->
+    <meta property="dc:title" content="Citations in Markdown Part 3" />
+    <meta property="dc:format" content="text/html" />
+    <meta property="dc:language" content="en" />
+    <meta property="dc:identifier" content="/2013/06/24/citations-in-markdown-part-3" />
+    <meta property="dc:rights" content="CC-BY-NC" />
+    <meta property="dc:source" content="Gobbledygook" />
+    <meta property="dc:subject" content="Scholarly Communication" />
+    <meta property="dc:type" content="website" />
+
+    <!-- Google Scholar Metadata -->
+    <meta name="citation_title" content="Citations in Markdown Part 3"/>
+    <meta name="citation_journal_title" content="Gobbledygook"/>
+
+    <link rel="alternate" type="application/rss+xml" title="Gobbledygook" href="/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Gobbledygook" href="/atom.xml" />
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/app-2ede78d982a336815e0fa8679d916f64.css">
+    <link rel="stylesheet" href="/assets/jasny-bootstrap.min-858066d22662d38bbc0ba337e5dfdfbb.css">
+    <link rel="stylesheet" href="/assets/navmenu-push-c329adc0d101e9cdd11fef0c95fdd43e.css">
+
+    <!-- d3.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.min.js"></script>
+
+    <!-- Adobe Web Fonts -->
+    <script src="//use.edgefonts.net/rosario.js"></script>
+  </head>
+
+
+  <body>
+    <nav id="navmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+  <a class="navmenu-brand" href="#">Gobbledygook</a>
+  <ul class="nav navmenu-nav">
+  
+    <li><span class="glyphicon glyphicon-time"></span> <a href="http://github.com/mfenner/blog/commits/master/_posts/2013-06-24-citations-in-markdown-part-3.md">Version History</a></li>
+    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#openingscience/book/edit/master/_posts/2013-06-24-citations-in-markdown-part-3.md">Send Edit Request</a></li>
+    
+    <li><span class="glyphicon glyphicon-tags"></span> Tags
+      <ul class="tag-list">
+        
+        
+  
+  	<li><a href="/tags.html#markdown-ref">markdown</a></li>
+  
+  	<li><a href="/tags.html#citation-ref">citation</a></li>
+  
+
+
+
+      </ul>
+    </li>
+    
+    <li><span class="glyphicon glyphicon-home"></span> <a href="/">Home</a></li>
+    <li><span class="glyphicon glyphicon-info-sign"></span> <a href="/about.html">About</a></li>
+    <li><span class="glyphicon glyphicon-tags"></span> <a href="/tags.html">All Tags</a></li>
+  </ul>
+</nav>
+
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#navmenu" data-canvas="body">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="page-header">
+            <h1>Citations in Markdown Part 3</h1>
+            <p>24 June 2013 by
+            
+            <a href="/about.html">Martin Fenner</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <p>After the <a href="/2013/06/19/citations-in-scholarly-markdown/">post last week</a> and the crazy discussion that followed I would understand that you feel you have heard enough about citations in markdown. But I had the feeling last week that something was still missing, and I have done some more thinking.<!--more--> What we have so far:</p>
+<ul>
+<li>Pandoc has nice support for citations, including Citation Style Language support (i.e. it is using the same 5000+ citation styles as Zotero, Mendeley and Papers).</li>
+<li>Pandoc requires a separate file to store the citations, typically in bibtex format. This is fine for some people, but can make the workflow complicated for short documents or when several people work on the bibliography at the same time.</li>
+<li>Citations are similar to links, and we can use links for almost all the functionality we need, making it much easier to add citations to a text. The problem is a) citations that don’t include a weblink, b) being able to do this offline, and c) where in the HTML to store the citation metadata.</li>
+</ul>
+<p>And I looked at how Wikipedia is <a href="http://en.wikipedia.org/wiki/Wikipedia:Citing_sources">doing this</a>, and they use a) links, b) citations and c) footnotes. If Wikipedia thinks that it can’t do without citations and do everything as links, then maybe we also shouldn’t enforce this for scholarly texts.</p>
+<p>I think what we need is the best of both worlds. We should use the Pandoc citation workflow, as it is similar to what we are used to from other authoring environments, and we get good citation style support, including more complex formatting of references. Some reference managers already support copy/paste of Pandoc citation keys. The inclusion of a bibtex file with a scholarly markdown text is also a bonus, as it allows the automated extraction of citations, e.g. by manuscript submission systems.</p>
+<p>We also want to support a simpler solution for shorter texts or when people don’t want to use a separate bibtex file. Here we would add the citations as links, ideally in a syntax very similar to Pandoc citation keys:</p>
+<pre><code>Johnson [@Johnson2006] didn&#39;t agree with ...
+
+[@Johnson2006]: http://dx.doi.org/10.1002/aris.201 &quot;Data sharing in the sciences&quot;</code></pre>
+<p>We need to write a tool that parses the markdown before Pandoc, fetches the citation metadata for these links in bibtex format (e.g. using CrossRef Content Negotiation), and adds them to the existing bibtex file (or creates a new bibtex file). The next time the markdown is parsed, the citation is already “cached” in the bibtex file. Those people who don’t have such a tool would see the citation as link <span class="citation" data-cites="Johnson2006">(<span class="citeproc-not-found" data-reference-id="Johnson2006"><strong>???</strong></span>)</span>, with the essential information (DOI or URL) preserved so that a downstream tool can fetch the bibliographic information. Some people were worried about typos in DOIs and URLs. They can add additional information - e.g. the title of the paper - in double quotes to allow checking of the correct DOI.</p>
+<p>This workflow now makes a lot of sense to me, as it uses existing solutions, but also allows for easy entering of citation information in a way similar to the <a href="http://carlboettiger.info/2012/05/30/knitcitations.html">knitcitations</a> and <a href="http://wordpress.org/plugins/kcite/">kcite</a> tools. As I use jekyll and am a Ruby developer, I will implement the citation parsing as a jekyll plugin.</p>
+<div class="references">
+
+</div>
+
+            <div class="license">
+              
+                <hr>
+                <div class="toc-item">
+                  <h3>Next: <a href="/2013/06/25/nine-simple-ways-to-make-it-easier-to-reuse-your-data">Nine simple ways to make it easier to (re)use your data</a></h3>
+                  <p>
+                    , 
+                    , 
+                    , 
+                    , 
+                     & 
+                    </p>
+                  
+                  <p>
+Sharing data is increasingly considered to be an important part of the scientific process. Making your data publicly available allows original results to be reproduced and new analyses to be conducted. While sharing your data is the first step in allowing reuse, it is also important that the data be easy to understand and use.
+
+
+
+
+
+</p>
+                </div>
+              
+            </div>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gobbledy'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+          </div>
+        </div>
+
+        <!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+<span
+  class="Z3988"
+  title="ctx_ver=Z39.88-2004
+  &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+  &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+  &amp;rft.title=Citations in Markdown Part 3
+  &amp;rft.creator=Martin Fenner
+  &amp;rft.date=2013-06-24
+  &amp;rft.language=EN
+  &amp;rft.rights=CC0
+  &amp;rft_id=http://blog.martinfenner.org/2013/06/24/citations-in-markdown-part-3">
+</span>
+
+        <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36379104-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/js/js-yaml.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/jasny-bootstrap.min.js"></script>
+
+    <!-- MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>
