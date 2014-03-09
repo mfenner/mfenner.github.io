@@ -6,9 +6,12 @@ relative_source: ../mfenner.github.io/
 destination: ../mfenner.github.io-pages/
 
 # Settings for deploy rake task
+# Username and repo of Github repo, e.g.
+# https://github.com/USERNAME/REPO.git
+# repo defaults to USERNAME.github.io
+# Branch defaults to "source" for USERNAME.github.io
+# or "master" otherwise
 username: mfenner
-repo: mfenner.github.io
-branch: source
 
 exclude:
   - README.md
