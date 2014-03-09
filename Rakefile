@@ -193,10 +193,17 @@ namespace :site do
     # Make sure destination folder exists as git repo
     check_destination
 
-    # Optionally switch to gh-pages branch
-    branch = CONFIG['branch'] || "master"
-    if branch != "master"
-      Dir.chdir(CONFIG["destination"]) { sh "git checkout #{branch}" }
+    # Determine source and destination branch
+    # CONFIG['branch'] is source branch
+    # Project: master -> gh-pages
+    # User or organization: source -> master
+    source_branch = CONFIG['branch']
+    if source_branch == "master"
+      destination_branch = "gh-pages"
+      Dir.chdir(CONFIG["destination"]) { sh "git checkout #{destination_branch}" }
+    else
+      destination_branch = "master"
+      { sh "git checkout #{source_branch}" }
     end
 
     # Generate the site
@@ -207,43 +214,8 @@ namespace :site do
     Dir.chdir(CONFIG["destination"]) do
       sh "git add --all ."
       sh "git commit -m 'Updating to #{CONFIG['username']}/#{CONFIG['repo']}@#{sha}.'"
-      sh "git push origin #{branch}"
-      puts "Pushed updated branch #{branch} to GitHub Pages"
+      sh "git push origin #{destination_branch}"
+      puts "Pushed updated branch #{destination_branch} to GitHub Pages"
     end
-  end
-
-  desc "Commit the local site to the gh-pages branch and publish to GitHub Pages"
-  task :publish => [:history] do
-    # Ensure the gh-pages dir exists so we can generate into it.
-    puts "Checking for gh-pages dir..."
-    unless File.exist?("./gh-pages")
-      puts "No gh-pages directory found. Run the following commands first:"
-      puts "  `git clone git@github.com:jekyll/jekyll gh-pages"
-      puts "  `cd gh-pages"
-      puts "  `git checkout gh-pages`"
-      exit(1)
-    end
-
-    # Ensure gh-pages branch is up to date.
-    Dir.chdir('gh-pages') do
-      sh "git pull origin gh-pages"
-    end
-
-    # Copy to gh-pages dir.
-    puts "Copying site to gh-pages branch..."
-    Dir.glob("site/*") do |path|
-      next if path.include? "_site"
-      sh "cp -R #{path} gh-pages/"
-    end
-
-    # Commit and push.
-    puts "Committing and pushing to GitHub Pages..."
-    sha = `git log`.match(/[a-z0-9]{40}/)[0]
-    Dir.chdir('gh-pages') do
-      sh "git add ."
-      sh "git commit -m 'Updating to #{sha}.'"
-      sh "git push origin gh-pages"
-    end
-    puts 'Done.'
   end
 end
