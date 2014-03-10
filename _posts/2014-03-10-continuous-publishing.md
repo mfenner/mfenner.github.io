@@ -1,0 +1,31 @@
+---
+layout: post
+title: Continuous Publishing
+tags: [jekyll, git, markdown, ci]
+---
+
+Earlier this week Björn Brembs wrote in a blog post ([What Is The Difference Between Text, Data And Code?](http://bjoern.brembs.net/2014/03/what-is-the-difference-between-text-data-and-code/)):
+
+> To sum it up: our intellectual output today manifests itself in code, data and text.<!--more-->
+
+The post is about the importance of publication of data and software where currently *the rewards are stacked disproportionately in favor of text publications*. The intended audience is probably mainly other scientists (Björn is a neurobiologist) who are reluctant to publish data and/or code, but there is another interesting aspect to this.
+
+Just as scientific publication increasingly means more than just text and includes data and software, we are also increasingly seeing tools and methodologies common in software development applied to scientific publishing. This in particular includes the ideas behind Open Source software (which shares many commonalities with Open Access and Open Science), but also tools like the git version control system ([We Need a Github of Science](http://marciovm.com/i-want-a-github-of-science/)) or the markdown markdown language ([A Call for Scholarly Markdown](/2012/12/13/a-call-for-scholarly-markdown/)).
+
+![Continuous Delivery, image from [Wikimedia Commons](http://commons.wikimedia.org/wiki/File:Agile-vs-iterative-flow.jpg)](/images/Agile-vs-iterative-flow.jpg)
+
+Continuous Delivery is another concept increasingly popular in software development that has many implications on how research can be performed and reported. Martin Fowler describes it as:
+
+> Continuous Delivery is a software development discipline where you build software in such a way that the software can be released to production at any time.
+
+The concept of frequent small releases is of course familiar to everyone practicing [Open Notebook Science](http://usefulchem.wikispaces.com/), writing science blogs, presenting preliminary data at conferences or publishing [preprints](http://arxiv.org/), and is even relevant to [CrossMark](http://www.crossref.org/crossmark/), a service that tracks corrections, enhancements and other changes of scholarly documents.
+
+When you read the definition given by Martin Fowler carefully, you see that Continuous Delivery is about more than the frequency of software updates – it is in fact about improving the process of releasing software. The scientific publication is the corresponding event in science, and I think that nobody would argue with me that the experience publishing a paper is too complex, time-consuming and often frustrating. The focus here is not on the time it takes to do peer review, or the multiple revisions needed before a manuscript is accepted. I am talking about the pain submitting a manuscript, the back and forth regarding file formats, citation styles and other technical requirements, the reformatting of manuscripts, and also the time it takes from accepting a manuscript to finally publishing it online.
+
+I would argue that the main reason publishing is so painful for everyone involved is that it is still very much a manual process. Just as software development is creative work, but still can benefit tremendously from tools such as automated tests and build tools, we can apply the same principles to scientific publishing. This means that everything that can be automated should be automated so that we can focus on those areas that need human judgement. The mistake that I think is commonly made is that automation for many publishers means automation for the publisher, with even more work for the author who submits a manuscript. A good example is that authors are increasingly asked to submit publication-ready manuscripts even though typesetting and desktop publishing is not their area of expertise and the manuscript text will be very different after one or more rounds of revision.
+
+The promise of Continuous Delivery for publishing is to develop tools and best practices that make the process of publication faster, with better quality, and less frustrating. Continuous Integration ([again Martin Fowler](http://martinfowler.com/articles/continuousIntegration.html)) is an important part of Continuous Delivery and means frequently merging all developer working copies of a software project into a central repository, combined with running automated unit tests and software builds using an integration server.
+
+We can apply Continuous Integration to scholarly documents - instead of automated tests and software builds we can automate the transformation of documents into [JATS XML](/2013/12/12/from-markdown-to-jats-xml-in-one-step/) and other output formats, and we can automate the process of checking for required metadata, correct file formats for images, etc. And we can use the same software tools for this, many of which are freely available to Open Source projects.
+
+As an example of how this can be done [I have integrated](https://github.com/mfenner/jekyll-travis) the [Travis CI](https://travis-ci.org/) Continuous Integration server with the book project [Opening Science](http://book.openingscience.org/). The recently published book is a dynamic book that hopefully is updated frequently in the coming months. Every time an editor approves a correction to the text - [hosted in markdown format on Github](https://github.com/openingscience/book) - the Travis CI server is automatically triggered to build a new HTML version of the book and to push the new version to the book website. The Travis server is running the [Pandoc](http://johnmacfarlane.net/pandoc/) document converter to not only convert the changed document from markdown to HTML, but Pandoc will also insert and format references, and the [Jekyll](http://jekyllrb.com/) site generator will build a nice website around the markdown files. Over time this build process can be extended to do other things as well, from [auto-generating links to data and resources](/2013/07/02/auto-generating-links-to-data-and-resources/) to transforming the document into [other file formats](/2013/12/12/from-markdown-to-jats-xml-in-one-step/) besides HTML.
