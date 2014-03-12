@@ -1,8 +1,20 @@
-language: haskell
+language: ruby
+
 install:
- - bundle install
- - travis_retry cabal install pandoc pandoc-citeproc
+  # Install binary pandoc from Rstudio
+  - export PATH="$HOME/pandoc:$PATH"
+  - mkdir $HOME/pandoc
+  - curl -O https://s3.amazonaws.com/rstudio-buildtools/pandoc-1.12.3.zip
+  - unzip -j pandoc-1.12.3.zip pandoc-1.12.3/linux/debian/x86_64/pandoc
+      -d $HOME/pandoc
+  - chmod +x $HOME/pandoc/pandoc
+  - pandoc --version
+
+  # Install Jekyll and dependencies
+  - bundle install
+
 script: bundle exec rake site:deploy
+
 env:
   global:
     secure: "DTpqY+yuvROkUofxsMJaRjfuniYAm3nujq0WlxrBEDxnE+rN8wx45XCs+xzaBhxn+KgNG4RVuJTvx6DhwJu3ocZNUdBgCVzJ6goXqfEEt8ogIp81flNGkU2+bEDHqL0Pfyd3L3NsGM5ZUPZ0d/1ovkOvDugMsGtNpvRjB25CXss="
