@@ -100,28 +100,7 @@
       <div class="content">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
-            <p>Figures are an important part of any scientific document. While the kind of figure commonly used obviously varies between disciplines, charts are an important part of many publications.<!--more--> There are two problems in how charts are currently used:</p>
-<ul>
-<li>the data used to draw the chart are not available or difficult to obtain</li>
-<li>charts are drawn as static images with no interactivity, e.g. to see the values of individual data points</li>
-</ul>
-<p>Ross Mounce and others did a <strong>Figures → Data</strong> project at the recent <a href="http://hacka4ac.com">hack4ac</a> to extract data from figures, described in a <a href="http://rossmounce.co.uk/2013/07/09/hack4ac-recap/">blog post</a>. The experience was painful, even though they started with a <em>really</em> simple chart.</p>
-<p>While we should of course <a href="http://datadryad.org/">publish all data associated with a paper</a>, the smarter strategy to overcome the two limitations above would be to embed the data used for a chart directly into the document. We have many tools that can accomplish this, and I have given an example using R in an <a href="/2013/06/17/what-is-scholarly-markdown/">earlier blog post</a>. The problem is the sometimes steep learning curve.</p>
-<p>One approach is to build an easy-to use online tool, and <a href="http://datawrapper.de/">Datawrapper</a> is exactly that:</p>
-<blockquote>
-<p>An open source tool helping anyone to create simple, correct and embeddable charts in minutes.</p>
-</blockquote>
-<p>Datawrapper uses the <strong>d3.js</strong> and <strong>Highcharts</strong> Javascript libraries for data visualizations, and the service is easy to use. It took me for example about 15 min to generate the chart below. The data used for the chart are embedded (click <strong>Get the data</strong>) and you can hover over the chart to see the actual numbers by month.</p>
-<iframe src="http://s3.datawrapper.de/7PqqU/" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="720" height="480"></iframe>
-
-<p>Most journal articles see the highest usage immediately after publication, and the light purple line shows this pattern for Darcy et al. <span class="citation" data-cites="darcy2009">(2009)</span>. The dark purple line for Moher et al. <span class="citation" data-cites="moher2009">(2009)</span> – published on the same day – on the other hand shows a highly unusual usage pattern, as the usage actually increases over time, starting about 1 1/2 years after publication. The article is a guideline for reporting systematic reviews and meta-analyses, and is now viewed more often than directly after publication four years ago.</p>
-<p>Datawrapper does three things: it makes it easy to generate charts, it allows you to embed them directly into your webpage (using an <code>&lt;iframe&gt;</code> tag), and it is Open Source software (MIT license, Github repo <a href="https://github.com/datawrapper/datawrapper">here</a>) so that you can help improve the code and host this service on your own. DataWrapper was written in Javascript and PHP by a group of German journalists, and the main focus is data journalism where the service has become really <a href="http://blog.datawrapper.de/2013/datawrapper-crosses-mark-of-10-million-visits/">popular</a> with more than 3.5 million views of embedded charts in May 2013 alone.</p>
-<p>Datawrapper is a perfect tool for science blogs and websites with scientific content, but it can also enhance the charts in scientific articles. We need a few additional chart types, error bars and more flexible labeling. And we might want to add a license picker, making it easy to add a Creative Commons license so that it is clear how the chart can be reused. Datawrapper is intended for online use, but the service can also save the charts as PNG or PDF. We would want to add saving to SVG (already used for online rendering) for easier embedding into the XML and epub versions of articles.</p>
-<div class="references">
-<h2>References</h2>
-<p>D’Arcy, E., &amp; Moynihan, R. (2009). Can the relationship between doctors and drug companies ever be a healthy one? <em>PLoS Medicine</em>, <em>6</em>(7), e1000075. Retrieved from <a href="http://dx.doi.org/10.1371/journal.pmed.1000075">http://dx.doi.org/10.1371/journal.pmed.1000075</a></p>
-<p>Moher, D., Liberati, A., Tetzlaff, J., &amp; Altman, D. G. (2009). Preferred reporting items for systematic reviews and meta-analyses: The pRISMA statement. <em>PLoS Medicine</em>, <em>6</em>(7), e1000097. Retrieved from <a href="http://dx.doi.org/10.1371/journal.pmed.1000097">http://dx.doi.org/10.1371/journal.pmed.1000097</a></p>
-</div>
+            
 
             <div class="license">
               
@@ -129,10 +108,7 @@
                 <div class="toc-item">
                   <h3>Next: <a href="/2013/07/23/the-trouble-with-keynotes">The trouble with keynotes</a></h3>
                   
-                  <p>A keynote is a presentation typically given at a start of a conference that sets the central theme for the event. A keynote speaker usually has more time (45-60 min) than other presenters, and has the full attention of everyone attending the conference.
-
-
-</p>
+                  <p></p>
                 </div>
               
             </div>

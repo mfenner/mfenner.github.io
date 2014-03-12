@@ -100,85 +100,7 @@
       <div class="content">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
-            <p>The standard local file formats for bibliographic data are probably bibtex and RIS. They have been around for a long time, and are supported by all reference managers and many other tools and services. Unfortunately these formats are far from perfect<!--more-->:</p>
-<ul>
-<li>neither bibtex nor RIS use a web-friendly data interchange format such as XML or JSON, which makes it harder to work with these formats</li>
-<li>bibtex - and to a lesser extend RIS - don’t support all entry types that we need, e.g. datasets, or new standards such as ORCID author identifiers</li>
-<li>bibtex stores all authors in a single field, which makes author names hard to parse</li>
-</ul>
-<h3 id="bibtex">bibtex</h3>
-<pre class="sourceCode bibtex"><code class="sourceCode bibtex"><span class="kw">@article</span>{<span class="ot">fenner2012a</span>,
-  <span class="dt">title</span> = {One-click science marketing},
-  <span class="dt">volume</span> = {11},
-  <span class="dt">url</span> = {http://dx.doi.org/10.1038/nmat3283},
-  <span class="dt">doi</span> = {10.1038/nmat3283},
-  <span class="dt">number</span> = {4},
-  <span class="dt">journal</span> = {Nature Materials},
-  <span class="dt">publisher</span> = {Nature Publishing Group},
-  <span class="dt">author</span> = {Fenner, Martin},
-  <span class="dt">year</span> = {2012},
-  <span class="dt">month</span> = {mar},
-  <span class="dt">pages</span> = {261-263}
-}</code></pre>
-<p>One obvious solution would be to store bibliographic data in XML or JSON. These formats have very good support in all programming languages, and they are the formats used by APIs on the web. There have been some efforts to standardize these formats for bibliographic data, e.g. <a href="http://www.bibjson.org/">BibJSON</a>, <a href="http://www.loc.gov/standards/mods/">MODS</a>, <a href="http://bibtexml.sourceforge.net/">BibTeX XML</a> or Endnote XML.</p>
-<h3 id="bibtex-xml">BibTeX XML</h3>
-<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;bibtex:entry</span><span class="ot"> id=</span><span class="st">&#39;fenner2012a&#39;</span><span class="kw">&gt;</span>
-  <span class="kw">&lt;bibtex:article&gt;</span>
-    <span class="kw">&lt;bibtex:title&gt;</span>One-click science marketing<span class="kw">&lt;/bibtex:title&gt;</span>
-    <span class="kw">&lt;bibtex:volume&gt;</span>11<span class="kw">&lt;/bibtex:volume&gt;</span>
-    <span class="kw">&lt;bibtex:url&gt;</span>http://dx.doi.org/10.1038/nmat3283<span class="kw">&lt;/bibtex:url&gt;</span>
-    <span class="kw">&lt;bibtex:doi&gt;</span>10.1038/nmat3283<span class="kw">&lt;/bibtex:doi&gt;</span>
-    <span class="kw">&lt;bibtex:number&gt;</span>4<span class="kw">&lt;/bibtex:number&gt;</span>
-    <span class="kw">&lt;bibtex:journal&gt;</span>Nature Materials<span class="kw">&lt;/bibtex:journal&gt;</span>
-    <span class="kw">&lt;bibtex:publisher&gt;</span>Nature Publishing Group<span class="kw">&lt;/bibtex:publisher&gt;</span>
-    <span class="kw">&lt;bibtex:person&gt;</span>
-      <span class="kw">&lt;bibtex:first&gt;</span>Martin<span class="kw">&lt;/bibtex:first&gt;</span>
-      <span class="kw">&lt;bibtex:last&gt;</span>Fenner<span class="kw">&lt;/bibtex:last&gt;</span>
-    <span class="kw">&lt;bibtex:person&gt;&lt;bibtex:author/&gt;</span>
-    <span class="kw">&lt;bibtex:year&gt;</span>2012<span class="kw">&lt;/bibtex:year&gt;</span>
-    <span class="kw">&lt;bibtex:month&gt;</span>mar<span class="kw">&lt;/bibtex:month&gt;</span>
-    <span class="kw">&lt;bibtex:pages&gt;</span>261-263<span class="kw">&lt;/bibtex:pages&gt;</span>
-  <span class="kw">&lt;/bibtex:article&gt;</span>
-<span class="kw">&lt;/bibtex:entry&gt;</span></code></pre>
-<p>My problem with these formats is that they are made for computers talking to each other and not humans. I personally think that a file with bibliographic data should be human-readable, similar to why <a href="/2012/12/13/a-call-for-scholarly-markdown/">I like markdown</a> for writing scientific documents.</p>
-<p>When you have too many standards and are not happy with any of them, you of course create a new standard.</p>
-<figure>
-<img src="http://imgs.xkcd.com/comics/standards.png" alt="How Standards Proliferate. Taken from http://xkcd.com/927/" /><figcaption><strong>How Standards Proliferate</strong>. Taken from <a href="http://xkcd.com/927/">http://xkcd.com/927/</a></figcaption>
-</figure>
-<p>My suggestion for a new bibliographic file format is twofold: a) use YAML for data serialization and b) use CSL as data format. <a href="http://www.yaml.org/spec/1.2/spec.html">YAML</a> is a data format popular with Ruby Developers and is described on the <a href="http://yaml.org">YAML website</a> as</p>
-<blockquote>
-<p>YAML is a human friendly data serialization standard for all programming languages.</p>
-</blockquote>
-<p>Something that not may people seem to know is that YAML is a superset of JSON and that <a href="http://yaml.org/spec/1.2/spec.html#id2759572">every JSON file is also a valid YAML file</a>. The main difference is the better human readability of YAML.</p>
-<p><strong>Citation Style Language</strong> is described on the <a href="http://citationstyles.org">CSL website</a> as</p>
-<blockquote>
-<p>CSL is an open XML-based language to describe the formatting of citations and bibliographies.</p>
-</blockquote>
-<p>Although some commercial applications still use proprietary citation styles, CSL has become the de facto standard, and is used by the reference managers <strong>Zotero</strong>, <strong>Mendeley</strong>, <strong>Papers</strong>, and others. This blog uses CSL via Pandoc and the <a href="http://code.google.com/p/citeproc-hs/">citeproc-hs</a> library. CSL processors need bibliographic data in a standard format. The popular <a href="https://bitbucket.org/fbennett/citeproc-js/wiki/Home">Citeproc-js</a> Javascript CSL processor by Frank Bennett for example uses JSON, but we might as well use YAML:</p>
-<h3 id="citeproc-yaml">Citeproc YAML</h3>
-<pre class="sourceCode yaml"><code class="sourceCode yaml"><span class="kw">-</span> <span class="fu">title:</span> One-click science marketing
-  <span class="fu">volume:</span> <span class="st">&#39;11&#39;</span>
-  <span class="fu">URL:</span> http://dx.doi.org/10.1038/nmat3283
-  <span class="fu">DOI:</span> 10.1038/nmat3283
-  <span class="fu">issue:</span> <span class="st">&#39;4&#39;</span>
-  <span class="fu">container-title:</span> Nature Materials
-  <span class="fu">publisher:</span> Nature Publishing Group
-  <span class="fu">author:</span>
-  <span class="kw">-</span> <span class="fu">family:</span> Fenner
-    <span class="fu">given:</span> Martin
-    <span class="fu">orcid:</span> 0000-0003-1419-2405
-  <span class="fu">page:</span> 261-263
-  <span class="fu">id:</span> fenner2012a
-  <span class="fu">type:</span> article-journal
-  <span class="fu">issued:</span>
-    <span class="fu">date-parts:</span>
-      <span class="kw">-</span> 2012
-      <span class="kw">-</span> 3</code></pre>
-<p>I hope you agree that this format is not only structured and can be understood by computers, but is also very readable by humans. You may have noticed that I have inserted my ORCID, something that is very difficult to do with bibtex where all authors are stored in one text string (see above).</p>
-<p>Careful readers of this blog will of course remember that <a href="/2013/06/29/metadata-in-scholarly-markdown/">I have written about</a> using YAML to store metadata about a blog post. We could now add bibliographic information to these metadata, either in the YAML frontmatter (if it is a Jekyll blog), or in a separate file. It should be straightforward to adapt the existing CSL processors to understand YAML since YAML and JSON are so similar. To get started with some Citeproc YAML, use the new (and still experimental) <strong>ORCID Feed</strong> Webservice with your ORCID and specify the <code>yml</code> format, e.g. <a href="http://feed.labs.orcid-eu.org/0000-0003-1419-2405.yml">http://feed.labs.orcid-eu.org/0000-0003-1419-2405.yml</a> for my publications.</p>
-<div class="references">
-
-</div>
+            
 
             <div class="license">
               
@@ -186,10 +108,7 @@
                 <div class="toc-item">
                   <h3>Next: <a href="/2013/08/04/automatically-list-all-your-publications-in-your-blog">Automatically list all your publications in your blog</a></h3>
                   
-                  <p>A common feature of blogs written by scientists is a listing of all their publications. Publication lists are a great way to provide background information about your research. Publication lists should provide links to the fulltext versions of these publications, should be nicely formatted - e.g. using a common citation style such as APA - and should be easy to maintain. A number of tools for a variety of blogging platforms (including Wordpress and Jekyll) are available to help with this task, but maintaining the list of publications has remained difficult.
-
-
-</p>
+                  <p></p>
                 </div>
               
             </div>

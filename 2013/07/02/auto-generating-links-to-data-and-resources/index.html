@@ -98,41 +98,7 @@
       <div class="content">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
-            <p>A few weeks ago Kafkas et al. <span class="citation" data-cites="Kafkas:2013fp">(2013)</span> published a paper looking at current patterns of how datasets o biological databases are cited in research articles, based on an analysis of the full text Open Access articles available from Europe PMC. They identified data ctiations by:</p>
-<ol type="1">
-<li>Accession numbers available in articles as publisher-supplied, structured content;</li>
-<li>Accession numbers identified in articles by text mining;</li>
-<li>References to articles from the ENA, UniProt and PDBe records.</li>
-</ol>
-<p>They could show that text mining doubles the number of structured annotations available in journal articles (from 2.26% to 5.15%), and that these structured annotations should be extended beyond the ENA, UniProt and PDB identifiers that their analysis focused on. ENA identifiers (for nucleotide sequences in GenBank, EMBL or DDBJ) make up the largest group, with 160,112 identifiers found in the 410,364 articles that were analyzed.</p>
-<figure>
-<img src="/images/journal.pone.0063184.g003.png" alt="Database Citation in Full Text Biomedical Articles. Fig. 3 from (Kafkas et al., 2013)." /><figcaption><strong>Database Citation in Full Text Biomedical Articles</strong>. Fig. 3 from <span class="citation" data-cites="Kafkas:2013fp">(Kafkas et al., 2013)</span>.</figcaption>
-</figure>
-<p>Another result in the paper is that references to articles in these databases show little overlap with database links found in articles. One of the conclusions drawn by the author is that</p>
-<blockquote>
-<p>Text-mining can be used to extend structured data citation, and could be a basis for the development of services to help authors or editors to add structured content at the beginning of the publication process, rather than after the fact.</p>
-</blockquote>
-<p>Adding structured data citations during the authoring phase of a manuscript requires tools that make this process easier, providing auto-linking and verification of the without requiring extra input from the author. Scholarly Markdown is an ideal platform for these tools, as it is easier to extend than traditional word processors such as Microsoft Word. During a small workshop around persistent identifiers for data (<a href="http://datacite.org">DataCite</a>), people (<a href="http://orcid.org">ORCID</a>) and geological samples (<a href="http://www.geosamples.org/igsnabout">IGSN</a>) that took place yesterday and today at the <a href="http://www.gfz-potsdam.de/portal/gfz/cegit">GFZ Potsdam</a> I worked on a tool that does auto-linking for these identifiers:</p>
-<ul>
-<li>IGSN. <a href="http://www.geosamples.org/igsnabout">International Geosample Number</a></li>
-<li>MGI identifiers for genetically modified mouse strains in the <a href="http://www.findmice.org/about">Internal Mouse Strain Resource</a></li>
-<li>ENA. <a href="http://www.ebi.ac.uk/ena/about/about">Genbank / ENA / DDBJ nucleotide sequences</a></li>
-<li>UniProt protein sequences from the <a href="http://www.uniprot.org/help/about">UniProt database</a></li>
-<li>PDB. <a href="http://www.rcsb.org/pdb/static.do?p=home/faq.html">Protein Data Bank protein structure information</a></li>
-</ul>
-<p>The list includes the IGSN, the database identifiers studied by Kafkas et al <span class="citation" data-cites="Kafkas:2013fp">(2013)</span>, and the MGI identifier for genetically altered mice. In the life sciences there is a long tradition - and requirement by journals - to use database identifiers for data, but identifiers for resources such as genetically modified mice are unfortunately not in common use.</p>
-<p>This blog uses the Pandoc markdown processor and the Jekyll static website generator. The easiest way to implement this functionality was by writing a filter for the liquid templating engine used by Jekyll, and provide this filter as a Jekyll plugin. The Jekyll plugin can be found at <a href="https://github.com/mfenner/jekyll-scholmd">mfenner/jekyll-scholmd</a>. The plugin expects the name of the identifier, followed by a colon and optional space, followed by the identifier:</p>
-<pre><code>GenBank:  M10090
-IGSN:  JRH964436
-MGI:  96922
-UniProt:  P02144
-PDB:  1mbn</code></pre>
-<p>This input is automatically translated into <a href="http://www.ebi.ac.uk/ena/data/view/M10090">GenBank:M10090</a>, <a href="http://hdl.handle.net/10273/JRH964436">IGSN:JRH964436</a>, <a href="http://www.findmice.org/summary?gaccid/96922">MGI:96922</a>, and information about the human myoglobin protein (<a href="http://www.uniprot.org/uniprot/P02144">UniProt:P02144</a>, <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1mbn">PDB:1mbn</a>) is generated in a similar fashion.</p>
-<p>The plugin was written in a few hours today, and is my first Jekyll plugin. There is room for improvement, e.g. support for more identifiers, better regex matching, validation of the resulting links, and automated tag generation if an identifier is found. Ideally the auto-linking should happen in the markdown and not the HTML output, so that these structured database links are also available in other markdown outputs such as PDF. But this is another example how Scholarly Markdown can make it easier for researchers to author documents without requiring a fancy web-based user interface.</p>
-<div class="references">
-<h2>References</h2>
-<p>Kafkas, Ş., Kim, J.-H., &amp; McEntyre, J. R. (2013). Database Citation in Full Text Biomedical Articles. <em>PLoS ONE</em>. Retrieved from <a href="http://dx.doi.org/10.1371/journal.pone.0063184">http://dx.doi.org/10.1371/journal.pone.0063184</a></p>
-</div>
+            
 
             <div class="license">
               
@@ -140,10 +106,7 @@ PDB:  1mbn</code></pre>
                 <div class="toc-item">
                   <h3>Next: <a href="/2013/07/19/creating-charts-with-datawrapper">Creating charts with Datawrapper</a></h3>
                   
-                  <p>Figures are an important part of any scientific document. While the kind of figure commonly used obviously varies between disciplines, charts are an important part of many publications.
-
-
-</p>
+                  <p></p>
                 </div>
               
             </div>
