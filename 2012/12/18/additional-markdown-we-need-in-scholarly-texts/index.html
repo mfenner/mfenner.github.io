@@ -96,7 +96,70 @@
       <div class="content">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
-            
+            <p>Following up from <a href="/2012/12/13/a-call-for-scholarly-markdown/">my post last week</a>, below is a suggested list of features that should be supported in documents written in scholarly markdown. Please provide feedback via the comments, or by editing the Wiki version I have set up <a href="https://github.com/mfenner/scholarly-markdown/wiki">here</a>. Listed are features that go beyond the <a href="http://daringfireball.net/projects/markdown/syntax">standard markdown syntax</a>.<!--more--></p>
+<p>The goals of scholarly markdown are</p>
+<ol type="1">
+<li>to support writing of complete scholarly articles,</li>
+<li>don’t make the syntax more complicated than it is today, and</li>
+<li>don’t rely on HTML as the fallback mechanism.</li>
+</ol>
+<p>In practice this means that scholarly markdown should support most, but not all scholarly texts – documents that are heavy in math formulas, have complicated tables, etc. may be better written with LaTeX or Microsoft Word. It also means that scholarly markdown will probably contain only limited semantic markup, as this is difficult to do with a lightweight markup language and much easier with XML or a binary file format.</p>
+<h2 id="cover-page">Cover Page</h2>
+<p>Optional metadata about a document. Typically used for title, authors (including affiliation), and publication date, but should be flexible enough to handle any kind of metadata (keywords, copyright, etc.).</p>
+<pre class="sourceCode yaml"><code class="sourceCode yaml"><span class="ot">---</span>
+<span class="fu">layout:</span> post
+<span class="fu">title:</span> <span class="st">&quot;Additional Markdown we need in Scholarly Texts&quot;</span>
+<span class="fu">tags:</span> <span class="kw">[</span>markdown<span class="kw">]</span>
+<span class="fu">authors:</span>
+ <span class="kw">-</span> <span class="fu">name:</span> Martin Fenner
+   <span class="fu">orcid:</span> 0000-0003-1419-2405
+<span class="fu">copyright:</span> http://creativecommons.org/licenses/by/3.0/deed.en
+<span class="ot">---</span></code></pre>
+<h2 id="typography">Typography</h2>
+<p>Scholarly markdown should support <sup>superscript</sup> and <sub>subscript</sub> text, and should provide an easy way to enter greek <span class="math">\(\zeta\)</span> letters.</p>
+<h2 id="tables">Tables</h2>
+<p>Tables should work as anchors (i.e. you can link to them) and table captions should support styled text. Unless the table is very simple, tables are probably better written as CSV files with another tool, and then imported into the scholarly markdown document similar to figures.</p>
+<table>
+<caption><strong>This is the table caption</strong>. We can explain the table here.</caption>
+<col style="width: 16%" /><col style="width: 22%" /><col style="width: 34%" /><thead>
+<tr class="header">
+<th style="text-align: center;">Centered Header</th>
+<th style="text-align: right;">Right Aligned</th>
+<th style="text-align: left;">Left Aligned</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">First</td>
+<td style="text-align: right;">12.0</td>
+<td style="text-align: left;">Example of a row that spans multiple lines.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Second</td>
+<td style="text-align: right;">5.0</td>
+<td style="text-align: left;">Here’s another one. Note the blank line between rows.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="figures">Figures</h2>
+<p>Figures in scholarly works are separated from the text, and have a figure caption (which can contain styled text). Figures should work as anchors (i.e. you can link to them). Figures can be in different file formats, including TIFF and PDF, and those formats have to be converted into web-friendly formats when exporting to HTML (e.g. PNG and SVG).</p>
+<figure>
+<img src="/images/set-operations-illustrated-with-venn-diagrams.png" alt="Set operations illustrated with Venn diagrams. Example taken from TeXample.net." /><figcaption><strong>Set operations illustrated with Venn diagrams</strong>. Example taken from <a href="http://www.texample.net/tikz/examples/set-operations-illustrated-with-venn-diagrams/">TeXample.net</a>.</figcaption>
+</figure>
+<h2 id="citations-and-links">Citations and Links</h2>
+<p>Scholarly articles typically don’t have inline links, but rather citations. The external links (both scholarly identifiers such as DOIs and regular web URLs) are collected in a bibliography at the end of the document, and the citations in the text link to this bibliography. This functionality is similar to footnotes.</p>
+<p>Citations should include a citation key in the text, e.g. <code>[@kowalczyk2011]</code>, parsed as <span class="citation" data-cites="kowalczyk2011">(Kowalczyk &amp; Shankar, 2011)</span>, and a separate bibliography file in BibTeX (or RIS) format that contains references for all citations. Inserting citations and creating the bibliography can best be done with a reference manager.</p>
+<p>Cross-links – i.e. links within a document – are important for scholarly texts. It should be possible to link to section headers (e.g. the beginning of the discussion section), figures and tables.</p>
+<h2 id="math">Math</h2>
+<p>Complicated math is probably best done in a different authoring environment, but simple formulas, both inline <span class="math">\(\sqrt2x\)</span> and block elements</p>
+<p><span class="math">\({\frac {d}{dx}}\arctan(\sin({x}^{2}))=-2\,{\frac {\cos({x}^{2})x}{-2+\left (\cos({x}^{2})\right )^{2}}}\)</span></p>
+<p>should be supported by scholarly markdown.</p>
+<h2 id="comments">Comments</h2>
+<p>Comments are important for multi-author documents and if reviewer feedback should be included. Comments should be linked to a particular part of a document to provide context, or attached at the end of a document for general comments. It would also be helpful to “comment out” parts of a document, e.g. to indicate parts that are incomplete and need more work. Revisions of a markdown document are best handled using a version control system such as git.</p>
+<div class="references">
+<h2>References</h2>
+<p>Kowalczyk, S., &amp; Shankar, K. (2011). Data sharing in the sciences. <em>Annual Review of Information Science and Technology</em>, <em>45</em>(1), 247–294. Retrieved from <a href="http://dx.doi.org/10.1002/aris.2011.1440450113">http://dx.doi.org/10.1002/aris.2011.1440450113</a></p>
+</div>
 
             <div class="license">
               
@@ -104,7 +167,10 @@
                 <div class="toc-item">
                   <h3>Next: <a href="/2013/05/08/announcing-markdown-for-science-workshop-on-june-8th">Announcing Markdown for Science Workshop on June 8th</a></h3>
                   
-                  <p></p>
+                  <p>On Saturday June 8th – exactly a month from today – the PLOS San Francisco offices will host a workshop/hackathon about using markdown for science. A lot of people are experimenting with markdown for authoring scientific articles – see blog posts here, here or my post here, and the scientific manuscript here.
+
+
+</p>
                 </div>
               
             </div>

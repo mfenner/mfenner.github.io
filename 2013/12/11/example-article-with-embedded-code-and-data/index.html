@@ -100,7 +100,18 @@
       <div class="content">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
-            
+            <p>In October I published an essay on Article-Level Metrics (ALM) in PLOS Biology <span class="citation" data-cites="fenner2013">(Fenner, 2013)</span>. The essay is a good introduction into Article-Level Metrics, and I am proud that it is part of the <a href="http://dx.doi.org/10.1371/issue.pcol.v06.i03">Tenth Anniversary PLOS Biology Collection</a>. Like all PLOS content, the article was published with a <a href="http://blogs.plos.org/tech/creative-commons-for-science-interview-with-puneet-kishor/">Creative Commons attribution license</a>, allowing me to republish the article on this blog. I have now done so and the article is available <a href="/2013/12/11/what-can-article-level-metrics-do-for-you/">here</a>.<!--more--></p>
+<p>Of course I didn’t want to simply republish the article, but I wanted to publish an improved version. The article has five figures, four of them show visualizations of ALM data that were generated using R (the fifth figure is a table reproduced from another article). The PLOS article includes the ALM dataset and the R scripts used to generate the figures as <a href="http://dx.doi.org/10.1371/journal.pbio.1001687.s001">supplementary information</a>. What I have done now is to recreate the article as a single markdown file (available <a href="https://github.com/mfenner/blog/blob/master/_posts/2013-12-11-what-can-article-level-metrics-do-for-you.Rmd">here</a>) that has all R code embedded. Using R and <a href="http://yihui.name/knitr/">knitr</a> - and the <a href="/data/alm_report_plos_biology_2013-05-20.csv">CSV file with the ALM data</a> - everyone can now reproduce the figures from the paper by simply running the embedded code, and can dig deeper into the data.</p>
+<figure>
+<img src="/images/2013-12-11_figure_3.svg" alt="Figure 3. Views vs. citations for PLOS Biology articles published in 2010." /><figcaption><strong>Figure 3.</strong> Views vs. citations for PLOS Biology articles published in 2010.</figcaption>
+</figure>
+<p>This was a good opportunity to improve the accessibility of the article in other ways. Instead of the raster image formats PNG, JPEG and TIFF used by PLOS and almost every other publisher, I generated the figures in the vector format SVG. Not only does SVG produce images independent of device resolution and screen size (try to zoom in on the figure above), but SVG can also easily be manipulated in the browser since it is XML. This is beyond the scope of this blog post, but look at the <a href="http://d3js.org/">d3.js</a> Javascript library for great examples of how SVG can be dynamically generated and changed in the browser. <strong>Figure 3</strong> above could for example be enhanced so that the article title is displayed when you hover over one of the bubbles, or we could enable zooming to show more detail.</p>
+<p>Like all content on this blog, the article was created using <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>, and the bibliography was dynamically generated. This makes it easy to change the citation style, and I decided to use the <a href="http://www.apastyle.org/">APA Style</a> that shows the citations in the text as author-date rather than numbered as with the PLOS style (see the example citation in the first paragraph). The combined bibliography for all blog posts including the article can be downloaded in bibtex format <a href="/bibliography/references.bib">here</a>.</p>
+<p>Lastly, I wanted to generate nicer HTML for a better online reading experience. I haven’t done anything fancy, but most publishers seem to focus on navigation around an article, so that very little screen real estate is left for the actual content of the article. I’ve tried to improve readability by reducing the navigation areas to a minimum, by using readable fonts in larger sizes: <a href="https://typekit.com/fonts/minion-pro">Adobe Minion Pro</a> for the body text and <a href="https://typekit.com/fonts/myriad-pro">Adobe Myriad Pro</a> for headings, tables and figure legends.</p>
+<div class="references">
+<h2>References</h2>
+<p>Fenner, M. (2013). What can article-level metrics do for you? <em>PLoS Biol</em>, <em>11</em>(10), e1001687. doi:<a href="http://dx.doi.org/10.1371/journal.pbio.1001687">10.1371/journal.pbio.1001687</a></p>
+</div>
 
             <div class="license">
               
@@ -110,7 +121,10 @@
                   <p>
                     </p>
                   
-                  <p></p>
+                  <p>The scientific impact of a particular piece of research is reflected in how this work is taken up by the scientific community. The first systematic approach that was used to assess impact, based on the technology available at the time, was to track citations and aggregate them by journal. This strategy is not only no longer necessary — since now we can easily track citations for individual articles — but also, and more importantly, journal-based metrics are now considered a poor performance measure for individual articles.
+
+
+</p>
                 </div>
               
             </div>

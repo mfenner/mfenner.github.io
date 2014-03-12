@@ -96,7 +96,32 @@
       <div class="content">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
-            
+            <p>One important outcome of the recent <a href="https://github.com/scholmd/scholmd/wiki/workshop">Markdown for Science</a> workshop was an overall agreement that all the different implementations (or flavors) of markdown that currently exist are a big problem for the adoption of Scholarly Markdown<!--more--> and that we <a href="https://github.com/scholmd/scholmd/wiki/What-is-Markdown">need</a>:</p>
+<blockquote>
+<p>A reference implementation with documentation and tests</p>
+</blockquote>
+<p>As described by Karthik Ram (<a href="https://github.com/scholmd/scholmd/wiki/workshop">31 flavors is great for ice cream but not markdown</a>), <a href="/2012/12/13/a-call-for-scholarly-markdown/">me</a> and <a href="http://www.codinghorror.com/blog/2012/10/the-future-of-markdown.html">others</a>, there is really a large number of markdown implementations to choose from, including</p>
+<ul>
+<li>John Gruber’s <a href="http://daringfireball.net/projects/markdown/">original Markdown</a></li>
+<li><a href="https://help.github.com/articles/github-flavored-markdown">Github-flavored Markdown</a></li>
+<li><a href="http://michelf.ca/projects/php-markdown/extra/">PHP Markdown Extra</a></li>
+<li><a href="http://johnmacfarlane.net/pandoc/">Pandoc</a></li>
+<li><a href="http://fletcherpenney.net/multimarkdown/">MultiMarkdown</a></li>
+</ul>
+<p>These different flavors all serve their needs, but for Markdown to take off in the relatively small scholarly community it would be very helpful to come up with a reference implementation. But how do we get to that point?</p>
+<ol type="1">
+<li>Think about the features we need for Scholarly Markdown and make this the reference implementation?</li>
+<li>Organize a working group or committee that decides what is Scholarly Markdown?</li>
+<li>Pick the Markdown flavor with the best developer support?</li>
+<li>Figure out what markdown flavor has the widest support by tools relevant for scholars?</li>
+<li>See what markdown flavor most scholars are currently using?</li>
+</ol>
+<p>I think as a starting point, and until we come up with something better, #5 makes the most sense. The number of markdown users among scholars is still small, but my guess would be that Pandoc is currently the most popular Markdown flavor among scholars. This blog uses Pandoc and the static site generator <a href="http://jekyllrb.com">Jekyll</a>, and is hosted on <a href="http://pages.github.com">Github Pages</a> - for the source code use the link in the footer. Please tell me in the comments what you are using (Markdown flavor and tools), and whether I am correct with my wild guess regarding Pandoc. And make sure your preferred tool is listed in the <a href="https://github.com/scholmd/scholmd/wiki/Tools-to-support-your-markdown-authoring">Tools to spport your markdown authoring</a> wiki page.</p>
+<p>A reference Markdown document is also very helpful to move forward, as we can see what outputs in HTML, PDF (or other formats) our specific Markdown tools produce, and how they differ. This reference document should include citations, tables, figures, and other features typical for scholarly content. Ideally this is a paper written in Markdown and accepted for publication - proving the concept -, or it can be a published paper transformed into markdown, e.g. a paper by <a href="http://www.elifesciences.org/elife-now-supports-content-negotiation/">eLife</a>. Feel free to suggest a paper in the comments.</p>
+<p>The idea of tests that came up in the Markdown workshop is also great. Ideally we have a set of tests that we (or someone else, e.g. a publisher) can run to make sure that the markdown in the document conforms with the reference implementation. This could also include basic checks for required metadata (title, author, publication date, etc.), and could optionally validate the citations as well.</p>
+<div class="references">
+
+</div>
 
             <div class="license">
               
@@ -104,7 +129,10 @@
                 <div class="toc-item">
                   <h3>Next: <a href="/2013/06/24/citations-in-markdown-part-3">Citations in Markdown Part 3</a></h3>
                   
-                  <p></p>
+                  <p>After the post last week and the crazy discussion that followed I would understand that you feel you have heard enough about citations in markdown. But I had the feeling last week that something was still missing, and I have done some more thinking.
+
+
+</p>
                 </div>
               
             </div>

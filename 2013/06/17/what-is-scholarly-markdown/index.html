@@ -98,7 +98,63 @@
       <div class="content">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
-            
+            <p>One of the important discussions taking place at the <a href="https://github.com/scholmd/scholmd/wiki">Markdown for Science</a> workshop last weekend was about the definition of Scholarly Markdown.<!--more--> We came up with <a href="https://github.com/scholmd/scholmd/wiki/What-is-Markdown">this</a>:</p>
+<ol type="1">
+<li>Markdown that supports the requirements of scientific texts</li>
+<li>Markdown as format that glues open scientific text resources together</li>
+<li>A reference implementation with documentation and tests</li>
+<li>A community</li>
+</ol>
+<p>We also agreed that <strong>Scholarly Markdown</strong> is a better term than <strong>Markdown for Science</strong>, as it also includes the Social Sciences and Humanities. And we agreed on a hashtag, <a href="https://twitter.com/search?q=%23scholmd&amp;src=typd">#scholmd</a>.</p>
+<p>I like #3 and #4, and I was not surprised to see #1. #2 is one of the most important outcomes of the workshop for me personally, and was reflected in the discussion we had in the breakout session on <em>What is needed for Markdown to be adopted by the scientific community?</em> One important strategy is the following:</p>
+<blockquote>
+<p>We need an online tool that makes it easy for scholars to write scholarly markdown in a collaborative manner.</p>
+</blockquote>
+<p>We called this the <strong>Google Docs for Scientists</strong> (Google Docs is a good collaborative tool, but is lacking some important features required for scientific documents, e.g. integrated citation management). <a href="https://www.authorea.com">Authorea</a> was mentioned as a promising example of this concept. It was also noted that some previous efforts failed, because the tool looked too different from Microsoft Word. But building such a tool wouldn’t really require markdown as a file format, and could for example also be done directly in HTML5. This would be a reasonable strategy, but in my mind is falling short because I think the problem we need to solve is more complicated than making collaboration easier with tools that look like Microsoft Word. We therefore also discussed a different strategy:</p>
+<blockquote>
+<p>We need multiple tools that make it easy for scholars to create scholarly markdown documents and openly share them. This collaborative work is not limited to authoring scholarly papers, but also includes shorter scholarly texts, e.g. experimental results, lab notebooks, lecture notes, blog posts and working papers. Ease of use is not only defined by the writing experience, but also how easy it is to share documents with others.</p>
+</blockquote>
+<p>This definition almost sounds like a definition for Open Science, and assumes that data - and increasingly software - are an integral part of reporting science. This makes <a href="https://www.scienceexchange.com/reproducibility">reproducibility</a> of scientific results much easier, and one nice example how this can be done is the integration of markdown into the R statistical software, using the <a href="http://yihui.name/knitr/">knitr package</a>. Using the <a href="http://article-level-metrics.plos.org/plos-alm-data/">May 2013 PLOS article-level metrics data</a> which are freely available for download, the R code below can be embedded into a markdown file and will produce the bar plot below when the markdown file is run in R (to try this yourself, download the ALM data and <a href="https://github.com/articlemetrics/plosOpenR/blob/master/barPlotSummary.Rmd">markdown file for this article</a>).</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Load required libraries</span>
+<span class="kw">library</span>(reshape2)
+
+<span class="co"># Load the data from the bulk download, filter out DOIs that are not from PLoS journals</span>
+alm &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;data-alm/alm_report_2013-05-20.csv&quot;</span>, <span class="dt">encoding =</span> <span class="st">&quot;UTF8&quot;</span>, <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>, <span class="dt">stringsAsFactors=</span><span class="ot">FALSE</span>, <span class="dt">na.strings=</span><span class="kw">c</span>(<span class="st">&quot;0&quot;</span>))
+alm &lt;-<span class="st"> </span><span class="kw">subset</span>(alm, (<span class="kw">substr</span>(alm$doi,<span class="dv">1</span>,<span class="dv">15</span>) ==<span class="st"> &quot;10.1371/journal&quot;</span>))
+alm$publication_date &lt;-<span class="st"> </span><span class="kw">as.Date</span>(alm$publication_date)
+alm$counter_html &lt;-<span class="st"> </span><span class="kw">as.numeric</span>(alm$counter_html)
+
+<span class="co"># Options</span>
+plos.start_date &lt;-<span class="st"> </span><span class="ot">NA</span>
+plos.end_date &lt;-<span class="st"> </span><span class="ot">NA</span>
+plos.colors &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;#304345&quot;</span>,<span class="st">&quot;#304345&quot;</span>,<span class="st">&quot;#789aa1&quot;</span>,<span class="st">&quot;#789aa1&quot;</span>,<span class="st">&quot;#789aa1&quot;</span>,<span class="st">&quot;#ad9a27&quot;</span>,<span class="st">&quot;#ad9a27&quot;</span>,<span class="st">&quot;#ad9a27&quot;</span>,<span class="st">&quot;#ad9a27&quot;</span>,<span class="st">&quot;#ad9a27&quot;</span>,<span class="st">&quot;#ad9a27&quot;</span>,<span class="st">&quot;#ad9a27&quot;</span>)
+
+<span class="co"># Aggregate notes and comments</span>
+alm$comments &lt;-<span class="st"> </span><span class="kw">as.numeric</span>(alm$comments)
+
+<span class="co"># Aggregate Mendeley</span>
+alm$mendeley &lt;-<span class="st"> </span><span class="kw">rowSums</span>(<span class="kw">subset</span>(alm, <span class="dt">select=</span><span class="kw">c</span>(<span class="st">&quot;mendeley_readers&quot;</span>,<span class="st">&quot;mendeley_groups&quot;</span>)), <span class="dt">na.rm=</span><span class="ot">TRUE</span>)
+alm$mendeley[alm$mendeley ==<span class="st"> </span><span class="dv">0</span>] &lt;-<span class="st"> </span><span class="ot">NA</span>
+
+<span class="co"># Use subset of columns</span>
+alm &lt;-<span class="st"> </span><span class="kw">subset</span>(alm, <span class="dt">select=</span><span class="kw">c</span>(<span class="st">&quot;counter_html&quot;</span>,<span class="st">&quot;pmc_html&quot;</span>,<span class="st">&quot;crossref&quot;</span>,<span class="st">&quot;scopus&quot;</span>,<span class="st">&quot;pubmed&quot;</span>,<span class="st">&quot;mendeley&quot;</span>,<span class="st">&quot;citeulike&quot;</span>,<span class="st">&quot;comments&quot;</span>,<span class="st">&quot;researchblogging&quot;</span>,<span class="st">&quot;facebook&quot;</span>,<span class="st">&quot;twitter&quot;</span>,<span class="st">&quot;wikipedia&quot;</span>))
+
+<span class="co"># Calculate percentage of values that are not missing (i.e. have a count of at least 1)</span>
+colSums &lt;-<span class="st"> </span><span class="kw">colSums</span>(!<span class="kw">is.na</span>(alm)) *<span class="st"> </span><span class="dv">100</span> /<span class="st"> </span><span class="kw">length</span>(alm$counter_html)
+exactSums &lt;-<span class="st"> </span><span class="kw">sum</span>(<span class="kw">as.numeric</span>(alm$pmc_html),<span class="dt">na.rm =</span><span class="ot">TRUE</span>)
+
+<span class="co"># Plot the chart.</span>
+opar &lt;-<span class="st"> </span><span class="kw">par</span>(<span class="dt">mar=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">7</span>,<span class="dv">2</span>,<span class="dv">1</span>)+<span class="fl">0.1</span>,<span class="dt">omi=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="fl">0.3</span>,<span class="dv">1</span>,<span class="dv">1</span>))
+plos.names &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;PLoS HTML Views&quot;</span>, <span class="st">&quot;PMC HTML Views&quot;</span>,<span class="st">&quot;CrossRef&quot;</span>,<span class="st">&quot;Scopus&quot;</span>,<span class="st">&quot;PubMed Citations&quot;</span>, <span class="st">&quot;Mendeley&quot;</span>,<span class="st">&quot;CiteULike&quot;</span>,<span class="st">&quot;PLoS Comments&quot;</span>,<span class="st">&quot;Research Blogging&quot;</span>,<span class="st">&quot;Facebook&quot;</span>,<span class="st">&quot;Twitter&quot;</span>,<span class="st">&quot;Wikipedia&quot;</span>)
+y &lt;-<span class="st"> </span><span class="kw">barplot</span>(colSums,<span class="dt">horiz=</span><span class="ot">TRUE</span>,<span class="dt">col=</span>plos.colors, <span class="dt">border =</span> <span class="ot">NA</span>, <span class="dt">xlab=</span>plos.names, <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">120</span>), <span class="dt">axes=</span><span class="ot">FALSE</span>, <span class="dt">names.arg=</span>plos.names,<span class="dt">las=</span><span class="dv">1</span>, <span class="dt">adj=</span><span class="dv">0</span>)
+<span class="kw">text</span>(colSums<span class="dv">+6</span>,y,<span class="dt">labels=</span><span class="kw">sprintf</span>(<span class="st">&quot;%1.0f%%&quot;</span>, colSums))</code></pre>
+<figure>
+<img src="/images/barplot-2013-06-17.svg" alt="Proportion of articles covered by source. Article-level metrics for all 80,602 PLOS journal articles published until May 20, 2013." /><figcaption><strong>Proportion of articles covered by source</strong>. Article-level metrics for all 80,602 PLOS journal articles published until May 20, 2013.</figcaption>
+</figure>
+<p>In a way this approach to scholarly markdown is much more difficult than building a nice online collaborative writing tool. But for me scholarly markdown is not about competing with Microsoft Word, it is about building something new that scholars want to use because it allows them to do something that is impossible with the existing tools. For the same reason my todo item at the end of the workshop was <em>think about document type where markdown shines</em>. The R example above is a great example where markdown shines. If you can think of additional examples, please add them to the comments.</p>
+<div class="references">
+
+</div>
 
             <div class="license">
               
@@ -106,7 +162,10 @@
                 <div class="toc-item">
                   <h3>Next: <a href="/2013/06/19/citations-in-scholarly-markdown">Citations in Scholarly Markdown</a></h3>
                   
-                  <p></p>
+                  <p>In the comments on Monday’s blog post about the Markdown for Science workshop, Carl Boettiger had some good arguments against the proposal for how to do citations that we came up with during the workshop. As this is a complex topic, I decided to write this blog post.
+
+
+</p>
                 </div>
               
             </div>

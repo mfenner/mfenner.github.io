@@ -98,7 +98,20 @@
       <div class="content">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
-            
+            <p>A common feature of blogs written by scientists is a listing of all their publications. Publication lists are a great way to provide background information about your research. Publication lists should provide links to the fulltext versions of these publications, should be nicely formatted - e.g. using a common citation style such as APA - and should be easy to maintain. A number of tools for a variety of blogging platforms (including Wordpress and Jekyll) are available to help with this task, but maintaining the list of publications has remained difficult.<!--more--></p>
+<p>Publication lists are best maintained in a system built for this purpose. This could be either a reference manager, or a profile page in a social network for scientists. Even better suited for this task is your Open Researcher &amp; Contributor ID (<a href="http://orcid.org">ORCID</a>) profile, as this service <span class="citation" data-cites="haak2012a">(<span class="citeproc-not-found" data-reference-id="haak2012a"><strong>???</strong></span>)</span> directly integrates with a number of bibliographic databases and makes the profile information available via an open API.</p>
+<h3 id="orcid-feed">ORCID Feed</h3>
+<p>Last week I have started work on <a href="http://feed.labs.orcid-eu.org">ORCID Feed</a>, a service that reformats the API response from ORCID into RSS, bibtex and formattted citations, making it easier for scientists to reuse the content stored in their ORCID profile. This service is still experimental, so please report any issues <a href="https://github.com/orcid-eu-labs/orcid-feed/issues">here</a>.</p>
+<h3 id="jekyll-orcid">jekyll-orcid</h3>
+<p>I have now added the final piece to automatically import my publications into this blog. <a href="https://github.com/mfenner/jekyll-orcid">jekyll-orcid</a> is a Jekyll plugin that automatically downloads all my publications from my ORCID profile via <strong>ORCID Feed</strong> and stores them in a subfolder of this blog, both in bibtex and Citeproc JSON format. It does this every time you regenerate your blog, so that the publication list will be automatically updated with new content. I can then use <a href="https://github.com/inukshuk/jekyll-scholar">jekyll-scholar</a>, a popular Jekyll plugin written by Sylvester Keil to generate a bibliography (<code>jekyll-orcid</code> automatically adds a YAML frontmatter section to the files so that jekyll-scholar can process it). I can format this auto-generated bibliography in a variety of ways - you can see the result in my <a href="/about.html">About</a> page where I also provide a download link of the bibtex file.</p>
+<p>My publications are of course also available if I want to cite them in the text, e.g. our recent publication summarizing the main findings from the 2011 European Consensus Conference on germ-cell cancer <span class="citation" data-cites="beyer2013a">(<span class="citeproc-not-found" data-reference-id="beyer2013a"><strong>???</strong></span>)</span>, or last year’s case report on liver toxicity induced by the cancer drug imatinib <span class="citation" data-cites="seidel2012a">(<span class="citeproc-not-found" data-reference-id="seidel2012a"><strong>???</strong></span>)</span>.</p>
+<p>Similar tools also exist for Wordpress, e.g. <a href="http://wordpress.org/plugins/papercite/">Papercite</a>, which can import the bibtex file directly from ORCID Feed.</p>
+<h3 id="next">Next</h3>
+<p>Now there is only one step missing to have your paper that was just published automatically appear in your publication list. Assuming you have provided your ORCID identifier when you submitted the paper, and the publisher has included your ORCID identifier in the metadata sent to CrossRef (both are already common practices), we only need CrossRef to automatically push that paper into your ORCID profile.</p>
+<p>And once we have this workflow in place, we can automatically add additional information, including links to the fulltext paper in the institutional repository, copyright information, and metrics.</p>
+<div class="references">
+<h2>References</h2>
+</div>
 
             <div class="license">
               
@@ -106,7 +119,10 @@
                 <div class="toc-item">
                   <h3>Next: <a href="/2013/08/06/what-a-publication-timeline-can-tell-you">What a publication timeline can tell you</a></h3>
                   
-                  <p></p>
+                  <p>Now that I can automatically import my publications from my ORCID profile and display them in this blog, I also want to visualize them. I have started with d3.js code that displays the number of publications per year - using the list of my publications in Citeproc JSON format.
+
+
+</p>
                 </div>
               
             </div>

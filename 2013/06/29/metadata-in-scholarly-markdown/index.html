@@ -100,7 +100,87 @@
       <div class="content">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
-            
+            <p>Scholarly documents often need metadata that describe them: typically author(s), title and location (DOI or URL), but possibly many other things. For some metadata it makes sense to store them in the document text, e.g. as is typically done for citations. The problem is that this can make it hard to make the metadata machine-readable. The worst place for metadata is of course outside of the document, and unfortunately that it is the most common way of doing this.<!--more--> Two examples:</p>
+<ul>
+<li>Manuscript submission. Papers submitted to scholarly journals contain the metadata in the text, but authors are required to enter the information again into a webform. You can add metadata (<a href="http://office.microsoft.com/en-001/word-help/add-property-information-to-a-document-HA010163766.aspx">property information</a>) to Microsoft Word documents, but it seems that nobody is doing it.</li>
+<li>PDFs and image files. Even though we have at least one good standard with <a href="http://blogs.plos.org/mfenner/2008/12/22/just_doi_it/">XMP</a> to store metadata in these documents, it is not a common practice. Information about these documents is therefore stored somewhere else and doesn’t automatically travel with them.</li>
+</ul>
+<p>The best place for metadata is the document itself, and the metadata should be stored in machine-readable format. Another requirement is flexibility in what we can store, and we shouldn’t limit ourselves to a predefined list. Pandoc for example allows only three attributes in the <a href="http://johnmacfarlane.net/pandoc/README.html">title block</a>:</p>
+<pre><code>% title
+% author(s) (separated by semicolons)
+% date</code></pre>
+<p>For Scholarly Markdown we have another requirement: the metadata should be writeable and readable by humans. <a href="http://en.wikipedia.org/wiki/YAML">YAML</a> is the perfect format for this. JSON is closely related to YAML (and is in fact a subset of YAML 1.2), but YAML can also be written with whitespace instead of curly braces. The static website generator Jekyll - which I use to parse the markdown for this blog into HTML - uses YAML at the beginning of markdown documents to store metadata, and we can easily extend this functionality. Carl Boettinger posted a <a href="http://blog.martinfenner.org/2013/06/21/what-flavor-is-scholarly-markdown/#comment-945513935">comment</a> yesterday saying that YAML support is on the Pandoc development roadmap.</p>
+<p>Below is the YAML for <span class="citation" data-cites="white2013">(Ethan P. White, 2013)</span>, where I reposted a paper written in markdown:</p>
+<pre class="sourceCode yaml"><code class="sourceCode yaml"><span class="ot">---</span>
+<span class="fu">layout:</span> post
+<span class="fu">title:</span> <span class="st">&quot;Nine simple ways to make it easier to (re)use your data&quot;</span>
+<span class="fu">tags:</span> <span class="kw">[</span>example<span class="kw">,</span> citation<span class="kw">]</span>
+<span class="fu">authors:</span>
+ <span class="kw">-</span> <span class="fu">name:</span> Ethan P. White
+   <span class="fu">orcid:</span> 0000-0001-6728-7745
+   <span class="fu">affiliation:</span> Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341
+ <span class="kw">-</span> <span class="fu">name:</span> Elita Baldrige
+   <span class="fu">orcid:</span> 0000-0003-1639-5951
+   <span class="fu">affiliation:</span> Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341
+ <span class="kw">-</span> <span class="fu">name:</span> Zachary T. Brym
+   <span class="fu">affiliation:</span> Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341
+ <span class="kw">-</span> <span class="fu">name:</span> Kenneth J. Locey
+   <span class="fu">affiliation:</span> Dept. of Biology, Utah State University, Logan, UT, USA, 84341
+ <span class="kw">-</span> <span class="fu">name:</span> Daniel J. McGlinn
+   <span class="fu">affiliation:</span> Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341
+ <span class="kw">-</span> <span class="fu">name:</span> Sarah R. Supp
+   <span class="fu">affiliation:</span> Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341
+<span class="ot">---</span></code></pre>
+<p>In JSON the same information would look like this (and Jekyll is able to parse it, since JSON is a subset of YAML 1.2):</p>
+<pre class="sourceCode json"><code class="sourceCode json"><span class="er">---</span>
+{
+  <span class="dt">&quot;layout&quot;</span>: <span class="st">&quot;post&quot;</span>,
+  <span class="dt">&quot;title&quot;</span>: <span class="st">&quot;Nine simple ways to make it easier to (re)use your data&quot;</span>,
+  <span class="dt">&quot;tags&quot;</span>: [
+    <span class="st">&quot;example&quot;</span>,
+    <span class="st">&quot;citation&quot;</span>
+  ],
+  <span class="dt">&quot;authors&quot;</span>: [
+    {
+      <span class="dt">&quot;name&quot;</span>: <span class="st">&quot;Ethan P. White&quot;</span>,
+      <span class="dt">&quot;orcid&quot;</span>: <span class="st">&quot;0000-0001-6728-7745&quot;</span>,
+      <span class="dt">&quot;affiliation&quot;</span>: <span class="st">&quot;Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341&quot;</span>
+    },
+    {
+      <span class="dt">&quot;name&quot;</span>: <span class="st">&quot;Elita Baldrige&quot;</span>,
+      <span class="dt">&quot;orcid&quot;</span>: <span class="st">&quot;0000-0003-1639-5951&quot;</span>,
+      <span class="dt">&quot;affiliation&quot;</span>: <span class="st">&quot;Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341&quot;</span>
+    },
+    {
+      <span class="dt">&quot;name&quot;</span>: <span class="st">&quot;Zachary T. Brym&quot;</span>,
+      <span class="dt">&quot;affiliation&quot;</span>: <span class="st">&quot;Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341&quot;</span>
+    },
+    {
+      <span class="dt">&quot;name&quot;</span>: <span class="st">&quot;Kenneth J. Locey&quot;</span>,
+      <span class="dt">&quot;affiliation&quot;</span>: <span class="st">&quot;Dept. of Biology, Utah State University, Logan, UT, USA, 84341&quot;</span>
+    },
+    {
+      <span class="dt">&quot;name&quot;</span>: <span class="st">&quot;Daniel J. McGlinn&quot;</span>,
+      <span class="dt">&quot;affiliation&quot;</span>: <span class="st">&quot;Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341&quot;</span>
+    },
+    {
+      <span class="dt">&quot;name&quot;</span>: <span class="st">&quot;Sarah R. Supp&quot;</span>,
+      <span class="dt">&quot;affiliation&quot;</span>: <span class="st">&quot;Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341&quot;</span>
+    }
+  ]
+}
+<span class="er">---</span></code></pre>
+<p>You can see that the author information required for manuscript submission can easily be written in YAML (email addresses were removed to protect privacy). JSON is also possible for people where this is a better fit into their workflow, but it is more difficult to write for humans because of the curly braces, and because all strings need to be in double quotes.</p>
+<p>Once the ORCID Registry <a href="http://orcid.org/blog/2013/06/27/orcid-plans-launch-affiliation-module-using-isni-and-ringgold-organization">adds affiliation</a> information, we no longer need to provide email and affiliation when submitting manuscripts. I have stored my own name, orcid, email and affiliation in my site configuration file so that I don’t have to provide this info for every blog post.</p>
+<p>In this blog markdown files are currently only processed to HTML, and I store the metadata in HTML <code>meta</code> tags in a <a href="http://www.monperrus.net/martin/accurate+bibliographic+metadata+and+google+scholar">format</a> used by many sites and services, including Google Scholar - look at the source code of Ethan P. White et al. <span class="citation" data-cites="white2013">(2013)</span> for an example. These metadata are also understood by the Greycite service built by Phil Lord and Lindsay Marshall <span class="citation" data-cites="lord2013">(2012)</span> that generates citation information for weblinks, adding important metadata such as title, authors and publication_date so that we can properly cite our blog post <span class="citation" data-cites="white2013">(Ethan P. White, 2013)</span>.</p>
+<p>And I use the metadata to link the author names to their ORCID profile (if they have an ORCID) or email address, with the affiliation visible when you hover over the name. My own name is linked to the <a href="/about.html">About</a> page of this site, but with a little development effort I could automatically add all my publications (and other works) in my ORCID profile to that page.</p>
+<p>Metadata are important, and Scholarly Markdown makes it easy to embed them.</p>
+<p><em>Update 06/30/13: added JSON example to demonstrate the differences to YAML, and to show that Jekyll also works with JSON (used in this blog post, and tested with the examples above which produce identical HTML output). Also added two references, using the embedded HTML metadata and the Greycite service to generate citations in bibtex.</em></p>
+<div class="references">
+<h2>References</h2>
+<p>Ethan P. White, Z. T. B., Elita Baldrige. (2013). Nine simple ways to make it easier to (re)use your data. <em>Gobbledygook</em>. Retrieved from <a href="http://blog.martinfenner.org/2013/06/25/nine-simple-ways-to-make-it-easier-to-reuse-your-data">http://blog.martinfenner.org/2013/06/25/nine-simple-ways-to-make-it-easier-to-reuse-your-data</a></p>
+<p>Lord, P., &amp; Marshall, L. (2012). Greycite: Citing the web. <em>An Exercise in Irrelevance</em>. Retrieved from <a href="http://www.russet.org.uk/blog/2071">http://www.russet.org.uk/blog/2071</a></p>
+</div>
 
             <div class="license">
               
@@ -108,7 +188,10 @@
                 <div class="toc-item">
                   <h3>Next: <a href="/2013/07/02/auto-generating-links-to-data-and-resources">Auto generating links to data and resources</a></h3>
                   
-                  <p></p>
+                  <p>A few weeks ago Kafkas et al. (2013) published a paper looking at current patterns of how datasets o biological databases are cited in research articles, based on an analysis of the full text Open Access articles available from Europe PMC.
+
+
+</p>
                 </div>
               
             </div>
