@@ -110,9 +110,17 @@ mtext(plos.ylab, side = 2, col = plos.color, cex = 1.25, outer = TRUE, adj = 0,
 
 par(opar)
 ```
-
-![**Figure 1. Citation counts for PLOS Biology articles published in 2010.** Scopus citation counts plotted as a probability distribution for all 197 *PLOS Biology* research articles published in 2010. Data collected May 20, 2013. Median 19 citations; 10% of papers have at least 50 citations.](/images/2013-12-11_figure_1.svg)
-
+<figure>
+  <a href="/images/2013-12-11_figure_1.svg" title="" data-fluidbox>
+      <img src="/images/2013-12-11_figure_1.svg" title="" alt="" />
+  </a>
+  <figcaption>
+    **Figure 1. Citation counts for PLOS Biology articles published in 2010.**
+    Scopus citation counts plotted as a probability distribution for all 197
+    *PLOS Biology* research articles published in 2010. Data collected
+    May 20, 2013. Median 19 citations; 10% of papers have at least 50 citations.
+  </figcaption>
+</figure>
 
 Scientific impact is a multi-dimensional construct that can not be
 adequately measured by any single indicator
@@ -138,8 +146,15 @@ the 2006 *PLOS Biology* article on the citation advantage of Open Access
 articles [@Eysenbach2006], one of the 10 most-viewed
 articles published in *PLOS Biology*).
 
-![**Figure 2. Article-level metrics used by PLOS in August 2013 and their
-categories.** Taken from [@Lin2013] with permission by the authors.](/images/2013-12-11_figure_2.png)
+<figure>
+  <a href="/images/2013-12-11_figure_2.jpg" title="" data-fluidbox>
+      <img src="/images/2013-12-11_figure_2.jpg" title="" alt="" />
+  </a>
+  <figcaption>
+    **Figure 2. Article-level metrics used by PLOS in August 2013 and their
+    categories.** Taken from [@Lin2013] with permission by the authors.
+  </figcaption>
+</figure>
 
 A bubble chart showing all 2010 *PLOS Biology* articles (**Figure
 3**) gives a good overview of the year's views and
@@ -225,8 +240,18 @@ mtext(ylab, side = 2, col = col.main, cex = 1.25, outer = TRUE, adj = 0, at = 1,
 par(opar)
 ```
 
-![**Figure 3. Views vs. citations for PLOS Biology articles published in 2010.** All 304 *PLOS Biology* articles published in 2010. Bubble size correlates with number of Scopus citations. Research articles are labeled green; all other articles are grey. Red arrows indicate the two most highly cited papers. Data collected May 20, 2013.](/images/2013-12-11_figure_3.svg)
-
+<figure>
+  <a href="/images/2013-12-11_figure_3.svg" title="" data-fluidbox>
+      <img src="/images/2013-12-11_figure_3.svg" title="" alt="" />
+  </a>
+  <figcaption>
+    **Figure 3. Views vs. citations for PLOS Biology articles published in 2010.**
+    All 304 *PLOS Biology* articles published in 2010. Bubble size correlates with
+    number of Scopus citations. Research articles are labeled green; all other
+    articles are grey. Red arrows indicate the two most highly cited papers.
+    Data collected May 20, 2013.
+  </figcaption>
+</figure>
 
 When readers first see an interesting article, their response is often
 to view or download it. By contrast, a citation may be one of the last
@@ -287,8 +312,18 @@ text(colSums + 6, y, labels = sprintf("%1.0f%%", colSums))
 par(opar)
 ```
 
-![**Figure 4. Article-level metrics for PLOS Biology.** Proportion of all 1,706 *PLOS Biology* research articles published up to May 20, 2013 mentioned by particular article-level metrics source. Colors indicate categories (Viewed, Cited, Saved, Discussed, Recommended), as used on the PLOS website.](/images/2013-12-11_figure_4.svg)
-
+<figure>
+  <a href="/images/2013-12-11_figure_4.svg" title="" data-fluidbox>
+      <img src="/images/2013-12-11_figure_4.svg" title="" alt="" />
+  </a>
+  <figcaption>
+    **Figure 4. Article-level metrics for PLOS Biology.** Proportion of
+    all 1,706 *PLOS Biology* research articles published up to May 20, 2013
+    mentioned by particular article-level metrics source. Colors indicate
+    categories (Viewed, Cited, Saved, Discussed, Recommended), as used on
+    the PLOS website.
+  </figcaption>
+</figure>
 
 All *PLOS Biology* articles are viewed and downloaded, and almost all of
 them (all research articles and nearly all front matter) will be cited
@@ -390,8 +425,16 @@ venn.plot <- draw.triple.venn(area1 = rows, area2 = summary[1], area3 = summary[
 par(opar)
 ```
 
-![**Figure 5. PLOS Biology articles: sites of recommendation and discussion.** Number of *PLOS Biology* research articles published up to May 20, 2013 that have been recommended by F1000Prime (red) or mentioned in Wikipedia (blue).](/images/2013-12-11_figure_5.svg)
-
+<figure>
+  <a href="/images/2013-12-11_figure_5.svg" title="" data-fluidbox>
+      <img src="/images/2013-12-11_figure_5.svg" title="" alt="" />
+  </a>
+  <figcaption>
+    **Figure 5. PLOS Biology articles: sites of recommendation and discussion.**
+    Number of *PLOS Biology* research articles published up to May 20, 2013 that
+    have been recommended by F1000Prime (red) or mentioned in Wikipedia (blue).
+  </figcaption>
+</figure>
 
 With the increasing availability of ALM data, there comes a growing need
 to provide tools that will allow the community to interrogate them. A
