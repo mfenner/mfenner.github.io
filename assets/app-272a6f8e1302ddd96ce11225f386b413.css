@@ -265,7 +265,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 body {
-  font-family: "minion-pro", Georgia, serif;
+  font-family: "ff-tisa-web-pro", Georgia, serif;
   font-size: 20px;
   line-height: 1.5;
   color: #34495e;
@@ -337,7 +337,7 @@ hr {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "myriad-pro", Arial, sans-serif;
+  font-family: "ff-tisa-sans-web-pro", Arial, sans-serif;
   font-weight: 600;
   line-height: 1.2;
   color: inherit; }
@@ -5079,12 +5079,12 @@ blockquote {
   padding-bottom: 0; }
 
 .page-header .date, .page-header p {
-  font-family: "myriad-pro", Arial, sans-serif;
+  font-family: "ff-tisa-sans-web-pro", Arial, sans-serif;
   font-weight: 400;
   color: #88a2bd; }
 
 .navmenu {
-  font-family: "myriad-pro", Arial, sans-serif; }
+  font-family: "ff-tisa-sans-web-pro", Arial, sans-serif; }
 
 /* Table of contents*/
 .toc {
@@ -5131,7 +5131,7 @@ img {
   padding-left: 10px; }
 
 .license a {
-  font-family: "myriad-pro", Arial, sans-serif; }
+  font-family: "ff-tisa-sans-web-pro", Arial, sans-serif; }
 
 img.about {
   float: left;
@@ -5142,7 +5142,7 @@ img.about {
   border-radius: 40px; }
 
 figcaption {
-  font-family: "myriad-pro", Arial, sans-serif;
+  font-family: "ff-tisa-sans-web-pro", Arial, sans-serif;
   font-size: 18px;
   font-style: italic;
   line-height: 1.33;
@@ -5154,7 +5154,7 @@ table {
   background-color: transparent;
   border-collapse: collapse;
   font-size: 18px;
-  font-family: "myriad-pro", Arial, sans-serif;
+  font-family: "ff-tisa-sans-web-pro", Arial, sans-serif;
   border-spacing: 0;
   width: 100%;
   margin-bottom: 20px; }
@@ -5218,5 +5218,5 @@ ol.bibliography {
   margin-bottom: 0; }
 
 .year-label, .tooltip {
-  font-family: "myriad-pro", Arial, sans-serif;
+  font-family: "ff-tisa-sans-web-pro", Arial, sans-serif;
   font-size: 18px; }
