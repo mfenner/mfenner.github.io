@@ -148,7 +148,7 @@ articles published in *PLOS Biology*).
 
 <figure>
   <a href="/images/2013-12-11_figure_2.jpg" title="" data-fluidbox>
-      <img src="/images/2013-12-11_figure_2.jpg" title="" alt="" />
+      <img src="/images/2013-12-11_figure_2_small.jpg" title="" alt="" />
   </a>
   <figcaption>
     **Figure 2. Article-level metrics used by PLOS in August 2013 and their
