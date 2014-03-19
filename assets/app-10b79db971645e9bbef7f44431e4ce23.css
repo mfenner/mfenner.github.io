@@ -5068,8 +5068,8 @@ p {
   margin: 0 0 21px; }
 
 blockquote {
-  margin-left: -35px;
-  margin-right: -35px;
+  margin-left: -40px;
+  margin-right: -40px;
   font-style: italic;
   border-left-color: #1abc9c; }
 
@@ -5120,7 +5120,7 @@ blockquote {
 
 /* Figures */
 figure {
-  margin: 21px 0; }
+  margin: 0.75em 0; }
 
 img {
   max-width: 100%;
@@ -5146,7 +5146,7 @@ figcaption {
   font-size: 19px;
   font-style: italic;
   line-height: 1.33;
-  margin-top: 0.75em; }
+  margin: 0.75em 0; }
 
 /* Tables */
 table {
