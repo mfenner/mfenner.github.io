@@ -4,7 +4,7 @@
  <title>Gobbledygook</title>
  <link href="http://blog.martinfenner.org//atom.xml" rel="self"/>
  <link href="http://blog.martinfenner.org"/>
- <updated>2014-03-19T00:06:57+00:00</updated>
+ <updated>2014-03-19T00:16:45+00:00</updated>
  <id>http://blog.martinfenner.org</id>
  <author>
    <name>Martin Fenner</name>
@@ -200,7 +200,7 @@ d$y &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot
 &lt;p&gt;Scientific impact is a multi-dimensional construct that can not be adequately measured by any single indicator &lt;span class=&quot;citation&quot; data-cites=&quot;Glanzel2013 bollenEtal2009 Schekman2013&quot;&gt;(Bollen, Sompel, Hagberg, &amp;amp; Chute, 2009; Glänzel &amp;amp; Wouters, 2013; Schekman &amp;amp; Patterson, 2013)&lt;/span&gt;. To this end, PLOS has collected and displayed a variety of metrics for all its articles since 2009. The array of different categorised article-level metrics (ALMs) used and provided by PLOS as of August 2013 are shown in &lt;strong&gt;Figure 2&lt;/strong&gt;. In addition to citations and usage statistics, i.e., how often an article has been viewed and downloaded, PLOS also collects metrics about: how often an article has been saved in online reference managers, such as Mendeley; how often an article has been discussed in its comments section online, and also in science blogs or in social media; and how often an article has been recommended by other scientists. These additional metrics provide valuable information that we would miss if we only consider citations. Two important shortcomings of citation-based metrics are that (1) they take years to accumulate and (2) citation analysis is not always the best indicator of impact in more practical fields, such as clinical medicine &lt;span class=&quot;citation&quot; data-cites=&quot;VanEck2013&quot;&gt;(Eck, Waltman, Raan, Klautz, &amp;amp; Peul, 2013)&lt;/span&gt;. Usage statistics often better reflect the impact of work in more practical fields, and they also sometimes better highlight articles of general interest (for example, the 2006 &lt;em&gt;PLOS Biology&lt;/em&gt; article on the citation advantage of Open Access articles &lt;span class=&quot;citation&quot; data-cites=&quot;Eysenbach2006&quot;&gt;(Eysenbach, 2006)&lt;/span&gt;, one of the 10 most-viewed articles published in &lt;em&gt;PLOS Biology&lt;/em&gt;).&lt;/p&gt;
 &lt;figure&gt;
   
-&lt;a href=&quot;/images/2013-12-11_figure_2.jpg&quot; title=&quot;&quot; data-fluidbox&gt; &lt;img src=&quot;/images/2013-12-11_figure_2.jpg&quot; title=&quot;&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;
+&lt;a href=&quot;/images/2013-12-11_figure_2.jpg&quot; title=&quot;&quot; data-fluidbox&gt; &lt;img src=&quot;/images/2013-12-11_figure_2_small.jpg&quot; title=&quot;&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;
 &lt;figcaption&gt;
     
 &lt;strong&gt;Figure 2. Article-level metrics used by PLOS in August 2013 and their categories.&lt;/strong&gt; Taken from &lt;span class=&quot;citation&quot; data-cites=&quot;Lin2013&quot;&gt;(Lin &amp;amp; Fenner, 2013)&lt;/span&gt; with permission by the authors.
