@@ -5073,6 +5073,10 @@ blockquote {
   font-style: italic;
   border-left-color: #1abc9c; }
 
+.col-md-8 ol, .col-md-8 ul {
+  list-style-position: outside;
+  margin-left: -40px; }
+
 .page-header {
   border-bottom: 0;
   margin-bottom: 0;

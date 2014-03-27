@@ -5,8 +5,8 @@
         <description>Gobbledygook - Martin Fenner</description>
         <link>http://blog.martinfenner.org/rss.xml</link>
         <link>http://blog.martinfenner.org</link>
-        <lastBuildDate>2014-03-19T00:16:45+00:00</lastBuildDate>
-        <pubDate>2014-03-19T00:16:45+00:00</pubDate>
+        <lastBuildDate>2014-03-27T21:25:46+00:00</lastBuildDate>
+        <pubDate>2014-03-27T21:25:46+00:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -19,8 +19,14 @@
 &lt;p&gt;The post is about the importance of publication of data and software where currently &lt;em&gt;the rewards are stacked disproportionately in favor of text publications&lt;/em&gt;. The intended audience is probably mainly other scientists (Björn is a neurobiologist) who are reluctant to publish data and/or code, but there is another interesting aspect to this.&lt;/p&gt;
 &lt;p&gt;Just as scientific publication increasingly means more than just text and includes data and software, we are also increasingly seeing tools and methodologies common in software development applied to scientific publishing. This in particular includes the ideas behind Open Source software (which shares many commonalities with Open Access and Open Science), but also tools like the git version control system (&lt;a href=&quot;http://marciovm.com/i-want-a-github-of-science/&quot;&gt;We Need a Github of Science&lt;/a&gt;) or the markdown markdown language (&lt;a href=&quot;/2012/12/13/a-call-for-scholarly-markdown/&quot;&gt;A Call for Scholarly Markdown&lt;/a&gt;).&lt;/p&gt;
 &lt;figure&gt;
-&lt;img src=&quot;/images/Agile-vs-iterative-flow.jpg&quot; alt=&quot;Continuous Delivery, image from Wikimedia Commons&quot; /&gt;&lt;figcaption&gt;Continuous Delivery, image from &lt;a href=&quot;http://commons.wikimedia.org/wiki/File:Agile-vs-iterative-flow.jpg&quot;&gt;Wikimedia Commons&lt;/a&gt;&lt;/figcaption&gt;
+  
+&lt;a href=&quot;/images/Agile-vs-iterative-flow.jpg&quot; title=&quot;&quot; data-fluidbox&gt; &lt;img src=&quot;/images/Agile-vs-iterative-flow.jpg&quot; title=&quot;&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;
+&lt;figcaption&gt;
+    
+Continuous Delivery, image from &lt;a href=&quot;http://commons.wikimedia.org/wiki/File:Agile-vs-iterative-flow.jpg&quot;&gt;Wikimedia Commons&lt;/a&gt;.
+&lt;/figcaption&gt;
 &lt;/figure&gt;
+
 &lt;p&gt;Continuous Delivery is another concept increasingly popular in software development that has many implications on how research can be performed and reported. Martin Fowler describes it as:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Continuous Delivery is a software development discipline where you build software in such a way that the software can be released to production at any time.&lt;/p&gt;
@@ -459,8 +465,14 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;/ul&gt;
 &lt;p&gt;Although authoring typically involves text, similar issues arise for other research outputs, e.g research data. And these considerations are also relevant for other forms of publishing, whether it is self-publication on a blog or website, or publishing of preprints and white papers.&lt;/p&gt;
 &lt;figure&gt;
-&lt;img src=&quot;/images/grammar.jpg&quot; alt=&quot;Flickr photo by citnaj.&quot; /&gt;&lt;figcaption&gt;Flickr photo by &lt;a href=&quot;http://www.flickr.com/photos/citnaj/1278021067/&quot;&gt;citnaj&lt;/a&gt;.&lt;/figcaption&gt;
+  
+&lt;a href=&quot;/images/grammar.jpg&quot; title=&quot;&quot; data-fluidbox&gt; &lt;img src=&quot;/images/grammar.jpg&quot; title=&quot;&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;
+&lt;figcaption&gt;
+    
+Flickr photo by &lt;a href=&quot;http://www.flickr.com/photos/citnaj/1278021067/&quot;&gt;citnaj&lt;/a&gt;.
+&lt;/figcaption&gt;
 &lt;/figure&gt;
+
 &lt;p&gt;For me the main challenge in authoring is to go from human-readable unstructured content to highly structured machine-readable content. We could make authoring simpler by either forgoing any structure and just publishing in any format we want, or we can force authors to structure their manuscripts according to a very specific set of rules. The former doesn’t seem to be an option, not only do we have a set of community standards that have evolved for a very long time (research articles for example have title, authors, results, references, etc.), but it also makes it hard to find and reuse scholarly research by others.&lt;/p&gt;
 &lt;p&gt;The latter option is also not really viable since most researchers haven’t learned to produce their research outputs in machine-readable highly standardized formats. There are some exceptions, e.g. &lt;a href=&quot;http://www.consort-statement.org/&quot;&gt;CONSORT&lt;/a&gt; and other reporting standards in clinical medicine or the &lt;a href=&quot;http://blogs.ch.cam.ac.uk/pmr/2012/01/23/brian-mcmahon-publishing-semantic-crystallography-every-science-data-publisher-should-watch-this-all-the-way-through/&quot;&gt;semantic publishing in Crystallography&lt;/a&gt;, but for the most part research outputs are to diverse to easily find a format that works for all of them. The current trend is certainly towards machine-readable rather than towards human-readable, but there is still a significant gap - scholarly articles are transformed from documents in Microsoft Word (or sometimes LaTeX) format into XML (for most biomedical research that means &lt;a href=&quot;http://jats.nlm.nih.gov/publishing/&quot;&gt;JATS&lt;/a&gt;) using kludgy tools and lots of manual labor.&lt;/p&gt;
 &lt;p&gt;What solutions have been tried to overcome the limitations of our current authoring tools, and to make the process more enjoyable for authors and more productive for publishers?&lt;/p&gt;
