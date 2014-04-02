@@ -12,14 +12,7 @@ Authoring of scholarly articles is a recurring theme in this blog since it start
 
 Although authoring typically involves text, similar issues arise for other research outputs, e.g research data. And these considerations are also relevant for other forms of publishing, whether it is self-publication on a blog or website, or publishing of preprints and white papers.
 
-<figure>
-  <a href="/images/grammar.jpg" title="" data-fluidbox>
-      <img src="/images/grammar.jpg" title="" alt="" />
-  </a>
-  <figcaption>
-    Flickr photo by [citnaj](http://www.flickr.com/photos/citnaj/1278021067/).
-  </figcaption>
-</figure>
+![Flickr photo by [citnaj](http://www.flickr.com/photos/citnaj/1278021067/).](/images/grammar.jpg)
 
 For me the main challenge in authoring is to go from human-readable unstructured content to highly structured machine-readable content. We could make authoring simpler by either forgoing any structure and just publishing in any format we want, or we can force authors to structure their manuscripts according to a very specific set of rules. The former doesn't seem to be an option, not only do we have a set of community standards that have evolved for a very long time (research articles for example have title, authors, results, references, etc.), but it also makes it hard to find and reuse scholarly research by others.
 

@@ -12,14 +12,7 @@ The post is about the importance of publication of data and software where curre
 
 Just as scientific publication increasingly means more than just text and includes data and software, we are also increasingly seeing tools and methodologies common in software development applied to scientific publishing. This in particular includes the ideas behind Open Source software (which shares many commonalities with Open Access and Open Science), but also tools like the git version control system ([We Need a Github of Science](http://marciovm.com/i-want-a-github-of-science/)) or the markdown markdown language ([A Call for Scholarly Markdown](/2012/12/13/a-call-for-scholarly-markdown/)).
 
-<figure>
-  <a href="/images/Agile-vs-iterative-flow.jpg" title="" data-fluidbox>
-      <img src="/images/Agile-vs-iterative-flow.jpg" title="" alt="" />
-  </a>
-  <figcaption>
-    Continuous Delivery, image from [Wikimedia Commons](http://commons.wikimedia.org/wiki/File:Agile-vs-iterative-flow.jpg).
-  </figcaption>
-</figure>
+![Delivery, image from [Wikimedia Commons](http://commons.wikimedia.org/wiki/File:Agile-vs-iterative-flow.jpg).](/images/Agile-vs-iterative-flow.jpg)
 
 Continuous Delivery is another concept increasingly popular in software development that has many implications on how research can be performed and reported. Martin Fowler describes it as:
 
