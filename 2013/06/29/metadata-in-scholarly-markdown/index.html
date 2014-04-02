@@ -34,7 +34,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/app-9d3292ab94d343a3036108f922bcabad.css">
     <link rel="stylesheet" href="/assets/jasny-bootstrap.min-858066d22662d38bbc0ba337e5dfdfbb.css">
-    <link rel="stylesheet" href="/assets/navmenu-push-c329adc0d101e9cdd11fef0c95fdd43e.css">
+    <link rel="stylesheet" href="/assets/navmenu-push-ae4c4f48eb89e4f93e3bb0f778545165.css">
     <link rel="stylesheet" href="/assets/fluidbox-1e4d75d5984979bafa6c14619443b4d2.css">
 
     <!-- d3.js -->
@@ -102,7 +102,9 @@
       <div class="content">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
-            <p>Scholarly documents often need metadata that describe them: typically author(s), title and location (DOI or URL), but possibly many other things. For some metadata it makes sense to store them in the document text, e.g. as is typically done for citations. The problem is that this can make it hard to make the metadata machine-readable. The worst place for metadata is of course outside of the document, and unfortunately that it is the most common way of doing this.<!--more--> Two examples:</p>
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>Scholarly documents often need metadata that describe them: typically author(s), title and location (DOI or URL), but possibly many other things. For some metadata it makes sense to store them in the document text, e.g. as is typically done for citations. The problem is that this can make it hard to make the metadata machine-readable. The worst place for metadata is of course outside of the document, and unfortunately that it is the most common way of doing this.<!--more--> Two examples:</p>
 <ul>
 <li>Manuscript submission. Papers submitted to scholarly journals contain the metadata in the text, but authors are required to enter the information again into a webform. You can add metadata (<a href="http://office.microsoft.com/en-001/word-help/add-property-information-to-a-document-HA010163766.aspx">property information</a>) to Microsoft Word documents, but it seems that nobody is doing it.</li>
 <li>PDFs and image files. Even though we have at least one good standard with <a href="http://blogs.plos.org/mfenner/2008/12/22/just_doi_it/">XMP</a> to store metadata in these documents, it is not a common practice. Information about these documents is therefore stored somewhere else and doesn’t automatically travel with them.</li>
@@ -115,7 +117,7 @@
 <p>Below is the YAML for <span class="citation" data-cites="white2013">(Ethan P. White, 2013)</span>, where I reposted a paper written in markdown:</p>
 <pre class="sourceCode yaml"><code class="sourceCode yaml"><span class="ot">---</span>
 <span class="fu">layout:</span> post
-<span class="fu">title:</span> <span class="st">&quot;Nine simple ways to make it easier to (re)use your data&quot;</span>
+<span class="fu">title:</span> <span class="st">"Nine simple ways to make it easier to (re)use your data"</span>
 <span class="fu">tags:</span> <span class="kw">[</span>example<span class="kw">,</span> citation<span class="kw">]</span>
 <span class="fu">authors:</span>
  <span class="kw">-</span> <span class="fu">name:</span> Ethan P. White
@@ -136,38 +138,38 @@
 <p>In JSON the same information would look like this (and Jekyll is able to parse it, since JSON is a subset of YAML 1.2):</p>
 <pre class="sourceCode json"><code class="sourceCode json"><span class="er">---</span>
 {
-  <span class="dt">&quot;layout&quot;</span>: <span class="st">&quot;post&quot;</span>,
-  <span class="dt">&quot;title&quot;</span>: <span class="st">&quot;Nine simple ways to make it easier to (re)use your data&quot;</span>,
-  <span class="dt">&quot;tags&quot;</span>: [
-    <span class="st">&quot;example&quot;</span>,
-    <span class="st">&quot;citation&quot;</span>
+  <span class="dt">"layout"</span>: <span class="st">"post"</span>,
+  <span class="dt">"title"</span>: <span class="st">"Nine simple ways to make it easier to (re)use your data"</span>,
+  <span class="dt">"tags"</span>: [
+    <span class="st">"example"</span>,
+    <span class="st">"citation"</span>
   ],
-  <span class="dt">&quot;authors&quot;</span>: [
+  <span class="dt">"authors"</span>: [
     {
-      <span class="dt">&quot;name&quot;</span>: <span class="st">&quot;Ethan P. White&quot;</span>,
-      <span class="dt">&quot;orcid&quot;</span>: <span class="st">&quot;0000-0001-6728-7745&quot;</span>,
-      <span class="dt">&quot;affiliation&quot;</span>: <span class="st">&quot;Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341&quot;</span>
+      <span class="dt">"name"</span>: <span class="st">"Ethan P. White"</span>,
+      <span class="dt">"orcid"</span>: <span class="st">"0000-0001-6728-7745"</span>,
+      <span class="dt">"affiliation"</span>: <span class="st">"Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341"</span>
     },
     {
-      <span class="dt">&quot;name&quot;</span>: <span class="st">&quot;Elita Baldrige&quot;</span>,
-      <span class="dt">&quot;orcid&quot;</span>: <span class="st">&quot;0000-0003-1639-5951&quot;</span>,
-      <span class="dt">&quot;affiliation&quot;</span>: <span class="st">&quot;Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341&quot;</span>
+      <span class="dt">"name"</span>: <span class="st">"Elita Baldrige"</span>,
+      <span class="dt">"orcid"</span>: <span class="st">"0000-0003-1639-5951"</span>,
+      <span class="dt">"affiliation"</span>: <span class="st">"Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341"</span>
     },
     {
-      <span class="dt">&quot;name&quot;</span>: <span class="st">&quot;Zachary T. Brym&quot;</span>,
-      <span class="dt">&quot;affiliation&quot;</span>: <span class="st">&quot;Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341&quot;</span>
+      <span class="dt">"name"</span>: <span class="st">"Zachary T. Brym"</span>,
+      <span class="dt">"affiliation"</span>: <span class="st">"Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341"</span>
     },
     {
-      <span class="dt">&quot;name&quot;</span>: <span class="st">&quot;Kenneth J. Locey&quot;</span>,
-      <span class="dt">&quot;affiliation&quot;</span>: <span class="st">&quot;Dept. of Biology, Utah State University, Logan, UT, USA, 84341&quot;</span>
+      <span class="dt">"name"</span>: <span class="st">"Kenneth J. Locey"</span>,
+      <span class="dt">"affiliation"</span>: <span class="st">"Dept. of Biology, Utah State University, Logan, UT, USA, 84341"</span>
     },
     {
-      <span class="dt">&quot;name&quot;</span>: <span class="st">&quot;Daniel J. McGlinn&quot;</span>,
-      <span class="dt">&quot;affiliation&quot;</span>: <span class="st">&quot;Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341&quot;</span>
+      <span class="dt">"name"</span>: <span class="st">"Daniel J. McGlinn"</span>,
+      <span class="dt">"affiliation"</span>: <span class="st">"Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341"</span>
     },
     {
-      <span class="dt">&quot;name&quot;</span>: <span class="st">&quot;Sarah R. Supp&quot;</span>,
-      <span class="dt">&quot;affiliation&quot;</span>: <span class="st">&quot;Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341&quot;</span>
+      <span class="dt">"name"</span>: <span class="st">"Sarah R. Supp"</span>,
+      <span class="dt">"affiliation"</span>: <span class="st">"Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341"</span>
     }
   ]
 }
@@ -183,6 +185,8 @@
 <p>Ethan P. White, Z. T. B., Elita Baldrige. (2013). Nine simple ways to make it easier to (re)use your data. <em>Gobbledygook</em>. Retrieved from <a href="http://blog.martinfenner.org/2013/06/25/nine-simple-ways-to-make-it-easier-to-reuse-your-data">http://blog.martinfenner.org/2013/06/25/nine-simple-ways-to-make-it-easier-to-reuse-your-data</a></p>
 <p>Lord, P., &amp; Marshall, L. (2012). Greycite: Citing the web. <em>An Exercise in Irrelevance</em>. Retrieved from <a href="http://www.russet.org.uk/blog/2071">http://www.russet.org.uk/blog/2071</a></p>
 </div>
+</body></html>
+
 
             <div class="license">
               
@@ -248,6 +252,7 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="//js/js-yaml.min.js"></script>
 
     <!-- Fluidbox https://github.com/terrymun/Fluidbox -->
     <script src="/js/js-yaml.min.js"></script>

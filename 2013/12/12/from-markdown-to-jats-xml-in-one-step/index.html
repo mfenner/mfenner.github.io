@@ -34,7 +34,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/app-9d3292ab94d343a3036108f922bcabad.css">
     <link rel="stylesheet" href="/assets/jasny-bootstrap.min-858066d22662d38bbc0ba337e5dfdfbb.css">
-    <link rel="stylesheet" href="/assets/navmenu-push-c329adc0d101e9cdd11fef0c95fdd43e.css">
+    <link rel="stylesheet" href="/assets/navmenu-push-ae4c4f48eb89e4f93e3bb0f778545165.css">
     <link rel="stylesheet" href="/assets/fluidbox-1e4d75d5984979bafa6c14619443b4d2.css">
 
     <!-- d3.js -->
@@ -102,7 +102,9 @@
       <div class="content">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
-            <p>The Journal Article Tag Suite (<a href="http://jats.nlm.nih.gov/">JATS</a>) is a NISO standard that defines a set of XML elements and attributes for tagging journal articles. JATS is not only used for fulltext content at PubMed Central (and JATS has evolved from the NLM Archiving and Interchange Tag Suite originally developed for PubMed Central), but is also increasinly used by publishers.<!--more--></p>
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>The Journal Article Tag Suite (<a href="http://jats.nlm.nih.gov/">JATS</a>) is a NISO standard that defines a set of XML elements and attributes for tagging journal articles. JATS is not only used for fulltext content at PubMed Central (and JATS has evolved from the NLM Archiving and Interchange Tag Suite originally developed for PubMed Central), but is also increasinly used by publishers.<!--more--></p>
 <p>For many publishers the <em>version of record</em> of an article is stored in XML, and other formats (currently HTML, PDF and increasingly ePub) are generated from this XML. Unfortunately the process of converting author-submitted manuscripts into JATS-compliant XML is time-consuming and costly, and this is a problem in particular for small publishers.</p>
 <p>In a recent blog post (<a href="/2013/11/17/the-grammar-of-scholarly-communication/">The Grammar of Scholarly Communication</a>) I argued that publishers should accept manuscripts in any reasonable file format, including Microsoft Word, Open Office, LaTeX, Markdown, HTML and PDF. Readers of this blog know that I am a big fan of <a href="/tags.html#markdown-ref">markdown</a> for scholarly documents, but I am of course well aware that at the end of the day these documents have to be converted into JATS.</p>
 <p>As a small step towards that goal I have today released the first public version of <a href="https://github.com/mfenner/pandoc-jats">pandoc-jats</a>, a <a href="http://johnmacfarlane.net/pandoc/README.html#custom-writers">custom writer for Pandoc</a> that converts markdown documents into JATS XML with a single command, e.g.</p>
@@ -117,6 +119,8 @@
 <div class="references">
 
 </div>
+</body></html>
+
 
             <div class="license">
               
@@ -182,6 +186,7 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="//js/js-yaml.min.js"></script>
 
     <!-- Fluidbox https://github.com/terrymun/Fluidbox -->
     <script src="/js/js-yaml.min.js"></script>

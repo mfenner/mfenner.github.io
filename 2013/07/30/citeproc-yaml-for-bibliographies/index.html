@@ -34,7 +34,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/app-9d3292ab94d343a3036108f922bcabad.css">
     <link rel="stylesheet" href="/assets/jasny-bootstrap.min-858066d22662d38bbc0ba337e5dfdfbb.css">
-    <link rel="stylesheet" href="/assets/navmenu-push-c329adc0d101e9cdd11fef0c95fdd43e.css">
+    <link rel="stylesheet" href="/assets/navmenu-push-ae4c4f48eb89e4f93e3bb0f778545165.css">
     <link rel="stylesheet" href="/assets/fluidbox-1e4d75d5984979bafa6c14619443b4d2.css">
 
     <!-- d3.js -->
@@ -102,7 +102,9 @@
       <div class="content">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
-            <p>The standard local file formats for bibliographic data are probably bibtex and RIS. They have been around for a long time, and are supported by all reference managers and many other tools and services. Unfortunately these formats are far from perfect<!--more-->:</p>
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>The standard local file formats for bibliographic data are probably bibtex and RIS. They have been around for a long time, and are supported by all reference managers and many other tools and services. Unfortunately these formats are far from perfect<!--more-->:</p>
 <ul>
 <li>neither bibtex nor RIS use a web-friendly data interchange format such as XML or JSON, which makes it harder to work with these formats</li>
 <li>bibtex - and to a lesser extend RIS - don’t support all entry types that we need, e.g. datasets, or new standards such as ORCID author identifiers</li>
@@ -124,7 +126,7 @@
 }</code></pre>
 <p>One obvious solution would be to store bibliographic data in XML or JSON. These formats have very good support in all programming languages, and they are the formats used by APIs on the web. There have been some efforts to standardize these formats for bibliographic data, e.g. <a href="http://www.bibjson.org/">BibJSON</a>, <a href="http://www.loc.gov/standards/mods/">MODS</a>, <a href="http://bibtexml.sourceforge.net/">BibTeX XML</a> or Endnote XML.</p>
 <h3 id="bibtex-xml">BibTeX XML</h3>
-<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;bibtex:entry</span><span class="ot"> id=</span><span class="st">&#39;fenner2012a&#39;</span><span class="kw">&gt;</span>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;bibtex:entry</span><span class="ot"> id=</span><span class="st">'fenner2012a'</span><span class="kw">&gt;</span>
   <span class="kw">&lt;bibtex:article&gt;</span>
     <span class="kw">&lt;bibtex:title&gt;</span>One-click science marketing<span class="kw">&lt;/bibtex:title&gt;</span>
     <span class="kw">&lt;bibtex:volume&gt;</span>11<span class="kw">&lt;/bibtex:volume&gt;</span>
@@ -144,10 +146,7 @@
 <span class="kw">&lt;/bibtex:entry&gt;</span></code></pre>
 <p>My problem with these formats is that they are made for computers talking to each other and not humans. I personally think that a file with bibliographic data should be human-readable, similar to why <a href="/2012/12/13/a-call-for-scholarly-markdown/">I like markdown</a> for writing scientific documents.</p>
 <p>When you have too many standards and are not happy with any of them, you of course create a new standard.</p>
-<figure>
-<img src="http://imgs.xkcd.com/comics/standards.png" alt="How Standards Proliferate. Taken from http://xkcd.com/927/" /><figcaption><strong>How Standards Proliferate</strong>. Taken from <a href="http://xkcd.com/927/">http://xkcd.com/927/</a></figcaption>
-</figure>
-<p>My suggestion for a new bibliographic file format is twofold: a) use YAML for data serialization and b) use CSL as data format. <a href="http://www.yaml.org/spec/1.2/spec.html">YAML</a> is a data format popular with Ruby Developers and is described on the <a href="http://yaml.org">YAML website</a> as</p>
+<figure><a href=""><img src="http://imgs.xkcd.com/comics/standards.png" alt="How Standards Proliferate. Taken from http://xkcd.com/927/"></a><figcaption><strong>How Standards Proliferate</strong>. Taken from <a href="http://xkcd.com/927/">http://xkcd.com/927/</a></figcaption></figure><p>My suggestion for a new bibliographic file format is twofold: a) use YAML for data serialization and b) use CSL as data format. <a href="http://www.yaml.org/spec/1.2/spec.html">YAML</a> is a data format popular with Ruby Developers and is described on the <a href="http://yaml.org">YAML website</a> as</p>
 <blockquote>
 <p>YAML is a human friendly data serialization standard for all programming languages.</p>
 </blockquote>
@@ -159,10 +158,10 @@
 <p>Although some commercial applications still use proprietary citation styles, CSL has become the de facto standard, and is used by the reference managers <strong>Zotero</strong>, <strong>Mendeley</strong>, <strong>Papers</strong>, and others. This blog uses CSL via Pandoc and the <a href="http://code.google.com/p/citeproc-hs/">citeproc-hs</a> library. CSL processors need bibliographic data in a standard format. The popular <a href="https://bitbucket.org/fbennett/citeproc-js/wiki/Home">Citeproc-js</a> Javascript CSL processor by Frank Bennett for example uses JSON, but we might as well use YAML:</p>
 <h3 id="citeproc-yaml">Citeproc YAML</h3>
 <pre class="sourceCode yaml"><code class="sourceCode yaml"><span class="kw">-</span> <span class="fu">title:</span> One-click science marketing
-  <span class="fu">volume:</span> <span class="st">&#39;11&#39;</span>
+  <span class="fu">volume:</span> <span class="st">'11'</span>
   <span class="fu">URL:</span> http://dx.doi.org/10.1038/nmat3283
   <span class="fu">DOI:</span> 10.1038/nmat3283
-  <span class="fu">issue:</span> <span class="st">&#39;4&#39;</span>
+  <span class="fu">issue:</span> <span class="st">'4'</span>
   <span class="fu">container-title:</span> Nature Materials
   <span class="fu">publisher:</span> Nature Publishing Group
   <span class="fu">author:</span>
@@ -181,6 +180,8 @@
 <div class="references">
 
 </div>
+</body></html>
+
 
             <div class="license">
               
@@ -246,6 +247,7 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="//js/js-yaml.min.js"></script>
 
     <!-- Fluidbox https://github.com/terrymun/Fluidbox -->
     <script src="/js/js-yaml.min.js"></script>

@@ -34,7 +34,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/app-9d3292ab94d343a3036108f922bcabad.css">
     <link rel="stylesheet" href="/assets/jasny-bootstrap.min-858066d22662d38bbc0ba337e5dfdfbb.css">
-    <link rel="stylesheet" href="/assets/navmenu-push-c329adc0d101e9cdd11fef0c95fdd43e.css">
+    <link rel="stylesheet" href="/assets/navmenu-push-ae4c4f48eb89e4f93e3bb0f778545165.css">
     <link rel="stylesheet" href="/assets/fluidbox-1e4d75d5984979bafa6c14619443b4d2.css">
 
     <!-- d3.js -->
@@ -100,7 +100,9 @@
       <div class="content">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
-            <p>One of the important discussions taking place at the <a href="https://github.com/scholmd/scholmd/wiki">Markdown for Science</a> workshop last weekend was about the definition of Scholarly Markdown.<!--more--> We came up with <a href="https://github.com/scholmd/scholmd/wiki/What-is-Markdown">this</a>:</p>
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>One of the important discussions taking place at the <a href="https://github.com/scholmd/scholmd/wiki">Markdown for Science</a> workshop last weekend was about the definition of Scholarly Markdown.<!--more--> We came up with <a href="https://github.com/scholmd/scholmd/wiki/What-is-Markdown">this</a>:</p>
 <ol type="1">
 <li>Markdown that supports the requirements of scientific texts</li>
 <li>Markdown as format that glues open scientific text resources together</li>
@@ -121,25 +123,25 @@
 <span class="kw">library</span>(reshape2)
 
 <span class="co"># Load the data from the bulk download, filter out DOIs that are not from PLoS journals</span>
-alm &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;data-alm/alm_report_2013-05-20.csv&quot;</span>, <span class="dt">encoding =</span> <span class="st">&quot;UTF8&quot;</span>, <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>, <span class="dt">stringsAsFactors=</span><span class="ot">FALSE</span>, <span class="dt">na.strings=</span><span class="kw">c</span>(<span class="st">&quot;0&quot;</span>))
-alm &lt;-<span class="st"> </span><span class="kw">subset</span>(alm, (<span class="kw">substr</span>(alm$doi,<span class="dv">1</span>,<span class="dv">15</span>) ==<span class="st"> &quot;10.1371/journal&quot;</span>))
+alm &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">"data-alm/alm_report_2013-05-20.csv"</span>, <span class="dt">encoding =</span> <span class="st">"UTF8"</span>, <span class="dt">sep =</span> <span class="st">","</span>, <span class="dt">stringsAsFactors=</span><span class="ot">FALSE</span>, <span class="dt">na.strings=</span><span class="kw">c</span>(<span class="st">"0"</span>))
+alm &lt;-<span class="st"> </span><span class="kw">subset</span>(alm, (<span class="kw">substr</span>(alm$doi,<span class="dv">1</span>,<span class="dv">15</span>) ==<span class="st"> "10.1371/journal"</span>))
 alm$publication_date &lt;-<span class="st"> </span><span class="kw">as.Date</span>(alm$publication_date)
 alm$counter_html &lt;-<span class="st"> </span><span class="kw">as.numeric</span>(alm$counter_html)
 
 <span class="co"># Options</span>
 plos.start_date &lt;-<span class="st"> </span><span class="ot">NA</span>
 plos.end_date &lt;-<span class="st"> </span><span class="ot">NA</span>
-plos.colors &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;#304345&quot;</span>,<span class="st">&quot;#304345&quot;</span>,<span class="st">&quot;#789aa1&quot;</span>,<span class="st">&quot;#789aa1&quot;</span>,<span class="st">&quot;#789aa1&quot;</span>,<span class="st">&quot;#ad9a27&quot;</span>,<span class="st">&quot;#ad9a27&quot;</span>,<span class="st">&quot;#ad9a27&quot;</span>,<span class="st">&quot;#ad9a27&quot;</span>,<span class="st">&quot;#ad9a27&quot;</span>,<span class="st">&quot;#ad9a27&quot;</span>,<span class="st">&quot;#ad9a27&quot;</span>)
+plos.colors &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">"#304345"</span>,<span class="st">"#304345"</span>,<span class="st">"#789aa1"</span>,<span class="st">"#789aa1"</span>,<span class="st">"#789aa1"</span>,<span class="st">"#ad9a27"</span>,<span class="st">"#ad9a27"</span>,<span class="st">"#ad9a27"</span>,<span class="st">"#ad9a27"</span>,<span class="st">"#ad9a27"</span>,<span class="st">"#ad9a27"</span>,<span class="st">"#ad9a27"</span>)
 
 <span class="co"># Aggregate notes and comments</span>
 alm$comments &lt;-<span class="st"> </span><span class="kw">as.numeric</span>(alm$comments)
 
 <span class="co"># Aggregate Mendeley</span>
-alm$mendeley &lt;-<span class="st"> </span><span class="kw">rowSums</span>(<span class="kw">subset</span>(alm, <span class="dt">select=</span><span class="kw">c</span>(<span class="st">&quot;mendeley_readers&quot;</span>,<span class="st">&quot;mendeley_groups&quot;</span>)), <span class="dt">na.rm=</span><span class="ot">TRUE</span>)
+alm$mendeley &lt;-<span class="st"> </span><span class="kw">rowSums</span>(<span class="kw">subset</span>(alm, <span class="dt">select=</span><span class="kw">c</span>(<span class="st">"mendeley_readers"</span>,<span class="st">"mendeley_groups"</span>)), <span class="dt">na.rm=</span><span class="ot">TRUE</span>)
 alm$mendeley[alm$mendeley ==<span class="st"> </span><span class="dv">0</span>] &lt;-<span class="st"> </span><span class="ot">NA</span>
 
 <span class="co"># Use subset of columns</span>
-alm &lt;-<span class="st"> </span><span class="kw">subset</span>(alm, <span class="dt">select=</span><span class="kw">c</span>(<span class="st">&quot;counter_html&quot;</span>,<span class="st">&quot;pmc_html&quot;</span>,<span class="st">&quot;crossref&quot;</span>,<span class="st">&quot;scopus&quot;</span>,<span class="st">&quot;pubmed&quot;</span>,<span class="st">&quot;mendeley&quot;</span>,<span class="st">&quot;citeulike&quot;</span>,<span class="st">&quot;comments&quot;</span>,<span class="st">&quot;researchblogging&quot;</span>,<span class="st">&quot;facebook&quot;</span>,<span class="st">&quot;twitter&quot;</span>,<span class="st">&quot;wikipedia&quot;</span>))
+alm &lt;-<span class="st"> </span><span class="kw">subset</span>(alm, <span class="dt">select=</span><span class="kw">c</span>(<span class="st">"counter_html"</span>,<span class="st">"pmc_html"</span>,<span class="st">"crossref"</span>,<span class="st">"scopus"</span>,<span class="st">"pubmed"</span>,<span class="st">"mendeley"</span>,<span class="st">"citeulike"</span>,<span class="st">"comments"</span>,<span class="st">"researchblogging"</span>,<span class="st">"facebook"</span>,<span class="st">"twitter"</span>,<span class="st">"wikipedia"</span>))
 
 <span class="co"># Calculate percentage of values that are not missing (i.e. have a count of at least 1)</span>
 colSums &lt;-<span class="st"> </span><span class="kw">colSums</span>(!<span class="kw">is.na</span>(alm)) *<span class="st"> </span><span class="dv">100</span> /<span class="st"> </span><span class="kw">length</span>(alm$counter_html)
@@ -147,16 +149,15 @@ exactSums &lt;-<span class="st"> </span><span class="kw">sum</span>(<span class=
 
 <span class="co"># Plot the chart.</span>
 opar &lt;-<span class="st"> </span><span class="kw">par</span>(<span class="dt">mar=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">7</span>,<span class="dv">2</span>,<span class="dv">1</span>)+<span class="fl">0.1</span>,<span class="dt">omi=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="fl">0.3</span>,<span class="dv">1</span>,<span class="dv">1</span>))
-plos.names &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;PLoS HTML Views&quot;</span>, <span class="st">&quot;PMC HTML Views&quot;</span>,<span class="st">&quot;CrossRef&quot;</span>,<span class="st">&quot;Scopus&quot;</span>,<span class="st">&quot;PubMed Citations&quot;</span>, <span class="st">&quot;Mendeley&quot;</span>,<span class="st">&quot;CiteULike&quot;</span>,<span class="st">&quot;PLoS Comments&quot;</span>,<span class="st">&quot;Research Blogging&quot;</span>,<span class="st">&quot;Facebook&quot;</span>,<span class="st">&quot;Twitter&quot;</span>,<span class="st">&quot;Wikipedia&quot;</span>)
+plos.names &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">"PLoS HTML Views"</span>, <span class="st">"PMC HTML Views"</span>,<span class="st">"CrossRef"</span>,<span class="st">"Scopus"</span>,<span class="st">"PubMed Citations"</span>, <span class="st">"Mendeley"</span>,<span class="st">"CiteULike"</span>,<span class="st">"PLoS Comments"</span>,<span class="st">"Research Blogging"</span>,<span class="st">"Facebook"</span>,<span class="st">"Twitter"</span>,<span class="st">"Wikipedia"</span>)
 y &lt;-<span class="st"> </span><span class="kw">barplot</span>(colSums,<span class="dt">horiz=</span><span class="ot">TRUE</span>,<span class="dt">col=</span>plos.colors, <span class="dt">border =</span> <span class="ot">NA</span>, <span class="dt">xlab=</span>plos.names, <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">120</span>), <span class="dt">axes=</span><span class="ot">FALSE</span>, <span class="dt">names.arg=</span>plos.names,<span class="dt">las=</span><span class="dv">1</span>, <span class="dt">adj=</span><span class="dv">0</span>)
-<span class="kw">text</span>(colSums<span class="dv">+6</span>,y,<span class="dt">labels=</span><span class="kw">sprintf</span>(<span class="st">&quot;%1.0f%%&quot;</span>, colSums))</code></pre>
-<figure>
-<img src="/images/barplot-2013-06-17.svg" alt="Proportion of articles covered by source. Article-level metrics for all 80,602 PLOS journal articles published until May 20, 2013." /><figcaption><strong>Proportion of articles covered by source</strong>. Article-level metrics for all 80,602 PLOS journal articles published until May 20, 2013.</figcaption>
-</figure>
-<p>In a way this approach to scholarly markdown is much more difficult than building a nice online collaborative writing tool. But for me scholarly markdown is not about competing with Microsoft Word, it is about building something new that scholars want to use because it allows them to do something that is impossible with the existing tools. For the same reason my todo item at the end of the workshop was <em>think about document type where markdown shines</em>. The R example above is a great example where markdown shines. If you can think of additional examples, please add them to the comments.</p>
+<span class="kw">text</span>(colSums<span class="dv">+6</span>,y,<span class="dt">labels=</span><span class="kw">sprintf</span>(<span class="st">"%1.0f%%"</span>, colSums))</code></pre>
+<figure><a href=""><img src="/images/barplot-2013-06-17.svg" alt="Proportion of articles covered by source. Article-level metrics for all 80,602 PLOS journal articles published until May 20, 2013."></a><figcaption><strong>Proportion of articles covered by source</strong>. Article-level metrics for all 80,602 PLOS journal articles published until May 20, 2013.</figcaption></figure><p>In a way this approach to scholarly markdown is much more difficult than building a nice online collaborative writing tool. But for me scholarly markdown is not about competing with Microsoft Word, it is about building something new that scholars want to use because it allows them to do something that is impossible with the existing tools. For the same reason my todo item at the end of the workshop was <em>think about document type where markdown shines</em>. The R example above is a great example where markdown shines. If you can think of additional examples, please add them to the comments.</p>
 <div class="references">
 
 </div>
+</body></html>
+
 
             <div class="license">
               
@@ -222,6 +223,7 @@ y &lt;-<span class="st"> </span><span class="kw">barplot</span>(colSums,<span cl
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="//js/js-yaml.min.js"></script>
 
     <!-- Fluidbox https://github.com/terrymun/Fluidbox -->
     <script src="/js/js-yaml.min.js"></script>

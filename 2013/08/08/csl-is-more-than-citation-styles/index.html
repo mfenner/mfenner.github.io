@@ -34,7 +34,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/app-9d3292ab94d343a3036108f922bcabad.css">
     <link rel="stylesheet" href="/assets/jasny-bootstrap.min-858066d22662d38bbc0ba337e5dfdfbb.css">
-    <link rel="stylesheet" href="/assets/navmenu-push-c329adc0d101e9cdd11fef0c95fdd43e.css">
+    <link rel="stylesheet" href="/assets/navmenu-push-ae4c4f48eb89e4f93e3bb0f778545165.css">
     <link rel="stylesheet" href="/assets/fluidbox-1e4d75d5984979bafa6c14619443b4d2.css">
 
     <!-- d3.js -->
@@ -100,24 +100,17 @@
       <div class="content">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
-            <p>According to the <a href="http://citationstyles.org">description</a> on the Citation Style Language (CSL) website, CSL <em>is an open XML-based language to describe the formatting of citations and bibliographies</em>.<!--more--> We use reference managers such as <strong>Zotero</strong>, <strong>Mendeley</strong>, or <strong>Papers</strong> to format our references in manuscripts we submit for publication, and underneath a CSL processor such as <a href="https://bitbucket.org/fbennett/citeproc-js/wiki/Home">Citeproc-js</a> - together with a CSL file for a particular citation style - is doing the work:</p>
-<figure>
-<img src="/images/csl.png" alt="Citation processing during manuscript writing" /><figcaption>Citation processing during manuscript writing</figcaption>
-</figure>
-<p>When the journal article is accepted the publisher takes the text with the formatted text citation and turns it into XML, a process that is error-prone and takes time:</p>
-<figure>
-<img src="/images/csl2.png" alt="Citation processing by the publisher" /><figcaption>Citation processing by the publisher</figcaption>
-</figure>
-<p>It is not hard to see that something is very wrong here:</p>
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>According to the <a href="http://citationstyles.org">description</a> on the Citation Style Language (CSL) website, CSL <em>is an open XML-based language to describe the formatting of citations and bibliographies</em>.<!--more--> We use reference managers such as <strong>Zotero</strong>, <strong>Mendeley</strong>, or <strong>Papers</strong> to format our references in manuscripts we submit for publication, and underneath a CSL processor such as <a href="https://bitbucket.org/fbennett/citeproc-js/wiki/Home">Citeproc-js</a> - together with a CSL file for a particular citation style - is doing the work:</p>
+<figure><a href=""><img src="/images/csl.png" alt="Citation processing during manuscript writing"></a><figcaption>Citation processing during manuscript writing</figcaption></figure><p>When the journal article is accepted the publisher takes the text with the formatted text citation and turns it into XML, a process that is error-prone and takes time:</p>
+<figure><a href=""><img src="/images/csl2.png" alt="Citation processing by the publisher"></a><figcaption>Citation processing by the publisher</figcaption></figure><p>It is not hard to see that something is very wrong here:</p>
 <ul>
 <li>Authors are required to use a specific citation style (there are probably about 1,000 different citation styles and many more dependent styles) even though the publisher doesn’t directly use the formatted text. The publisher eLife <a href="http://www.elifesciences.org/elife-references/">accepts references in any format</a>.</li>
 <li>Turning structured information into plain text and back into structured XML is always a bad idea. <a href="http://twitter.com/kaveh1000">Kaveh Bazargan</a> is a typesetter who has gone on record for saying that we should stop this nonsense and put him out of business.</li>
 </ul>
 <p>It is also obvious how the ideal workflow should look like:</p>
-<figure>
-<img src="/images/csl3.png" alt="Ideal workflow of citation processing" /><figcaption>Ideal workflow of citation processing</figcaption>
-</figure>
-<p>We go from structured content to structured content, and never use citations formatted as text as intermediary steps in the workflow.</p>
+<figure><a href=""><img src="/images/csl3.png" alt="Ideal workflow of citation processing"></a><figcaption>Ideal workflow of citation processing</figcaption></figure><p>We go from structured content to structured content, and never use citations formatted as text as intermediary steps in the workflow.</p>
 <p>What is surprising is that this is an ideal workflow and not something that publishers actually do. Most journal author instructions don’t even mention CSL styles (I work for PLOS and they are no exception). There are some issues to be solved, but they are all minor:</p>
 <ul>
 <li>The Citeproc JSON citation format isn’t really an official standard, but rather something invented for the most popular CSL processor, Citeproc-js.</li>
@@ -140,6 +133,8 @@
 <div class="references">
 
 </div>
+</body></html>
+
 
             <div class="license">
               
@@ -205,6 +200,7 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="//js/js-yaml.min.js"></script>
 
     <!-- Fluidbox https://github.com/terrymun/Fluidbox -->
     <script src="/js/js-yaml.min.js"></script>

@@ -52,7 +52,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/app-9d3292ab94d343a3036108f922bcabad.css">
     <link rel="stylesheet" href="/assets/jasny-bootstrap.min-858066d22662d38bbc0ba337e5dfdfbb.css">
-    <link rel="stylesheet" href="/assets/navmenu-push-c329adc0d101e9cdd11fef0c95fdd43e.css">
+    <link rel="stylesheet" href="/assets/navmenu-push-ae4c4f48eb89e4f93e3bb0f778545165.css">
     <link rel="stylesheet" href="/assets/fluidbox-1e4d75d5984979bafa6c14619443b4d2.css">
 
     <!-- d3.js -->
@@ -123,7 +123,9 @@
       <div class="content">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
-            <blockquote>
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<blockquote>
 <p>This paper in markdown format was written by Ethan White et al. The markdown file and the associated bibliogaphy and figure files are available from the <a href="https://github.com/weecology/data-sharing-paper">Github repository of the paper</a>.</p>
 </blockquote>
 <blockquote>
@@ -167,10 +169,7 @@
 <li>Every cell should contain only a single value <span class="citation" data-cites="strasser2012">(Strasser et al., 2012)</span>. For example, do not include units in the cell with the values (Figure 1) or include multiple measurements in a single cell, and break taxonomic information up into single components with one column each for family, genus, species, subspecies, etc. Violating this rule makes it difficult to process or analyze your data using standard tools, because there is no easy way for the software to treat the items within a cell as separate pieces of information.</li>
 <li>There should only be one column for each type of information <span class="citation" data-cites="borer2009 strasser2011 strasser2012">(Borer et al., 2009; Strasser et al., 2011, 2012)</span>. The most common violation of this rule is <a href="http://en.wikipedia.org/wiki/Cross_tabulation">cross-tab structured data</a>, where different columns contain measurements of the same variable (e.g., in different sites, treatments, etc.; Figure 1).</li>
 </ul>
-<figure>
-<img src="/images/Data_formatting.jpg" alt="Figure 1. Examples of how to restructure two common issues with tabular data. (a) Each cell should only contain a single value. If more than one value is present then the data should be split into multiple columns. (b) There should be only one column for each type of information. If there are multiple columns then the column header should be stored in one column and the values from each column should be stored in a single column." /><figcaption><strong>Figure 1. Examples of how to restructure two common issues with tabular data</strong>. (a) Each cell should only contain a single value. If more than one value is present then the data should be split into multiple columns. (b) There should be only one column for each type of information. If there are multiple columns then the column header should be stored in one column and the values from each column should be stored in a single column.</figcaption>
-</figure>
-<p>While cross-tab data can be useful for its readability, and may be appropriate for data collection, this format makes it difficult to link the records with additional data (e.g., the location and environmental conditions at a site) and it cannot be properly used by most common database management and analysis tools (e.g., relational databases, dataframes in R and Python, etc.). If tabular data are currently in a cross-tab structure, there are tools to help restructure the data including functions in Excel, R (e.g., melt() function in the R package reshape; <span class="citation" data-cites="wickham2007">Wickham (2007)</span>), and Python (e.g., melt() function in the <a href="http://pandas.pydata.org/">Pandas</a> Python module.</p>
+<figure><a href=""><img src="/images/Data_formatting.jpg" alt="Figure 1. Examples of how to restructure two common issues with tabular data. (a) Each cell should only contain a single value. If more than one value is present then the data should be split into multiple columns. (b) There should be only one column for each type of information. If there are multiple columns then the column header should be stored in one column and the values from each column should be stored in a single column."></a><figcaption><strong>Figure 1. Examples of how to restructure two common issues with tabular data</strong>. (a) Each cell should only contain a single value. If more than one value is present then the data should be split into multiple columns. (b) There should be only one column for each type of information. If there are multiple columns then the column header should be stored in one column and the values from each column should be stored in a single column.</figcaption></figure><p>While cross-tab data can be useful for its readability, and may be appropriate for data collection, this format makes it difficult to link the records with additional data (e.g., the location and environmental conditions at a site) and it cannot be properly used by most common database management and analysis tools (e.g., relational databases, dataframes in R and Python, etc.). If tabular data are currently in a cross-tab structure, there are tools to help restructure the data including functions in Excel, R (e.g., melt() function in the R package reshape; <span class="citation" data-cites="wickham2007">Wickham (2007)</span>), and Python (e.g., melt() function in the <a href="http://pandas.pydata.org/">Pandas</a> Python module.</p>
 <p>In addition to following these basic rules you should also make sure to use descriptive column names <span class="citation" data-cites="borer2009">(Borer et al., 2009)</span>. Descriptive column names make the data easier to understand and therefore make data interpretation errors less likely. As with file names, spaces can cause problems for some software and should be avoided.</p>
 <h3 id="use-standard-formats-within-cells">Use standard formats within cells</h3>
 <p>In addition to using standard table structures it is also important to ensure that the contents of each cell don’t cause problems for data management and analysis software. Specifically, we recommend:</p>
@@ -189,15 +188,18 @@
 </ol>
 <p>NA and NULL are reasonable null values, but they are only handled automatically by a subset of commonly used software (Table 1). NA can also be problematic if it is also used as an abbreviation (e.g., North America, Namibia, <em>Neotoma albigula</em>, sodium, etc.). We recommend against using numerical values to indicate nulls (e.g., 999, -999, etc.) because they typically require an extra step to remove from analyses and can be accidentally included in calculations. We also recommend against using non-standard text indications (e.g., No data, ND, missing, —) because they can cause issues with software that requires consistent data types within columns). Whichever null value that you use, only use one, use it consistently throughout the data set, and indicate it clearly in the metadata.</p>
 <table>
-<caption><strong>Tabel 1. Commonly used null values, limitations, compatibility with common software and a recommendation regarding whether or not it is a good option</strong>. Null values are indicated as being a null value for specific software if they work consistently and correctly with that software. For example, the null value “NULL” works correctly for certain applications in R, but does not work in others, so it is not presented as part of the table.</caption>
-<col style="width: 11%" /><col style="width: 26%" /><col style="width: 19%" /><col style="width: 20%" /><thead>
-<tr class="header">
+<caption>
+<strong>Tabel 1. Commonly used null values, limitations, compatibility with common software and a recommendation regarding whether or not it is a good option</strong>. Null values are indicated as being a null value for specific software if they work consistently and correctly with that software. For example, the null value “NULL” works correctly for certain applications in R, but does not work in others, so it is not presented as part of the table.</caption>
+<col style="width: 11%">
+<col style="width: 26%">
+<col style="width: 19%">
+<col style="width: 20%">
+<thead><tr class="header">
 <th style="text-align: left;">Null values</th>
 <th style="text-align: left;">Problems</th>
 <th style="text-align: left;">Compatibility</th>
 <th style="text-align: left;">Recommendation</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;"><p>0</p></td>
@@ -279,17 +281,22 @@
 <p>When choosing a repository you should consider where other researchers in your discipline are sharing their data. This helps you quickly identify the community’s standard approach to sharing and increases the likelihood that other scientists will discover your data. In particular, if there is a centralized repository for a specific kind of data (e.g., GenBank for sequence data) then you should use that repository.</p>
 <p>In cases where there is no <em>de facto</em> standard it is worth considering differences among repositories in terms of use, data rights, and licensing (Table 2) and whether your funding agency or journal has explicit requirements or restrictions related to repositories. We also recommend that you use a repository that allows your dataset to be easily cited. Most repositories will describe how this works, but an easy way to guarantee that your data are citable is to confirm that the repository associates it with a persistent identifier, the most popular of which is the digital object identifier (DOI). DOIs are permanent unique identifiers that are independent of physical location and site ownership. There are also online tools for finding good repositories for your data including <a href="http://databib.org">Databib</a> and <a href="http://re3data.org">re3data</a>.</p>
 <table>
-<caption><strong>Table 2. Popular repositories for scientific datasets</strong>. This table does not include well-known molecular repositories (e.g. GenBank, EMBL, MG-RAST) that have become <em>de facto</em> standards in molecular and evolutionary biology. Consequently, several of these primarily serve the ecological community. These repositories are not exclusively used by members of specific institutions or museums, but accept data from the general scientific community.</caption>
-<col style="width: 19%" /><col style="width: 11%" /><col style="width: 8%" /><col style="width: 13%" /><col style="width: 12%" /><col style="width: 18%" /><thead>
-<tr class="header">
+<caption>
+<strong>Table 2. Popular repositories for scientific datasets</strong>. This table does not include well-known molecular repositories (e.g. GenBank, EMBL, MG-RAST) that have become <em>de facto</em> standards in molecular and evolutionary biology. Consequently, several of these primarily serve the ecological community. These repositories are not exclusively used by members of specific institutions or museums, but accept data from the general scientific community.</caption>
+<col style="width: 19%">
+<col style="width: 11%">
+<col style="width: 8%">
+<col style="width: 13%">
+<col style="width: 12%">
+<col style="width: 18%">
+<thead><tr class="header">
 <th style="text-align: left;">Repository</th>
 <th style="text-align: left;">License</th>
 <th style="text-align: left;">DOI</th>
 <th style="text-align: left;">Metadata</th>
 <th style="text-align: left;">Access</th>
 <th style="text-align: left;">Notes</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;"><p>Dryad</p></td>
@@ -378,7 +385,7 @@
 <p>Jones, M. B., Schildhauer, M. P., Reichman, O., &amp; Bowers, S. (2006). The new bioinformatics: Integrating ecological data from the gene to the biosphere. <em>Annual Review of Ecology, Evolution, and Systematics</em>, <em>37</em>(1), 519–54. Retrieved from <a href="http://dx.doi.org/10.1146/annurev.ecolsys.37.091305.110031">http://dx.doi.org/10.1146/annurev.ecolsys.37.091305.110031</a></p>
 <p>Kowalczyk, S., &amp; Shankar, K. (2011). Data sharing in the sciences. <em>Annual Review of Information Science and Technology</em>, <em>45</em>(1), 247–294. Retrieved from <a href="http://dx.doi.org/10.1002/aris.2011.1440450113">http://dx.doi.org/10.1002/aris.2011.1440450113</a></p>
 <p>Lampe, A., &amp; Weiler, J. (1998). Data capture from the sponsors’ and investigators’ perspectives: Balancing quality, speed, and cost. <em>Drug Information Journal</em>, <em>32</em>(4), 871–886.</p>
-<p>Michener, W. K., Brunt, J. W., Helly, J. J., Kirchner, T. B., &amp; Stafford, S. G. (1997). Nongeospatial metadata for the ecological sciences. <em>Ecological Applications</em>, <em>7</em>(1), 330–342. Retrieved from <a href="http://dx.doi.org/10.1890/1051-0761(1997)007[0330:nmftes]2.0.co;2">http://dx.doi.org/10.1890/1051-0761(1997)007[0330:nmftes]2.0.co;2</a></p>
+<p>Michener, W. K., Brunt, J. W., Helly, J. J., Kirchner, T. B., &amp; Stafford, S. G. (1997). Nongeospatial metadata for the ecological sciences. <em>Ecological Applications</em>, <em>7</em>(1), 330–342. Retrieved from <a href="http://dx.doi.org/10.1890/1051-0761(1997)007%5B0330:nmftes%5D2.0.co;2">http://dx.doi.org/10.1890/1051-0761(1997)007[0330:nmftes]2.0.co;2</a></p>
 <p>Palmer, M. A., Bernhardt, E. S., Chornesky, E. A., Collins, S. L., Dobson, A. P., Duke, C. S., … Turner, M. G. (2004). Ecological science and sustainability for a crowded planet. Retrieved from <a href="http://www.esa.org/ecovisions/ppfiles/EcologicalVisionsReport.pdf">http://www.esa.org/ecovisions/ppfiles/EcologicalVisionsReport.pdf</a></p>
 <p>Parr, C., &amp; Cummings, M. (2005). Data sharing in ecology and evolution. <em>Trends in Ecology &amp; Evolution</em>, <em>20</em>(7), 362–363. Retrieved from <a href="http://dx.doi.org/10.1016/j.tree.2005.04.023">http://dx.doi.org/10.1016/j.tree.2005.04.023</a></p>
 <p>Paulsen, A., Overgaard, S., &amp; Lauritsen, J. M. (2012). Quality of data entry using single entry, double entry and automated forms processing–an example based on a study of patient-reported outcomes. <em>PloS ONE</em>, <em>7</em>(4), e35087. Retrieved from <a href="http://dx.doi.org/10.1371/journal.pone.0035087">http://dx.doi.org/10.1371/journal.pone.0035087</a></p>
@@ -397,6 +404,8 @@
 <p>Zimmerman, A. (2007). Not by metadata alone: the use of diverse forms of knowledge to locate data for reuse. <em>International Journal on Digital Libraries</em>, <em>7</em>(1-2), 5–16. doi:<a href="http://dx.doi.org/10.1007/s00799-007-0015-8">10.1007/s00799-007-0015-8</a></p>
 <p>Zimmerman, A. S. (2003). <em>Data sharing and secondary use of scientific data: Experiences of ecologists</em> (PhD thesis). The University of Michigan.</p>
 </div>
+</body></html>
+
 
             <div class="license">
               
@@ -462,6 +471,7 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="//js/js-yaml.min.js"></script>
 
     <!-- Fluidbox https://github.com/terrymun/Fluidbox -->
     <script src="/js/js-yaml.min.js"></script>
