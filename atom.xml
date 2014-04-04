@@ -4,7 +4,7 @@
  <title>Gobbledygook</title>
  <link href="http://blog.martinfenner.org//atom.xml" rel="self"/>
  <link href="http://blog.martinfenner.org"/>
- <updated>2014-04-04T21:09:04+00:00</updated>
+ <updated>2014-04-04T21:14:40+00:00</updated>
  <id>http://blog.martinfenner.org</id>
  <author>
    <name>Martin Fenner</name>
@@ -24,7 +24,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;The program is also viewed as a hypertext document on the World Wide Web.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;This blog post is an example for such a document. The page is written in &lt;strong&gt;markdown&lt;/strong&gt; (click the link in the sidebar for the source file), and all embedded code was executed when this page was generated, i.e. when the markdown was converted to HTML and the blog post was published. To demonstrate this I have embedded code in three different languages below - the output is the second code block.&lt;/p&gt;
+&lt;p&gt;This blog post is an example for such a document. The page is written in &lt;strong&gt;markdown&lt;/strong&gt; (markdown file available &lt;a href=&quot;https://github.com/mfenner/mfenner.github.io/blob/source/_posts/2014-04-04-literate-blogging.Rmd&quot;&gt;here&lt;/a&gt;), and all embedded code was executed when this page was generated, i.e. when the markdown was converted to HTML and the blog post was published. To demonstrate this I have embedded code in three different languages below - the output is the second code block.&lt;/p&gt;
 &lt;p&gt;In R you have&lt;/p&gt;
 &lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span class=&quot;kw&quot;&gt;cat&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;Hello, R world!&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;Hello, R world!&lt;/code&gt;&lt;/pre&gt;
