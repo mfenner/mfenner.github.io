@@ -4,13 +4,88 @@
  <title>Gobbledygook</title>
  <link href="http://blog.martinfenner.org//atom.xml" rel="self"/>
  <link href="http://blog.martinfenner.org"/>
- <updated>2014-04-02T14:01:37+00:00</updated>
+ <updated>2014-04-04T20:46:37+00:00</updated>
  <id>http://blog.martinfenner.org</id>
  <author>
    <name>Martin Fenner</name>
    <email>mfenner@plos.org</email>
  </author>
 
+ 
+ <entry>
+   <title>Literate Blogging</title>
+   <link href="http://blog.martinfenner.org/2014/04/04/literate-blogging"/>
+   <updated>2014-04-04T00:00:00+00:00</updated>
+   <id>http://blog.martinfenner.org/2014/04/04/literate-blogging</id>
+   <content type="html">&lt;blockquote&gt;
+&lt;p&gt;Literate programming is a methodology that combines a programming language with a documentation language, thereby making programs more robust, more portable, more easily maintained, and arguably more fun to write than programs that are written only in a high-level language. The main idea is to treat a program as a piece of literature, addressed to human beings rather than to a computer. The program is also viewed as a hypertext document, rather like the World Wide Web.&lt;!--more--&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Literatue Programming by &lt;a href=&quot;http://www-cs-faculty.stanford.edu/~uno/&quot;&gt;Donald Knuth&lt;/a&gt; &lt;span class=&quot;citation&quot; data-cites=&quot;knuth_1983&quot;&gt;(1983)&lt;/span&gt; is a seminal book that introduces the concept of literate programming. Using technology available in 2014 we can make a small but important change to the last sentence:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The program is also viewed as a hypertext document on the World Wide Web.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This blog post is an example for such a document. The page is written in &lt;strong&gt;markdown&lt;/strong&gt; (click the link in the sidebar for the source file), and all embedded code was executed when this page was generated, i.e. when the markdown was converted to HTML and the blog post was published. To demonstrate this I have embedded code in three different languages below - the output is the second code block.&lt;/p&gt;
+&lt;p&gt;In R you have&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span class=&quot;kw&quot;&gt;cat&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;Hello, R world!&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Hello, R world!&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Or Python&lt;/p&gt;
+&lt;pre class=&quot;sourceCode python&quot;&gt;&lt;code class=&quot;sourceCode python&quot;&gt;&lt;span class=&quot;dt&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;Hello, Python world!&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Hello, Python world!&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Or Ruby&lt;/p&gt;
+&lt;pre class=&quot;sourceCode ruby&quot;&gt;&lt;code class=&quot;sourceCode ruby&quot;&gt;puts &lt;span class=&quot;st&quot;&gt;&amp;#39;Hello, Ruby world!&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Hello, Ruby world!&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can also embed code within text blocks (inline), so that &lt;code&gt;3.48 * 723&lt;/code&gt; becomes &lt;strong&gt;2516.04&lt;/strong&gt;. Another important option is to generate figures using the embedded code, e.g. the following figure taken from a recent publication.&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span class=&quot;co&quot;&gt;# code for figure 1: density plots for citation counts for PLOS Biology&lt;/span&gt;
+&lt;span class=&quot;co&quot;&gt;# articles published in 2010&lt;/span&gt;
+
+&lt;span class=&quot;co&quot;&gt;# load May 20, 2013 ALM report&lt;/span&gt;
+alm &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;read.csv&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;data/alm_report_plos_biology_2013-05-20.csv&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;stringsAsFactors =&lt;/span&gt; &lt;span class=&quot;ot&quot;&gt;FALSE&lt;/span&gt;)
+
+&lt;span class=&quot;co&quot;&gt;# only look at research articles&lt;/span&gt;
+alm &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;subset&lt;/span&gt;(alm, alm$article_type ==&lt;span class=&quot;st&quot;&gt; &amp;quot;Research Article&amp;quot;&lt;/span&gt;)
+
+&lt;span class=&quot;co&quot;&gt;# only look at papers published in 2010&lt;/span&gt;
+alm$publication_date &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;as.Date&lt;/span&gt;(alm$publication_date)
+alm &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;subset&lt;/span&gt;(alm, alm$publication_date &amp;gt;&lt;span class=&quot;st&quot;&gt; &amp;quot;2010-01-01&amp;quot;&lt;/span&gt; &amp;amp;&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;alm$publication_date &amp;lt;=&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;
+&lt;span class=&quot;st&quot;&gt;    &amp;quot;2010-12-31&amp;quot;&lt;/span&gt;)
+
+&lt;span class=&quot;co&quot;&gt;# labels&lt;/span&gt;
+colnames &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;dimnames&lt;/span&gt;(alm)[[&lt;span class=&quot;dv&quot;&gt;2&lt;/span&gt;]]
+plos.color &amp;lt;-&lt;span class=&quot;st&quot;&gt; &amp;quot;#1ebd21&amp;quot;&lt;/span&gt;
+plos.source &amp;lt;-&lt;span class=&quot;st&quot;&gt; &amp;quot;scopus&amp;quot;&lt;/span&gt;
+
+plos.xlab &amp;lt;-&lt;span class=&quot;st&quot;&gt; &amp;quot;Scopus Citations&amp;quot;&lt;/span&gt;
+plos.ylab &amp;lt;-&lt;span class=&quot;st&quot;&gt; &amp;quot;Probability&amp;quot;&lt;/span&gt;
+
+quantile &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;quantile&lt;/span&gt;(alm[, plos.source], &lt;span class=&quot;kw&quot;&gt;c&lt;/span&gt;(&lt;span class=&quot;fl&quot;&gt;0.1&lt;/span&gt;, &lt;span class=&quot;fl&quot;&gt;0.5&lt;/span&gt;, &lt;span class=&quot;fl&quot;&gt;0.9&lt;/span&gt;), &lt;span class=&quot;dt&quot;&gt;na.rm =&lt;/span&gt; &lt;span class=&quot;ot&quot;&gt;TRUE&lt;/span&gt;)
+
+&lt;span class=&quot;co&quot;&gt;# plot the chart&lt;/span&gt;
+opar &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;par&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;mai =&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;c&lt;/span&gt;(&lt;span class=&quot;fl&quot;&gt;0.5&lt;/span&gt;, &lt;span class=&quot;fl&quot;&gt;0.75&lt;/span&gt;, &lt;span class=&quot;fl&quot;&gt;0.5&lt;/span&gt;, &lt;span class=&quot;fl&quot;&gt;0.5&lt;/span&gt;), &lt;span class=&quot;dt&quot;&gt;omi =&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;c&lt;/span&gt;(&lt;span class=&quot;fl&quot;&gt;0.25&lt;/span&gt;, &lt;span class=&quot;fl&quot;&gt;0.1&lt;/span&gt;, &lt;span class=&quot;fl&quot;&gt;0.25&lt;/span&gt;, &lt;span class=&quot;fl&quot;&gt;0.1&lt;/span&gt;), &lt;span class=&quot;dt&quot;&gt;mgp =&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;c&lt;/span&gt;(&lt;span class=&quot;dv&quot;&gt;3&lt;/span&gt;, 
+    &lt;span class=&quot;fl&quot;&gt;0.5&lt;/span&gt;, &lt;span class=&quot;fl&quot;&gt;0.5&lt;/span&gt;), &lt;span class=&quot;dt&quot;&gt;fg =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;black&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;cex.main =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;cex.lab =&lt;/span&gt; &lt;span class=&quot;fl&quot;&gt;1.5&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;col =&lt;/span&gt; plos.color, 
+    &lt;span class=&quot;dt&quot;&gt;col.main =&lt;/span&gt; plos.color, &lt;span class=&quot;dt&quot;&gt;col.lab =&lt;/span&gt; plos.color, &lt;span class=&quot;dt&quot;&gt;xaxs =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;i&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;yaxs =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;i&amp;quot;&lt;/span&gt;)
+
+d &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;density&lt;/span&gt;(alm[, plos.source], &lt;span class=&quot;dt&quot;&gt;from =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;to =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;100&lt;/span&gt;)
+d$x &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;append&lt;/span&gt;(d$x, &lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;)
+d$y &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;append&lt;/span&gt;(d$y, &lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;)
+&lt;span class=&quot;kw&quot;&gt;plot&lt;/span&gt;(d, &lt;span class=&quot;dt&quot;&gt;type =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;n&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;main =&lt;/span&gt; &lt;span class=&quot;ot&quot;&gt;NA&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;xlab =&lt;/span&gt; &lt;span class=&quot;ot&quot;&gt;NA&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;ylab =&lt;/span&gt; &lt;span class=&quot;ot&quot;&gt;NA&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;xlim =&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;c&lt;/span&gt;(&lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;100&lt;/span&gt;), &lt;span class=&quot;dt&quot;&gt;frame.plot =&lt;/span&gt; &lt;span class=&quot;ot&quot;&gt;FALSE&lt;/span&gt;)
+&lt;span class=&quot;kw&quot;&gt;polygon&lt;/span&gt;(d, &lt;span class=&quot;dt&quot;&gt;col =&lt;/span&gt; plos.color, &lt;span class=&quot;dt&quot;&gt;border =&lt;/span&gt; &lt;span class=&quot;ot&quot;&gt;NA&lt;/span&gt;)
+&lt;span class=&quot;kw&quot;&gt;mtext&lt;/span&gt;(plos.xlab, &lt;span class=&quot;dt&quot;&gt;side =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;col =&lt;/span&gt; plos.color, &lt;span class=&quot;dt&quot;&gt;cex =&lt;/span&gt; &lt;span class=&quot;fl&quot;&gt;1.25&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;outer =&lt;/span&gt; &lt;span class=&quot;ot&quot;&gt;TRUE&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;adj =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;, 
+    &lt;span class=&quot;dt&quot;&gt;at =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;)
+&lt;span class=&quot;kw&quot;&gt;mtext&lt;/span&gt;(plos.ylab, &lt;span class=&quot;dt&quot;&gt;side =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;col =&lt;/span&gt; plos.color, &lt;span class=&quot;dt&quot;&gt;cex =&lt;/span&gt; &lt;span class=&quot;fl&quot;&gt;1.25&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;outer =&lt;/span&gt; &lt;span class=&quot;ot&quot;&gt;TRUE&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;adj =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;, 
+    &lt;span class=&quot;dt&quot;&gt;at =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;las =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;)
+
+&lt;span class=&quot;kw&quot;&gt;par&lt;/span&gt;(opar)&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/figures/density_plot_example.svg&quot; alt=&quot;Figure 1. Citation counts for PLOS Biology articles published in 2010. Scopus citation counts plotted as a probability distribution for all 197 PLOS Biology research articles published in 2010. Data collected May 20, 2013. Median 19 citations; 10% of papers have at least 50 citations. From Fenner (2013).&quot; /&gt;&lt;figcaption&gt;&lt;strong&gt;Figure 1. Citation counts for PLOS Biology articles published in 2010.&lt;/strong&gt; Scopus citation counts plotted as a probability distribution for all 197 &lt;em&gt;PLOS Biology&lt;/em&gt; research articles published in 2010. Data collected May 20, 2013. Median 19 citations; 10% of papers have at least 50 citations. From Fenner &lt;span class=&quot;citation&quot; data-cites=&quot;fenner2013&quot;&gt;(2013)&lt;/span&gt;.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;All this functionality is provided by &lt;a href=&quot;http://yihui.name/knitr/&quot;&gt;knitr&lt;/a&gt;, a package for the R statistical programming language. knitr has been around for a while, but integration into the &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; blogging platform is still fragile. Earlier this week at the &lt;a href=&quot;https://github.com/ropensci/hackathon&quot;&gt;rOpenSci hackathon&lt;/a&gt; (more on this later) a group of us worked hard to improve this integration. We are still not completely done, but the source code is available &lt;a href=&quot;https://github.com/ropensci/docs&quot;&gt;here&lt;/a&gt;. Most importantly, all the conversion happens on the server, and we are only using freely available tools. I have now enabled this functionality for this blog, so expect more code embedded examples in the future.&lt;/p&gt;
+&lt;div class=&quot;references&quot;&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;p&gt;Fenner, M. (2013). What can article-level metrics do for you? &lt;em&gt;PLoS Biol&lt;/em&gt;, &lt;em&gt;11&lt;/em&gt;(10), e1001687. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pbio.1001687&quot;&gt;10.1371/journal.pbio.1001687&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Knuth, D. E., Stanford University, &amp;amp; Computer Science Department. (1983). &lt;em&gt;Literate programming&lt;/em&gt;. Stanford, CA: Dept. of Computer Science, Stanford University.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Continuous Publishing</title>
@@ -41,7 +116,8 @@
 &lt;p&gt;As an example of how this can be done &lt;a href=&quot;https://github.com/mfenner/jekyll-travis&quot;&gt;I have integrated&lt;/a&gt; the &lt;a href=&quot;https://travis-ci.org/&quot;&gt;Travis CI&lt;/a&gt; Continuous Integration server with the book project &lt;a href=&quot;http://book.openingscience.org/&quot;&gt;Opening Science&lt;/a&gt;. The recently published book is a dynamic book that hopefully is updated frequently in the coming months. Every time an editor approves a correction to the text - &lt;a href=&quot;https://github.com/openingscience/book&quot;&gt;hosted in markdown format on Github&lt;/a&gt; - the Travis CI server is automatically triggered to build a new HTML version of the book and to push the new version to the book website. The Travis server is running the &lt;a href=&quot;http://johnmacfarlane.net/pandoc/&quot;&gt;Pandoc&lt;/a&gt; document converter to not only convert the changed document from markdown to HTML, but Pandoc will also insert and format references, and the &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; site generator will build a nice website around the markdown files. Over time this build process can be extended to do other things as well, from &lt;a href=&quot;/2013/07/02/auto-generating-links-to-data-and-resources/&quot;&gt;auto-generating links to data and resources&lt;/a&gt; to transforming the document into &lt;a href=&quot;/2013/12/12/from-markdown-to-jats-xml-in-one-step/&quot;&gt;other file formats&lt;/a&gt; besides HTML.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -78,7 +154,8 @@
 &lt;/figure&gt;
 &lt;div class=&quot;references&quot;&gt;
 
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -115,7 +192,8 @@
 &lt;div class=&quot;references&quot;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
 &lt;p&gt;The LaTeX Team. (2014). LaTeX - a document preparation system. &lt;a href=&quot;http://www.latex-project.org/&quot;&gt;http://www.latex-project.org/&lt;/a&gt;. Retrieved from &lt;a href=&quot;http://www.latex-project.org/&quot;&gt;http://www.latex-project.org/&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -137,7 +215,8 @@
 &lt;p&gt;This is the first public release and there is of course a lot of room for improvement. Many elements and attributes are not yet supported - although &lt;a href=&quot;http://orcid.org/blog/2013/03/22/orcid-how-more-specifying-orcid-ids-document-metadata&quot;&gt;ORCID author identifiers&lt;/a&gt; are of course included. Please help me improve this tool using the Github &lt;a href=&quot;https://github.com/mfenner/pandoc-jats/issues&quot;&gt;Issue Tracker&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -152,7 +231,7 @@
 &lt;span class=&quot;co&quot;&gt;# articles published in 2010&lt;/span&gt;
 
 &lt;span class=&quot;co&quot;&gt;# load May 20, 2013 ALM report&lt;/span&gt;
-alm &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;read.csv&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;../data/alm_report_plos_biology_2013-05-20.csv&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;stringsAsFactors =&lt;/span&gt; &lt;span class=&quot;ot&quot;&gt;FALSE&lt;/span&gt;)
+alm &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;read.csv&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;data/alm_report_plos_biology_2013-05-20.csv&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;stringsAsFactors =&lt;/span&gt; &lt;span class=&quot;ot&quot;&gt;FALSE&lt;/span&gt;)
 
 &lt;span class=&quot;co&quot;&gt;# only look at research articles&lt;/span&gt;
 alm &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;subset&lt;/span&gt;(alm, alm$article_type ==&lt;span class=&quot;st&quot;&gt; &amp;quot;Research Article&amp;quot;&lt;/span&gt;)
@@ -384,7 +463,8 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;p&gt;Schekman, R., &amp;amp; Patterson, M. (2013). Reforming research assessment. &lt;em&gt;eLife&lt;/em&gt;, &lt;em&gt;2&lt;/em&gt;, e00855. doi:&lt;a href=&quot;http://dx.doi.org/10.7554/eLife.00855&quot;&gt;10.7554/eLife.00855&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Tasmanian devil. (2013). &lt;em&gt;Wikipedia&lt;/em&gt;. Retrieved from &lt;a href=&quot;http://en.wikipedia.org/wiki/Tasmanian\devil&quot;&gt;http://en.wikipedia.org/wiki/Tasmanian\devil&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Video Tip of the Week: Turkeys and their genomes. (2012). &lt;em&gt;The openHelix blog&lt;/em&gt;. Retrieved from &lt;a href=&quot;http://blog.openhelix.eu/?p=14388&quot;&gt;http://blog.openhelix.eu/?p=14388&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -403,7 +483,8 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;div class=&quot;references&quot;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
 &lt;p&gt;Fenner, M. (2013). What can article-level metrics do for you? &lt;em&gt;PLoS Biol&lt;/em&gt;, &lt;em&gt;11&lt;/em&gt;(10), e1001687. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pbio.1001687&quot;&gt;10.1371/journal.pbio.1001687&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -418,7 +499,8 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;p&gt;Another great example using a very similar workflow is the upcoming book &lt;a href=&quot;http://adv-r.had.co.nz/&quot;&gt;Advanced R Programming&lt;/a&gt; by Hadley Wickham, but he is of course using R and &lt;a href=&quot;http://yihui.name/knitr/&quot;&gt;knitr&lt;/a&gt; to create most of the markdown. In contrast to Hadley we stored the individual chapters as Jekyll posts rather than pages, as this better integrates with other Jekyll functionality, e.g. tags.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -469,7 +551,8 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;/ul&gt;
 &lt;div class=&quot;references&quot;&gt;
 
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -501,7 +584,8 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;p&gt;The problem with today’s manuscript submission systems is that they have grown so big and complex that any change is slow and cumbersome, rather than iterative and part of an ongoing dialogue. I don’t want to blame any single vendor of these systems, but rather suggest that we carefully re-evaluate the workflow from the manuscript written by one or more authors to the accepted manuscript. My personal interest is mainly in authoring tools, and I have recently written about and experimented with &lt;a href=&quot;http://localhost:4000/tags.html#markdown-ref&quot;&gt;Markdown&lt;/a&gt;. This process of re-evaluating manuscript tracking systems is not simply about technology, but is rather about how we approach this problem as author, publisher, tool vendor and as a community.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -562,7 +646,8 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;/ul&gt;
 &lt;div class=&quot;references&quot;&gt;
 
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -597,7 +682,8 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;div class=&quot;references&quot;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
 &lt;p&gt;Fenner, M. (2013). What can article-level metrics do for you? &lt;em&gt;PLoS Biol&lt;/em&gt;, &lt;em&gt;11&lt;/em&gt;(10), e1001687. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pbio.1001687&quot;&gt;10.1371/journal.pbio.1001687&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -615,7 +701,8 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;div class=&quot;references&quot;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
 &lt;p&gt;Fenner, M. (2013). What can article-level metrics do for you? &lt;em&gt;PLoS Biol&lt;/em&gt;, &lt;em&gt;11&lt;/em&gt;(10), e1001687. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pbio.1001687&quot;&gt;10.1371/journal.pbio.1001687&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -636,7 +723,8 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;p&gt;This idea of a &lt;em&gt;complete article&lt;/em&gt; is not too far away from the best practices used today, but it is important to make it the default for scientific publication. Too much of what we publish today is still centered around the concept of what can be printed on paper, and telling exciting stories that have impact counts more than telling complete stories that can be reproduced.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -689,7 +777,8 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;p&gt;&lt;em&gt;Update 10/13/13: Updated the title and the text to make it clear that I am not talking about DOIs that don’t resolve for human users, but rather about the problems automating this process using command-line tools.&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -710,7 +799,8 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;p&gt;&lt;em&gt;Update August 13, 2013: We now have a nice &lt;a href=&quot;http://en.wikipedia.org/wiki/Altmetrics&quot;&gt;altmetrics&lt;/a&gt; Wikipedia page thanks to the hard work of &lt;a href=&quot;http://en.wikipedia.org/wiki/User:Egonw&quot;&gt;Egon Willighagen&lt;/a&gt; and others.&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -757,7 +847,8 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;/ul&gt;
 &lt;div class=&quot;references&quot;&gt;
 
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -778,7 +869,8 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;p&gt;There are at least two other visualizations I want to do: publications by type (journal article, book chapter, dataset, etc.), and author position with number of co-authors. You can reuse the Javascript code with small modifications (CSS and the JSON query) even if you are not running a Jekyll blog.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -799,7 +891,8 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;p&gt;And once we have this workflow in place, we can automatically add additional information, including links to the fulltext paper in the institutional repository, copyright information, and metrics.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -885,7 +978,8 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;p&gt;Careful readers of this blog will of course remember that &lt;a href=&quot;/2013/06/29/metadata-in-scholarly-markdown/&quot;&gt;I have written about&lt;/a&gt; using YAML to store metadata about a blog post. We could now add bibliographic information to these metadata, either in the YAML frontmatter (if it is a Jekyll blog), or in a separate file. It should be straightforward to adapt the existing CSL processors to understand YAML since YAML and JSON are so similar. To get started with some Citeproc YAML, use the new (and still experimental) &lt;strong&gt;ORCID Feed&lt;/strong&gt; Webservice with your ORCID and specify the &lt;code&gt;yml&lt;/code&gt; format, e.g. &lt;a href=&quot;http://feed.labs.orcid-eu.org/0000-0003-1419-2405.yml&quot;&gt;http://feed.labs.orcid-eu.org/0000-0003-1419-2405.yml&lt;/a&gt; for my publications.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -927,7 +1021,8 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;/ul&gt;
 &lt;div class=&quot;references&quot;&gt;
 
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -951,7 +1046,8 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;div class=&quot;references&quot;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
 &lt;p&gt;Fenner, M., Gmez, C. G., &amp;amp; Thorisson, G. A. (2011). Key issue: Collective action for the open researcher &amp;amp; contributor iD (oRCID). &lt;em&gt;Serials: The Journal for the Serials Community&lt;/em&gt;, &lt;em&gt;24&lt;/em&gt;(3), 277–279. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1629/24277&quot;&gt;http://dx.doi.org/10.1629/24277&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -980,7 +1076,8 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;h2&gt;References&lt;/h2&gt;
 &lt;p&gt;D’Arcy, E., &amp;amp; Moynihan, R. (2009). Can the relationship between doctors and drug companies ever be a healthy one? &lt;em&gt;PLoS Medicine&lt;/em&gt;, &lt;em&gt;6&lt;/em&gt;(7), e1000075. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1371/journal.pmed.1000075&quot;&gt;http://dx.doi.org/10.1371/journal.pmed.1000075&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Moher, D., Liberati, A., Tetzlaff, J., &amp;amp; Altman, D. G. (2009). Preferred reporting items for systematic reviews and meta-analyses: The pRISMA statement. &lt;em&gt;PLoS Medicine&lt;/em&gt;, &lt;em&gt;6&lt;/em&gt;(7), e1000097. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1371/journal.pmed.1000097&quot;&gt;http://dx.doi.org/10.1371/journal.pmed.1000097&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -1022,7 +1119,8 @@ PDB:  1mbn&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&quot;references&quot;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
 &lt;p&gt;Kafkas, Ş., Kim, J.-H., &amp;amp; McEntyre, J. R. (2013). Database Citation in Full Text Biomedical Articles. &lt;em&gt;PLoS ONE&lt;/em&gt;. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1371/journal.pone.0063184&quot;&gt;http://dx.doi.org/10.1371/journal.pone.0063184&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -1110,7 +1208,8 @@ PDB:  1mbn&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;References&lt;/h2&gt;
 &lt;p&gt;Ethan P. White, Z. T. B., Elita Baldrige. (2013). Nine simple ways to make it easier to (re)use your data. &lt;em&gt;Gobbledygook&lt;/em&gt;. Retrieved from &lt;a href=&quot;http://blog.martinfenner.org/2013/06/25/nine-simple-ways-to-make-it-easier-to-reuse-your-data&quot;&gt;http://blog.martinfenner.org/2013/06/25/nine-simple-ways-to-make-it-easier-to-reuse-your-data&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Lord, P., &amp;amp; Marshall, L. (2012). Greycite: Citing the web. &lt;em&gt;An Exercise in Irrelevance&lt;/em&gt;. Retrieved from &lt;a href=&quot;http://www.russet.org.uk/blog/2071&quot;&gt;http://www.russet.org.uk/blog/2071&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -1391,7 +1490,8 @@ PDB:  1mbn&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Wieczorek, J., Bloom, D., Guralnick, R., Blum, S., D&lt;span&gt;ö&lt;/span&gt;ring, M., Giovanni, R., … Vieglais, D. (2012). Darwin core: An evolving community-developed biodiversity data standard. &lt;em&gt;PLoS ONE&lt;/em&gt;, &lt;em&gt;7&lt;/em&gt;(1), e29715. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pone.0029715&quot;&gt;10.1371/journal.pone.0029715&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Zimmerman, A. (2007). Not by metadata alone: the use of diverse forms of knowledge to locate data for reuse. &lt;em&gt;International Journal on Digital Libraries&lt;/em&gt;, &lt;em&gt;7&lt;/em&gt;(1-2), 5–16. doi:&lt;a href=&quot;http://dx.doi.org/10.1007/s00799-007-0015-8&quot;&gt;10.1007/s00799-007-0015-8&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Zimmerman, A. S. (2003). &lt;em&gt;Data sharing and secondary use of scientific data: Experiences of ecologists&lt;/em&gt; (PhD thesis). The University of Michigan.&lt;/p&gt;
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -1415,7 +1515,8 @@ PDB:  1mbn&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This workflow now makes a lot of sense to me, as it uses existing solutions, but also allows for easy entering of citation information in a way similar to the &lt;a href=&quot;http://carlboettiger.info/2012/05/30/knitcitations.html&quot;&gt;knitcitations&lt;/a&gt; and &lt;a href=&quot;http://wordpress.org/plugins/kcite/&quot;&gt;kcite&lt;/a&gt; tools. As I use jekyll and am a Ruby developer, I will implement the citation parsing as a jekyll plugin.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -1448,7 +1549,8 @@ PDB:  1mbn&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The idea of tests that came up in the Markdown workshop is also great. Ideally we have a set of tests that we (or someone else, e.g. a publisher) can run to make sure that the markdown in the document conforms with the reference implementation. This could also include basic checks for required metadata (title, author, publication date, etc.), and could optionally validate the citations as well.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -1480,7 +1582,8 @@ This is [an example](http://example.com/ &amp;quot;Title&amp;quot;) inline link.
 &lt;p&gt;There is obviously a need for tools that make adding citations to scholarly markdown easier. This could be accomplished by relatively small changes to existing reference managers (enabling copy/paste of citations in reference-style markdown format), or by tools similar to the &lt;a href=&quot;http://carlboettiger.info/2012/05/30/knitcitations.html&quot;&gt;knitcitations&lt;/a&gt; and &lt;a href=&quot;http://wordpress.org/plugins/kcite/&quot;&gt;kcite&lt;/a&gt; mentioned above.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -1544,7 +1647,8 @@ y &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k
 &lt;p&gt;In a way this approach to scholarly markdown is much more difficult than building a nice online collaborative writing tool. But for me scholarly markdown is not about competing with Microsoft Word, it is about building something new that scholars want to use because it allows them to do something that is impossible with the existing tools. For the same reason my todo item at the end of the workshop was &lt;em&gt;think about document type where markdown shines&lt;/em&gt;. The R example above is a great example where markdown shines. If you can think of additional examples, please add them to the comments.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -1558,7 +1662,8 @@ y &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k
 &lt;p&gt;The new site is work in progress. Over time I will copy over all old blog posts from PLOS Blogs, and will work on the layout as well as additional features. Special thanks to &lt;a href=&quot;http://carlboettiger.info&quot;&gt;Carl Boettiger&lt;/a&gt; for helping me to get started with Jekyll and Github pages.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -1572,7 +1677,8 @@ y &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k
 &lt;p&gt;This event is organized by &lt;a href=&quot;http://twitter.com/houshuang&quot; title=&quot;Stian Håklev&quot;&gt;Stian Håklev&lt;/a&gt; and myself, with generous support by a &lt;a href=&quot;http://www.force11.org/node/4358&quot;&gt;1K Challenge prize from Force11&lt;/a&gt;, and hosting provided by PLOS.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -1643,7 +1749,8 @@ y &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k
 &lt;div class=&quot;references&quot;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
 &lt;p&gt;Kowalczyk, S., &amp;amp; Shankar, K. (2011). Data sharing in the sciences. &lt;em&gt;Annual Review of Information Science and Technology&lt;/em&gt;, &lt;em&gt;45&lt;/em&gt;(1), 247–294. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1002/aris.2011.1440450113&quot;&gt;http://dx.doi.org/10.1002/aris.2011.1440450113&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  <entry>
@@ -1676,7 +1783,8 @@ y &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k
 &lt;p&gt;BTW, this wouldn’t be the first community flavor for Markdown. The screenwriting community has done this already with &lt;a href=&quot;http://fountain.io&quot;&gt;Fountain&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 
-&lt;/div&gt;</content>
+&lt;/div&gt;
+</content>
  </entry>
  
  
