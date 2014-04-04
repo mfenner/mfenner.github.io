@@ -25,6 +25,9 @@ exclude:
   - vendor
   - .travis.yml
 
+include:
+  - .nojekyll
+
 permalink: /:categories/:year/:month/:day/:title
 
 paginate: 10
