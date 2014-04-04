@@ -10,7 +10,7 @@ Literatue Programming by [Donald Knuth](http://www-cs-faculty.stanford.edu/~uno/
 
 > The program is also viewed as a hypertext document on the World Wide Web.
 
-This blog post is an example for such a document. The page is written in **markdown** (click the link in the sidebar for the source file), and all embedded code was executed when this page was generated, i.e. when the markdown was converted to HTML and the blog post was published. To demonstrate this I have embedded code in three different languages below - the output is the second code block.
+This blog post is an example for such a document. The page is written in **markdown** (markdown file available [here](https://github.com/mfenner/mfenner.github.io/blob/source/_posts/2014-04-04-literate-blogging.Rmd)), and all embedded code was executed when this page was generated, i.e. when the markdown was converted to HTML and the blog post was published. To demonstrate this I have embedded code in three different languages below - the output is the second code block.
 
 In R you have
 
