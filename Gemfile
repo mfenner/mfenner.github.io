@@ -1,8 +1,8 @@
-source "http://production.cf.rubygems.org/"
+source 'https://rubygems.org'
 
-gem "rake", "~> 10.1.1"
+gem "rake", "~> 10.2.1"
 
-gem "jekyll", "~> 1.4.3"
+gem "jekyll", "~> 1.5.0"
 gem "jekyll-assets", "~> 0.7.6"
 gem "jekyll-scholar", "~> 2.0.0"
 

@@ -1,84 +1,91 @@
 require 'open3'
 
 module Jekyll
+  module Converters
+    class Markdown < Converter
+      safe false
 
-class PandocGenerator < Generator
-  def generate(site)
-    outputs = site.config['pandoc']['outputs']
-    flags  = site.config['pandoc']['flags']
-
-    outputs.each_pair do |output, extra_flags|
-
-# Skip conversion if we're skipping, but still cleanup the outputs hash
-      next if site.config['pandoc']['skip']
-
-      site.posts.each do |post|
-
-        post_path = File.join(output, File.dirname(post.url))
-
-        puts "Creating #{post_path}"
-        FileUtils.mkdir_p(post_path)
-
-        filename = File.join(output, post.url).gsub(/\.html$/, ".#{output}")
-
-# Special cases, stdout is disabled for these
-        if ['pdf', 'epub', 'odt', 'docx'].include?(output)
-          output_flag = "-o #{filename}"
-        else
-          output_flag = "-t #{output} -o #{filename}"
-        end
-
-# Add cover if epub
-        if output == "epub" and not post.data['cover'].nil?
-          output_flag << " --epub-cover-image=#{post.data['cover']}"
-        end
-
-# The command
-        pandoc = "pandoc #{flags} #{output_flag} #{extra_flags}"
-
-# Inform what's being done
-        puts pandoc
-
-# Make the markdown header so pandoc receives metadata
-        content  = "% #{post.data['title']}\n"
-        content << "% #{post.data['author']}\n"
-#        content << "% #{post.date}\n\n"
-        content << post.content
-
-# Do the stuff
-        Open3::popen3(pandoc) do |stdin, stdout, stderr|
-          stdin.puts content
-          stdin.close
-        end
-
-# Skip failed files
-        next if not File.exist? filename
-
-# Add them to the static files list
-        site.static_files << StaticFile.new(site, site.source, '', filename)
-      end
-    end
-  end
-end
-
-module Converters
-# Just return html5
-  class Markdown < Converter
-    def convert(content)
-      flags  = "#{@config['pandoc']['flags']} #{@config['pandoc']['site_flags']}"
-
-      output = ''
-      Open3::popen3("pandoc -t html5 #{flags}") do |stdin, stdout, stderr|
-        stdin.puts content
-        stdin.close
-
-        output = stdout.read.strip
-
+      # to allow pandoc parsing, we override the setup method from
+      # https://github.com/jekyll/jekyll/blob/master/lib/jekyll/converters/markdown.rb
+      def setup
+        return if @setup
+        @parser =
+          case @config['markdown'].downcase
+            when 'redcarpet' then RedcarpetParser.new(@config)
+            when 'kramdown' then KramdownParser.new(@config)
+            when 'rdiscount' then RDiscountParser.new(@config)
+            when 'maruku' then MarukuParser.new(@config)
+            when 'pandoc' then PandocParser.new(@config)
+          else
+            # So they can't try some tricky bullshit or go down the ancestor chain, I hope.
+            if allowed_custom_class?(@config['markdown'])
+              self.class.const_get(@config['markdown']).new(@config)
+            else
+              Jekyll.logger.error "Invalid Markdown Processor:", "#{@config['markdown']}"
+              Jekyll.logger.error "", "Valid options are [ maruku | rdiscount | kramdown | redcarpet | pandoc ]"
+              raise FatalException, "Invalid Markdown Processor: #{@config['markdown']}"
+            end
+          end
+        @setup = true
       end
 
-      output
+      class PandocParser
+
+        def initialize(config)
+          require 'open3'
+          @config = config
+        rescue LoadError
+          raise FatalException.new("Missing dependency: pandoc")
+        end
+
+        def convert(content)
+          opts = options(content).map {|k,v| v.nil? ? "--#{k}" : "--#{k}=#{v}" }.join(" ")
+          command = "pandoc -f markdown -t html5 --filter pandoc-citeproc #{opts}"
+
+          Open3.popen3(command) do |stdin, stdout, stderr, wait_thr|
+            stdin.puts content
+            stdin.close
+
+            content = stdout.read
+            exit_status = wait_thr.value
+            if exit_status.success?
+              Jekyll.logger.info "Converting #{stdout.read}"
+            else
+              Jekyll.logger.error "Error converting pandoc #{stderr.read}"
+            end
+            content
+          end
+        end
+
+        # pandoc options, using reasonable defaults
+        # priority in increasing order:
+        # - defaults
+        # - site
+        # - page
+        def default_options
+          { "smart" => nil,
+            "mathjax" => nil }
+        end
+
+        def site_options
+          @config['pandoc'] || {}
+        end
+
+        def page_options(content)
+          if content =~ /\A(---\s*\n.*?\n?)^(---\s*$\n?)/m
+            data = YAML.load($1)["pandoc"] || {}
+          else
+            data = {}
+          end
+        end
+
+        def options(content)
+          opts = default_options
+          opts = opts.merge(site_options)
+          opts = opts.merge(page_options(content))
+        end
+      end
 
     end
   end
-end
 end

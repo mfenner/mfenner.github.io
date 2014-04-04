@@ -1,0 +1,17 @@
+#!/usr/bin/Rscript
+library("knitr")
+# args <- commandArgs(TRUE)
+# args <- strsplit(args, " ")[[1]]
+# spl <- strsplit(args, "=")
+# nams <- sapply(spl, `[`, 1)
+# vals <- sapply(spl, `[`, 2)
+# ind <- grepl("[0-9]+", vals)
+# vals[ind] <- as.numeric(vals[ind])
+# vals[!ind] <- paste("'", vals[!ind], "'", sep = "")
+# call <- paste("list(", paste(nams, vals, sep = "=", collapse = ", "), ")", sep = "")
+# args <- eval(parse(text = call))
+# print(args)
+#do.call(opts_chunk$set, args)
+opts_knit$set(base.url="", base.dir=".", root.dir=NULL, self.contained=FALSE, verbose=FALSE)
+opts_chunk$set(fig.show="hold", fig.path="../mfenner.github.io-pages/figures/", fig.width=10, fig.height=7, dev="svg", warning=FALSE, message=FALSE, comment=NA)
+tmp <- knit(text = readLines(file("stdin")), output=stdout(), quiet=TRUE)

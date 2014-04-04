@@ -1,7 +1,30 @@
 language: haskell
+
+before_install:
+  # Install R
+  - curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
+  - chmod 755 ./travis-tool.sh
+  - ./travis-tool.sh bootstrap
+
 install:
- - bundle install
- - travis_retry cabal install pandoc pandoc-citeproc
+  # Install R packages
+  - ./travis-tool.sh install_github rstudio/rmarkdown
+  - ./travis-tool.sh install_deps
+
+  # Install Pandoc
+  # - mkdir -p $HOME/opt/pandoc
+  # - curl -O https://s3.amazonaws.com/rstudio-buildtools/pandoc-1.12.3.zip
+  # - unzip -j pandoc-1.12.3.zip pandoc-1.12.3/linux/debian/x86_64/*
+  #     -d $HOME/opt/pandoc
+  # - chmod +x $HOME/opt/pandoc/pandoc*
+  # - rm pandoc-1.12.3.zip
+  # - $HOME/opt/pandoc/pandoc --version
+  # - $HOME/opt/pandoc/pandoc-citeproc --version
+  - travis_retry cabal install pandoc pandoc-citeproc
+
+  # Install jekyll and dependencies
+  - travis_retry bundle install
+
 script: bundle exec rake site:deploy
 
 env:

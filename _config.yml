@@ -5,6 +5,8 @@ pygments: true
 relative_source: ../mfenner.github.io/
 destination: ../mfenner.github.io-pages/
 
+keep_files:  ['.git','figures']
+
 # Settings for deploy rake task
 # Username and repo of Github repo, e.g.
 # https://github.com/USERNAME/REPO.git
@@ -20,7 +22,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - changelog.md
-  - "*.Rmd"
   - vendor
   - .travis.yml
 
@@ -61,14 +62,19 @@ atom_path:       /atom.xml
 
 excerpt_separator: <!--more-->
 
-# Markdown Parser (standard Jekyll argument, extended to special parser)
 markdown: pandoc
+markdown_ext:  markdown,mkdown,mkdn,mkd,md,Rmd,rmd
+
 pandoc:
-  skip: true
-  flags: '--smart --mathjax --filter pandoc-citeproc --bibliography=bibliography/references.bib --csl=_styles/apa.csl'
-  outputs:
-    epub:
-    pdf:
+  smart:
+  mathjax:
+  bibliography: bibliography/references.bib
+  csl: _styles/apa.csl
+
+knitr:
+  fig.width: 10
+  fig.height: 7
+  dev: svg
 
 comments :
   provider : disqus
