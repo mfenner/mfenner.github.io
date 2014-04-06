@@ -5,84 +5,46 @@
 
 require 'open3'
 
-module Jekyll
-  module Converters
-    class Markdown < Converter
-      safe false
+class Jekyll::Converters::Markdown
 
-      def matches(ext)
-        rgx = '^\.(' + @config['markdown_ext'].gsub(',','|') +')$'
-        ext =~ Regexp.new(rgx, Regexp::IGNORECASE)
-      end
+  KNITR_CHUNK = "\n```{r"
 
-      def matches_knitr(ext)
-        ext =~ /\.Rmd$/i
-      end
+  def convert(content)
+    setup
 
-      def convert(content)
-        setup
+    # do extra knitr step if we find a knitr code chunk
+    content = knit(content) if content.include? KNITR_CHUNK
 
-        # TODO do extra knitr step only for Rmarkdown files
-        content = knit(content) # if matches_knitr(ext)
-
-        @parser.convert(content)
-      end
-
-      # call knitr, options are used as named args, e.g. fig.width=10
-      def knit(content)
-        opts = options(content).map {|k,v| "#{k}=#{v}" }.join(" ")
-        command = "_plugins/knitrscript.R --args #{opts}"
-
-        Open3.popen3(command) do |stdin, stdout, stderr, wait_thr|
-          stdin.puts content
-          stdin.close
-
-          exit_status = wait_thr.value
-          if exit_status.success?
-            Jekyll.logger.info "Knitting"
-          else
-            Jekyll.logger.error "Error knitting: #{stderr.read}"
-          end
-          content = stdout.read
-        end
-
-        # fix img links for the figures that were generated
-        content = content.gsub("../mfenner_github_io-pages/", "/")
-      end
-
-      # knitr options, using reasonable defaults
-      # priority in increasing order:
-      # - defaults
-      # - site
-      # - page
-      def default_options
-        { "root.dir" => nil,
-          "fig.show" => "hold",
-          "fig.path" => "#{@config['destination']}figures/",
-          "fig.width" => 10,
-          "fig.height" => 7,
-          "dev" => "svg",
-          "warning" => false }
-      end
-
-      def site_options
-        @config['knitr'] || {}
-      end
-
-      def page_options(content)
-        if content =~ /\A(---\s*\n.*?\n?)^(---\s*$\n?)/m
-          data = YAML.load($1)["knitr"] || {}
-        else
-          data = {}
-        end
-      end
-
-      def options(content)
-        opts = default_options
-        opts = opts.merge(site_options)
-        opts = opts.merge(page_options(content))
-      end
-
-    end
+    @parser.convert(content)
   end
+
+  # call knitr with options
+  def knit(content)
+    command = "_plugins/knitrscript.R --args #{options}"
+
+    Open3.popen3(command) do |stdin, stdout, stderr, wait_thr|
+      stdin.puts content
+      stdin.close
+
+      raise StandardError, "Error knitting: #{stderr.read}" if wait_thr.value.exitstatus > 0
+      content = stdout.read
+    end
+
+    # fix img links for the figures that were generated
+    content = content.gsub("../mfenner.github.io-pages/", "/")
+  end
+
+  # merge default options and options from _config.yml
+  # turn into string with named args, e.g. fig.width=10
+  def options
+    opts = { "root.dir" => nil,
+             "fig.show" => "hold",
+             "fig.path" => "#{@config['destination']}figures/",
+             "fig.width" => 10,
+             "fig.height" => 7,
+             "dev" => "svg",
+             "warning" => false }.merge(@config['knitr'])
+    opts.map {|k,v| "#{k}=#{v}" }.join(" ")
+  end
+
 end
