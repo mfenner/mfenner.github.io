@@ -4,7 +4,7 @@
  <title>Gobbledygook</title>
  <link href="http://blog.martinfenner.org//atom.xml" rel="self"/>
  <link href="http://blog.martinfenner.org"/>
- <updated>2014-04-04T21:14:40+00:00</updated>
+ <updated>2014-04-06T19:53:38+00:00</updated>
  <id>http://blog.martinfenner.org</id>
  <author>
    <name>Martin Fenner</name>
@@ -76,7 +76,7 @@ d$y &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot
 
 &lt;span class=&quot;kw&quot;&gt;par&lt;/span&gt;(opar)&lt;/code&gt;&lt;/pre&gt;
 &lt;figure&gt;
-&lt;img src=&quot;/figures/density_plot_example.svg&quot; alt=&quot;Figure 1. Citation counts for PLOS Biology articles published in 2010. Scopus citation counts plotted as a probability distribution for all 197 PLOS Biology research articles published in 2010. Data collected May 20, 2013. Median 19 citations; 10% of papers have at least 50 citations. From Fenner (2013).&quot; /&gt;&lt;figcaption&gt;&lt;strong&gt;Figure 1. Citation counts for PLOS Biology articles published in 2010.&lt;/strong&gt; Scopus citation counts plotted as a probability distribution for all 197 &lt;em&gt;PLOS Biology&lt;/em&gt; research articles published in 2010. Data collected May 20, 2013. Median 19 citations; 10% of papers have at least 50 citations. From Fenner &lt;span class=&quot;citation&quot; data-cites=&quot;fenner2013&quot;&gt;(2013)&lt;/span&gt;.&lt;/figcaption&gt;
+&lt;img src=&quot;../mfenner_github_io-pages/figures/density_plot_example.svg&quot; alt=&quot;Figure 1. Citation counts for PLOS Biology articles published in 2010. Scopus citation counts plotted as a probability distribution for all 197 PLOS Biology research articles published in 2010. Data collected May 20, 2013. Median 19 citations; 10% of papers have at least 50 citations. From Fenner (2013).&quot; /&gt;&lt;figcaption&gt;&lt;strong&gt;Figure 1. Citation counts for PLOS Biology articles published in 2010.&lt;/strong&gt; Scopus citation counts plotted as a probability distribution for all 197 &lt;em&gt;PLOS Biology&lt;/em&gt; research articles published in 2010. Data collected May 20, 2013. Median 19 citations; 10% of papers have at least 50 citations. From Fenner &lt;span class=&quot;citation&quot; data-cites=&quot;fenner2013&quot;&gt;(2013)&lt;/span&gt;.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;All this functionality is provided by &lt;a href=&quot;http://yihui.name/knitr/&quot;&gt;knitr&lt;/a&gt;, a package for the R statistical programming language. knitr has been around for a while, but integration into the &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; blogging platform is still fragile. Earlier this week at the &lt;a href=&quot;https://github.com/ropensci/hackathon&quot;&gt;rOpenSci hackathon&lt;/a&gt; (more on this later) a group of us worked hard to improve this integration. We are still not completely done, but the source code is available &lt;a href=&quot;https://github.com/ropensci/docs&quot;&gt;here&lt;/a&gt;. Most importantly, all the conversion happens on the server, and we are only using freely available tools. I have now enabled this functionality for this blog, so expect more code embedded examples in the future.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
