@@ -4,7 +4,7 @@
  <title>Gobbledygook</title>
  <link href="http://blog.martinfenner.org//atom.xml" rel="self"/>
  <link href="http://blog.martinfenner.org"/>
- <updated>2014-04-06T19:53:38+00:00</updated>
+ <updated>2014-04-08T05:55:32-07:00</updated>
  <id>http://blog.martinfenner.org</id>
  <author>
    <name>Martin Fenner</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>Literate Blogging</title>
    <link href="http://blog.martinfenner.org/2014/04/04/literate-blogging"/>
-   <updated>2014-04-04T00:00:00+00:00</updated>
+   <updated>2014-04-04T00:00:00-07:00</updated>
    <id>http://blog.martinfenner.org/2014/04/04/literate-blogging</id>
    <content type="html">&lt;blockquote&gt;
 &lt;p&gt;Literate programming is a methodology that combines a programming language with a documentation language, thereby making programs more robust, more portable, more easily maintained, and arguably more fun to write than programs that are written only in a high-level language. The main idea is to treat a program as a piece of literature, addressed to human beings rather than to a computer. The program is also viewed as a hypertext document, rather like the World Wide Web.&lt;!--more--&gt;&lt;/p&gt;
@@ -81,7 +81,7 @@ d$y &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot
 &lt;p&gt;All this functionality is provided by &lt;a href=&quot;http://yihui.name/knitr/&quot;&gt;knitr&lt;/a&gt;, a package for the R statistical programming language. knitr has been around for a while, but integration into the &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; blogging platform is still fragile. Earlier this week at the &lt;a href=&quot;https://github.com/ropensci/hackathon&quot;&gt;rOpenSci hackathon&lt;/a&gt; (more on this later) a group of us worked hard to improve this integration. We are still not completely done, but the source code is available &lt;a href=&quot;https://github.com/ropensci/docs&quot;&gt;here&lt;/a&gt;. Most importantly, all the conversion happens on the server, and we are only using freely available tools. I have now enabled this functionality for this blog, so expect more code embedded examples in the future.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
-&lt;p&gt;Fenner, M. (2013). What can article-level metrics do for you? &lt;em&gt;PLoS Biol&lt;/em&gt;, &lt;em&gt;11&lt;/em&gt;(10), e1001687. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pbio.1001687&quot;&gt;10.1371/journal.pbio.1001687&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Fenner, M. (2013). What Can Article-Level Metrics Do for You? &lt;em&gt;PLoS Biol&lt;/em&gt;, &lt;em&gt;11&lt;/em&gt;(10), e1001687. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pbio.1001687&quot;&gt;10.1371/journal.pbio.1001687&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Knuth, D. E., Stanford University, &amp;amp; Computer Science Department. (1983). &lt;em&gt;Literate programming&lt;/em&gt;. Stanford, CA: Dept. of Computer Science, Stanford University.&lt;/p&gt;
 &lt;/div&gt;
 </content>
@@ -90,7 +90,7 @@ d$y &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot
  <entry>
    <title>Continuous Publishing</title>
    <link href="http://blog.martinfenner.org/2014/03/10/continuous-publishing"/>
-   <updated>2014-03-10T00:00:00+00:00</updated>
+   <updated>2014-03-10T00:00:00-07:00</updated>
    <id>http://blog.martinfenner.org/2014/03/10/continuous-publishing</id>
    <content type="html">&lt;p&gt;Earlier this week Björn Brembs wrote in a blog post (&lt;a href=&quot;http://bjoern.brembs.net/2014/03/what-is-the-difference-between-text-data-and-code/&quot;&gt;What Is The Difference Between Text, Data And Code?&lt;/a&gt;):&lt;/p&gt;
 &lt;blockquote&gt;
@@ -123,7 +123,7 @@ d$y &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot
  <entry>
    <title>Are static Websites the Future or the Past?</title>
    <link href="http://blog.martinfenner.org/2014/03/05/are-static-websites-the-future-or-the-past"/>
-   <updated>2014-03-05T00:00:00+00:00</updated>
+   <updated>2014-03-05T00:00:00-08:00</updated>
    <id>http://blog.martinfenner.org/2014/03/05/are-static-websites-the-future-or-the-past</id>
    <content type="html">&lt;p&gt;Last week I had a little discussion on Twitter about a great blog post by Zach Holman: &lt;a href=&quot;http://zachholman.com/posts/only-90s-developers/&quot;&gt;Only 90s Web Developers Remember This&lt;/a&gt;. The post is not only fun to read, but also reminded me that it is now almost 20 years (1995) that I built my first website - of course using some of the techniques (the one pixel gif!, the &lt;code&gt;&amp;amp;nbsp;&lt;/code&gt; tag!) described in the post.&lt;!--more--&gt;&lt;/p&gt;
 &lt;figure&gt;
@@ -161,7 +161,7 @@ d$y &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot
  <entry>
    <title>Six Misunderstandings about Scholarly Markdown</title>
    <link href="http://blog.martinfenner.org/2014/03/03/six-misunderstandings-about-scholarly-markdown"/>
-   <updated>2014-03-03T00:00:00+00:00</updated>
+   <updated>2014-03-03T00:00:00-08:00</updated>
    <id>http://blog.martinfenner.org/2014/03/03/six-misunderstandings-about-scholarly-markdown</id>
    <content type="html">&lt;p&gt;In this post I want to talk about some of the misunderstandings I frequently encounter when discussing &lt;a href=&quot;/2013/06/17/what-is-scholarly-markdown/&quot;&gt;markdown as a format for authoring scholarly documents&lt;/a&gt;.&lt;!--more--&gt;&lt;/p&gt;
 &lt;h2 id=&quot;scholars-will-always-use-microsoft-word&quot;&gt;Scholars will always use Microsoft Word&lt;/h2&gt;
@@ -191,7 +191,7 @@ d$y &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot
 &lt;p&gt;Although the future for consuming scholarly documents is clearly HTML (and ePub), and there are great HTML editors, I’m not so sure that HTML will become the default for authoring environments. This is the reason why markdown and related markup languages were invented, and even with modern WYSIWYG editors working directly with HTML is not always the best choice. HTML has two problems: a) it is not as human-readable as markdown and therefore requires an additional layer for authoring, and b) it is not as structured as XML, which makes it difficult to create some of the rigid document structure required for scholarly documents. O’Reilly is trying to get more structure into HTML for print and digital books with &lt;a href=&quot;https://github.com/oreillymedia/htmlbook&quot;&gt;HTMLBook&lt;/a&gt;, but with too much structure you might run into similar problems for authoring as discussed above for JATS XML. And of course you can include HTML in markdown documents.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
-&lt;p&gt;The LaTeX Team. (2014). LaTeX - a document preparation system. &lt;a href=&quot;http://www.latex-project.org/&quot;&gt;http://www.latex-project.org/&lt;/a&gt;. Retrieved from &lt;a href=&quot;http://www.latex-project.org/&quot;&gt;http://www.latex-project.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The LaTeX Team. (2014). LaTeX - A document preparation system. &lt;a href=&quot;http://www.latex-project.org/&quot;&gt;http://www.latex-project.org/&lt;/a&gt;. Retrieved from &lt;a href=&quot;http://www.latex-project.org/&quot;&gt;http://www.latex-project.org/&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </content>
  </entry>
@@ -199,7 +199,7 @@ d$y &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot
  <entry>
    <title>From Markdown to JATS XML in one Step</title>
    <link href="http://blog.martinfenner.org/2013/12/12/from-markdown-to-jats-xml-in-one-step"/>
-   <updated>2013-12-12T00:00:00+00:00</updated>
+   <updated>2013-12-12T00:00:00-08:00</updated>
    <id>http://blog.martinfenner.org/2013/12/12/from-markdown-to-jats-xml-in-one-step</id>
    <content type="html">&lt;p&gt;The Journal Article Tag Suite (&lt;a href=&quot;http://jats.nlm.nih.gov/&quot;&gt;JATS&lt;/a&gt;) is a NISO standard that defines a set of XML elements and attributes for tagging journal articles. JATS is not only used for fulltext content at PubMed Central (and JATS has evolved from the NLM Archiving and Interchange Tag Suite originally developed for PubMed Central), but is also increasinly used by publishers.&lt;!--more--&gt;&lt;/p&gt;
 &lt;p&gt;For many publishers the &lt;em&gt;version of record&lt;/em&gt; of an article is stored in XML, and other formats (currently HTML, PDF and increasingly ePub) are generated from this XML. Unfortunately the process of converting author-submitted manuscripts into JATS-compliant XML is time-consuming and costly, and this is a problem in particular for small publishers.&lt;/p&gt;
@@ -222,7 +222,7 @@ d$y &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot
  <entry>
    <title>What Can Article Level Metrics Do for You?</title>
    <link href="http://blog.martinfenner.org/2013/12/11/what-can-article-level-metrics-do-for-you"/>
-   <updated>2013-12-11T00:00:00+00:00</updated>
+   <updated>2013-12-11T00:00:00-08:00</updated>
    <id>http://blog.martinfenner.org/2013/12/11/what-can-article-level-metrics-do-for-you</id>
    <content type="html">&lt;p&gt;&lt;em&gt;Article-level metrics (ALMs) provide a wide range of metrics about the uptake of an individual journal article by the scientific community after publication. They include citations, usage statistics, discussions in online comments and social media, social bookmarking, and recommendations. In this essay, we describe why article-level metrics are an important extension of traditional citation-based journal metrics and provide a number of example from ALM data collected for PLOS Biology.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;This is an open-access article distributed under the terms of the Creative Commons Attribution License, authored by me and &lt;a href=&quot;http://dx.doi.org/10.1371/journal.pbio.1001687&quot;&gt;originally published Oct 22, 2013 in PLOS Biology&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
@@ -462,7 +462,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;p&gt;Plum Analytics. (2013). Retrieved from &lt;a href=&quot;http://www.plumanalytics.com/&quot;&gt;http://www.plumanalytics.com/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Schekman, R., &amp;amp; Patterson, M. (2013). Reforming research assessment. &lt;em&gt;eLife&lt;/em&gt;, &lt;em&gt;2&lt;/em&gt;, e00855. doi:&lt;a href=&quot;http://dx.doi.org/10.7554/eLife.00855&quot;&gt;10.7554/eLife.00855&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Tasmanian devil. (2013). &lt;em&gt;Wikipedia&lt;/em&gt;. Retrieved from &lt;a href=&quot;http://en.wikipedia.org/wiki/Tasmanian\devil&quot;&gt;http://en.wikipedia.org/wiki/Tasmanian\devil&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Video Tip of the Week: Turkeys and their genomes. (2012). &lt;em&gt;The openHelix blog&lt;/em&gt;. Retrieved from &lt;a href=&quot;http://blog.openhelix.eu/?p=14388&quot;&gt;http://blog.openhelix.eu/?p=14388&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Video Tip of the Week: Turkeys and their genomes. (2012). &lt;em&gt;The OpenHelix Blog&lt;/em&gt;. Retrieved from &lt;a href=&quot;http://blog.openhelix.eu/?p=14388&quot;&gt;http://blog.openhelix.eu/?p=14388&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </content>
  </entry>
@@ -470,7 +470,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
  <entry>
    <title>Example article with embedded code and data</title>
    <link href="http://blog.martinfenner.org/2013/12/11/example-article-with-embedded-code-and-data"/>
-   <updated>2013-12-11T00:00:00+00:00</updated>
+   <updated>2013-12-11T00:00:00-08:00</updated>
    <id>http://blog.martinfenner.org/2013/12/11/example-article-with-embedded-code-and-data</id>
    <content type="html">&lt;p&gt;In October I published an essay on Article-Level Metrics (ALM) in PLOS Biology &lt;span class=&quot;citation&quot; data-cites=&quot;fenner2013&quot;&gt;(Fenner, 2013)&lt;/span&gt;. The essay is a good introduction into Article-Level Metrics, and I am proud that it is part of the &lt;a href=&quot;http://dx.doi.org/10.1371/issue.pcol.v06.i03&quot;&gt;Tenth Anniversary PLOS Biology Collection&lt;/a&gt;. Like all PLOS content, the article was published with a &lt;a href=&quot;http://blogs.plos.org/tech/creative-commons-for-science-interview-with-puneet-kishor/&quot;&gt;Creative Commons attribution license&lt;/a&gt;, allowing me to republish the article on this blog. I have now done so and the article is available &lt;a href=&quot;/2013/12/11/what-can-article-level-metrics-do-for-you/&quot;&gt;here&lt;/a&gt;.&lt;!--more--&gt;&lt;/p&gt;
 &lt;p&gt;Of course I didn’t want to simply republish the article, but I wanted to publish an improved version. The article has five figures, four of them show visualizations of ALM data that were generated using R (the fifth figure is a table reproduced from another article). The PLOS article includes the ALM dataset and the R scripts used to generate the figures as &lt;a href=&quot;http://dx.doi.org/10.1371/journal.pbio.1001687.s001&quot;&gt;supplementary information&lt;/a&gt;. What I have done now is to recreate the article as a single markdown file (available &lt;a href=&quot;https://github.com/mfenner/blog/blob/master/_posts/2013-12-11-what-can-article-level-metrics-do-for-you.Rmd&quot;&gt;here&lt;/a&gt;) that has all R code embedded. Using R and &lt;a href=&quot;http://yihui.name/knitr/&quot;&gt;knitr&lt;/a&gt; - and the &lt;a href=&quot;/data/alm_report_plos_biology_2013-05-20.csv&quot;&gt;CSV file with the ALM data&lt;/a&gt; - everyone can now reproduce the figures from the paper by simply running the embedded code, and can dig deeper into the data.&lt;/p&gt;
@@ -482,7 +482,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;p&gt;Lastly, I wanted to generate nicer HTML for a better online reading experience. I haven’t done anything fancy, but most publishers seem to focus on navigation around an article, so that very little screen real estate is left for the actual content of the article. I’ve tried to improve readability by reducing the navigation areas to a minimum, by using readable fonts in larger sizes: &lt;a href=&quot;https://typekit.com/fonts/minion-pro&quot;&gt;Adobe Minion Pro&lt;/a&gt; for the body text and &lt;a href=&quot;https://typekit.com/fonts/myriad-pro&quot;&gt;Adobe Myriad Pro&lt;/a&gt; for headings, tables and figure legends.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
-&lt;p&gt;Fenner, M. (2013). What can article-level metrics do for you? &lt;em&gt;PLoS Biol&lt;/em&gt;, &lt;em&gt;11&lt;/em&gt;(10), e1001687. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pbio.1001687&quot;&gt;10.1371/journal.pbio.1001687&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Fenner, M. (2013). What Can Article-Level Metrics Do for You? &lt;em&gt;PLoS Biol&lt;/em&gt;, &lt;em&gt;11&lt;/em&gt;(10), e1001687. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pbio.1001687&quot;&gt;10.1371/journal.pbio.1001687&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </content>
  </entry>
@@ -490,7 +490,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
  <entry>
    <title>Opening Science - the Book</title>
    <link href="http://blog.martinfenner.org/2013/12/05/opening-science---the-book"/>
-   <updated>2013-12-05T00:00:00+00:00</updated>
+   <updated>2013-12-05T00:00:00-08:00</updated>
    <id>http://blog.martinfenner.org/2013/12/05/opening-science---the-book</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.openingscience.org/get-the-book/&quot;&gt;Opening Science: The Evolving Guide on How the Internet is Changing Research, Collaboration and Scholarly Publishing&lt;/a&gt; is a SpringerOpen book (using a &lt;a href=&quot;http://book.openingscience.org/cases_recipes_howtos/creative_commons_licences&quot;&gt;Creative Commons Attribution-NonCommercial license&lt;/a&gt;) that will be published in a few weeks. If you can’t wait for the book to be published and/or you want to make comments or suggestions, go to the dynamic book online version at &lt;a href=&quot;http://book.openingscience.org&quot;&gt;http://book.openingscience.org&lt;/a&gt;.&lt;!--more--&gt; I am an author or co-author of three chapters (&lt;a href=&quot;http://book.openingscience.org/tools/reference_management&quot;&gt;Reference Management&lt;/a&gt;, &lt;a href=&quot;http://book.openingscience.org/vision/altmetrics&quot;&gt;Altmetrics and Other Novel Measures for Scientific Impact&lt;/a&gt;, &lt;a href=&quot;http://book.openingscience.org/cases_recipes_howtos/unique_identifiers_for_researchers&quot;&gt;Unique Identifiers for Researchers&lt;/a&gt;) and have helped put the dynamic book together. The book is generated from markdown files hosted in a &lt;a href=&quot;https://github.com/openingscience/book/&quot;&gt;public Github repo&lt;/a&gt; using &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; and &lt;a href=&quot;http://johnmacfarlane.net/pandoc/&quot;&gt;Pandoc&lt;/a&gt;, and we use &lt;a href=&quot;http://prose.io/&quot;&gt;Prose&lt;/a&gt; to enable online editing of the content.&lt;/p&gt;
 &lt;!--more--&gt;
@@ -506,7 +506,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
  <entry>
    <title>The Grammar of Scholarly Communication</title>
    <link href="http://blog.martinfenner.org/2013/11/17/the-grammar-of-scholarly-communication"/>
-   <updated>2013-11-17T00:00:00+00:00</updated>
+   <updated>2013-11-17T00:00:00-08:00</updated>
    <id>http://blog.martinfenner.org/2013/11/17/the-grammar-of-scholarly-communication</id>
    <content type="html">&lt;p&gt;Authoring of scholarly articles is a recurring theme in this blog since it started in 2008. Authoring is still in desperate need for improvement, and nobody has convincingly figured out how to solve this problem.&lt;!--more--&gt; Authoring involves several steps, and it helps to think about them separately:&lt;/p&gt;
 &lt;ul&gt;
@@ -558,7 +558,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
  <entry>
    <title>What is holding us back?</title>
    <link href="http://blog.martinfenner.org/2013/11/11/what-is-holding-us-back"/>
-   <updated>2013-11-11T00:00:00+00:00</updated>
+   <updated>2013-11-11T00:00:00-08:00</updated>
    <id>http://blog.martinfenner.org/2013/11/11/what-is-holding-us-back</id>
    <content type="html">&lt;p&gt;Last Friday and Saturday the 6th &lt;a href=&quot;http://www.nature.com/spoton/event/spoton-london2013/&quot;&gt;SpotOn London conference&lt;/a&gt; tool place at the British Library. I had a great time with many interesting sessions and good conversations both in and between sessions. But I might be biased, since I helped organize the event, and in particular did help put the &lt;a href=&quot;http://www.nature.com/spoton/?cat=11&quot;&gt;sessions for the Tools strand&lt;/a&gt; together.&lt;!--more--&gt;&lt;/p&gt;
 &lt;figure&gt;
@@ -591,7 +591,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
  <entry>
    <title>What is the Value of Hack Days?</title>
    <link href="http://blog.martinfenner.org/2013/11/04/what-is-the-value-of-hack-days"/>
-   <updated>2013-11-04T00:00:00+00:00</updated>
+   <updated>2013-11-04T00:00:00-08:00</updated>
    <id>http://blog.martinfenner.org/2013/11/04/what-is-the-value-of-hack-days</id>
    <content type="html">&lt;p&gt;This Friday and Saturday the &lt;a href=&quot;http://www.nature.com/spoton/event/spoton-london2013/&quot;&gt;SpotOn London Conference&lt;/a&gt; will take place at the British Library in London. I am very excited, as I have come to this conference since the &lt;a href=&quot;https://twitter.com/McDawg/status/397068628102610945&quot;&gt;first one in 2008&lt;/a&gt;, and have helped organize the event since 2009. The conference is about science communication in the broadest sense, and has three strands that focus on &lt;em&gt;science communication, science policy and tools&lt;/em&gt;.&lt;!--more--&gt; Equally important as the sessions are of course the many highly engaging informal discussions of the 250 participants that take place between and after the sessions.&lt;/p&gt;
 &lt;figure&gt;
@@ -653,7 +653,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
  <entry>
    <title>Commenting on scientific papers</title>
    <link href="http://blog.martinfenner.org/2013/10/25/commenting-on-scientific-papers"/>
-   <updated>2013-10-25T00:00:00+00:00</updated>
+   <updated>2013-10-25T00:00:00-07:00</updated>
    <id>http://blog.martinfenner.org/2013/10/25/commenting-on-scientific-papers</id>
    <content type="html">&lt;p&gt;I think it is fair to say that commenting on scientific papers is broken. And with commenting I mean online comments that are publicly available, not informal discussions in journal clubs or at meetings. This definition would include discussions of papers on social media such as Twitter or Facebook. Why do I think that commenting is broken?&lt;!--more--&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -681,7 +681,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;p&gt;&lt;em&gt;10/26/13: added link to the recently launched &lt;a href=&quot;http://blog.peerj.com/post/62886292466/peerj-questions-a-new-way-to-never-publish-forget&quot;&gt;PeerJ Questions&lt;/a&gt; which uses a question and answer format (thanks to Jason Hoyt for reminding me).&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
-&lt;p&gt;Fenner, M. (2013). What can article-level metrics do for you? &lt;em&gt;PLoS Biol&lt;/em&gt;, &lt;em&gt;11&lt;/em&gt;(10), e1001687. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pbio.1001687&quot;&gt;10.1371/journal.pbio.1001687&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Fenner, M. (2013). What Can Article-Level Metrics Do for You? &lt;em&gt;PLoS Biol&lt;/em&gt;, &lt;em&gt;11&lt;/em&gt;(10), e1001687. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pbio.1001687&quot;&gt;10.1371/journal.pbio.1001687&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </content>
  </entry>
@@ -689,7 +689,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
  <entry>
    <title>What Can Article Level Metrics Do for You?</title>
    <link href="http://blog.martinfenner.org/2013/10/23/what-can-article-level-metrics-do-for-you"/>
-   <updated>2013-10-23T00:00:00+00:00</updated>
+   <updated>2013-10-23T00:00:00-07:00</updated>
    <id>http://blog.martinfenner.org/2013/10/23/what-can-article-level-metrics-do-for-you</id>
    <content type="html">&lt;p&gt;Yesterday PLOS Biology published an essay by me: &lt;a href=&quot;http://dx.doi.org/10.1371/journal.pbio.1001687&quot;&gt;What Can Article Level Metrics Do for You?&lt;/a&gt; &lt;span class=&quot;citation&quot; data-cites=&quot;fenner2013&quot;&gt;(Fenner, 2013)&lt;/span&gt;. I had help from many others in writing the essay, in particular PLOS Biology editor Emma Ganley. I hope that the essay can help researchers get introduced to article-level metrics, and I am honored that the essay is part of the &lt;a href=&quot;http://dx.doi.org/10.1371/journal.pbio.1001688&quot;&gt;PLOS Biology 10th anniversary collection&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The essay is an Open Access article published under a CC-BY license, so not only can everyone read it, but the text and figures can be freely reused, as long as proper attribution is provided, e.g. Fig. 5:&lt;/p&gt;
@@ -700,7 +700,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;p&gt;Incidentally this is also my first PLOS article (my wife is way ahead of me with 5 research articles), so that I can finally look at PLOS article-level metrics as an author - after being the technical lead for this project since May 2012.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
-&lt;p&gt;Fenner, M. (2013). What can article-level metrics do for you? &lt;em&gt;PLoS Biol&lt;/em&gt;, &lt;em&gt;11&lt;/em&gt;(10), e1001687. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pbio.1001687&quot;&gt;10.1371/journal.pbio.1001687&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Fenner, M. (2013). What Can Article-Level Metrics Do for You? &lt;em&gt;PLoS Biol&lt;/em&gt;, &lt;em&gt;11&lt;/em&gt;(10), e1001687. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pbio.1001687&quot;&gt;10.1371/journal.pbio.1001687&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </content>
  </entry>
@@ -708,7 +708,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
  <entry>
    <title>The Complete Article</title>
    <link href="http://blog.martinfenner.org/2013/10/20/the-complete-article"/>
-   <updated>2013-10-20T00:00:00+00:00</updated>
+   <updated>2013-10-20T00:00:00-07:00</updated>
    <id>http://blog.martinfenner.org/2013/10/20/the-complete-article</id>
    <content type="html">&lt;p&gt;Open access to research data is becoming increasingly important, as manifested by memos or press releases from the &lt;a href=&quot;http://www.wellcome.ac.uk/About-us/Policy/Policy-and-position-statements/WTX035043.htm&quot;&gt;Wellcome Trust&lt;/a&gt;, the &lt;a href=&quot;http://europa.eu/rapid/press-release_IP-12-790_en.htm&quot;&gt;European Commission&lt;/a&gt;, and the &lt;a href=&quot;http://www.whitehouse.gov/blog/2013/02/22/expanding-public-access-results-federally-funded-research&quot;&gt;the Office of Science and Technology Policy&lt;/a&gt; (OSTP) from the White House.&lt;!--more--&gt;&lt;/p&gt;
 &lt;p&gt;Open access to research data is important as this makes it easier for other researchers to reproduce the research, and to build upon the research by others by re-analysis of data or combination with other research data. In other words, &lt;a href=&quot;http://royalsociety.org/policy/projects/science-public-enterprise/report/&quot;&gt;Science as an open enterprise&lt;/a&gt;.&lt;/p&gt;
@@ -730,7 +730,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
  <entry>
    <title>Challenges in automated DOI resolution</title>
    <link href="http://blog.martinfenner.org/2013/10/13/broken-dois"/>
-   <updated>2013-10-13T00:00:00+00:00</updated>
+   <updated>2013-10-13T00:00:00-07:00</updated>
    <id>http://blog.martinfenner.org/2013/10/13/broken-dois</id>
    <content type="html">&lt;p&gt;Yesterday we created a set of roughly 10,000 DOIs for journal articles published in 2011 or 2012. We used these DOIs as a reference set in a &lt;a href=&quot;http://almdatachallenge.eventbrite.com/&quot;&gt;data hackathon&lt;/a&gt; around article-level metrics/altmetrics - material for another blog post.&lt;!--more--&gt;&lt;/p&gt;
 &lt;p&gt;The random DOis were generated using the &lt;a href=&quot;http://random.labs.crossref.org/&quot;&gt;CrossRef RanDOIm service&lt;/a&gt;, with article titles fetched from the &lt;a href=&quot;http://labs.crossref.org/openurl/&quot;&gt;CrossRef OpenURL API&lt;/a&gt;. We didn’t have time to properly parse the publication date and only used the publication year. We used the &lt;code&gt;crossref_r&lt;/code&gt; and &lt;code&gt;crossref&lt;/code&gt; functions from the rOpenSci &lt;a href=&quot;http://ropensci.github.io/rplos/&quot;&gt;rplos package&lt;/a&gt; (and some extra help from Scott Chamberlain) to achieve this, the datasets were deposited to figshare and can be found &lt;a href=&quot;http://dx.doi.org/10.6084/m9.figshare.821209&quot;&gt;here&lt;/a&gt; (2011) and &lt;a href=&quot;http://dx.doi.org/10.6084/m9.figshare.821213&quot;&gt;here&lt;/a&gt; (2012).&lt;/p&gt;
@@ -784,7 +784,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
  <entry>
    <title>Altmetrics coming of age? Not for Wikipedia</title>
    <link href="http://blog.martinfenner.org/2013/08/10/altmetrics-coming-of-age-not-for-wikipedia"/>
-   <updated>2013-08-10T00:00:00+00:00</updated>
+   <updated>2013-08-10T00:00:00-07:00</updated>
    <id>http://blog.martinfenner.org/2013/08/10/altmetrics-coming-of-age-not-for-wikipedia</id>
    <content type="html">&lt;p&gt;Ten days ago Information Standards Quarterly (ISQ) published a &lt;a href=&quot;http://www.niso.org/publications/isq/2013/v25no2/&quot;&gt;special issue on altmetrics&lt;/a&gt;. I was the guest editor for the five altmetrics articles&lt;!--more--&gt;, and in the &lt;a href=&quot;http://dx.doi.org/10.3789/isqv25no2.2013.01&quot;&gt;editorial&lt;/a&gt; that I titled &lt;strong&gt;Altmetrics have come of age&lt;/strong&gt; I argued that&lt;/p&gt;
 &lt;blockquote&gt;
@@ -806,7 +806,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
  <entry>
    <title>CSL is more than citation styles</title>
    <link href="http://blog.martinfenner.org/2013/08/08/csl-is-more-than-citation-styles"/>
-   <updated>2013-08-08T00:00:00+00:00</updated>
+   <updated>2013-08-08T00:00:00-07:00</updated>
    <id>http://blog.martinfenner.org/2013/08/08/csl-is-more-than-citation-styles</id>
    <content type="html">&lt;p&gt;According to the &lt;a href=&quot;http://citationstyles.org&quot;&gt;description&lt;/a&gt; on the Citation Style Language (CSL) website, CSL &lt;em&gt;is an open XML-based language to describe the formatting of citations and bibliographies&lt;/em&gt;.&lt;!--more--&gt; We use reference managers such as &lt;strong&gt;Zotero&lt;/strong&gt;, &lt;strong&gt;Mendeley&lt;/strong&gt;, or &lt;strong&gt;Papers&lt;/strong&gt; to format our references in manuscripts we submit for publication, and underneath a CSL processor such as &lt;a href=&quot;https://bitbucket.org/fbennett/citeproc-js/wiki/Home&quot;&gt;Citeproc-js&lt;/a&gt; - together with a CSL file for a particular citation style - is doing the work:&lt;/p&gt;
 &lt;figure&gt;
@@ -854,7 +854,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
  <entry>
    <title>What a publication timeline can tell you</title>
    <link href="http://blog.martinfenner.org/2013/08/06/what-a-publication-timeline-can-tell-you"/>
-   <updated>2013-08-06T00:00:00+00:00</updated>
+   <updated>2013-08-06T00:00:00-07:00</updated>
    <id>http://blog.martinfenner.org/2013/08/06/what-a-publication-timeline-can-tell-you</id>
    <content type="html">&lt;p&gt;Now that I can &lt;a href=&quot;/2013/08/04/automatically-list-all-your-publications-in-your-blog/&quot;&gt;automatically import my publications from my ORCID profile and display them&lt;/a&gt; in this blog, I also want to visualize them. I have started with &lt;a href=&quot;https://github.com/mfenner/blog/blob/master/_includes/by_year.js&quot;&gt;d3.js code&lt;/a&gt; that displays the number of publications per year - using the list of my publications in Citeproc JSON format.&lt;!--more--&gt; The chart is displayed on my &lt;a href=&quot;/about.html&quot;&gt;About page&lt;/a&gt;, but I have also embedded the Javascript here:&lt;/p&gt;
 &lt;div id=&quot;year&quot; class=&quot;row&quot;&gt;
@@ -876,7 +876,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
  <entry>
    <title>Automatically list all your publications in your blog</title>
    <link href="http://blog.martinfenner.org/2013/08/04/automatically-list-all-your-publications-in-your-blog"/>
-   <updated>2013-08-04T00:00:00+00:00</updated>
+   <updated>2013-08-04T00:00:00-07:00</updated>
    <id>http://blog.martinfenner.org/2013/08/04/automatically-list-all-your-publications-in-your-blog</id>
    <content type="html">&lt;p&gt;A common feature of blogs written by scientists is a listing of all their publications. Publication lists are a great way to provide background information about your research. Publication lists should provide links to the fulltext versions of these publications, should be nicely formatted - e.g. using a common citation style such as APA - and should be easy to maintain. A number of tools for a variety of blogging platforms (including Wordpress and Jekyll) are available to help with this task, but maintaining the list of publications has remained difficult.&lt;!--more--&gt;&lt;/p&gt;
 &lt;p&gt;Publication lists are best maintained in a system built for this purpose. This could be either a reference manager, or a profile page in a social network for scientists. Even better suited for this task is your Open Researcher &amp;amp; Contributor ID (&lt;a href=&quot;http://orcid.org&quot;&gt;ORCID&lt;/a&gt;) profile, as this service &lt;span class=&quot;citation&quot; data-cites=&quot;haak2012a&quot;&gt;(&lt;span class=&quot;citeproc-not-found&quot; data-reference-id=&quot;haak2012a&quot;&gt;&lt;strong&gt;???&lt;/strong&gt;&lt;/span&gt;)&lt;/span&gt; directly integrates with a number of bibliographic databases and makes the profile information available via an open API.&lt;/p&gt;
@@ -898,7 +898,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
  <entry>
    <title>Citeproc YAML for bibliographies</title>
    <link href="http://blog.martinfenner.org/2013/07/30/citeproc-yaml-for-bibliographies"/>
-   <updated>2013-07-30T00:00:00+00:00</updated>
+   <updated>2013-07-30T00:00:00-07:00</updated>
    <id>http://blog.martinfenner.org/2013/07/30/citeproc-yaml-for-bibliographies</id>
    <content type="html">&lt;p&gt;The standard local file formats for bibliographic data are probably bibtex and RIS. They have been around for a long time, and are supported by all reference managers and many other tools and services. Unfortunately these formats are far from perfect&lt;!--more--&gt;:&lt;/p&gt;
 &lt;ul&gt;
@@ -985,7 +985,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
  <entry>
    <title>RSS Feeds for Scholarly Authors</title>
    <link href="http://blog.martinfenner.org/2013/07/26/rss-feeds-for-scholarly-authors"/>
-   <updated>2013-07-26T00:00:00+00:00</updated>
+   <updated>2013-07-26T00:00:00-07:00</updated>
    <id>http://blog.martinfenner.org/2013/07/26/rss-feeds-for-scholarly-authors</id>
    <content type="html">&lt;p&gt;Open Researcher &amp;amp; Contributor ID (&lt;a href=&quot;https://speakerdeck.com/mfenner/orcid-connecting-research-and-researchers-1&quot;&gt;ORCID&lt;/a&gt;) provides a persistent identifier for researchers and lets them claim their research outputs in the ORCID Registry. I have been involved with ORCID since early 2010 and I am happy to see that nine months after launch 200,000 researchers have signed up for the service, and the organisation has more than &lt;a href=&quot;http://orcid.org/about/community/members&quot;&gt;70 member organizations&lt;/a&gt;.&lt;!--more--&gt;&lt;/p&gt;
 &lt;iframe src=&quot;http://s3.datawrapper.de/BZBSQ/&quot; frameborder=&quot;0&quot; allowtransparency=&quot;true&quot; allowfullscreen=&quot;allowfullscreen&quot; webkitallowfullscreen=&quot;webkitallowfullscreen&quot; mozallowfullscreen=&quot;mozallowfullscreen&quot; oallowfullscreen=&quot;oallowfullscreen&quot; msallowfullscreen=&quot;msallowfullscreen&quot; width=&quot;600&quot; height=&quot;400&quot;&gt;&lt;/iframe&gt;
@@ -1028,7 +1028,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
  <entry>
    <title>The trouble with keynotes</title>
    <link href="http://blog.martinfenner.org/2013/07/23/the-trouble-with-keynotes"/>
-   <updated>2013-07-23T00:00:00+00:00</updated>
+   <updated>2013-07-23T00:00:00-07:00</updated>
    <id>http://blog.martinfenner.org/2013/07/23/the-trouble-with-keynotes</id>
    <content type="html">&lt;p&gt;A keynote is a presentation typically given at a start of a conference that sets the central theme for the event. A keynote speaker usually has more time (45-60 min) than other presenters, and has the full attention of everyone attending the conference.&lt;!--more--&gt; The keynotes at the conferences I attended the last several years (mostly scholarly communication conferences) seem to work like this:&lt;/p&gt;
 &lt;ul&gt;
@@ -1045,7 +1045,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;p&gt;&lt;em&gt;After several hundred blog posts here and elsewhere, this may well be my first blog post with embedded video.&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
-&lt;p&gt;Fenner, M., Gmez, C. G., &amp;amp; Thorisson, G. A. (2011). Key issue: Collective action for the open researcher &amp;amp; contributor iD (oRCID). &lt;em&gt;Serials: The Journal for the Serials Community&lt;/em&gt;, &lt;em&gt;24&lt;/em&gt;(3), 277–279. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1629/24277&quot;&gt;http://dx.doi.org/10.1629/24277&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Fenner, M., Gmez, C. G., &amp;amp; Thorisson, G. A. (2011). Key Issue: Collective Action for the Open Researcher &amp;amp; Contributor ID (ORCID). &lt;em&gt;Serials: The Journal for the Serials Community&lt;/em&gt;, &lt;em&gt;24&lt;/em&gt;(3), 277–279. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1629/24277&quot;&gt;http://dx.doi.org/10.1629/24277&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </content>
  </entry>
@@ -1053,7 +1053,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
  <entry>
    <title>Creating charts with Datawrapper</title>
    <link href="http://blog.martinfenner.org/2013/07/19/creating-charts-with-datawrapper"/>
-   <updated>2013-07-19T00:00:00+00:00</updated>
+   <updated>2013-07-19T00:00:00-07:00</updated>
    <id>http://blog.martinfenner.org/2013/07/19/creating-charts-with-datawrapper</id>
    <content type="html">&lt;p&gt;Figures are an important part of any scientific document. While the kind of figure commonly used obviously varies between disciplines, charts are an important part of many publications.&lt;!--more--&gt; There are two problems in how charts are currently used:&lt;/p&gt;
 &lt;ul&gt;
@@ -1074,8 +1074,8 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;p&gt;Datawrapper is a perfect tool for science blogs and websites with scientific content, but it can also enhance the charts in scientific articles. We need a few additional chart types, error bars and more flexible labeling. And we might want to add a license picker, making it easy to add a Creative Commons license so that it is clear how the chart can be reused. Datawrapper is intended for online use, but the service can also save the charts as PNG or PDF. We would want to add saving to SVG (already used for online rendering) for easier embedding into the XML and epub versions of articles.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
-&lt;p&gt;D’Arcy, E., &amp;amp; Moynihan, R. (2009). Can the relationship between doctors and drug companies ever be a healthy one? &lt;em&gt;PLoS Medicine&lt;/em&gt;, &lt;em&gt;6&lt;/em&gt;(7), e1000075. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1371/journal.pmed.1000075&quot;&gt;http://dx.doi.org/10.1371/journal.pmed.1000075&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Moher, D., Liberati, A., Tetzlaff, J., &amp;amp; Altman, D. G. (2009). Preferred reporting items for systematic reviews and meta-analyses: The pRISMA statement. &lt;em&gt;PLoS Medicine&lt;/em&gt;, &lt;em&gt;6&lt;/em&gt;(7), e1000097. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1371/journal.pmed.1000097&quot;&gt;http://dx.doi.org/10.1371/journal.pmed.1000097&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;D’Arcy, E., &amp;amp; Moynihan, R. (2009). Can the Relationship between Doctors and Drug Companies Ever Be a Healthy One? &lt;em&gt;PLoS Medicine&lt;/em&gt;, &lt;em&gt;6&lt;/em&gt;(7), e1000075. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1371/journal.pmed.1000075&quot;&gt;http://dx.doi.org/10.1371/journal.pmed.1000075&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Moher, D., Liberati, A., Tetzlaff, J., &amp;amp; Altman, D. G. (2009). Preferred Reporting Items for Systematic Reviews and Meta-Analyses: The PRISMA Statement. &lt;em&gt;PLoS Medicine&lt;/em&gt;, &lt;em&gt;6&lt;/em&gt;(7), e1000097. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1371/journal.pmed.1000097&quot;&gt;http://dx.doi.org/10.1371/journal.pmed.1000097&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </content>
  </entry>
@@ -1083,7 +1083,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
  <entry>
    <title>Auto generating links to data and resources</title>
    <link href="http://blog.martinfenner.org/2013/07/02/auto-generating-links-to-data-and-resources"/>
-   <updated>2013-07-02T00:00:00+00:00</updated>
+   <updated>2013-07-02T00:00:00-07:00</updated>
    <id>http://blog.martinfenner.org/2013/07/02/auto-generating-links-to-data-and-resources</id>
    <content type="html">&lt;p&gt;A few weeks ago Kafkas et al. &lt;span class=&quot;citation&quot; data-cites=&quot;Kafkas:2013fp&quot;&gt;(2013)&lt;/span&gt; published a paper looking at current patterns of how datasets o biological databases are cited in research articles, based on an analysis of the full text Open Access articles available from Europe PMC. They identified data ctiations by:&lt;/p&gt;
 &lt;ol type=&quot;1&quot;&gt;
@@ -1126,7 +1126,7 @@ PDB:  1mbn&lt;/code&gt;&lt;/pre&gt;
  <entry>
    <title>Metadata in Scholarly Markdown</title>
    <link href="http://blog.martinfenner.org/2013/06/29/metadata-in-scholarly-markdown"/>
-   <updated>2013-06-29T00:00:00+00:00</updated>
+   <updated>2013-06-29T00:00:00-07:00</updated>
    <id>http://blog.martinfenner.org/2013/06/29/metadata-in-scholarly-markdown</id>
    <content type="html">&lt;p&gt;Scholarly documents often need metadata that describe them: typically author(s), title and location (DOI or URL), but possibly many other things. For some metadata it makes sense to store them in the document text, e.g. as is typically done for citations. The problem is that this can make it hard to make the metadata machine-readable. The worst place for metadata is of course outside of the document, and unfortunately that it is the most common way of doing this.&lt;!--more--&gt; Two examples:&lt;/p&gt;
 &lt;ul&gt;
@@ -1207,7 +1207,7 @@ PDB:  1mbn&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&quot;references&quot;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
 &lt;p&gt;Ethan P. White, Z. T. B., Elita Baldrige. (2013). Nine simple ways to make it easier to (re)use your data. &lt;em&gt;Gobbledygook&lt;/em&gt;. Retrieved from &lt;a href=&quot;http://blog.martinfenner.org/2013/06/25/nine-simple-ways-to-make-it-easier-to-reuse-your-data&quot;&gt;http://blog.martinfenner.org/2013/06/25/nine-simple-ways-to-make-it-easier-to-reuse-your-data&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Lord, P., &amp;amp; Marshall, L. (2012). Greycite: Citing the web. &lt;em&gt;An Exercise in Irrelevance&lt;/em&gt;. Retrieved from &lt;a href=&quot;http://www.russet.org.uk/blog/2071&quot;&gt;http://www.russet.org.uk/blog/2071&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Lord, P., &amp;amp; Marshall, L. (2012). Greycite: Citing the Web. &lt;em&gt;An Exercise in Irrelevance&lt;/em&gt;. Retrieved from &lt;a href=&quot;http://www.russet.org.uk/blog/2071&quot;&gt;http://www.russet.org.uk/blog/2071&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </content>
  </entry>
@@ -1215,7 +1215,7 @@ PDB:  1mbn&lt;/code&gt;&lt;/pre&gt;
  <entry>
    <title>Nine simple ways to make it easier to (re)use your data</title>
    <link href="http://blog.martinfenner.org/2013/06/25/nine-simple-ways-to-make-it-easier-to-reuse-your-data"/>
-   <updated>2013-06-25T00:00:00+00:00</updated>
+   <updated>2013-06-25T00:00:00-07:00</updated>
    <id>http://blog.martinfenner.org/2013/06/25/nine-simple-ways-to-make-it-easier-to-reuse-your-data</id>
    <content type="html">&lt;blockquote&gt;
 &lt;p&gt;This paper in markdown format was written by Ethan White et al. The markdown file and the associated bibliogaphy and figure files are available from the &lt;a href=&quot;https://github.com/weecology/data-sharing-paper&quot;&gt;Github repository of the paper&lt;/a&gt;.&lt;/p&gt;
@@ -1464,30 +1464,30 @@ PDB:  1mbn&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Thanks to Karthik Ram for organizing this special section and inviting us to contribute. Carly Strasser and Kara Woo recommended important references and David Harris and Carly Strasser provided valuable feedback on null values, all via Twitter. Carl Boettiger, Matt Davis, Daniel Hocking, Heinz Pampel, Karthik Ram, Thiago Silva, Carly Strasser, Tom Webb, and beroe (Twitter handle) provided value comments on the manuscript. Many of these comments were part of the informal review process facilitated by posting this manuscript as a preprint. The writing of this paper was supported by a CAREER grant from the U.S. National Science Foundation (DEB 0953694) to EPW.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
-&lt;p&gt;Borer, E. T., Seabloom, E. W., Jones, M. B., &amp;amp; Schildhauer, M. (2009). Some simple guidelines for effective data management. &lt;em&gt;Bulletin of the Ecological Society of America&lt;/em&gt;, &lt;em&gt;90&lt;/em&gt;(2), 205–214. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1890/0012-9623-90.2.205&quot;&gt;http://dx.doi.org/10.1890/0012-9623-90.2.205&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Brunt, J. W., McCartney, P., Baker, K., &amp;amp; Stafford, S. G. (2002). The future of ecoinformatics in long term ecological research. In &lt;em&gt;Proceedings of the 6th world multiconference on systemics, cybernetics and informatics: SCI&lt;/em&gt; (pp. 14–18).&lt;/p&gt;
+&lt;p&gt;Borer, E. T., Seabloom, E. W., Jones, M. B., &amp;amp; Schildhauer, M. (2009). Some Simple Guidelines for Effective Data Management. &lt;em&gt;Bulletin of the Ecological Society of America&lt;/em&gt;, &lt;em&gt;90&lt;/em&gt;(2), 205–214. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1890/0012-9623-90.2.205&quot;&gt;http://dx.doi.org/10.1890/0012-9623-90.2.205&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Brunt, J. W., McCartney, P., Baker, K., &amp;amp; Stafford, S. G. (2002). The future of ecoinformatics in long term ecological research. In &lt;em&gt;Proceedings of the 6th World Multiconference on Systemics, Cybernetics and Informatics: SCI&lt;/em&gt; (pp. 14–18).&lt;/p&gt;
 &lt;p&gt;Fienberg, S. E., &amp;amp; Martin, M. E. (1985). &lt;em&gt;Sharing research data&lt;/em&gt;. Natl Academy Pr.&lt;/p&gt;
-&lt;p&gt;Fraser, B., &amp;amp; Gluck, M. (1999). Usability of geospatial metadata or space-time matters. &lt;em&gt;Bulletin of the American Society for Information Science and Technology&lt;/em&gt;, &lt;em&gt;25&lt;/em&gt;(6), 24–28. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1002/bult.134&quot;&gt;http://dx.doi.org/10.1002/bult.134&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Fraser, B., &amp;amp; Gluck, M. (1999). Usability of Geospatial Metadata or Space-Time Matters. &lt;em&gt;Bulletin of the American Society for Information Science and Technology&lt;/em&gt;, &lt;em&gt;25&lt;/em&gt;(6), 24–28. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1002/bult.134&quot;&gt;http://dx.doi.org/10.1002/bult.134&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Hampton, S. E., Strasser, C. A., Tewksbury, J. J., Gram, W. K., Budden, A. E., Batcheller, A. L., … Porter, J. H. (2013). Big data and the future of ecology. &lt;em&gt;Frontiers in Ecology and the Environment&lt;/em&gt;, &lt;em&gt;11&lt;/em&gt;(3), 156–162. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1890/120103&quot;&gt;http://dx.doi.org/10.1890/120103&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Jones, M. B., Schildhauer, M. P., Reichman, O., &amp;amp; Bowers, S. (2006). The new bioinformatics: Integrating ecological data from the gene to the biosphere. &lt;em&gt;Annual Review of Ecology, Evolution, and Systematics&lt;/em&gt;, &lt;em&gt;37&lt;/em&gt;(1), 519–54. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1146/annurev.ecolsys.37.091305.110031&quot;&gt;http://dx.doi.org/10.1146/annurev.ecolsys.37.091305.110031&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Jones, M. B., Schildhauer, M. P., Reichman, O., &amp;amp; Bowers, S. (2006). The New Bioinformatics: Integrating Ecological Data from the Gene to the Biosphere. &lt;em&gt;Annual Review of Ecology, Evolution, and Systematics&lt;/em&gt;, &lt;em&gt;37&lt;/em&gt;(1), 519–54. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1146/annurev.ecolsys.37.091305.110031&quot;&gt;http://dx.doi.org/10.1146/annurev.ecolsys.37.091305.110031&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Kowalczyk, S., &amp;amp; Shankar, K. (2011). Data sharing in the sciences. &lt;em&gt;Annual Review of Information Science and Technology&lt;/em&gt;, &lt;em&gt;45&lt;/em&gt;(1), 247–294. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1002/aris.2011.1440450113&quot;&gt;http://dx.doi.org/10.1002/aris.2011.1440450113&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Lampe, A., &amp;amp; Weiler, J. (1998). Data capture from the sponsors’ and investigators’ perspectives: Balancing quality, speed, and cost. &lt;em&gt;Drug Information Journal&lt;/em&gt;, &lt;em&gt;32&lt;/em&gt;(4), 871–886.&lt;/p&gt;
 &lt;p&gt;Michener, W. K., Brunt, J. W., Helly, J. J., Kirchner, T. B., &amp;amp; Stafford, S. G. (1997). Nongeospatial metadata for the ecological sciences. &lt;em&gt;Ecological Applications&lt;/em&gt;, &lt;em&gt;7&lt;/em&gt;(1), 330–342. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1890/1051-0761(1997)007[0330:nmftes]2.0.co;2&quot;&gt;http://dx.doi.org/10.1890/1051-0761(1997)007[0330:nmftes]2.0.co;2&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Palmer, M. A., Bernhardt, E. S., Chornesky, E. A., Collins, S. L., Dobson, A. P., Duke, C. S., … Turner, M. G. (2004). Ecological science and sustainability for a crowded planet. Retrieved from &lt;a href=&quot;http://www.esa.org/ecovisions/ppfiles/EcologicalVisionsReport.pdf&quot;&gt;http://www.esa.org/ecovisions/ppfiles/EcologicalVisionsReport.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Palmer, M. A., Bernhardt, E. S., Chornesky, E. A., Collins, S. L., Dobson, A. P., Duke, C. S., … Turner, M. G. (2004). Ecological Science and Sustainability for a Crowded Planet. Retrieved from &lt;a href=&quot;http://www.esa.org/ecovisions/ppfiles/EcologicalVisionsReport.pdf&quot;&gt;http://www.esa.org/ecovisions/ppfiles/EcologicalVisionsReport.pdf&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Parr, C., &amp;amp; Cummings, M. (2005). Data sharing in ecology and evolution. &lt;em&gt;Trends in Ecology &amp;amp; Evolution&lt;/em&gt;, &lt;em&gt;20&lt;/em&gt;(7), 362–363. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1016/j.tree.2005.04.023&quot;&gt;http://dx.doi.org/10.1016/j.tree.2005.04.023&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Paulsen, A., Overgaard, S., &amp;amp; Lauritsen, J. M. (2012). Quality of data entry using single entry, double entry and automated forms processing–an example based on a study of patient-reported outcomes. &lt;em&gt;PloS ONE&lt;/em&gt;, &lt;em&gt;7&lt;/em&gt;(4), e35087. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1371/journal.pone.0035087&quot;&gt;http://dx.doi.org/10.1371/journal.pone.0035087&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Paulsen, A., Overgaard, S., &amp;amp; Lauritsen, J. M. (2012). Quality of Data Entry Using Single Entry, Double Entry and Automated Forms Processing–An Example Based on a Study of Patient-Reported Outcomes. &lt;em&gt;PloS ONE&lt;/em&gt;, &lt;em&gt;7&lt;/em&gt;(4), e35087. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1371/journal.pone.0035087&quot;&gt;http://dx.doi.org/10.1371/journal.pone.0035087&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Piwowar, H. A., &amp;amp; Chapman, W. W. (2008). A review of journal policies for sharing research data. In &lt;em&gt;ELPUB2008&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Piwowar, H. A., &amp;amp; Vision, T. J. (2013). Data reuse and the open data citation advantage. &lt;em&gt;PeerJ PrePrints&lt;/em&gt;, &lt;em&gt;1&lt;/em&gt;, e1. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.7287/peerj.preprints.1&quot;&gt;http://dx.doi.org/10.7287/peerj.preprints.1&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Piwowar, H. A., Day, R. S., &amp;amp; Fridsma, D. B. (2007). Sharing detailed research data is associated with increased citation rate. &lt;em&gt;PLoS ONE&lt;/em&gt;, &lt;em&gt;2&lt;/em&gt;(3), e308. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1371/journal.pone.0000308&quot;&gt;http://dx.doi.org/10.1371/journal.pone.0000308&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Piwowar, H. A., Day, R. S., &amp;amp; Fridsma, D. B. (2007). Sharing Detailed Research Data Is Associated with Increased Citation Rate. &lt;em&gt;PLoS ONE&lt;/em&gt;, &lt;em&gt;2&lt;/em&gt;(3), e308. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1371/journal.pone.0000308&quot;&gt;http://dx.doi.org/10.1371/journal.pone.0000308&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Poisot, T., Mounce, R., &amp;amp; Gravel, D. (2013). Moving toward a sustainable ecological science: don’t let data go to waste! Retrieved from &lt;a href=&quot;https://github.com/tpoisot/DataSharingPaper/blob/master/DataSharing-MS.md&quot;&gt;https://github.com/tpoisot/DataSharingPaper/blob/master/DataSharing-MS.md&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Reichman, O. J., Jones, M. B., &amp;amp; Schildhauer, M. P. (2011). Challenges and opportunities of open data in ecology. &lt;em&gt;Science&lt;/em&gt;, &lt;em&gt;331&lt;/em&gt;(6018), 703–705. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1126/science.1197962&quot;&gt;http://dx.doi.org/10.1126/science.1197962&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Reichman, O. J., Jones, M. B., &amp;amp; Schildhauer, M. P. (2011). Challenges and Opportunities of Open Data in Ecology. &lt;em&gt;Science&lt;/em&gt;, &lt;em&gt;331&lt;/em&gt;(6018), 703–705. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1126/science.1197962&quot;&gt;http://dx.doi.org/10.1126/science.1197962&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Schofield, P. N., Bubela, T., Weaver, T., Portilla, L., Brown, S. D., Hancock, J. M., … Rosenthal, N. (2009). Post-publication sharing of data and tools. &lt;em&gt;Nature&lt;/em&gt;, &lt;em&gt;461&lt;/em&gt;(7261), 171–173. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1038/461171a&quot;&gt;http://dx.doi.org/10.1038/461171a&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Strasser, C. A., Cook, R. B., Michener, W. K., Budden, A., &amp;amp; Koskela, R. (2011). Promoting data stewardship through best practices. In &lt;em&gt;Proceedings of the environmental information management conference 2011 (eIM 2011)&lt;/em&gt;. Oak Ridge National Laboratory (ORNL).&lt;/p&gt;
-&lt;p&gt;Strasser, C. A., Cook, R., Michener, W. K., &amp;amp; Budden, A. (2012). Primer on data management: What you always wanted to know. DataONE. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.5060/D2251G48&quot;&gt;http://dx.doi.org/10.5060/D2251G48&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Strasser, C. A., Cook, R. B., Michener, W. K., Budden, A., &amp;amp; Koskela, R. (2011). Promoting Data Stewardship Through Best Practices. In &lt;em&gt;Proceedings of the Environmental Information Management Conference 2011 (EIM 2011)&lt;/em&gt;. Oak Ridge National Laboratory (ORNL).&lt;/p&gt;
+&lt;p&gt;Strasser, C. A., Cook, R., Michener, W. K., &amp;amp; Budden, A. (2012). Primer on Data Management: What you always wanted to know. DataONE. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.5060/D2251G48&quot;&gt;http://dx.doi.org/10.5060/D2251G48&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Whitlock, M. C. (2011). Data archiving in ecology and evolution: best practices. &lt;em&gt;Trends in Ecology &amp;amp; Evolution&lt;/em&gt;, &lt;em&gt;26&lt;/em&gt;(2), 61–65. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1016/j.tree.2010.11.006&quot;&gt;http://dx.doi.org/10.1016/j.tree.2010.11.006&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Whitlock, M. C., McPeek, M. A., Rausher, M. D., Rieseberg, L., &amp;amp; Moore, A. J. (2010). Data archiving. &lt;em&gt;The American Naturalist&lt;/em&gt;, &lt;em&gt;175&lt;/em&gt;(2), 145–146. doi:&lt;a href=&quot;http://dx.doi.org/10.1086/650340&quot;&gt;10.1086/650340&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Whitlock, M. C., McPeek, M. A., Rausher, M. D., Rieseberg, L., &amp;amp; Moore, A. J. (2010). Data Archiving. &lt;em&gt;The American Naturalist&lt;/em&gt;, &lt;em&gt;175&lt;/em&gt;(2), 145–146. doi:&lt;a href=&quot;http://dx.doi.org/10.1086/650340&quot;&gt;10.1086/650340&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Wickham, H. (2007). Reshaping data with the reshape package. &lt;em&gt;Journal of Statistical Software&lt;/em&gt;, &lt;em&gt;21&lt;/em&gt;(12). Retrieved from &lt;a href=&quot;http://www.jstatsoft.org/v21/i12/paper&quot;&gt;http://www.jstatsoft.org/v21/i12/paper&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Wieczorek, J., Bloom, D., Guralnick, R., Blum, S., D&lt;span&gt;ö&lt;/span&gt;ring, M., Giovanni, R., … Vieglais, D. (2012). Darwin core: An evolving community-developed biodiversity data standard. &lt;em&gt;PLoS ONE&lt;/em&gt;, &lt;em&gt;7&lt;/em&gt;(1), e29715. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pone.0029715&quot;&gt;10.1371/journal.pone.0029715&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Wieczorek, J., Bloom, D., Guralnick, R., Blum, S., D&lt;span&gt;ö&lt;/span&gt;ring, M., Giovanni, R., … Vieglais, D. (2012). Darwin Core: An Evolving Community-Developed Biodiversity Data Standard. &lt;em&gt;PLoS ONE&lt;/em&gt;, &lt;em&gt;7&lt;/em&gt;(1), e29715. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pone.0029715&quot;&gt;10.1371/journal.pone.0029715&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Zimmerman, A. (2007). Not by metadata alone: the use of diverse forms of knowledge to locate data for reuse. &lt;em&gt;International Journal on Digital Libraries&lt;/em&gt;, &lt;em&gt;7&lt;/em&gt;(1-2), 5–16. doi:&lt;a href=&quot;http://dx.doi.org/10.1007/s00799-007-0015-8&quot;&gt;10.1007/s00799-007-0015-8&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Zimmerman, A. S. (2003). &lt;em&gt;Data sharing and secondary use of scientific data: Experiences of ecologists&lt;/em&gt; (PhD thesis). The University of Michigan.&lt;/p&gt;
 &lt;/div&gt;
@@ -1497,7 +1497,7 @@ PDB:  1mbn&lt;/code&gt;&lt;/pre&gt;
  <entry>
    <title>Citations in Markdown Part 3</title>
    <link href="http://blog.martinfenner.org/2013/06/24/citations-in-markdown-part-3"/>
-   <updated>2013-06-24T00:00:00+00:00</updated>
+   <updated>2013-06-24T00:00:00-07:00</updated>
    <id>http://blog.martinfenner.org/2013/06/24/citations-in-markdown-part-3</id>
    <content type="html">&lt;p&gt;After the &lt;a href=&quot;/2013/06/19/citations-in-scholarly-markdown/&quot;&gt;post last week&lt;/a&gt; and the crazy discussion that followed I would understand that you feel you have heard enough about citations in markdown. But I had the feeling last week that something was still missing, and I have done some more thinking.&lt;!--more--&gt; What we have so far:&lt;/p&gt;
 &lt;ul&gt;
@@ -1522,7 +1522,7 @@ PDB:  1mbn&lt;/code&gt;&lt;/pre&gt;
  <entry>
    <title>What Flavor is Scholarly Markdown?</title>
    <link href="http://blog.martinfenner.org/2013/06/21/what-flavor-is-scholarly-markdown"/>
-   <updated>2013-06-21T00:00:00+00:00</updated>
+   <updated>2013-06-21T00:00:00-07:00</updated>
    <id>http://blog.martinfenner.org/2013/06/21/what-flavor-is-scholarly-markdown</id>
    <content type="html">&lt;p&gt;One important outcome of the recent &lt;a href=&quot;https://github.com/scholmd/scholmd/wiki/workshop&quot;&gt;Markdown for Science&lt;/a&gt; workshop was an overall agreement that all the different implementations (or flavors) of markdown that currently exist are a big problem for the adoption of Scholarly Markdown&lt;!--more--&gt; and that we &lt;a href=&quot;https://github.com/scholmd/scholmd/wiki/What-is-Markdown&quot;&gt;need&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1556,7 +1556,7 @@ PDB:  1mbn&lt;/code&gt;&lt;/pre&gt;
  <entry>
    <title>Citations in Scholarly Markdown</title>
    <link href="http://blog.martinfenner.org/2013/06/19/citations-in-scholarly-markdown"/>
-   <updated>2013-06-19T00:00:00+00:00</updated>
+   <updated>2013-06-19T00:00:00-07:00</updated>
    <id>http://blog.martinfenner.org/2013/06/19/citations-in-scholarly-markdown</id>
    <content type="html">&lt;p&gt;In the comments on &lt;a href=&quot;http://blog.martinfenner.org/2013/06/17/what-is-scholarly-markdown/&quot;&gt;Monday’s blog post&lt;/a&gt; about the Markdown for Science workshop, &lt;a href=&quot;http://carlboettiger.info&quot;&gt;Carl Boettiger&lt;/a&gt; had some good arguments against the proposal for how to do &lt;a href=&quot;https://github.com/scholmd/scholmd/wiki/citations&quot;&gt;citations&lt;/a&gt; that we came up with during the workshop. As this is a complex topic, I decided to write this blog post.&lt;!--more--&gt;&lt;/p&gt;
 &lt;p&gt;Citations of the scholarly literature are an essential part of scholarly texts and therefore have to be supported by scholarly markdown. Both the &lt;a href=&quot;http://johnmacfarlane.net/pandoc/README.html&quot;&gt;Pandoc&lt;/a&gt; and &lt;a href=&quot;https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide&quot;&gt;Multimarkdown&lt;/a&gt; flavors of markdown support citations, using a bibtex file that contains citations, placeholders for citekeys – &lt;code&gt;[@smith04]&lt;/code&gt; for Pandoc and &lt;code&gt;[#smith04]&lt;/code&gt; for Multimarkdown – and the &lt;a href=&quot;http://citationstyles.org&quot;&gt;Citation Style Language&lt;/a&gt; for citation formatting (Pandoc). A very reasonable approach would therefore be to use this functionality, with a preference for Pandoc because of the Citation Style Language support. All reference managers can export to the bibtex format, and some of them (e.g. &lt;a href=&quot;http://www.papersapp.com/papers/&quot;&gt;Papers&lt;/a&gt;) make it very easy to copy and paste citekeys.&lt;/p&gt;
@@ -1589,7 +1589,7 @@ This is [an example](http://example.com/ &amp;quot;Title&amp;quot;) inline link.
  <entry>
    <title>What is Scholarly Markdown?</title>
    <link href="http://blog.martinfenner.org/2013/06/17/what-is-scholarly-markdown"/>
-   <updated>2013-06-17T00:00:00+00:00</updated>
+   <updated>2013-06-17T00:00:00-07:00</updated>
    <id>http://blog.martinfenner.org/2013/06/17/what-is-scholarly-markdown</id>
    <content type="html">&lt;p&gt;One of the important discussions taking place at the &lt;a href=&quot;https://github.com/scholmd/scholmd/wiki&quot;&gt;Markdown for Science&lt;/a&gt; workshop last weekend was about the definition of Scholarly Markdown.&lt;!--more--&gt; We came up with &lt;a href=&quot;https://github.com/scholmd/scholmd/wiki/What-is-Markdown&quot;&gt;this&lt;/a&gt;:&lt;/p&gt;
 &lt;ol type=&quot;1&quot;&gt;
@@ -1654,7 +1654,7 @@ y &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k
  <entry>
    <title>Goodbye PLOS Blogs, Welcome Github Pages</title>
    <link href="http://blog.martinfenner.org/2013/06/15/goodbye-plos-blogs-welcome-github-pages"/>
-   <updated>2013-06-15T00:00:00+00:00</updated>
+   <updated>2013-06-15T00:00:00-07:00</updated>
    <id>http://blog.martinfenner.org/2013/06/15/goodbye-plos-blogs-welcome-github-pages</id>
    <content type="html">&lt;p&gt;This is the last &lt;a href=&quot;http://blogs.plos.org/mfenner&quot;&gt;Gobbledygook&lt;/a&gt; post on PLOS Blogs, and at the same time the first post at the &lt;a href=&quot;http://blog.martinfenner.org&quot;&gt;new Github blog location&lt;/a&gt;. I have been blogging at PLOS Blogs since the &lt;a href=&quot;http://blogs.plos.org/blogosphere/&quot;&gt;PLOS Blogs Network&lt;/a&gt; was launched in September 2010, so this step wasn’t easy. But I have two good reasons.&lt;!--more--&gt;&lt;/p&gt;
 &lt;p&gt;In May 2012 I started to work as technical lead for the &lt;a href=&quot;http://article-level-metrics.plos.org&quot;&gt;PLOS Article-Level Metrics&lt;/a&gt; project. Although this is contract work, and I also do other things - including spending 5% of my time as clinical researcher at Hannover Medical School - this created the awkward situation that I was never quite sure whether I was blogging as Martin Fenner or as someone working for PLOS. This was all in my head, as I never had any restrictions in my blogging from PLOS. With the recent launch of the &lt;a href=&quot;http://blogs.plos.org/tech/&quot;&gt;PLOS Tech Blog&lt;/a&gt; there is now a good venue for the kind of topics I like to write about, and I have started to work on two posts for this new blog.&lt;/p&gt;
@@ -1669,7 +1669,7 @@ y &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k
  <entry>
    <title>Announcing Markdown for Science Workshop on June 8th</title>
    <link href="http://blog.martinfenner.org/2013/05/08/announcing-markdown-for-science-workshop-on-june-8th"/>
-   <updated>2013-05-08T00:00:00+00:00</updated>
+   <updated>2013-05-08T00:00:00-07:00</updated>
    <id>http://blog.martinfenner.org/2013/05/08/announcing-markdown-for-science-workshop-on-june-8th</id>
    <content type="html">&lt;p&gt;On Saturday June 8th – exactly a month from today – the PLOS San Francisco offices will host a workshop/hackathon about using markdown for science. A lot of people are experimenting with markdown for authoring scientific articles – see blog posts &lt;a href=&quot;http://blog.yoavram.com/markx/&quot;&gt;here&lt;/a&gt;, &lt;a href=&quot;http://inundata.org/2012/06/01/markdown-and-the-future-of-collaborative-manuscript-writing/&quot;&gt;here&lt;/a&gt; or my post &lt;a href=&quot;/2012/12/13/a-call-for-scholarly-markdown/&quot;&gt;here&lt;/a&gt;, and the scientific manuscript &lt;a href=&quot;https://github.com/weecology/data-sharing-paper/&quot;&gt;here&lt;/a&gt;.&lt;!--more--&gt;&lt;/p&gt;
 &lt;p&gt;Markdown is a simple markup language for text, and is primarily used for HTML content on the web, but can also be converted to PDF, LaTeX and others. One challenge with markdown is that there are a number of slightly different “flavors” out there, from the original markdown to multimarkdown, github-flavored markdown and pandoc. Some of the advanced formatting of scientific documents – tables, citations, math – is still a challenge for markdown.&lt;/p&gt;
@@ -1684,7 +1684,7 @@ y &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k
  <entry>
    <title>Additional Markdown we need in Scholarly Texts</title>
    <link href="http://blog.martinfenner.org/2012/12/18/additional-markdown-we-need-in-scholarly-texts"/>
-   <updated>2012-12-18T00:00:00+00:00</updated>
+   <updated>2012-12-18T00:00:00-08:00</updated>
    <id>http://blog.martinfenner.org/2012/12/18/additional-markdown-we-need-in-scholarly-texts</id>
    <content type="html">&lt;p&gt;Following up from &lt;a href=&quot;/2012/12/13/a-call-for-scholarly-markdown/&quot;&gt;my post last week&lt;/a&gt;, below is a suggested list of features that should be supported in documents written in scholarly markdown. Please provide feedback via the comments, or by editing the Wiki version I have set up &lt;a href=&quot;https://github.com/mfenner/scholarly-markdown/wiki&quot;&gt;here&lt;/a&gt;. Listed are features that go beyond the &lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot;&gt;standard markdown syntax&lt;/a&gt;.&lt;!--more--&gt;&lt;/p&gt;
 &lt;p&gt;The goals of scholarly markdown are&lt;/p&gt;
@@ -1756,7 +1756,7 @@ y &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k
  <entry>
    <title>A Call for Scholarly Markdown</title>
    <link href="http://blog.martinfenner.org/2012/12/13/a-call-for-scholarly-markdown"/>
-   <updated>2012-12-13T00:00:00+00:00</updated>
+   <updated>2012-12-13T00:00:00-08:00</updated>
    <id>http://blog.martinfenner.org/2012/12/13/a-call-for-scholarly-markdown</id>
    <content type="html">&lt;p&gt;Markdown is a lightweight markup language, originally created by John Gruber for writing content for the web. Other popular lightweight markup languages are Textile and Mediawiki. Whereas Mediawiki markup is of course popular thanks to the ubiquitous Wikipedia, Markdown seems to have gained momentum among scholars. Markdown really focuses on writing content, many of the features of today’s word processors are just a distraction (e.g. fonts, line spacing or style sheets).&lt;!--more--&gt; Adding markup for document structure (e.g. title, authors or abstract) on the other hand is overly complicated with tools such as Microsft Word.&lt;/p&gt;
 &lt;p&gt;Fortunately or unfortunately there are several versions (or flavors) of Markdown. The original specification by John Gruber hasn’t been updated for years. Github uses Markdown with some minor modifications. Multimarkdown and Pandoc provide features important for scholarly content, e.g. citations, superscript and tables.&lt;/p&gt;
