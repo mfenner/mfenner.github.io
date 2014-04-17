@@ -8,7 +8,7 @@ def config
   if File.exist? '_config.yml'
     conf = conf.merge(Jekyll::Configuration.new.read_config_file('_config.yml'))
   end
-  dest_name = File.basename(conf['destination'])
+  dest_folder = File.basename(conf['destination'])
 
   # read git repo information
   repo = Git.open(conf['source'])
@@ -23,19 +23,19 @@ def config
                    'reponame' => reponame,
                    'source_branch' => source_branch,
                    'dest_branch' => dest_branch,
-                   'dest_name' => dest_name,
+                   'dest_folder' => dest_folder,
                    'remote' => remote,
                    'git_user' => repo.config('user.name'),
                    'git_email' => repo.config('user.email') }
 
   # check for errors
-  destination_is_ignored = File.readlines('.gitignore').any? { |l| l.start_with?(dest_name) }
+  destination_is_ignored = File.readlines('.gitignore').any? { |l| l.start_with?(dest_folder) }
   destination_branch_exists = repo.branches.any? { |b| b.name == dest_branch }
 
   conf['errors'] = {}
   conf['errors']['username'] = ["can't determine username"] unless username
   conf['errors']['reponame'] = ["can't determine reponame"] unless reponame
-  conf['errors']['destination'] = ["folder #{dest_name} must be .gitignored"] unless destination_is_ignored
+  conf['errors']['destination'] = ["folder #{dest_folder} must be .gitignored"] unless destination_is_ignored
   conf['errors']['dest_branch'] = ["branch #{dest_branch} must exist"] unless destination_branch_exists
 
   # return configuration as hash
@@ -85,15 +85,15 @@ class Site
   # clone repo into destination folder if it doesn't exist there
   # checkout destination branch
   def pull
-    if File.exist? config['repo']['dest_name']
-      repo = Git.open(config['repo']['dest_name'])
+    if File.exist? config['repo']['dest_folder']
+      repo = Git.open(config['repo']['dest_folder'])
       Jekyll.logger.info "Opening repo:       #{config['repo']['remote']}"
     else
-      repo = Git.clone(config['repo']['remote'], config['repo']['dest_name'])
+      repo = Git.clone(config['repo']['remote'], config['repo']['dest_folder'])
       Jekyll.logger.info "Cloning repo:       #{config['repo']['remote']}"
-      Jekyll.logger.info "Destination:        #{config['repo']['dest_name']}"
+      Jekyll.logger.info "Destination:        #{config['repo']['dest_folder']}"
     end
-    Dir.chdir(config['repo']['dest_name']) do
+    Dir.chdir(config['repo']['dest_folder']) do
       repo.branch(config['repo']['dest_branch']).checkout
       Jekyll.logger.info "Checkout to branch: #{config['repo']['dest_branch']}"
     end
@@ -104,13 +104,13 @@ class Site
 
   # git push destination folder to remote
   def push
-    repo = Git.open(config['repo']['dest_name'])
-    Dir.chdir(config['repo']['dest_name']) do
+    repo = Git.open(config['repo']['dest_folder'])
+    Dir.chdir(config['repo']['dest_folder']) do
       repo.add(all: true)
-      Jekyll.logger.info "Git add all:        #{config['repo']['dest_name']}"
+      Jekyll.logger.info "Git add all:        #{config['repo']['dest_folder']}"
 
       repo.commit_all("Updating to #{config['repo']['username']}/#{config['repo']['reponame']}@#{repo.log.last.sha[0..9]}.")
-      Jekyll.logger.info "Git commit all:     #{config['repo']['dest_name']}"
+      Jekyll.logger.info "Git commit all:     #{config['repo']['dest_folder']}"
 
       repo.push(repo.remote('origin'), config['repo']['dest_branch'])
       Jekyll.logger.info "Git push to remote: #{config['repo']['remote']}"
