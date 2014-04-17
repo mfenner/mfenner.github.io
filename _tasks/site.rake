@@ -97,6 +97,8 @@ class Site
       if ENV["TRAVIS"]
         remote = "https://#{config['repo']['git_user']}:#{ENV['GH_TOKEN']}@github.com/#{config['repo']['username']}/#{config['repo']['reponame']}.git"
         repo = Git.clone(remote, config['repo']['dest_folder'])
+        repo.config('user.name', config['repo']['git_user'])
+        repo.config('user.email', config['repo']['git_email'])
       else
         repo = Git.clone(config['repo']['remote'], config['repo']['dest_folder'])
       end
