@@ -52,7 +52,7 @@ class Site
 
   # check that configuration is valid
   # otherwise exit with error message
-  def check
+  def validate
     if config['errors'].empty?
       Jekyll.logger.info "Repo configuration: #{config['repo']['remote']}"
       Jekyll.logger.info output
@@ -88,10 +88,18 @@ class Site
     if File.exist? config['repo']['dest_folder']
       Jekyll.logger.info "Opening repo:       #{config['repo']['remote']}"
       repo = Git.open(config['repo']['dest_folder'])
+
+      Jekyll.logger.info "Git pull:           #{config['repo']['remote']}"
+      repo.pull
     else
       Jekyll.logger.info "Cloning repo:       #{config['repo']['remote']}"
       Jekyll.logger.info "Destination:        #{config['repo']['dest_folder']}"
-      repo = Git.clone(config['repo']['remote'], config['repo']['dest_folder'])
+      if ENV["TRAVIS"]
+        remote = "https://#{config['repo']['git_user']}:#{ENV['GH_TOKEN']}@github.com/#{config['repo']['username']}/#{config['repo']['reponame']}.git"
+        repo = Git.clone(remote, config['repo']['dest_folder'])
+      else
+        repo = Git.clone(config['repo']['remote'], config['repo']['dest_folder'])
+      end
     end
     Dir.chdir(config['repo']['dest_folder']) do
       Jekyll.logger.info "Checkout to branch: #{config['repo']['dest_branch']}"
@@ -131,34 +139,34 @@ end
 namespace :site do
   @site = Site.new(config)
 
-  desc "Check the site"
-  task :check do
-    @site.check
+  desc "Validate the site"
+  task :validate do
+    @site.validate
   end
 
   desc "Clone the destination site"
   task :clone do
-    @site.check
+    @site.validate
     @site.pull
   end
 
   desc "Generate the site"
   task :build do
-    @site.check
+    @site.validate
     @site.pull
     @site.build
   end
 
   desc "Generate the site and watch for changes"
   task :watch do
-    @site.check
+    @site.validate
     @site.pull
     @site.watch
   end
 
   desc "Generate the site and serve locally"
   task :serve do
-    @site.check
+    @site.validate
     @site.pull
     @site.serve
   end
@@ -166,7 +174,7 @@ namespace :site do
   desc "Generate the site and push changes to remote origin"
   task :deploy do
     @site.request
-    @site.check
+    @site.validate
     @site.pull
     @site.build
     @site.push
