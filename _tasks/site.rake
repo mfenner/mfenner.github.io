@@ -55,7 +55,7 @@ class Site
   def check
     if config['errors'].empty?
       Jekyll.logger.info "Repo configuration: #{config['repo']['remote']}"
-      Jekyll.logger.info "                    #{output}"
+      Jekyll.logger.info output
     else
       Jekyll.logger.error "Error: #{config['errors']}"
       exit(1)
@@ -124,8 +124,7 @@ class Site
 
   def output
     hash = config['repo'].select { |k| k != 'remote' }
-    str = hash.to_yaml
-    str.gsub(/---\n/,"").gsub(/\n/, "\n                    ")
+    hash.map { |k, v| "                    #{k}: #{v}" }.join("\n")
   end
 end
 
