@@ -86,16 +86,16 @@ class Site
   # checkout destination branch
   def pull
     if File.exist? config['repo']['dest_folder']
-      repo = Git.open(config['repo']['dest_folder'])
       Jekyll.logger.info "Opening repo:       #{config['repo']['remote']}"
+      repo = Git.open(config['repo']['dest_folder'])
     else
-      repo = Git.clone(config['repo']['remote'], config['repo']['dest_folder'])
       Jekyll.logger.info "Cloning repo:       #{config['repo']['remote']}"
       Jekyll.logger.info "Destination:        #{config['repo']['dest_folder']}"
+      repo = Git.clone(config['repo']['remote'], config['repo']['dest_folder'])
     end
     Dir.chdir(config['repo']['dest_folder']) do
-      repo.branch(config['repo']['dest_branch']).checkout
       Jekyll.logger.info "Checkout to branch: #{config['repo']['dest_branch']}"
+      repo.branch(config['repo']['dest_branch']).checkout
     end
   rescue => e
     Jekyll.logger.error "Error: #{e.message}"
@@ -106,15 +106,16 @@ class Site
   def push
     repo = Git.open(config['repo']['dest_folder'])
     Dir.chdir(config['repo']['dest_folder']) do
-      repo.add(all: true)
       Jekyll.logger.info "Git add all:        #{config['repo']['dest_folder']}"
+      repo.add(all: true)
 
-      repo.commit_all("Updating to #{config['repo']['username']}/#{config['repo']['reponame']}@#{repo.log.last.sha[0..9]}.")
       Jekyll.logger.info "Git commit all:     #{config['repo']['dest_folder']}"
+      repo.commit_all("Updating to #{config['repo']['username']}/#{config['repo']['reponame']}@#{repo.log.last.sha[0..9]}.")
 
-      repo.push(repo.remote('origin'), config['repo']['dest_branch'])
       Jekyll.logger.info "Git push to remote: #{config['repo']['remote']}"
       Jekyll.logger.info "Branch:             #{config['repo']['dest_branch']}"
+      repo.push(repo.remote('origin'), config['repo']['dest_branch'])
+      Jekyll.logger.info "GitHub Pages updated."
     end
   rescue => e
     Jekyll.logger.error "Error: #{e.message}"
@@ -170,7 +171,5 @@ namespace :site do
     @site.pull
     @site.build
     @site.push
-
-    Jekyll.logger.info "Updated branch #{@site.config['dest_branch']} pushed to GitHub Pages."
   end
 end
