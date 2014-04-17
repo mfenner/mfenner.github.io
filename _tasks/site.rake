@@ -34,7 +34,7 @@ def config
 
   # check for errors
   destination_is_ignored = File.readlines('.gitignore').any? { |l| l.start_with?(dest_name) }
-  destination_branch_exists = repo.branches.any? { |b| b.name == dest_branch && b.remote.nil? }
+  destination_branch_exists = repo.branches.any? { |b| b.name == dest_branch }
 
   conf['errors'] = {}
   conf['errors']['username'] = ["can't determine username"] unless username
@@ -90,8 +90,8 @@ end
 def git_push_failed?
   repo = Git.open(config['repo']['dest_name'])
   Dir.chdir(config['repo']['dest_name']) do
-    repo.add(:all=>true)
-    repo.commit_all "Updating to #{config['repo']['username']}/#{config['repo']['reponame']}@#{repo.log.last.sha}.'"
+    repo.add(all: true)
+    repo.commit_all("Updating to #{config['repo']['username']}/#{config['repo']['reponame']}@#{repo.log.last.sha[0..9]}.")
     repo.push(repo.remote('origin'), config['repo']['dest_branch'])
   end
   false
