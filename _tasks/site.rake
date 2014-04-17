@@ -1,17 +1,11 @@
 require 'rake'
 require 'jekyll'
-require 'date'
 require 'git'
 
 def config
   # read Jekyll configuration
   conf = Jekyll::Configuration::DEFAULTS
-  if File.exist? '_config.yml'
-    Jekyll.logger.log_level = Jekyll::Stevenson::WARN
-    jekyll_conf = Jekyll::Configuration.new.read_config_file('_config.yml')
-    Jekyll.logger.log_level = Jekyll::Stevenson::INFO
-    conf = conf.merge(jekyll_conf)
-  end
+  conf = conf.merge(jekyll_conf)
   dest_name = File.basename(conf['destination'])
 
   # read git repo information
@@ -48,111 +42,125 @@ end
 
 # Helper functions
 
-# check that configuration is valid
-def config_not_valid?
-  if config['errors'].empty?
-    false
+# read in jekyll configuration file
+def jekyll_conf
+  if File.exist? '_config.yml'
+    # temporarily silence log output
+    Jekyll.logger.log_level = Jekyll::Stevenson::ERROR
+    yml = Jekyll::Configuration.new.read_config_file('_config.yml')
+    Jekyll.logger.log_level = Jekyll::Stevenson::INFO
+
+    yml
   else
+    {}
+  end
+end
+
+# check that configuration is valid
+# otherwise exit with error message
+def jekyll_check
+  unless config['errors'].empty?
     Jekyll.logger.error "Error: #{config['errors']}"
-    true
+    exit(1)
+  end
+end
+
+def jekyll_build
+  Jekyll::Commands::Build.process(config)
+end
+
+def jekyll_watch
+  Jekyll::Commands::Build.process(config.merge('watch' => true))
+end
+
+def jekyll_serve
+  Jekyll::Commands::Serve.process(config)
+end
+
+# detect pull request
+def jekyll_request
+  if ENV['TRAVIS_PULL_REQUEST'].to_s.to_i > 0
+    Jekyll.logger.warn 'Pull request detected. Not proceeding with deploy.'
+    exit(1)
   end
 end
 
 # clone repo into destination folder if it doesn't exist there
 # checkout destination branch
-def git_clone_failed?
+def jekyll_pull
   if File.exist? config['repo']['dest_name']
     repo = Git.open(config['repo']['dest_name'])
-    repo.pull
   else
     repo = Git.clone(config['repo']['remote'], config['repo']['dest_name'])
   end
   Dir.chdir(config['repo']['dest_name']) do
     repo.branch(config['repo']['dest_branch']).checkout
   end
-  false
 rescue => e
   Jekyll.logger.error "Error: #{e.message}"
-  true
-end
-
-# detect pull request
-def pull_request?
-  if ENV['TRAVIS_PULL_REQUEST'].to_s.to_i > 0
-    Jekyll.logger.warn 'Pull request detected. Not proceeding with deploy.'
-    exit
-  else
-    false
-  end
+  exit(1)
 end
 
 # git push destination folder to remote
-def git_push_failed?
+def jekyll_push
   repo = Git.open(config['repo']['dest_name'])
   Dir.chdir(config['repo']['dest_name']) do
     repo.add(all: true)
     repo.commit_all("Updating to #{config['repo']['username']}/#{config['repo']['reponame']}@#{repo.log.last.sha[0..9]}.")
     repo.push(repo.remote('origin'), config['repo']['dest_branch'])
   end
-  false
 rescue => e
   Jekyll.logger.error "Error: #{e.message}"
-  true
+  exit(1)
 end
 
 namespace :site do
-
   desc "Check the site"
   task :check do
-    exit if config_not_valid?
+    jekyll_check
 
-    Jekyll.logger.info "Configuration: #{config['repo']}"
+    Jekyll.logger.info "Repo configuration: #{config['repo']}"
   end
 
   desc "Clone the destination site"
   task :clone do
-    exit if config_not_valid?
-    exit if git_clone_failed?
+    jekyll_check
+    jekyll_pull
 
     Jekyll.logger.info "Destination folder cloned from remote repo."
   end
 
   desc "Generate the site"
   task :build do
-    exit if config_not_valid?
-    exit if git_clone_failed?
+    jekyll_check
+    jekyll_pull
+    jekyll_build
 
-    sh "bundle exec jekyll build"
+    Jekyll.logger.info "Site built in destination folder."
+  end
+
+  desc "Generate the site and watch for changes"
+  task :watch do
+    jekyll_check
+    jekyll_pull
+    jekyll_watch
   end
 
   desc "Generate the site and serve locally"
   task :serve do
-    exit if config_not_valid?
-    exit if git_clone_failed?
-
-    sh "bundle exec jekyll serve"
-  end
-
-  desc "Generate the site, serve locally and watch for changes"
-  task :watch do
-    exit if config_not_valid?
-    exit if git_clone_failed?
-
-    sh "bundle exec jekyll serve --watch"
+    jekyll_check
+    jekyll_pull
+    jekyll_serve
   end
 
   desc "Generate the site and push changes to remote origin"
   task :deploy do
+    jekyll_request
+    jekyll_check
+    jekyll_pull
+    jekyll_build
+    jekyll_push
 
-    exit if pull_request?
-    exit if config_not_valid?
-    exit if git_clone_failed?
-
-    # Generate the site
-    sh "bundle exec jekyll build"
-
-    exit if git_push_failed?
-
-    Jekyll.logger.info "Pushed updated branch #{config['dest_branch']} to GitHub Pages."
+    Jekyll.logger.info "Updated branch #{config['dest_branch']} pushed to GitHub Pages."
   end
 end
