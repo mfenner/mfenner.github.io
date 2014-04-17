@@ -19,14 +19,17 @@ def config
   source_branch = repo.branches.find { |b| b.current && b.remote.nil? }.name
   dest_branch = reponame.start_with?(username) ? 'master' : 'gh-pages'
 
+  git_user = ENV['GIT_NAME'] || repo.config('user.name')
+  git_email = ENV['GIT_EMAIL'] || repo.config('user.email')
+
   conf['repo'] = { 'username' => username,
                    'reponame' => reponame,
                    'source_branch' => source_branch,
                    'dest_branch' => dest_branch,
                    'dest_folder' => dest_folder,
                    'remote' => remote,
-                   'git_user' => repo.config('user.name'),
-                   'git_email' => repo.config('user.email') }
+                   'git_user' => git_user,
+                   'git_email' => git_email }
 
   # check for errors
   destination_is_ignored = File.readlines('.gitignore').any? { |l| l.start_with?(dest_folder) }
