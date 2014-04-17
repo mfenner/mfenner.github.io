@@ -63,10 +63,13 @@ end
 def git_clone_failed?
   if File.exist? config['repo']['dest_name']
     repo = Git.open(config['repo']['dest_name'])
+    repo.pull
   else
     repo = Git.clone(config['repo']['remote'], config['repo']['dest_name'])
   end
-  Dir.chdir(config['repo']['dest_name']) { repo.branch(config['repo']['dest_branch']).checkout }
+  Dir.chdir(config['repo']['dest_name']) do
+    repo.branch(config['repo']['dest_branch']).checkout
+  end
   false
 rescue => e
   Jekyll.logger.error "Error: #{e.message}"
@@ -85,10 +88,10 @@ end
 
 # git push destination folder to remote
 def git_push_failed?
+  repo = Git.open(config['repo']['dest_name'])
   Dir.chdir(config['repo']['dest_name']) do
-    repo = Git.open(config['repo']['dest_name'])
-    repo.add(all: true)
-    repo.commit "Updating to #{config['repo']['username']}/#{config['repo']['reponame']}@#{repo.log.last.sha}.'"
+    repo.add(:all=>true)
+    repo.commit_all "Updating to #{config['repo']['username']}/#{config['repo']['reponame']}@#{repo.log.last.sha}.'"
     repo.push(repo.remote('origin'), config['repo']['dest_branch'])
   end
   false
