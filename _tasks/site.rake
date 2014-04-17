@@ -5,7 +5,9 @@ require 'git'
 def config
   # read Jekyll configuration
   conf = Jekyll::Configuration::DEFAULTS
-  conf = conf.merge(jekyll_conf)
+  if File.exist? '_config.yml'
+    conf = conf.merge(Jekyll::Configuration.new.read_config_file('_config.yml'))
+  end
   dest_name = File.basename(conf['destination'])
 
   # read git repo information
@@ -40,127 +42,135 @@ def config
   conf
 end
 
-# Helper functions
+class Site
 
-# read in jekyll configuration file
-def jekyll_conf
-  if File.exist? '_config.yml'
-    # temporarily silence log output
-    Jekyll.logger.log_level = Jekyll::Stevenson::ERROR
-    yml = Jekyll::Configuration.new.read_config_file('_config.yml')
-    Jekyll.logger.log_level = Jekyll::Stevenson::INFO
+  attr_reader :config
 
-    yml
-  else
-    {}
+  def initialize(config)
+    @config = config
   end
-end
 
-# check that configuration is valid
-# otherwise exit with error message
-def jekyll_check
-  unless config['errors'].empty?
-    Jekyll.logger.error "Error: #{config['errors']}"
+  # check that configuration is valid
+  # otherwise exit with error message
+  def check
+    if config['errors'].empty?
+      Jekyll.logger.info "Repo configuration: #{config['repo']['remote']}"
+      Jekyll.logger.info "                    #{output}"
+    else
+      Jekyll.logger.error "Error: #{config['errors']}"
+      exit(1)
+    end
+  end
+
+  def build
+    Jekyll::Commands::Build.process(config)
+  end
+
+  def watch
+    Jekyll::Commands::Build.process(config.merge('watch' => true))
+  end
+
+  def serve
+    Jekyll::Commands::Serve.process(config)
+  end
+
+  # detect pull request
+  def request
+    if ENV['TRAVIS_PULL_REQUEST'].to_s.to_i > 0
+      Jekyll.logger.warn 'Pull request detected. Not proceeding with deploy.'
+      exit(1)
+    end
+  end
+
+  # clone repo into destination folder if it doesn't exist there
+  # checkout destination branch
+  def pull
+    if File.exist? config['repo']['dest_name']
+      repo = Git.open(config['repo']['dest_name'])
+      Jekyll.logger.info "Opening repo:       #{config['repo']['remote']}"
+    else
+      repo = Git.clone(config['repo']['remote'], config['repo']['dest_name'])
+      Jekyll.logger.info "Cloning repo:       #{config['repo']['remote']}"
+      Jekyll.logger.info "Destination:        #{config['repo']['dest_name']}"
+    end
+    Dir.chdir(config['repo']['dest_name']) do
+      repo.branch(config['repo']['dest_branch']).checkout
+      Jekyll.logger.info "Checkout to branch: #{config['repo']['dest_branch']}"
+    end
+  rescue => e
+    Jekyll.logger.error "Error: #{e.message}"
     exit(1)
   end
-end
 
-def jekyll_build
-  Jekyll::Commands::Build.process(config)
-end
-
-def jekyll_watch
-  Jekyll::Commands::Build.process(config.merge('watch' => true))
-end
-
-def jekyll_serve
-  Jekyll::Commands::Serve.process(config)
-end
-
-# detect pull request
-def jekyll_request
-  if ENV['TRAVIS_PULL_REQUEST'].to_s.to_i > 0
-    Jekyll.logger.warn 'Pull request detected. Not proceeding with deploy.'
-    exit(1)
-  end
-end
-
-# clone repo into destination folder if it doesn't exist there
-# checkout destination branch
-def jekyll_pull
-  if File.exist? config['repo']['dest_name']
+  # git push destination folder to remote
+  def push
     repo = Git.open(config['repo']['dest_name'])
-  else
-    repo = Git.clone(config['repo']['remote'], config['repo']['dest_name'])
-  end
-  Dir.chdir(config['repo']['dest_name']) do
-    repo.branch(config['repo']['dest_branch']).checkout
-  end
-rescue => e
-  Jekyll.logger.error "Error: #{e.message}"
-  exit(1)
-end
+    Dir.chdir(config['repo']['dest_name']) do
+      repo.add(all: true)
+      Jekyll.logger.info "Git add all:        #{config['repo']['dest_name']}"
 
-# git push destination folder to remote
-def jekyll_push
-  repo = Git.open(config['repo']['dest_name'])
-  Dir.chdir(config['repo']['dest_name']) do
-    repo.add(all: true)
-    repo.commit_all("Updating to #{config['repo']['username']}/#{config['repo']['reponame']}@#{repo.log.last.sha[0..9]}.")
-    repo.push(repo.remote('origin'), config['repo']['dest_branch'])
+      repo.commit_all("Updating to #{config['repo']['username']}/#{config['repo']['reponame']}@#{repo.log.last.sha[0..9]}.")
+      Jekyll.logger.info "Git commit all:     #{config['repo']['dest_name']}"
+
+      repo.push(repo.remote('origin'), config['repo']['dest_branch'])
+      Jekyll.logger.info "Git push to remote: #{config['repo']['remote']}"
+      Jekyll.logger.info "Branch:             #{config['repo']['dest_branch']}"
+    end
+  rescue => e
+    Jekyll.logger.error "Error: #{e.message}"
+    exit(1)
   end
-rescue => e
-  Jekyll.logger.error "Error: #{e.message}"
-  exit(1)
+
+  def output
+    hash = config['repo'].select { |k| k != 'remote' }
+    str = hash.to_yaml
+    str.gsub(/---\n/,"").gsub(/\n/, "\n                    ")
+  end
 end
 
 namespace :site do
+  @site = Site.new(config)
+
   desc "Check the site"
   task :check do
-    jekyll_check
-
-    Jekyll.logger.info "Repo configuration: #{config['repo']}"
+    @site.check
   end
 
   desc "Clone the destination site"
   task :clone do
-    jekyll_check
-    jekyll_pull
-
-    Jekyll.logger.info "Destination folder cloned from remote repo."
+    @site.check
+    @site.pull
   end
 
   desc "Generate the site"
   task :build do
-    jekyll_check
-    jekyll_pull
-    jekyll_build
-
-    Jekyll.logger.info "Site built in destination folder."
+    @site.check
+    @site.pull
+    @site.build
   end
 
   desc "Generate the site and watch for changes"
   task :watch do
-    jekyll_check
-    jekyll_pull
-    jekyll_watch
+    @site.check
+    @site.pull
+    @site.watch
   end
 
   desc "Generate the site and serve locally"
   task :serve do
-    jekyll_check
-    jekyll_pull
-    jekyll_serve
+    @site.check
+    @site.pull
+    @site.serve
   end
 
   desc "Generate the site and push changes to remote origin"
   task :deploy do
-    jekyll_request
-    jekyll_check
-    jekyll_pull
-    jekyll_build
-    jekyll_push
+    @site.request
+    @site.check
+    @site.pull
+    @site.build
+    @site.push
 
-    Jekyll.logger.info "Updated branch #{config['dest_branch']} pushed to GitHub Pages."
+    Jekyll.logger.info "Updated branch #{@site.config['dest_branch']} pushed to GitHub Pages."
   end
 end
