@@ -7,6 +7,7 @@ gem 'psych', '~> 2.0.5'
 gem "jekyll-assets", "~> 0.7.6"
 gem "jekyll-scholar", "~> 2.0.0"
 gem "jekyll-pandoc", "~> 0.0.1"
+gem "jekyll-travis", "~> 0.0.1"
 gem 'git', '~> 1.2.6'
 
 gem "faraday", "~> 0.8.9"

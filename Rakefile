@@ -5,6 +5,9 @@
 #
 #############################################################################
 
+#spec = Gem::Specification.find_by_name 'jekyll-travis'
+#load "#{spec.gem_dir}/lib/tasks/site.rake"
+# require 'jekyll-travis/tasks'
 import '_tasks/site.rake'
 
 # File activesupport/lib/active_support/inflector/transliterate.rb, line 80

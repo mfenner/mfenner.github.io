@@ -30,13 +30,13 @@ def config
 
   # check for errors
   destination_is_ignored = File.readlines('.gitignore').any? { |l| l.start_with?(dest_folder) }
-  destination_branch_exists = repo.branches.any? { |b| b.name == dest_branch }
+  # destination_branch_exists = repo.branches.any? { |b| b.name == dest_branch }
 
   conf['errors'] = {}
   conf['errors']['username'] = ["can't determine username"] unless username
   conf['errors']['reponame'] = ["can't determine reponame"] unless reponame
   conf['errors']['destination'] = ["folder #{dest_folder} must be .gitignored"] unless destination_is_ignored
-  conf['errors']['dest_branch'] = ["branch #{dest_branch} must exist"] unless destination_branch_exists
+  # conf['errors']['dest_branch'] = ["branch #{dest_branch} must exist"] unless destination_branch_exists
 
   # return configuration as hash
   conf
