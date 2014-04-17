@@ -94,15 +94,15 @@ class Site
     else
       Jekyll.logger.info "Cloning repo:       #{config['repo']['remote']}"
       Jekyll.logger.info "Destination:        #{config['repo']['dest_folder']}"
+
       if ENV["TRAVIS"]
         remote = "https://#{config['repo']['git_user']}:#{ENV['GH_TOKEN']}@github.com/#{config['repo']['username']}/#{config['repo']['reponame']}.git"
         repo = Git.clone(remote, config['repo']['dest_folder'])
-        repo.config('user.name', config['repo']['git_user'])
-        repo.config('user.email', config['repo']['git_email'])
       else
         repo = Git.clone(config['repo']['remote'], config['repo']['dest_folder'])
       end
     end
+
     Dir.chdir(config['repo']['dest_folder']) do
       Jekyll.logger.info "Checkout to branch: #{config['repo']['dest_branch']}"
       repo.branch(config['repo']['dest_branch']).checkout
@@ -115,6 +115,12 @@ class Site
   # git push destination folder to remote
   def push
     repo = Git.open(config['repo']['dest_folder'])
+
+    if ENV["TRAVIS"]
+      repo.config('user.name', config['repo']['git_user'])
+      repo.config('user.email', config['repo']['git_email'])
+    end
+
     Dir.chdir(config['repo']['dest_folder']) do
       Jekyll.logger.info "Git add all:        #{config['repo']['dest_folder']}"
       repo.add(all: true)
