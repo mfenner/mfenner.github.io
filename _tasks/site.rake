@@ -8,7 +8,7 @@ def config
   if File.exist? '_config.yml'
     conf = conf.merge(Jekyll::Configuration.new.read_config_file('_config.yml'))
   end
-  dest_folder = File.basename(conf['destination'])
+  dest_folder = conf['destination'].start_with?("../") ? conf['destination'] : File.basename(conf['destination'])
 
   # read git repo information
   repo = Git.open(conf['source'])
@@ -32,7 +32,7 @@ def config
                    'git_email' => git_email }
 
   # check for errors
-  destination_is_ignored = File.readlines('.gitignore').any? { |l| l.start_with?(dest_folder) }
+  destination_is_ignored = dest_folder.start_with?("../") || File.readlines('.gitignore').any? { |l| l.start_with?(dest_folder) }
   # destination_branch_exists = repo.branches.any? { |b| b.name == dest_branch }
 
   conf['errors'] = {}

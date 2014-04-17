@@ -2,6 +2,8 @@ safe: false
 lsi: false
 highlighter: pygments
 
+destination: ../mfenner.github.io-gh-pages/
+
 keep_files:  ['.git','figures']
 
 # Settings for deploy rake task
