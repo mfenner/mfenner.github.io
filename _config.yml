@@ -28,7 +28,7 @@ include:
 
 gems:
   - jekyll-pandoc
-  - jekyll-travis
+ # - jekyll-travis
 
 permalink: /:categories/:year/:month/:day/:title
 
