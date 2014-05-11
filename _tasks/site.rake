@@ -88,22 +88,14 @@ class Site
   # clone repo into destination folder if it doesn't exist there
   # checkout destination branch
   def pull
-    if File.exist? config['repo']['dest_folder']
-      Jekyll.logger.info "Opening repo:       #{config['repo']['remote']}"
-      repo = Git.open(config['repo']['dest_folder'])
+    Jekyll.logger.info "Cloning repo:       #{config['repo']['remote']}"
+    Jekyll.logger.info "Destination:        #{config['repo']['dest_folder']}"
 
-      Jekyll.logger.info "Git pull:           #{config['repo']['remote']}"
-      repo.pull
+    if ENV["TRAVIS"]
+      remote = "https://#{config['repo']['git_user']}:#{ENV['GH_TOKEN']}@github.com/#{config['repo']['username']}/#{config['repo']['reponame']}.git"
+      repo = Git.clone(remote, config['repo']['dest_folder'])
     else
-      Jekyll.logger.info "Cloning repo:       #{config['repo']['remote']}"
-      Jekyll.logger.info "Destination:        #{config['repo']['dest_folder']}"
-
-      if ENV["TRAVIS"]
-        remote = "https://#{config['repo']['git_user']}:#{ENV['GH_TOKEN']}@github.com/#{config['repo']['username']}/#{config['repo']['reponame']}.git"
-        repo = Git.clone(remote, config['repo']['dest_folder'])
-      else
-        repo = Git.clone(config['repo']['remote'], config['repo']['dest_folder'])
-      end
+      repo = Git.clone(config['repo']['remote'], config['repo']['dest_folder'])
     end
 
     Dir.chdir(config['repo']['dest_folder']) do
