@@ -4,7 +4,7 @@
  <title>Gobbledygook</title>
  <link href="http://blog.martinfenner.org//atom.xml" rel="self"/>
  <link href="http://blog.martinfenner.org"/>
- <updated>2014-04-08T13:17:34+00:00</updated>
+ <updated>2014-05-11T12:40:02+00:00</updated>
  <id>http://blog.martinfenner.org</id>
  <author>
    <name>Martin Fenner</name>
@@ -1161,42 +1161,42 @@ PDB:  1mbn&lt;/code&gt;&lt;/pre&gt;
 &lt;span class=&quot;ot&quot;&gt;---&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;In JSON the same information would look like this (and Jekyll is able to parse it, since JSON is a subset of YAML 1.2):&lt;/p&gt;
 &lt;pre class=&quot;sourceCode json&quot;&gt;&lt;code class=&quot;sourceCode json&quot;&gt;&lt;span class=&quot;er&quot;&gt;---&lt;/span&gt;
-{
-  &lt;span class=&quot;dt&quot;&gt;&amp;quot;layout&amp;quot;&lt;/span&gt;: &lt;span class=&quot;st&quot;&gt;&amp;quot;post&amp;quot;&lt;/span&gt;,
-  &lt;span class=&quot;dt&quot;&gt;&amp;quot;title&amp;quot;&lt;/span&gt;: &lt;span class=&quot;st&quot;&gt;&amp;quot;Nine simple ways to make it easier to (re)use your data&amp;quot;&lt;/span&gt;,
-  &lt;span class=&quot;dt&quot;&gt;&amp;quot;tags&amp;quot;&lt;/span&gt;: [
-    &lt;span class=&quot;st&quot;&gt;&amp;quot;example&amp;quot;&lt;/span&gt;,
+&lt;span class=&quot;fu&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;dt&quot;&gt;&amp;quot;layout&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;post&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;dt&quot;&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;Nine simple ways to make it easier to (re)use your data&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;dt&quot;&gt;&amp;quot;tags&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;ot&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;st&quot;&gt;&amp;quot;example&amp;quot;&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;st&quot;&gt;&amp;quot;citation&amp;quot;&lt;/span&gt;
-  ],
-  &lt;span class=&quot;dt&quot;&gt;&amp;quot;authors&amp;quot;&lt;/span&gt;: [
-    {
-      &lt;span class=&quot;dt&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;: &lt;span class=&quot;st&quot;&gt;&amp;quot;Ethan P. White&amp;quot;&lt;/span&gt;,
-      &lt;span class=&quot;dt&quot;&gt;&amp;quot;orcid&amp;quot;&lt;/span&gt;: &lt;span class=&quot;st&quot;&gt;&amp;quot;0000-0001-6728-7745&amp;quot;&lt;/span&gt;,
-      &lt;span class=&quot;dt&quot;&gt;&amp;quot;affiliation&amp;quot;&lt;/span&gt;: &lt;span class=&quot;st&quot;&gt;&amp;quot;Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341&amp;quot;&lt;/span&gt;
-    },
-    {
-      &lt;span class=&quot;dt&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;: &lt;span class=&quot;st&quot;&gt;&amp;quot;Elita Baldrige&amp;quot;&lt;/span&gt;,
-      &lt;span class=&quot;dt&quot;&gt;&amp;quot;orcid&amp;quot;&lt;/span&gt;: &lt;span class=&quot;st&quot;&gt;&amp;quot;0000-0003-1639-5951&amp;quot;&lt;/span&gt;,
-      &lt;span class=&quot;dt&quot;&gt;&amp;quot;affiliation&amp;quot;&lt;/span&gt;: &lt;span class=&quot;st&quot;&gt;&amp;quot;Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341&amp;quot;&lt;/span&gt;
-    },
-    {
-      &lt;span class=&quot;dt&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;: &lt;span class=&quot;st&quot;&gt;&amp;quot;Zachary T. Brym&amp;quot;&lt;/span&gt;,
-      &lt;span class=&quot;dt&quot;&gt;&amp;quot;affiliation&amp;quot;&lt;/span&gt;: &lt;span class=&quot;st&quot;&gt;&amp;quot;Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341&amp;quot;&lt;/span&gt;
-    },
-    {
-      &lt;span class=&quot;dt&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;: &lt;span class=&quot;st&quot;&gt;&amp;quot;Kenneth J. Locey&amp;quot;&lt;/span&gt;,
-      &lt;span class=&quot;dt&quot;&gt;&amp;quot;affiliation&amp;quot;&lt;/span&gt;: &lt;span class=&quot;st&quot;&gt;&amp;quot;Dept. of Biology, Utah State University, Logan, UT, USA, 84341&amp;quot;&lt;/span&gt;
-    },
-    {
-      &lt;span class=&quot;dt&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;: &lt;span class=&quot;st&quot;&gt;&amp;quot;Daniel J. McGlinn&amp;quot;&lt;/span&gt;,
-      &lt;span class=&quot;dt&quot;&gt;&amp;quot;affiliation&amp;quot;&lt;/span&gt;: &lt;span class=&quot;st&quot;&gt;&amp;quot;Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341&amp;quot;&lt;/span&gt;
-    },
-    {
-      &lt;span class=&quot;dt&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;: &lt;span class=&quot;st&quot;&gt;&amp;quot;Sarah R. Supp&amp;quot;&lt;/span&gt;,
-      &lt;span class=&quot;dt&quot;&gt;&amp;quot;affiliation&amp;quot;&lt;/span&gt;: &lt;span class=&quot;st&quot;&gt;&amp;quot;Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341&amp;quot;&lt;/span&gt;
-    }
-  ]
-}
+  &lt;span class=&quot;ot&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;dt&quot;&gt;&amp;quot;authors&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;ot&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;fu&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;dt&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;Ethan P. White&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;dt&quot;&gt;&amp;quot;orcid&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;0000-0001-6728-7745&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;dt&quot;&gt;&amp;quot;affiliation&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;fu&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;fu&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;dt&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;Elita Baldrige&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;dt&quot;&gt;&amp;quot;orcid&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;0000-0003-1639-5951&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;dt&quot;&gt;&amp;quot;affiliation&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;fu&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;fu&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;dt&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;Zachary T. Brym&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;dt&quot;&gt;&amp;quot;affiliation&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;fu&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;fu&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;dt&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;Kenneth J. Locey&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;dt&quot;&gt;&amp;quot;affiliation&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;Dept. of Biology, Utah State University, Logan, UT, USA, 84341&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;fu&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;fu&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;dt&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;Daniel J. McGlinn&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;dt&quot;&gt;&amp;quot;affiliation&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;fu&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;fu&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;dt&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;Sarah R. Supp&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;dt&quot;&gt;&amp;quot;affiliation&amp;quot;&lt;/span&gt;&lt;span class=&quot;fu&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;Dept. of Biology and the Ecology Center, Utah State University, Logan, UT, USA, 84341&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;fu&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;ot&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;fu&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;er&quot;&gt;---&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You can see that the author information required for manuscript submission can easily be written in YAML (email addresses were removed to protect privacy). JSON is also possible for people where this is a better fit into their workflow, but it is more difficult to write for humans because of the curly braces, and because all strings need to be in double quotes.&lt;/p&gt;
 &lt;p&gt;Once the ORCID Registry &lt;a href=&quot;http://orcid.org/blog/2013/06/27/orcid-plans-launch-affiliation-module-using-isni-and-ringgold-organization&quot;&gt;adds affiliation&lt;/a&gt; information, we no longer need to provide email and affiliation when submitting manuscripts. I have stored my own name, orcid, email and affiliation in my site configuration file so that I don’t have to provide this info for every blog post.&lt;/p&gt;
@@ -1284,7 +1284,13 @@ PDB:  1mbn&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;NA and NULL are reasonable null values, but they are only handled automatically by a subset of commonly used software (Table 1). NA can also be problematic if it is also used as an abbreviation (e.g., North America, Namibia, &lt;em&gt;Neotoma albigula&lt;/em&gt;, sodium, etc.). We recommend against using numerical values to indicate nulls (e.g., 999, -999, etc.) because they typically require an extra step to remove from analyses and can be accidentally included in calculations. We also recommend against using non-standard text indications (e.g., No data, ND, missing, —) because they can cause issues with software that requires consistent data types within columns). Whichever null value that you use, only use one, use it consistently throughout the data set, and indicate it clearly in the metadata.&lt;/p&gt;
 &lt;table&gt;
 &lt;caption&gt;&lt;strong&gt;Tabel 1. Commonly used null values, limitations, compatibility with common software and a recommendation regarding whether or not it is a good option&lt;/strong&gt;. Null values are indicated as being a null value for specific software if they work consistently and correctly with that software. For example, the null value “NULL” works correctly for certain applications in R, but does not work in others, so it is not presented as part of the table.&lt;/caption&gt;
-&lt;col style=&quot;width: 11%&quot; /&gt;&lt;col style=&quot;width: 26%&quot; /&gt;&lt;col style=&quot;width: 19%&quot; /&gt;&lt;col style=&quot;width: 20%&quot; /&gt;&lt;thead&gt;
+&lt;colgroup&gt;
+&lt;col style=&quot;width: 11%&quot; /&gt;
+&lt;col style=&quot;width: 26%&quot; /&gt;
+&lt;col style=&quot;width: 19%&quot; /&gt;
+&lt;col style=&quot;width: 20%&quot; /&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
 &lt;tr class=&quot;header&quot;&gt;
 &lt;th style=&quot;text-align: left;&quot;&gt;Null values&lt;/th&gt;
 &lt;th style=&quot;text-align: left;&quot;&gt;Problems&lt;/th&gt;
@@ -1374,7 +1380,15 @@ PDB:  1mbn&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;In cases where there is no &lt;em&gt;de facto&lt;/em&gt; standard it is worth considering differences among repositories in terms of use, data rights, and licensing (Table 2) and whether your funding agency or journal has explicit requirements or restrictions related to repositories. We also recommend that you use a repository that allows your dataset to be easily cited. Most repositories will describe how this works, but an easy way to guarantee that your data are citable is to confirm that the repository associates it with a persistent identifier, the most popular of which is the digital object identifier (DOI). DOIs are permanent unique identifiers that are independent of physical location and site ownership. There are also online tools for finding good repositories for your data including &lt;a href=&quot;http://databib.org&quot;&gt;Databib&lt;/a&gt; and &lt;a href=&quot;http://re3data.org&quot;&gt;re3data&lt;/a&gt;.&lt;/p&gt;
 &lt;table&gt;
 &lt;caption&gt;&lt;strong&gt;Table 2. Popular repositories for scientific datasets&lt;/strong&gt;. This table does not include well-known molecular repositories (e.g. GenBank, EMBL, MG-RAST) that have become &lt;em&gt;de facto&lt;/em&gt; standards in molecular and evolutionary biology. Consequently, several of these primarily serve the ecological community. These repositories are not exclusively used by members of specific institutions or museums, but accept data from the general scientific community.&lt;/caption&gt;
-&lt;col style=&quot;width: 19%&quot; /&gt;&lt;col style=&quot;width: 11%&quot; /&gt;&lt;col style=&quot;width: 8%&quot; /&gt;&lt;col style=&quot;width: 13%&quot; /&gt;&lt;col style=&quot;width: 12%&quot; /&gt;&lt;col style=&quot;width: 18%&quot; /&gt;&lt;thead&gt;
+&lt;colgroup&gt;
+&lt;col style=&quot;width: 19%&quot; /&gt;
+&lt;col style=&quot;width: 11%&quot; /&gt;
+&lt;col style=&quot;width: 8%&quot; /&gt;
+&lt;col style=&quot;width: 13%&quot; /&gt;
+&lt;col style=&quot;width: 12%&quot; /&gt;
+&lt;col style=&quot;width: 18%&quot; /&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
 &lt;tr class=&quot;header&quot;&gt;
 &lt;th style=&quot;text-align: left;&quot;&gt;Repository&lt;/th&gt;
 &lt;th style=&quot;text-align: left;&quot;&gt;License&lt;/th&gt;
@@ -1711,7 +1725,12 @@ y &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k
 &lt;p&gt;Tables should work as anchors (i.e. you can link to them) and table captions should support styled text. Unless the table is very simple, tables are probably better written as CSV files with another tool, and then imported into the scholarly markdown document similar to figures.&lt;/p&gt;
 &lt;table&gt;
 &lt;caption&gt;&lt;strong&gt;This is the table caption&lt;/strong&gt;. We can explain the table here.&lt;/caption&gt;
-&lt;col style=&quot;width: 16%&quot; /&gt;&lt;col style=&quot;width: 22%&quot; /&gt;&lt;col style=&quot;width: 34%&quot; /&gt;&lt;thead&gt;
+&lt;colgroup&gt;
+&lt;col style=&quot;width: 16%&quot; /&gt;
+&lt;col style=&quot;width: 22%&quot; /&gt;
+&lt;col style=&quot;width: 34%&quot; /&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
 &lt;tr class=&quot;header&quot;&gt;
 &lt;th style=&quot;text-align: center;&quot;&gt;Centered Header&lt;/th&gt;
 &lt;th style=&quot;text-align: right;&quot;&gt;Right Aligned&lt;/th&gt;
