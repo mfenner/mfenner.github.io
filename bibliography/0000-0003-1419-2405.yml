@@ -1,7 +1,7 @@
 ---
 orcid: 0000-0003-1419-2405
 created_at: '2012-10-08T20:49:20+00:00'
-updated_at: '2014-04-10T18:54:33+00:00'
+updated_at: '2014-07-03T19:54:05+00:00'
 biography: Martin Fenner is the technical lead for the PLOS Article-Level Metrics
   project. Before taking this position in 2012 he worked as a medical oncologist at
   the Hannover Medical School Cancer Center in Germany. He has served on the ORCID
@@ -25,6 +25,21 @@ references:
     date-parts:
     - - 2014
       - 12
+- DOI: 10.6084/M9.FIGSHARE.1041821
+  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.1041821
+  author:
+  - family: Costas
+  - family: Rodrigo
+    given: Zohreh Zahedi Martin Fenner
+  publisher: Figshare
+  title: How consistent are altmetrics providers? Study of 1000 PLOS ONE publications
+    using the PLOS ALM, Mendeley and Altmetric.com APIs
+  genre: misc
+  id: costas2014a
+  type: ''
+  issued:
+    date-parts:
+    - - 2014
 - title: Reference Management
   author:
   - family: Fenner
@@ -362,6 +377,19 @@ references:
   issued:
     date-parts:
     - - 2013
+- DOI: 10.5281/ZENODO.1239
+  URL: http://dx.doi.org/10.5281/ZENODO.1239
+  author:
+  - family: Fenner
+    given: Martin
+  publisher: OpenAIRE Orphan Record Repository
+  title: Publication FP7 Funding Acknowledgment - PLOS OpenAIRE
+  genre: misc
+  id: fenner2013f
+  type: ''
+  issued:
+    date-parts:
+    - - 2013
 - DOI: 10.6084/M9.FIGSHARE.107019
   URL: http://dx.doi.org/10.6084/M9.FIGSHARE.107019
   author:
@@ -384,7 +412,7 @@ references:
   - family: Fenner
     given: Martin
   container-title: Bulletin of the American Society for Information Science and Technology
-  id: fenner2013f
+  id: fenner2013g
   type: article-journal
   issued:
     date-parts:
@@ -401,7 +429,7 @@ references:
     given: Martin
   page: e1001687
   genre: article
-  id: fenner2013g
+  id: fenner2013h
   type: ''
   issued:
     date-parts:
@@ -1991,26 +2019,6 @@ references:
   genre: article
   id: fenner1993b
   type: ''
-  issued:
-    date-parts:
-    - - 1993
-      - 2
-Lancet
-  publisher: Elsevier
-  author:
-  - family: Fenner
-    given: MartinH.
-  - family: Lopez HÃ¤nninen
-    given: Enrique
-  - family: Kirchner
-    given: HartmutH.
-  - family: Poliwoda
-    given: Hubert
-  - family: Atzpodien
-    given: Jens
-  page: '372'
-  id: fenner1993b
-  type: article-journal
   issued:
     date-parts:
     - - 1993
