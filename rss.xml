@@ -5,18 +5,18 @@
         <description>Gobbledygook - Martin Fenner</description>
         <link>http://blog.martinfenner.org/rss.xml</link>
         <link>http://blog.martinfenner.org</link>
-        <lastBuildDate>2014-07-18T10:26:16+00:00</lastBuildDate>
-        <pubDate>2014-07-18T10:26:16+00:00</pubDate>
+        <lastBuildDate>2014-07-18T10:58:19+00:00</lastBuildDate>
+        <pubDate>2014-07-18T10:58:19+00:00</pubDate>
         <ttl>1800</ttl>
 
 
         <item>
                 <title>Build Roads not Stagecoaches</title>
-                <description>&lt;p&gt;I attended the &lt;a href=&quot;http://2014.okfestival.org/&quot;&gt;Open Knowledge Festival&lt;/a&gt; this week and I had a blast. For three days (I also attended the fringe event &lt;a href=&quot;http://csvconf.com/&quot;&gt;csv,conf&lt;/a&gt; on Tuesday) I listed to wonderful presentations and was involved in great discussions - both within sessions, but more importantly all the informal discussions between and after sessions.&lt;/p&gt;
+                <description>&lt;p&gt;I attended the &lt;a href=&quot;http://2014.okfestival.org/&quot;&gt;Open Knowledge Festival&lt;/a&gt; this week and I had a blast. For three days (I also attended the fringe event &lt;a href=&quot;http://csvconf.com/&quot;&gt;csv,conf&lt;/a&gt; on Tuesday) I listed to wonderful presentations and was involved in great discussions - both within sessions, but more importantly all the informal discussions between and after sessions.&lt;!--more--&gt;&lt;/p&gt;
 &lt;figure&gt;
 &lt;img src=&quot;/images/okfest-2014-logo.png&quot; /&gt;
 &lt;/figure&gt;
-&lt;p&gt;Of all the things that were discussed I want to pick one theme that resonated in particular with me. It surfaced in many places, but was articulated particularly well by &lt;a href=&quot;https://twitter.com/erichysen&quot;&gt;Eric Hysen&lt;/a&gt; - who heads the &lt;a href=&quot;http://www.google.com/elections/ed/us&quot;&gt;Google Politics &amp;amp; Elections Group&lt;/a&gt; - in his keynote yesterday (starting at 54:52):&lt;/p&gt;
+&lt;p&gt;Of all the things that were discussed I want to pick one theme that resonated in particular with me. It surfaced in many places, but was articulated particularly well by &lt;a href=&quot;https://twitter.com/erichysen&quot;&gt;Eric Hysen&lt;/a&gt; - who heads the &lt;a href=&quot;http://www.google.com/elections/ed/us&quot;&gt;Google Politics &amp;amp; Elections Group&lt;/a&gt; - in his keynote yesterday (starting at 54:52, but please also watch the keynote by Neelie Kroes, Vice-President of the European Commission):&lt;/p&gt;
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;//www.youtube.com/embed/0UNRZEsLxKc&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;In his keynote he described how travel from Cambridge to London in the 18th and early 19th century improved mainly as a result of better roads, made possible by changes in how these roads are financed. Translated to today, he urged the audience to think more about the infrastructure and less about the end products:&lt;/p&gt;
@@ -36,12 +36,12 @@
 &lt;li&gt;&lt;a href=&quot;http://www.niso.org/topics/tl/altmetrics_initiative/&quot;&gt;NISO Alternative Assessment Metrics&lt;/a&gt;: standards and best practices for novel scholarly metrics&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.re3data.org/&quot;&gt;re3data&lt;/a&gt;: a registry of research data repositories&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://creativecommons.org/&quot;&gt;Creative Commons&lt;/a&gt;: copyright licenses for creative works&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/articlemetrics/alm&quot;&gt;ALM&lt;/a&gt;: software to collect comprehensive information about where scholarly articles are discussed on the web&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/articlemetrics/alm&quot;&gt;ALM&lt;/a&gt;: software to collect comprehensive information about the discussion of scholarly articles on the web&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;This list doesn’t include all the generic software needed to build open science tools, with &lt;strong&gt;git&lt;/strong&gt; being a perfect example. The last project is obviously the project I have been working on the past two years for PLOS, but I have tried to support the other projects mentioned in various ways from small code contributions to promotion via this blog and presentations, or direct work in these projects. But strangely enough, I haven’t really realized this until now.&lt;/p&gt;
-&lt;p&gt;Not surprisingly infrastructure, servers, libraries and other building blocks are exactly the areas where open source software has been most successful so far.&lt;/p&gt;
+&lt;p&gt;Not surprisingly infrastructure, servers, libraries and other building blocks are exactly the areas where open source software has been most successful so far, and this is of course a core part of the UNIX philosophy of building parts that work well together rather than big monolithic programs that do everything.&lt;/p&gt;
 &lt;h2 id=&quot;next&quot;&gt;Next&lt;/h2&gt;
-&lt;p&gt;We need more &lt;em&gt;Open Science Infrastructure&lt;/em&gt; and it is the stuff that I really care about. I think we need to better support those projects that build these essential building blocks via advice, cooperation, promotion, or financial support. I am willing to help with that effort, and I have started to think how I can best contribute.&lt;/p&gt;
+&lt;p&gt;We need more &lt;strong&gt;Open Science Infrastructure&lt;/strong&gt; and it is the stuff that I really care about. I think we need to better support those projects that build these essential building blocks via advice, cooperation, promotion, and financial support. I am willing to help with that effort, and I have started to think how I can best contribute.&lt;/p&gt;
 &lt;p&gt;On the other hand there are many great open science projects that don’t fall in this category, maybe even the majority of them. I wish them good luck, but I would advice them to think more about infrastructure, and whether there is a small area where they can focus on. It still amazes me how successful projects such as &lt;strong&gt;Citation Style Language&lt;/strong&gt; and &lt;strong&gt;Pandoc&lt;/strong&gt; have been with no or almost no funding and a very small core group of people doing the majority of the work. One critical ingredient is the total focus on a very specific problem that is both important and can be solved with specific actions. Too many open science projects want to solve too many problems at once, try to solve the exact same problems that many other parallel projects work on, don’t cooperate enough with those parallel projects, and require a critical mass of users to work.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 
