@@ -115,7 +115,7 @@
 </blockquote>
 <p>This blog post is an example for such a document. The page is written in <strong>markdown</strong> (markdown file available <a href="https://github.com/mfenner/mfenner.github.io/blob/source/_posts/2014-04-04-literate-blogging.Rmd">here</a>), and all embedded code was executed when this page was generated, i.e. when the markdown was converted to HTML and the blog post was published. To demonstrate this I have embedded code in three different languages below - the output is the second code block.</p>
 <p>In R you have</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cat</span>(<span class="st">"Hello, R world!</span><span class="ch">\n</span><span class="st">"</span>)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cat</span>(<span class="st">'Hello, R world!</span><span class="ch">\n</span><span class="st">'</span>)</code></pre>
 <pre><code>Hello, R world!</code></pre>
 <p>Or Python</p>
 <pre class="sourceCode python"><code class="sourceCode python"><span class="dt">print</span> <span class="st">"Hello, Python world!"</span></code></pre>
@@ -135,7 +135,7 @@ alm &lt;-<span class="st"> </span><span class="kw">subset</span>(alm, alm$articl
 
 <span class="co"># only look at papers published in 2010</span>
 alm$publication_date &lt;-<span class="st"> </span><span class="kw">as.Date</span>(alm$publication_date)
-alm &lt;-<span class="st"> </span><span class="kw">subset</span>(alm, alm$publication_date &gt;<span class="st"> "2010-01-01"</span> &amp;<span class="st"> </span>alm$publication_date &lt;=<span class="st"> </span>
+alm &lt;-<span class="st"> </span><span class="kw">subset</span>(alm, alm$publication_date &gt;<span class="st"> "2010-01-01"</span> &amp;<span class="st"> </span>alm$publication_date &lt;=
 <span class="st">    "2010-12-31"</span>)
 
 <span class="co"># labels</span>
@@ -149,8 +149,8 @@ plos.ylab &lt;-<span class="st"> "Probability"</span>
 quantile &lt;-<span class="st"> </span><span class="kw">quantile</span>(alm[, plos.source], <span class="kw">c</span>(<span class="fl">0.1</span>, <span class="fl">0.5</span>, <span class="fl">0.9</span>), <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)
 
 <span class="co"># plot the chart</span>
-opar &lt;-<span class="st"> </span><span class="kw">par</span>(<span class="dt">mai =</span> <span class="kw">c</span>(<span class="fl">0.5</span>, <span class="fl">0.75</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>), <span class="dt">omi =</span> <span class="kw">c</span>(<span class="fl">0.25</span>, <span class="fl">0.1</span>, <span class="fl">0.25</span>, <span class="fl">0.1</span>), <span class="dt">mgp =</span> <span class="kw">c</span>(<span class="dv">3</span>, 
-    <span class="fl">0.5</span>, <span class="fl">0.5</span>), <span class="dt">fg =</span> <span class="st">"black"</span>, <span class="dt">cex.main =</span> <span class="dv">2</span>, <span class="dt">cex.lab =</span> <span class="fl">1.5</span>, <span class="dt">col =</span> plos.color, 
+opar &lt;-<span class="st"> </span><span class="kw">par</span>(<span class="dt">mai =</span> <span class="kw">c</span>(<span class="fl">0.5</span>, <span class="fl">0.75</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>), <span class="dt">omi =</span> <span class="kw">c</span>(<span class="fl">0.25</span>, <span class="fl">0.1</span>, <span class="fl">0.25</span>, <span class="fl">0.1</span>), <span class="dt">mgp =</span> <span class="kw">c</span>(<span class="dv">3</span>,
+    <span class="fl">0.5</span>, <span class="fl">0.5</span>), <span class="dt">fg =</span> <span class="st">"black"</span>, <span class="dt">cex.main =</span> <span class="dv">2</span>, <span class="dt">cex.lab =</span> <span class="fl">1.5</span>, <span class="dt">col =</span> plos.color,
     <span class="dt">col.main =</span> plos.color, <span class="dt">col.lab =</span> plos.color, <span class="dt">xaxs =</span> <span class="st">"i"</span>, <span class="dt">yaxs =</span> <span class="st">"i"</span>)
 
 d &lt;-<span class="st"> </span><span class="kw">density</span>(alm[, plos.source], <span class="dt">from =</span> <span class="dv">0</span>, <span class="dt">to =</span> <span class="dv">100</span>)
@@ -158,13 +158,13 @@ d$x &lt;-<span class="st"> </span><span class="kw">append</span>(d$x, <span clas
 d$y &lt;-<span class="st"> </span><span class="kw">append</span>(d$y, <span class="dv">0</span>)
 <span class="kw">plot</span>(d, <span class="dt">type =</span> <span class="st">"n"</span>, <span class="dt">main =</span> <span class="ot">NA</span>, <span class="dt">xlab =</span> <span class="ot">NA</span>, <span class="dt">ylab =</span> <span class="ot">NA</span>, <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">100</span>), <span class="dt">frame.plot =</span> <span class="ot">FALSE</span>)
 <span class="kw">polygon</span>(d, <span class="dt">col =</span> plos.color, <span class="dt">border =</span> <span class="ot">NA</span>)
-<span class="kw">mtext</span>(plos.xlab, <span class="dt">side =</span> <span class="dv">1</span>, <span class="dt">col =</span> plos.color, <span class="dt">cex =</span> <span class="fl">1.25</span>, <span class="dt">outer =</span> <span class="ot">TRUE</span>, <span class="dt">adj =</span> <span class="dv">1</span>, 
+<span class="kw">mtext</span>(plos.xlab, <span class="dt">side =</span> <span class="dv">1</span>, <span class="dt">col =</span> plos.color, <span class="dt">cex =</span> <span class="fl">1.25</span>, <span class="dt">outer =</span> <span class="ot">TRUE</span>, <span class="dt">adj =</span> <span class="dv">1</span>,
     <span class="dt">at =</span> <span class="dv">1</span>)
-<span class="kw">mtext</span>(plos.ylab, <span class="dt">side =</span> <span class="dv">2</span>, <span class="dt">col =</span> plos.color, <span class="dt">cex =</span> <span class="fl">1.25</span>, <span class="dt">outer =</span> <span class="ot">TRUE</span>, <span class="dt">adj =</span> <span class="dv">0</span>, 
+<span class="kw">mtext</span>(plos.ylab, <span class="dt">side =</span> <span class="dv">2</span>, <span class="dt">col =</span> plos.color, <span class="dt">cex =</span> <span class="fl">1.25</span>, <span class="dt">outer =</span> <span class="ot">TRUE</span>, <span class="dt">adj =</span> <span class="dv">0</span>,
     <span class="dt">at =</span> <span class="dv">1</span>, <span class="dt">las =</span> <span class="dv">1</span>)
 
 <span class="kw">par</span>(opar)</code></pre>
-<figure><a href=""><img src="../mfenner_github_io-pages/figures/density_plot_example.svg" alt="Figure 1. Citation counts for PLOS Biology articles published in 2010. Scopus citation counts plotted as a probability distribution for all 197 PLOS Biology research articles published in 2010. Data collected May 20, 2013. Median 19 citations; 10% of papers have at least 50 citations. From Fenner (2013)."></a><figcaption><strong>Figure 1. Citation counts for PLOS Biology articles published in 2010.</strong> Scopus citation counts plotted as a probability distribution for all 197 <em>PLOS Biology</em> research articles published in 2010. Data collected May 20, 2013. Median 19 citations; 10% of papers have at least 50 citations. From Fenner <span class="citation" data-cites="fenner2013">(2013)</span>.</figcaption></figure><p>All this functionality is provided by <a href="http://yihui.name/knitr/">knitr</a>, a package for the R statistical programming language. knitr has been around for a while, but integration into the <a href="http://jekyllrb.com/">Jekyll</a> blogging platform is still fragile. Earlier this week at the <a href="https://github.com/ropensci/hackathon">rOpenSci hackathon</a> (more on this later) a group of us worked hard to improve this integration. We are still not completely done, but the source code is available <a href="https://github.com/ropensci/docs">here</a>. Most importantly, all the conversion happens on the server, and we are only using freely available tools. I have now enabled this functionality for this blog, so expect more code embedded examples in the future.</p>
+<figure><a href=""><img src="/figures/density_plot_example.svg" alt="Figure 1. Citation counts for PLOS Biology articles published in 2010. Scopus citation counts plotted as a probability distribution for all 197 PLOS Biology research articles published in 2010. Data collected May 20, 2013. Median 19 citations; 10% of papers have at least 50 citations. From Fenner (2013)."></a><figcaption><strong>Figure 1. Citation counts for PLOS Biology articles published in 2010.</strong> Scopus citation counts plotted as a probability distribution for all 197 <em>PLOS Biology</em> research articles published in 2010. Data collected May 20, 2013. Median 19 citations; 10% of papers have at least 50 citations. From Fenner <span class="citation" data-cites="fenner2013">(2013)</span>.</figcaption></figure><p>All this functionality is provided by <a href="http://yihui.name/knitr/">knitr</a>, a package for the R statistical programming language. knitr has been around for a while, but integration into the <a href="http://jekyllrb.com/">Jekyll</a> blogging platform is still fragile. Earlier this week at the <a href="https://github.com/ropensci/hackathon">rOpenSci hackathon</a> (more on this later) a group of us worked hard to improve this integration. We are still not completely done, but the source code is available <a href="https://github.com/ropensci/docs">here</a>. Most importantly, all the conversion happens on the server, and we are only using freely available tools. I have now enabled this functionality for this blog, so expect more code embedded examples in the future.</p>
 <div class="references">
 <h2>References</h2>
 <p>Fenner, M. (2013). What can article-level metrics do for you? <em>PLoS Biol</em>, <em>11</em>(10), e1001687. doi:<a href="http://dx.doi.org/10.1371/journal.pbio.1001687">10.1371/journal.pbio.1001687</a></p>
@@ -174,6 +174,47 @@ d$y &lt;-<span class="st"> </span><span class="kw">append</span>(d$y, <span clas
 
 
             <div class="license">
+              
+                <hr>
+                <div class="toc-item">
+                  <h3>Next: <a href="/2014/07/18/roads-not-stagecoaches">Build Roads not Stagecoaches</a></h3>
+                  
+                  <p>I attended the Open Knowledge Festival this week and I had a blast. For three days (I also attended the fringe event csv,conf on Tuesday) I listed to wonderful presentations and was involved in great discussions - both within sessions, but more importantly all the informal discussions between and after sessions.
+
+
+
+Of all the things that were discussed I want to pick one theme that resonated in particular with me. It surfaced in many places, but was articulated particularly well by Eric Hysen - who heads the Google Politics &amp; Elections Group - in his keynote yesterday (starting at 54:52):
+
+
+In his keynote he described how travel from Cambridge to London in the 18th and early 19th century improved mainly as a result of better roads, made possible by changes in how these roads are financed. Translated to today, he urged the audience to think more about the infrastructure and less about the end products:
+
+Ecosystems, not apps Eric Hysen
+
+On Tuesday at csv,conf, Nick Stenning - Technical Director of the Open Knowledge Foundation - talked about data packages, an evolving standard to describe data that are passed around betwen different systems. He used the metaphor of containers, and how they have dramatically changed the transportation of goods in the last 50 years. He argued that the cost of shipping was in large part determined by the cost of loading and unloading, and the container has dramatically changed that equation. We are in a very similar situation with datasets, where most of the time is spent translating between different formats, joining things together that use different names for the same thing, etc.
+
+Wikmedia Commons image used in Nick Stelling’s presentation
+
+What the two presentations have in common is not only that they link the building of an open digital infrastructure to important transforming events in the history of transportation, but also the emphasis on the building blocks rather than the finished product. When I thought more about this I realized that these building blocks are exactly the projects I get most excited about, i.e. projects that develop standards or provide APIs or libraries. Some examples would be
+
+ORCID: unique identifiers for scholarly authors
+Citation Style Language: a language to describe the formatting of citations and bibliographies
+Pandoc: a universal document converter
+rOpenSci: packages for the statistical programming language R to access data repositories
+NISO Alternative Assessment Metrics: standards and best practices for novel scholarly metrics
+re3data: a registry of research data repositories
+Creative Commons: copyright licenses for creative works
+ALM: software to collect comprehensive information about where scholarly articles are discussed on the web
+
+This list doesn’t include all the generic software needed to build open science tools, with git being a perfect example. The last project is obviously the project I have been working on the past two years for PLOS, but I have tried to support the other projects mentioned in various ways from small code contributions to promotion via this blog and presentations, or direct work in these projects. But strangely enough, I haven’t really realized this until now.
+Not surprisingly infrastructure, servers, libraries and other building blocks are exactly the areas where open source software has been most successful so far.
+Next
+We need more Open Science Infrastructure and it is the stuff that I really care about. I think we need to better support those projects that build these essential building blocks via advice, cooperation, promotion, or financial support. I am willing to help with that effort, and I have started to think how I can best contribute.
+On the other hand there are many great open science projects that don’t fall in this category, maybe even the majority of them. I wish them good luck, but I would advice them to think more about infrastructure, and whether there is a small area where they can focus on. It still amazes me how successful projects such as Citation Style Language and Pandoc have been with no or almost no funding and a very small core group of people doing the majority of the work. One critical ingredient is the total focus on a very specific problem that is both important and can be solved with specific actions. Too many open science projects want to solve too many problems at once, try to solve the exact same problems that many other parallel projects work on, don’t cooperate enough with those parallel projects, and require a critical mass of users to work.
+
+
+
+</p>
+                </div>
               
             </div>
 
