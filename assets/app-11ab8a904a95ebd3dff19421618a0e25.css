@@ -5057,7 +5057,7 @@ h1 {
 h3, h4, h5, h6 {
   margin: 0; }
 
-h1 small, h2 small, h3 small, h4 small {
+h1 small, h2 small, h3 small, h4 small, blockquote small {
   color: #88a2bd; }
 
 pre, code {
