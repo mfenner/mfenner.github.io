@@ -9,7 +9,7 @@ I attended the [Open Knowledge Festival](http://2014.okfestival.org/) this week 
 
 Of all the things that were discussed I want to pick one theme that resonated in particular with me. It surfaced in many places, but was articulated particularly well by [Eric Hysen](https://twitter.com/erichysen) - who heads the [Google Politics & Elections Group](http://www.google.com/elections/ed/us) - in his keynote yesterday (starting at 54:52, but please also watch the keynote by Neelie Kroes, Vice-President of the European Commission):
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/0UNRZEsLxKc" frameborder="0" allowfullscreen></iframe>
+{% oembed https://www.youtube.com/watch?v=0UNRZEsLxKc width=640 height="360" %}
 
 In his keynote he described how travel from Cambridge to London in the 18th and early 19th century improved mainly as a result of better roads, made possible by changes in how these roads are financed. Translated to today, he urged the audience to think more about the infrastructure and less about the end products:
 
