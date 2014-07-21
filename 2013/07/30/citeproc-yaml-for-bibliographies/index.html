@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <title>Citeproc YAML for bibliographies</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="citation, csl, yaml" />
+
+    <!-- RDFa Metadata (in DublinCore) -->
+    <meta property="dc:title" content="Citeproc YAML for bibliographies" />
+    <meta property="dc:format" content="text/html" />
+    <meta property="dc:language" content="en" />
+    <meta property="dc:identifier" content="/2013/07/30/citeproc-yaml-for-bibliographies" />
+    <meta property="dc:rights" content="CC-BY-NC" />
+    <meta property="dc:source" content="Gobbledygook" />
+    <meta property="dc:subject" content="Scholarly Communication" />
+    <meta property="dc:type" content="website" />
+
+    <!-- Google Scholar Metadata -->
+    <meta name="citation_title" content="Citeproc YAML for bibliographies"/>
+    <meta name="citation_journal_title" content="Gobbledygook"/>
+
+    <link rel="alternate" type="application/rss+xml" title="Gobbledygook" href="/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Gobbledygook" href="/atom.xml" />
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/app-11ab8a904a95ebd3dff19421618a0e25.css">
+    <link rel="stylesheet" href="/assets/jasny-bootstrap.min-29c6b484ddca96fa14a48394c0cf415b.css">
+    <link rel="stylesheet" href="/assets/navmenu-push-f57c8aea8e44efd42b5d7fc575383151.css">
+    <link rel="stylesheet" href="/assets/fluidbox-cc1b5668a8c598b1c2fcc5e15e073f33.css">
+
+    <!-- d3.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.min.js"></script>
+
+    <!-- Typekit -->
+    <script type="text/javascript" src="//use.typekit.net/kil7puw.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  </head>
+
+
+  <body>
+    <nav id="navmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+  <a class="navmenu-brand" href="#">Gobbledygook</a>
+  <ul class="nav navmenu-nav">
+  
+    <li><span class="glyphicon glyphicon-time"></span> <a href="http://github.com/mfenner/blog/commits/master/_posts/2013-07-30-citeproc-yaml-for-bibliographies.md">Version History</a></li>
+    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#openingscience/book/edit/master/_posts/2013-07-30-citeproc-yaml-for-bibliographies.md">Send Edit Request</a></li>
+    
+    <li><span class="glyphicon glyphicon-tags"></span> Tags
+      <ul class="tag-list">
+        
+        
+  
+  	<li><a href="/tags.html#citation-ref">citation</a></li>
+  
+  	<li><a href="/tags.html#csl-ref">csl</a></li>
+  
+  	<li><a href="/tags.html#yaml-ref">yaml</a></li>
+  
+
+
+
+      </ul>
+    </li>
+    
+    <li><span class="glyphicon glyphicon-home"></span> <a href="/">Home</a></li>
+    <li><span class="glyphicon glyphicon-info-sign"></span> <a href="/about.html">About</a></li>
+    <li><span class="glyphicon glyphicon-tags"></span> <a href="/tags.html">All Tags</a></li>
+  </ul>
+</nav>
+
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#navmenu" data-canvas="body">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="page-header">
+            <h1>Citeproc YAML for bibliographies</h1>
+            <p>30 July 2013 by
+            
+            <a href="/about.html">Martin Fenner</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>The standard local file formats for bibliographic data are probably bibtex and RIS. They have been around for a long time, and are supported by all reference managers and many other tools and services. Unfortunately these formats are far from perfect<!--more-->:</p>
+<ul>
+<li>neither bibtex nor RIS use a web-friendly data interchange format such as XML or JSON, which makes it harder to work with these formats</li>
+<li>bibtex - and to a lesser extend RIS - don’t support all entry types that we need, e.g. datasets, or new standards such as ORCID author identifiers</li>
+<li>bibtex stores all authors in a single field, which makes author names hard to parse</li>
+</ul>
+<h3 id="bibtex">bibtex</h3>
+<pre class="sourceCode bibtex"><code class="sourceCode bibtex"><span class="kw">@article</span>{<span class="ot">fenner2012a</span>,
+  <span class="dt">title</span> = {One-click science marketing},
+  <span class="dt">volume</span> = {11},
+  <span class="dt">url</span> = {http://dx.doi.org/10.1038/nmat3283},
+  <span class="dt">doi</span> = {10.1038/nmat3283},
+  <span class="dt">number</span> = {4},
+  <span class="dt">journal</span> = {Nature Materials},
+  <span class="dt">publisher</span> = {Nature Publishing Group},
+  <span class="dt">author</span> = {Fenner, Martin},
+  <span class="dt">year</span> = {2012},
+  <span class="dt">month</span> = {mar},
+  <span class="dt">pages</span> = {261-263}
+}</code></pre>
+<p>One obvious solution would be to store bibliographic data in XML or JSON. These formats have very good support in all programming languages, and they are the formats used by APIs on the web. There have been some efforts to standardize these formats for bibliographic data, e.g. <a href="http://www.bibjson.org/">BibJSON</a>, <a href="http://www.loc.gov/standards/mods/">MODS</a>, <a href="http://bibtexml.sourceforge.net/">BibTeX XML</a> or Endnote XML.</p>
+<h3 id="bibtex-xml">BibTeX XML</h3>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;bibtex:entry</span><span class="ot"> id=</span><span class="st">'fenner2012a'</span><span class="kw">&gt;</span>
+  <span class="kw">&lt;bibtex:article&gt;</span>
+    <span class="kw">&lt;bibtex:title&gt;</span>One-click science marketing<span class="kw">&lt;/bibtex:title&gt;</span>
+    <span class="kw">&lt;bibtex:volume&gt;</span>11<span class="kw">&lt;/bibtex:volume&gt;</span>
+    <span class="kw">&lt;bibtex:url&gt;</span>http://dx.doi.org/10.1038/nmat3283<span class="kw">&lt;/bibtex:url&gt;</span>
+    <span class="kw">&lt;bibtex:doi&gt;</span>10.1038/nmat3283<span class="kw">&lt;/bibtex:doi&gt;</span>
+    <span class="kw">&lt;bibtex:number&gt;</span>4<span class="kw">&lt;/bibtex:number&gt;</span>
+    <span class="kw">&lt;bibtex:journal&gt;</span>Nature Materials<span class="kw">&lt;/bibtex:journal&gt;</span>
+    <span class="kw">&lt;bibtex:publisher&gt;</span>Nature Publishing Group<span class="kw">&lt;/bibtex:publisher&gt;</span>
+    <span class="kw">&lt;bibtex:person&gt;</span>
+      <span class="kw">&lt;bibtex:first&gt;</span>Martin<span class="kw">&lt;/bibtex:first&gt;</span>
+      <span class="kw">&lt;bibtex:last&gt;</span>Fenner<span class="kw">&lt;/bibtex:last&gt;</span>
+    <span class="kw">&lt;bibtex:person&gt;&lt;bibtex:author/&gt;</span>
+    <span class="kw">&lt;bibtex:year&gt;</span>2012<span class="kw">&lt;/bibtex:year&gt;</span>
+    <span class="kw">&lt;bibtex:month&gt;</span>mar<span class="kw">&lt;/bibtex:month&gt;</span>
+    <span class="kw">&lt;bibtex:pages&gt;</span>261-263<span class="kw">&lt;/bibtex:pages&gt;</span>
+  <span class="kw">&lt;/bibtex:article&gt;</span>
+<span class="kw">&lt;/bibtex:entry&gt;</span></code></pre>
+<p>My problem with these formats is that they are made for computers talking to each other and not humans. I personally think that a file with bibliographic data should be human-readable, similar to why <a href="/2012/12/13/a-call-for-scholarly-markdown/">I like markdown</a> for writing scientific documents.</p>
+<p>When you have too many standards and are not happy with any of them, you of course create a new standard.</p>
+<figure><a href=""><img src="http://imgs.xkcd.com/comics/standards.png" alt="How Standards Proliferate. Taken from http://xkcd.com/927/"></a><figcaption><strong>How Standards Proliferate</strong>. Taken from <a href="http://xkcd.com/927/">http://xkcd.com/927/</a></figcaption></figure><p>My suggestion for a new bibliographic file format is twofold: a) use YAML for data serialization and b) use CSL as data format. <a href="http://www.yaml.org/spec/1.2/spec.html">YAML</a> is a data format popular with Ruby Developers and is described on the <a href="http://yaml.org">YAML website</a> as</p>
+<blockquote>
+<p>YAML is a human friendly data serialization standard for all programming languages.</p>
+</blockquote>
+<p>Something that not may people seem to know is that YAML is a superset of JSON and that <a href="http://yaml.org/spec/1.2/spec.html#id2759572">every JSON file is also a valid YAML file</a>. The main difference is the better human readability of YAML.</p>
+<p><strong>Citation Style Language</strong> is described on the <a href="http://citationstyles.org">CSL website</a> as</p>
+<blockquote>
+<p>CSL is an open XML-based language to describe the formatting of citations and bibliographies.</p>
+</blockquote>
+<p>Although some commercial applications still use proprietary citation styles, CSL has become the de facto standard, and is used by the reference managers <strong>Zotero</strong>, <strong>Mendeley</strong>, <strong>Papers</strong>, and others. This blog uses CSL via Pandoc and the <a href="http://code.google.com/p/citeproc-hs/">citeproc-hs</a> library. CSL processors need bibliographic data in a standard format. The popular <a href="https://bitbucket.org/fbennett/citeproc-js/wiki/Home">Citeproc-js</a> Javascript CSL processor by Frank Bennett for example uses JSON, but we might as well use YAML:</p>
+<h3 id="citeproc-yaml">Citeproc YAML</h3>
+<pre class="sourceCode yaml"><code class="sourceCode yaml"><span class="kw">-</span> <span class="fu">title:</span> One-click science marketing
+  <span class="fu">volume:</span> <span class="st">'11'</span>
+  <span class="fu">URL:</span> http://dx.doi.org/10.1038/nmat3283
+  <span class="fu">DOI:</span> 10.1038/nmat3283
+  <span class="fu">issue:</span> <span class="st">'4'</span>
+  <span class="fu">container-title:</span> Nature Materials
+  <span class="fu">publisher:</span> Nature Publishing Group
+  <span class="fu">author:</span>
+  <span class="kw">-</span> <span class="fu">family:</span> Fenner
+    <span class="fu">given:</span> Martin
+    <span class="fu">orcid:</span> 0000-0003-1419-2405
+  <span class="fu">page:</span> 261-263
+  <span class="fu">id:</span> fenner2012a
+  <span class="fu">type:</span> article-journal
+  <span class="fu">issued:</span>
+    <span class="fu">date-parts:</span>
+      <span class="kw">-</span> 2012
+      <span class="kw">-</span> 3</code></pre>
+<p>I hope you agree that this format is not only structured and can be understood by computers, but is also very readable by humans. You may have noticed that I have inserted my ORCID, something that is very difficult to do with bibtex where all authors are stored in one text string (see above).</p>
+<p>Careful readers of this blog will of course remember that <a href="/2013/06/29/metadata-in-scholarly-markdown/">I have written about</a> using YAML to store metadata about a blog post. We could now add bibliographic information to these metadata, either in the YAML frontmatter (if it is a Jekyll blog), or in a separate file. It should be straightforward to adapt the existing CSL processors to understand YAML since YAML and JSON are so similar. To get started with some Citeproc YAML, use the new (and still experimental) <strong>ORCID Feed</strong> Webservice with your ORCID and specify the <code>yml</code> format, e.g. <a href="http://feed.labs.orcid-eu.org/0000-0003-1419-2405.yml">http://feed.labs.orcid-eu.org/0000-0003-1419-2405.yml</a> for my publications.</p>
+<div class="references">
+
+</div>
+</body></html>
+
+
+            <div class="license">
+              
+                <hr>
+                <div class="toc-item">
+                  <h3>Next: <a href="/2013/08/04/automatically-list-all-your-publications-in-your-blog">Automatically list all your publications in your blog</a></h3>
+                  
+                  <p>A common feature of blogs written by scientists is a listing of all their publications. Publication lists are a great way to provide background information about your research. Publication lists should provide links to the fulltext versions of these publications, should be nicely formatted - e.g. using a common citation style such as APA - and should be easy to maintain. A number of tools for a variety of blogging platforms (including Wordpress and Jekyll) are available to help with this task, but maintaining the list of publications has remained difficult.
+
+
+
+</p>
+                </div>
+              
+            </div>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gobbledy'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+          </div>
+        </div>
+
+        <!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+<span
+  class="Z3988"
+  title="ctx_ver=Z39.88-2004
+  &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+  &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+  &amp;rft.title=Citeproc YAML for bibliographies
+  &amp;rft.creator=Martin Fenner
+  &amp;rft.date=2013-07-30
+  &amp;rft.language=EN
+  &amp;rft.rights=CC0
+  &amp;rft_id=http://blog.martinfenner.org/2013/07/30/citeproc-yaml-for-bibliographies">
+</span>
+
+        <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36379104-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="//js/js-yaml.min.js"></script>
+
+    <!-- Fluidbox https://github.com/terrymun/Fluidbox -->
+    <script src="/js/js-yaml.min.js"></script>
+    <script src="/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/jquery.fluidbox.min.js"></script>
+    <script type='text/javascript'>
+      $(function () {
+        $("a").fluidbox();
+      });
+    </script>
+
+    <!-- Bootstrap -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/jasny-bootstrap.min.js"></script>
+
+    <!-- MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>

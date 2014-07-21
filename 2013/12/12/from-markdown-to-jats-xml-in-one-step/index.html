@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <title>From Markdown to JATS XML in one Step</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="markdown, jats, pandoc" />
+
+    <!-- RDFa Metadata (in DublinCore) -->
+    <meta property="dc:title" content="From Markdown to JATS XML in one Step" />
+    <meta property="dc:format" content="text/html" />
+    <meta property="dc:language" content="en" />
+    <meta property="dc:identifier" content="/2013/12/12/from-markdown-to-jats-xml-in-one-step" />
+    <meta property="dc:rights" content="CC-BY-NC" />
+    <meta property="dc:source" content="Gobbledygook" />
+    <meta property="dc:subject" content="Scholarly Communication" />
+    <meta property="dc:type" content="website" />
+
+    <!-- Google Scholar Metadata -->
+    <meta name="citation_title" content="From Markdown to JATS XML in one Step"/>
+    <meta name="citation_journal_title" content="Gobbledygook"/>
+
+    <link rel="alternate" type="application/rss+xml" title="Gobbledygook" href="/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Gobbledygook" href="/atom.xml" />
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/app-11ab8a904a95ebd3dff19421618a0e25.css">
+    <link rel="stylesheet" href="/assets/jasny-bootstrap.min-29c6b484ddca96fa14a48394c0cf415b.css">
+    <link rel="stylesheet" href="/assets/navmenu-push-f57c8aea8e44efd42b5d7fc575383151.css">
+    <link rel="stylesheet" href="/assets/fluidbox-cc1b5668a8c598b1c2fcc5e15e073f33.css">
+
+    <!-- d3.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.min.js"></script>
+
+    <!-- Typekit -->
+    <script type="text/javascript" src="//use.typekit.net/kil7puw.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  </head>
+
+
+  <body>
+    <nav id="navmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+  <a class="navmenu-brand" href="#">Gobbledygook</a>
+  <ul class="nav navmenu-nav">
+  
+    <li><span class="glyphicon glyphicon-time"></span> <a href="http://github.com/mfenner/blog/commits/master/_posts/2013-12-12-from-markdown-to-jats-xml-in-one-step.md">Version History</a></li>
+    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#openingscience/book/edit/master/_posts/2013-12-12-from-markdown-to-jats-xml-in-one-step.md">Send Edit Request</a></li>
+    
+    <li><span class="glyphicon glyphicon-tags"></span> Tags
+      <ul class="tag-list">
+        
+        
+  
+  	<li><a href="/tags.html#markdown-ref">markdown</a></li>
+  
+  	<li><a href="/tags.html#jats-ref">jats</a></li>
+  
+  	<li><a href="/tags.html#pandoc-ref">pandoc</a></li>
+  
+
+
+
+      </ul>
+    </li>
+    
+    <li><span class="glyphicon glyphicon-home"></span> <a href="/">Home</a></li>
+    <li><span class="glyphicon glyphicon-info-sign"></span> <a href="/about.html">About</a></li>
+    <li><span class="glyphicon glyphicon-tags"></span> <a href="/tags.html">All Tags</a></li>
+  </ul>
+</nav>
+
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#navmenu" data-canvas="body">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="page-header">
+            <h1>From Markdown to JATS XML in one Step</h1>
+            <p>12 December 2013 by
+            
+            <a href="/about.html">Martin Fenner</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>The Journal Article Tag Suite (<a href="http://jats.nlm.nih.gov/">JATS</a>) is a NISO standard that defines a set of XML elements and attributes for tagging journal articles. JATS is not only used for fulltext content at PubMed Central (and JATS has evolved from the NLM Archiving and Interchange Tag Suite originally developed for PubMed Central), but is also increasinly used by publishers.<!--more--></p>
+<p>For many publishers the <em>version of record</em> of an article is stored in XML, and other formats (currently HTML, PDF and increasingly ePub) are generated from this XML. Unfortunately the process of converting author-submitted manuscripts into JATS-compliant XML is time-consuming and costly, and this is a problem in particular for small publishers.</p>
+<p>In a recent blog post (<a href="/2013/11/17/the-grammar-of-scholarly-communication/">The Grammar of Scholarly Communication</a>) I argued that publishers should accept manuscripts in any reasonable file format, including Microsoft Word, Open Office, LaTeX, Markdown, HTML and PDF. Readers of this blog know that I am a big fan of <a href="/tags.html#markdown-ref">markdown</a> for scholarly documents, but I am of course well aware that at the end of the day these documents have to be converted into JATS.</p>
+<p>As a small step towards that goal I have today released the first public version of <a href="https://github.com/mfenner/pandoc-jats">pandoc-jats</a>, a <a href="http://johnmacfarlane.net/pandoc/README.html#custom-writers">custom writer for Pandoc</a> that converts markdown documents into JATS XML with a single command, e.g.</p>
+<pre><code>pandoc -f example.md --filter pandoc-citeproc --bibliography=example.bib --csl=apa.csl -t JATS.lua -o example.xml</code></pre>
+<p>Please see the <a href="https://github.com/mfenner/pandoc-jats">pandoc-jats</a> Github repository for more detailed information, but using this custom writer is as simple as downloading a single <code>JATS.lua</code>file. The big challenge is of course to make this custom writer work with as many documents as possible, and that will be my job the next few weeks. Two example JATS documents are below (both markdown versions of scholarly articles and posted on this blog as HTML):</p>
+<ul>
+<li>Nine simple ways to make it easier to (re)use your data (<a href="/2013/06/25/nine-simple-ways-to-make-it-easier-to-reuse-your-data/">HTML</a>, <a href="/files/10.7287.peerj.preprints.7v2.xml">JATS</a>)</li>
+<li>What Can Article Level Metrics Do for You? (<a href="/2013/12/11/what-can-article-level-metrics-do-for-you/">HTML</a>, <a href="/files/10.1371.journal.pbio.1001687.xml">JATS</a>)</li>
+</ul>
+<p>Both JATS files were validated against the JATS DTD and XSD and showed no errors with the NLM XML StyleChecker - using the excellent <a href="https://github.com/PeerJ/jats-conversion">jats-conversion</a> conversion and validation tools written by Alf Eaton. Markdown is actually a nice file format to convert to XML - in contrast to HTML authors can’t for example put closing tags at the wrong places. And a Pandoc custom writer written in the Lua scripting language is an interesting alternative to XSLT transformations, the more common way to create JATS XML. The custom writer has not been tested with other Pandoc input formats besides markdown, of particular interest are of course HTML and LaTeX - Microsoft Word .docx is unfortunately only a Pandoc output format.</p>
+<p>This is the first public release and there is of course a lot of room for improvement. Many elements and attributes are not yet supported - although <a href="http://orcid.org/blog/2013/03/22/orcid-how-more-specifying-orcid-ids-document-metadata">ORCID author identifiers</a> are of course included. Please help me improve this tool using the Github <a href="https://github.com/mfenner/pandoc-jats/issues">Issue Tracker</a>.</p>
+<div class="references">
+
+</div>
+</body></html>
+
+
+            <div class="license">
+              
+                <hr>
+                <div class="toc-item">
+                  <h3>Next: <a href="/2014/03/03/six-misunderstandings-about-scholarly-markdown">Six Misunderstandings about Scholarly Markdown</a></h3>
+                  
+                  <p>In this post I want to talk about some of the misunderstandings I frequently encounter when discussing markdown as a format for authoring scholarly documents.
+
+
+
+</p>
+                </div>
+              
+            </div>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gobbledy'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+          </div>
+        </div>
+
+        <!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+<span
+  class="Z3988"
+  title="ctx_ver=Z39.88-2004
+  &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+  &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+  &amp;rft.title=From Markdown to JATS XML in one Step
+  &amp;rft.creator=Martin Fenner
+  &amp;rft.date=2013-12-12
+  &amp;rft.language=EN
+  &amp;rft.rights=CC0
+  &amp;rft_id=http://blog.martinfenner.org/2013/12/12/from-markdown-to-jats-xml-in-one-step">
+</span>
+
+        <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36379104-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="//js/js-yaml.min.js"></script>
+
+    <!-- Fluidbox https://github.com/terrymun/Fluidbox -->
+    <script src="/js/js-yaml.min.js"></script>
+    <script src="/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/jquery.fluidbox.min.js"></script>
+    <script type='text/javascript'>
+      $(function () {
+        $("a").fluidbox();
+      });
+    </script>
+
+    <!-- Bootstrap -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/jasny-bootstrap.min.js"></script>
+
+    <!-- MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>
