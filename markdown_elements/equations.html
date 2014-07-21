@@ -2,22 +2,22 @@
 <html lang="en">
 
     <head>
-    <title>Scholarly Markdown</title>
+    <title>Equations</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="" />
 
     <!-- RDFa Metadata (in DublinCore) -->
-    <meta property="dc:title" content="Scholarly Markdown" />
+    <meta property="dc:title" content="Equations" />
     <meta property="dc:format" content="text/html" />
     <meta property="dc:language" content="en" />
-    <meta property="dc:identifier" content="/index.html" />
+    <meta property="dc:identifier" content="/markdown_elements/equations.html" />
     <meta property="dc:rights" content="CC-BY-NC" />
     <meta property="dc:source" content="Scholarly Markdown" />
     <meta property="dc:subject" content="Scholarly Communication" />
     <meta property="dc:type" content="website" />
 
     <!-- Google Scholar Metadata -->
-    <meta name="citation_title" content="Scholarly Markdown"/>
+    <meta name="citation_title" content="Equations"/>
     <meta name="citation_journal_title" content="Scholarly Markdown"/>
 
     <link rel="alternate" type="application/rss+xml" title="Scholarly Markdown" href="/rss.xml" />
@@ -51,8 +51,10 @@
   <a class="navmenu-brand" href="#">Scholarly Markdown</a>
   <ul class="nav navmenu-nav">
   
-    <li><span class="glyphicon glyphicon-time"></span> <a href="https://github.com/scholmd/scholmd.github.io/commits/master/index.html">Version History</a></li>
-    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#scholmd/scholmd.github.io/edit/master/index.html">Send Edit Request</a></li>
+    <li><span class="glyphicon glyphicon-calendar"></span> 21 July 2014</li>
+  
+    <li><span class="glyphicon glyphicon-time"></span> <a href="https://github.com/scholmd/scholmd.github.io/commits/master/_posts/2013-06-06-equations.md">Version History</a></li>
+    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#scholmd/scholmd.github.io/edit/master/_posts/2013-06-06-equations.md">Send Edit Request</a></li>
     
     <li><span class="glyphicon glyphicon-home"></span> <a href="/">Home</a></li>
     <li><span class="glyphicon glyphicon-info-sign"></span> <a href="/about.html">About</a></li>
@@ -73,8 +75,7 @@
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <div class="page-header">
-            <h1>Scholarly Markdown</h1>
-            <p>Keep it simple. Have fun.</p>
+            <h1>Equations</h1>
             </p>
           </div>
         </div>
@@ -85,78 +86,35 @@
           <div class="col-md-8 col-md-offset-2">
             <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body>
-<div class="toc">
-    <h2>basic_setup</h2>
-    
-    <ol start="01">
-      
-        <li>
-          <div class="toc-item">
-            <h3><a href="/basic_setup/tools-to-support-your-markdown-authoring.html">Tools to Support Your Markdown Authoring</a></h3>
-            <p>Markdown is automatically rendered to html GitHub but can easily be parsed into a variety of other formats including PDF and LaTex. To convert seamlessly to these formats, you’ll need a document converter. Pandoc is one such open source tool that is available on all platforms. You’ll need to install a local copy to be able to run all the examples in this repo.
+<h2 id="mathml-the-html-for-math">MathML the “HTML for math”</h2>
+<p>The web (HTML5), ebook (epub3) and publishing (XML) standard for mathematical equations is <a href="https://en.wikipedia.org/wiki/MathML">MathML</a>. Just like HTML, MathML can be highly verbose, so manual input is usually done using other tools. In particular, there are several serial math input formats (see below).<!--more--></p>
+<p>Many markdown parser tolerate HTML fragments, so MathML fragment can be used when manual input languages are not sufficient.</p>
+<h2 id="serialized-math-syntax">Serialized math syntax</h2>
+<p>Markdown is usually combined with the most established ones: <strong>LaTeX-like</strong> syntax (preferrably compatible with MathJax) and <strong>ASCIImath</strong> syntax.</p>
+<h3 id="latex-like">LaTeX-like</h3>
+<p>The most frequently used syntax can be described as “LaTeX-like”. Using LaTeX syntax for math notation has many advantages, the biggest is the number of tools available for LaTeX. This makes it the most versatile syntax for conversion into other formats (MS Word via MathML, PDF via LaTeX, HTML using MathJax).</p>
+<p>For HTML output, the most frequently used tool is <a href="http://www.mathjax.org">MathJax</a>, an open source javascript library that can render LaTeX, ASCIImath, and MathML in all browsers. For a list of LaTeX commands that work with MathJax, see the <a href="http://docs.mathjax.org/en/latest/tex.html">MathJax documentation</a>.</p>
+<h3 id="asciimath">ASCIImath</h3>
+<p><a href="http://www1.chapman.edu/~jipsen/mathml/asciimath.html">ASCIImath</a> is simpler (and less powerful) as a syntax. It is designed to be converted to MathML and is supported by <a href="http://docs.mathjax.org/en/latest/asciimath.html">MathJax</a>.</p>
+<h3 id="jqmath">jqMath</h3>
+<p>Another option is <a href="http://mathscribe.com/author/jqmath.html">jqmath</a>, which is designed as a serialization of MathML.</p>
+<h2 id="conversion">Conversion</h2>
+<p>In the conversion process from markdown to other formats, the following options are most frequent:</p>
+<ul>
+<li>nothing special.</li>
+<li>Depending on the markdown converter this can work well or be disastrous. Especially “classic” mardkown parsers will interpret every backslash as an escape character and render LaTeX syntax useless.</li>
+<li>leaving the input untouched</li>
+<li>Some parsers like pandoc have added extensions which identify math delimiters (usually <code>$</code>) and treat the content between delimiters as verbatim text – leaving the correct rendering to other tools such as MathJax.</li>
+<li>converting equations to MathML</li>
+<li>converting equations to images</li>
+</ul>
+<div class="references">
 
-
-
-</p>
-          </div>
-        </li>
-      
-        <li>
-          <div class="toc-item">
-            <h3><a href="/basic_setup/learn-markdown-in-3-minutes.html">Learn Markdown in 3 Minutes</a></h3>
-            <p>Markdown syntax is extremely simple and you can learn all you need to know within a few minutes.
-
-
-
-</p>
-          </div>
-        </li>
-      
-    </ol>
-  </div>
-
-  <div class="toc">
-    <h2>markdown_elements</h2>
-    
-    <ol start="03">
-      
-        <li>
-          <div class="toc-item">
-            <h3><a href="/markdown_elements/citations.html">Citations</a></h3>
-            <p>Citations breakout group at Markdown for Science workshop
-Citations should be specified as citation keys (e.g. (???). Pandoc and Multimarkdown both support human-readable formatting for this, but use different formatting.
-
-
-
-</p>
-          </div>
-        </li>
-      
-        <li>
-          <div class="toc-item">
-            <h3><a href="/markdown_elements/equations.html">Equations</a></h3>
-            <p>MathML the “HTML for math”
-The web (HTML5), ebook (epub3) and publishing (XML) standard for mathematical equations is MathML. Just like HTML, MathML can be highly verbose, so manual input is usually done using other tools. In particular, there are several serial math input formats (see below).
-
-
-
-</p>
-          </div>
-        </li>
-      
-    </ol>
-  </div>
-
+</div>
 </body></html>
 
 
             <div class="license">
-              
-                <hr>
-                <div class="toc-item">
-                
-                
-                </div>
               
             </div>
 
@@ -184,12 +142,12 @@ The web (HTML5), ebook (epub3) and publishing (XML) standard for mathematical eq
   title="ctx_ver=Z39.88-2004
   &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
   &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
-  &amp;rft.title=Scholarly Markdown
+  &amp;rft.title=Equations
   &amp;rft.creator=
-  &amp;rft.date=
+  &amp;rft.date=2013-06-06
   &amp;rft.language=EN
   &amp;rft.rights=CC0
-  &amp;rft_id=http://www.scholmd.org/index.html">
+  &amp;rft_id=http://www.scholmd.org/markdown_elements/equations.html">
 </span>
 
         <script type="text/javascript">

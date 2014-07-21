@@ -5,10 +5,43 @@
         <description>Scholarly Markdown - </description>
         <link>http:/www.scholmd.org/rss.xml</link>
         <link>http:/www.scholmd.org</link>
-        <lastBuildDate>2014-07-21T22:47:40+00:00</lastBuildDate>
-        <pubDate>2014-07-21T22:47:40+00:00</pubDate>
+        <lastBuildDate>2014-07-21T22:54:03+00:00</lastBuildDate>
+        <pubDate>2014-07-21T22:54:03+00:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>Equations</title>
+                <description>&lt;h2 id=&quot;mathml-the-html-for-math&quot;&gt;MathML the “HTML for math”&lt;/h2&gt;
+&lt;p&gt;The web (HTML5), ebook (epub3) and publishing (XML) standard for mathematical equations is &lt;a href=&quot;https://en.wikipedia.org/wiki/MathML&quot;&gt;MathML&lt;/a&gt;. Just like HTML, MathML can be highly verbose, so manual input is usually done using other tools. In particular, there are several serial math input formats (see below).&lt;!--more--&gt;&lt;/p&gt;
+&lt;p&gt;Many markdown parser tolerate HTML fragments, so MathML fragment can be used when manual input languages are not sufficient.&lt;/p&gt;
+&lt;h2 id=&quot;serialized-math-syntax&quot;&gt;Serialized math syntax&lt;/h2&gt;
+&lt;p&gt;Markdown is usually combined with the most established ones: &lt;strong&gt;LaTeX-like&lt;/strong&gt; syntax (preferrably compatible with MathJax) and &lt;strong&gt;ASCIImath&lt;/strong&gt; syntax.&lt;/p&gt;
+&lt;h3 id=&quot;latex-like&quot;&gt;LaTeX-like&lt;/h3&gt;
+&lt;p&gt;The most frequently used syntax can be described as “LaTeX-like”. Using LaTeX syntax for math notation has many advantages, the biggest is the number of tools available for LaTeX. This makes it the most versatile syntax for conversion into other formats (MS Word via MathML, PDF via LaTeX, HTML using MathJax).&lt;/p&gt;
+&lt;p&gt;For HTML output, the most frequently used tool is &lt;a href=&quot;http://www.mathjax.org&quot;&gt;MathJax&lt;/a&gt;, an open source javascript library that can render LaTeX, ASCIImath, and MathML in all browsers. For a list of LaTeX commands that work with MathJax, see the &lt;a href=&quot;http://docs.mathjax.org/en/latest/tex.html&quot;&gt;MathJax documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;asciimath&quot;&gt;ASCIImath&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www1.chapman.edu/~jipsen/mathml/asciimath.html&quot;&gt;ASCIImath&lt;/a&gt; is simpler (and less powerful) as a syntax. It is designed to be converted to MathML and is supported by &lt;a href=&quot;http://docs.mathjax.org/en/latest/asciimath.html&quot;&gt;MathJax&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;jqmath&quot;&gt;jqMath&lt;/h3&gt;
+&lt;p&gt;Another option is &lt;a href=&quot;http://mathscribe.com/author/jqmath.html&quot;&gt;jqmath&lt;/a&gt;, which is designed as a serialization of MathML.&lt;/p&gt;
+&lt;h2 id=&quot;conversion&quot;&gt;Conversion&lt;/h2&gt;
+&lt;p&gt;In the conversion process from markdown to other formats, the following options are most frequent:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;nothing special.&lt;/li&gt;
+&lt;li&gt;Depending on the markdown converter this can work well or be disastrous. Especially “classic” mardkown parsers will interpret every backslash as an escape character and render LaTeX syntax useless.&lt;/li&gt;
+&lt;li&gt;leaving the input untouched&lt;/li&gt;
+&lt;li&gt;Some parsers like pandoc have added extensions which identify math delimiters (usually &lt;code&gt;$&lt;/code&gt;) and treat the content between delimiters as verbatim text – leaving the correct rendering to other tools such as MathJax.&lt;/li&gt;
+&lt;li&gt;converting equations to MathML&lt;/li&gt;
+&lt;li&gt;converting equations to images&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;references&quot;&gt;
+
+&lt;/div&gt;
+</description>
+                <link>http:/www.scholmd.org/markdown_elements/equations.html</link>
+                <guid>http:/www.scholmd.org/markdown_elements/equations</guid>
+                <pubDate>2013-06-06T00:00:00+00:00</pubDate>
+        </item>
 
         <item>
                 <title>Citations</title>
@@ -78,7 +111,7 @@ treatment of germ-cell cancer.&amp;quot;&lt;/code&gt;&lt;/pre&gt;
         </item>
 
         <item>
-                <title>Learn markdown in 3 minutes</title>
+                <title>Learn Markdown in 3 Minutes</title>
                 <description>&lt;p&gt;Markdown syntax is extremely simple and you can learn all you need to know within a few minutes.&lt;!--more--&gt;&lt;/p&gt;
 &lt;h2 id=&quot;formatting-headings&quot;&gt;Formatting headings&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;# First level
@@ -131,7 +164,7 @@ Code block:
         </item>
 
         <item>
-                <title>Tools to support your markdown authoring</title>
+                <title>Tools to Support Your Markdown Authoring</title>
                 <description>&lt;p&gt;Markdown is automatically rendered to html GitHub but can easily be parsed into a variety of other formats including PDF and LaTex. To convert seamlessly to these formats, you’ll need a document converter. &lt;a href=&quot;http://johnmacfarlane.net/pandoc/&quot;&gt;Pandoc&lt;/a&gt; is one such open source tool that is available on all platforms. You’ll need to install a local copy to be able to run all the examples in this repo.&lt;!--more--&gt;&lt;/p&gt;
 &lt;h2 id=&quot;pandoc&quot;&gt;Pandoc&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;http://johnmacfarlane.net/pandoc/&quot;&gt;Pandoc&lt;/a&gt; is a universal document converter. It works from the command line and you can quickly convert a document between any two formats. These include nearly all formats commonly used for scientific writing such as Word, Markdown, Latex, HTML and RTF.&lt;/p&gt;

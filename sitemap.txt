@@ -1,14 +1,15 @@
 
-http:/www.scholmd.org/pages.html
-http:/www.scholmd.org/bibliography/0000-0003-1419-2405.yml
 http:/www.scholmd.org/bibliography/0000-0003-1419-2405.html
-http:/www.scholmd.org/index.html
-http:/www.scholmd.org/rss.xml
-http:/www.scholmd.org/tags.html
+http:/www.scholmd.org/bibliography/0000-0003-1419-2405.yml
 http:/www.scholmd.org/sitemap.txt
-http:/www.scholmd.org/atom.xml
+http:/www.scholmd.org/index.html
+http:/www.scholmd.org/pages.html
+http:/www.scholmd.org/tags.html
 http:/www.scholmd.org/about.html
+http:/www.scholmd.org/rss.xml
+http:/www.scholmd.org/atom.xml
 
+http:/www.scholmd.org/markdown_elements/equations.html
 http:/www.scholmd.org/markdown_elements/citations.html
 http:/www.scholmd.org/basic_setup/learn-markdown-in-3-minutes.html
 http:/www.scholmd.org/basic_setup/tools-to-support-your-markdown-authoring.html
