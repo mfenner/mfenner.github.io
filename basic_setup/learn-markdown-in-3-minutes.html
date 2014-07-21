@@ -2,22 +2,22 @@
 <html lang="en">
 
     <head>
-    <title>Pages</title>
+    <title>Learn markdown in 3 minutes</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="" />
 
     <!-- RDFa Metadata (in DublinCore) -->
-    <meta property="dc:title" content="Pages" />
+    <meta property="dc:title" content="Learn markdown in 3 minutes" />
     <meta property="dc:format" content="text/html" />
     <meta property="dc:language" content="en" />
-    <meta property="dc:identifier" content="/pages.html" />
+    <meta property="dc:identifier" content="/basic_setup/learn-markdown-in-3-minutes.html" />
     <meta property="dc:rights" content="CC-BY-NC" />
     <meta property="dc:source" content="Scholarly Markdown" />
     <meta property="dc:subject" content="Scholarly Communication" />
     <meta property="dc:type" content="website" />
 
     <!-- Google Scholar Metadata -->
-    <meta name="citation_title" content="Pages"/>
+    <meta name="citation_title" content="Learn markdown in 3 minutes"/>
     <meta name="citation_journal_title" content="Scholarly Markdown"/>
 
     <link rel="alternate" type="application/rss+xml" title="Scholarly Markdown" href="/rss.xml" />
@@ -51,8 +51,10 @@
   <a class="navmenu-brand" href="#">Scholarly Markdown</a>
   <ul class="nav navmenu-nav">
   
-    <li><span class="glyphicon glyphicon-time"></span> <a href="https://github.com/scholmd/scholmd.github.io/commits/master/pages.html">Version History</a></li>
-    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#scholmd/scholmd.github.io/edit/master/pages.html">Send Edit Request</a></li>
+    <li><span class="glyphicon glyphicon-calendar"></span> 21 July 2014</li>
+  
+    <li><span class="glyphicon glyphicon-time"></span> <a href="https://github.com/scholmd/scholmd.github.io/commits/master/_posts/2013-06-02-learn-markdown-in-3-minutes.md">Version History</a></li>
+    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#scholmd/scholmd.github.io/edit/master/_posts/2013-06-02-learn-markdown-in-3-minutes.md">Send Edit Request</a></li>
     
     <li><span class="glyphicon glyphicon-home"></span> <a href="/">Home</a></li>
     <li><span class="glyphicon glyphicon-info-sign"></span> <a href="/about.html">About</a></li>
@@ -73,7 +75,7 @@
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <div class="page-header">
-            <h1>Pages</h1>
+            <h1>Learn markdown in 3 minutes</h1>
             </p>
           </div>
         </div>
@@ -84,78 +86,68 @@
           <div class="col-md-8 col-md-offset-2">
             <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body>
-<h2>All Pages</h2>
-<ul>
+<p>Markdown syntax is extremely simple and you can learn all you need to know within a few minutes.<!--more--></p>
+<h2 id="formatting-headings">Formatting headings</h2>
+<pre><code># First level
+## Second Level
+### Third level
+#### Fourth level
+##### Fifth level
+###### Sixth level</code></pre>
+<h2 id="bold-and-italics">
+<strong>Bold</strong> and <em>Italics</em>
+</h2>
+<pre><code>Bold: **some text**
 
+Italics:  _some other text_
 
-  
-    
-    	
-    	<li class="active"><a href="/pages.html" class="active">Pages</a></li>
-    	
-    
-  
+Also italics: *this is also italics*</code></pre>
+<h2 id="links">Links</h2>
+<pre><code>[link text](link)
+example: [click here for a web page](http://google.com)</code></pre>
+<h2 id="figures-and-images">Figures and Images</h2>
+<p>Figures are formatted the same as links but just add a <code>!</code> before the square bracked.</p>
+<pre><code>![text description](/path/to/image)</code></pre>
+<p>You can have a picture with a link:</p>
+<pre><code>[![text description](/path/to/image)](http://twitter.com)</code></pre>
+<h2 id="horizontal-lines">Horizontal lines</h2>
+<pre><code>***
 
-  
+or
 
-  
+---</code></pre>
+<h2 id="code-and-verbatim">Code and verbatim</h2>
+<pre><code>Inline code: `some code`
 
-  
-    
-    	
-    	<li><a href="/index.html">Scholarly Markdown</a></li>
-    	
-    
-  
+Code block:
 
-  
-    
-    	
-    	<li><a href="/rss.xml">RSS Feed</a></li>
-    	
-    
-  
+    some code
+    and another line of code
+    some more code
+</code></pre>
+<p>Subscript (Pandoc only)</p>
+<pre><code>R~0~</code></pre>
+<p>Superscript (Pandoc only)</p>
+<pre><code>x^2^</code></pre>
+<p>That’s most of the formatting you’ll need to get by. I’ll get into citation and table formatting on a separate page.</p>
+<div class="references">
 
-  
-    
-    	
-    	<li><a href="/tags.html">Tags</a></li>
-    	
-    
-  
-
-  
-    
-    	
-    	<li><a href="/sitemap.txt">Sitemap</a></li>
-    	
-    
-  
-
-  
-    
-    	
-    	<li><a href="/atom.xml">Atom Feed</a></li>
-    	
-    
-  
-
-  
-    
-    	
-    	<li><a href="/about.html">About</a></li>
-    	
-    
-  
-
-
-
-
-</ul>
+</div>
 </body></html>
 
 
             <div class="license">
+              
+                <hr>
+                <div class="toc-item">
+                  <h3>Next: <a href="/markdown_elements/citations.html">Citations</a></h3>
+                  <p>Citations breakout group at Markdown for Science workshop
+Citations should be specified as citation keys (e.g. (???). Pandoc and Multimarkdown both support human-readable formatting for this, but use different formatting.
+
+
+
+</p>
+                </div>
               
             </div>
 
@@ -183,12 +175,12 @@
   title="ctx_ver=Z39.88-2004
   &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
   &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
-  &amp;rft.title=Pages
+  &amp;rft.title=Learn markdown in 3 minutes
   &amp;rft.creator=
-  &amp;rft.date=
+  &amp;rft.date=2013-06-02
   &amp;rft.language=EN
   &amp;rft.rights=CC0
-  &amp;rft_id=http://www.scholmd.org/pages.html">
+  &amp;rft_id=http://www.scholmd.org/basic_setup/learn-markdown-in-3-minutes.html">
 </span>
 
         <script type="text/javascript">

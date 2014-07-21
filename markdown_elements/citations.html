@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <title>Citations</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+
+    <!-- RDFa Metadata (in DublinCore) -->
+    <meta property="dc:title" content="Citations" />
+    <meta property="dc:format" content="text/html" />
+    <meta property="dc:language" content="en" />
+    <meta property="dc:identifier" content="/markdown_elements/citations.html" />
+    <meta property="dc:rights" content="CC-BY-NC" />
+    <meta property="dc:source" content="Scholarly Markdown" />
+    <meta property="dc:subject" content="Scholarly Communication" />
+    <meta property="dc:type" content="website" />
+
+    <!-- Google Scholar Metadata -->
+    <meta name="citation_title" content="Citations"/>
+    <meta name="citation_journal_title" content="Scholarly Markdown"/>
+
+    <link rel="alternate" type="application/rss+xml" title="Scholarly Markdown" href="/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Scholarly Markdown" href="/atom.xml" />
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/app-3a1e393ebfe3b2d895cc328b97fcdd49.css">
+    <link rel="stylesheet" href="/assets/jasny-bootstrap.min-29c6b484ddca96fa14a48394c0cf415b.css">
+    <link rel="stylesheet" href="/assets/navmenu-push-f57c8aea8e44efd42b5d7fc575383151.css">
+    <link rel="stylesheet" href="/assets/fluidbox-cc1b5668a8c598b1c2fcc5e15e073f33.css">
+
+    <!-- d3.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.min.js"></script>
+
+    <!-- Typekit -->
+    <script type="text/javascript" src="//use.typekit.net/xkl5iqp.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  </head>
+
+
+  <body>
+    <nav id="navmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+  <a class="navmenu-brand" href="#">Scholarly Markdown</a>
+  <ul class="nav navmenu-nav">
+  
+    <li><span class="glyphicon glyphicon-calendar"></span> 21 July 2014</li>
+  
+    <li><span class="glyphicon glyphicon-time"></span> <a href="https://github.com/scholmd/scholmd.github.io/commits/master/_posts/2013-06-03-citations.md">Version History</a></li>
+    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#scholmd/scholmd.github.io/edit/master/_posts/2013-06-03-citations.md">Send Edit Request</a></li>
+    
+    <li><span class="glyphicon glyphicon-home"></span> <a href="/">Home</a></li>
+    <li><span class="glyphicon glyphicon-info-sign"></span> <a href="/about.html">About</a></li>
+    <li><span class="glyphicon glyphicon-tags"></span> <a href="/tags.html">All Tags</a></li>
+  </ul>
+</nav>
+
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#navmenu" data-canvas="body">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="page-header">
+            <h1>Citations</h1>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<h3 id="citations-breakout-group-at-markdown-for-science-workshop">Citations breakout group at Markdown for Science workshop</h3>
+<p>Citations should be specified as citation keys (e.g. <span class="citation" data-cites="smith2010">(<span class="citeproc-not-found" data-reference-id="smith2010"><strong>???</strong></span>)</span>. Pandoc and Multimarkdown both support human-readable formatting for this, but use different formatting.<!--more--></p>
+<h4 id="we-identified-two-use-cases">We identified two use cases:</h4>
+<ul>
+<li>fragment of a scientific document</li>
+<li>complete document, e.g. manuscript for paper</li>
+</ul>
+<p>Reference information should be stored in an external bibtex file, which could be referenced by a link or be in the same folder as the markdown file, specified in the metadata.</p>
+<p>Citation styles should be processed using Citeproc and the Citation Style Language. Citation style can optionally be specified in the metadata.</p>
+<h4 id="questions-from-the-audience">Questions from the audience :)</h4>
+<p>Stian: Is there any good online collaborative citation manager that supports citekeys (defining/seeing)?</p>
+<h3 id="citation-discussion-at-gobbledygook-blog">Citation discussion at Gobbledygook Blog</h3>
+<p>A <a href="http://blog.martinfenner.org/2013/06/19/citations-in-scholarly-markdown/">blog post</a>, and a very good discussion clarified many issues around citations.</p>
+<h4 id="rethink-current-practices">Rethink current practices</h4>
+<p>Most of the things we currently with citations come from a time when journal articles were printed on paper. Examples include citation styles and reference lists. Moving forward we should rethink these practices:</p>
+<ul>
+<li>Citation styles should not be the concern of the author. There is no place for citation styles, or citation formatted with a particular citation style in a markdown document.</li>
+<li>Reference lists often don’t make sense for digital documents. What we rather need are good inline links, plus references in a computer-readable format (e.g. bibtex). One challenge with reference lists is the synchronization between inline citations and the reference list.</li>
+<li>Separate files for references create unnecessary overhead and can lead to vendor lock-in. Ideally all the required information should be stored in the markdown document. We should rather export the references from the markdown file to bibtex when transforming to HTML or other output formats (see above).</li>
+</ul>
+<h4 id="suggested-approach">Suggested approach</h4>
+<ul>
+<li>Citations are links. Thinking of citations as links makes the workflow much easier.</li>
+<li>Use reference-style links for documents with many citations. This makes it easier to manage the citations, e.g. when the same paper is cited more than once.</li>
+<li>You can use citation keys with reference-style links, and this makes it easy to integrate with reference managers (Papers for example supports <code>[#key][]</code>).</li>
+<li>Use the “title” attribute with reference-style links, using the citation title. DOIs (and often also weblinks) are not human-readable. Using the title makes citations easier to remember and prevents transcription errors (i.e. typos in DOIs or URLs):</li>
+</ul>
+<pre><code>[#Beyer2013]: http://dx.doi.org/ 10.1093/annonc/mds579 "Maintaining success, reducing treatment burden,
+focusing on survivorship: highlights from the third European consensus conference on diagnosis and
+treatment of germ-cell cancer."</code></pre>
+<ul>
+<li>The transformation from markdown into a presentation format (e.g. HTML or PDF) should include link checking (see proof of concept tools below).</li>
+<li>We should support internal links to tables and figures, using anchors.</li>
+</ul>
+<h4 id="questions">Questions</h4>
+<ul>
+<li>How do we handle citations that can’t be linked to digital resources? Two ideas are footnotes and placeholder hyperlinks (and <a> tag without href, new in HTML5).</a>
+</li>
+</ul>
+<h4 id="todo">Todo</h4>
+<ul>
+<li>Proof of concept tool that transform links in markdown documents into references, e.g. by pulling information from CrossRef or DataCite.</li>
+<li>Proof of concept tool to display reference information on hover in HTML documents created from markdown.</li>
+<li>Proof of concept tool that extracts all links from a markdown document and generates both a bibliography and bibtex file.</li>
+<li>Best practices how citation information can be stored in HTML link. Probably involves data- attributes.</li>
+</ul>
+<h3 id="citation-styles">Citation Styles</h3>
+<h4 id="reference-manager-support-for-workflow-above">Reference Manager support for workflow above</h4>
+<ul>
+<li>Papers. Allows copy/paste of citekey in different formats (including MMD, Pandoc)</li>
+<li>Mendeley. Copy/paste of citekey in LaTeX format. Allows custom citekeys. Can automatically sync with bibtex file.</li>
+<li>Zotero. ?</li>
+<li>Endnote. ?</li>
+</ul>
+<h4 id="downloading-styles">Downloading styles</h4>
+<p>This repo contains citation styles for most journals. Download a copy of the repo somewhere locally by running:</p>
+<pre><code>git clone git://github.com/citation-style-language/styles.git</code></pre>
+<div class="references">
+
+</div>
+</body></html>
+
+
+            <div class="license">
+              
+            </div>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'scholmd'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+          </div>
+        </div>
+
+        <!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+<span
+  class="Z3988"
+  title="ctx_ver=Z39.88-2004
+  &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+  &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+  &amp;rft.title=Citations
+  &amp;rft.creator=
+  &amp;rft.date=2013-06-03
+  &amp;rft.language=EN
+  &amp;rft.rights=CC0
+  &amp;rft_id=http://www.scholmd.org/markdown_elements/citations.html">
+</span>
+
+        <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36379104-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="//js/js-yaml.min.js"></script>
+
+    <!-- Fluidbox https://github.com/terrymun/Fluidbox -->
+    <script src="/js/js-yaml.min.js"></script>
+    <script src="/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/jquery.fluidbox.min.js"></script>
+    <script type='text/javascript'>
+      $(function () {
+        $("a").fluidbox();
+      });
+    </script>
+
+    <!-- Bootstrap -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/jasny-bootstrap.min.js"></script>
+
+    <!-- MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>
