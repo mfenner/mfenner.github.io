@@ -21,7 +21,9 @@ At this point I have a confession to make: I regularly use other CrossRef APIs, 
 * percentage of DOIs of publisher Y that include at least one ORCID identifier
 * list all books with a Creative Commons CC-BY license that were published this year
 
-Funder (via FundRef) information is also included, but is still incomplete.
+Funder (via FundRef) information is also included, but is still incomplete. Another interesting result is the number of [component DOIs](http://blogs.plos.org/mfenner/2011/03/26/direct-links-to-figures-and-tables-using-component-dois/) (DOIs for figures, tables or other parts of a document) per year:
+
+<iframe src="http://cf.datawrapper.de/Ze7et/1/" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="640" height="480"></iframe>
 
 For my specific use case I wanted an API call that returns all articles published by PLOS (or any other publisher) in the last day which I can then run regularly. To get all DOIs from a specific publisher, use their CrossRef member ID - DOI prefixes don't work, as publishers can own more than one DOI prefix. To make this task a little easier I built a CrossRef member search interface into the ALM application:
 
@@ -49,3 +51,5 @@ issued: {
 ```
 
 I think that a similar approach will work for many other systems that require bibliographic information about scholarly content with CrossRef DOIs. If are not already using **api.crossref.org**, consider integrating with it, I find the API fast, well documented, easy to use - and CrossRef is very responsive to feedback. As you can always wish for more, I would like to see the following: fix the problem were some journal articles are missing the publication date (a required field, even if only the year), and consider adding the canonical URL to the article metadata (which ALM currently has to look up itself, and which is needed to track social media coverage of an article).
+
+*Update July 24, 2014: added chart with number of component DOIs per year*
