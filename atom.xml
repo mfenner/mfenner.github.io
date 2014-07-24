@@ -4,7 +4,7 @@
  <title>Gobbledygook</title>
  <link href="http://blog.martinfenner.org//atom.xml" rel="self"/>
  <link href="http://blog.martinfenner.org"/>
- <updated>2014-07-24T22:24:58+00:00</updated>
+ <updated>2014-07-24T22:51:37+00:00</updated>
  <id>http://blog.martinfenner.org</id>
  <author>
    <name>Martin Fenner</name>
@@ -31,7 +31,9 @@
 &lt;li&gt;percentage of DOIs of publisher Y that include at least one ORCID identifier&lt;/li&gt;
 &lt;li&gt;list all books with a Creative Commons CC-BY license that were published this year&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Funder (via FundRef) information is also included, but is still incomplete.&lt;/p&gt;
+&lt;p&gt;Funder (via FundRef) information is also included, but is still incomplete. Another interesting result is the number of &lt;a href=&quot;http://blogs.plos.org/mfenner/2011/03/26/direct-links-to-figures-and-tables-using-component-dois/&quot;&gt;component DOIs&lt;/a&gt; (DOIs for figures, tables or other parts of a document) per year:&lt;/p&gt;
+&lt;iframe src=&quot;http://cf.datawrapper.de/Ze7et/1/&quot; frameborder=&quot;0&quot; allowtransparency=&quot;true&quot; allowfullscreen=&quot;allowfullscreen&quot; webkitallowfullscreen=&quot;webkitallowfullscreen&quot; mozallowfullscreen=&quot;mozallowfullscreen&quot; oallowfullscreen=&quot;oallowfullscreen&quot; msallowfullscreen=&quot;msallowfullscreen&quot; width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;/iframe&gt;
+
 &lt;p&gt;For my specific use case I wanted an API call that returns all articles published by PLOS (or any other publisher) in the last day which I can then run regularly. To get all DOIs from a specific publisher, use their CrossRef member ID - DOI prefixes don’t work, as publishers can own more than one DOI prefix. To make this task a little easier I built a CrossRef member search interface into the ALM application:&lt;/p&gt;
 &lt;figure&gt;
 &lt;img src=&quot;/images/crossref_api.png&quot; /&gt;
@@ -49,6 +51,7 @@
   ]
 },&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;I think that a similar approach will work for many other systems that require bibliographic information about scholarly content with CrossRef DOIs. If are not already using &lt;strong&gt;api.crossref.org&lt;/strong&gt;, consider integrating with it, I find the API fast, well documented, easy to use - and CrossRef is very responsive to feedback. As you can always wish for more, I would like to see the following: fix the problem were some journal articles are missing the publication date (a required field, even if only the year), and consider adding the canonical URL to the article metadata (which ALM currently has to look up itself, and which is needed to track social media coverage of an article).&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Update July 24, 2014: added chart with number of component DOIs per year&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 
 &lt;/div&gt;
