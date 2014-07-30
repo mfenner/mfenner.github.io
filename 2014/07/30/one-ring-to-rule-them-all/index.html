@@ -2,22 +2,22 @@
 <html lang="en">
 
     <head>
-    <title>Gobbledygook</title>
+    <title>One Ring to Rule them All</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="" />
+    <meta name="keywords" content="markdown, jats, pdf, latex, html, epub" />
 
     <!-- RDFa Metadata (in DublinCore) -->
-    <meta property="dc:title" content="Gobbledygook" />
+    <meta property="dc:title" content="One Ring to Rule them All" />
     <meta property="dc:format" content="text/html" />
     <meta property="dc:language" content="en" />
-    <meta property="dc:identifier" content="/page2/index.html" />
+    <meta property="dc:identifier" content="/2014/07/30/one-ring-to-rule-them-all" />
     <meta property="dc:rights" content="CC-BY-NC" />
     <meta property="dc:source" content="Gobbledygook" />
     <meta property="dc:subject" content="Scholarly Communication" />
     <meta property="dc:type" content="website" />
 
     <!-- Google Scholar Metadata -->
-    <meta name="citation_title" content="Gobbledygook"/>
+    <meta name="citation_title" content="One Ring to Rule them All"/>
     <meta name="citation_journal_title" content="Gobbledygook"/>
 
     <link rel="alternate" type="application/rss+xml" title="Gobbledygook" href="/rss.xml" />
@@ -51,8 +51,31 @@
   <a class="navmenu-brand" href="#">Gobbledygook</a>
   <ul class="nav navmenu-nav">
   
-    <li><span class="glyphicon glyphicon-time"></span> <a href="http://github.com/mfenner/blog/commits/source/page2/index.html">Version History</a></li>
-    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#mfenner/mfenner.github.io/edit/source/page2/index.html">Send Edit Request</a></li>
+    <li><span class="glyphicon glyphicon-time"></span> <a href="http://github.com/mfenner/blog/commits/source/_posts/2014-07-30-one-ring-to-rule-them-all.md">Version History</a></li>
+    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#mfenner/mfenner.github.io/edit/source/_posts/2014-07-30-one-ring-to-rule-them-all.md">Send Edit Request</a></li>
+    
+    <li><span class="glyphicon glyphicon-tags"></span> Tags
+      <ul class="tag-list">
+        
+        
+  
+  	<li><a href="/tags.html#markdown-ref">markdown</a></li>
+  
+  	<li><a href="/tags.html#jats-ref">jats</a></li>
+  
+  	<li><a href="/tags.html#pdf-ref">pdf</a></li>
+  
+  	<li><a href="/tags.html#latex-ref">latex</a></li>
+  
+  	<li><a href="/tags.html#html-ref">html</a></li>
+  
+  	<li><a href="/tags.html#epub-ref">epub</a></li>
+  
+
+
+
+      </ul>
+    </li>
     
     <li><span class="glyphicon glyphicon-home"></span> <a href="/">Home</a></li>
     <li><span class="glyphicon glyphicon-info-sign"></span> <a href="/about.html">About</a></li>
@@ -73,8 +96,11 @@
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <div class="page-header">
-            <h1>Gobbledygook</h1>
-            <p>A blog about how the internet is changing scholarly communication.</p>
+            <h1>One Ring to Rule them All</h1>
+            <p>30 July 2014 by
+            
+            <a href="/about.html">Martin Fenner</a>
+            </p>
           </div>
         </div>
       </div>
@@ -83,108 +109,21 @@
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
             <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
-<html><body><div class="index">
+<html><body>
+<blockquote>
+<p>One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them.<!--more--></p>
+</blockquote>
+<p>Yesterday 60 years ago the first volume of the <em>Lord of the Rings</em> trilogy by <em>J.R.R. Tolkien</em> was published. The quote above obviously doesn’t quiet apply to scholarly publishing, but one recurring theme that I have often heard in the last few years is that of a need for a canonical digital document format for scholarly content that rules all other formats.</p>
+<figure><a href=""><img src="/images/rings.png" alt="Document formats in scholarly Publishing"></a><figcaption>Document formats in scholarly Publishing</figcaption></figure><p>A few years ago almost everyone you would have said that <code>xml</code> is that format, with the NLM Archiving and Interchange Tag Suite - which has evolved into <a href="http://jats.nlm.nih.gov/publishing/">JATS</a> - probably the most commonly used Document Type Definition (DTD). <code>xml</code> does many things really well, but also has important shortcomings, most importantly that it is probably not a good format for authors (and don’t tell me that <code>docx</code> and <code>odt</code> are XML-based). We therefore don’t really expect authors to submit manuscripts in JATS <code>xml</code>, but rather convert documents into this format after a manuscript has been accepted for publication. This conversion step is often time-consuming and labor-intensive.</p>
+<p>More recently <code>html</code> has become the most interesting candidate for a canonical scholarly document format. The big advantage over <code>xml</code> is that <code>html</code> - or at least <code>html5</code> which is most popular today - is an attractive format for online authoring tools (that is why <code>html</code> is listed both as input and output format) The downside of this flexibility is that it is much harder to embed structure and metadata into <code>html5</code> compared to <code>xml</code>. There are initiatives such as <a href="http://schema.org/">schema.org</a> and <a href="https://github.com/oreillymedia/HTMLBook">HTMLBook</a> that hope to change that, but we aren’t quite there yet.</p>
+<p>Or maybe we should learn from Tolkien and give up on the idea of a canonical document format and rather spend our energy on building tools that make it easier to transition from one format to another. <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a> is such as tool, but can’t do all the required conversions, e.g. it can’t yet use <code>docx</code> as input. The downside here is that every file conversion runs the risk of loosing important information. But the increase in flexibility hopefully outweights these shortcomings.</p>
+<div class="references">
 
-  <h3>
-<a href="/2013/12/05/opening-science---the-book">Opening Science - the Book</a> <small>05 Dec 2013</small>
-</h3>
-  <p>Opening Science: The Evolving Guide on How the Internet is Changing Research, Collaboration and Scholarly Publishing is a SpringerOpen book (using a Creative Commons Attribution-NonCommercial license) that will be published in a few weeks. If you can’t wait for the book to be published and/or you want to make comments or suggestions, go to the dynamic book online version at http://book.openingscience.org.
-
-
-
-</p>
-
-  <h3>
-<a href="/2013/11/17/the-grammar-of-scholarly-communication">The Grammar of Scholarly Communication</a> <small>17 Nov 2013</small>
-</h3>
-  <p>Authoring of scholarly articles is a recurring theme in this blog since it started in 2008. Authoring is still in desperate need for improvement, and nobody has convincingly figured out how to solve this problem.
-
-
-
-</p>
-
-  <h3>
-<a href="/2013/11/11/what-is-holding-us-back">What is holding us back?</a> <small>11 Nov 2013</small>
-</h3>
-  <p>Last Friday and Saturday the 6th SpotOn London conference tool place at the British Library. I had a great time with many interesting sessions and good conversations both in and between sessions. But I might be biased, since I helped organize the event, and in particular did help put the sessions for the Tools strand together.
-
-
-
-</p>
-
-  <h3>
-<a href="/2013/11/04/what-is-the-value-of-hack-days">What is the Value of Hack Days?</a> <small>04 Nov 2013</small>
-</h3>
-  <p>This Friday and Saturday the SpotOn London Conference will take place at the British Library in London. I am very excited, as I have come to this conference since the first one in 2008, and have helped organize the event since 2009. The conference is about science communication in the broadest sense, and has three strands that focus on science communication, science policy and tools.
-
-
-
-</p>
-
-  <h3>
-<a href="/2013/10/25/commenting-on-scientific-papers">Commenting on scientific papers</a> <small>25 Oct 2013</small>
-</h3>
-  <p>I think it is fair to say that commenting on scientific papers is broken. And with commenting I mean online comments that are publicly available, not informal discussions in journal clubs or at meetings. This definition would include discussions of papers on social media such as Twitter or Facebook. Why do I think that commenting is broken?
-
-
-
-</p>
-
-  <h3>
-<a href="/2013/10/23/what-can-article-level-metrics-do-for-you">What Can Article Level Metrics Do for You?</a> <small>23 Oct 2013</small>
-</h3>
-  <p>Yesterday PLOS Biology published an essay by me: What Can Article Level Metrics Do for You? (Fenner, 2013). I had help from many others in writing the essay, in particular PLOS Biology editor Emma Ganley. I hope that the essay can help researchers get introduced to article-level metrics, and I am honored that the essay is part of the PLOS Biology 10th anniversary collection.</p>
-
-  <h3>
-<a href="/2013/10/20/the-complete-article">The Complete Article</a> <small>20 Oct 2013</small>
-</h3>
-  <p>Open access to research data is becoming increasingly important, as manifested by memos or press releases from the Wellcome Trust, the European Commission, and the the Office of Science and Technology Policy (OSTP) from the White House.
-
-
-
-</p>
-
-  <h3>
-<a href="/2013/10/13/broken-dois">Challenges in automated DOI resolution</a> <small>13 Oct 2013</small>
-</h3>
-  <p>Yesterday we created a set of roughly 10,000 DOIs for journal articles published in 2011 or 2012. We used these DOIs as a reference set in a data hackathon around article-level metrics/altmetrics - material for another blog post.
-
-
-
-</p>
-
-  <h3>
-<a href="/2013/08/10/altmetrics-coming-of-age-not-for-wikipedia">Altmetrics coming of age? Not for Wikipedia</a> <small>10 Aug 2013</small>
-</h3>
-  <p>Ten days ago Information Standards Quarterly (ISQ) published a special issue on altmetrics. I was the guest editor for the five altmetrics articles
-
-
-
-</p>
-
-  <h3>
-<a href="/2013/08/08/csl-is-more-than-citation-styles">CSL is more than citation styles</a> <small>08 Aug 2013</small>
-</h3>
-  <p>According to the description on the Citation Style Language (CSL) website, CSL is an open XML-based language to describe the formatting of citations and bibliographies.
-
-
-
-</p>
-
-</div></body></html>
+</div>
+</body></html>
 
 
             <div class="license">
-              
-                <hr>
-                <div class="toc-item">
-                
-                  <span><a href="/"><span class="glyphicon glyphicon-arrow-left"></span> Previous</a></span>
-                
-                
-                  <span class="pull-right"><a href="/page3">Next <span class="glyphicon glyphicon-arrow-right"></span></a></span>
-                
-                </div>
               
             </div>
 
@@ -212,12 +151,12 @@
   title="ctx_ver=Z39.88-2004
   &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
   &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
-  &amp;rft.title=Gobbledygook
+  &amp;rft.title=One Ring to Rule them All
   &amp;rft.creator=Martin Fenner
-  &amp;rft.date=
+  &amp;rft.date=2014-07-30
   &amp;rft.language=EN
   &amp;rft.rights=CC0
-  &amp;rft_id=http://blog.martinfenner.org/page2/index.html">
+  &amp;rft_id=http://blog.martinfenner.org/2014/07/30/one-ring-to-rule-them-all">
 </span>
 
         <script type="text/javascript">
