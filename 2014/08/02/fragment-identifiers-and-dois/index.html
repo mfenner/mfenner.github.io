@@ -2,22 +2,22 @@
 <html lang="en">
 
     <head>
-    <title>One Ring to Rule them All</title>
+    <title>Fragment Identifiers and DOIs</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="markdown, jats, pdf, latex, html, epub" />
+    <meta name="keywords" content="doi" />
 
     <!-- RDFa Metadata (in DublinCore) -->
-    <meta property="dc:title" content="One Ring to Rule them All" />
+    <meta property="dc:title" content="Fragment Identifiers and DOIs" />
     <meta property="dc:format" content="text/html" />
     <meta property="dc:language" content="en" />
-    <meta property="dc:identifier" content="/2014/07/30/one-ring-to-rule-them-all" />
+    <meta property="dc:identifier" content="/2014/08/02/fragment-identifiers-and-dois" />
     <meta property="dc:rights" content="CC-BY-NC" />
     <meta property="dc:source" content="Gobbledygook" />
     <meta property="dc:subject" content="Scholarly Communication" />
     <meta property="dc:type" content="website" />
 
     <!-- Google Scholar Metadata -->
-    <meta name="citation_title" content="One Ring to Rule them All"/>
+    <meta name="citation_title" content="Fragment Identifiers and DOIs"/>
     <meta name="citation_journal_title" content="Gobbledygook"/>
 
     <link rel="alternate" type="application/rss+xml" title="Gobbledygook" href="/rss.xml" />
@@ -51,25 +51,15 @@
   <a class="navmenu-brand" href="#">Gobbledygook</a>
   <ul class="nav navmenu-nav">
   
-    <li><span class="glyphicon glyphicon-time"></span> <a href="http://github.com/mfenner/blog/commits/source/_posts/2014-07-30-one-ring-to-rule-them-all.md">Version History</a></li>
-    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#mfenner/mfenner.github.io/edit/source/_posts/2014-07-30-one-ring-to-rule-them-all.md">Send Edit Request</a></li>
+    <li><span class="glyphicon glyphicon-time"></span> <a href="http://github.com/mfenner/blog/commits/source/_posts/2014-08-02-fragment-identifiers-and-dois.md">Version History</a></li>
+    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#mfenner/mfenner.github.io/edit/source/_posts/2014-08-02-fragment-identifiers-and-dois.md">Send Edit Request</a></li>
     
     <li><span class="glyphicon glyphicon-tags"></span> Tags
       <ul class="tag-list">
         
         
   
-  	<li><a href="/tags.html#markdown-ref">markdown</a></li>
-  
-  	<li><a href="/tags.html#jats-ref">jats</a></li>
-  
-  	<li><a href="/tags.html#pdf-ref">pdf</a></li>
-  
-  	<li><a href="/tags.html#latex-ref">latex</a></li>
-  
-  	<li><a href="/tags.html#html-ref">html</a></li>
-  
-  	<li><a href="/tags.html#epub-ref">epub</a></li>
+  	<li><a href="/tags.html#doi-ref">doi</a></li>
   
 
 
@@ -96,8 +86,8 @@
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <div class="page-header">
-            <h1>One Ring to Rule them All</h1>
-            <p>30 July 2014 by
+            <h1>Fragment Identifiers and DOIs</h1>
+            <p>02 August 2014 by
             
             <a href="/about.html">Martin Fenner</a>
             </p>
@@ -110,13 +100,20 @@
           <div class="col-md-8 col-md-offset-2">
             <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body>
-<blockquote>
-<p>One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them.<!--more--></p>
-</blockquote>
-<p>Yesterday 60 years ago the first volume of the <em>Lord of the Rings</em> trilogy by <em>J.R.R. Tolkien</em> was published. The quote above obviously doesn’t quiet apply to scholarly publishing, but one recurring theme that I have often heard in the last few years is that of a need for a canonical digital document format for scholarly content that rules all other formats.</p>
-<figure><a href=""><img src="/images/rings.png" alt="Document formats in scholarly Publishing"></a><figcaption>Document formats in scholarly Publishing</figcaption></figure><p>A few years ago almost everyone you would have said that <code>xml</code> is that format, with the NLM Archiving and Interchange Tag Suite - which has evolved into <a href="http://jats.nlm.nih.gov/publishing/">JATS</a> - probably the most commonly used Document Type Definition (DTD). <code>xml</code> does many things really well, but also has important shortcomings, most importantly that it is probably not a good format for authors (and don’t tell me that <code>docx</code> and <code>odt</code> are XML-based). We therefore don’t really expect authors to submit manuscripts in JATS <code>xml</code>, but rather convert documents into this format after a manuscript has been accepted for publication. This conversion step is often time-consuming and labor-intensive.</p>
-<p>More recently <code>html</code> has become the most interesting candidate for a canonical scholarly document format. The big advantage over <code>xml</code> is that <code>html</code> - or at least <code>html5</code> which is most popular today - is an attractive format for online authoring tools (that is why <code>html</code> is listed both as input and output format) The downside of this flexibility is that it is much harder to embed structure and metadata into <code>html5</code> compared to <code>xml</code>. There are initiatives such as <a href="http://schema.org/">schema.org</a> and <a href="https://github.com/oreillymedia/HTMLBook">HTMLBook</a> that hope to change that, but we aren’t quite there yet.</p>
-<p>Or maybe we should learn from Tolkien and give up on the idea of a canonical document format and rather spend our energy on building tools that make it easier to transition from one format to another. <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a> is such as tool, but can’t do all the required conversions, e.g. it can’t yet use <code>docx</code> as input. The downside here is that every file conversion runs the risk of loosing important information. But the increase in flexibility hopefully outweights these shortcomings.</p>
+<p>Before all our content turned digital, we already used <strong>page numbers</strong> to describe a specific section of a book or longer document, with older manuscripts using the <a href="https://en.wikipedia.org/wiki/Folio">folio</a> before that. Page numbers have transitioned to electronic books with readers such as the Kindle <a href="http://pogue.blogs.nytimes.com/2011/02/08/page-numbers-for-kindle-books-an-imperfect-solution/?_php=true&amp;_type=blogs&amp;_r=0">supporting them eventually</a>.<!--more--></p>
+<figure><a href=""><img src="/images/Folio_(number).jpg" alt="Folio from Wikimedia Commons"></a><figcaption>Folio from <a href="http://commons.wikimedia.org/wiki/File:Folio_(number).jpg">Wikimedia Commons</a></figcaption></figure><p>For content on the web we can use the <code>#</code> fragment identifier, e.g. [https://en.wikipedia.org/wiki/Fragment_identifier#Proposals] to navigate to a specific section of a web page. How the linking to this fragment is handled, depends on the <strong>MIME</strong> type of the document, and will for example be done differently for a text page than a video - YouTube understands minutes and seconds into a video as fragment identifier, e.g. <a href="https://www.youtube.com/watch?v=0UNRZEsLxKc#t=54m52s"><code>https://www.youtube.com/watch?v=0UNRZEsLxKc#t=54m52s</code></a>. Fragment identifiers are not only helpful to link to a subsection of a document, but of course also for navigation within a document.</p>
+<p>All this is of course very relevant to scholarly content, which is usually much more structured, with most journal articles following the <a href="https://en.wikipedia.org/wiki/IMRAD">IMRAD</a> - introduction, methods, results, and discussion - format, usually with additional sections such as abstract, references, etc. One approach to link to figures and tables within a scholarly articles is using <a href="http://blogs.plos.org/mfenner/2011/03/26/direct-links-to-figures-and-tables-using-component-dois/">component DOIs</a>, e.g. specific DOIs for parts of a larger document. The publisher <strong>PLOS</strong> has been using them for a long time, and their <a href="http://blog.martinfenner.org/2014/07/24/dont-reinvent-the-wheel/">number is rising</a>, but most scholarly journal articles don’t use component DOIs. And whereas component DOIs are a great concept for content such as figures (allowing us to describe the MIME type and other relevant metadata), they are probably not the best tool to link to a section or paragraph of a scholarly document.</p>
+<p>As it turns out, we already have a tool for that, as the DOI proxy server gracefully forwards fragment identifiers (how did I miss this?). We can therefore use a DOI with a fragment identifier to</p>
+<ul>
+<li>Results section: <a href="http://dx.doi.org/10.1371/journal.pone.0103437#s2">http://dx.doi.org/10.1371/journal.pone.0103437#s2</a>
+</li>
+<li>Specific reference: <a href="http://dx.doi.org/10.12688/f1000research.4263.1#ref-7">http://dx.doi.org/10.12688/f1000research.4263.1#ref-7</a>
+</li>
+<li>Decision letter: <a href="http://dx.doi.org/10.7554/eLife.00471#decision-letter">http://dx.doi.org/10.7554/eLife.00471#decision-letter</a>
+</li>
+</ul>
+<p>Obviously this only works if the DOI is resolved to the fulltext of a resource, and not a landing page. And how the fragment identifiers are named and implemented is up to the publisher, and the DOI resolver has no information about them. These specific links are particularly nice for discussions of a paper, whether it is on Twitter or in a discussion forum. It appears that at least the Twitter link shortener keeps the fragment identifier, the link to the eLife decision letter is shortened to <a href="http://t.co/URWaYmGHnY">http://t.co/URWaYmGHnY</a>. This kind of linking works particularly well if the publisher is using a fine-grained system of fragment identifiers, the publisher PeerJ for example allows links to a specific paragraph - e.g. <a href="http://dx.doi.org/10.7717/peerj.500#p-15">http://dx.doi.org/10.7717/peerj.500#p-15</a> - and allows users to <a href="http://blog.peerj.com/post/62886292466/peerj-questions-a-new-way-to-never-publish-forget">ask a question</a> right next to that section.</p>
+<p>The examples above all use MIME type <code>text/html</code>, as this is what the example DOIs resolve to by default. I don’t if and how publishers have implemented fragment identifiers for other formats such as PDF or ePub, and what happens if you combine fragment identifiers with <a href="http://www.crosscite.org/cn/">content negotiation</a>. The shortDOI service works with fragment identifiers as well: <a href="http://doi.org/pxd#decision-letter">http://doi.org/pxd#decision-letter</a>.</p>
 <div class="references">
 
 </div>
@@ -124,17 +121,6 @@
 
 
             <div class="license">
-              
-                <hr>
-                <div class="toc-item">
-                  <h3>Next: <a href="/2014/08/02/fragment-identifiers-and-dois">Fragment Identifiers and DOIs</a></h3>
-                  
-                  <p>Before all our content turned digital, we already used page numbers to describe a specific section of a book or longer document, with older manuscripts using the folio before that. Page numbers have transitioned to electronic books with readers such as the Kindle supporting them eventually.
-
-
-
-</p>
-                </div>
               
             </div>
 
@@ -162,12 +148,12 @@
   title="ctx_ver=Z39.88-2004
   &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
   &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
-  &amp;rft.title=One Ring to Rule them All
+  &amp;rft.title=Fragment Identifiers and DOIs
   &amp;rft.creator=Martin Fenner
-  &amp;rft.date=2014-07-30
+  &amp;rft.date=2014-08-02
   &amp;rft.language=EN
   &amp;rft.rights=CC0
-  &amp;rft_id=http://blog.martinfenner.org/2014/07/30/one-ring-to-rule-them-all">
+  &amp;rft_id=http://blog.martinfenner.org/2014/08/02/fragment-identifiers-and-dois">
 </span>
 
         <script type="text/javascript">
