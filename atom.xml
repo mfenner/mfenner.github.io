@@ -4,7 +4,7 @@
  <title>Gobbledygook</title>
  <link href="http://blog.martinfenner.org//atom.xml" rel="self"/>
  <link href="http://blog.martinfenner.org"/>
- <updated>2014-08-02T09:10:43+00:00</updated>
+ <updated>2014-08-02T09:30:50+00:00</updated>
  <id>http://blog.martinfenner.org</id>
  <author>
    <name>Martin Fenner</name>
@@ -30,7 +30,7 @@
 &lt;li&gt;Decision letter: &lt;a href=&quot;http://dx.doi.org/10.7554/eLife.00471#decision-letter&quot;&gt;http://dx.doi.org/10.7554/eLife.00471#decision-letter&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Obviously this only works if the DOI is resolved to the fulltext of a resource, and not a landing page. And how the fragment identifiers are named and implemented is up to the publisher, and the DOI resolver has no information about them. These specific links are particularly nice for discussions of a paper, whether it is on Twitter or in a discussion forum. It appears that at least the Twitter link shortener keeps the fragment identifier, the link to the eLife decision letter is shortened to &lt;a href=&quot;http://t.co/URWaYmGHnY&quot;&gt;http://t.co/URWaYmGHnY&lt;/a&gt;. This kind of linking works particularly well if the publisher is using a fine-grained system of fragment identifiers, the publisher PeerJ for example allows links to a specific paragraph - e.g. &lt;a href=&quot;http://dx.doi.org/10.7717/peerj.500#p-15&quot;&gt;http://dx.doi.org/10.7717/peerj.500#p-15&lt;/a&gt; - and allows users to &lt;a href=&quot;http://blog.peerj.com/post/62886292466/peerj-questions-a-new-way-to-never-publish-forget&quot;&gt;ask a question&lt;/a&gt; right next to that section.&lt;/p&gt;
-&lt;p&gt;The examples above all use MIME type &lt;code&gt;text/html&lt;/code&gt;, as this is what the example DOIs resolve to by default. I don’t if and how publishers have implemented fragment identifiers for other formats such as PDF or ePub, and what happens if you combine fragment identifiers with &lt;a href=&quot;http://www.crosscite.org/cn/&quot;&gt;content negotiation&lt;/a&gt;. The shortDOI service works with fragment identifiers as well: &lt;a href=&quot;http://doi.org/pxd#decision-letter&quot;&gt;http://doi.org/pxd#decision-letter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The examples above all use MIME type &lt;code&gt;text/html&lt;/code&gt;, as this is what the example DOIs resolve to by default. I don’t if and how publishers have implemented fragment identifiers for other formats such as PDF or ePub, and what happens if you combine fragment identifiers with &lt;a href=&quot;http://www.crosscite.org/cn/&quot;&gt;content negotiation&lt;/a&gt;. The shortDOI service works with fragment identifiers as well: &lt;a href=&quot;http://doi.org/pxd#decision-letter&quot;&gt;http://doi.org/pxd#decision-letter&lt;/a&gt;. Another interesting question would be how fragment identifiers are handled for datasets. Typically separate DOIs are assigned for multiple related datasets, but there could also be a place for fragment identifiers as well, e.g. to specify a subset via a date range. The solution depends again on the content type, and the popular &lt;code&gt;text/csv&lt;/code&gt; is unfortunately not well suited for this, whereas JSON - using &lt;a href=&quot;http://tools.ietf.org/html/rfc6901&quot;&gt;JSON Pointer&lt;/a&gt; - would work well.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 
 &lt;/div&gt;
