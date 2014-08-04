@@ -6,7 +6,7 @@ tags: [doi]
 
 Before all our content turned digital, we already used **page numbers** to describe a specific section of a book or longer document, with older manuscripts using the [folio](https://en.wikipedia.org/wiki/Folio) before that. Page numbers have transitioned to electronic books with readers such as the Kindle [supporting them eventually](http://pogue.blogs.nytimes.com/2011/02/08/page-numbers-for-kindle-books-an-imperfect-solution/?_php=true&_type=blogs&_r=0).<!--more-->
 
-![Folio from [Wikimedia Commons](http://commons.wikimedia.org/wiki/File:Folio_(number).jpg)](/images/Folio_(number).jpg)
+![Image by Al Silonov from [Wikimedia Commons](http://commons.wikimedia.org/wiki/File:Folio_(number).jpg). This file is licensed under the Creative Commons [Attribution-Share Alike 3.0 Unported](http://creativecommons.org/licenses/by-sa/3.0/deed.en) license.](/images/Folio_(number).jpg)
 
 For content on the web we can use the `#` fragment identifier, e.g. [https://en.wikipedia.org/wiki/Fragment_identifier#Proposals](https://en.wikipedia.org/wiki/Fragment_identifier#Proposals) to navigate to a specific section of a web page. How the linking to this fragment is handled, depends on the **MIME** type of the document, and will for example be done differently for a text page than a video - YouTube understands minutes and seconds into a video as fragment identifier, e.g. [https://www.youtube.com/watch?v=0UNRZEsLxKc#t=54m52s](https://www.youtube.com/watch?v=0UNRZEsLxKc#t=54m52s). Fragment identifiers are not only helpful to link to a subsection of a document, but of course also for navigation within a document.
 
