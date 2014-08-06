@@ -32,7 +32,7 @@
     <![endif]-->
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/assets/app-11ab8a904a95ebd3dff19421618a0e25.css">
+    <link rel="stylesheet" href="/assets/app-7b11536ae5581522c573f3f553590ae2.css">
     <link rel="stylesheet" href="/assets/jasny-bootstrap.min-29c6b484ddca96fa14a48394c0cf415b.css">
     <link rel="stylesheet" href="/assets/navmenu-push-f57c8aea8e44efd42b5d7fc575383151.css">
     <link rel="stylesheet" href="/assets/fluidbox-cc1b5668a8c598b1c2fcc5e15e073f33.css">
@@ -101,7 +101,10 @@
             <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body>
 <p>Before all our content turned digital, we already used <strong>page numbers</strong> to describe a specific section of a book or longer document, with older manuscripts using the <a href="https://en.wikipedia.org/wiki/Folio">folio</a> before that. Page numbers have transitioned to electronic books with readers such as the Kindle <a href="http://pogue.blogs.nytimes.com/2011/02/08/page-numbers-for-kindle-books-an-imperfect-solution/?_php=true&amp;_type=blogs&amp;_r=0">supporting them eventually</a>.<!--more--></p>
-<figure><a href=""><img src="/images/Folio_(number).jpg" alt="Image by Al Silonov from Wikimedia Commons. This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license."></a><figcaption>Image by Al Silonov from <a href="http://commons.wikimedia.org/wiki/File:Folio_(number).jpg">Wikimedia Commons</a>. This file is licensed under the Creative Commons <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en">Attribution-Share Alike 3.0 Unported</a> license.</figcaption></figure><p>For content on the web we can use the <code>#</code> fragment identifier, e.g. <a href="https://en.wikipedia.org/wiki/Fragment_identifier#Proposals">https://en.wikipedia.org/wiki/Fragment_identifier#Proposals</a> to navigate to a specific section of a web page. How the linking to this fragment is handled, depends on the <strong>MIME</strong> type of the document, and will for example be done differently for a text page than a video - YouTube understands minutes and seconds into a video as fragment identifier, e.g. <a href="https://www.youtube.com/watch?v=0UNRZEsLxKc#t=54m52s">https://www.youtube.com/watch?v=0UNRZEsLxKc#t=54m52s</a>. Fragment identifiers are not only helpful to link to a subsection of a document, but of course also for navigation within a document.</p>
+<figure>
+<a href=""><img src="/images/Folio_(number).jpg" alt="Image by Al Silonov from Wikimedia Commons. This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license."></a><figcaption>Image by Al Silonov from <a href="http://commons.wikimedia.org/wiki/File:Folio_(number).jpg">Wikimedia Commons</a>. This file is licensed under the Creative Commons <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en">Attribution-Share Alike 3.0 Unported</a> license.</figcaption>
+</figure>
+<p>For content on the web we can use the <code>#</code> fragment identifier, e.g. <a href="https://en.wikipedia.org/wiki/Fragment_identifier#Proposals">https://en.wikipedia.org/wiki/Fragment_identifier#Proposals</a> to navigate to a specific section of a web page. How the linking to this fragment is handled, depends on the <strong>MIME</strong> type of the document, and will for example be done differently for a text page than a video - YouTube understands minutes and seconds into a video as fragment identifier, e.g. <a href="https://www.youtube.com/watch?v=0UNRZEsLxKc#t=54m52s">https://www.youtube.com/watch?v=0UNRZEsLxKc#t=54m52s</a>. Fragment identifiers are not only helpful to link to a subsection of a document, but of course also for navigation within a document.</p>
 <p>All this is of course very relevant to scholarly content, which is usually much more structured, with most journal articles following the <a href="https://en.wikipedia.org/wiki/IMRAD">IMRAD</a> - introduction, methods, results, and discussion - format, usually with additional sections such as abstract, references, etc. One approach to link to figures and tables within a scholarly articles is using <a href="http://blogs.plos.org/mfenner/2011/03/26/direct-links-to-figures-and-tables-using-component-dois/">component DOIs</a>, e.g. specific DOIs for parts of a larger document. The publisher <strong>PLOS</strong> has been using them for a long time, and the <a href="http://blog.martinfenner.org/2014/07/24/dont-reinvent-the-wheel/">number of component DOIs is rising</a>, but most scholarly journal articles don’t use component DOIs. And whereas component DOIs are a great concept for content such as figures (allowing us to describe the MIME type and other relevant metadata), they are probably not the best tool to link to a section or paragraph of a scholarly document.</p>
 <p>As it turns out, we already have a tool for that, as the DOI proxy server gracefully forwards fragment identifiers (how did I miss this?). We can therefore use a DOI with a fragment identifier to</p>
 <ul>
@@ -175,7 +178,6 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="//js/js-yaml.min.js"></script>
 
     <!-- Fluidbox https://github.com/terrymun/Fluidbox -->
     <script src="/js/js-yaml.min.js"></script>

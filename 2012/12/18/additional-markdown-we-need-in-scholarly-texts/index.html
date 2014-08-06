@@ -32,7 +32,7 @@
     <![endif]-->
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/assets/app-11ab8a904a95ebd3dff19421618a0e25.css">
+    <link rel="stylesheet" href="/assets/app-7b11536ae5581522c573f3f553590ae2.css">
     <link rel="stylesheet" href="/assets/jasny-bootstrap.min-29c6b484ddca96fa14a48394c0cf415b.css">
     <link rel="stylesheet" href="/assets/navmenu-push-f57c8aea8e44efd42b5d7fc575383151.css">
     <link rel="stylesheet" href="/assets/fluidbox-cc1b5668a8c598b1c2fcc5e15e073f33.css">
@@ -131,11 +131,13 @@
 <col style="width: 22%">
 <col style="width: 34%">
 </colgroup>
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th style="text-align: center;">Centered Header</th>
 <th style="text-align: right;">Right Aligned</th>
 <th style="text-align: left;">Left Aligned</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: center;">First</td>
@@ -151,7 +153,10 @@
 </table>
 <h2 id="figures">Figures</h2>
 <p>Figures in scholarly works are separated from the text, and have a figure caption (which can contain styled text). Figures should work as anchors (i.e. you can link to them). Figures can be in different file formats, including TIFF and PDF, and those formats have to be converted into web-friendly formats when exporting to HTML (e.g. PNG and SVG).</p>
-<figure><a href=""><img src="/images/set-operations-illustrated-with-venn-diagrams.png" alt="Set operations illustrated with Venn diagrams. Example taken from TeXample.net."></a><figcaption><strong>Set operations illustrated with Venn diagrams</strong>. Example taken from <a href="http://www.texample.net/tikz/examples/set-operations-illustrated-with-venn-diagrams/">TeXample.net</a>.</figcaption></figure><h2 id="citations-and-links">Citations and Links</h2>
+<figure>
+<a href=""><img src="/images/set-operations-illustrated-with-venn-diagrams.png" alt="Set operations illustrated with Venn diagrams. Example taken from TeXample.net."></a><figcaption><strong>Set operations illustrated with Venn diagrams</strong>. Example taken from <a href="http://www.texample.net/tikz/examples/set-operations-illustrated-with-venn-diagrams/">TeXample.net</a>.</figcaption>
+</figure>
+<h2 id="citations-and-links">Citations and Links</h2>
 <p>Scholarly articles typically don’t have inline links, but rather citations. The external links (both scholarly identifiers such as DOIs and regular web URLs) are collected in a bibliography at the end of the document, and the citations in the text link to this bibliography. This functionality is similar to footnotes.</p>
 <p>Citations should include a citation key in the text, e.g. <code>[@kowalczyk2011]</code>, parsed as <span class="citation" data-cites="kowalczyk2011">(Kowalczyk &amp; Shankar, 2011)</span>, and a separate bibliography file in BibTeX (or RIS) format that contains references for all citations. Inserting citations and creating the bibliography can best be done with a reference manager.</p>
 <p>Cross-links – i.e. links within a document – are important for scholarly texts. It should be possible to link to section headers (e.g. the beginning of the discussion section), figures and tables.</p>
@@ -233,7 +238,6 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="//js/js-yaml.min.js"></script>
 
     <!-- Fluidbox https://github.com/terrymun/Fluidbox -->
     <script src="/js/js-yaml.min.js"></script>

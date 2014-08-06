@@ -32,7 +32,7 @@
     <![endif]-->
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/assets/app-11ab8a904a95ebd3dff19421618a0e25.css">
+    <link rel="stylesheet" href="/assets/app-7b11536ae5581522c573f3f553590ae2.css">
     <link rel="stylesheet" href="/assets/jasny-bootstrap.min-29c6b484ddca96fa14a48394c0cf415b.css">
     <link rel="stylesheet" href="/assets/navmenu-push-f57c8aea8e44efd42b5d7fc575383151.css">
     <link rel="stylesheet" href="/assets/fluidbox-cc1b5668a8c598b1c2fcc5e15e073f33.css">
@@ -152,7 +152,10 @@ opar &lt;-<span class="st"> </span><span class="kw">par</span>(<span class="dt">
 plos.names &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">"PLoS HTML Views"</span>, <span class="st">"PMC HTML Views"</span>,<span class="st">"CrossRef"</span>,<span class="st">"Scopus"</span>,<span class="st">"PubMed Citations"</span>, <span class="st">"Mendeley"</span>,<span class="st">"CiteULike"</span>,<span class="st">"PLoS Comments"</span>,<span class="st">"Research Blogging"</span>,<span class="st">"Facebook"</span>,<span class="st">"Twitter"</span>,<span class="st">"Wikipedia"</span>)
 y &lt;-<span class="st"> </span><span class="kw">barplot</span>(colSums,<span class="dt">horiz=</span><span class="ot">TRUE</span>,<span class="dt">col=</span>plos.colors, <span class="dt">border =</span> <span class="ot">NA</span>, <span class="dt">xlab=</span>plos.names, <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">120</span>), <span class="dt">axes=</span><span class="ot">FALSE</span>, <span class="dt">names.arg=</span>plos.names,<span class="dt">las=</span><span class="dv">1</span>, <span class="dt">adj=</span><span class="dv">0</span>)
 <span class="kw">text</span>(colSums<span class="dv">+6</span>,y,<span class="dt">labels=</span><span class="kw">sprintf</span>(<span class="st">"%1.0f%%"</span>, colSums))</code></pre>
-<figure><a href=""><img src="/images/barplot-2013-06-17.svg" alt="Proportion of articles covered by source. Article-level metrics for all 80,602 PLOS journal articles published until May 20, 2013."></a><figcaption><strong>Proportion of articles covered by source</strong>. Article-level metrics for all 80,602 PLOS journal articles published until May 20, 2013.</figcaption></figure><p>In a way this approach to scholarly markdown is much more difficult than building a nice online collaborative writing tool. But for me scholarly markdown is not about competing with Microsoft Word, it is about building something new that scholars want to use because it allows them to do something that is impossible with the existing tools. For the same reason my todo item at the end of the workshop was <em>think about document type where markdown shines</em>. The R example above is a great example where markdown shines. If you can think of additional examples, please add them to the comments.</p>
+<figure>
+<a href=""><img src="/images/barplot-2013-06-17.svg" alt="Proportion of articles covered by source. Article-level metrics for all 80,602 PLOS journal articles published until May 20, 2013."></a><figcaption><strong>Proportion of articles covered by source</strong>. Article-level metrics for all 80,602 PLOS journal articles published until May 20, 2013.</figcaption>
+</figure>
+<p>In a way this approach to scholarly markdown is much more difficult than building a nice online collaborative writing tool. But for me scholarly markdown is not about competing with Microsoft Word, it is about building something new that scholars want to use because it allows them to do something that is impossible with the existing tools. For the same reason my todo item at the end of the workshop was <em>think about document type where markdown shines</em>. The R example above is a great example where markdown shines. If you can think of additional examples, please add them to the comments.</p>
 <div class="references">
 
 </div>
@@ -224,7 +227,6 @@ y &lt;-<span class="st"> </span><span class="kw">barplot</span>(colSums,<span cl
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="//js/js-yaml.min.js"></script>
 
     <!-- Fluidbox https://github.com/terrymun/Fluidbox -->
     <script src="/js/js-yaml.min.js"></script>

@@ -50,7 +50,7 @@
     <![endif]-->
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/assets/app-11ab8a904a95ebd3dff19421618a0e25.css">
+    <link rel="stylesheet" href="/assets/app-7b11536ae5581522c573f3f553590ae2.css">
     <link rel="stylesheet" href="/assets/jasny-bootstrap.min-29c6b484ddca96fa14a48394c0cf415b.css">
     <link rel="stylesheet" href="/assets/navmenu-push-f57c8aea8e44efd42b5d7fc575383151.css">
     <link rel="stylesheet" href="/assets/fluidbox-cc1b5668a8c598b1c2fcc5e15e073f33.css">
@@ -169,7 +169,10 @@
 <li>Every cell should contain only a single value <span class="citation" data-cites="strasser2012">(Strasser et al., 2012)</span>. For example, do not include units in the cell with the values (Figure 1) or include multiple measurements in a single cell, and break taxonomic information up into single components with one column each for family, genus, species, subspecies, etc. Violating this rule makes it difficult to process or analyze your data using standard tools, because there is no easy way for the software to treat the items within a cell as separate pieces of information.</li>
 <li>There should only be one column for each type of information <span class="citation" data-cites="borer2009 strasser2011 strasser2012">(Borer et al., 2009; Strasser et al., 2011, 2012)</span>. The most common violation of this rule is <a href="http://en.wikipedia.org/wiki/Cross_tabulation">cross-tab structured data</a>, where different columns contain measurements of the same variable (e.g., in different sites, treatments, etc.; Figure 1).</li>
 </ul>
-<figure><a href=""><img src="/images/Data_formatting.jpg" alt="Figure 1. Examples of how to restructure two common issues with tabular data. (a) Each cell should only contain a single value. If more than one value is present then the data should be split into multiple columns. (b) There should be only one column for each type of information. If there are multiple columns then the column header should be stored in one column and the values from each column should be stored in a single column."></a><figcaption><strong>Figure 1. Examples of how to restructure two common issues with tabular data</strong>. (a) Each cell should only contain a single value. If more than one value is present then the data should be split into multiple columns. (b) There should be only one column for each type of information. If there are multiple columns then the column header should be stored in one column and the values from each column should be stored in a single column.</figcaption></figure><p>While cross-tab data can be useful for its readability, and may be appropriate for data collection, this format makes it difficult to link the records with additional data (e.g., the location and environmental conditions at a site) and it cannot be properly used by most common database management and analysis tools (e.g., relational databases, dataframes in R and Python, etc.). If tabular data are currently in a cross-tab structure, there are tools to help restructure the data including functions in Excel, R (e.g., melt() function in the R package reshape; <span class="citation" data-cites="wickham2007">Wickham (2007)</span>), and Python (e.g., melt() function in the <a href="http://pandas.pydata.org/">Pandas</a> Python module.</p>
+<figure>
+<a href=""><img src="/images/Data_formatting.jpg" alt="Figure 1. Examples of how to restructure two common issues with tabular data. (a) Each cell should only contain a single value. If more than one value is present then the data should be split into multiple columns. (b) There should be only one column for each type of information. If there are multiple columns then the column header should be stored in one column and the values from each column should be stored in a single column."></a><figcaption><strong>Figure 1. Examples of how to restructure two common issues with tabular data</strong>. (a) Each cell should only contain a single value. If more than one value is present then the data should be split into multiple columns. (b) There should be only one column for each type of information. If there are multiple columns then the column header should be stored in one column and the values from each column should be stored in a single column.</figcaption>
+</figure>
+<p>While cross-tab data can be useful for its readability, and may be appropriate for data collection, this format makes it difficult to link the records with additional data (e.g., the location and environmental conditions at a site) and it cannot be properly used by most common database management and analysis tools (e.g., relational databases, dataframes in R and Python, etc.). If tabular data are currently in a cross-tab structure, there are tools to help restructure the data including functions in Excel, R (e.g., melt() function in the R package reshape; <span class="citation" data-cites="wickham2007">Wickham (2007)</span>), and Python (e.g., melt() function in the <a href="http://pandas.pydata.org/">Pandas</a> Python module.</p>
 <p>In addition to following these basic rules you should also make sure to use descriptive column names <span class="citation" data-cites="borer2009">(Borer et al., 2009)</span>. Descriptive column names make the data easier to understand and therefore make data interpretation errors less likely. As with file names, spaces can cause problems for some software and should be avoided.</p>
 <h3 id="use-standard-formats-within-cells">Use standard formats within cells</h3>
 <p>In addition to using standard table structures it is also important to ensure that the contents of each cell don’t cause problems for data management and analysis software. Specifically, we recommend:</p>
@@ -196,12 +199,14 @@
 <col style="width: 19%">
 <col style="width: 20%">
 </colgroup>
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th style="text-align: left;">Null values</th>
 <th style="text-align: left;">Problems</th>
 <th style="text-align: left;">Compatibility</th>
 <th style="text-align: left;">Recommendation</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;"><p>0</p></td>
@@ -293,14 +298,16 @@
 <col style="width: 12%">
 <col style="width: 18%">
 </colgroup>
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th style="text-align: left;">Repository</th>
 <th style="text-align: left;">License</th>
 <th style="text-align: left;">DOI</th>
 <th style="text-align: left;">Metadata</th>
 <th style="text-align: left;">Access</th>
 <th style="text-align: left;">Notes</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;"><p>Dryad</p></td>
@@ -476,7 +483,6 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="//js/js-yaml.min.js"></script>
 
     <!-- Fluidbox https://github.com/terrymun/Fluidbox -->
     <script src="/js/js-yaml.min.js"></script>
