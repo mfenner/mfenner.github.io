@@ -4,13 +4,54 @@
  <title>Gobbledygook</title>
  <link href="http://blog.martinfenner.org//atom.xml" rel="self"/>
  <link href="http://blog.martinfenner.org"/>
- <updated>2014-08-06T21:19:13+00:00</updated>
+ <updated>2014-08-09T11:49:11+00:00</updated>
  <id>http://blog.martinfenner.org</id>
  <author>
    <name>Martin Fenner</name>
    <email>mfenner@plos.org</email>
  </author>
 
+ 
+ <entry>
+   <title>Visualizing Scholarly Content</title>
+   <link href="http://blog.martinfenner.org/2014/08/09/visualizing-scholarly-content"/>
+   <updated>2014-08-09T00:00:00+00:00</updated>
+   <id>http://blog.martinfenner.org/2014/08/09/visualizing-scholarly-content</id>
+   <content type="html">&lt;p&gt;One topic I will cover this Sunday in a presentation on &lt;a href=&quot;http://wikimania2014.wikimedia.org/wiki/Submissions/Open_Scholarship_Tools_-_a_whirlwind_tour.&quot;&gt;Open Scholarship Tools&lt;/a&gt; at &lt;em&gt;Wikimania 2014&lt;/em&gt; together with &lt;a href=&quot;https://twitter.com/ianmulvany&quot;&gt;Ian Mulvany&lt;/a&gt; is visualization.&lt;!--more--&gt;&lt;/p&gt;
+&lt;p&gt;Data visualization is all about &lt;em&gt;telling stories with data&lt;/em&gt;, something that is of course not only important for scholarly content, but for example increasinly common in journalism. This is a big and complex topic, but I hope the following will get you started.&lt;/p&gt;
+&lt;h3 id=&quot;learn-the-basics&quot;&gt;Learn the Basics&lt;/h3&gt;
+&lt;p&gt;Work on visualization of scientific data should start with a good understanding of the best practices and pitfalls of data visualization in general, as well as the specific aspects of visualizing scientific data. The following resources have helped me get started - please suggest more in the comments:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://book.flowingdata.com/&quot;&gt;Visualize this&lt;/a&gt;. A book from Nathan Yau published in 2011. Very helpful in understanding the different ways data can be visualized (e.g. when to use a treemap or what is a &lt;a href=&quot;https://en.wikipedia.org/wiki/Choropleth_map&quot;&gt;chloropleth map&lt;/a&gt;), and an introduction to some tools using practical examples. Nathan’s &lt;a href=&quot;http://flowingdata.com/&quot;&gt;FlowingData&lt;/a&gt; blog is also a great resource.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/mbostock/d3/wiki/Gallery&quot;&gt;D3 Gallery&lt;/a&gt;. Lots of examples generated using Mike Bostock’s d3.js visualization library. A great inspiration for data visualization on the web, even if you use a different visualization tool.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://docs.ggplot2.org/current/index.html&quot;&gt;ggplot2&lt;/a&gt;. Not only a very popular visualization library for the R language by Hadley Wickham, but also an implementation of Leland Wilkison’s Grammar of Graphics. The &lt;a href=&quot;http://www.springer.com/statistics/computational+statistics/book/978-0-387-98140-6&quot;&gt;ggplot2 book&lt;/a&gt; describes this powerful concept (p. 14):&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In brief, the grammar tells us that a statistical graphic is a mapping from data to aesthetic attributes (colour, shape, size) of geometric objects (points, lines, bars). The plot may also contain statistical transformations of the data and is drawn on a specific coordinate system. Faceting can be used to generate the same plot for different subsets of the dataset. It is the combination of these independent components that make up a graphic.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;learn-to-use-at-least-one-visualization-tool&quot;&gt;Learn to use at least one visualization tool&lt;/h3&gt;
+&lt;p&gt;There are many great tools available, pick one and learn it well. Some options include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Excel&lt;/strong&gt;. Probably the most popular tool for data visualization. Commercial, with open source alternatives such as Libre Office.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;R&lt;/strong&gt;. Software for statistical computing and analysis. Open source. &lt;a href=&quot;http://www.rstudio.com/&quot;&gt;RStudio&lt;/a&gt; is a powerful user interface for R and a good way to get started.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://d3js.org/&quot;&gt;d3.js&lt;/a&gt;. A visualization library for Javascript. Open source.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.graphpad.com/scientific-software/prism/&quot;&gt;Prism&lt;/a&gt;. A popular visualization tool among scientists. Commercial.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://datawrapper.de/&quot;&gt;Datawrapper&lt;/a&gt;. An open source tool and hosted service for data visualization.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I do most visualizations in either R or d3.js. Both are open source tools with a large community and a rich set of libraries, examples and documentation, and both take a systematic approach to data visualization (see grammar of graphics above).&lt;/p&gt;
+&lt;h3 id=&quot;learn-data-analysis&quot;&gt;Learn data analysis&lt;/h3&gt;
+&lt;p&gt;Unless your interest is more in information design - see &lt;a href=&quot;http://www.informationisbeautiful.net/&quot;&gt;Information is beautiful&lt;/a&gt; for some great examples - data visualization is tightly coupled with data analysis. You need to know at least the basics of data analysis to do proper data visualizations, e.g. how to handle wrongly formatted data (e.g. text in a number column), missing values and outliers. The most time-consuming step in my experience is data transformation, i.e. bringing data into the format that you want for the analysis and visualization.&lt;/p&gt;
+&lt;p&gt;R, Python and the relatively new &lt;a href=&quot;http://julialang.org/&quot;&gt;Julia&lt;/a&gt; are popular languages for data analysis available as open source. There are many packages for these languages that help with common data analysis problems. One additional advantage of using a proper language over a set of tools cobbled together is that it is easy to automatically recreate a visualization with a new set of data - convenient when you need to analyze and visualize an ongoing experiment that repeatedly produces new data.&lt;/p&gt;
+&lt;h3 id=&quot;use-a-vector-file-format&quot;&gt;Use a vector file format&lt;/h3&gt;
+&lt;p&gt;Too many scientific data are still visualized using bitmap graphic formats such as &lt;code&gt;tiff&lt;/code&gt;, &lt;code&gt;jpg&lt;/code&gt; and &lt;code&gt;png&lt;/code&gt;. These formats are not appropriate for charts and only make sense for images. They don’t scale to the screen resolution, and it is &lt;a href=&quot;http://blog.f1000research.com/2014/02/20/the-importance-of-providing-data-and-not-just-images-of-data/&quot;&gt;very hard to impossible&lt;/a&gt; to reuse or even modify them. Use vector graphic formats such as &lt;code&gt;svg&lt;/code&gt; or &lt;code&gt;pdf&lt;/code&gt; instead. &lt;code&gt;svg&lt;/code&gt; is my preferred format because in contrast to &lt;code&gt;pdf&lt;/code&gt; it can be embedded into a larger HTML document, and R and d3.js (my preferred visualization tools) can generate this format. &lt;a href=&quot;http://www.inkscape.org/&quot;&gt;Inkscape&lt;/a&gt; is an open source SVG editor, and the commercial &lt;strong&gt;Adobe Illustrator&lt;/strong&gt; can be used to manually polish graphics in &lt;code&gt;svg&lt;/code&gt; or &lt;code&gt;pdf&lt;/code&gt; format, e.g. for journal publication.&lt;/p&gt;
+&lt;h3 id=&quot;get-inspired-by-great-visualizations&quot;&gt;Get inspired by great visualizations&lt;/h3&gt;
+&lt;p&gt;At the end of the day data visualization is all about telling a story with data. Unfortunately the current state of affairs for scientific visualizations is very different. In my opinion most graphs and figures used in publications don’t provide the data underlying the visualization (&lt;a href=&quot;https://datawrapper.de/&quot;&gt;Datawrapper&lt;/a&gt; is a great example how this can be done), focus too much on detail rather than the overall message, don’t take advantage of the different chart types available, and are sometimes even misleading. And I’m not even talking about the fact that figures in scholarly papers are &lt;a href=&quot;http://dx.doi.org/10.12688/f1000research.4263.1&quot;&gt;almost never&lt;/a&gt; interactive. It rarely happens that I read a paper and get excited by looking at a figure - if I do it is usually because the underlying data are so compelling that even the simplest visualization will convey the right message.&lt;/p&gt;
+&lt;p&gt;We should become more creative with visualizing data in scholalry documents, and one important step towards that goal is publishers accepting more reasonable file formats in manuscript submissions - instead of just &lt;code&gt;tiff&lt;/code&gt; and &lt;code&gt;eps&lt;/code&gt; (&lt;a href=&quot;http://www.plosone.org/static/figureGuidelines#figures&quot;&gt;PLOS&lt;/a&gt;), or &lt;code&gt;tiff&lt;/code&gt;, &lt;code&gt;eps&lt;/code&gt; and &lt;code&gt;pdf&lt;/code&gt; (&lt;a href=&quot;http://www.sciencemag.org/site/feature/contribinfo/prep/prep_revfigs.xhtml#format&quot;&gt;Science&lt;/a&gt;), and often with a 10 MB file site limit.&lt;/p&gt;
+&lt;div class=&quot;references&quot;&gt;
+
+&lt;/div&gt;
+</content>
+ </entry>
  
  <entry>
    <title>What is a DOI?</title>

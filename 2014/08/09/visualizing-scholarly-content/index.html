@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <title>Visualizing Scholarly Content</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="visualization, wikimania" />
+
+    <!-- RDFa Metadata (in DublinCore) -->
+    <meta property="dc:title" content="Visualizing Scholarly Content" />
+    <meta property="dc:format" content="text/html" />
+    <meta property="dc:language" content="en" />
+    <meta property="dc:identifier" content="/2014/08/09/visualizing-scholarly-content" />
+    <meta property="dc:rights" content="CC-BY-NC" />
+    <meta property="dc:source" content="Gobbledygook" />
+    <meta property="dc:subject" content="Scholarly Communication" />
+    <meta property="dc:type" content="website" />
+
+    <!-- Google Scholar Metadata -->
+    <meta name="citation_title" content="Visualizing Scholarly Content"/>
+    <meta name="citation_journal_title" content="Gobbledygook"/>
+
+    <link rel="alternate" type="application/rss+xml" title="Gobbledygook" href="/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Gobbledygook" href="/atom.xml" />
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/app-7b11536ae5581522c573f3f553590ae2.css">
+    <link rel="stylesheet" href="/assets/jasny-bootstrap.min-29c6b484ddca96fa14a48394c0cf415b.css">
+    <link rel="stylesheet" href="/assets/navmenu-push-f57c8aea8e44efd42b5d7fc575383151.css">
+    <link rel="stylesheet" href="/assets/fluidbox-cc1b5668a8c598b1c2fcc5e15e073f33.css">
+
+    <!-- d3.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.min.js"></script>
+
+    <!-- Typekit -->
+    <script type="text/javascript" src="//use.typekit.net/kil7puw.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  </head>
+
+
+  <body>
+    <nav id="navmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+  <a class="navmenu-brand" href="#">Gobbledygook</a>
+  <ul class="nav navmenu-nav">
+  
+    <li><span class="glyphicon glyphicon-time"></span> <a href="http://github.com/mfenner/blog/commits/source/_posts/2014-08-09-visualizing-scholarly-content.md">Version History</a></li>
+    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#mfenner/mfenner.github.io/edit/source/_posts/2014-08-09-visualizing-scholarly-content.md">Send Edit Request</a></li>
+    
+    <li><span class="glyphicon glyphicon-tags"></span> Tags
+      <ul class="tag-list">
+        
+        
+  
+  	<li><a href="/tags.html#visualization-ref">visualization</a></li>
+  
+  	<li><a href="/tags.html#wikimania-ref">wikimania</a></li>
+  
+
+
+
+      </ul>
+    </li>
+    
+    <li><span class="glyphicon glyphicon-home"></span> <a href="/">Home</a></li>
+    <li><span class="glyphicon glyphicon-info-sign"></span> <a href="/about.html">About</a></li>
+    <li><span class="glyphicon glyphicon-tags"></span> <a href="/tags.html">All Tags</a></li>
+  </ul>
+</nav>
+
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#navmenu" data-canvas="body">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="page-header">
+            <h1>Visualizing Scholarly Content</h1>
+            <p>09 August 2014 by
+            
+            <a href="/about.html">Martin Fenner</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>One topic I will cover this Sunday in a presentation on <a href="http://wikimania2014.wikimedia.org/wiki/Submissions/Open_Scholarship_Tools_-_a_whirlwind_tour.">Open Scholarship Tools</a> at <em>Wikimania 2014</em> together with <a href="https://twitter.com/ianmulvany">Ian Mulvany</a> is visualization.<!--more--></p>
+<p>Data visualization is all about <em>telling stories with data</em>, something that is of course not only important for scholarly content, but for example increasinly common in journalism. This is a big and complex topic, but I hope the following will get you started.</p>
+<h3 id="learn-the-basics">Learn the Basics</h3>
+<p>Work on visualization of scientific data should start with a good understanding of the best practices and pitfalls of data visualization in general, as well as the specific aspects of visualizing scientific data. The following resources have helped me get started - please suggest more in the comments:</p>
+<ul>
+<li><p><a href="http://book.flowingdata.com/">Visualize this</a>. A book from Nathan Yau published in 2011. Very helpful in understanding the different ways data can be visualized (e.g. when to use a treemap or what is a <a href="https://en.wikipedia.org/wiki/Choropleth_map">chloropleth map</a>), and an introduction to some tools using practical examples. Nathan’s <a href="http://flowingdata.com/">FlowingData</a> blog is also a great resource.</p></li>
+<li><p><a href="https://github.com/mbostock/d3/wiki/Gallery">D3 Gallery</a>. Lots of examples generated using Mike Bostock’s d3.js visualization library. A great inspiration for data visualization on the web, even if you use a different visualization tool.</p></li>
+<li><p><a href="http://docs.ggplot2.org/current/index.html">ggplot2</a>. Not only a very popular visualization library for the R language by Hadley Wickham, but also an implementation of Leland Wilkison’s Grammar of Graphics. The <a href="http://www.springer.com/statistics/computational+statistics/book/978-0-387-98140-6">ggplot2 book</a> describes this powerful concept (p. 14):</p></li>
+</ul>
+<blockquote>
+<p>In brief, the grammar tells us that a statistical graphic is a mapping from data to aesthetic attributes (colour, shape, size) of geometric objects (points, lines, bars). The plot may also contain statistical transformations of the data and is drawn on a specific coordinate system. Faceting can be used to generate the same plot for different subsets of the dataset. It is the combination of these independent components that make up a graphic.</p>
+</blockquote>
+<h3 id="learn-to-use-at-least-one-visualization-tool">Learn to use at least one visualization tool</h3>
+<p>There are many great tools available, pick one and learn it well. Some options include:</p>
+<ul>
+<li><p><strong>Excel</strong>. Probably the most popular tool for data visualization. Commercial, with open source alternatives such as Libre Office.</p></li>
+<li><p><strong>R</strong>. Software for statistical computing and analysis. Open source. <a href="http://www.rstudio.com/">RStudio</a> is a powerful user interface for R and a good way to get started.</p></li>
+<li><p><a href="http://d3js.org/">d3.js</a>. A visualization library for Javascript. Open source.</p></li>
+<li><p><a href="http://www.graphpad.com/scientific-software/prism/">Prism</a>. A popular visualization tool among scientists. Commercial.</p></li>
+<li><p><a href="https://datawrapper.de/">Datawrapper</a>. An open source tool and hosted service for data visualization.</p></li>
+</ul>
+<p>I do most visualizations in either R or d3.js. Both are open source tools with a large community and a rich set of libraries, examples and documentation, and both take a systematic approach to data visualization (see grammar of graphics above).</p>
+<h3 id="learn-data-analysis">Learn data analysis</h3>
+<p>Unless your interest is more in information design - see <a href="http://www.informationisbeautiful.net/">Information is beautiful</a> for some great examples - data visualization is tightly coupled with data analysis. You need to know at least the basics of data analysis to do proper data visualizations, e.g. how to handle wrongly formatted data (e.g. text in a number column), missing values and outliers. The most time-consuming step in my experience is data transformation, i.e. bringing data into the format that you want for the analysis and visualization.</p>
+<p>R, Python and the relatively new <a href="http://julialang.org/">Julia</a> are popular languages for data analysis available as open source. There are many packages for these languages that help with common data analysis problems. One additional advantage of using a proper language over a set of tools cobbled together is that it is easy to automatically recreate a visualization with a new set of data - convenient when you need to analyze and visualize an ongoing experiment that repeatedly produces new data.</p>
+<h3 id="use-a-vector-file-format">Use a vector file format</h3>
+<p>Too many scientific data are still visualized using bitmap graphic formats such as <code>tiff</code>, <code>jpg</code> and <code>png</code>. These formats are not appropriate for charts and only make sense for images. They don’t scale to the screen resolution, and it is <a href="http://blog.f1000research.com/2014/02/20/the-importance-of-providing-data-and-not-just-images-of-data/">very hard to impossible</a> to reuse or even modify them. Use vector graphic formats such as <code>svg</code> or <code>pdf</code> instead. <code>svg</code> is my preferred format because in contrast to <code>pdf</code> it can be embedded into a larger HTML document, and R and d3.js (my preferred visualization tools) can generate this format. <a href="http://www.inkscape.org/">Inkscape</a> is an open source SVG editor, and the commercial <strong>Adobe Illustrator</strong> can be used to manually polish graphics in <code>svg</code> or <code>pdf</code> format, e.g. for journal publication.</p>
+<h3 id="get-inspired-by-great-visualizations">Get inspired by great visualizations</h3>
+<p>At the end of the day data visualization is all about telling a story with data. Unfortunately the current state of affairs for scientific visualizations is very different. In my opinion most graphs and figures used in publications don’t provide the data underlying the visualization (<a href="https://datawrapper.de/">Datawrapper</a> is a great example how this can be done), focus too much on detail rather than the overall message, don’t take advantage of the different chart types available, and are sometimes even misleading. And I’m not even talking about the fact that figures in scholarly papers are <a href="http://dx.doi.org/10.12688/f1000research.4263.1">almost never</a> interactive. It rarely happens that I read a paper and get excited by looking at a figure - if I do it is usually because the underlying data are so compelling that even the simplest visualization will convey the right message.</p>
+<p>We should become more creative with visualizing data in scholalry documents, and one important step towards that goal is publishers accepting more reasonable file formats in manuscript submissions - instead of just <code>tiff</code> and <code>eps</code> (<a href="http://www.plosone.org/static/figureGuidelines#figures">PLOS</a>), or <code>tiff</code>, <code>eps</code> and <code>pdf</code> (<a href="http://www.sciencemag.org/site/feature/contribinfo/prep/prep_revfigs.xhtml#format">Science</a>), and often with a 10 MB file site limit.</p>
+<div class="references">
+
+</div>
+</body></html>
+
+
+            <div class="license">
+              
+            </div>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gobbledy'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+          </div>
+        </div>
+
+        <!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+<span
+  class="Z3988"
+  title="ctx_ver=Z39.88-2004
+  &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+  &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+  &amp;rft.title=Visualizing Scholarly Content
+  &amp;rft.creator=Martin Fenner
+  &amp;rft.date=2014-08-09
+  &amp;rft.language=EN
+  &amp;rft.rights=CC0
+  &amp;rft_id=http://blog.martinfenner.org/2014/08/09/visualizing-scholarly-content">
+</span>
+
+        <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36379104-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <!-- Fluidbox https://github.com/terrymun/Fluidbox -->
+    <script src="/js/js-yaml.min.js"></script>
+    <script src="/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/jquery.fluidbox.min.js"></script>
+    <script type='text/javascript'>
+      $(function () {
+        $("a").fluidbox();
+      });
+    </script>
+
+    <!-- Bootstrap -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/jasny-bootstrap.min.js"></script>
+
+    <!-- MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>
