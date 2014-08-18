@@ -147,7 +147,7 @@
 <p>My problem with these formats is that they are made for computers talking to each other and not humans. I personally think that a file with bibliographic data should be human-readable, similar to why <a href="/2012/12/13/a-call-for-scholarly-markdown/">I like markdown</a> for writing scientific documents.</p>
 <p>When you have too many standards and are not happy with any of them, you of course create a new standard.</p>
 <figure>
-<a href=""><img src="http://imgs.xkcd.com/comics/standards.png" alt="How Standards Proliferate. Taken from http://xkcd.com/927/"></a><figcaption><strong>How Standards Proliferate</strong>. Taken from <a href="http://xkcd.com/927/">http://xkcd.com/927/</a></figcaption>
+<a href=""><img src="http://imgs.xkcd.com/comics/standards.png" alt="How Standards Proliferate. Taken from http://xkcd.com/927/"></a><figcaption><strong>How Standards Proliferate</strong>. Taken from <a href="http://xkcd.com/927/" class="uri">http://xkcd.com/927/</a></figcaption>
 </figure>
 <p>My suggestion for a new bibliographic file format is twofold: a) use YAML for data serialization and b) use CSL as data format. <a href="http://www.yaml.org/spec/1.2/spec.html">YAML</a> is a data format popular with Ruby Developers and is described on the <a href="http://yaml.org">YAML website</a> as</p>
 <blockquote>
@@ -179,7 +179,7 @@
       <span class="kw">-</span> 2012
       <span class="kw">-</span> 3</code></pre>
 <p>I hope you agree that this format is not only structured and can be understood by computers, but is also very readable by humans. You may have noticed that I have inserted my ORCID, something that is very difficult to do with bibtex where all authors are stored in one text string (see above).</p>
-<p>Careful readers of this blog will of course remember that <a href="/2013/06/29/metadata-in-scholarly-markdown/">I have written about</a> using YAML to store metadata about a blog post. We could now add bibliographic information to these metadata, either in the YAML frontmatter (if it is a Jekyll blog), or in a separate file. It should be straightforward to adapt the existing CSL processors to understand YAML since YAML and JSON are so similar. To get started with some Citeproc YAML, use the new (and still experimental) <strong>ORCID Feed</strong> Webservice with your ORCID and specify the <code>yml</code> format, e.g. <a href="http://feed.labs.orcid-eu.org/0000-0003-1419-2405.yml">http://feed.labs.orcid-eu.org/0000-0003-1419-2405.yml</a> for my publications.</p>
+<p>Careful readers of this blog will of course remember that <a href="/2013/06/29/metadata-in-scholarly-markdown/">I have written about</a> using YAML to store metadata about a blog post. We could now add bibliographic information to these metadata, either in the YAML frontmatter (if it is a Jekyll blog), or in a separate file. It should be straightforward to adapt the existing CSL processors to understand YAML since YAML and JSON are so similar. To get started with some Citeproc YAML, use the new (and still experimental) <strong>ORCID Feed</strong> Webservice with your ORCID and specify the <code>yml</code> format, e.g. <a href="http://feed.labs.orcid-eu.org/0000-0003-1419-2405.yml" class="uri">http://feed.labs.orcid-eu.org/0000-0003-1419-2405.yml</a> for my publications.</p>
 <div class="references">
 
 </div>

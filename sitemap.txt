@@ -1,17 +1,19 @@
 
-http://blog.martinfenner.org/pages.html
-http://blog.martinfenner.org/bibliography/0000-0003-1419-2405.yml
-http://blog.martinfenner.org/bibliography/0000-0003-1419-2405.html
-http://blog.martinfenner.org/index.html
-http://blog.martinfenner.org/rss.xml
 http://blog.martinfenner.org/tags.html
 http://blog.martinfenner.org/sitemap.txt
+http://blog.martinfenner.org/rss.xml
+http://blog.martinfenner.org/pages.html
+http://blog.martinfenner.org/index.html
+http://blog.martinfenner.org/bibliography/0000-0003-1419-2405.yml
+http://blog.martinfenner.org/bibliography/0000-0003-1419-2405.html
 http://blog.martinfenner.org/atom.xml
 http://blog.martinfenner.org/about.html
 http://blog.martinfenner.org/page2/index.html
 http://blog.martinfenner.org/page3/index.html
 http://blog.martinfenner.org/page4/index.html
+http://blog.martinfenner.org/page5/index.html
 
+http://blog.martinfenner.org/2014/08/18/introducing-rakali
 http://blog.martinfenner.org/2014/08/09/visualizing-scholarly-content
 http://blog.martinfenner.org/2014/08/06/what-is-doi
 http://blog.martinfenner.org/2014/08/02/fragment-identifiers-and-dois
