@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <title>Using Microsoft Word with git</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="word, git, pandoc" />
+
+    <!-- RDFa Metadata (in DublinCore) -->
+    <meta property="dc:title" content="Using Microsoft Word with git" />
+    <meta property="dc:format" content="text/html" />
+    <meta property="dc:language" content="en" />
+    <meta property="dc:identifier" content="/2014/08/25/using-microsoft-word-with-git" />
+    <meta property="dc:rights" content="CC-BY-NC" />
+    <meta property="dc:source" content="Gobbledygook" />
+    <meta property="dc:subject" content="Scholarly Communication" />
+    <meta property="dc:type" content="website" />
+
+    <!-- Google Scholar Metadata -->
+    <meta name="citation_title" content="Using Microsoft Word with git"/>
+    <meta name="citation_journal_title" content="Gobbledygook"/>
+
+    <link rel="alternate" type="application/rss+xml" title="Gobbledygook" href="/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Gobbledygook" href="/atom.xml" />
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/app-7b11536ae5581522c573f3f553590ae2.css">
+    <link rel="stylesheet" href="/assets/jasny-bootstrap.min-29c6b484ddca96fa14a48394c0cf415b.css">
+    <link rel="stylesheet" href="/assets/navmenu-push-f57c8aea8e44efd42b5d7fc575383151.css">
+    <link rel="stylesheet" href="/assets/fluidbox-cc1b5668a8c598b1c2fcc5e15e073f33.css">
+
+    <!-- d3.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.min.js"></script>
+
+    <!-- Typekit -->
+    <script type="text/javascript" src="//use.typekit.net/kil7puw.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  </head>
+
+
+  <body>
+    <nav id="navmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+  <a class="navmenu-brand" href="#">Gobbledygook</a>
+  <ul class="nav navmenu-nav">
+  
+    <li><span class="glyphicon glyphicon-time"></span> <a href="http://github.com/mfenner/blog/commits/source/_posts/2014-08-25-using-microsoft-word-with-git.md">Version History</a></li>
+    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#mfenner/mfenner.github.io/edit/source/_posts/2014-08-25-using-microsoft-word-with-git.md">Send Edit Request</a></li>
+    
+    <li><span class="glyphicon glyphicon-tags"></span> Tags
+      <ul class="tag-list">
+        
+        
+  
+  	<li><a href="/tags.html#word-ref">word</a></li>
+  
+  	<li><a href="/tags.html#git-ref">git</a></li>
+  
+  	<li><a href="/tags.html#pandoc-ref">pandoc</a></li>
+  
+
+
+
+      </ul>
+    </li>
+    
+    <li><span class="glyphicon glyphicon-home"></span> <a href="/">Home</a></li>
+    <li><span class="glyphicon glyphicon-info-sign"></span> <a href="/about.html">About</a></li>
+    <li><span class="glyphicon glyphicon-tags"></span> <a href="/tags.html">All Tags</a></li>
+  </ul>
+</nav>
+
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#navmenu" data-canvas="body">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="page-header">
+            <h1>Using Microsoft Word with git</h1>
+            <p>25 August 2014 by
+            
+            <a href="/about.html">Martin Fenner</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>One of the major challenges of writing a journal article is to keep track of versions - both the different versions you create as the document progresses, and to merge in the changes made by your collaborators. For most academics Microsoft Word is the default writing tool, and it is both very good and very bad in this. Very good because the <em>track changes</em> feature makes it easy to see what has changed since the last version and who made the changes. Very bad because this feature is built around keeping everything in a single Word document, so that only one person can work on on a manuscript at a time. This usually means sending manuscripts around by email, and being very careful about not confusing different versions of the document, which requires <a href="http://www.phdcomics.com/comics/archive.php?comicid=1531">creativity</a>.<!--more--></p>
+<p>Approaches to overcome these challenges are to a) integrate the Word documents into collaboration tools such as Sharepoint and Office 365, or document sharing services such as Dropbox and Google Docs (if you use it just for that), or b) use a different authoring tool altogether. If neither of these approaches works for you, you have a third option: use the version control system <strong>git</strong>.</p>
+<p><a href="http://www.mulvany.net/presentations/WikimaniaOpenScholarshipTalk.slides.html#/3">Git</a> is software that helps with <a href="(http://git-scm.com/book/en/Getting-Started-About-Version-Control)">tracking changes to files</a> so that you can recall specific versions later. Git is typically used to track changes of software source code (and was originally developed by Linus Torvalds for Linux kernel development in 2005), but in fact git can be used for any file where we need to keep track of versions over time. Git is open source software that runs locally on your computer, so please go ahead and start tracking changes to your manuscripts (or other complex documents) with git. Any time you want to store a version, do a <code>git commit</code> with a little description and an optional tag.</p>
+<p>This approach is not ideal, as git was written with source code in text format in mind and for example doesn’t understand what has changed between two revisions of a Word document. Some people will tell you to never store binary files in a version control system, but don’t listen to them. Instead give git a tool to convert Word documents into plain text, and git will then happily tell you what has changed between revisions. Several tools can do this, but since earlier this month Pandoc can read Word documents in <code>docx</code> format. Do the following to have Pandoc convert Word documents into markdown, and to compare the revisions by word and not by line (which makes more sense):</p>
+<pre><code># .gitattributes file in root folder of your git project
+*.docx diff=pandoc</code></pre>
+<pre><code># .gitconfig file in your home folder
+[diff "pandoc"]
+  textconv=pandoc --to=markdown
+  prompt = false
+[alias]
+  wdiff = diff --word-diff=color --unified=1</code></pre>
+<p>You can then use <code>git wdiff important_file.docx</code> to see the changes (with deletions in red and insertions in green), or <code>git log -p --word-diff=color important_file.docx</code> to see all changes over time.</p>
+<p>While you can now track revisions of a Word document and see the changes, you also want to be able to merge different versions of a Word document together so that you and your collaborators can work on the manuscript in parallel. Git can’t merge binary files together, so you need to first convert the Word document into a format that git understands. Just as in the previous example we can use Pandoc for that, with markdown as the textual format. This would also work with HTML or LaTeX, but the simplicity of markdown makes it better suited for version control which doesn’t know about the markup of these formats.</p>
+<p>One of the reasons that git became so popular with software developers is that it is a <strong>distributed version control system</strong> instead of a centralized system such as Subversion. This means that you can track all revisions locally on your computer, but can still synchronize your revisions with another user. <strong>Github</strong> is a popular service that facilitates this synchronization and adds some nice features on top. One way to collaborate with your co-authors is therefore to set up a Github repository (public or private) for your manuscript, and store the master version of the manuscript in markdown format. Instead of working on the master version directly, you would use Pandoc to convert back and forth between this master version in markdown format and your Word document, and would continue to use Word as authoring tool. <a href="/2014/08/18/introducing-rakali/">Rakali</a> is a Pandoc tool that I released last week that can help automate this document conversion. Github has a a number of features to facilitate collaboration that can be used here, e.g. Github issues for discussion and task management.</p>
+<p>There are still a few rough edges in the workflow described above (e.g. only partial support of Word track changes), but it is an interesting approach to collaborate using Microsoft Word and git. And this workflow can of course be enhanced to also include authors that write in LaTeX or one of the other formats that Pandoc supports. One nice side effect of using markdown is that Github will automatically render a webpage for the document (which it will not do for HTML without extra effort).</p>
+<div class="references">
+
+</div>
+</body></html>
+
+
+            <div class="license">
+              
+            </div>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gobbledy'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+          </div>
+        </div>
+
+        <!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+<span
+  class="Z3988"
+  title="ctx_ver=Z39.88-2004
+  &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+  &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+  &amp;rft.title=Using Microsoft Word with git
+  &amp;rft.creator=Martin Fenner
+  &amp;rft.date=2014-08-25
+  &amp;rft.language=EN
+  &amp;rft.rights=CC0
+  &amp;rft_id=http://blog.martinfenner.org/2014/08/25/using-microsoft-word-with-git">
+</span>
+
+        <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36379104-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <!-- Fluidbox https://github.com/terrymun/Fluidbox -->
+    <script src="/js/js-yaml.min.js"></script>
+    <script src="/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/jquery.fluidbox.min.js"></script>
+    <script type='text/javascript'>
+      $(function () {
+        $("a").fluidbox();
+      });
+    </script>
+
+    <!-- Bootstrap -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/jasny-bootstrap.min.js"></script>
+
+    <!-- MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>
