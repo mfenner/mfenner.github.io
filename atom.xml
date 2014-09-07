@@ -4,13 +4,43 @@
  <title>Gobbledygook</title>
  <link href="http://blog.martinfenner.org//atom.xml" rel="self"/>
  <link href="http://blog.martinfenner.org"/>
- <updated>2014-08-25T08:18:29+00:00</updated>
+ <updated>2014-09-07T08:04:09+00:00</updated>
  <id>http://blog.martinfenner.org</id>
  <author>
    <name>Martin Fenner</name>
    <email>mfenner@plos.org</email>
  </author>
 
+ 
+ <entry>
+   <title>CommonMark and the Future of Scholarly Markdown</title>
+   <link href="http://blog.martinfenner.org/2014/09/07/commonmark-and-the-future-of-scholarly-markdown"/>
+   <updated>2014-09-07T00:00:00+00:00</updated>
+   <id>http://blog.martinfenner.org/2014/09/07/commonmark-and-the-future-of-scholarly-markdown</id>
+   <content type="html">&lt;p&gt;One of the important outcomes of the &lt;a href=&quot;https://github.com/scholmd/scholmd/wiki&quot;&gt;Markdown for Science&lt;/a&gt; workshop that took place in June 2013 was a decision on a name - &lt;em&gt;Scholarly Markdown&lt;/em&gt; - and a brief &lt;a href=&quot;https://github.com/scholmd/scholmd/wiki/What-is-Markdown&quot;&gt;definition&lt;/a&gt;:&lt;!--more--&gt;&lt;/p&gt;
+&lt;ol type=&quot;1&quot;&gt;
+&lt;li&gt;Markdown that supports the requirements of scientific texts&lt;/li&gt;
+&lt;li&gt;Markdown as format that glues open scientific text resources together&lt;/li&gt;
+&lt;li&gt;A reference implementation with documentation and tests&lt;/li&gt;
+&lt;li&gt;A community&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In my eyes this is still a great definition. And this week something important happened that is very relevant for Scholarly Markdown. A small group of people deeply involved in Markdown announced &lt;a href=&quot;http://commonmark.org/&quot;&gt;Standard Markdown&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We propose a standard, unambiguous syntax specification for Markdown, along with a suite of comprehensive tests to validate Markdown implementations against this specification. We believe this is necessary, even essential, for the future of Markdown.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Markdown is in widespread use, but a lack of standard syntax and set of comprehensive tests has hindered the adoption for more complex use cases, the development of cross-platform tools, and the use of markdown as a document interchange format. I am therefore 100% behind this initiative. In particular since this is not just an initiative by large commercial organizations heavily using Markdown such as Stackexchange, Github or Reddit, but that the entire spec and both reference implementations have been written by &lt;a href=&quot;http://johnmacfarlane.net/&quot;&gt;John MacFarlane&lt;/a&gt;, the author of Pandoc, the universal document converter. Not only does Pandoc already support many of the features required by Scholarly Markdown (e.g. math and citations), but John is the Chair of the Department of Philosophy at UC Berkeley.&lt;/p&gt;
+&lt;p&gt;Markdown was developed in 2004 by John Gruber, and he &lt;a href=&quot;http://daringfireball.net/projects/markdown/license&quot;&gt;holds the rights&lt;/a&gt; to the name Markdown. He didn’t want this initiative to use the name &lt;strong&gt;Standard Markdown&lt;/strong&gt;, so the implementation was &lt;a href=&quot;http://blog.codinghorror.com/standard-markdown-is-now-common-markdown/&quot;&gt;renamed&lt;/a&gt; to &lt;a href=&quot;http://commonmark.org/&quot;&gt;CommonMark&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The consequences of all this for Scholarly Markdown?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;CommonMark focusses on the basic features of the language, but once the specification is agreed upon and implemented by a critical mass of tools, it is clear that there needs to be a standardized way to handle extensions of the language. This is both about features used by lots of people such as tables, but also functionality relevant only for scholarly content.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;This brings us one gigantic step closer to a reference implementation and set of tests for Scholarly Markdown, as hopefully Scholarly Markdown can build upon the work by John and the CommonMark team.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The name Scholarly Markdown might not be a good idea going forward. We should either change the name to align with CommonMark, or we should come up with a totally different name, something that the screenwriters have done with &lt;a href=&quot;http://fountain.io/&quot;&gt;their&lt;/a&gt; implementation of Markdown.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;references&quot;&gt;
+
+&lt;/div&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Using Microsoft Word with git</title>
@@ -1783,16 +1813,16 @@ PDB:  1mbn&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Piwowar, H. A., &amp;amp; Chapman, W. W. (2008). A review of journal policies for sharing research data. In &lt;em&gt;ELPUB2008&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Piwowar, H. A., &amp;amp; Vision, T. J. (2013). Data reuse and the open data citation advantage. &lt;em&gt;PeerJ PrePrints&lt;/em&gt;, &lt;em&gt;1&lt;/em&gt;, e1. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.7287/peerj.preprints.1&quot; class=&quot;uri&quot;&gt;http://dx.doi.org/10.7287/peerj.preprints.1&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Piwowar, H. A., Day, R. S., &amp;amp; Fridsma, D. B. (2007). Sharing detailed research data is associated with increased citation rate. &lt;em&gt;PLoS ONE&lt;/em&gt;, &lt;em&gt;2&lt;/em&gt;(3), e308. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1371/journal.pone.0000308&quot; class=&quot;uri&quot;&gt;http://dx.doi.org/10.1371/journal.pone.0000308&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Poisot, T., Mounce, R., &amp;amp; Gravel, D. (2013). Moving toward a sustainable ecological science: don’t let data go to waste! Retrieved from &lt;a href=&quot;https://github.com/tpoisot/DataSharingPaper/blob/master/DataSharing-MS.md&quot; class=&quot;uri&quot;&gt;https://github.com/tpoisot/DataSharingPaper/blob/master/DataSharing-MS.md&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Poisot, T., Mounce, R., &amp;amp; Gravel, D. (2013). Moving toward a sustainable ecological science: Don’t let data go to waste! Retrieved from &lt;a href=&quot;https://github.com/tpoisot/DataSharingPaper/blob/master/DataSharing-MS.md&quot; class=&quot;uri&quot;&gt;https://github.com/tpoisot/DataSharingPaper/blob/master/DataSharing-MS.md&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Reichman, O. J., Jones, M. B., &amp;amp; Schildhauer, M. P. (2011). Challenges and opportunities of open data in ecology. &lt;em&gt;Science&lt;/em&gt;, &lt;em&gt;331&lt;/em&gt;(6018), 703–705. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1126/science.1197962&quot; class=&quot;uri&quot;&gt;http://dx.doi.org/10.1126/science.1197962&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Schofield, P. N., Bubela, T., Weaver, T., Portilla, L., Brown, S. D., Hancock, J. M., … Rosenthal, N. (2009). Post-publication sharing of data and tools. &lt;em&gt;Nature&lt;/em&gt;, &lt;em&gt;461&lt;/em&gt;(7261), 171–173. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1038/461171a&quot; class=&quot;uri&quot;&gt;http://dx.doi.org/10.1038/461171a&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Strasser, C. A., Cook, R. B., Michener, W. K., Budden, A., &amp;amp; Koskela, R. (2011). Promoting data stewardship through best practices. In &lt;em&gt;Proceedings of the environmental information management conference 2011 (eIM 2011)&lt;/em&gt;. Oak Ridge National Laboratory (ORNL).&lt;/p&gt;
 &lt;p&gt;Strasser, C. A., Cook, R., Michener, W. K., &amp;amp; Budden, A. (2012). Primer on data management: What you always wanted to know. DataONE. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.5060/D2251G48&quot; class=&quot;uri&quot;&gt;http://dx.doi.org/10.5060/D2251G48&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Whitlock, M. C. (2011). Data archiving in ecology and evolution: best practices. &lt;em&gt;Trends in Ecology &amp;amp; Evolution&lt;/em&gt;, &lt;em&gt;26&lt;/em&gt;(2), 61–65. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1016/j.tree.2010.11.006&quot; class=&quot;uri&quot;&gt;http://dx.doi.org/10.1016/j.tree.2010.11.006&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Whitlock, M. C. (2011). Data archiving in ecology and evolution: Best practices. &lt;em&gt;Trends in Ecology &amp;amp; Evolution&lt;/em&gt;, &lt;em&gt;26&lt;/em&gt;(2), 61–65. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1016/j.tree.2010.11.006&quot; class=&quot;uri&quot;&gt;http://dx.doi.org/10.1016/j.tree.2010.11.006&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Whitlock, M. C., McPeek, M. A., Rausher, M. D., Rieseberg, L., &amp;amp; Moore, A. J. (2010). Data archiving. &lt;em&gt;The American Naturalist&lt;/em&gt;, &lt;em&gt;175&lt;/em&gt;(2), 145–146. doi:&lt;a href=&quot;http://dx.doi.org/10.1086/650340&quot;&gt;10.1086/650340&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Wickham, H. (2007). Reshaping data with the reshape package. &lt;em&gt;Journal of Statistical Software&lt;/em&gt;, &lt;em&gt;21&lt;/em&gt;(12). Retrieved from &lt;a href=&quot;http://www.jstatsoft.org/v21/i12/paper&quot; class=&quot;uri&quot;&gt;http://www.jstatsoft.org/v21/i12/paper&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Wieczorek, J., Bloom, D., Guralnick, R., Blum, S., D&lt;span&gt;ö&lt;/span&gt;ring, M., Giovanni, R., … Vieglais, D. (2012). Darwin core: An evolving community-developed biodiversity data standard. &lt;em&gt;PLoS ONE&lt;/em&gt;, &lt;em&gt;7&lt;/em&gt;(1), e29715. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pone.0029715&quot;&gt;10.1371/journal.pone.0029715&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Zimmerman, A. (2007). Not by metadata alone: the use of diverse forms of knowledge to locate data for reuse. &lt;em&gt;International Journal on Digital Libraries&lt;/em&gt;, &lt;em&gt;7&lt;/em&gt;(1-2), 5–16. doi:&lt;a href=&quot;http://dx.doi.org/10.1007/s00799-007-0015-8&quot;&gt;10.1007/s00799-007-0015-8&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Zimmerman, A. (2007). Not by metadata alone: The use of diverse forms of knowledge to locate data for reuse. &lt;em&gt;International Journal on Digital Libraries&lt;/em&gt;, &lt;em&gt;7&lt;/em&gt;(1-2), 5–16. doi:&lt;a href=&quot;http://dx.doi.org/10.1007/s00799-007-0015-8&quot;&gt;10.1007/s00799-007-0015-8&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Zimmerman, A. S. (2003). &lt;em&gt;Data sharing and secondary use of scientific data: Experiences of ecologists&lt;/em&gt; (PhD thesis). The University of Michigan.&lt;/p&gt;
 &lt;/div&gt;
 </content>

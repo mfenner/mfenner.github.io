@@ -2,22 +2,22 @@
 <html lang="en">
 
     <head>
-    <title>Gobbledygook</title>
+    <title>CommonMark and the Future of Scholarly Markdown</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="" />
+    <meta name="keywords" content="markdown, commonmark" />
 
     <!-- RDFa Metadata (in DublinCore) -->
-    <meta property="dc:title" content="Gobbledygook" />
+    <meta property="dc:title" content="CommonMark and the Future of Scholarly Markdown" />
     <meta property="dc:format" content="text/html" />
     <meta property="dc:language" content="en" />
-    <meta property="dc:identifier" content="/page5/index.html" />
+    <meta property="dc:identifier" content="/2014/09/07/commonmark-and-the-future-of-scholarly-markdown" />
     <meta property="dc:rights" content="CC-BY-NC" />
     <meta property="dc:source" content="Gobbledygook" />
     <meta property="dc:subject" content="Scholarly Communication" />
     <meta property="dc:type" content="website" />
 
     <!-- Google Scholar Metadata -->
-    <meta name="citation_title" content="Gobbledygook"/>
+    <meta name="citation_title" content="CommonMark and the Future of Scholarly Markdown"/>
     <meta name="citation_journal_title" content="Gobbledygook"/>
 
     <link rel="alternate" type="application/rss+xml" title="Gobbledygook" href="/rss.xml" />
@@ -51,8 +51,23 @@
   <a class="navmenu-brand" href="#">Gobbledygook</a>
   <ul class="nav navmenu-nav">
   
-    <li><span class="glyphicon glyphicon-time"></span> <a href="http://github.com/mfenner/blog/commits/source/page5/index.html">Version History</a></li>
-    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#mfenner/mfenner.github.io/edit/source/page5/index.html">Send Edit Request</a></li>
+    <li><span class="glyphicon glyphicon-time"></span> <a href="http://github.com/mfenner/blog/commits/source/_posts/2014-09-07-commonmark-and-the-future-of-scholarly-markdown.md">Version History</a></li>
+    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#mfenner/mfenner.github.io/edit/source/_posts/2014-09-07-commonmark-and-the-future-of-scholarly-markdown.md">Send Edit Request</a></li>
+    
+    <li><span class="glyphicon glyphicon-tags"></span> Tags
+      <ul class="tag-list">
+        
+        
+  
+  	<li><a href="/tags.html#markdown-ref">markdown</a></li>
+  
+  	<li><a href="/tags.html#commonmark-ref">commonmark</a></li>
+  
+
+
+
+      </ul>
+    </li>
     
     <li><span class="glyphicon glyphicon-home"></span> <a href="/">Home</a></li>
     <li><span class="glyphicon glyphicon-info-sign"></span> <a href="/about.html">About</a></li>
@@ -73,8 +88,11 @@
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <div class="page-header">
-            <h1>Gobbledygook</h1>
-            <p>A blog about how the internet is changing scholarly communication.</p>
+            <h1>CommonMark and the Future of Scholarly Markdown</h1>
+            <p>07 September 2014 by
+            
+            <a href="/about.html">Martin Fenner</a>
+            </p>
           </div>
         </div>
       </div>
@@ -84,48 +102,32 @@
           <div class="col-md-8 col-md-offset-2">
             <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body>
-<div class="index">
-
-  <h3>
-<a href="/2013/05/08/announcing-markdown-for-science-workshop-on-june-8th">Announcing Markdown for Science Workshop on June 8th</a> <small>08 May 2013</small>
-</h3>
-  <p>On Saturday June 8th – exactly a month from today – the PLOS San Francisco offices will host a workshop/hackathon about using markdown for science. A lot of people are experimenting with markdown for authoring scientific articles – see blog posts here, here or my post here, and the scientific manuscript here.
-
-
-
-</p>
-
-  <h3>
-<a href="/2012/12/18/additional-markdown-we-need-in-scholarly-texts">Additional Markdown we need in Scholarly Texts</a> <small>18 Dec 2012</small>
-</h3>
-  <p>Following up from my post last week, below is a suggested list of features that should be supported in documents written in scholarly markdown. Please provide feedback via the comments, or by editing the Wiki version I have set up here. Listed are features that go beyond the standard markdown syntax.
-
-
-
-</p>
-
-  <h3>
-<a href="/2012/12/13/a-call-for-scholarly-markdown">A Call for Scholarly Markdown</a> <small>13 Dec 2012</small>
-</h3>
-  <p>Markdown is a lightweight markup language, originally created by John Gruber for writing content for the web. Other popular lightweight markup languages are Textile and Mediawiki. Whereas Mediawiki markup is of course popular thanks to the ubiquitous Wikipedia, Markdown seems to have gained momentum among scholars. Markdown really focuses on writing content, many of the features of today’s word processors are just a distraction (e.g. fonts, line spacing or style sheets).
-
-
-
-</p>
+<p>One of the important outcomes of the <a href="https://github.com/scholmd/scholmd/wiki">Markdown for Science</a> workshop that took place in June 2013 was a decision on a name - <em>Scholarly Markdown</em> - and a brief <a href="https://github.com/scholmd/scholmd/wiki/What-is-Markdown">definition</a>:<!--more--></p>
+<ol type="1">
+<li>Markdown that supports the requirements of scientific texts</li>
+<li>Markdown as format that glues open scientific text resources together</li>
+<li>A reference implementation with documentation and tests</li>
+<li>A community</li>
+</ol>
+<p>In my eyes this is still a great definition. And this week something important happened that is very relevant for Scholarly Markdown. A small group of people deeply involved in Markdown announced <a href="http://commonmark.org/">Standard Markdown</a>:</p>
+<blockquote>
+<p>We propose a standard, unambiguous syntax specification for Markdown, along with a suite of comprehensive tests to validate Markdown implementations against this specification. We believe this is necessary, even essential, for the future of Markdown.</p>
+</blockquote>
+<p>Markdown is in widespread use, but a lack of standard syntax and set of comprehensive tests has hindered the adoption for more complex use cases, the development of cross-platform tools, and the use of markdown as a document interchange format. I am therefore 100% behind this initiative. In particular since this is not just an initiative by large commercial organizations heavily using Markdown such as Stackexchange, Github or Reddit, but that the entire spec and both reference implementations have been written by <a href="http://johnmacfarlane.net/">John MacFarlane</a>, the author of Pandoc, the universal document converter. Not only does Pandoc already support many of the features required by Scholarly Markdown (e.g. math and citations), but John is the Chair of the Department of Philosophy at UC Berkeley.</p>
+<p>Markdown was developed in 2004 by John Gruber, and he <a href="http://daringfireball.net/projects/markdown/license">holds the rights</a> to the name Markdown. He didn’t want this initiative to use the name <strong>Standard Markdown</strong>, so the implementation was <a href="http://blog.codinghorror.com/standard-markdown-is-now-common-markdown/">renamed</a> to <a href="http://commonmark.org/">CommonMark</a>.</p>
+<p>The consequences of all this for Scholarly Markdown?</p>
+<ul>
+<li><p>CommonMark focusses on the basic features of the language, but once the specification is agreed upon and implemented by a critical mass of tools, it is clear that there needs to be a standardized way to handle extensions of the language. This is both about features used by lots of people such as tables, but also functionality relevant only for scholarly content.</p></li>
+<li><p>This brings us one gigantic step closer to a reference implementation and set of tests for Scholarly Markdown, as hopefully Scholarly Markdown can build upon the work by John and the CommonMark team.</p></li>
+<li><p>The name Scholarly Markdown might not be a good idea going forward. We should either change the name to align with CommonMark, or we should come up with a totally different name, something that the screenwriters have done with <a href="http://fountain.io/">their</a> implementation of Markdown.</p></li>
+</ul>
+<div class="references">
 
 </div>
 </body></html>
 
 
             <div class="license">
-              
-                <hr>
-                <div class="toc-item">
-                
-                  <span><a href="/page4"><span class="glyphicon glyphicon-arrow-left"></span>  Previous</a></span>
-                
-                
-                </div>
               
             </div>
 
@@ -153,12 +155,12 @@
   title="ctx_ver=Z39.88-2004
   &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
   &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
-  &amp;rft.title=Gobbledygook
+  &amp;rft.title=CommonMark and the Future of Scholarly Markdown
   &amp;rft.creator=Martin Fenner
-  &amp;rft.date=
+  &amp;rft.date=2014-09-07
   &amp;rft.language=EN
   &amp;rft.rights=CC0
-  &amp;rft_id=http://blog.martinfenner.org/page5/index.html">
+  &amp;rft_id=http://blog.martinfenner.org/2014/09/07/commonmark-and-the-future-of-scholarly-markdown">
 </span>
 
         <script type="text/javascript">
