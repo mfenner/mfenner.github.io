@@ -4,7 +4,7 @@
  <title>Gobbledygook</title>
  <link href="http://blog.martinfenner.org//atom.xml" rel="self"/>
  <link href="http://blog.martinfenner.org"/>
- <updated>2014-10-01T09:45:08+00:00</updated>
+ <updated>2014-10-01T09:57:11+00:00</updated>
  <id>http://blog.martinfenner.org</id>
  <author>
    <name>Martin Fenner</name>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Please keep it simple: citations, links and references</title>
-   <link href="http://blog.martinfenner.org/2014/09/29/please-keep-it-simple-citations-links-and-references"/>
-   <updated>2014-09-29T00:00:00+00:00</updated>
-   <id>http://blog.martinfenner.org/2014/09/29/please-keep-it-simple-citations-links-and-references</id>
+   <link href="http://blog.martinfenner.org/2014/10/01/please-keep-it-simple-citations-links-and-references"/>
+   <updated>2014-10-01T00:00:00+00:00</updated>
+   <id>http://blog.martinfenner.org/2014/10/01/please-keep-it-simple-citations-links-and-references</id>
    <content type="html">&lt;p&gt;In my &lt;a href=&quot;/2014/09/16/please-keep-it-simple/&quot;&gt;last post&lt;/a&gt; I wrote about the importance of keeping things simple in scholarly publishing, today I want to go into more detail with one example: citations in scholarly documents.&lt;!--more--&gt;&lt;/p&gt;
 &lt;figure&gt;
 &lt;img src=&quot;/images/lego_discussion.jpg&quot; alt=&quot;LEGO scientists discuss how they can cite their data&quot; /&gt;&lt;figcaption&gt;LEGO scientists discuss how they can cite their data&lt;/figcaption&gt;
