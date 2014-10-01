@@ -4,13 +4,70 @@
  <title>Gobbledygook</title>
  <link href="http://blog.martinfenner.org//atom.xml" rel="self"/>
  <link href="http://blog.martinfenner.org"/>
- <updated>2014-09-16T23:04:56+00:00</updated>
+ <updated>2014-10-01T09:25:35+00:00</updated>
  <id>http://blog.martinfenner.org</id>
  <author>
    <name>Martin Fenner</name>
    <email>mfenner@plos.org</email>
  </author>
 
+ 
+ <entry>
+   <title>Please keep it simple: citations, links and references</title>
+   <link href="http://blog.martinfenner.org/2014/09/29/please-keep-it-simple-citations-links-and-references"/>
+   <updated>2014-09-29T00:00:00+00:00</updated>
+   <id>http://blog.martinfenner.org/2014/09/29/please-keep-it-simple-citations-links-and-references</id>
+   <content type="html">&lt;p&gt;In my &lt;a href=&quot;/2014/09/16/please-keep-it-simple/&quot;&gt;last post&lt;/a&gt; I wrote about the importance of keeping things simple in scholarly publishing, today I want to go into more detail with one example: citations in scholarly documents.&lt;!--more--&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/images/lego_discussion.jpg&quot; alt=&quot;LEGO scientists discuss how they can cite their data&quot; /&gt;&lt;figcaption&gt;LEGO scientists discuss how they can cite their data&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Citations are an essential part of scholarly documents, and they are summarized in the references section at the end of the article or book chapter. The problem is that not everything that is cited in a scholarly document ends up in the references list. Examples of this include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;web links, e.g. to reagents or other resources&lt;/li&gt;
+&lt;li&gt;identifiers for biological databases such as GenBank that are typically included in the text as identifiers or as links&lt;/li&gt;
+&lt;li&gt;footnotes with links to external resources&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In other words: we are not consistent in how we cite other content. And this is a problem because we are making it more difficult than necessary for authors, publishers and everyone else to handle these various citation flavors and , more importantly, we are loosing citations along the way. This is a particular problem for data citation, as the seminal 2013 paper by Kafkas et al. &lt;span class=&quot;citation&quot; data-cites=&quot;Kafkas:2013fp&quot;&gt;(Kafkas, Kim, &amp;amp; McEntyre, 2013)&lt;/span&gt; has shown for citations to the three biological databases ENA (European Nucleotide Archive), PDB and Uniprot:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;there is a large numbers of accession numbers in the Open Access subset of PubMed Central (e.g. 160,112 ENA accession numbers for papers published up until June 2012)&lt;/li&gt;
+&lt;li&gt;text mining using the &lt;a href=&quot;http://www.ebi.ac.uk/webservices/whatizit/&quot;&gt;Whatizit&lt;/a&gt; tool can retrieve most of these identifiers&lt;/li&gt;
+&lt;li&gt;there is only partial overlap between database identifiers annonated by publishers and database identifiers found by text mining&lt;/li&gt;
+&lt;li&gt;the overlap is even smaller between papers citing database identifiers, and papers cited in biological databases such as ENA&lt;/li&gt;
+&lt;li&gt;the study was limited to Open Access journals, as only for them the fulltext articles could be text mined&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/images/ena_overlap.png&quot; alt=&quot;From Fig. 6: Comparison between article-to-database and database-to-citations (Kafkas et al., 2013).&quot; /&gt;&lt;figcaption&gt;From Fig. 6: Comparison between article-to-database and database-to-citations &lt;span class=&quot;citation&quot; data-cites=&quot;Kafkas:2013fp&quot;&gt;(Kafkas et al., 2013)&lt;/span&gt;.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;In other words, even though including identifiers for biological databases has been an accepted community standard that every author and publisher is following for a long time, the proper citation of these identifiers is still often broken. The picture doesn’t seem to be any better for DOIs for datasets: while they are fairly common by now, their use in scholarly articles differs widely from appearance in the references list to links in the materials and methods section to no mention at all.&lt;/p&gt;
+&lt;p&gt;There are various ways how this can be fixed (e.g. requiring authors to use biological database identifiers in a consistent way, better text mining tools, opening up subscription content to text mining), but the best solution is the simplest one: every citation in a paper should go into the references list. As an example I have added the ENA mRNA U65091 &lt;span class=&quot;citation&quot; data-cites=&quot;U65091&quot;&gt;(Shioda, Fenner, &amp;amp; Isselbacher, 1997)&lt;/span&gt; - something I worked on a long time ago - to the references list of this post.&lt;/p&gt;
+&lt;h2 id=&quot;technology&quot;&gt;Technology&lt;/h2&gt;
+&lt;p&gt;For this to work, it is essential that reference managers - the software authors use to generate the references list - properly support citations to data, including biological databases. It appears that all major reference managers support datasets as reference type and there is good community agreement what a data citation should look like (&lt;a href=&quot;https://www.force11.org/datacitation&quot;&gt;Joint Declaration of Data Citation Principles&lt;/a&gt;). What is missing is support for easily importing the required metadata for these datasets, and reference managers use two approaches for this:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;query external databases via API and pull in the required metadata (e.g. Papers, Endnote)&lt;/li&gt;
+&lt;li&gt;browse to the webpage describing the database entry and import the metadata via bookmarklet/web importer (e.g. Zotero, Mendeley)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Both approaches require custom code for every database. Whereas many reference managers use Citation Style Language (&lt;a href=&quot;http://citationstyles.org/&quot;&gt;CSL&lt;/a&gt;) as a standard way to format references, no such standard exists for web importers. Which means that every reference manager has to implement this separately, and most of them are not open source software so that the community could help.&lt;/p&gt;
+&lt;p&gt;PLOS Labs is holding a &lt;a href=&quot;http://www.ploslabs.org/citation-hackathon/&quot;&gt;Citation Hackathon&lt;/a&gt; on October 18 in their San Francisco office. While I can’t attend in person, I want to contribute to this hackathon in three ways:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;do an evaluation of how the reference managers Papers, Mendeley and Zotero (the three reference managers I use) support citations to the biological databases ENA, PDB and Uniprot and what is missing&lt;/li&gt;
+&lt;li&gt;look at exisiting aggregators of this information (e.g. &lt;a href=&quot;http://identifiers.org/&quot;&gt;Identifiers.org&lt;/a&gt;) to figure out whether the import process can be simplified&lt;/li&gt;
+&lt;li&gt;start work on Zotero &lt;a href=&quot;https://www.zotero.org/support/dev/translators/coding#web_translators&quot;&gt;web translators&lt;/a&gt; for these three databases. Zotero is open source software and the web translators are written in Javascript&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please contact me if you are interested in helping with this, e.g. with a joint virtual hackathon on the 18th (or in person in London or Cambridge on October 15 if that works better).&lt;/p&gt;
+&lt;p&gt;Together with &lt;a href=&quot;https://twitter.com/IanMulvany&quot;&gt;Ian Mulvany&lt;/a&gt; from eLife and others from Papers and Mendeley we have also submitted a proposal for a pre-conference workshop/hackathon for the &lt;a href=&quot;https://www.force11.org/meetings/force2015&quot;&gt;Force2015 Conference&lt;/a&gt; in January to work on this for a broader set of databases, which should for example also include software repositories. One question is how we properly handle the citation of large numbers of datasets (1000s to millions), we could for example allow a range of identifiers in a citation. We also need tools to convert identifiers and links in existing documents to proper references, something that we &lt;a href=&quot;/2013/06/24/citations-in-markdown-part-3/&quot;&gt;have also discussed on this blog&lt;/a&gt;, and we need to discuss how our bibliographic file formats (e.g. bibtex) support these citation types. I &lt;a href=&quot;/2013/07/30/citeproc-yaml-for-bibliographies/&quot;&gt;said before&lt;/a&gt; that I am a big fan of Citeproc YAML (or JSON, the bibliographic format used by CSL) as bibliographic exchange format, and I know that the PLOS Labs hackathon will also touch on this.&lt;/p&gt;
+&lt;h2 id=&quot;community&quot;&gt;Community&lt;/h2&gt;
+&lt;p&gt;While adding reference manager support for a wider range of citations is the first step, the bigger challenge is community support. I don’t think that it is a big mental jump for an author to use the reference manager to cite a biological database rather than typing in the identifier directly in the text (the hard work is registering the identifier in the first place), but this needs support by the community, and in particular journal editors. I think the paper by Kafkas et al. &lt;span class=&quot;citation&quot; data-cites=&quot;Kafkas:2013fp&quot;&gt;(2013)&lt;/span&gt; clearly shows that our current recommendations for adding identifiers to biological databases is broken, and that we need to do something if we take data citation seriously.&lt;/p&gt;
+&lt;p&gt;There are several concerns about adding every citation to the references list. One of them is that we shouldn’t mix citations of scholarly articles with citations of other things, e.g. research data. I would argue that not only are we seeing an increasing number of citations to other resources in reference lists &lt;span class=&quot;citation&quot; data-cites=&quot;Yang2012779&quot;&gt;(Yang, Han, Ding, &amp;amp; Song, 2012)&lt;/span&gt;, but that we can of course group citations by citation type, in addition to the sorting by appearance in the text or last name of first author that is common now.&lt;/p&gt;
+&lt;p&gt;Another concern is that citations of datasets are something else that citations to scholarly articles, because the former are typically citations of content created by the same group of people at the time the journal article was also created. I would argue that again we can highlight this by how we display the references, and that I hope that this changes once data citation becomes more widespread.&lt;/p&gt;
+&lt;p&gt;What should or should not be cited in a scholarly document is of course a big discussion topic. What I am arguing is that everything that is cited should go into the references list, but that doesn’t change at all what should be cited. Personal communications are an example of something that should probably not be cited and therefore should also not go into the references list.&lt;/p&gt;
+&lt;div class=&quot;references&quot;&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;p&gt;Kafkas, Ş., Kim, J.-H., &amp;amp; McEntyre, J. R. (2013). Database Citation in Full Text Biomedical Articles. &lt;em&gt;PLoS ONE&lt;/em&gt;. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pone.0063184&quot;&gt;10.1371/journal.pone.0063184&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Shioda, T., Fenner, M. H., &amp;amp; Isselbacher, K. J. (1997). Mus musculus melanocyte-specific gene 1 (msg1) mRNA, complete cds. ENA. Retrieved from &lt;a href=&quot;http://www.ebi.ac.uk/ena/data/view/U65091&quot; class=&quot;uri&quot;&gt;http://www.ebi.ac.uk/ena/data/view/U65091&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Yang, S., Han, R., Ding, J., &amp;amp; Song, Y. (2012). The distribution of Web citations. &lt;em&gt;Information Processing &amp;amp; Management&lt;/em&gt;, &lt;em&gt;48&lt;/em&gt;(4), 779–790. doi:&lt;a href=&quot;http://dx.doi.org/10.1016/j.ipm.2011.10.002&quot;&gt;10.1016/j.ipm.2011.10.002&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Please keep it simple</title>
@@ -1463,7 +1520,7 @@ PDB:  1mbn&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The plugin was written in a few hours today, and is my first Jekyll plugin. There is room for improvement, e.g. support for more identifiers, better regex matching, validation of the resulting links, and automated tag generation if an identifier is found. Ideally the auto-linking should happen in the markdown and not the HTML output, so that these structured database links are also available in other markdown outputs such as PDF. But this is another example how Scholarly Markdown can make it easier for researchers to author documents without requiring a fancy web-based user interface.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
-&lt;p&gt;Kafkas, Ş., Kim, J.-H., &amp;amp; McEntyre, J. R. (2013). Database Citation in Full Text Biomedical Articles. &lt;em&gt;PLoS ONE&lt;/em&gt;. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1371/journal.pone.0063184&quot; class=&quot;uri&quot;&gt;http://dx.doi.org/10.1371/journal.pone.0063184&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Kafkas, Ş., Kim, J.-H., &amp;amp; McEntyre, J. R. (2013). Database Citation in Full Text Biomedical Articles. &lt;em&gt;PLoS ONE&lt;/em&gt;. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pone.0063184&quot;&gt;10.1371/journal.pone.0063184&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </content>
  </entry>

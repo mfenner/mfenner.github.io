@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <title>Please keep it simple: citations, links and references</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="citation" />
+
+    <!-- RDFa Metadata (in DublinCore) -->
+    <meta property="dc:title" content="Please keep it simple: citations, links and references" />
+    <meta property="dc:format" content="text/html" />
+    <meta property="dc:language" content="en" />
+    <meta property="dc:identifier" content="/2014/09/29/please-keep-it-simple-citations-links-and-references" />
+    <meta property="dc:rights" content="CC-BY-NC" />
+    <meta property="dc:source" content="Gobbledygook" />
+    <meta property="dc:subject" content="Scholarly Communication" />
+    <meta property="dc:type" content="website" />
+
+    <!-- Google Scholar Metadata -->
+    <meta name="citation_title" content="Please keep it simple: citations, links and references"/>
+    <meta name="citation_journal_title" content="Gobbledygook"/>
+
+    <link rel="alternate" type="application/rss+xml" title="Gobbledygook" href="/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Gobbledygook" href="/atom.xml" />
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/app-7b11536ae5581522c573f3f553590ae2.css">
+    <link rel="stylesheet" href="/assets/jasny-bootstrap.min-29c6b484ddca96fa14a48394c0cf415b.css">
+    <link rel="stylesheet" href="/assets/navmenu-push-f57c8aea8e44efd42b5d7fc575383151.css">
+    <link rel="stylesheet" href="/assets/fluidbox-cc1b5668a8c598b1c2fcc5e15e073f33.css">
+
+    <!-- d3.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.min.js"></script>
+
+    <!-- Typekit -->
+    <script type="text/javascript" src="//use.typekit.net/kil7puw.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  </head>
+
+
+  <body>
+    <nav id="navmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+  <a class="navmenu-brand" href="#">Gobbledygook</a>
+  <ul class="nav navmenu-nav">
+  
+    <li><span class="glyphicon glyphicon-time"></span> <a href="http://github.com/mfenner/blog/commits/source/_posts/2014-09-29-please-keep-it-simple-citations-links-and-references.md">Version History</a></li>
+    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#mfenner/mfenner.github.io/edit/source/_posts/2014-09-29-please-keep-it-simple-citations-links-and-references.md">Send Edit Request</a></li>
+    
+    <li><span class="glyphicon glyphicon-tags"></span> Tags
+      <ul class="tag-list">
+        
+        
+  
+  	<li><a href="/tags.html#citation-ref">citation</a></li>
+  
+
+
+
+      </ul>
+    </li>
+    
+    <li><span class="glyphicon glyphicon-home"></span> <a href="/">Home</a></li>
+    <li><span class="glyphicon glyphicon-info-sign"></span> <a href="/about.html">About</a></li>
+    <li><span class="glyphicon glyphicon-tags"></span> <a href="/tags.html">All Tags</a></li>
+  </ul>
+</nav>
+
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#navmenu" data-canvas="body">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="page-header">
+            <h1>Please keep it simple: citations, links and references</h1>
+            <p>29 September 2014 by
+            
+            <a href="/about.html">Martin Fenner</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>In my <a href="/2014/09/16/please-keep-it-simple/">last post</a> I wrote about the importance of keeping things simple in scholarly publishing, today I want to go into more detail with one example: citations in scholarly documents.<!--more--></p>
+<figure>
+<a href=""><img src="/images/lego_discussion.jpg" alt="LEGO scientists discuss how they can cite their data"></a><figcaption>LEGO scientists discuss how they can cite their data</figcaption>
+</figure>
+<p>Citations are an essential part of scholarly documents, and they are summarized in the references section at the end of the article or book chapter. The problem is that not everything that is cited in a scholarly document ends up in the references list. Examples of this include:</p>
+<ul>
+<li>web links, e.g. to reagents or other resources</li>
+<li>identifiers for biological databases such as GenBank that are typically included in the text as identifiers or as links</li>
+<li>footnotes with links to external resources</li>
+</ul>
+<p>In other words: we are not consistent in how we cite other content. And this is a problem because we are making it more difficult than necessary for authors, publishers and everyone else to handle these various citation flavors and , more importantly, we are loosing citations along the way. This is a particular problem for data citation, as the seminal 2013 paper by Kafkas et al. <span class="citation" data-cites="Kafkas:2013fp">(Kafkas, Kim, &amp; McEntyre, 2013)</span> has shown for citations to the three biological databases ENA (European Nucleotide Archive), PDB and Uniprot:</p>
+<ul>
+<li>there is a large numbers of accession numbers in the Open Access subset of PubMed Central (e.g. 160,112 ENA accession numbers for papers published up until June 2012)</li>
+<li>text mining using the <a href="http://www.ebi.ac.uk/webservices/whatizit/">Whatizit</a> tool can retrieve most of these identifiers</li>
+<li>there is only partial overlap between database identifiers annonated by publishers and database identifiers found by text mining</li>
+<li>the overlap is even smaller between papers citing database identifiers, and papers cited in biological databases such as ENA</li>
+<li>the study was limited to Open Access journals, as only for them the fulltext articles could be text mined</li>
+</ul>
+<figure>
+<a href=""><img src="/images/ena_overlap.png" alt="From Fig. 6: Comparison between article-to-database and database-to-citations (Kafkas et al., 2013)."></a><figcaption>From Fig. 6: Comparison between article-to-database and database-to-citations <span class="citation" data-cites="Kafkas:2013fp">(Kafkas et al., 2013)</span>.</figcaption>
+</figure>
+<p>In other words, even though including identifiers for biological databases has been an accepted community standard that every author and publisher is following for a long time, the proper citation of these identifiers is still often broken. The picture doesn’t seem to be any better for DOIs for datasets: while they are fairly common by now, their use in scholarly articles differs widely from appearance in the references list to links in the materials and methods section to no mention at all.</p>
+<p>There are various ways how this can be fixed (e.g. requiring authors to use biological database identifiers in a consistent way, better text mining tools, opening up subscription content to text mining), but the best solution is the simplest one: every citation in a paper should go into the references list. As an example I have added the ENA mRNA U65091 <span class="citation" data-cites="U65091">(Shioda, Fenner, &amp; Isselbacher, 1997)</span> - something I worked on a long time ago - to the references list of this post.</p>
+<h2 id="technology">Technology</h2>
+<p>For this to work, it is essential that reference managers - the software authors use to generate the references list - properly support citations to data, including biological databases. It appears that all major reference managers support datasets as reference type and there is good community agreement what a data citation should look like (<a href="https://www.force11.org/datacitation">Joint Declaration of Data Citation Principles</a>). What is missing is support for easily importing the required metadata for these datasets, and reference managers use two approaches for this:</p>
+<ul>
+<li>query external databases via API and pull in the required metadata (e.g. Papers, Endnote)</li>
+<li>browse to the webpage describing the database entry and import the metadata via bookmarklet/web importer (e.g. Zotero, Mendeley)</li>
+</ul>
+<p>Both approaches require custom code for every database. Whereas many reference managers use Citation Style Language (<a href="http://citationstyles.org/">CSL</a>) as a standard way to format references, no such standard exists for web importers. Which means that every reference manager has to implement this separately, and most of them are not open source software so that the community could help.</p>
+<p>PLOS Labs is holding a <a href="http://www.ploslabs.org/citation-hackathon/">Citation Hackathon</a> on October 18 in their San Francisco office. While I can’t attend in person, I want to contribute to this hackathon in three ways:</p>
+<ul>
+<li>do an evaluation of how the reference managers Papers, Mendeley and Zotero (the three reference managers I use) support citations to the biological databases ENA, PDB and Uniprot and what is missing</li>
+<li>look at exisiting aggregators of this information (e.g. <a href="http://identifiers.org/">Identifiers.org</a>) to figure out whether the import process can be simplified</li>
+<li>start work on Zotero <a href="https://www.zotero.org/support/dev/translators/coding#web_translators">web translators</a> for these three databases. Zotero is open source software and the web translators are written in Javascript</li>
+</ul>
+<p>Please contact me if you are interested in helping with this, e.g. with a joint virtual hackathon on the 18th (or in person in London or Cambridge on October 15 if that works better).</p>
+<p>Together with <a href="https://twitter.com/IanMulvany">Ian Mulvany</a> from eLife and others from Papers and Mendeley we have also submitted a proposal for a pre-conference workshop/hackathon for the <a href="https://www.force11.org/meetings/force2015">Force2015 Conference</a> in January to work on this for a broader set of databases, which should for example also include software repositories. One question is how we properly handle the citation of large numbers of datasets (1000s to millions), we could for example allow a range of identifiers in a citation. We also need tools to convert identifiers and links in existing documents to proper references, something that we <a href="/2013/06/24/citations-in-markdown-part-3/">have also discussed on this blog</a>, and we need to discuss how our bibliographic file formats (e.g. bibtex) support these citation types. I <a href="/2013/07/30/citeproc-yaml-for-bibliographies/">said before</a> that I am a big fan of Citeproc YAML (or JSON, the bibliographic format used by CSL) as bibliographic exchange format, and I know that the PLOS Labs hackathon will also touch on this.</p>
+<h2 id="community">Community</h2>
+<p>While adding reference manager support for a wider range of citations is the first step, the bigger challenge is community support. I don’t think that it is a big mental jump for an author to use the reference manager to cite a biological database rather than typing in the identifier directly in the text (the hard work is registering the identifier in the first place), but this needs support by the community, and in particular journal editors. I think the paper by Kafkas et al. <span class="citation" data-cites="Kafkas:2013fp">(2013)</span> clearly shows that our current recommendations for adding identifiers to biological databases is broken, and that we need to do something if we take data citation seriously.</p>
+<p>There are several concerns about adding every citation to the references list. One of them is that we shouldn’t mix citations of scholarly articles with citations of other things, e.g. research data. I would argue that not only are we seeing an increasing number of citations to other resources in reference lists <span class="citation" data-cites="Yang2012779">(Yang, Han, Ding, &amp; Song, 2012)</span>, but that we can of course group citations by citation type, in addition to the sorting by appearance in the text or last name of first author that is common now.</p>
+<p>Another concern is that citations of datasets are something else that citations to scholarly articles, because the former are typically citations of content created by the same group of people at the time the journal article was also created. I would argue that again we can highlight this by how we display the references, and that I hope that this changes once data citation becomes more widespread.</p>
+<p>What should or should not be cited in a scholarly document is of course a big discussion topic. What I am arguing is that everything that is cited should go into the references list, but that doesn’t change at all what should be cited. Personal communications are an example of something that should probably not be cited and therefore should also not go into the references list.</p>
+<div class="references">
+<h2>References</h2>
+<p>Kafkas, Ş., Kim, J.-H., &amp; McEntyre, J. R. (2013). Database Citation in Full Text Biomedical Articles. <em>PLoS ONE</em>. doi:<a href="http://dx.doi.org/10.1371/journal.pone.0063184">10.1371/journal.pone.0063184</a></p>
+<p>Shioda, T., Fenner, M. H., &amp; Isselbacher, K. J. (1997). Mus musculus melanocyte-specific gene 1 (msg1) mRNA, complete cds. ENA. Retrieved from <a href="http://www.ebi.ac.uk/ena/data/view/U65091" class="uri">http://www.ebi.ac.uk/ena/data/view/U65091</a></p>
+<p>Yang, S., Han, R., Ding, J., &amp; Song, Y. (2012). The distribution of Web citations. <em>Information Processing &amp; Management</em>, <em>48</em>(4), 779–790. doi:<a href="http://dx.doi.org/10.1016/j.ipm.2011.10.002">10.1016/j.ipm.2011.10.002</a></p>
+</div>
+</body></html>
+
+
+            <div class="license">
+              
+            </div>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gobbledy'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+          </div>
+        </div>
+
+        <!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+<span
+  class="Z3988"
+  title="ctx_ver=Z39.88-2004
+  &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+  &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+  &amp;rft.title=Please keep it simple: citations, links and references
+  &amp;rft.creator=Martin Fenner
+  &amp;rft.date=2014-09-29
+  &amp;rft.language=EN
+  &amp;rft.rights=CC0
+  &amp;rft_id=http://blog.martinfenner.org/2014/09/29/please-keep-it-simple-citations-links-and-references">
+</span>
+
+        <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36379104-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <!-- Fluidbox https://github.com/terrymun/Fluidbox -->
+    <script src="/js/js-yaml.min.js"></script>
+    <script src="/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/jquery.fluidbox.min.js"></script>
+    <script type='text/javascript'>
+      $(function () {
+        $("a").fluidbox();
+      });
+    </script>
+
+    <!-- Bootstrap -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/jasny-bootstrap.min.js"></script>
+
+    <!-- MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>

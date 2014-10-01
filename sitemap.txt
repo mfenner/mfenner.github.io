@@ -13,6 +13,7 @@ http://blog.martinfenner.org/page3/index.html
 http://blog.martinfenner.org/page4/index.html
 http://blog.martinfenner.org/page5/index.html
 
+http://blog.martinfenner.org/2014/09/29/please-keep-it-simple-citations-links-and-references
 http://blog.martinfenner.org/2014/09/16/please-keep-it-simple
 http://blog.martinfenner.org/2014/09/07/commonmark-and-the-future-of-scholarly-markdown
 http://blog.martinfenner.org/2014/08/25/using-microsoft-word-with-git
