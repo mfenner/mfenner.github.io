@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Let's do an unconference
+tags: [barcamp, solo]
 ---
 
 This year's [SpotOn London conference](http://blogs.nature.com/ofschemesandmemes/2014/10/09/how-to-get-a-ticket-for-this-years-spoton-london) takes place November 14-15 and the registration has opened this Monday. I am helping organize this conference since 2009, and I again look forward to the sessions, and - more importantly - the discussions with people in and between sessions this year.<!--more-->
