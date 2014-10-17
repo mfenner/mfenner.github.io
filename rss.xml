@@ -5,10 +5,27 @@
         <description>Gobbledygook - Martin Fenner</description>
         <link>http://blog.martinfenner.org/rss.xml</link>
         <link>http://blog.martinfenner.org</link>
-        <lastBuildDate>2014-10-16T21:50:35+00:00</lastBuildDate>
-        <pubDate>2014-10-16T21:50:35+00:00</pubDate>
+        <lastBuildDate>2014-10-17T15:04:44+00:00</lastBuildDate>
+        <pubDate>2014-10-17T15:04:44+00:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>Webinar on Writing Zotero Translators</title>
+                <description>&lt;p&gt;In a &lt;a href=&quot;/2014/10/01/please-keep-it-simple-citations-links-and-references/&quot;&gt;blog post two weeks ago&lt;/a&gt; I argued for the need for reference managers to properly support data citation, if we want data citation to become a standard activity. I am happy to announce two events working towards that goal.&lt;!--more--&gt;&lt;/p&gt;
+&lt;h2 id=&quot;november-3rd-webinar-on-writing-zotero-web-translators&quot;&gt;November 3rd: Webinar on writing Zotero web translators&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.zotero.org/blog/community-spotlight-sebastian-karcher/&quot;&gt;Sebastian Karcher&lt;/a&gt;, one of the most prolific authors of Zotero web translators (and citation styles), has kindly offered to hold an introductory webinar on writing Zotero web translators. These web translators allow Zotero to import metadata about a scholarly work from a variety of places, and new web translators for repositories that hold research data (or software) would go a long way towards making data citation easier for authors. &lt;a href=&quot;https://www.zotero.org/support/dev/translators&quot;&gt;Web translators&lt;/a&gt; are written in Javascript and only basic Javascript knowledge is required. The free webinar takes place on November 3rd on 5 PM UK time (12 PM EST) and the registration form is &lt;a href=&quot;http://www.eventbrite.com/e/writing-zotero-translators-webinar-tickets-13768797845&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;january-11-force11-pre-conference-workshop-on-data-citation-support-in-reference-managers&quot;&gt;January 11: Force11 Pre-Conference workshop on Data Citation Support in Reference Managers&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.force11.org/meetings/force2015/pre-conference-meeting-list&quot;&gt;This workshop&lt;/a&gt;, coorganized with Ian Mulvany, will extend the Zotero web translator work to other reference managers, including Papers and Mendeley. This will be a hackathon with the goal to get some things working in these reference managers, but it should also be interesting for others, as we will discuss what is missing to make data citation work in reference managers.&lt;/p&gt;
+&lt;p&gt;My personal goal is to learn to write a Zotero web translator in the webinar, and then write a working web translator for the three biological databases ENA, PDB and Uniprot before the January workshop. And hopefully these activities generate enough interest that other people write web translators for their favorite research data database or software repository, and that the proprietary reference managers Papers and Mendeley (and hopefully others) also add support for these data sources.&lt;/p&gt;
+&lt;div class=&quot;references&quot;&gt;
+
+&lt;/div&gt;
+</description>
+                <link>http://blog.martinfenner.org/2014/10/17/webinar-on-writing-zotero-translators</link>
+                <guid>http://blog.martinfenner.org/2014/10/17/webinar-on-writing-zotero-translators</guid>
+                <pubDate>2014-10-17T00:00:00+00:00</pubDate>
+        </item>
 
         <item>
                 <title>Let's do an unconference</title>
