@@ -11,6 +11,10 @@ BIOC=${BIOC:-"http://bioconductor.org/biocLite.R"}
 BIOC_USE_DEVEL=${BIOC_USE_DEVEL:-"TRUE"}
 OS=$(uname -s)
 
+PANDOC_VERSION='1.12.4.2'
+PANDOC_DIR="${HOME}/opt"
+PANDOC_URL="https://s3.amazonaws.com/rstudio-buildtools/pandoc-${PANDOC_VERSION}.zip"
+
 # MacTeX installs in a new $PATH entry, and there's no way to force
 # the *parent* shell to source it from here. So we just manually add
 # all the entries to a location we already know to be on $PATH.
@@ -40,6 +44,15 @@ Bootstrap() {
     if ! (test -e .Rbuildignore && grep -q 'travis-tool' .Rbuildignore); then
         echo '^travis-tool\.sh$' >>.Rbuildignore
     fi
+}
+
+InstallPandoc() {
+    local os_path="$1"
+    mkdir -p "${PANDOC_DIR}"
+    curl -o /tmp/pandoc-${PANDOC_VERSION}.zip ${PANDOC_URL}
+    unzip -j /tmp/pandoc-${PANDOC_VERSION}.zip "pandoc-${PANDOC_VERSION}/${os_path}/pandoc" -d "${PANDOC_DIR}"
+    chmod +x "${PANDOC_DIR}/pandoc"
+    sudo ln -s "${PANDOC_DIR}/pandoc" /usr/local/bin
 }
 
 BootstrapLinux() {
@@ -80,6 +93,9 @@ BootstrapLinuxOptions() {
             texlive-extra-utils texlive-latex-recommended texlive-latex-extra \
             texinfo lmodern
     fi
+    if [[ -n "$BOOTSTRAP_PANDOC" ]]; then
+        InstallPandoc 'linux/debian/x86_64'
+    fi
 }
 
 BootstrapMac() {
@@ -108,6 +124,9 @@ BootstrapMacOptions() {
         #   https://stat.ethz.ch/pipermail/r-sig-mac/2010-May/007399.html
         sudo tlmgr update --self
         sudo tlmgr install inconsolata upquote courier courier-scaled helvetic
+    fi
+    if [[ -n "$BOOTSTRAP_PANDOC" ]]; then
+        InstallPandoc 'mac'
     fi
 }
 
@@ -246,23 +265,22 @@ RunTests() {
     # We want to grab the version we just built.
     FILE=$(ls -1t *.tar.gz | head -n 1)
 
-    echo "Testing with: R CMD check \"${FILE}\" ${R_CHECK_ARGS}"
+    # Create binary package (currently Windows only)
+    if [[ "${OS:0:5}" == "MINGW" ]]; then
+        R_CHECK_INSTALL_ARGS="--install-args=--build"
+    fi
+
+    echo "Testing with: R CMD check \"${FILE}\" ${R_CHECK_ARGS} ${R_CHECK_INSTALL_ARGS}"
     _R_CHECK_CRAN_INCOMING_=${_R_CHECK_CRAN_INCOMING_:-FALSE}
     if [[ "$_R_CHECK_CRAN_INCOMING_" == "FALSE" ]]; then
         echo "(CRAN incoming checks are off)"
     fi
-    _R_CHECK_CRAN_INCOMING_=${_R_CHECK_CRAN_INCOMING_} R CMD check "${FILE}" ${R_CHECK_ARGS}
+    _R_CHECK_CRAN_INCOMING_=${_R_CHECK_CRAN_INCOMING_} R CMD check "${FILE}" ${R_CHECK_ARGS} ${R_CHECK_INSTALL_ARGS}
 
     # Check reverse dependencies
     if [[ -n "$R_CHECK_REVDEP" ]]; then
         echo "Checking reverse dependencies"
         Rscript -e 'library(devtools); checkOutput <- unlist(revdep_check(as.package(".")$package));if (!is.null(checkOutput)) {print(data.frame(pkg = names(checkOutput), error = checkOutput));for(i in seq_along(checkOutput)){;cat("\n", names(checkOutput)[i], " Check Output:\n  ", paste(readLines(regmatches(checkOutput[i], regexec("/.*\\.out", checkOutput[i]))[[1]]), collapse = "\n  ", sep = ""), "\n", sep = "")};q(status = 1, save = "no")}'
-    fi
-
-    # Create binary package (currently Windows only)
-    if [[ "${OS:0:5}" == "MINGW" ]]; then
-        echo "Creating binary package"
-        R CMD INSTALL --build "${FILE}"
     fi
 
     if [[ -n "${WARNINGS_ARE_ERRORS}" ]]; then

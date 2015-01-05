@@ -5,10 +5,52 @@
         <description>Gobbledygook - Martin Fenner</description>
         <link>http://blog.martinfenner.org/rss.xml</link>
         <link>http://blog.martinfenner.org</link>
-        <lastBuildDate>2014-10-17T15:04:44+00:00</lastBuildDate>
-        <pubDate>2014-10-17T15:04:44+00:00</pubDate>
+        <lastBuildDate>2015-01-05T20:28:29+00:00</lastBuildDate>
+        <pubDate>2015-01-05T20:28:29+00:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>Data Citation Support in Reference Managers</title>
+                <description>&lt;p&gt;This is the title of an upcoming workshop next Sunday organized by Ian Mulvany and myself. The workshop is a &lt;a href=&quot;https://www.force11.org/meetings/force2015/pre-conference-meeting-list&quot;&gt;pre-conference event&lt;/a&gt; of the &lt;a href=&quot;https://www.force11.org/meetings/force2015&quot;&gt;Force15&lt;/a&gt; conference in Oxford. This blog post summarizes some of the issues and work that needs to be done.&lt;!--more--&gt;&lt;/p&gt;
+&lt;p&gt;Data Citation is one of the big themes of the Force15 conference, and a lot of progress has been made, including the &lt;a href=&quot;https://www.force11.org/datacitation&quot;&gt;Joint Declaration of Data Citation Principles&lt;/a&gt; that start with the following paragraph on &lt;strong&gt;Importance&lt;/strong&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Data should be considered legitimate, citable products of research. Data citations should be accorded the same importance in the scholarly record as citations of other research objects, such as publications.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Convincing researchers, funders, university administrators and others that data citation is important is crucial. But for researchers to actually adopt data citation to the same degree as citations of the scholarly literature, more needs to be done:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;incentives (both carrots and sticks) by funders, institutions, and scholarly societies&lt;/li&gt;
+&lt;li&gt;training in data management&lt;/li&gt;
+&lt;li&gt;data repositories and other tools and services for the public sharing of data&lt;/li&gt;
+&lt;li&gt;tools and services that help citing those datasets&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The focus of the workshop is on the last bullet point, and I would argue that more work still needs to be done here compared to the first three bullet points.&lt;/p&gt;
+&lt;h2 id=&quot;reference-managers&quot;&gt;Reference Managers&lt;/h2&gt;
+&lt;p&gt;Researchers use reference managers to handle the citations in the manuscripts they write. This is both a common practice that everybody understands, and there are a plethora of tools - both free and paid - available. Most reference managers were originally built to handle citations of journal articles and maybe books or book chapters, and many of them also help with managing the associated PDF files. In the last 15 years we have seen an dramatic increase of non-article citations in reference lists, mainly to web resources &lt;span class=&quot;citation&quot; data-cites=&quot;klein_2014bj&quot;&gt;(Klein et al., 2014)&lt;/span&gt;:&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/images/journal.pone.0115253.g002.png&quot; alt=&quot;From Fig. 2: STM articles and URI references per publication year - Elsevier corpus (Klein et al., 2014).&quot; /&gt;&lt;figcaption&gt;From Fig. 2: STM articles and URI references per publication year - Elsevier corpus &lt;span class=&quot;citation&quot; data-cites=&quot;klein_2014bj&quot;&gt;(Klein et al., 2014)&lt;/span&gt;.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;References managers have started to adapt to these changes in citation patterns. Similarly they have become better in handling non-textual resources such as slide decks, datasets, or movies. Nobody should type in references by hand in 2015, as reference managers have come up with several ways of importing metadata about citations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;import references stored in a file using a format such as BibTex or RIS&lt;/li&gt;
+&lt;li&gt;import references by talking to an external API&lt;/li&gt;
+&lt;li&gt;import references via a bookmarklet that grabs information from the current webpage in the browser&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Endnote and Papers typically use the second approach whereas Mendeley, Zotero (and others) work almost exclusively via bookmarklets (and there are of course combinations of both). Bookmarklets in general work better for web resources and other content that is not indexed in a central service such as Web of Science or Scopus. This is also true for research data, as there are currently few central research data indexing services - the Thomson Reuters &lt;a href=&quot;http://wokinfo.com/products_tools/multidisciplinary/dci/&quot;&gt;Data Citation Index&lt;/a&gt; and &lt;a href=&quot;https://www.datacite.org/&quot;&gt;DataCite&lt;/a&gt; are two examples in this category.. But there are also thousands of data repositories, many of them listed in re3data &lt;span class=&quot;citation&quot; data-cites=&quot;pampel_2013bi&quot;&gt;(Pampel et al., 2013)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;The reference manager &lt;a href=&quot;https://www.zotero.org/&quot;&gt;Zotero&lt;/a&gt; has built a large open source ecosystem around bookmarklets (what they call &lt;a href=&quot;https://github.com/zotero/translators&quot;&gt;web translators&lt;/a&gt;), making it straightforward to add support for a new resource, as I have done for &lt;a href=&quot;https://github.com/zotero/translators/blob/master/NCBI%20Nucleotide.js&quot;&gt;GenBank nucleotide sequence datasets&lt;/a&gt; in November after learning the basics in a &lt;a href=&quot;/2014/10/17/webinar-on-writing-zotero-translators/&quot;&gt;webinar&lt;/a&gt; given by Sebastian Karcher, a frequent contributor to Zotero web translators.&lt;/p&gt;
+&lt;p&gt;There is no technical reason that reference managers can’t support a broad range of objects to cite, including datasets. And integration of data citation into the reference manager workflow is not only the easiest and most natural way for the author of a paper, but also makes it easier to discover these citations - reference lists are simply much better for that than links in the text, in particular if the content is behind subscription walls. There is a long tradition in the life sciences to put identifiers for genetic sequences used in a publication right into the text (usually into the methods section). Links in the body text are worse than references in reference lists, &lt;a href=&quot;/2013/07/02/auto-generating-links-to-data-and-resources/&quot;&gt;identifiers without a link&lt;/a&gt; are even worse, as they are very hard to find in an automated way &lt;span class=&quot;citation&quot; data-cites=&quot;Kafkas:2013fp&quot;&gt;(Kafkas, Kim, &amp;amp; McEntyre, 2013)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Please come to our workshop on Sunday afternoon if you are in Oxford and are interested in this topic. &lt;a href=&quot;https://www.eventbrite.com/e/data-citation-support-in-reference-managers-tickets-15136593960&quot;&gt;Registration&lt;/a&gt; is free, and the workshop will include both presentations about the current state of data citation support in the reference managers Endnote, Papers, Mendeley and Zotero, and work in smaller groups on practical implementations.&lt;/p&gt;
+&lt;div class=&quot;references&quot;&gt;
+&lt;h2 id=&quot;references&quot; class=&quot;unnumbered&quot;&gt;References&lt;/h2&gt;
+&lt;p&gt;Kafkas, Ş., Kim, J.-H., &amp;amp; McEntyre, J. R. (2013). Database Citation in Full Text Biomedical Articles. &lt;em&gt;PLoS ONE&lt;/em&gt;. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pone.0063184&quot;&gt;10.1371/journal.pone.0063184&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Klein, M., Van de Sompel, H., Sanderson, R., Shankar, H., Balakireva, L., Zhou, K., &amp;amp; Tobin, R. (2014). Scholarly context not found: one in five articles suffers from reference rot. &lt;em&gt;PLoS ONE&lt;/em&gt;, &lt;em&gt;9&lt;/em&gt;(12), e115253. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pone.0115253&quot;&gt;10.1371/journal.pone.0115253&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Pampel, H., Vierkant, P., Scholze, F., Bertelmann, R., Kindling, M., Klump, J., … Dierolf, U. (2013). Making Research Data Repositories Visible: The re3data.org Registry. &lt;em&gt;PLoS ONE&lt;/em&gt;, &lt;em&gt;8&lt;/em&gt;(11), e78080. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pone.0078080&quot;&gt;10.1371/journal.pone.0078080&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+                <link>http://blog.martinfenner.org/2015/01/05/data-citation-support-in-reference-managers</link>
+                <guid>http://blog.martinfenner.org/2015/01/05/data-citation-support-in-reference-managers</guid>
+                <pubDate>2015-01-05T00:00:00+00:00</pubDate>
+        </item>
 
         <item>
                 <title>Webinar on Writing Zotero Translators</title>
@@ -109,7 +151,7 @@
 &lt;p&gt;Another concern is that citations of datasets are something else that citations to scholarly articles, because the former are typically citations of content created by the same group of people at the time the journal article was also created. I would argue that again we can highlight this by how we display the references, and that I hope that this changes once data citation becomes more widespread.&lt;/p&gt;
 &lt;p&gt;What should or should not be cited in a scholarly document is of course a big discussion topic. What I am arguing is that everything that is cited should go into the references list, but that doesn’t change at all what should be cited. Personal communications are an example of something that should probably not be cited and therefore should also not go into the references list.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
-&lt;h2&gt;References&lt;/h2&gt;
+&lt;h2 id=&quot;references&quot; class=&quot;unnumbered&quot;&gt;References&lt;/h2&gt;
 &lt;p&gt;Kafkas, Ş., Kim, J.-H., &amp;amp; McEntyre, J. R. (2013). Database Citation in Full Text Biomedical Articles. &lt;em&gt;PLoS ONE&lt;/em&gt;. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pone.0063184&quot;&gt;10.1371/journal.pone.0063184&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Shioda, T., Fenner, M. H., &amp;amp; Isselbacher, K. J. (1997). Mus musculus melanocyte-specific gene 1 (msg1) mRNA, complete cds. ENA. Retrieved from &lt;a href=&quot;http://www.ebi.ac.uk/ena/data/view/U65091&quot; class=&quot;uri&quot;&gt;http://www.ebi.ac.uk/ena/data/view/U65091&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Yang, S., Han, R., Ding, J., &amp;amp; Song, Y. (2012). The distribution of Web citations. &lt;em&gt;Information Processing &amp;amp; Management&lt;/em&gt;, &lt;em&gt;48&lt;/em&gt;(4), 779–790. doi:&lt;a href=&quot;http://dx.doi.org/10.1016/j.ipm.2011.10.002&quot;&gt;10.1016/j.ipm.2011.10.002&lt;/a&gt;&lt;/p&gt;
@@ -532,7 +574,7 @@ d$y &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot
 &lt;/figure&gt;
 &lt;p&gt;All this functionality is provided by &lt;a href=&quot;http://yihui.name/knitr/&quot;&gt;knitr&lt;/a&gt;, a package for the R statistical programming language. knitr has been around for a while, but integration into the &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; blogging platform is still fragile. Earlier this week at the &lt;a href=&quot;https://github.com/ropensci/hackathon&quot;&gt;rOpenSci hackathon&lt;/a&gt; (more on this later) a group of us worked hard to improve this integration. We are still not completely done, but the source code is available &lt;a href=&quot;https://github.com/ropensci/docs&quot;&gt;here&lt;/a&gt;. Most importantly, all the conversion happens on the server, and we are only using freely available tools. I have now enabled this functionality for this blog, so expect more code embedded examples in the future.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
-&lt;h2&gt;References&lt;/h2&gt;
+&lt;h2 id=&quot;references&quot; class=&quot;unnumbered&quot;&gt;References&lt;/h2&gt;
 &lt;p&gt;Fenner, M. (2013). What can article-level metrics do for you? &lt;em&gt;PLoS Biol&lt;/em&gt;, &lt;em&gt;11&lt;/em&gt;(10), e1001687. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pbio.1001687&quot;&gt;10.1371/journal.pbio.1001687&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Knuth, D. E., Stanford University, &amp;amp; Computer Science Department. (1983). &lt;em&gt;Literate programming&lt;/em&gt;. Stanford, CA: Dept. of Computer Science, Stanford University.&lt;/p&gt;
 &lt;/div&gt;
@@ -642,7 +684,7 @@ d$y &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot
 &lt;h2 id=&quot;the-future-is-html&quot;&gt;The future is HTML&lt;/h2&gt;
 &lt;p&gt;Although the future for consuming scholarly documents is clearly HTML (and ePub), and there are great HTML editors, I’m not so sure that HTML will become the default for authoring environments. This is the reason why markdown and related markup languages were invented, and even with modern WYSIWYG editors working directly with HTML is not always the best choice. HTML has two problems: a) it is not as human-readable as markdown and therefore requires an additional layer for authoring, and b) it is not as structured as XML, which makes it difficult to create some of the rigid document structure required for scholarly documents. O’Reilly is trying to get more structure into HTML for print and digital books with &lt;a href=&quot;https://github.com/oreillymedia/htmlbook&quot;&gt;HTMLBook&lt;/a&gt;, but with too much structure you might run into similar problems for authoring as discussed above for JATS XML. And of course you can include HTML in markdown documents.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
-&lt;h2&gt;References&lt;/h2&gt;
+&lt;h2 id=&quot;references&quot; class=&quot;unnumbered&quot;&gt;References&lt;/h2&gt;
 &lt;p&gt;The LaTeX Team. (2014). LaTeX - a document preparation system. &lt;a href=&quot;http://www.latex-project.org/&quot; class=&quot;uri&quot;&gt;http://www.latex-project.org/&lt;/a&gt;. Retrieved from &lt;a href=&quot;http://www.latex-project.org/&quot; class=&quot;uri&quot;&gt;http://www.latex-project.org/&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
@@ -893,7 +935,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;h3 id=&quot;supporting-information&quot;&gt;Supporting Information&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pbio.1001687.s001&quot;&gt;Data S1&lt;/a&gt;. Dataset of ALM for PLOS Biology articles used in the text, and R scripts that were used to produce figures.&lt;/strong&gt; The data were collected on May 20, 2013 and include all &lt;em&gt;PLOS Biology&lt;/em&gt; articles published up to that day. Data for F1000Prime were collected on August 15, 2013. All charts were produced with R version 3.0.0.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
-&lt;h2&gt;References&lt;/h2&gt;
+&lt;h2 id=&quot;references&quot; class=&quot;unnumbered&quot;&gt;References&lt;/h2&gt;
 &lt;p&gt;ALM Reports. (2013). Retrieved from &lt;a href=&quot;http://almreports.plos.org&quot; class=&quot;uri&quot;&gt;http://almreports.plos.org&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Altmetric.com. (2013). Retrieved from &lt;a href=&quot;http://www.altmetric.com/&quot; class=&quot;uri&quot;&gt;http://www.altmetric.com/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Bik, H. M., &amp;amp; Goldstein, M. C. (2013). An introduction to social media for scientists. &lt;em&gt;PLOS Biology&lt;/em&gt;, &lt;em&gt;11&lt;/em&gt;(4), e1001535. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pbio.1001535&quot;&gt;10.1371/journal.pbio.1001535&lt;/a&gt;&lt;/p&gt;
@@ -933,7 +975,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;p&gt;Like all content on this blog, the article was created using &lt;a href=&quot;http://johnmacfarlane.net/pandoc/&quot;&gt;Pandoc&lt;/a&gt;, and the bibliography was dynamically generated. This makes it easy to change the citation style, and I decided to use the &lt;a href=&quot;http://www.apastyle.org/&quot;&gt;APA Style&lt;/a&gt; that shows the citations in the text as author-date rather than numbered as with the PLOS style (see the example citation in the first paragraph). The combined bibliography for all blog posts including the article can be downloaded in bibtex format &lt;a href=&quot;/bibliography/references.bib&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Lastly, I wanted to generate nicer HTML for a better online reading experience. I haven’t done anything fancy, but most publishers seem to focus on navigation around an article, so that very little screen real estate is left for the actual content of the article. I’ve tried to improve readability by reducing the navigation areas to a minimum, by using readable fonts in larger sizes: &lt;a href=&quot;https://typekit.com/fonts/minion-pro&quot;&gt;Adobe Minion Pro&lt;/a&gt; for the body text and &lt;a href=&quot;https://typekit.com/fonts/myriad-pro&quot;&gt;Adobe Myriad Pro&lt;/a&gt; for headings, tables and figure legends.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
-&lt;h2&gt;References&lt;/h2&gt;
+&lt;h2 id=&quot;references&quot; class=&quot;unnumbered&quot;&gt;References&lt;/h2&gt;
 &lt;p&gt;Fenner, M. (2013). What can article-level metrics do for you? &lt;em&gt;PLoS Biol&lt;/em&gt;, &lt;em&gt;11&lt;/em&gt;(10), e1001687. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pbio.1001687&quot;&gt;10.1371/journal.pbio.1001687&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
@@ -1131,7 +1173,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;10/26/13: added link to the recently launched &lt;a href=&quot;http://blog.peerj.com/post/62886292466/peerj-questions-a-new-way-to-never-publish-forget&quot;&gt;PeerJ Questions&lt;/a&gt; which uses a question and answer format (thanks to Jason Hoyt for reminding me).&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
-&lt;h2&gt;References&lt;/h2&gt;
+&lt;h2 id=&quot;references&quot; class=&quot;unnumbered&quot;&gt;References&lt;/h2&gt;
 &lt;p&gt;Fenner, M. (2013). What can article-level metrics do for you? &lt;em&gt;PLoS Biol&lt;/em&gt;, &lt;em&gt;11&lt;/em&gt;(10), e1001687. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pbio.1001687&quot;&gt;10.1371/journal.pbio.1001687&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
@@ -1150,7 +1192,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;p&gt;Although this is an essay and not a research article, I’ve added the data and R scripts used to generate the figures (1, 3-5) as &lt;a href=&quot;http://dx.doi.org/10.1371/journal.pbio.1001687.s001&quot;&gt;supporting information&lt;/a&gt;. As I &lt;a href=&quot;/2013/10/20/the-complete-article/&quot;&gt;have said earlier&lt;/a&gt;, I think it is important that an article contains more than the text. With the open source software &lt;a href=&quot;http://www.r-project.org/&quot;&gt;R&lt;/a&gt; or &lt;a href=&quot;http://www.rstudio.com/&quot;&gt;RStudio&lt;/a&gt; everyone can recreate the figures, and can look at the data underlying the figures in the essay. One can for example look into the data behind Fig. 5 to better understand how articles with F1000Prime recommendations &lt;strong&gt;and&lt;/strong&gt; Wikipedia mentions differ from those &lt;strong&gt;only&lt;/strong&gt; recommended in F1000Prime. Feel free to ask for help getting started in the comments.&lt;/p&gt;
 &lt;p&gt;Incidentally this is also my first PLOS article (my wife is way ahead of me with 5 research articles), so that I can finally look at PLOS article-level metrics as an author - after being the technical lead for this project since May 2012.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
-&lt;h2&gt;References&lt;/h2&gt;
+&lt;h2 id=&quot;references&quot; class=&quot;unnumbered&quot;&gt;References&lt;/h2&gt;
 &lt;p&gt;Fenner, M. (2013). What can article-level metrics do for you? &lt;em&gt;PLoS Biol&lt;/em&gt;, &lt;em&gt;11&lt;/em&gt;(10), e1001687. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pbio.1001687&quot;&gt;10.1371/journal.pbio.1001687&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
@@ -1340,7 +1382,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;p&gt;Now there is only one step missing to have your paper that was just published automatically appear in your publication list. Assuming you have provided your ORCID identifier when you submitted the paper, and the publisher has included your ORCID identifier in the metadata sent to CrossRef (both are already common practices), we only need CrossRef to automatically push that paper into your ORCID profile.&lt;/p&gt;
 &lt;p&gt;And once we have this workflow in place, we can automatically add additional information, including links to the fulltext paper in the institutional repository, copyright information, and metrics.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
-&lt;h2&gt;References&lt;/h2&gt;
+&lt;h2 id=&quot;references&quot; class=&quot;unnumbered&quot;&gt;References&lt;/h2&gt;
 &lt;/div&gt;
 </description>
                 <link>http://blog.martinfenner.org/2013/08/04/automatically-list-all-your-publications-in-your-blog</link>
@@ -1494,7 +1536,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;p&gt;Luckily we increasingly have video recordings of keynote presentations available online, making it easier to listen to the good presentations. &lt;a href=&quot;http://www.ted.com/tedx&quot;&gt;TED and TEDx&lt;/a&gt; have of course made the format of recordings of carefully prepared talks popular. For large scholarly and academic conferences the best starting point is &lt;a href=&quot;http://river-valley.tv&quot;&gt;River Valley TV&lt;/a&gt;. The &lt;a href=&quot;http://www.mediatheque.lindau-nobel.org/&quot;&gt;Lindau Nobel Laureate Meeting&lt;/a&gt; has hundreds of presentations by Nobel laureates. And as video recording and streaming has become easier technically (e.g. with &lt;a href=&quot;http://googleblog.blogspot.de/2011/09/google-92-93-94-95-96-97-98-99-100.html&quot;&gt;Google Hangouts on Air&lt;/a&gt;), recording good keynotes should become the norm and not the exception.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;After several hundred blog posts here and elsewhere, this may well be my first blog post with embedded video.&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
-&lt;h2&gt;References&lt;/h2&gt;
+&lt;h2 id=&quot;references&quot; class=&quot;unnumbered&quot;&gt;References&lt;/h2&gt;
 &lt;p&gt;Fenner, M., Gmez, C. G., &amp;amp; Thorisson, G. A. (2011). Key issue: Collective action for the open researcher &amp;amp; contributor iD (oRCID). &lt;em&gt;Serials: The Journal for the Serials Community&lt;/em&gt;, &lt;em&gt;24&lt;/em&gt;(3), 277–279. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1629/24277&quot; class=&quot;uri&quot;&gt;http://dx.doi.org/10.1629/24277&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
@@ -1523,7 +1565,7 @@ venn.plot &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class
 &lt;p&gt;Datawrapper does three things: it makes it easy to generate charts, it allows you to embed them directly into your webpage (using an &lt;code&gt;&amp;lt;iframe&amp;gt;&lt;/code&gt; tag), and it is Open Source software (MIT license, Github repo &lt;a href=&quot;https://github.com/datawrapper/datawrapper&quot;&gt;here&lt;/a&gt;) so that you can help improve the code and host this service on your own. DataWrapper was written in Javascript and PHP by a group of German journalists, and the main focus is data journalism where the service has become really &lt;a href=&quot;http://blog.datawrapper.de/2013/datawrapper-crosses-mark-of-10-million-visits/&quot;&gt;popular&lt;/a&gt; with more than 3.5 million views of embedded charts in May 2013 alone.&lt;/p&gt;
 &lt;p&gt;Datawrapper is a perfect tool for science blogs and websites with scientific content, but it can also enhance the charts in scientific articles. We need a few additional chart types, error bars and more flexible labeling. And we might want to add a license picker, making it easy to add a Creative Commons license so that it is clear how the chart can be reused. Datawrapper is intended for online use, but the service can also save the charts as PNG or PDF. We would want to add saving to SVG (already used for online rendering) for easier embedding into the XML and epub versions of articles.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
-&lt;h2&gt;References&lt;/h2&gt;
+&lt;h2 id=&quot;references&quot; class=&quot;unnumbered&quot;&gt;References&lt;/h2&gt;
 &lt;p&gt;D’Arcy, E., &amp;amp; Moynihan, R. (2009). Can the relationship between doctors and drug companies ever be a healthy one? &lt;em&gt;PLoS Medicine&lt;/em&gt;, &lt;em&gt;6&lt;/em&gt;(7), e1000075. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1371/journal.pmed.1000075&quot; class=&quot;uri&quot;&gt;http://dx.doi.org/10.1371/journal.pmed.1000075&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Moher, D., Liberati, A., Tetzlaff, J., &amp;amp; Altman, D. G. (2009). Preferred reporting items for systematic reviews and meta-analyses: The pRISMA statement. &lt;em&gt;PLoS Medicine&lt;/em&gt;, &lt;em&gt;6&lt;/em&gt;(7), e1000097. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1371/journal.pmed.1000097&quot; class=&quot;uri&quot;&gt;http://dx.doi.org/10.1371/journal.pmed.1000097&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -1567,7 +1609,7 @@ PDB:  1mbn&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This input is automatically translated into GenBank: M10090, IGSN: JRH964436, MGI: 96922, and information about the human myoglobin protein (UniProt: P02144, PDB: 1mbn) is generated in a similar fashion.&lt;/p&gt;
 &lt;p&gt;The plugin was written in a few hours today, and is my first Jekyll plugin. There is room for improvement, e.g. support for more identifiers, better regex matching, validation of the resulting links, and automated tag generation if an identifier is found. Ideally the auto-linking should happen in the markdown and not the HTML output, so that these structured database links are also available in other markdown outputs such as PDF. But this is another example how Scholarly Markdown can make it easier for researchers to author documents without requiring a fancy web-based user interface.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
-&lt;h2&gt;References&lt;/h2&gt;
+&lt;h2 id=&quot;references&quot; class=&quot;unnumbered&quot;&gt;References&lt;/h2&gt;
 &lt;p&gt;Kafkas, Ş., Kim, J.-H., &amp;amp; McEntyre, J. R. (2013). Database Citation in Full Text Biomedical Articles. &lt;em&gt;PLoS ONE&lt;/em&gt;. doi:&lt;a href=&quot;http://dx.doi.org/10.1371/journal.pone.0063184&quot;&gt;10.1371/journal.pone.0063184&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
@@ -1655,7 +1697,7 @@ PDB:  1mbn&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Metadata are important, and Scholarly Markdown makes it easy to embed them.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Update 06/30/13: added JSON example to demonstrate the differences to YAML, and to show that Jekyll also works with JSON (used in this blog post, and tested with the examples above which produce identical HTML output). Also added two references, using the embedded HTML metadata and the Greycite service to generate citations in bibtex.&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
-&lt;h2&gt;References&lt;/h2&gt;
+&lt;h2 id=&quot;references&quot; class=&quot;unnumbered&quot;&gt;References&lt;/h2&gt;
 &lt;p&gt;Ethan P. White, Z. T. B., Elita Baldrige. (2013). Nine simple ways to make it easier to (re)use your data. &lt;em&gt;Gobbledygook&lt;/em&gt;. Retrieved from &lt;a href=&quot;http://blog.martinfenner.org/2013/06/25/nine-simple-ways-to-make-it-easier-to-reuse-your-data&quot; class=&quot;uri&quot;&gt;http://blog.martinfenner.org/2013/06/25/nine-simple-ways-to-make-it-easier-to-reuse-your-data&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Lord, P., &amp;amp; Marshall, L. (2012). Greycite: Citing the web. &lt;em&gt;An Exercise in Irrelevance&lt;/em&gt;. Retrieved from &lt;a href=&quot;http://www.russet.org.uk/blog/2071&quot; class=&quot;uri&quot;&gt;http://www.russet.org.uk/blog/2071&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -1927,7 +1969,7 @@ PDB:  1mbn&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&quot;acknowledgments&quot;&gt;Acknowledgments&lt;/h2&gt;
 &lt;p&gt;Thanks to Karthik Ram for organizing this special section and inviting us to contribute. Carly Strasser and Kara Woo recommended important references and David Harris and Carly Strasser provided valuable feedback on null values, all via Twitter. Carl Boettiger, Matt Davis, Daniel Hocking, Heinz Pampel, Karthik Ram, Thiago Silva, Carly Strasser, Tom Webb, and beroe (Twitter handle) provided value comments on the manuscript. Many of these comments were part of the informal review process facilitated by posting this manuscript as a preprint. The writing of this paper was supported by a CAREER grant from the U.S. National Science Foundation (DEB 0953694) to EPW.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
-&lt;h2&gt;References&lt;/h2&gt;
+&lt;h2 id=&quot;references&quot; class=&quot;unnumbered&quot;&gt;References&lt;/h2&gt;
 &lt;p&gt;Borer, E. T., Seabloom, E. W., Jones, M. B., &amp;amp; Schildhauer, M. (2009). Some simple guidelines for effective data management. &lt;em&gt;Bulletin of the Ecological Society of America&lt;/em&gt;, &lt;em&gt;90&lt;/em&gt;(2), 205–214. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1890/0012-9623-90.2.205&quot; class=&quot;uri&quot;&gt;http://dx.doi.org/10.1890/0012-9623-90.2.205&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Brunt, J. W., McCartney, P., Baker, K., &amp;amp; Stafford, S. G. (2002). The future of ecoinformatics in long term ecological research. In &lt;em&gt;Proceedings of the 6th world multiconference on systemics, cybernetics and informatics: SCI&lt;/em&gt; (pp. 14–18).&lt;/p&gt;
 &lt;p&gt;Fienberg, S. E., &amp;amp; Martin, M. E. (1985). &lt;em&gt;Sharing research data&lt;/em&gt;. Natl Academy Pr.&lt;/p&gt;
@@ -2216,7 +2258,7 @@ y &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k
 &lt;h2 id=&quot;comments&quot;&gt;Comments&lt;/h2&gt;
 &lt;p&gt;Comments are important for multi-author documents and if reviewer feedback should be included. Comments should be linked to a particular part of a document to provide context, or attached at the end of a document for general comments. It would also be helpful to “comment out” parts of a document, e.g. to indicate parts that are incomplete and need more work. Revisions of a markdown document are best handled using a version control system such as git.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
-&lt;h2&gt;References&lt;/h2&gt;
+&lt;h2 id=&quot;references&quot; class=&quot;unnumbered&quot;&gt;References&lt;/h2&gt;
 &lt;p&gt;Kowalczyk, S., &amp;amp; Shankar, K. (2011). Data sharing in the sciences. &lt;em&gt;Annual Review of Information Science and Technology&lt;/em&gt;, &lt;em&gt;45&lt;/em&gt;(1), 247–294. Retrieved from &lt;a href=&quot;http://dx.doi.org/10.1002/aris.2011.1440450113&quot; class=&quot;uri&quot;&gt;http://dx.doi.org/10.1002/aris.2011.1440450113&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>

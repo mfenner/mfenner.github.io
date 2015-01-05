@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <title>Data Citation Support in Reference Managers</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="citation, data, reference_manager" />
+
+    <!-- RDFa Metadata (in DublinCore) -->
+    <meta property="dc:title" content="Data Citation Support in Reference Managers" />
+    <meta property="dc:format" content="text/html" />
+    <meta property="dc:language" content="en" />
+    <meta property="dc:identifier" content="/2015/01/05/data-citation-support-in-reference-managers" />
+    <meta property="dc:rights" content="CC-BY-NC" />
+    <meta property="dc:source" content="Gobbledygook" />
+    <meta property="dc:subject" content="Scholarly Communication" />
+    <meta property="dc:type" content="website" />
+
+    <!-- Google Scholar Metadata -->
+    <meta name="citation_title" content="Data Citation Support in Reference Managers"/>
+    <meta name="citation_journal_title" content="Gobbledygook"/>
+
+    <link rel="alternate" type="application/rss+xml" title="Gobbledygook" href="/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Gobbledygook" href="/atom.xml" />
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/app-7b11536ae5581522c573f3f553590ae2.css">
+    <link rel="stylesheet" href="/assets/jasny-bootstrap.min-29c6b484ddca96fa14a48394c0cf415b.css">
+    <link rel="stylesheet" href="/assets/navmenu-push-f57c8aea8e44efd42b5d7fc575383151.css">
+    <link rel="stylesheet" href="/assets/fluidbox-cc1b5668a8c598b1c2fcc5e15e073f33.css">
+
+    <!-- d3.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.min.js"></script>
+
+    <!-- Typekit -->
+    <script type="text/javascript" src="//use.typekit.net/kil7puw.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  </head>
+
+
+  <body>
+    <nav id="navmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+  <a class="navmenu-brand" href="#">Gobbledygook</a>
+  <ul class="nav navmenu-nav">
+  
+    <li><span class="glyphicon glyphicon-time"></span> <a href="http://github.com/mfenner/blog/commits/source/_posts/2015-01-05-data-citation-support-in-reference-managers.md">Version History</a></li>
+    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#mfenner/mfenner.github.io/edit/source/_posts/2015-01-05-data-citation-support-in-reference-managers.md">Send Edit Request</a></li>
+    
+    <li><span class="glyphicon glyphicon-tags"></span> Tags
+      <ul class="tag-list">
+        
+        
+  
+  	<li><a href="/tags.html#citation-ref">citation</a></li>
+  
+  	<li><a href="/tags.html#data-ref">data</a></li>
+  
+  	<li><a href="/tags.html#reference_manager-ref">reference_manager</a></li>
+  
+
+
+
+      </ul>
+    </li>
+    
+    <li><span class="glyphicon glyphicon-home"></span> <a href="/">Home</a></li>
+    <li><span class="glyphicon glyphicon-info-sign"></span> <a href="/about.html">About</a></li>
+    <li><span class="glyphicon glyphicon-tags"></span> <a href="/tags.html">All Tags</a></li>
+  </ul>
+</nav>
+
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#navmenu" data-canvas="body">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="page-header">
+            <h1>Data Citation Support in Reference Managers</h1>
+            <p>05 January 2015 by
+            
+            <a href="/about.html">Martin Fenner</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>This is the title of an upcoming workshop next Sunday organized by Ian Mulvany and myself. The workshop is a <a href="https://www.force11.org/meetings/force2015/pre-conference-meeting-list">pre-conference event</a> of the <a href="https://www.force11.org/meetings/force2015">Force15</a> conference in Oxford. This blog post summarizes some of the issues and work that needs to be done.<!--more--></p>
+<p>Data Citation is one of the big themes of the Force15 conference, and a lot of progress has been made, including the <a href="https://www.force11.org/datacitation">Joint Declaration of Data Citation Principles</a> that start with the following paragraph on <strong>Importance</strong>:</p>
+<blockquote>
+<p>Data should be considered legitimate, citable products of research. Data citations should be accorded the same importance in the scholarly record as citations of other research objects, such as publications.</p>
+</blockquote>
+<p>Convincing researchers, funders, university administrators and others that data citation is important is crucial. But for researchers to actually adopt data citation to the same degree as citations of the scholarly literature, more needs to be done:</p>
+<ul>
+<li>incentives (both carrots and sticks) by funders, institutions, and scholarly societies</li>
+<li>training in data management</li>
+<li>data repositories and other tools and services for the public sharing of data</li>
+<li>tools and services that help citing those datasets</li>
+</ul>
+<p>The focus of the workshop is on the last bullet point, and I would argue that more work still needs to be done here compared to the first three bullet points.</p>
+<h2 id="reference-managers">Reference Managers</h2>
+<p>Researchers use reference managers to handle the citations in the manuscripts they write. This is both a common practice that everybody understands, and there are a plethora of tools - both free and paid - available. Most reference managers were originally built to handle citations of journal articles and maybe books or book chapters, and many of them also help with managing the associated PDF files. In the last 15 years we have seen an dramatic increase of non-article citations in reference lists, mainly to web resources <span class="citation" data-cites="klein_2014bj">(Klein et al., 2014)</span>:</p>
+<figure>
+<a href=""><img src="/images/journal.pone.0115253.g002.png" alt="From Fig. 2: STM articles and URI references per publication year - Elsevier corpus (Klein et al., 2014)."></a><figcaption>From Fig. 2: STM articles and URI references per publication year - Elsevier corpus <span class="citation" data-cites="klein_2014bj">(Klein et al., 2014)</span>.</figcaption>
+</figure>
+<p>References managers have started to adapt to these changes in citation patterns. Similarly they have become better in handling non-textual resources such as slide decks, datasets, or movies. Nobody should type in references by hand in 2015, as reference managers have come up with several ways of importing metadata about citations:</p>
+<ul>
+<li>import references stored in a file using a format such as BibTex or RIS</li>
+<li>import references by talking to an external API</li>
+<li>import references via a bookmarklet that grabs information from the current webpage in the browser</li>
+</ul>
+<p>Endnote and Papers typically use the second approach whereas Mendeley, Zotero (and others) work almost exclusively via bookmarklets (and there are of course combinations of both). Bookmarklets in general work better for web resources and other content that is not indexed in a central service such as Web of Science or Scopus. This is also true for research data, as there are currently few central research data indexing services - the Thomson Reuters <a href="http://wokinfo.com/products_tools/multidisciplinary/dci/">Data Citation Index</a> and <a href="https://www.datacite.org/">DataCite</a> are two examples in this category.. But there are also thousands of data repositories, many of them listed in re3data <span class="citation" data-cites="pampel_2013bi">(Pampel et al., 2013)</span>.</p>
+<p>The reference manager <a href="https://www.zotero.org/">Zotero</a> has built a large open source ecosystem around bookmarklets (what they call <a href="https://github.com/zotero/translators">web translators</a>), making it straightforward to add support for a new resource, as I have done for <a href="https://github.com/zotero/translators/blob/master/NCBI%20Nucleotide.js">GenBank nucleotide sequence datasets</a> in November after learning the basics in a <a href="/2014/10/17/webinar-on-writing-zotero-translators/">webinar</a> given by Sebastian Karcher, a frequent contributor to Zotero web translators.</p>
+<p>There is no technical reason that reference managers can’t support a broad range of objects to cite, including datasets. And integration of data citation into the reference manager workflow is not only the easiest and most natural way for the author of a paper, but also makes it easier to discover these citations - reference lists are simply much better for that than links in the text, in particular if the content is behind subscription walls. There is a long tradition in the life sciences to put identifiers for genetic sequences used in a publication right into the text (usually into the methods section). Links in the body text are worse than references in reference lists, <a href="/2013/07/02/auto-generating-links-to-data-and-resources/">identifiers without a link</a> are even worse, as they are very hard to find in an automated way <span class="citation" data-cites="Kafkas:2013fp">(Kafkas, Kim, &amp; McEntyre, 2013)</span>.</p>
+<p>Please come to our workshop on Sunday afternoon if you are in Oxford and are interested in this topic. <a href="https://www.eventbrite.com/e/data-citation-support-in-reference-managers-tickets-15136593960">Registration</a> is free, and the workshop will include both presentations about the current state of data citation support in the reference managers Endnote, Papers, Mendeley and Zotero, and work in smaller groups on practical implementations.</p>
+<div class="references">
+<h2 id="references" class="unnumbered">References</h2>
+<p>Kafkas, Ş., Kim, J.-H., &amp; McEntyre, J. R. (2013). Database Citation in Full Text Biomedical Articles. <em>PLoS ONE</em>. doi:<a href="http://dx.doi.org/10.1371/journal.pone.0063184">10.1371/journal.pone.0063184</a></p>
+<p>Klein, M., Van de Sompel, H., Sanderson, R., Shankar, H., Balakireva, L., Zhou, K., &amp; Tobin, R. (2014). Scholarly context not found: one in five articles suffers from reference rot. <em>PLoS ONE</em>, <em>9</em>(12), e115253. doi:<a href="http://dx.doi.org/10.1371/journal.pone.0115253">10.1371/journal.pone.0115253</a></p>
+<p>Pampel, H., Vierkant, P., Scholze, F., Bertelmann, R., Kindling, M., Klump, J., … Dierolf, U. (2013). Making Research Data Repositories Visible: The re3data.org Registry. <em>PLoS ONE</em>, <em>8</em>(11), e78080. doi:<a href="http://dx.doi.org/10.1371/journal.pone.0078080">10.1371/journal.pone.0078080</a></p>
+</div>
+</body></html>
+
+
+            <div class="license">
+              
+            </div>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gobbledy'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+          </div>
+        </div>
+
+        <!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+<span
+  class="Z3988"
+  title="ctx_ver=Z39.88-2004
+  &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+  &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+  &amp;rft.title=Data Citation Support in Reference Managers
+  &amp;rft.creator=Martin Fenner
+  &amp;rft.date=2015-01-05
+  &amp;rft.language=EN
+  &amp;rft.rights=CC0
+  &amp;rft_id=http://blog.martinfenner.org/2015/01/05/data-citation-support-in-reference-managers">
+</span>
+
+        <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36379104-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <!-- Fluidbox https://github.com/terrymun/Fluidbox -->
+    <script src="/js/js-yaml.min.js"></script>
+    <script src="/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/jquery.fluidbox.min.js"></script>
+    <script type='text/javascript'>
+      $(function () {
+        $("a").fluidbox();
+      });
+    </script>
+
+    <!-- Bootstrap -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/jasny-bootstrap.min.js"></script>
+
+    <!-- MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>
