@@ -5,10 +5,30 @@
         <description>Gobbledygook - Martin Fenner</description>
         <link>http://blog.martinfenner.org/rss.xml</link>
         <link>http://blog.martinfenner.org</link>
-        <lastBuildDate>2015-01-05T20:28:29+00:00</lastBuildDate>
-        <pubDate>2015-01-05T20:28:29+00:00</pubDate>
+        <lastBuildDate>2015-02-05T17:09:04+00:00</lastBuildDate>
+        <pubDate>2015-02-05T17:09:04+00:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>Manifests and Reference Lists</title>
+                <description>&lt;p&gt;Last month at the &lt;a href=&quot;https://www.force11.org/meetings/force2015/pre-conference-meeting-list&quot;&gt;Force15 conference&lt;/a&gt; in Oxford &lt;a href=&quot;https://twitter.com/IanMulvany&quot;&gt;Ian Mulvany&lt;/a&gt; and I ran a workshop on &lt;a href=&quot;/2015/01/05/data-citation-support-in-reference-managers/&quot;&gt;data citation support in reference managers&lt;/a&gt;. The report of that workshop isn’t done yet, but I can say that it was a success - we now have a pretty good idea what the problems are and what needs to be done to fix them. The short summary of the workshop is in &lt;a href=&quot;https://speakerdeck.com/mfenner/workshop-summary-reference-managers-and-data-citation&quot;&gt;this&lt;/a&gt; slidedeck of the presentation that summarized the workshop for the other Force15 attendees.&lt;!--more--&gt;&lt;/p&gt;
+&lt;p&gt;The whole idea of the workshop was to treat data citation as similar as possible to the citation of journal articles, i.e. to allow authors to use the same tools (reference managers) and conventions (citation styles). Putting a data citation into a reference list makes it easier to find that data citation because reference lists contain more metadata, are more structured, and more accessible than data citations in the form of identifiers or links within the body text of the article.&lt;/p&gt;
+&lt;p&gt;But I have to admit that there is one problem with reference lists: although there is always some self-citation, reference lists usually contain references to articles (and other resources) created by other people and before the article was published. It feels a little bit odd to put a dataset created by the same group of people and published at the same time into the reference list. And although we could use a separate reference list or highlight the data associated with the article in some other way, what we really want is something slightly different, a manifest file.&lt;/p&gt;
+&lt;p&gt;The journal article has been a (mainly) textual document for many centuries not because this is the essence of science communication, but rather because there was no practical way to include all the other information (raw data, tools used for experiments, etc.). Very few of these limitations remain with the digital journal article that we have since the 1990s, but we have for the most part failed to change the format other than going from paper to PDF. One of many examples: figures in publications typically still are has limited as they were decades ago with no way to see the data underlying the figure, options for selecting what data points are shown, or animation for time-based information.&lt;/p&gt;
+&lt;p&gt;So what we really care about is the sum of artifacts and resources that together make what Carol Goble and others call research object &lt;span class=&quot;citation&quot; data-cites=&quot;bechhofer_2010ib&quot;&gt;(Bechhofer et al., 2010)&lt;/span&gt;, the journal article is an important part, but clearly doesn’t include everthing that is needed to understand and reproduce the work. Reference lists can help with linking to some of the resources not included in the article text, but they typically don’t link to supplementary information or other places where the underlying data are made available, or to the figures of the article. Although some publishers provide navigation tools for readers to get to this information, what we really need is a machine-readable list of all the resources used in an article.&lt;/p&gt;
+&lt;p&gt;As it happens, this is exactly what the ePub format for electronic books is doing, as every ePub must include a manifest file that lists all the files that are part of the publication, defined in the &lt;a href=&quot;http://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm&quot;&gt;Open Packaging Format (OPF)&lt;/a&gt;. I need to do more research to figure out how to do this with &lt;a href=&quot;http://jats.nlm.nih.gov/archiving/tag-library/1.0/index.html&quot;&gt;JATS&lt;/a&gt;, the standard for scholarly articles, and how to generate something similar to the manifest file when using different formats, e.g. html or markdown. This has to be linked to some of the information we are collecting already, e.g. described in JATS &lt;span class=&quot;citation&quot; data-cites=&quot;beck_2011hz&quot;&gt;(Beck, 2011)&lt;/span&gt;, or the &lt;code&gt;relatedIdentifier&lt;/code&gt; in the DataCite metadata &lt;span class=&quot;citation&quot; data-cites=&quot;starr_2014cs&quot;&gt;(Starr, 2014)&lt;/span&gt;.&lt;/p&gt;
+&lt;div class=&quot;references&quot;&gt;
+&lt;h2 id=&quot;references&quot; class=&quot;unnumbered&quot;&gt;References&lt;/h2&gt;
+&lt;p&gt;Bechhofer, S., Bechhofer, S., De Roure, D., Gamble, M., Goble, C., &amp;amp; Buchan, I. (2010). Research Objects: Towards Exchange and Reuse of Digital Knowledge. &lt;em&gt;Nature Precedings&lt;/em&gt;, (713). doi:&lt;a href=&quot;http://dx.doi.org/10.1038/npre.2010.4626.1&quot;&gt;10.1038/npre.2010.4626.1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Beck, J. (2011). NISO Z39.96 The Journal Article Tag Suite (JATS): What Happened to the NLM DTDs? &lt;em&gt;The journal of electronic publishing : JEP&lt;/em&gt;, &lt;em&gt;14&lt;/em&gt;(1). doi:&lt;a href=&quot;http://dx.doi.org/10.3998/3336451.0014.106&quot;&gt;10.3998/3336451.0014.106&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Starr, J. (2014). DataCite Metadata Schemafor the Publication and Citation of Research Data, 1–38. doi:&lt;a href=&quot;http://dx.doi.org/10.5438/0010&quot;&gt;10.5438/0010&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+                <link>http://blog.martinfenner.org/2015/02/05/manifests-and-reference-lists</link>
+                <guid>http://blog.martinfenner.org/2015/02/05/manifests-and-reference-lists</guid>
+                <pubDate>2015-02-05T00:00:00+00:00</pubDate>
+        </item>
 
         <item>
                 <title>Data Citation Support in Reference Managers</title>

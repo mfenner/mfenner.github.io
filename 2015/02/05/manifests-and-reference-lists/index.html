@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <title>Manifests and Reference Lists</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="citation, data, reference_manager" />
+
+    <!-- RDFa Metadata (in DublinCore) -->
+    <meta property="dc:title" content="Manifests and Reference Lists" />
+    <meta property="dc:format" content="text/html" />
+    <meta property="dc:language" content="en" />
+    <meta property="dc:identifier" content="/2015/02/05/manifests-and-reference-lists" />
+    <meta property="dc:rights" content="CC-BY-NC" />
+    <meta property="dc:source" content="Gobbledygook" />
+    <meta property="dc:subject" content="Scholarly Communication" />
+    <meta property="dc:type" content="website" />
+
+    <!-- Google Scholar Metadata -->
+    <meta name="citation_title" content="Manifests and Reference Lists"/>
+    <meta name="citation_journal_title" content="Gobbledygook"/>
+
+    <link rel="alternate" type="application/rss+xml" title="Gobbledygook" href="/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Gobbledygook" href="/atom.xml" />
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/app-7b11536ae5581522c573f3f553590ae2.css">
+    <link rel="stylesheet" href="/assets/jasny-bootstrap.min-29c6b484ddca96fa14a48394c0cf415b.css">
+    <link rel="stylesheet" href="/assets/navmenu-push-f57c8aea8e44efd42b5d7fc575383151.css">
+    <link rel="stylesheet" href="/assets/fluidbox-cc1b5668a8c598b1c2fcc5e15e073f33.css">
+
+    <!-- d3.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.min.js"></script>
+
+    <!-- Typekit -->
+    <script type="text/javascript" src="//use.typekit.net/kil7puw.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  </head>
+
+
+  <body>
+    <nav id="navmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+  <a class="navmenu-brand" href="#">Gobbledygook</a>
+  <ul class="nav navmenu-nav">
+  
+    <li><span class="glyphicon glyphicon-time"></span> <a href="http://github.com/mfenner/blog/commits/source/_posts/2015-02-05-manifests-and-reference-lists.md">Version History</a></li>
+    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#mfenner/mfenner.github.io/edit/source/_posts/2015-02-05-manifests-and-reference-lists.md">Send Edit Request</a></li>
+    
+    <li><span class="glyphicon glyphicon-tags"></span> Tags
+      <ul class="tag-list">
+        
+        
+  
+  	<li><a href="/tags.html#citation-ref">citation</a></li>
+  
+  	<li><a href="/tags.html#data-ref">data</a></li>
+  
+  	<li><a href="/tags.html#reference_manager-ref">reference_manager</a></li>
+  
+
+
+
+      </ul>
+    </li>
+    
+    <li><span class="glyphicon glyphicon-home"></span> <a href="/">Home</a></li>
+    <li><span class="glyphicon glyphicon-info-sign"></span> <a href="/about.html">About</a></li>
+    <li><span class="glyphicon glyphicon-tags"></span> <a href="/tags.html">All Tags</a></li>
+  </ul>
+</nav>
+
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#navmenu" data-canvas="body">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="page-header">
+            <h1>Manifests and Reference Lists</h1>
+            <p>05 February 2015 by
+            
+            <a href="/about.html">Martin Fenner</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>Last month at the <a href="https://www.force11.org/meetings/force2015/pre-conference-meeting-list">Force15 conference</a> in Oxford <a href="https://twitter.com/IanMulvany">Ian Mulvany</a> and I ran a workshop on <a href="/2015/01/05/data-citation-support-in-reference-managers/">data citation support in reference managers</a>. The report of that workshop isn’t done yet, but I can say that it was a success - we now have a pretty good idea what the problems are and what needs to be done to fix them. The short summary of the workshop is in <a href="https://speakerdeck.com/mfenner/workshop-summary-reference-managers-and-data-citation">this</a> slidedeck of the presentation that summarized the workshop for the other Force15 attendees.<!--more--></p>
+<p>The whole idea of the workshop was to treat data citation as similar as possible to the citation of journal articles, i.e. to allow authors to use the same tools (reference managers) and conventions (citation styles). Putting a data citation into a reference list makes it easier to find that data citation because reference lists contain more metadata, are more structured, and more accessible than data citations in the form of identifiers or links within the body text of the article.</p>
+<p>But I have to admit that there is one problem with reference lists: although there is always some self-citation, reference lists usually contain references to articles (and other resources) created by other people and before the article was published. It feels a little bit odd to put a dataset created by the same group of people and published at the same time into the reference list. And although we could use a separate reference list or highlight the data associated with the article in some other way, what we really want is something slightly different, a manifest file.</p>
+<p>The journal article has been a (mainly) textual document for many centuries not because this is the essence of science communication, but rather because there was no practical way to include all the other information (raw data, tools used for experiments, etc.). Very few of these limitations remain with the digital journal article that we have since the 1990s, but we have for the most part failed to change the format other than going from paper to PDF. One of many examples: figures in publications typically still are has limited as they were decades ago with no way to see the data underlying the figure, options for selecting what data points are shown, or animation for time-based information.</p>
+<p>So what we really care about is the sum of artifacts and resources that together make what Carol Goble and others call research object <span class="citation" data-cites="bechhofer_2010ib">(Bechhofer et al., 2010)</span>, the journal article is an important part, but clearly doesn’t include everthing that is needed to understand and reproduce the work. Reference lists can help with linking to some of the resources not included in the article text, but they typically don’t link to supplementary information or other places where the underlying data are made available, or to the figures of the article. Although some publishers provide navigation tools for readers to get to this information, what we really need is a machine-readable list of all the resources used in an article.</p>
+<p>As it happens, this is exactly what the ePub format for electronic books is doing, as every ePub must include a manifest file that lists all the files that are part of the publication, defined in the <a href="http://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm">Open Packaging Format (OPF)</a>. I need to do more research to figure out how to do this with <a href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/index.html">JATS</a>, the standard for scholarly articles, and how to generate something similar to the manifest file when using different formats, e.g. html or markdown. This has to be linked to some of the information we are collecting already, e.g. described in JATS <span class="citation" data-cites="beck_2011hz">(Beck, 2011)</span>, or the <code>relatedIdentifier</code> in the DataCite metadata <span class="citation" data-cites="starr_2014cs">(Starr, 2014)</span>.</p>
+<div class="references">
+<h2 id="references" class="unnumbered">References</h2>
+<p>Bechhofer, S., Bechhofer, S., De Roure, D., Gamble, M., Goble, C., &amp; Buchan, I. (2010). Research Objects: Towards Exchange and Reuse of Digital Knowledge. <em>Nature Precedings</em>, (713). doi:<a href="http://dx.doi.org/10.1038/npre.2010.4626.1">10.1038/npre.2010.4626.1</a></p>
+<p>Beck, J. (2011). NISO Z39.96 The Journal Article Tag Suite (JATS): What Happened to the NLM DTDs? <em>The journal of electronic publishing : JEP</em>, <em>14</em>(1). doi:<a href="http://dx.doi.org/10.3998/3336451.0014.106">10.3998/3336451.0014.106</a></p>
+<p>Starr, J. (2014). DataCite Metadata Schemafor the Publication and Citation of Research Data, 1–38. doi:<a href="http://dx.doi.org/10.5438/0010">10.5438/0010</a></p>
+</div>
+</body></html>
+
+
+            <div class="license">
+              
+            </div>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gobbledy'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+          </div>
+        </div>
+
+        <!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+<span
+  class="Z3988"
+  title="ctx_ver=Z39.88-2004
+  &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+  &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+  &amp;rft.title=Manifests and Reference Lists
+  &amp;rft.creator=Martin Fenner
+  &amp;rft.date=2015-02-05
+  &amp;rft.language=EN
+  &amp;rft.rights=CC0
+  &amp;rft_id=http://blog.martinfenner.org/2015/02/05/manifests-and-reference-lists">
+</span>
+
+        <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36379104-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <!-- Fluidbox https://github.com/terrymun/Fluidbox -->
+    <script src="/js/js-yaml.min.js"></script>
+    <script src="/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/jquery.fluidbox.min.js"></script>
+    <script type='text/javascript'>
+      $(function () {
+        $("a").fluidbox();
+      });
+    </script>
+
+    <!-- Bootstrap -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/jasny-bootstrap.min.js"></script>
+
+    <!-- MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>
