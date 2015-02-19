@@ -11,7 +11,7 @@ BIOC=${BIOC:-"http://bioconductor.org/biocLite.R"}
 BIOC_USE_DEVEL=${BIOC_USE_DEVEL:-"TRUE"}
 OS=$(uname -s)
 
-PANDOC_VERSION='1.12.4.2'
+PANDOC_VERSION='1.13.1'
 PANDOC_DIR="${HOME}/opt/pandoc"
 PANDOC_URL="https://s3.amazonaws.com/rstudio-buildtools/pandoc-${PANDOC_VERSION}.zip"
 
@@ -53,6 +53,9 @@ InstallPandoc() {
     unzip -j /tmp/pandoc-${PANDOC_VERSION}.zip "pandoc-${PANDOC_VERSION}/${os_path}/pandoc" -d "${PANDOC_DIR}"
     chmod +x "${PANDOC_DIR}/pandoc"
     sudo ln -s "${PANDOC_DIR}/pandoc" /usr/local/bin
+    unzip -j /tmp/pandoc-${PANDOC_VERSION}.zip "pandoc-${PANDOC_VERSION}/${os_path}/pandoc-citeproc" -d "${PANDOC_DIR}"
+    chmod +x "${PANDOC_DIR}/pandoc-citeproc"
+    sudo ln -s "${PANDOC_DIR}/pandoc-citeproc" /usr/local/bin
 }
 
 BootstrapLinux() {

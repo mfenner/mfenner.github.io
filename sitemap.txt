@@ -13,6 +13,7 @@ http://blog.martinfenner.org/page3/index.html
 http://blog.martinfenner.org/page4/index.html
 http://blog.martinfenner.org/page5/index.html
 
+http://blog.martinfenner.org/2015/02/19/metrics-for-scientific-software
 http://blog.martinfenner.org/2015/02/05/manifests-and-reference-lists
 http://blog.martinfenner.org/2015/01/05/data-citation-support-in-reference-managers
 http://blog.martinfenner.org/2014/10/17/webinar-on-writing-zotero-translators
