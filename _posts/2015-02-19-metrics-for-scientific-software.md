@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Metrics for scientific software
+tags: [software]
 ---
 
 One of the challenges of collecting metrics for scholarly outputs is persistent identifiers. For journal articles the Digital Object Identifier (DOI) has become the de-facto standard, other popular identifiers are the pmid from PubMed, the identifiers used by Scopus and Web of Science, and the arxiv ID for ArXiV preprints.<!--more-->
