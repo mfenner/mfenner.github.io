@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <title>First analysis of software metrics</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="github, r, software, slm" />
+
+    <!-- RDFa Metadata (in DublinCore) -->
+    <meta property="dc:title" content="First analysis of software metrics" />
+    <meta property="dc:format" content="text/html" />
+    <meta property="dc:language" content="en" />
+    <meta property="dc:identifier" content="/2015/02/28/first-analysis-of-software-metrics" />
+    <meta property="dc:rights" content="CC-BY-NC" />
+    <meta property="dc:source" content="Gobbledygook" />
+    <meta property="dc:subject" content="Scholarly Communication" />
+    <meta property="dc:type" content="website" />
+
+    <!-- Google Scholar Metadata -->
+    <meta name="citation_title" content="First analysis of software metrics"/>
+    <meta name="citation_journal_title" content="Gobbledygook"/>
+
+    <link rel="alternate" type="application/rss+xml" title="Gobbledygook" href="/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Gobbledygook" href="/atom.xml" />
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/app-7b11536ae5581522c573f3f553590ae2.css">
+    <link rel="stylesheet" href="/assets/jasny-bootstrap.min-29c6b484ddca96fa14a48394c0cf415b.css">
+    <link rel="stylesheet" href="/assets/navmenu-push-f57c8aea8e44efd42b5d7fc575383151.css">
+    <link rel="stylesheet" href="/assets/fluidbox-cc1b5668a8c598b1c2fcc5e15e073f33.css">
+
+    <!-- d3.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.min.js"></script>
+
+    <!-- Typekit -->
+    <script type="text/javascript" src="//use.typekit.net/kil7puw.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  </head>
+
+
+  <body>
+    <nav id="navmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+  <a class="navmenu-brand" href="#">Gobbledygook</a>
+  <ul class="nav navmenu-nav">
+  
+    <li><span class="glyphicon glyphicon-time"></span> <a href="http://github.com/mfenner/blog/commits/source/_posts/2015-02-28-first-analysis-of-software-metrics.md">Version History</a></li>
+    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#mfenner/mfenner.github.io/edit/source/_posts/2015-02-28-first-analysis-of-software-metrics.md">Send Edit Request</a></li>
+    
+    <li><span class="glyphicon glyphicon-tags"></span> Tags
+      <ul class="tag-list">
+        
+        
+  
+  	<li><a href="/tags.html#github-ref">github</a></li>
+  
+  	<li><a href="/tags.html#r-ref">r</a></li>
+  
+  	<li><a href="/tags.html#software-ref">software</a></li>
+  
+  	<li><a href="/tags.html#slm-ref">slm</a></li>
+  
+
+
+
+      </ul>
+    </li>
+    
+    <li><span class="glyphicon glyphicon-home"></span> <a href="/">Home</a></li>
+    <li><span class="glyphicon glyphicon-info-sign"></span> <a href="/about.html">About</a></li>
+    <li><span class="glyphicon glyphicon-tags"></span> <a href="/tags.html">All Tags</a></li>
+  </ul>
+</nav>
+
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#navmenu" data-canvas="body">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="page-header">
+            <h1>First analysis of software metrics</h1>
+            <p>28 February 2015 by
+            
+            <a href="/about.html">Martin Fenner</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>Last week <a href="/2015/02/19/metrics-for-scientific-software/">I wrote about</a> <a href="http://software.lagotto.io/">software.lagotto.io</a>, an instance of the <a href="https://github.com/articlemetrics/lagotto">lagotto</a> open source software collecting metrics for the about 1,400 software repositories included in <a href="http://sciencetoolbox.org/">Sciencetoolbox</a>. In this post I want to report the first results analyzing the data.<!--more--></p>
+<p>If you want to follow along, please go to <a href="https://github.com/mfenner/software-analysis" class="uri">https://github.com/mfenner/software-analysis</a>, this repository holds all the data, as well as the R code used for analysis. A special thanks goes to <a href="http://scottchamberlain.info/">Scott Chamberlain</a> who greatly helped me by tweaking the <a href="https://github.com/ropensci/alm">alm</a> R package to support URLs instead of DOIs as identifiers.</p>
+<p>The first step in the analysis is to get an overview of the external sources citing or discussing the software package:</p>
+<figure>
+<a href=""><img src="/images/software.lagotto.io_2.png" alt="Number of software repositories (out of 1,404) with at least one event. Data from software.lagotto.io"></a><figcaption>Number of software repositories (out of 1,404) with at least one event. Data from <a href="http://software.lagotto.io">software.lagotto.io</a></figcaption>
+</figure>
+<p>This is basically the same figure as in the <a href="/2015/02/19/metrics-for-scientific-software/">previous post</a>, but with two differences: I have added a <a href="http://www.nature.com/opensearch/">Nature.com OpenSearch</a> data source, and I have found an additional 64 repositories cited in scholarly articles via an Europe PMC fulltext Search that also includes the reference lists (thanks to <a href="http://www.ebi.ac.uk/about/people/johanna-mcentyre">Jo McEntyre</a>).</p>
+<p>I am not sure why we are not picking up any Wikipedia citations, and have to take a closer look. The ORCID source also needs tweaking, and there are some issues with the Wordpress.com data that I have to look into as well. Citations in the scholarly literature are obviously the most interesting data, and we have three Github repos with more than 25 citations, including <a href="https://github.com/najoshi/sickle" class="uri">https://github.com/najoshi/sickle</a> with 54 citations. As most repositories in our sample are cited only once if at all, a correlation with Github stars and forks is not useful. Sickle is popular on Github (52 stars and 32 forks), but it is not clear that this activity is correlated to citations (e.g. because there are more citations than stars).</p>
+<p>The vast majority of software repos in this analysis are hosted by Github, so we have the numbers of stars and forks for those. It is interesting, although probably not very surprising, that the number of Github stargazers and forks is highly correlated:</p>
+<figure>
+<a href=""><img src="/images/github_likes_readers-1.png" alt="Correlation between Github stargazers and forks, log-log scale. Data from software.lagotto.io"></a><figcaption>Correlation between Github stargazers and forks, log-log scale. Data from <a href="http://software.lagotto.io">software.lagotto.io</a></figcaption>
+</figure>
+<p>We can find Facebook activity (likes, comments or shares) for one third of the repositories. There is a reasonably good correlation between Facebook activity and number of Github forks:</p>
+<figure>
+<a href=""><img src="/images/facebook_github_readers-1.png" alt="Correlation between combined Facebook activity and Github forks, log-log scale. Data from software.lagotto.io"></a><figcaption>Correlation between combined Facebook activity and Github forks, log-log scale. Data from <a href="http://software.lagotto.io">software.lagotto.io</a></figcaption>
+</figure>
+<p>One interesting analysis would be to look at the repositories that have been forked much more often relative to their Facebook activity, e.g. <a href="https://github.com/cloudera/impala">Impala</a> with 1,207 Github stars and 458 forks, but only 5 Facebook shares. One limitation of the analysis is that we are not tracking Facebook (or other social media) activity for all forks of a repo.</p>
+<p>We found Reddit discussions mentioning one of the repositories in 7% of cases. Once we have a larger sample size it would be interesting to correlate this activity with Github stars and forks, similar to what we did for Facebook. By far the most popular repository from our sample on Reddit is <a href="https://github.com/Bitcoin/Bitcoin">Bitcoin</a>, followed by <a href="https://github.com/jquery/jquery">JQuery</a>. Twitter activity is notoriously difficult to collect since Twitter doesn’t keep tweets very long, hence probably the low numbers compared to Facebook and Reddit.</p>
+<p>Feel free to play with the data and scripts provided at <a href="https://github.com/mfenner/software-analysis" class="uri">https://github.com/mfenner/software-analysis</a>, my next step is probably to include a much larger number of software repositories.</p>
+<p>It has not escaped our notice that the kind of analysis described above could be applied to any software repository, not just scientific software.</p>
+<div class="references">
+
+</div>
+</body></html>
+
+
+            <div class="license">
+              
+            </div>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gobbledy'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+          </div>
+        </div>
+
+        <!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+<span
+  class="Z3988"
+  title="ctx_ver=Z39.88-2004
+  &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+  &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+  &amp;rft.title=First analysis of software metrics
+  &amp;rft.creator=Martin Fenner
+  &amp;rft.date=2015-02-28
+  &amp;rft.language=EN
+  &amp;rft.rights=CC0
+  &amp;rft_id=http://blog.martinfenner.org/2015/02/28/first-analysis-of-software-metrics">
+</span>
+
+        <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36379104-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <!-- Fluidbox https://github.com/terrymun/Fluidbox -->
+    <script src="/js/js-yaml.min.js"></script>
+    <script src="/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/jquery.fluidbox.min.js"></script>
+    <script type='text/javascript'>
+      $(function () {
+        $("a").fluidbox();
+      });
+    </script>
+
+    <!-- Bootstrap -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/jasny-bootstrap.min.js"></script>
+
+    <!-- MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>
