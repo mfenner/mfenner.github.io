@@ -18,6 +18,7 @@ In summary, affordable access to scholarly content by subscription publishers is
 
 With this background it is obvious that several people have discussed the iTunes Store-like model to sell scholarly articles:
 
+* [PRC Report and “iPub” revisited](http://crosstech.crossref.org/2009/09/prc_report_and_ipub_revisited.html)
 * [DeepDyve launches iTunes Store-like service for science papers](http://www.popsci.com/science/article/2009-10/deepdyve-launches-itunes-science-papers)
 * [Could an iTunes-like model work with scientific publishing?](http://scienceblogs.com/digitalbio/2012/01/10/could-an-itunes-like-model-wor/)
 * [A plan to open up science journals](http://www.bostonglobe.com/business/2012/10/07/start-readcube-program-uses-itunes-payment-model-for-access-scientific-articles/1UopCX1qfEE3uO2UEzuM7L/story.html)
@@ -34,3 +35,5 @@ But rather than becoming the predominant way to pay for digital music, services 
 * Apple was in a strong negotiation position with record labels when starting the iTunes store (the extremely popular iPod, record labels scared of file-sharing platforms such as Napster). No organization is in a similar position with scientific publishers, and services such as ReadCube or Mendeley are handicapped because they are associated with a particular publisher
 
 Unless several large publishers and/or a smart third-party with enough muscle start an initiative in this space, e.g. by bringing the pay-per-view prices to a reasonable level (e.g. $4.99), we will never see an iTunes Store-like service for scholarly articles, and this currently looks like the most likely outcome. We may have reached the point where it is too late, as most publishers seem to already work towards another payment model: gold open access where the authors pay the article costs.
+
+*Update 3/2/15: added link to 2009 CrossTech blog post.*
