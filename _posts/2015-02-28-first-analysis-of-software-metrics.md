@@ -31,3 +31,5 @@ We found Reddit discussions mentioning one of the repositories in 7% of cases. O
 Feel free to play with the data and scripts provided at [https://github.com/mfenner/software-analysis](https://github.com/mfenner/software-analysis), my next step is probably to include a much larger number of software repositories.
 
 It has not escaped our notice that the kind of analysis described above could be applied to any software repository, not just scientific software.
+
+<p><span style="display:none">claimtoken-54faac008e3d7</span></p>
