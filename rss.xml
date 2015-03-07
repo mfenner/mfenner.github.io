@@ -5,8 +5,8 @@
         <description>Gobbledygook - Martin Fenner</description>
         <link>http://blog.martinfenner.org/rss.xml</link>
         <link>http://blog.martinfenner.org</link>
-        <lastBuildDate>2015-03-02T16:59:23+00:00</lastBuildDate>
-        <pubDate>2015-03-02T16:59:23+00:00</pubDate>
+        <lastBuildDate>2015-03-07T08:01:36+00:00</lastBuildDate>
+        <pubDate>2015-03-07T08:01:36+00:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -32,6 +32,9 @@
 &lt;p&gt;We found Reddit discussions mentioning one of the repositories in 7% of cases. Once we have a larger sample size it would be interesting to correlate this activity with Github stars and forks, similar to what we did for Facebook. By far the most popular repository from our sample on Reddit is &lt;a href=&quot;https://github.com/Bitcoin/Bitcoin&quot;&gt;Bitcoin&lt;/a&gt;, followed by &lt;a href=&quot;https://github.com/jquery/jquery&quot;&gt;JQuery&lt;/a&gt;. Twitter activity is notoriously difficult to collect since Twitter doesn’t keep tweets very long, hence probably the low numbers compared to Facebook and Reddit.&lt;/p&gt;
 &lt;p&gt;Feel free to play with the data and scripts provided at &lt;a href=&quot;https://github.com/mfenner/software-analysis&quot; class=&quot;uri&quot;&gt;https://github.com/mfenner/software-analysis&lt;/a&gt;, my next step is probably to include a much larger number of software repositories.&lt;/p&gt;
 &lt;p&gt;It has not escaped our notice that the kind of analysis described above could be applied to any software repository, not just scientific software.&lt;/p&gt;
+&lt;p&gt;
+&lt;span style=&quot;display:none&quot;&gt;claimtoken-54faac008e3d7&lt;/span&gt;
+&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 
 &lt;/div&gt;
