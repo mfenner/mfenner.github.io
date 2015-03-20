@@ -4,13 +4,43 @@
  <title>Gobbledygook</title>
  <link href="http://blog.martinfenner.org//atom.xml" rel="self"/>
  <link href="http://blog.martinfenner.org"/>
- <updated>2015-03-07T08:39:02+00:00</updated>
+ <updated>2015-03-20T10:12:13+00:00</updated>
  <id>http://blog.martinfenner.org</id>
  <author>
    <name>Martin Fenner</name>
    <email>mfenner@plos.org</email>
  </author>
 
+ 
+ <entry>
+   <title>Metadata in Microsoft Word documents</title>
+   <link href="http://blog.martinfenner.org/2015/03/20/metadata-in-microsoft-word-documents"/>
+   <updated>2015-03-20T00:00:00+00:00</updated>
+   <id>http://blog.martinfenner.org/2015/03/20/metadata-in-microsoft-word-documents</id>
+   <content type="html">&lt;p&gt;Metadata such as author, title, journal or persistent identifier are essential for scholarly documents, and some of us are spending a significant part of our time adding or fixing metadata. Unfortunately we sometimes don’t pay enough attention to the flow of metadata, i.e. we ignore already existing metadata, or reinvent the wheel in how we describe or store them.&lt;!--more--&gt;&lt;/p&gt;
+&lt;p&gt;Storing metadata in text-based formats is usually straightforward. This blog post is written in markdown with a &lt;a href=&quot;http://yaml.org/&quot;&gt;YAML header&lt;/a&gt; - think of YAML as the more human-readable version of JSON - at the beginning of the document:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode yaml&quot;&gt;&lt;code class=&quot;sourceCode yaml&quot;&gt;&lt;span class=&quot;ot&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;fu&quot;&gt;title:&lt;/span&gt; Metadata in Microsoft Word documents
+&lt;span class=&quot;ot&quot;&gt;---&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is then translated into this HTML when the blog post is published:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode html&quot;&gt;&lt;code class=&quot;sourceCode html&quot;&gt;&lt;span class=&quot;kw&quot;&gt;&amp;lt;meta&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; property=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;dc:title&amp;quot;&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; content=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;Metadata in Microsoft Word documents&amp;quot;&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;XML is of course a very natural format for metadata, here for example &lt;a href=&quot;http://jats.nlm.nih.gov/publishing/tag-library/1.0/index.html&quot;&gt;JATS&lt;/a&gt; used for scholarly articles:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode xml&quot;&gt;&lt;code class=&quot;sourceCode xml&quot;&gt;&lt;span class=&quot;kw&quot;&gt;&amp;lt;article-title&amp;gt;&lt;/span&gt;Metadata in Microsoft Word documents&lt;span class=&quot;kw&quot;&gt;&amp;lt;/article-title&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Many scholarly documents start out as Microsoft Word documents. And while the &lt;code&gt;docx&lt;/code&gt; format introduced by Microsoft in Microsoft Office 2007 &lt;a href=&quot;http://officeopenxml.com/&quot;&gt;is XML-based&lt;/a&gt;, few users are aware of this fact. And probably even fewer users (including myself) ever go to the &lt;code&gt;Properties…&lt;/code&gt; settings of a &lt;code&gt;docx&lt;/code&gt; document and add a &lt;code&gt;title&lt;/code&gt;, &lt;code&gt;keywords&lt;/code&gt; or other metadata (the &lt;code&gt;author&lt;/code&gt; is usually set automatically).&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/images/IC164149.gif&quot; alt=&quot;Microsoft Word 2007 Properties. Image from Microsoft Developer Network&quot; /&gt;&lt;figcaption&gt;Microsoft Word 2007 Properties. &lt;a href=&quot;https://msdn.microsoft.com/en-us/library/bb308936(v=office.12).aspx&quot;&gt;Image from Microsoft Developer Network&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;This is very unfortunate, as these metadata are very often required, e.g. in a journal article submission, and then need to be collected again, usually either by asking the author to fill out a web form, and/or by extracting the metadata (e.g. title) from the document.&lt;/p&gt;
+&lt;p&gt;The best place for metadata is with the document (not &lt;em&gt;in&lt;/em&gt; the document), and if the file format (&lt;code&gt;docx&lt;/code&gt; in this case) supports it, we should take advantage of this. The main benefit: metadata stay with the text when the document is sent to co-authors via email, or put on a file server, or into Dropbox.&lt;/p&gt;
+&lt;p&gt;In the case of &lt;code&gt;docx&lt;/code&gt;, the metadata support is actually pretty good, using the standard &lt;a href=&quot;http://dublincore.org/&quot;&gt;Dublin Core&lt;/a&gt;, and storing the metadata in a separate file called &lt;code&gt;core.xml&lt;/code&gt;. You can see this file if you unzip your &lt;code&gt;docx&lt;/code&gt; file (e.g. after giving it a &lt;code&gt;zip&lt;/code&gt; extension). The &lt;code&gt;core.xml&lt;/code&gt; file for this blog post (after converting the markdown file to &lt;code&gt;docx&lt;/code&gt; using &lt;a href=&quot;http://johnmacfarlane.net/pandoc/&quot;&gt;Pandoc&lt;/a&gt;) looks like this:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode xml&quot;&gt;&lt;code class=&quot;sourceCode xml&quot;&gt;&lt;span class=&quot;kw&quot;&gt;&amp;lt;?xml&lt;/span&gt; version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;&lt;span class=&quot;kw&quot;&gt;?&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;kw&quot;&gt;&amp;lt;cp:coreProperties&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; xmlns:cp=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;http://schemas.openxmlformats.org/package/2006/metadata/core-properties&amp;quot;&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; xmlns:dc=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;http://purl.org/dc/elements/1.1/&amp;quot;&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; xmlns:dcterms=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;http://purl.org/dc/terms/&amp;quot;&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; xmlns:dcmitype=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;http://purl.org/dc/dcmitype/&amp;quot;&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; xmlns:xsi=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;&amp;gt;&amp;lt;dc:title&amp;gt;&lt;/span&gt;Metadata in Microsoft Word documents&lt;span class=&quot;kw&quot;&gt;&amp;lt;/dc:title&amp;gt;&amp;lt;dc:creator&amp;gt;&amp;lt;/dc:creator&amp;gt;&amp;lt;/cp:coreProperties&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Because &lt;code&gt;docx&lt;/code&gt; is XML, we can read/write this file not only in Microsoft Word, e.g. using macros, but also outside of Microsoft Word, e.g. in workflows that converts &lt;code&gt;docx&lt;/code&gt; documents into other formats, or tools that check &lt;code&gt;docx&lt;/code&gt; files for required metadata (e.g. by using &lt;a href=&quot;2014/08/18/introducing-rakali/&quot;&gt;rakali&lt;/a&gt; that I wrote last year). So please encourage authors to use the Microsoft Word &lt;code&gt;Properties…&lt;/code&gt; settings, and update existing tools to take advantage of the Dublin Core metadata stored in every &lt;code&gt;docx&lt;/code&gt; file.&lt;/p&gt;
+&lt;div class=&quot;references&quot;&gt;
+
+&lt;/div&gt;
+</content>
+ </entry>
  
  <entry>
    <title>First analysis of software metrics</title>

@@ -14,6 +14,7 @@ http://blog.martinfenner.org/page4/index.html
 http://blog.martinfenner.org/page5/index.html
 http://blog.martinfenner.org/page6/index.html
 
+http://blog.martinfenner.org/2015/03/20/metadata-in-microsoft-word-documents
 http://blog.martinfenner.org/2015/02/28/first-analysis-of-software-metrics
 http://blog.martinfenner.org/2015/02/23/why-there-is-no-itunes-for-science-papers
 http://blog.martinfenner.org/2015/02/19/metrics-for-scientific-software
