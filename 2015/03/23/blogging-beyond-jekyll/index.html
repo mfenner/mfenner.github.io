@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <title>Blogging Beyond Jekyll</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="markdown, wordpress, blog" />
+
+    <!-- RDFa Metadata (in DublinCore) -->
+    <meta property="dc:title" content="Blogging Beyond Jekyll" />
+    <meta property="dc:format" content="text/html" />
+    <meta property="dc:language" content="en" />
+    <meta property="dc:identifier" content="/2015/03/23/blogging-beyond-jekyll" />
+    <meta property="dc:rights" content="CC-BY-NC" />
+    <meta property="dc:source" content="Gobbledygook" />
+    <meta property="dc:subject" content="Scholarly Communication" />
+    <meta property="dc:type" content="website" />
+
+    <!-- Google Scholar Metadata -->
+    <meta name="citation_title" content="Blogging Beyond Jekyll"/>
+    <meta name="citation_journal_title" content="Gobbledygook"/>
+
+    <link rel="alternate" type="application/rss+xml" title="Gobbledygook" href="/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Gobbledygook" href="/atom.xml" />
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/app-7b11536ae5581522c573f3f553590ae2.css">
+    <link rel="stylesheet" href="/assets/jasny-bootstrap.min-29c6b484ddca96fa14a48394c0cf415b.css">
+    <link rel="stylesheet" href="/assets/navmenu-push-f57c8aea8e44efd42b5d7fc575383151.css">
+    <link rel="stylesheet" href="/assets/fluidbox-cc1b5668a8c598b1c2fcc5e15e073f33.css">
+
+    <!-- d3.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.min.js"></script>
+
+    <!-- Typekit -->
+    <script type="text/javascript" src="//use.typekit.net/kil7puw.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  </head>
+
+
+  <body>
+    <nav id="navmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+  <a class="navmenu-brand" href="#">Gobbledygook</a>
+  <ul class="nav navmenu-nav">
+  
+    <li><span class="glyphicon glyphicon-time"></span> <a href="http://github.com/mfenner/blog/commits/source/_posts/2015-03-23-blogging-beyond-jekyll.md">Version History</a></li>
+    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#mfenner/mfenner.github.io/edit/source/_posts/2015-03-23-blogging-beyond-jekyll.md">Send Edit Request</a></li>
+    
+    <li><span class="glyphicon glyphicon-tags"></span> Tags
+      <ul class="tag-list">
+        
+        
+  
+  	<li><a href="/tags.html#markdown-ref">markdown</a></li>
+  
+  	<li><a href="/tags.html#wordpress-ref">wordpress</a></li>
+  
+  	<li><a href="/tags.html#blog-ref">blog</a></li>
+  
+
+
+
+      </ul>
+    </li>
+    
+    <li><span class="glyphicon glyphicon-home"></span> <a href="/">Home</a></li>
+    <li><span class="glyphicon glyphicon-info-sign"></span> <a href="/about.html">About</a></li>
+    <li><span class="glyphicon glyphicon-tags"></span> <a href="/tags.html">All Tags</a></li>
+  </ul>
+</nav>
+
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#navmenu" data-canvas="body">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="page-header">
+            <h1>Blogging Beyond Jekyll</h1>
+            <p>23 March 2015 by
+            
+            <a href="/about.html">Martin Fenner</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>This blog has been on four different platforms since starting in 2007: a custom blogging engine and then <a href="https://movabletype.org/">Movable Type</a> on <a href="http://network.nature.com/">Nature Network</a> 2007-2010, Wordpress on the <a href="http://blogs.plos.org/mfenner/">PLOS Blogs Network</a> 2010-2013, and the static blogging engine <a href="http://jekyllrb.com/">Jekyll</a> hosted on Github Pages since 2013. It might be time for yet another blogging platform change.<!--more--></p>
+<p>The main reason to switch from Wordpress to Jekyll was the concept of a static site generator: write posts in <a href="http://commonmark.org/">markdown format</a>, store them in a Github repository, and then have Jekyll automatically generate the HTML pages hosted on <a href="https://pages.github.com/">Github Pages</a>. The main attraction was the blog posts in markdown format stored in git version control without the need of a database. Jekyll is the glue to make all this work, and I was able to customize Jekyll to my needs, e.g. by using <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a> for the markdown to html conversion.</p>
+<p>While this workflow still makes sense for this blog, there are a number of shortcomings:</p>
+<ul>
+<li>Jekyll needs to rebuild the entire site every time I publish a new post. While this isn’t much of a problem for the size of this blog, it doesn’t scale well for larger sites. And the process is more complex if you use custom jekyll plugins like this blog, as you can’t use the automatic Jekyll pipeline provided by Github (hint: use a Travis continous integration server <a href="/2014/03/10/continuous-publishing/">to build the site</a>)</li>
+<li>the web is moving to increasingly sophisticated javascript frontends, using frameworks such as <a href="https://angularjs.org/">Angular.js</a>, <a href="http://emberjs.com/">Ember.js</a>, or frontend libraries for scholarly documents such as <a href="http://elifesciences.org/elife-news/lens">Lens</a>. While they can be used together with Jekyll, that is not a typical use case.</li>
+<li>the tight integration between the code to generate the website and the content (Wordpress and other blogging engines have the same approach) is not always the best solution, e.g. when you want to want to generate the pages for something that is not a blog (e.g. a <a href="http://book.openingscience.org/">book</a>).</li>
+</ul>
+<p>What could we do instead?</p>
+<blockquote>
+<p>Build a Javascript frontend where the content is served via an API built around markdown documents, stored in git version control.</p>
+</blockquote>
+<h3 id="api">API</h3>
+<p>The blog posts are still written in markdown, stored (and version-controlled in a Github repository), but we would now access the content via API. The easiest solution is to use the <a href="https://developer.github.com/v3/repos/contents/">Github Contents API</a> and either do the markdown to html conversion in javascript yourself, or let the Github API do the conversion to HTML for you. Alternatively we could build our own API, e.g. because we want to control the markdown to html conversion, or need additional functionality such as fulltext search. And of course the two approaches can be combined, e.g. via a Github webhook that triggers the markdown to html coversion every time a document is added or updated, and stores the converted documents in the same repo.</p>
+<h3 id="frontend">Frontend</h3>
+<p>The frontend should be written as a one-page javascript application, not requiring a server backend. In contrast to the Jekyll workflow the frontend code doesn’t need to be updated every time we post a blog post. Since this is a very common scenario, there are probably several solutions out there already. Please mention them in the comments if you have suggestions. One candidate is <a href="https://github.com/elifesciences/lens/">Lens</a> mentioned above - a beautiful frontend for scholarly documents. Lens displays documents in the <a href="http://jats.nlm.nih.gov/publishing/tag-library/1.0/index.html">JATS</a> XML format, so your API would have to provide that format.</p>
+<h3 id="conclusions">Conclusions</h3>
+<p>The separation into API and frontend is of course old news. But for blogs this seems to still be a fairly new concept, in particular when combined with a backend using documents stored in git version control rather than in a database. Wordpress added a <a href="https://wordpress.org/plugins/json-rest-api/">REST API Plugin</a> in 2014, and the Ghost blogging framework (which uses a database backend) also seems to <a href="https://trello.com/b/EceUgtCL/ghost-roadmap">go into that general direction</a>. Please ping me if you like the idea and want to contribute, or have implemented something like this already.</p>
+<div class="references">
+
+</div>
+</body></html>
+
+
+            <div class="license">
+              
+            </div>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gobbledy'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+          </div>
+        </div>
+
+        <!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+<span
+  class="Z3988"
+  title="ctx_ver=Z39.88-2004
+  &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+  &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+  &amp;rft.title=Blogging Beyond Jekyll
+  &amp;rft.creator=Martin Fenner
+  &amp;rft.date=2015-03-23
+  &amp;rft.language=EN
+  &amp;rft.rights=CC0
+  &amp;rft_id=http://blog.martinfenner.org/2015/03/23/blogging-beyond-jekyll">
+</span>
+
+        <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36379104-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <!-- Fluidbox https://github.com/terrymun/Fluidbox -->
+    <script src="/js/js-yaml.min.js"></script>
+    <script src="/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/jquery.fluidbox.min.js"></script>
+    <script type='text/javascript'>
+      $(function () {
+        $("a").fluidbox();
+      });
+    </script>
+
+    <!-- Bootstrap -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/jasny-bootstrap.min.js"></script>
+
+    <!-- MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>
