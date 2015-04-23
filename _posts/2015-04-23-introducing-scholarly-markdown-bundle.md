@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Introducing the Scholarly Markdown Bundle
-tags: [markdown]
+tags: [markdown, bundle]
 ---
 
 Using Markdown to author scholarly documents is an attractive alternative to the standard authoring tools Microsoft Word and LaTeX. The feeling shared by many is that [Scholarly Markdown](http://blog.martinfenner.org/2013/06/17/what-is-scholarly-markdown/) is 80% there, and that more effort is needed for the remaining 20% - moving markdown from a niche into the mainstream. What is mainly needed is building tools that connect the existing tools and ideas, resulting in one or more services attractive to a critical number of users. But maybe we also need to rethink the essential parts of Scholarly Markdown. In this post I propose that we expand the concept and define the *Scholarly Markdown Bundle*.<!--more-->
