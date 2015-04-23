@@ -115,16 +115,16 @@
 </blockquote>
 <p>This blog post is an example for such a document. The page is written in <strong>markdown</strong> (markdown file available <a href="https://github.com/mfenner/mfenner.github.io/blob/source/_posts/2014-04-04-literate-blogging.Rmd">here</a>), and all embedded code was executed when this page was generated, i.e. when the markdown was converted to HTML and the blog post was published. To demonstrate this I have embedded code in three different languages below - the output is the second code block.</p>
 <p>In R you have</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cat</span>(<span class="st">'Hello, R world!</span><span class="ch">\n</span><span class="st">'</span>)</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cat</span>(<span class="st">'Hello, R world!</span><span class="ch">\n</span><span class="st">'</span>)</code></pre></div>
 <pre><code>Hello, R world!</code></pre>
 <p>Or Python</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="dt">print</span> <span class="st">"Hello, Python world!"</span></code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="dt">print</span> <span class="st">"Hello, Python world!"</span></code></pre></div>
 <pre><code>Hello, Python world!</code></pre>
 <p>Or Ruby</p>
-<pre class="sourceCode ruby"><code class="sourceCode ruby">puts <span class="st">'Hello, Ruby world!'</span></code></pre>
+<div class="sourceCode"><pre class="sourceCode ruby"><code class="sourceCode ruby">puts <span class="st">'Hello, Ruby world!'</span></code></pre></div>
 <pre><code>Hello, Ruby world!</code></pre>
 <p>You can also embed code within text blocks (inline), so that <code>3.48 * 723</code> becomes <strong>2516.04</strong>. Another important option is to generate figures using the embedded code, e.g. the following figure taken from a recent publication.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># code for figure 1: density plots for citation counts for PLOS Biology</span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># code for figure 1: density plots for citation counts for PLOS Biology</span>
 <span class="co"># articles published in 2010</span>
 
 <span class="co"># load May 20, 2013 ALM report</span>
@@ -163,7 +163,7 @@ d$y &lt;-<span class="st"> </span><span class="kw">append</span>(d$y, <span clas
 <span class="kw">mtext</span>(plos.ylab, <span class="dt">side =</span> <span class="dv">2</span>, <span class="dt">col =</span> plos.color, <span class="dt">cex =</span> <span class="fl">1.25</span>, <span class="dt">outer =</span> <span class="ot">TRUE</span>, <span class="dt">adj =</span> <span class="dv">0</span>,
     <span class="dt">at =</span> <span class="dv">1</span>, <span class="dt">las =</span> <span class="dv">1</span>)
 
-<span class="kw">par</span>(opar)</code></pre>
+<span class="kw">par</span>(opar)</code></pre></div>
 <figure>
 <a href=""><img src="/figures/density_plot_example-1.svg" alt="Figure 1. Citation counts for PLOS Biology articles published in 2010. Scopus citation counts plotted as a probability distribution for all 197 PLOS Biology research articles published in 2010. Data collected May 20, 2013. Median 19 citations; 10% of papers have at least 50 citations. From Fenner (2013)."></a><figcaption><strong>Figure 1. Citation counts for PLOS Biology articles published in 2010.</strong> Scopus citation counts plotted as a probability distribution for all 197 <em>PLOS Biology</em> research articles published in 2010. Data collected May 20, 2013. Median 19 citations; 10% of papers have at least 50 citations. From Fenner <span class="citation" data-cites="fenner2013">(2013)</span>.</figcaption>
 </figure>

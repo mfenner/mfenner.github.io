@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <title>Introducing the Scholarly Markdown Bundle</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="markdown, bundle" />
+
+    <!-- RDFa Metadata (in DublinCore) -->
+    <meta property="dc:title" content="Introducing the Scholarly Markdown Bundle" />
+    <meta property="dc:format" content="text/html" />
+    <meta property="dc:language" content="en" />
+    <meta property="dc:identifier" content="/2015/04/23/introducing-scholarly-markdown-bundle" />
+    <meta property="dc:rights" content="CC-BY-NC" />
+    <meta property="dc:source" content="Gobbledygook" />
+    <meta property="dc:subject" content="Scholarly Communication" />
+    <meta property="dc:type" content="website" />
+
+    <!-- Google Scholar Metadata -->
+    <meta name="citation_title" content="Introducing the Scholarly Markdown Bundle"/>
+    <meta name="citation_journal_title" content="Gobbledygook"/>
+
+    <link rel="alternate" type="application/rss+xml" title="Gobbledygook" href="/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Gobbledygook" href="/atom.xml" />
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/app-7b11536ae5581522c573f3f553590ae2.css">
+    <link rel="stylesheet" href="/assets/jasny-bootstrap.min-29c6b484ddca96fa14a48394c0cf415b.css">
+    <link rel="stylesheet" href="/assets/navmenu-push-f57c8aea8e44efd42b5d7fc575383151.css">
+    <link rel="stylesheet" href="/assets/fluidbox-cc1b5668a8c598b1c2fcc5e15e073f33.css">
+
+    <!-- d3.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.min.js"></script>
+
+    <!-- Typekit -->
+    <script type="text/javascript" src="//use.typekit.net/kil7puw.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  </head>
+
+
+  <body>
+    <nav id="navmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+  <a class="navmenu-brand" href="#">Gobbledygook</a>
+  <ul class="nav navmenu-nav">
+  
+    <li><span class="glyphicon glyphicon-time"></span> <a href="http://github.com/mfenner/blog/commits/source/_posts/2015-04-23-introducing-scholarly-markdown-bundle.md">Version History</a></li>
+    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#mfenner/mfenner.github.io/edit/source/_posts/2015-04-23-introducing-scholarly-markdown-bundle.md">Send Edit Request</a></li>
+    
+    <li><span class="glyphicon glyphicon-tags"></span> Tags
+      <ul class="tag-list">
+        
+        
+  
+  	<li><a href="/tags.html#markdown-ref">markdown</a></li>
+  
+  	<li><a href="/tags.html#bundle-ref">bundle</a></li>
+  
+
+
+
+      </ul>
+    </li>
+    
+    <li><span class="glyphicon glyphicon-home"></span> <a href="/">Home</a></li>
+    <li><span class="glyphicon glyphicon-info-sign"></span> <a href="/about.html">About</a></li>
+    <li><span class="glyphicon glyphicon-tags"></span> <a href="/tags.html">All Tags</a></li>
+  </ul>
+</nav>
+
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#navmenu" data-canvas="body">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="page-header">
+            <h1>Introducing the Scholarly Markdown Bundle</h1>
+            <p>23 April 2015 by
+            
+            <a href="/about.html">Martin Fenner</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>Using Markdown to author scholarly documents is an attractive alternative to the standard authoring tools Microsoft Word and LaTeX. The feeling shared by many is that <a href="http://blog.martinfenner.org/2013/06/17/what-is-scholarly-markdown/">Scholarly Markdown</a> is 80% there, and that more effort is needed for the remaining 20% - moving markdown from a niche into the mainstream. What is mainly needed is building tools that connect the existing tools and ideas, resulting in one or more services attractive to a critical number of users. But maybe we also need to rethink the essential parts of Scholarly Markdown. In this post I propose that we expand the concept and define the <em>Scholarly Markdown Bundle</em>.<!--more--></p>
+<p>It is becoming increasingly clear that scholarly work can’t be adaequately described in a single text document, most commonly the journal article. Not only are there associated metadata, assets such as figures and supplementary information, but also the research data and software needed to produce the work described in the publication. The obvious next step is to think of scholarly work as a collection of objects, most clearly described by Carol Goble and others as <a href="https://researchobject.github.io/specifications/bundle/">Research Object Bundle</a>.</p>
+<p>There will probably never be a single authoring tool and format that pleases everyone. Markdown has particular inherent strengths and weaknesses, complex math or tables will probably always be easier with other formats. The strength of markdown is the simplicity of the format. Some things are hard or impossible to do, but many other things are much simpler. Creating a useful markdown editor is much easier than a word processor reading/writing <code>docx</code> format. Markdown is also a perfect format to <a href="http://blog.martinfenner.org/2014/08/25/using-microsoft-word-with-git/">work with</a> version control systems such as git.</p>
+<p>This low barrier of entry makes markdown perfect to be integrated into many workflows. And we can go one step further than ePub and Research Object Bundle, which use the related Universal Container Format (<a href="https://wikidocs.adobe.com/wiki/display/PDFNAV/Universal+Container+Format">UCF</a>) and ePub Open Container Format (<a href="http://www.idpf.org/epub/301/spec/epub-ocf.html">OCF</a>), respectively. Instead of using zip to compress a folder into a single file we can use git version control instead: git provides the commands <code>git bundle</code> and <code>git archive</code> to compress a project under version control with or without version history. I feel this format is both more powerful So I propose the <em>Scholarly Markdown Bundle</em>:</p>
+<ul>
+<li>a git repository with one or more markdown files, either as a folder, or compressed into a single file using <code>git bundle</code>
+</li>
+<li>a particular flavor or markdown called Scholarly Markdown, and discussed here and elsewhere before</li>
+<li>a <code>citeproc.json</code> file in the root of the project that contains all metadata relevant to the container, including references</li>
+</ul>
+<p>The <code>citeproc.json</code> file is similar to the minimal metadata schema <a href="https://github.com/mbjones/codemeta">codemeta</a> proposed by Matt Jones and others, but is in the format used by Pandoc today. This is <a href="/2013/07/30/citeproc-yaml-for-bibliographies/">important</a> because it adds citation parsing support out of the box. The last two points rely on the <a href="http://pandoc.org/">Pandoc</a> document conversion tool, so Scholarly Markdown bundles are really <strong>markdown</strong> + <strong>Pandoc</strong> + <strong>Citeproc/CSL</strong> + <strong>git</strong>. The format is flexible enough to not only describe scholarly articles, but also other kinds of scholarly works, including scientific software managed with git version control. And it integrates nicely with a number of existing workflows, e.g. an R project using RStudio for both code and text (in Rmarkdown). This format should also work for blogs like this one, but I would have to separate the blog posts from the Jekyll site generator code, a direction I suggested in the <a href="/2015-03-23-blogging-beyond-jekyll/">last</a> post.</p>
+<div class="references">
+
+</div>
+</body></html>
+
+
+            <div class="license">
+              
+            </div>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gobbledy'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+          </div>
+        </div>
+
+        <!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+<span
+  class="Z3988"
+  title="ctx_ver=Z39.88-2004
+  &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+  &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+  &amp;rft.title=Introducing the Scholarly Markdown Bundle
+  &amp;rft.creator=Martin Fenner
+  &amp;rft.date=2015-04-23
+  &amp;rft.language=EN
+  &amp;rft.rights=CC0
+  &amp;rft_id=http://blog.martinfenner.org/2015/04/23/introducing-scholarly-markdown-bundle">
+</span>
+
+        <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36379104-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <!-- Fluidbox https://github.com/terrymun/Fluidbox -->
+    <script src="/js/js-yaml.min.js"></script>
+    <script src="/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/jquery.fluidbox.min.js"></script>
+    <script type='text/javascript'>
+      $(function () {
+        $("a").fluidbox();
+      });
+    </script>
+
+    <!-- Bootstrap -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/jasny-bootstrap.min.js"></script>
+
+    <!-- MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>
