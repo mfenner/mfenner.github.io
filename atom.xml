@@ -4,7 +4,7 @@
  <title>Gobbledygook</title>
  <link href="http://blog.martinfenner.org//atom.xml" rel="self"/>
  <link href="http://blog.martinfenner.org"/>
- <updated>2015-04-23T21:31:24+00:00</updated>
+ <updated>2015-04-24T13:15:30+00:00</updated>
  <id>http://blog.martinfenner.org</id>
  <author>
    <name>Martin Fenner</name>
@@ -26,7 +26,7 @@
 &lt;li&gt;a particular flavor or markdown called Scholarly Markdown, and discussed here and elsewhere before&lt;/li&gt;
 &lt;li&gt;a &lt;code&gt;citeproc.json&lt;/code&gt; file in the root of the project that contains all metadata relevant to the container, including references&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The &lt;code&gt;citeproc.json&lt;/code&gt; file is similar to the minimal metadata schema &lt;a href=&quot;https://github.com/mbjones/codemeta&quot;&gt;codemeta&lt;/a&gt; proposed by Matt Jones and others, but is in the format used by Pandoc today. This is &lt;a href=&quot;/2013/07/30/citeproc-yaml-for-bibliographies/&quot;&gt;important&lt;/a&gt; because it adds citation parsing support out of the box. The last two points rely on the &lt;a href=&quot;http://pandoc.org/&quot;&gt;Pandoc&lt;/a&gt; document conversion tool, so Scholarly Markdown bundles are really &lt;strong&gt;markdown&lt;/strong&gt; + &lt;strong&gt;Pandoc&lt;/strong&gt; + &lt;strong&gt;Citeproc/CSL&lt;/strong&gt; + &lt;strong&gt;git&lt;/strong&gt;. The format is flexible enough to not only describe scholarly articles, but also other kinds of scholarly works, including scientific software managed with git version control. And it integrates nicely with a number of existing workflows, e.g. an R project using RStudio for both code and text (in Rmarkdown). This format should also work for blogs like this one, but I would have to separate the blog posts from the Jekyll site generator code, a direction I suggested in the &lt;a href=&quot;/2015-03-23-blogging-beyond-jekyll/&quot;&gt;last&lt;/a&gt; post.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;citeproc.json&lt;/code&gt; file is similar to the minimal metadata schema &lt;a href=&quot;https://github.com/mbjones/codemeta&quot;&gt;codemeta&lt;/a&gt; proposed by Matt Jones and others, but is in the format used by Pandoc today. This is &lt;a href=&quot;/2013/07/30/citeproc-yaml-for-bibliographies/&quot;&gt;important&lt;/a&gt; because it adds citation parsing support out of the box. The last two points rely on the &lt;a href=&quot;http://pandoc.org/&quot;&gt;Pandoc&lt;/a&gt; document conversion tool, so Scholarly Markdown bundles are really &lt;strong&gt;markdown&lt;/strong&gt; + &lt;strong&gt;Pandoc&lt;/strong&gt; + &lt;strong&gt;Citeproc/CSL&lt;/strong&gt; + &lt;strong&gt;git&lt;/strong&gt;. The format is flexible enough to not only describe scholarly articles, but also other kinds of scholarly works, including scientific software managed with git version control. And it integrates nicely with a number of existing workflows, e.g. an R project using RStudio for both code and text (in Rmarkdown). This format should also work for blogs like this one, but I would have to separate the blog posts from the Jekyll site generator code, a direction I suggested in the &lt;a href=&quot;/2015/03/23/blogging-beyond-jekyll/&quot;&gt;last&lt;/a&gt; post.&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 
 &lt;/div&gt;
