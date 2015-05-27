@@ -109,7 +109,7 @@
 <blockquote>
 <p>Literate programming is a methodology that combines a programming language with a documentation language, thereby making programs more robust, more portable, more easily maintained, and arguably more fun to write than programs that are written only in a high-level language. The main idea is to treat a program as a piece of literature, addressed to human beings rather than to a computer. The program is also viewed as a hypertext document, rather like the World Wide Web.<!--more--></p>
 </blockquote>
-<p>Literatue Programming by <a href="http://www-cs-faculty.stanford.edu/~uno/">Donald Knuth</a> <span class="citation" data-cites="knuth_1983">(1983)</span> is a seminal book that introduces the concept of literate programming. Using technology available in 2014 we can make a small but important change to the last sentence:</p>
+<p>Literatue Programming by <a href="http://www-cs-faculty.stanford.edu/~uno/">Donald Knuth</a> <span class="citation" data-cites="knuth_1983">(<a href="#ref-knuth_1983">1983</a>)</span> is a seminal book that introduces the concept of literate programming. Using technology available in 2014 we can make a small but important change to the last sentence:</p>
 <blockquote>
 <p>The program is also viewed as a hypertext document on the World Wide Web.</p>
 </blockquote>
@@ -165,13 +165,17 @@ d$y &lt;-<span class="st"> </span><span class="kw">append</span>(d$y, <span clas
 
 <span class="kw">par</span>(opar)</code></pre></div>
 <figure>
-<a href=""><img src="/figures/density_plot_example-1.svg" alt="Figure 1. Citation counts for PLOS Biology articles published in 2010. Scopus citation counts plotted as a probability distribution for all 197 PLOS Biology research articles published in 2010. Data collected May 20, 2013. Median 19 citations; 10% of papers have at least 50 citations. From Fenner (2013)."></a><figcaption><strong>Figure 1. Citation counts for PLOS Biology articles published in 2010.</strong> Scopus citation counts plotted as a probability distribution for all 197 <em>PLOS Biology</em> research articles published in 2010. Data collected May 20, 2013. Median 19 citations; 10% of papers have at least 50 citations. From Fenner <span class="citation" data-cites="fenner2013">(2013)</span>.</figcaption>
+<a href=""><img src="/figures/density_plot_example-1.svg" alt="Figure 1. Citation counts for PLOS Biology articles published in 2010. Scopus citation counts plotted as a probability distribution for all 197 PLOS Biology research articles published in 2010. Data collected May 20, 2013. Median 19 citations; 10% of papers have at least 50 citations. From Fenner (2013)."></a><figcaption><strong>Figure 1. Citation counts for PLOS Biology articles published in 2010.</strong> Scopus citation counts plotted as a probability distribution for all 197 <em>PLOS Biology</em> research articles published in 2010. Data collected May 20, 2013. Median 19 citations; 10% of papers have at least 50 citations. From Fenner <span class="citation" data-cites="fenner2013">(<a href="#ref-fenner2013">2013</a>)</span>.</figcaption>
 </figure>
 <p>All this functionality is provided by <a href="http://yihui.name/knitr/">knitr</a>, a package for the R statistical programming language. knitr has been around for a while, but integration into the <a href="http://jekyllrb.com/">Jekyll</a> blogging platform is still fragile. Earlier this week at the <a href="https://github.com/ropensci/hackathon">rOpenSci hackathon</a> (more on this later) a group of us worked hard to improve this integration. We are still not completely done, but the source code is available <a href="https://github.com/ropensci/docs">here</a>. Most importantly, all the conversion happens on the server, and we are only using freely available tools. I have now enabled this functionality for this blog, so expect more code embedded examples in the future.</p>
 <div class="references">
 <h2 id="references" class="unnumbered">References</h2>
-<p>Fenner, M. (2013). What can article-level metrics do for you? <em>PLoS Biol</em>, <em>11</em>(10), e1001687. doi:<a href="http://dx.doi.org/10.1371/journal.pbio.1001687">10.1371/journal.pbio.1001687</a></p>
+<div id="ref-fenner2013">
+<p>Fenner, M. (2013). What can article-level metrics do for you? <em>PLoS Biol</em>, <em>11</em>(10), e1001687. <a href="http://doi.org/10.1371/journal.pbio.1001687">doi:10.1371/journal.pbio.1001687</a></p>
+</div>
+<div id="ref-knuth_1983">
 <p>Knuth, D. E., Stanford University, &amp; Computer Science Department. (1983). <em>Literate programming</em>. Stanford, CA: Dept. of Computer Science, Stanford University.</p>
+</div>
 </div>
 </body></html>
 

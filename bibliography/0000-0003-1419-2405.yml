@@ -1,7 +1,7 @@
 ---
 orcid: 0000-0003-1419-2405
 created_at: '2012-10-08T20:49:20+00:00'
-updated_at: '2015-03-13T18:14:35+00:00'
+updated_at: '2015-05-20T07:37:15+00:00'
 biography: Martin Fenner is the technical lead for the PLOS Article-Level Metrics
   project. Before taking this position in 2012 he worked as a medical oncologist at
   the Hannover Medical School Cancer Center in Germany. He has served on the ORCID
@@ -39,459 +39,6 @@ references:
   issued:
     date-parts:
     - - 2014
-- DOI: 10.6084/M9.FIGSHARE.1041821
-  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.1041821
-  author:
-  - family: Costas
-  - family: Rodrigo
-    given: Zohreh Zahedi Martin Fenner
-  publisher: Figshare
-  title: How consistent are altmetrics providers? Study of 1000 PLOS ONE publications
-    using the PLOS ALM, Mendeley and Altmetric.com APIs
-  genre: misc
-  id: costas2014a
-  type: ''
-  issued:
-    date-parts:
-    - - 2014
-- title: Altmetrics and Other Novel Measures for Scientific Impact
-  ISBN: 978-3-319-00025-1
-  URL: http://dx.doi.org/10.1007/978-3-319-00026-8_12
-  DOI: 10.1007/978-3-319-00026-8_12
-  publisher: Springer-Verlag
-  author:
-  - family: Fenner
-    given: Martin
-  page: 179-189
-  genre: book
-  id: fenner2014c
-  type: ''
-  issued:
-    date-parts:
-    - - 2014
-      - 12
-- title: Prospective randomized double-blind multicenter phase II study comparing
-    chemotherapy with gemcitabine and cisplatin plus sorafenib vs gemcitabine and
-    cisplatin plus placebo in locally advanced and/or metastasized urothelial cancer
-    - SUSE - (AUO-AB 31/05).
-  author:
-  - family: Fenner
-    given: Martin
-  DOI: 10.1111/bju.12437
-  URL: http://dx.doi.org/10.1111/bju.12437
-  id: fenner2013b
-  type: article-journal
-  issued:
-    date-parts:
-    - - 2013
-- title: The many faces of article-level metrics
-  author:
-  - family: Fenner
-    given: Martin
-  container-title: Bulletin of the American Society for Information Science and Technology
-  id: fenner2013d
-  type: article-journal
-  issued:
-    date-parts:
-    - - 2013
-- DOI: 10.6084/M9.FIGSHARE.107019
-  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.107019
-  author:
-  - family: Consortium
-    given: ODIN
-  - family: Fenner
-    given: Martin
-  - family: Thorisson
-    given: Gudmundur
-  publisher: Figshare
-  title: TEST Kickoff report
-  genre: misc
-  id: odin2013a
-  type: ''
-  issued:
-    date-parts:
-    - - 2013
-- DOI: 10.5281/ZENODO.1239
-  URL: http://dx.doi.org/10.5281/ZENODO.1239
-  author:
-  - family: Fenner
-    given: Martin
-  publisher: OpenAIRE Orphan Record Repository
-  title: Publication FP7 Funding Acknowledgment - PLOS OpenAIRE
-  genre: misc
-  id: fenner2013e
-  type: ''
-  issued:
-    date-parts:
-    - - 2013
-- DOI: 10.6084/M9.FIGSHARE.706340
-  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.706340
-  author:
-  - family: Fenner
-    given: Martin
-  publisher: Figshare
-  title: Metrics and Attribution
-  genre: misc
-  id: fenner2013f
-  type: ''
-  issued:
-    date-parts:
-    - - 2013
-- title: ! 'Letter from the Guest Content Editor: Altmetrics Have Come of Age'
-  author:
-  - family: Fenner
-    given: Martin
-  container-title: Information Standards Quarterly
-  DOI: 10.3789/isqv25no2.2013.01
-  URL: http://dx.doi.org/10.3789/isqv25no2.2013.01
-  id: fenner2013g
-  type: article-journal
-  issued:
-    date-parts:
-    - - 2013
-- DOI: 10.6084/M9.FIGSHARE.824314
-  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.824314
-  author:
-  - family: brase
-    non-dropping-particle: jan
-  - family: Ruiz
-    given: ODIN Consortium Martin Fenner Gudmundur Thorisson Sergio
-  publisher: Figshare
-  title: D4.1 Conceptual model of interoperability
-  genre: misc
-  id: jan2013a
-  type: ''
-  issued:
-    date-parts:
-    - - 2013
-- DOI: 10.6084/M9.FIGSHARE.154691
-  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.154691
-  author:
-  - family: Consortium
-    given: ODIN
-  - family: Thorisson
-    given: Gudmundur
-  - family: Fenner
-    given: Martin
-  publisher: Figshare
-  title: D2.1 Kick off preparation, Communication plan and Website
-  genre: misc
-  id: odin2013b
-  type: ''
-  issued:
-    date-parts:
-    - - 2013
-- DOI: 10.6084/M9.FIGSHARE.816962
-  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.816962
-  author:
-  - family: Lin
-  - family: Jennifer
-    given: Martin Fenner
-  publisher: Figshare
-  title: Cumulative usage statistics for PLOS website
-  genre: misc
-  id: lin2013a
-  type: ''
-  issued:
-    date-parts:
-    - - 2013
-- DOI: 10.6084/M9.FIGSHARE.816961
-  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.816961
-  author:
-  - family: Fenner
-    given: Martin
-  publisher: Figshare
-  title: Cumulative usage statistics for PLOS papers from PubMed Central
-  genre: misc
-  id: fenner2013h
-  type: ''
-  issued:
-    date-parts:
-    - - 2013
-- DOI: 10.6084/M9.FIGSHARE.681737
-  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.681737
-  author:
-  - family: Fenner
-    given: Martin
-  - family: Lin
-    given: Jennifer
-  publisher: Figshare
-  title: Article-Level Metrics Hannover Medical School
-  genre: misc
-  id: martin2013a
-  type: ''
-  issued:
-    date-parts:
-    - - 2013
-- title: ! 'Altmetrics in Evolution: Defining and Redefining the Ontology of Article-Level
-    Metrics'
-  volume: '25'
-  URL: http://dx.doi.org/10.3789/isqv25no2.2013.04
-  DOI: 10.3789/isqv25no2.2013.04
-  issue: '2'
-  container-title: Information Standards Quarterly
-  publisher: National Information Standards Organization
-  author:
-  - family: Lin
-    given: Jennifer
-  - family: Fenner
-    given: Martin
-  page: '20'
-  genre: article
-  id: lin2013b
-  type: ''
-  issued:
-    date-parts:
-    - - 2013
-      - 6
-- DOI: 10.6084/M9.FIGSHARE.821213
-  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.821213
-  author:
-  - family: Zahedi
-  - family: Zohreh
-    given: Martin Fenner
-  publisher: Figshare
-  title: 5000 random journal article CrossRef DOIs from 2012
-  genre: misc
-  id: zahedi2013a
-  type: ''
-  issued:
-    date-parts:
-    - - 2013
-- DOI: 10.6084/M9.FIGSHARE.821209
-  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.821209
-  author:
-  - family: Zahedi
-  - family: Zohreh
-    given: Martin Fenner Juan Pablo Alperin
-  publisher: Figshare
-  title: 5000 random journal article CrossRef DOIs from 2011
-  genre: misc
-  id: zahedi2013b
-  type: ''
-  issued:
-    date-parts:
-    - - 2013
-- DOI: 10.3205/12AGMB03
-  URL: http://dx.doi.org/10.3205/12AGMB03
-  author:
-  - family: Fenner
-    given: Martin
-  publisher: German Medical Science GMS Publishing House
-  title: Wie kann die Bibliothek die Sichtbarkeit ihrer Wissenschaftler erhöhen?
-  genre: misc
-  id: fenner2012a
-  type: ''
-  issued:
-    date-parts:
-    - - 2012
-- DOI: 10.6084/M9.FIGSHARE.90828
-  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.90828
-  author:
-  - family: Fenner
-    given: Martin
-  - family: Adie
-    given: Euan
-  publisher: Figshare
-  title: CrowdoMeter Tweets
-  genre: misc
-  id: martin2012a
-  type: ''
-  issued:
-    date-parts:
-    - - 2012
-- DOI: 10.6084/M9.FIGSHARE.90829
-  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.90829
-  author:
-  - family: Fenner
-    given: Martin
-  - family: Adie
-    given: Euan
-  publisher: Figshare
-  title: CrowdoMeter Tweet Classifications
-  genre: data
-  id: martin2012b
-  type: ''
-  issued:
-    date-parts:
-    - - 2012
-- title: New Systemic Therapies for Refractory Tumors
-  ISBN: 978-1-84800-369-9
-  URL: http://dx.doi.org/10.1007/978-1-84800-370-5_18
-  DOI: 10.1007/978-1-84800-370-5_18
-  publisher: Springer-Verlag
-  author:
-  - family: Daugaard
-    given: Gedske
-  - family: Fenner
-    given: Martin H.
-  page: 253-261
-  genre: book
-  id: daugaard2011a
-  type: ''
-  issued:
-    date-parts:
-    - - 2011
-      - 8
-- title: ! "7150 Response of renal lesions in patients with metastatic renal cell
-    carcinoma (mRCC) treated with sunitinib â\x80\x93 a single center retrospective
-    analysis"
-  volume: '7'
-  URL: http://dx.doi.org/10.1016/S1359-6349(09)71483-1
-  DOI: 10.1016/S1359-6349(09)71483-1
-  issue: '2'
-  container-title: European Journal of Cancer Supplements
-  publisher: Elsevier
-  author:
-  - family: Seidel
-    given: C.
-  - family: Fenner
-    given: Martin
-  - family: Reuter
-    given: C.
-  - family: Ivanyi
-    given: P.
-  - family: Ganser
-    given: A.
-  - family: GrÃ¼nwald
-    given: V.
-  page: '438'
-  genre: article
-  id: seidel2009a
-  type: ''
-  issued:
-    date-parts:
-    - - 2009
-      - 9
-- title: Targeted therapies for patients with germ cell tumors.
-  author:
-  - family: Fenner
-    given: Martin
-  DOI: 10.1517/13543784.17.4.511
-  URL: http://dx.doi.org/10.1517/13543784.17.4.511
-  id: fenner2008a
-  type: article-journal
-  issued:
-    date-parts:
-    - - 2008
-- title: Blogs, Wikis und Podcasts im Unterricht
-  volume: '38'
-  URL: http://dx.doi.org/10.1002/biuz.200890080
-  DOI: 10.1002/biuz.200890080
-  issue: '5'
-  container-title: Biologie in unserer Zeit
-  publisher: Wiley Blackwell (John Wiley & Sons)
-  author:
-  - family: Fenner
-    given: Martin
-  page: 284-286
-  genre: article
-  id: fenner2008b
-  type: ''
-  issued:
-    date-parts:
-    - - 2008
-      - 10
-- title: ! 'Transcriptional activating activity of Smad4: Roles of SMAD hetero-oligomerization
-    and enhancement by an associating transactivator'
-  container-title: Proceedings of the National Academy of Sciences of the United States
-    of America
-  volume: '95'
-  issue: '17'
-  page: 9785-9790
-  author:
-  - family: Shioda
-    given: T.
-  - family: Lechleider
-    given: R.J.
-  - family: Dunwoodie
-    given: S.L.
-  - family: Li
-    given: H.
-  - family: Yahata
-    given: T.
-  - family: De Caestecker
-    given: M.P.
-  - family: Fenner
-    given: M.H.
-  - family: Roberts
-    given: A.B.
-  - family: Isselbacher
-    given: K.J.
-  genre: article
-  id: shioda1998a
-  type: ''
-  issued:
-    date-parts:
-    - - 1998
-- title: European studies of interleukin-2 in metastatic renal cell carcinoma.
-  author:
-  - family: Fenner
-    given: Martin
-  id: fenner1993a
-  type: article-journal
-  issued:
-    date-parts:
-    - - 1993
-- title: Neuropsychiatric symptoms during treatment with interleukin-2 and interferon-Î±
-  volume: '341'
-  URL: http://dx.doi.org/10.1016/0140-6736(93)90172-D
-  DOI: 10.1016/0140-6736(93)90172-D
-  issue: '8841'
-  container-title: The Lancet
-  publisher: Elsevier
-  author:
-  - family: Fenner
-    given: MartinH.
-  - family: Lopez HÃ¤nninen
-    given: Enrique
-  - family: Kirchner
-    given: HartmutH.
-  - family: Poliwoda
-    given: Hubert
-  - family: Atzpodien
-    given: Jens
-  page: '372'
-  genre: article
-  id: fenner1993b
-  type: ''
-  issued:
-    date-parts:
-    - - 1993
-      - 2
-- title: Limited Efficacy of Interferon-Î± and Vinblastine as Second Line Biochemotherapy
-    Regimen in Patients with Progressive Metastatic Renal Cell Carcinoma
-  volume: '8'
-  URL: http://dx.doi.org/10.1089/cbr.1993.8.301
-  DOI: 10.1089/cbr.1993.8.301
-  issue: '4'
-  container-title: Cancer Biotherapy
-  publisher: Mary Ann Liebert
-  author:
-  - family: Hanninen
-    given: Enrique Lopez
-  - family: Fenner
-    given: Martin
-  - family: Kirchner
-    given: Hartmut
-  - family: Deckert
-    given: Markus
-  - family: Duensing
-    given: Stefan
-  - family: Menzel
-    given: Thomas
-  - family: Poliwoda
-    given: Hubert
-  - family: Atzpodien
-    given: Jens
-  page: 301-306
-  genre: article
-  id: hanninen1993a
-  type: ''
-  issued:
-    date-parts:
-    - - 1993
-      - 1
 - title: ! 'Prospective randomized double-blind multicentre phase II study comparing
     gemcitabine and cisplatin plus sorafenib chemotherapy with gemcitabine and cisplatin
     plus placebo in locally advanced and/or metastasized urothelial cancer: SUSE (AUO-AB
@@ -545,6 +92,91 @@ references:
   issued:
     date-parts:
     - - 2014
+- DOI: 10.6084/M9.FIGSHARE.1041821
+  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.1041821
+  author:
+  - family: Costas
+  - family: Rodrigo
+    given: Zohreh Zahedi Martin Fenner
+  publisher: Figshare
+  title: How consistent are altmetrics providers? Study of 1000 PLOS ONE publications
+    using the PLOS ALM, Mendeley and Altmetric.com APIs
+  genre: misc
+  id: costas2014a
+  type: ''
+  issued:
+    date-parts:
+    - - 2014
+- title: Altmetrics and Other Novel Measures for Scientific Impact
+  ISBN: 978-3-319-00025-1
+  URL: http://dx.doi.org/10.1007/978-3-319-00026-8_12
+  DOI: 10.1007/978-3-319-00026-8_12
+  publisher: Springer-Verlag
+  author:
+  - family: Fenner
+    given: Martin
+  page: 179-189
+  genre: book
+  id: fenner2014c
+  type: ''
+  issued:
+    date-parts:
+    - - 2014
+      - 12
+- title: Prospective randomized double-blind multicenter phase II study comparing
+    chemotherapy with gemcitabine and cisplatin plus sorafenib vs gemcitabine and
+    cisplatin plus placebo in locally advanced and/or metastasized urothelial cancer
+    - SUSE - (AUO-AB 31/05).
+  author:
+  - family: Fenner
+    given: Martin
+  DOI: 10.1111/bju.12437
+  URL: http://dx.doi.org/10.1111/bju.12437
+  id: fenner2013b
+  type: article-journal
+  issued:
+    date-parts:
+    - - 2013
+- title: The many faces of article-level metrics
+  author:
+  - family: Fenner
+    given: Martin
+  container-title: Bulletin of the American Society for Information Science and Technology
+  id: fenner2013e
+  type: article-journal
+  issued:
+    date-parts:
+    - - 2013
+- DOI: 10.6084/M9.FIGSHARE.107019
+  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.107019
+  author:
+  - family: Consortium
+    given: ODIN
+  - family: Fenner
+    given: Martin
+  - family: Thorisson
+    given: Gudmundur
+  publisher: Figshare
+  title: TEST Kickoff report
+  genre: misc
+  id: odin2013a
+  type: ''
+  issued:
+    date-parts:
+    - - 2013
+- DOI: 10.5281/ZENODO.1239
+  URL: http://dx.doi.org/10.5281/ZENODO.1239
+  author:
+  - family: Fenner
+    given: Martin
+  publisher: OpenAIRE Orphan Record Repository
+  title: Publication FP7 Funding Acknowledgment - PLOS OpenAIRE
+  genre: misc
+  id: fenner2013f
+  type: ''
+  issued:
+    date-parts:
+    - - 2013
 - title: PlosOpenR-Exploring FP7 funded PLOS publications
   container-title: Information Services and Use
   volume: '33'
@@ -580,6 +212,19 @@ references:
   DOI: 10.3233/978-1-61499-270-7-77
   URL: http://dx.doi.org/10.3233/978-1-61499-270-7-77
   id: jahn2013b
+  type: ''
+  issued:
+    date-parts:
+    - - 2013
+- DOI: 10.6084/M9.FIGSHARE.706340
+  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.706340
+  author:
+  - family: Fenner
+    given: Martin
+  publisher: Figshare
+  title: Metrics and Attribution
+  genre: misc
+  id: fenner2013g
   type: ''
   issued:
     date-parts:
@@ -718,6 +363,154 @@ references:
   issued:
     date-parts:
     - - 2013
+- title: ! 'Letter from the Guest Content Editor: Altmetrics Have Come of Age'
+  author:
+  - family: Fenner
+    given: Martin
+  container-title: Information Standards Quarterly
+  DOI: 10.3789/isqv25no2.2013.01
+  URL: http://dx.doi.org/10.3789/isqv25no2.2013.01
+  id: fenner2013h
+  type: article-journal
+  issued:
+    date-parts:
+    - - 2013
+- DOI: 10.6084/M9.FIGSHARE.824314
+  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.824314
+  author:
+  - family: brase
+    non-dropping-particle: jan
+  - family: Ruiz
+    given: ODIN Consortium Martin Fenner Gudmundur Thorisson Sergio
+  publisher: Figshare
+  title: D4.1 Conceptual model of interoperability
+  genre: misc
+  id: jan2013a
+  type: ''
+  issued:
+    date-parts:
+    - - 2013
+- DOI: 10.6084/M9.FIGSHARE.154691
+  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.154691
+  author:
+  - family: Consortium
+    given: ODIN
+  - family: Thorisson
+    given: Gudmundur
+  - family: Fenner
+    given: Martin
+  publisher: Figshare
+  title: D2.1 Kick off preparation, Communication plan and Website
+  genre: misc
+  id: odin2013b
+  type: ''
+  issued:
+    date-parts:
+    - - 2013
+- DOI: 10.6084/M9.FIGSHARE.816962
+  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.816962
+  author:
+  - family: Lin
+  - family: Jennifer
+    given: Martin Fenner
+  publisher: Figshare
+  title: Cumulative usage statistics for PLOS website
+  genre: misc
+  id: lin2013a
+  type: ''
+  issued:
+    date-parts:
+    - - 2013
+- DOI: 10.6084/M9.FIGSHARE.816961
+  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.816961
+  author:
+  - family: Fenner
+    given: Martin
+  publisher: Figshare
+  title: Cumulative usage statistics for PLOS papers from PubMed Central
+  genre: misc
+  id: fenner2013i
+  type: ''
+  issued:
+    date-parts:
+    - - 2013
+- DOI: 10.6084/M9.FIGSHARE.681737
+  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.681737
+  author:
+  - family: Fenner
+    given: Martin
+  - family: Lin
+    given: Jennifer
+  publisher: Figshare
+  title: Article-Level Metrics Hannover Medical School
+  genre: misc
+  id: martin2013a
+  type: ''
+  issued:
+    date-parts:
+    - - 2013
+- title: ! 'Altmetrics in Evolution: Defining and Redefining the Ontology of Article-Level
+    Metrics'
+  volume: '25'
+  URL: http://dx.doi.org/10.3789/isqv25no2.2013.04
+  DOI: 10.3789/isqv25no2.2013.04
+  issue: '2'
+  container-title: Information Standards Quarterly
+  publisher: National Information Standards Organization
+  author:
+  - family: Lin
+    given: Jennifer
+  - family: Fenner
+    given: Martin
+  page: '20'
+  genre: article
+  id: lin2013b
+  type: ''
+  issued:
+    date-parts:
+    - - 2013
+      - 6
+- DOI: 10.6084/M9.FIGSHARE.821213
+  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.821213
+  author:
+  - family: Zahedi
+  - family: Zohreh
+    given: Martin Fenner
+  publisher: Figshare
+  title: 5000 random journal article CrossRef DOIs from 2012
+  genre: misc
+  id: zahedi2013a
+  type: ''
+  issued:
+    date-parts:
+    - - 2013
+- DOI: 10.6084/M9.FIGSHARE.821209
+  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.821209
+  author:
+  - family: Zahedi
+  - family: Zohreh
+    given: Martin Fenner Juan Pablo Alperin
+  publisher: Figshare
+  title: 5000 random journal article CrossRef DOIs from 2011
+  genre: misc
+  id: zahedi2013b
+  type: ''
+  issued:
+    date-parts:
+    - - 2013
+- DOI: 10.3205/12AGMB03
+  URL: http://dx.doi.org/10.3205/12AGMB03
+  author:
+  - family: Fenner
+    given: Martin
+  publisher: German Medical Science GMS Publishing House
+  title: Wie kann die Bibliothek die Sichtbarkeit ihrer Wissenschaftler erhöhen?
+  genre: misc
+  id: fenner2012a
+  type: ''
+  issued:
+    date-parts:
+    - - 2012
 - title: Progression free survival of first line vascular endothelial growth factor-targeted
     therapy is an important prognostic parameter in patients with metastatic renal
     cell carcinoma
@@ -809,6 +602,36 @@ references:
   DOI: 10.1186/1471-2407-12-186
   URL: http://dx.doi.org/10.1186/1471-2407-12-186
   id: seidel2012b
+  type: ''
+  issued:
+    date-parts:
+    - - 2012
+- DOI: 10.6084/M9.FIGSHARE.90828
+  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.90828
+  author:
+  - family: Fenner
+    given: Martin
+  - family: Adie
+    given: Euan
+  publisher: Figshare
+  title: CrowdoMeter Tweets
+  genre: misc
+  id: martin2012a
+  type: ''
+  issued:
+    date-parts:
+    - - 2012
+- DOI: 10.6084/M9.FIGSHARE.90829
+  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.90829
+  author:
+  - family: Fenner
+    given: Martin
+  - family: Adie
+    given: Euan
+  publisher: Figshare
+  title: CrowdoMeter Tweet Classifications
+  genre: data
+  id: martin2012b
   type: ''
   issued:
     date-parts:
@@ -941,6 +764,24 @@ references:
   issued:
     date-parts:
     - - 2011
+- title: New Systemic Therapies for Refractory Tumors
+  ISBN: 978-1-84800-369-9
+  URL: http://dx.doi.org/10.1007/978-1-84800-370-5_18
+  DOI: 10.1007/978-1-84800-370-5_18
+  publisher: Springer-Verlag
+  author:
+  - family: Daugaard
+    given: Gedske
+  - family: Fenner
+    given: Martin H.
+  page: 253-261
+  genre: book
+  id: daugaard2011a
+  type: ''
+  issued:
+    date-parts:
+    - - 2011
+      - 8
 - title: Key issue <br>Collective action for the open researcher \& contributor ID
     (ORCID)
   container-title: Serials
@@ -1074,6 +915,47 @@ references:
   issued:
     date-parts:
     - - 2009
+- title: ! "7150 Response of renal lesions in patients with metastatic renal cell
+    carcinoma (mRCC) treated with sunitinib â\x80\x93 a single center retrospective
+    analysis"
+  volume: '7'
+  URL: http://dx.doi.org/10.1016/S1359-6349(09)71483-1
+  DOI: 10.1016/S1359-6349(09)71483-1
+  issue: '2'
+  container-title: European Journal of Cancer Supplements
+  publisher: Elsevier
+  author:
+  - family: Seidel
+    given: C.
+  - family: Fenner
+    given: Martin
+  - family: Reuter
+    given: C.
+  - family: Ivanyi
+    given: P.
+  - family: Ganser
+    given: A.
+  - family: GrÃ¼nwald
+    given: V.
+  page: '438'
+  genre: article
+  id: seidel2009a
+  type: ''
+  issued:
+    date-parts:
+    - - 2009
+      - 9
+- title: Targeted therapies for patients with germ cell tumors.
+  author:
+  - family: Fenner
+    given: Martin
+  DOI: 10.1517/13543784.17.4.511
+  URL: http://dx.doi.org/10.1517/13543784.17.4.511
+  id: fenner2008a
+  type: article-journal
+  issued:
+    date-parts:
+    - - 2008
 - title: Targeted therapies for patients with germ cell tumors
   container-title: Expert Opinion on Investigational Drugs
   volume: '17'
@@ -1089,7 +971,7 @@ references:
   genre: article
   DOI: 10.1517/13543784.17.4.511
   URL: http://dx.doi.org/10.1517/13543784.17.4.511
-  id: fenner2008c
+  id: fenner2008b
   type: ''
   issued:
     date-parts:
@@ -1479,7 +1361,7 @@ references:
   genre: article
   DOI: 10.1097/CCO.0b013e3283136971
   URL: http://dx.doi.org/10.1097/CCO.0b013e3283136971
-  id: fenner2008d
+  id: fenner2008c
   type: ''
   issued:
     date-parts:
@@ -1494,7 +1376,7 @@ references:
   genre: article
   DOI: 10.1038/452029a
   URL: http://dx.doi.org/10.1038/452029a
-  id: fenner2008e
+  id: fenner2008d
   type: ''
   issued:
     date-parts:
@@ -1683,6 +1565,24 @@ references:
   issued:
     date-parts:
     - - 2008
+- title: Blogs, Wikis und Podcasts im Unterricht
+  volume: '38'
+  URL: http://dx.doi.org/10.1002/biuz.200890080
+  DOI: 10.1002/biuz.200890080
+  issue: '5'
+  container-title: Biologie in unserer Zeit
+  publisher: Wiley Blackwell (John Wiley & Sons)
+  author:
+  - family: Fenner
+    given: Martin
+  page: 284-286
+  genre: article
+  id: fenner2008e
+  type: ''
+  issued:
+    date-parts:
+    - - 2008
+      - 10
 - title: Growth inhibition and apoptosis in human Philadelphia chromosome-positive
     lymphoblastic leukemia cell lines by treatment with the dual PPARα/γ ligand TZD18
   container-title: Blood
@@ -1904,6 +1804,38 @@ references:
   issued:
     date-parts:
     - - 2000
+- title: ! 'Transcriptional activating activity of Smad4: Roles of SMAD hetero-oligomerization
+    and enhancement by an associating transactivator'
+  container-title: Proceedings of the National Academy of Sciences of the United States
+    of America
+  volume: '95'
+  issue: '17'
+  page: 9785-9790
+  author:
+  - family: Shioda
+    given: T.
+  - family: Lechleider
+    given: R.J.
+  - family: Dunwoodie
+    given: S.L.
+  - family: Li
+    given: H.
+  - family: Yahata
+    given: T.
+  - family: De Caestecker
+    given: M.P.
+  - family: Fenner
+    given: M.H.
+  - family: Roberts
+    given: A.B.
+  - family: Isselbacher
+    given: K.J.
+  genre: article
+  id: shioda1998a
+  type: ''
+  issued:
+    date-parts:
+    - - 1998
 - title: ! 'Transcriptional activating activity of Smad4: Roles of SMAD hetero- oligomerization
     and enhancement by an associating transactivator'
   container-title: Proceedings of the National Academy of Sciences of the United States
@@ -2114,6 +2046,15 @@ references:
   issued:
     date-parts:
     - - 1994
+- title: European studies of interleukin-2 in metastatic renal cell carcinoma.
+  author:
+  - family: Fenner
+    given: Martin
+  id: fenner1993a
+  type: article-journal
+  issued:
+    date-parts:
+    - - 1993
 - title: Neuropsychiatric symptoms during treatment with interleukin-2 and interferon-α
     [8]
   container-title: Lancet
@@ -2131,11 +2072,37 @@ references:
   - family: Atzpodien
     given: J.
   genre: article
+  id: fenner1993b
+  type: ''
+  issued:
+    date-parts:
+    - - 1993
+- title: Neuropsychiatric symptoms during treatment with interleukin-2 and interferon-Î±
+  volume: '341'
+  URL: http://dx.doi.org/10.1016/0140-6736(93)90172-D
+  DOI: 10.1016/0140-6736(93)90172-D
+  issue: '8841'
+  container-title: The Lancet
+  publisher: Elsevier
+  author:
+  - family: Fenner
+    given: MartinH.
+  - family: Lopez HÃ¤nninen
+    given: Enrique
+  - family: Kirchner
+    given: HartmutH.
+  - family: Poliwoda
+    given: Hubert
+  - family: Atzpodien
+    given: Jens
+  page: '372'
+  genre: article
   id: fenner1993c
   type: ''
   issued:
     date-parts:
     - - 1993
+      - 2
 - title: Limited efficacy of interferon-α and vinblastine as second line biochemotherapy
     regimen in patients with progressive metastatic renal cell carcinoma
   container-title: Cancer Biotherapy
@@ -2160,11 +2127,44 @@ references:
   - family: Atzpodien
     given: J.
   genre: article
+  id: hanninen1993a
+  type: ''
+  issued:
+    date-parts:
+    - - 1993
+- title: Limited Efficacy of Interferon-Î± and Vinblastine as Second Line Biochemotherapy
+    Regimen in Patients with Progressive Metastatic Renal Cell Carcinoma
+  volume: '8'
+  URL: http://dx.doi.org/10.1089/cbr.1993.8.301
+  DOI: 10.1089/cbr.1993.8.301
+  issue: '4'
+  container-title: Cancer Biotherapy
+  publisher: Mary Ann Liebert
+  author:
+  - family: Hanninen
+    given: Enrique Lopez
+  - family: Fenner
+    given: Martin
+  - family: Kirchner
+    given: Hartmut
+  - family: Deckert
+    given: Markus
+  - family: Duensing
+    given: Stefan
+  - family: Menzel
+    given: Thomas
+  - family: Poliwoda
+    given: Hubert
+  - family: Atzpodien
+    given: Jens
+  page: 301-306
+  genre: article
   id: hanninen1993b
   type: ''
   issued:
     date-parts:
     - - 1993
+      - 1
 - title: Interleukin-2 in combination with interferon-α and 5-fluorouracil for metastatic
     renal cell cancer
   container-title: ! 'European Journal of Cancer Part A: General Topics'

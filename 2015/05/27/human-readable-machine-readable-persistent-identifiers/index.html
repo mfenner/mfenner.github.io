@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <title>Human-readable and machine-readable Persistent Identifiers</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="persistent identifier" />
+
+    <!-- RDFa Metadata (in DublinCore) -->
+    <meta property="dc:title" content="Human-readable and machine-readable Persistent Identifiers" />
+    <meta property="dc:format" content="text/html" />
+    <meta property="dc:language" content="en" />
+    <meta property="dc:identifier" content="/2015/05/27/human-readable-machine-readable-persistent-identifiers" />
+    <meta property="dc:rights" content="CC-BY-NC" />
+    <meta property="dc:source" content="Gobbledygook" />
+    <meta property="dc:subject" content="Scholarly Communication" />
+    <meta property="dc:type" content="website" />
+
+    <!-- Google Scholar Metadata -->
+    <meta name="citation_title" content="Human-readable and machine-readable Persistent Identifiers"/>
+    <meta name="citation_journal_title" content="Gobbledygook"/>
+
+    <link rel="alternate" type="application/rss+xml" title="Gobbledygook" href="/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Gobbledygook" href="/atom.xml" />
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/app-7b11536ae5581522c573f3f553590ae2.css">
+    <link rel="stylesheet" href="/assets/jasny-bootstrap.min-29c6b484ddca96fa14a48394c0cf415b.css">
+    <link rel="stylesheet" href="/assets/navmenu-push-f57c8aea8e44efd42b5d7fc575383151.css">
+    <link rel="stylesheet" href="/assets/fluidbox-cc1b5668a8c598b1c2fcc5e15e073f33.css">
+
+    <!-- d3.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.min.js"></script>
+
+    <!-- Typekit -->
+    <script type="text/javascript" src="//use.typekit.net/kil7puw.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  </head>
+
+
+  <body>
+    <nav id="navmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+  <a class="navmenu-brand" href="#">Gobbledygook</a>
+  <ul class="nav navmenu-nav">
+  
+    <li><span class="glyphicon glyphicon-time"></span> <a href="http://github.com/mfenner/blog/commits/source/_posts/2015-05-27-human-readable-machine-readable-persistent-identifiers.md">Version History</a></li>
+    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#mfenner/mfenner.github.io/edit/source/_posts/2015-05-27-human-readable-machine-readable-persistent-identifiers.md">Send Edit Request</a></li>
+    
+    <li><span class="glyphicon glyphicon-tags"></span> Tags
+      <ul class="tag-list">
+        
+        
+  
+  	<li><a href="/tags.html#persistent identifier-ref">persistent identifier</a></li>
+  
+
+
+
+      </ul>
+    </li>
+    
+    <li><span class="glyphicon glyphicon-home"></span> <a href="/">Home</a></li>
+    <li><span class="glyphicon glyphicon-info-sign"></span> <a href="/about.html">About</a></li>
+    <li><span class="glyphicon glyphicon-tags"></span> <a href="/tags.html">All Tags</a></li>
+  </ul>
+</nav>
+
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#navmenu" data-canvas="body">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="page-header">
+            <h1>Human-readable and machine-readable Persistent Identifiers</h1>
+            <p>27 May 2015 by
+            
+            <a href="/about.html">Martin Fenner</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>Yesterday Julie McMurry and co-authors published a preprint <strong>10 Simple rules for design, provision, and reuse of persistent identifiers for life science data</strong> <span class="citation" data-cites="mcmurry_2015">(McMurry et al., <a href="#ref-mcmurry_2015">2015</a>)</span>. This is an important paper trying to address a fundamental problem: how can we make persistent identifiers both human-readable and machine-readable?<!--more--></p>
+<p>Don’t be fooled by the title (used frequently by <a href="http://www.ploscollections.org/article/browse/issue/info%3Adoi%2F10.1371%2Fissue.pcol.v03.i01">PLOS Computational Biology</a>) - the paper doesn’t describe simple rules that help the average life sciences researcher. Rather, the paper deals with rather complex issues, and has 36 authors.</p>
+<p>There is general agreement that we need persistent identifiers for scholarly communication, and that also includes life sciences datasets, the focus of the paper. What is less clear is how to express these persistent identifiers. An identifier such as <strong>AB020317</strong> - for the mouse p53 gene - is ambiguous. It is not clear without additional information that this is an identifier for the GenBank nucleotide database, rather than <a href="https://www.flickr.com/photos/alexcycu/8936663973/">something completely different</a>. One common approach to make this identifier unambiguous is to use URIs (Uniform Resource Identifiers), e.g. <a href="http://www.ncbi.nlm.nih.gov/nuccore/AB020317" class="uri">http://www.ncbi.nlm.nih.gov/nuccore/AB020317</a> in this case.</p>
+<p>The paper doesn’t like this approach, and even states that “URIs are still among the most commonly used and most problematic identifiers in the bio-data ecosystem”. The text also states that “their length makes them unwieldy for humans working with the data or for referencing in publications or other text”, but doesn’t go into any detail why URIs are “problematic identifiers”, or why length is an issue in an online environment.</p>
+<p>This is an important weakness of the paper, because the authors propose an alternative: CURIEs or <strong>compact URIs</strong>. CURIEs were <a href="http://www.w3.org/TR/curie/">proposed</a> by the W3C a few years ago, as a way to make URIs <a href="http://crosstech.crossref.org/2008/12/curies_a_cure_for_uris.html">more human-readable</a>. The idea is simple, we use a namespace in addition to the local identifier, separated by a colon, e.g. <strong><a href="http://www.ebi.ac.uk/ena/data/view/AB020317">Genbank:AB020317</a></strong>.</p>
+<p>This approach has of course been common practice in the life sciences before CURIEs or even the WWW existed, and is still the most common approach how identifiers for life sciences data are referenced in the scholarly literature. Unfortunately there are important problems with CURIEs, most of them mentioned in the paper:</p>
+<ul>
+<li>Persistent identifiers need to be resolvable, without additional information we don’t know what to do with <strong><a href="http://www.ebi.ac.uk/ena/data/view/AB020317">Genbank:AB020317</a></strong>. Most life sciences researchers understand this CURIE, but that might not necessarily be true for less commonly used namespaces</li>
+<li>Namespaces are not necessarily unique, the paper uses <strong>GEO</strong> (which could mean Gene Expression Omnibus or GeoNames Ontology) as an example</li>
+<li>Rule 3 in the paper goes into great detail what characters and patterns should be avoided in local identifiers that are part of a CURIE. It is not clear whether these recommendations will always be followed or how to check them</li>
+<li>CURIEs should follow a pattern (regular expression) so that they can be extracted from a text. We know <span class="citation" data-cites="Kafkas:2013fp">(Kafkas, Kim, &amp; McEntyre, <a href="#ref-Kafkas:2013fp">2013</a>)</span> that extracting identifiers from journal articles is possible, but difficult</li>
+</ul>
+<p>URIs don’t have the problems listed above: they resolve, are unique, and there is good understanding (and available tools) of how a valid URI should look like and how to extract URIs from text documents. That is why URIs are good representations of persistent identifiers.</p>
+<p>Another problem I have with CURIEs: the idea doesn’t seem to have caught on from the initial work more than five years ago (background reading <a href="http://manu.sporny.org/2011/case-for-curies/">here</a>). I’m not even sure what percentage of persistent identifier experts know about CURIEs.</p>
+<p>My recommendation for life sciences data: express persistent identifiers as URIs. Now that can go into 10 simple rules for the average life sciences researcher.</p>
+<h2 id="references">References</h2>
+<p>P.S. This blog uses a tool <a href="http://blog.martinfenner.org/2013/07/02/auto-generating-links-to-data-and-resources/">I wrote two years ago</a> that automatically turns CURIEs in the text into links.</p>
+<div class="references">
+<div id="ref-Kafkas:2013fp">
+<p>Kafkas, Ş., Kim, J.-H., &amp; McEntyre, J. R. (2013). Database Citation in Full Text Biomedical Articles. <em>PLoS ONE</em>. <a href="http://doi.org/10.1371/journal.pone.0063184">doi:10.1371/journal.pone.0063184</a></p>
+</div>
+<div id="ref-mcmurry_2015">
+<p>McMurry, J., Blomberg, N., Burdett, T., Conte, N., Dumontier, M., Fellows, D. K., … Parkinson, H. (2015). 10 Simple rules for design, provision, and reuse of persistent identifiers for life science data. <a href="http://doi.org/10.5281/zenodo.18003">doi:10.5281/zenodo.18003</a></p>
+</div>
+</div>
+</body></html>
+
+
+            <div class="license">
+              
+            </div>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gobbledy'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+          </div>
+        </div>
+
+        <!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+<span
+  class="Z3988"
+  title="ctx_ver=Z39.88-2004
+  &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+  &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+  &amp;rft.title=Human-readable and machine-readable Persistent Identifiers
+  &amp;rft.creator=Martin Fenner
+  &amp;rft.date=2015-05-27
+  &amp;rft.language=EN
+  &amp;rft.rights=CC0
+  &amp;rft_id=http://blog.martinfenner.org/2015/05/27/human-readable-machine-readable-persistent-identifiers">
+</span>
+
+        <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36379104-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <!-- Fluidbox https://github.com/terrymun/Fluidbox -->
+    <script src="/js/js-yaml.min.js"></script>
+    <script src="/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/jquery.fluidbox.min.js"></script>
+    <script type='text/javascript'>
+      $(function () {
+        $("a").fluidbox();
+      });
+    </script>
+
+    <!-- Bootstrap -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/jasny-bootstrap.min.js"></script>
+
+    <!-- MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>
