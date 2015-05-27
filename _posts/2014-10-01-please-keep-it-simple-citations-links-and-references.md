@@ -13,7 +13,7 @@ Citations are an essential part of scholarly documents, and they are summarized 
 * identifiers for biological databases such as GenBank that are typically included in the text as identifiers or as links
 * footnotes with links to external resources
 
-In other words: we are not consistent in how we cite other content. And this is a problem because we are making it more difficult than necessary for authors, publishers and everyone else to handle these various citation flavors and , more importantly, we are loosing citations along the way. This is a particular problem for data citation, as the seminal 2013 paper by Kafkas et al. [@Kafkas:2013fp] has shown for citations to the three biological databases ENA (European Nucleotide Archive), PDB and Uniprot:
+In other words: we are not consistent in how we cite other content. And this is a problem because we are making it more difficult than necessary for authors, publishers and everyone else to handle these various citation flavors and, more importantly, we are loosing citations along the way. This is a particular problem for data citation, as the seminal 2013 paper by Kafkas et al. [@Kafkas:2013fp] has shown for citations to the three biological databases ENA (European Nucleotide Archive), PDB and Uniprot:
 
 * there is a large numbers of accession numbers in the Open Access subset of PubMed Central (e.g. 160,112 ENA accession numbers for papers published up until June 2012)
 * text mining using the [Whatizit](http://www.ebi.ac.uk/webservices/whatizit/) tool can retrieve most of these identifiers
