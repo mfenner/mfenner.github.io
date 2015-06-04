@@ -120,7 +120,7 @@
 <span class="fu">copyright:</span> http://creativecommons.org/licenses/by/3.0/deed.en
 <span class="ot">---</span></code></pre></div>
 <h2 id="typography">Typography</h2>
-<p>Scholarly markdown should support <sup>superscript</sup> and <sub>subscript</sub> text, and should provide an easy way to enter greek <span class="math">\(\zeta\)</span> letters.</p>
+<p>Scholarly markdown should support <sup>superscript</sup> and <sub>subscript</sub> text, and should provide an easy way to enter greek <span class="math inline">\(\zeta\)</span> letters.</p>
 <h2 id="tables">Tables</h2>
 <p>Tables should work as anchors (i.e. you can link to them) and table captions should support styled text. Unless the table is very simple, tables are probably better written as CSV files with another tool, and then imported into the scholarly markdown document similar to figures.</p>
 <table>
@@ -161,8 +161,8 @@
 <p>Citations should include a citation key in the text, e.g. <code>[@kowalczyk2011]</code>, parsed as <span class="citation" data-cites="kowalczyk2011">(Kowalczyk &amp; Shankar, <a href="#ref-kowalczyk2011">2011</a>)</span>, and a separate bibliography file in BibTeX (or RIS) format that contains references for all citations. Inserting citations and creating the bibliography can best be done with a reference manager.</p>
 <p>Cross-links – i.e. links within a document – are important for scholarly texts. It should be possible to link to section headers (e.g. the beginning of the discussion section), figures and tables.</p>
 <h2 id="math">Math</h2>
-<p>Complicated math is probably best done in a different authoring environment, but simple formulas, both inline <span class="math">\(\sqrt2x\)</span> and block elements</p>
-<p><span class="math">\({\frac {d}{dx}}\arctan(\sin({x}^{2}))=-2\,{\frac {\cos({x}^{2})x}{-2+\left (\cos({x}^{2})\right )^{2}}}\)</span></p>
+<p>Complicated math is probably best done in a different authoring environment, but simple formulas, both inline <span class="math inline">\(\sqrt2x\)</span> and block elements</p>
+<p><span class="math inline">\({\frac {d}{dx}}\arctan(\sin({x}^{2}))=-2\,{\frac {\cos({x}^{2})x}{-2+\left (\cos({x}^{2})\right )^{2}}}\)</span></p>
 <p>should be supported by scholarly markdown.</p>
 <h2 id="comments">Comments</h2>
 <p>Comments are important for multi-author documents and if reviewer feedback should be included. Comments should be linked to a particular part of a document to provide context, or attached at the end of a document for general comments. It would also be helpful to “comment out” parts of a document, e.g. to indicate parts that are incomplete and need more work. Revisions of a markdown document are best handled using a version control system such as git.</p>

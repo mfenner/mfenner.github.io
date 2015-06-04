@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <title>Persistent Identifiers and URLs</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="persistent identifier" />
+
+    <!-- RDFa Metadata (in DublinCore) -->
+    <meta property="dc:title" content="Persistent Identifiers and URLs" />
+    <meta property="dc:format" content="text/html" />
+    <meta property="dc:language" content="en" />
+    <meta property="dc:identifier" content="/2015/06/03/persistent-idenfiers-urls" />
+    <meta property="dc:rights" content="CC-BY-NC" />
+    <meta property="dc:source" content="Gobbledygook" />
+    <meta property="dc:subject" content="Scholarly Communication" />
+    <meta property="dc:type" content="website" />
+
+    <!-- Google Scholar Metadata -->
+    <meta name="citation_title" content="Persistent Identifiers and URLs"/>
+    <meta name="citation_journal_title" content="Gobbledygook"/>
+
+    <link rel="alternate" type="application/rss+xml" title="Gobbledygook" href="/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Gobbledygook" href="/atom.xml" />
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/app-7b11536ae5581522c573f3f553590ae2.css">
+    <link rel="stylesheet" href="/assets/jasny-bootstrap.min-29c6b484ddca96fa14a48394c0cf415b.css">
+    <link rel="stylesheet" href="/assets/navmenu-push-f57c8aea8e44efd42b5d7fc575383151.css">
+    <link rel="stylesheet" href="/assets/fluidbox-cc1b5668a8c598b1c2fcc5e15e073f33.css">
+
+    <!-- d3.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.min.js"></script>
+
+    <!-- Typekit -->
+    <script type="text/javascript" src="//use.typekit.net/kil7puw.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  </head>
+
+
+  <body>
+    <nav id="navmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+  <a class="navmenu-brand" href="#">Gobbledygook</a>
+  <ul class="nav navmenu-nav">
+  
+    <li><span class="glyphicon glyphicon-time"></span> <a href="http://github.com/mfenner/blog/commits/source/_posts/2015-06-03-persistent-idenfiers-urls.md">Version History</a></li>
+    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#mfenner/mfenner.github.io/edit/source/_posts/2015-06-03-persistent-idenfiers-urls.md">Send Edit Request</a></li>
+    
+    <li><span class="glyphicon glyphicon-tags"></span> Tags
+      <ul class="tag-list">
+        
+        
+  
+  	<li><a href="/tags.html#persistent identifier-ref">persistent identifier</a></li>
+  
+
+
+
+      </ul>
+    </li>
+    
+    <li><span class="glyphicon glyphicon-home"></span> <a href="/">Home</a></li>
+    <li><span class="glyphicon glyphicon-info-sign"></span> <a href="/about.html">About</a></li>
+    <li><span class="glyphicon glyphicon-tags"></span> <a href="/tags.html">All Tags</a></li>
+  </ul>
+</nav>
+
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#navmenu" data-canvas="body">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="page-header">
+            <h1>Persistent Identifiers and URLs</h1>
+            <p>03 June 2015 by
+            
+            <a href="/about.html">Martin Fenner</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>Just like the rest of the internet, much of our scholarly infrastructure is built around the Hypertext Transfer Protocol (HTTP), increasingly HTTPS for security, and soon <a href="https://http2.github.io/">HTTP/2</a> for better performance. In this infrastructure Universal Resource Locators (URLs) are essential to locate resources (sic) such as scholarly articles, datasets, researchers, organizations, or grants. While this works for the most part, there are some issues with URLs - not specific to scholarly content, but particularly import here:<!--more--></p>
+<ol type="1">
+<li>multiple URLs can point to the same resource</li>
+<li>URLs can be long and look ugly</li>
+<li>URLs can change or break, making it hard or impossible to locate the resource</li>
+<li>we are used to central indexes (or databases) describing these resources, allowing us to do sophisticated queries not possible in a generic web search, e.g. find all publications by author John Doe, published since 2012.</li>
+</ol>
+<p>No. 1 is a problem relevant to all URLs, e.g. web searches or liking/commenting a particular web page. Originally suggested by Google, <a href="https://support.google.com/webmasters/answer/139066?hl=en">Canonical URLs</a> are essential for services such as Facebook or <a href="https://hypothes.is/blog/cross-format-annotation/">Hypothes.is</a>. They have been formalized in <a href="http://tools.ietf.org/html/rfc6596">rfc6596</a> and are commonly used.</p>
+<p>No. 2 can be a problem, in particular if we are not careful in designing appropriate URLs for landing pages (see next paragraph), but rather use something long and unreadable that also includes query parameters, etc. If we have no control over how the URL looks like, we can use URL shortener services such as <a href="https://bitly.com/">bit.ly</a>, which of course have become a common sight on the web. <a href="http://shortdoi.org/">ShortDOIs</a> are an URL shortener for DOIs, but they don’t seem to have gained much traction.</p>
+<p>No. 3 is a particularly important issue, commonly referred to as <strong>link rot</strong> and described extensively for the scholarly literature, e.g. by <span class="citation" data-cites="klein_2014bj">(Klein et al., <a href="#ref-klein_2014bj">2014</a>)</span>. There are several technical solutions to this problem, a common approach is to use a landing page for the resource that will never change (and follows the recommendations by Tim Berners-Lee for <a href="(http://www.w3.org/Provider/Style/URI.html)">Cool URIs</a>), and then use redirection to point to the current location of the resource. This is easily for changes of the URL path using web server <a href="http://httpd.apache.org/docs/2.4/rewrite/remapping.html">redirect rules</a>. It gets more complicated if the server name also changes, in particular if it is the server holding the landing page. Thinking this through you realize that the only way this can be done on a larger scale is via one or more centralized services that not only provide the technical infrastructure for a central redirection (or resolver) service, but also come with a social contract of rules that everyone submitting URLs to the service has to follow - a major difference to URL shorteners, which don’t solve the link rot problem.</p>
+<p>The above is of course a description of the DOI service provided by CrossRef, DataCite, and others, as well as similar persistent identifier services. Unfortunately some persistent identifier services don’t do the above: they create and use persistent identifiers, but there is no central resolver service that maps these identifiers back to URLs. This breaks the integration with the bigger scholarly infrastructure based on URLs. One common example are nucleotide sequences such as U65091 <span class="citation" data-cites="U65091">(Shioda, Fenner, &amp; Isselbacher, <a href="#ref-U65091">1997</a>)</span>, there is no single corresponding URL because the sequence can be found in all three main nucleotide databases: <a href="http://www.ncbi.nlm.nih.gov/nuccore/U65091" class="uri">http://www.ncbi.nlm.nih.gov/nuccore/U65091</a>, <a href="http://www.ebi.ac.uk/ena/data/view/U65091" class="uri">http://www.ebi.ac.uk/ena/data/view/U65091</a>, and <a href="http://getentry.ddbj.nig.ac.jp/getentry/na/U65091" class="uri">http://getentry.ddbj.nig.ac.jp/getentry/na/U65091</a>. It would help to have a central resolver, e.g. <a href="http://nucleotide.org/U65091" class="uri">http://nucleotide.org/U65091</a> that then redirects to one of the three databases based on geographical location or user preference.</p>
+<p>There are also problems with DOIs. They use the <a href="http://www.handle.net/">Handle</a> system to resolve the identifier to a location, and this system was built in the 1990s as infrastructure <a href="http://www.handle.net/faq.html">independent of</a> URLs or DNS (Domain Name Service), at a time when it wasn’t clear yet that URLs and associated standards would become ubiquitous. I don’t have numbers, but practically all DOIs are of course now resolved to URLs using the <a href="http://www.doi.org/factsheets/DOIProxy.html">DOI proxy server</a> at <a href="http://doi.org" class="uri">http://doi.org</a> (preferred) or <a href="http://dx.doi.org" class="uri">http://dx.doi.org</a>. One main consequence of this is that DOIs are frequently not written as URLs - e.g. doi:10.5555/12345678 instead of <a href="http://doi.org/10.5555/12345678" class="uri">http://doi.org/10.5555/12345678</a> - again breaking the integration with the bigger scholarly infrastructure. The CrossRef <a href="http://www.crossref.org/02publishers/doi_display_guidelines.html">DOI display guidelines</a> clearly state that DOIs should be written as URLs in <em>the online environment</em>, which basically is whenever DOIs are used, as PDFs and even Word documents know how to handle URLs. Unfortunately this guideline is still frequently ignored. The above is of course also true for other persistent identifiers using the Handle system, e.g. <a href="http://www.pidconsortium.eu/">EPIC</a>.</p>
+<p>The other problem with the DOI system is that it doesn’t address issue No. 4, i.e. provide a central metadata index for the resources that use the system. This job is left to the DOI registration agencies such as CrossRef and DataCite, who have implemented a central metadata store (e.g. <a href="http://search.crossref.org/">CrossRef</a>, <a href="http://search.datacite.org">DataCite</a>) in different ways (e.g. using different metadata schemata), or not at all. This means that we have to look in several places to find all DOis associated with author John Doe, published since 2012. Obviously we are used to looking up information in multiple places, but not being able to look up the metadata for a DOI without some extra work (finding out the registration agency for the DOI and then going to the respective metadata store) is a problem. One way around these problems is to use the <a href="http://www.crosscite.org/cn/">DOI Content Negotiation Service</a>.</p>
+<p>Another problem with the DOI system is more a social than a technical issue. Neither CrossRef nor DataCite seem to enfource that DOIs should alsways resolve to URLs when using a computer program. DOI resolution for humans works fine, but computers, e.g. command line tools such as cURL, can run into issues such as requiring cookies, javascript or user input, or permission problems getting to the journal landing page (see <a href="http://blog.martinfenner.org/2013/10/13/broken-dois">this earlier blog post</a> for some numbers). People seem to forget that a DOI that is not actionable is not really useful, and that scholarly infrastructure is not only used by people, but of course also by automated tools.</p>
+<p>The persistent identifiers used in our scholarly infrastructure would benefit from a clearer focus on the problems they should solve, startin with No. 1-4 above. One problem is that we probably focus too much on the persistence problem, implied also by the term <strong>persistent identifier</strong> or <strong>PID</strong>. What we have neglected is the resolvable problem, i.e. making as easy as possible to get from the persistent identifier to the resource and/or its metadata. Based on the <a href="http://www.knowledge-exchange.info/Default.aspx?ID=462">Den Haag Manifesto</a> and suggested by Todd Vision, we therefore proposed the term <strong>trusted identifier</strong> with the following characteristics in the conceptual model of interoperability for the <a href="http://odin-project.eu/">ODIN Project</a> <span class="citation" data-cites="odin_2013">(ODIN Project, Fenner, Thorisson, Ruiz, &amp; Brase, <a href="#ref-odin_2013">2013</a>)</span>:</p>
+<ul>
+<li>are unique on a global scale, allowing large numbers of unique identifiers</li>
+<li>resolve as HTTP URI’s with support for content negotiation, and these HTTP URI’s should be persistent.</li>
+<li>come with metadata that describe their most relevant properties, including a minimum set of common metadata elements. A search of metadata elements across all trusted identifiers of that service should be possible.</li>
+<li>are interoperable with other identifiers through metadata elements that describe their relationship.</li>
+<li>are issued and managed by an organization that focuses on that goal as its primary mission, has a sustainable business model and a critical mass of member organizations that have agreed to common procedures and policies, has a governing body, and is committed to using open technologies.</li>
+</ul>
+<p>While not directly relevant for resolving persistent identifiers as URLs, the last point is really important for any persistent identifier infrastructure, described in detail recently by <span class="citation" data-cites="bilder_2015">(Bilder, Lin, &amp; Neylon, <a href="#ref-bilder_2015">2015</a>)</span>.</p>
+<p>If I would design a persistent identifier service today (as if we would need yet another persistent identifier service), I would build the system around an URL shortening service that I control. The URLs could look very similar to what we have with DOIs now, e.g. <a href="http://doi.org/10.5555/12345678" class="uri">http://doi.org/10.5555/12345678</a>, but it would be clear that persistent identifiers are URLs, not something separate. Plus we could take adavantage of all the lessons learned - and possibly even reuse open source code - with URL shorteners, which are much more widely used than scholarly persistent identifiers.</p>
+<div class="references">
+<h2 id="references" class="unnumbered">References</h2>
+<div id="ref-bilder_2015">
+<p>Bilder, G., Lin, J., &amp; Neylon, C. (2015). Principles for open scholarly infrastructures-v1. <a href="http://doi.org/10.6084/m9.figshare.1314859">doi:10.6084/m9.figshare.1314859</a></p>
+</div>
+<div id="ref-klein_2014bj">
+<p>Klein, M., Van de Sompel, H., Sanderson, R., Shankar, H., Balakireva, L., Zhou, K., &amp; Tobin, R. (2014). Scholarly context not found: one in five articles suffers from reference rot. <em>PLoS ONE</em>, <em>9</em>(12), e115253. <a href="http://doi.org/10.1371/journal.pone.0115253">doi:10.1371/journal.pone.0115253</a></p>
+</div>
+<div id="ref-odin_2013">
+<p>ODIN Project, Fenner, M., Thorisson, G., Ruiz, S., &amp; Brase, J. (2013). D4.1 conceptual model of interoperability. <a href="http://doi.org/10.6084/m9.figshare.824314">doi:10.6084/m9.figshare.824314</a></p>
+</div>
+<div id="ref-U65091">
+<p>Shioda, T., Fenner, M. H., &amp; Isselbacher, K. J. (1997). Mus musculus melanocyte-specific gene 1 (msg1) mRNA, complete cds. ENA. Retrieved from <a href="http://www.ebi.ac.uk/ena/data/view/U65091" class="uri">http://www.ebi.ac.uk/ena/data/view/U65091</a></p>
+</div>
+</div>
+</body></html>
+
+
+            <div class="license">
+              
+            </div>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gobbledy'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+          </div>
+        </div>
+
+        <!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+<span
+  class="Z3988"
+  title="ctx_ver=Z39.88-2004
+  &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+  &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+  &amp;rft.title=Persistent Identifiers and URLs
+  &amp;rft.creator=Martin Fenner
+  &amp;rft.date=2015-06-03
+  &amp;rft.language=EN
+  &amp;rft.rights=CC0
+  &amp;rft_id=http://blog.martinfenner.org/2015/06/03/persistent-idenfiers-urls">
+</span>
+
+        <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36379104-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <!-- Fluidbox https://github.com/terrymun/Fluidbox -->
+    <script src="/js/js-yaml.min.js"></script>
+    <script src="/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/jquery.fluidbox.min.js"></script>
+    <script type='text/javascript'>
+      $(function () {
+        $("a").fluidbox();
+      });
+    </script>
+
+    <!-- Bootstrap -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/jasny-bootstrap.min.js"></script>
+
+    <!-- MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>

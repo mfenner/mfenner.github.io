@@ -14,6 +14,7 @@ http://blog.martinfenner.org/page4/index.html
 http://blog.martinfenner.org/page5/index.html
 http://blog.martinfenner.org/page6/index.html
 
+http://blog.martinfenner.org/2015/06/03/persistent-idenfiers-urls
 http://blog.martinfenner.org/2015/05/27/human-readable-machine-readable-persistent-identifiers
 http://blog.martinfenner.org/2015/04/23/introducing-scholarly-markdown-bundle
 http://blog.martinfenner.org/2015/03/23/blogging-beyond-jekyll
