@@ -4,7 +4,7 @@
  <title>Gobbledygook</title>
  <link href="http://blog.martinfenner.org//atom.xml" rel="self"/>
  <link href="http://blog.martinfenner.org"/>
- <updated>2015-06-04T06:23:20+00:00</updated>
+ <updated>2015-06-04T07:21:30+00:00</updated>
  <id>http://blog.martinfenner.org</id>
  <author>
    <name>Martin Fenner</name>
@@ -17,7 +17,7 @@
    <link href="http://blog.martinfenner.org/2015/06/03/persistent-idenfiers-urls"/>
    <updated>2015-06-03T00:00:00+00:00</updated>
    <id>http://blog.martinfenner.org/2015/06/03/persistent-idenfiers-urls</id>
-   <content type="html">&lt;p&gt;Just like the rest of the internet, much of our scholarly infrastructure is built around the Hypertext Transfer Protocol (HTTP), increasingly HTTPS for security, and soon &lt;a href=&quot;https://http2.github.io/&quot;&gt;HTTP/2&lt;/a&gt; for better performance. In this infrastructure Universal Resource Locators (URLs) are essential to locate resources (sic) such as scholarly articles, datasets, researchers, organizations, or grants. While this works for the most part, there are some issues with URLs - not specific to scholarly content, but particularly import here:&lt;!--more--&gt;&lt;/p&gt;
+   <content type="html">&lt;p&gt;Just like the rest of the internet, much of our scholarly infrastructure is built around the Hypertext Transfer Protocol (HTTP), increasingly HTTPS for security, and soon &lt;a href=&quot;https://http2.github.io/&quot;&gt;HTTP/2&lt;/a&gt; for better performance. In this infrastructure Universal Resource Locators (URLs) are essential to locate resources (sic) such as scholarly articles, datasets, researchers, organizations, or grants. Read &lt;a href=&quot;http://site.thomsonreuters.com/site/data-identifiers/&quot;&gt;this&lt;/a&gt; recent Thomson Reuters report for a good recent perspective on this topic. While this works for the most part, there are some issues with URLs - not specific to scholarly content, but particularly import here:&lt;!--more--&gt;&lt;/p&gt;
 &lt;ol type=&quot;1&quot;&gt;
 &lt;li&gt;multiple URLs can point to the same resource&lt;/li&gt;
 &lt;li&gt;URLs can be long and look ugly&lt;/li&gt;
@@ -41,6 +41,7 @@
 &lt;/ul&gt;
 &lt;p&gt;While not directly relevant for resolving persistent identifiers as URLs, the last point is really important for any persistent identifier infrastructure, described in detail recently by &lt;span class=&quot;citation&quot; data-cites=&quot;bilder_2015&quot;&gt;(Bilder, Lin, &amp;amp; Neylon, &lt;a href=&quot;#ref-bilder_2015&quot;&gt;2015&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;If I would design a persistent identifier service today (as if we would need yet another persistent identifier service), I would build the system around an URL shortening service that I control. The URLs could look very similar to what we have with DOIs now, e.g. &lt;a href=&quot;http://doi.org/10.5555/12345678&quot; class=&quot;uri&quot;&gt;http://doi.org/10.5555/12345678&lt;/a&gt;, but it would be clear that persistent identifiers are URLs, not something separate. Plus we could take adavantage of all the lessons learned - and possibly even reuse open source code - with URL shorteners, which are much more widely used than scholarly persistent identifiers.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Update 6/4/15: added link to Thomson Reuters &lt;a href=&quot;http://site.thomsonreuters.com/site/data-identifiers/&quot;&gt;report&lt;/a&gt; on identifiers and open data.&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&quot;references&quot;&gt;
 &lt;h2 id=&quot;references&quot; class=&quot;unnumbered&quot;&gt;References&lt;/h2&gt;
 &lt;div id=&quot;ref-bilder_2015&quot;&gt;
