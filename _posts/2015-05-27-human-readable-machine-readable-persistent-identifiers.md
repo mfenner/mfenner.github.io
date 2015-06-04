@@ -27,6 +27,6 @@ Another problem I have with CURIEs: the idea doesn't seem to have caught on from
 
 My recommendation for life sciences data: express persistent identifiers as URIs. Now that can go into 10 simple rules for the average life sciences researcher.
 
-## References
+*P.S. This blog uses a tool [I wrote two years ago](http://blog.martinfenner.org/2013/07/02/auto-generating-links-to-data-and-resources/) that automatically turns CURIEs in the text into links.*
 
-P.S. This blog uses a tool [I wrote two years ago](http://blog.martinfenner.org/2013/07/02/auto-generating-links-to-data-and-resources/) that automatically turns CURIEs in the text into links.
+## References
