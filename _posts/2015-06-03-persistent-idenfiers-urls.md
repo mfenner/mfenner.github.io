@@ -4,7 +4,7 @@ title: Persistent Identifiers and URLs
 tags: [persistent identifier]
 ---
 
-Just like the rest of the internet, much of our scholarly infrastructure is built around the Hypertext Transfer Protocol (HTTP), increasingly HTTPS for security, and soon [HTTP/2](https://http2.github.io/) for better performance. In this infrastructure Universal Resource Locators (URLs) are essential to locate resources (sic) such as scholarly articles, datasets, researchers, organizations, or grants. While this works for the most part, there are some issues with URLs - not specific to scholarly content, but particularly import here:<!--more-->
+Just like the rest of the internet, much of our scholarly infrastructure is built around the Hypertext Transfer Protocol (HTTP), increasingly HTTPS for security, and soon [HTTP/2](https://http2.github.io/) for better performance. In this infrastructure Universal Resource Locators (URLs) are essential to locate resources (sic) such as scholarly articles, datasets, researchers, organizations, or grants. Read [this](http://site.thomsonreuters.com/site/data-identifiers/) recent Thomson Reuters report for a good recent perspective on this topic. While this works for the most part, there are some issues with URLs - not specific to scholarly content, but particularly import here:<!--more-->
 
 1. multiple URLs can point to the same resource
 2. URLs can be long and look ugly
@@ -41,5 +41,7 @@ primary mission, has a sustainable business model and a critical mass of member 
 While not directly relevant for resolving persistent identifiers as URLs, the last point is really important for any persistent identifier infrastructure, described in detail recently by [@bilder_2015].
 
 If I would design a persistent identifier service today (as if we would need yet another persistent identifier service), I would build the system around an URL shortening service that I control. The URLs could look very similar to what we have with DOIs now, e.g. [http://doi.org/10.5555/12345678](http://doi.org/10.5555/12345678), but it would be clear that persistent identifiers are URLs, not something separate. Plus we could take adavantage of all the lessons learned - and possibly even reuse open source code - with URL shorteners, which are much more widely used than scholarly persistent identifiers.
+
+*Update 6/4/15: added link to Thomson Reuters [report](http://site.thomsonreuters.com/site/data-identifiers/) on identifiers and open data.*
 
 ## References
