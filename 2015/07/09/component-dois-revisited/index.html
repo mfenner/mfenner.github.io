@@ -2,22 +2,22 @@
 <html lang="en">
 
     <head>
-    <title>Pages</title>
+    <title>Component DOIs Revisited</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="" />
+    <meta name="keywords" content="doi" />
 
     <!-- RDFa Metadata (in DublinCore) -->
-    <meta property="dc:title" content="Pages" />
+    <meta property="dc:title" content="Component DOIs Revisited" />
     <meta property="dc:format" content="text/html" />
     <meta property="dc:language" content="en" />
-    <meta property="dc:identifier" content="/pages.html" />
+    <meta property="dc:identifier" content="/2015/07/09/component-dois-revisited" />
     <meta property="dc:rights" content="CC-BY-NC" />
     <meta property="dc:source" content="Gobbledygook" />
     <meta property="dc:subject" content="Scholarly Communication" />
     <meta property="dc:type" content="website" />
 
     <!-- Google Scholar Metadata -->
-    <meta name="citation_title" content="Pages"/>
+    <meta name="citation_title" content="Component DOIs Revisited"/>
     <meta name="citation_journal_title" content="Gobbledygook"/>
 
     <link rel="alternate" type="application/rss+xml" title="Gobbledygook" href="/rss.xml" />
@@ -51,8 +51,21 @@
   <a class="navmenu-brand" href="#">Gobbledygook</a>
   <ul class="nav navmenu-nav">
   
-    <li><span class="glyphicon glyphicon-time"></span> <a href="http://github.com/mfenner/blog/commits/source/pages.html">Version History</a></li>
-    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#mfenner/mfenner.github.io/edit/source/pages.html">Send Edit Request</a></li>
+    <li><span class="glyphicon glyphicon-time"></span> <a href="http://github.com/mfenner/blog/commits/source/_posts/2015-07-09-component-dois-revisited.md">Version History</a></li>
+    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#mfenner/mfenner.github.io/edit/source/_posts/2015-07-09-component-dois-revisited.md">Send Edit Request</a></li>
+    
+    <li><span class="glyphicon glyphicon-tags"></span> Tags
+      <ul class="tag-list">
+        
+        
+  
+  	<li><a href="/tags.html#doi-ref">doi</a></li>
+  
+
+
+
+      </ul>
+    </li>
     
     <li><span class="glyphicon glyphicon-home"></span> <a href="/">Home</a></li>
     <li><span class="glyphicon glyphicon-info-sign"></span> <a href="/about.html">About</a></li>
@@ -73,8 +86,10 @@
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <div class="page-header">
-            <h1>Pages</h1>
-            <p>
+            <h1>Component DOIs Revisited</h1>
+            <p>09 July 2015 by
+            
+            <a href="/about.html">Martin Fenner</a>
             </p>
           </div>
         </div>
@@ -85,114 +100,19 @@
           <div class="col-md-8 col-md-offset-2">
             <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body>
-<h2>All Pages</h2>
-<ul>
+<p>Four years ago I wrote a <a href="http://blogs.plos.org/mfenner/2011/03/26/direct-links-to-figures-and-tables-using-component-dois/">blog post</a> about component DOIs. It is time to revisit the topic, in particular since our approach to citing data associated with a publication has changed since 2011.<!--more--></p>
+<p>Component DOIs are explained in the <a href="http://help.crossref.org/components">CrossRef Help System</a>:</p>
+<blockquote>
+<p>DOIs may be assigned to items that are part of a journal article, book chapter, or any other content item. A component would typically be a figure, table, or image which is part of or referred to by the parent item. Assigning a DOI to a component allows direct linking to the component item.</p>
+</blockquote>
+<p>Component DOIs are DOIs, i.e. persistent identifiers that link directly to the resource in question, e.g. a figure in a publication. The component DOI for a figure in a PLOS paper used in the 2011 post still <a href="http://doi.org/10.1371/journal.pone.0006022.g002">works as expected</a>, despite changes to the URL of the journal landing page.</p>
+<p>The problem with component DOIs is the problem with DOIs in general: there is basic functionality common to all DOIs, and there are additional services specific to subgroups of DOIs. This confuses users - in particular since there is no easy way to immediately see what kind of DOI they have in front of them - and in the case of component DOIs there is one important feature missing.</p>
+<p>DOis are assigned by registration agencies (CrossRef and DataCite are the most relevant ones for scholarly content), and these RAs have built different services around DOIs, e.g. different ways to describe and search the metadata (title, authors, etc.) associated with a DOI. Component DOIs are again different, the most important difference is that in the CrossRef implementation they they are not discoverable by querying the CrossRef system <span class="citation" data-cites="Sweeney_2010">(<span class="citeproc-not-found" data-reference-id="Sweeney_2010"><strong>???</strong></span>)</span>.</p>
+<p>In essence, a component DOI is a <strong>DOI light</strong>. We can use them for persistent linking, but we can’t use them for discovery via the CrossRef Metadata Search (and by extension other indexing services). A common use case for component DOIs is supplementary information in a journal article. Content in supplementary information files is already much harder to find than content in the body of an article, using component DOIs instead of regular DOIs makes the content again harder to find.</p>
+<p>All of this might not have been much of an issue when I wrote the 2011 post, but making the data underlying a publication publicly available and discoverable is increasingly becoming something that funders, publishers and institutions expect. Most of these data are not deposited in dedicated data repositories, but in supplementary information files (for PLOS articles published since March 2014 this is true for more than 50% of papers). Using regular DOIs for supplementary information files with proper metadata and proper inclusion in indexing services will make it easier to find, access and reuse these data. Unfortunately that still leaves us with the problem that the supplementary information files then will have CrossRef DOIs, whereas data repositories typically use DataCite DOIs, so that we need to search for these datasets in two different places. But that is material for another post.</p>
+<div class="references">
 
-
-  
-    
-    	
-    	<li><a href="/atom.xml">Atom Feed</a></li>
-    	
-    
-  
-
-  
-    
-    	
-    	<li><a href="/rss.xml">RSS Feed</a></li>
-    	
-    
-  
-
-  
-
-  
-
-  
-    
-    	
-    	<li><a href="/about.html">About</a></li>
-    	
-    
-  
-
-  
-    
-    	
-    	<li><a href="/tags.html">Tags</a></li>
-    	
-    
-  
-
-  
-    
-    	
-    	<li class="active"><a href="/pages.html" class="active">Pages</a></li>
-    	
-    
-  
-
-  
-    
-    	
-    	<li><a href="/sitemap.txt">Sitemap</a></li>
-    	
-    
-  
-
-  
-    
-    	
-    	<li><a href="/index.html">Gobbledygook</a></li>
-    	
-    
-  
-
-  
-    
-    	
-    	<li><a href="/page2/index.html">Gobbledygook</a></li>
-    	
-    
-  
-
-  
-    
-    	
-    	<li><a href="/page3/index.html">Gobbledygook</a></li>
-    	
-    
-  
-
-  
-    
-    	
-    	<li><a href="/page4/index.html">Gobbledygook</a></li>
-    	
-    
-  
-
-  
-    
-    	
-    	<li><a href="/page5/index.html">Gobbledygook</a></li>
-    	
-    
-  
-
-  
-    
-    	
-    	<li><a href="/page6/index.html">Gobbledygook</a></li>
-    	
-    
-  
-
-
-
-
-</ul>
+</div>
 </body></html>
 
 
@@ -224,12 +144,12 @@
   title="ctx_ver=Z39.88-2004
   &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
   &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
-  &amp;rft.title=Pages
+  &amp;rft.title=Component DOIs Revisited
   &amp;rft.creator=Martin Fenner
-  &amp;rft.date=
+  &amp;rft.date=2015-07-09
   &amp;rft.language=EN
   &amp;rft.rights=CC0
-  &amp;rft_id=http://blog.martinfenner.org/pages.html">
+  &amp;rft_id=http://blog.martinfenner.org/2015/07/09/component-dois-revisited">
 </span>
 
         <script type="text/javascript">
