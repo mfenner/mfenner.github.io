@@ -120,6 +120,9 @@ DEPENDENCIES
   jekyll-oembed!
   jekyll-pandoc (~> 0.0.1)
   jekyll-scholar (~> 2.0.0)
-  psych (~> 2.0.5)
+  psych (= 2.0.5)
   rake (~> 10.2.1)
   sass (~> 3.2.14)
+
+BUNDLED WITH
+   1.10.6
