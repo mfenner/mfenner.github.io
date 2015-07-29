@@ -6,7 +6,7 @@ before_install:
 install:
 - "./travis-tool.sh install_github rstudio/rmarkdown"
 - "./travis-tool.sh install_deps"
-- travis_retry cabal install pandoc pandoc-citeproc network-uri
+- travis_retry cabal install network-uri pandoc pandoc-citeproc
 - travis_retry bundle install
 script: bundle exec rake site:deploy --quiet
 env:
