@@ -110,8 +110,7 @@
 <p>The journal article has been a (mainly) textual document for many centuries not because this is the essence of science communication, but rather because there was no practical way to include all the other information (raw data, tools used for experiments, etc.). Very few of these limitations remain with the digital journal article that we have since the 1990s, but we have for the most part failed to change the format other than going from paper to PDF. One of many examples: figures in publications typically still are has limited as they were decades ago with no way to see the data underlying the figure, options for selecting what data points are shown, or animation for time-based information.</p>
 <p>So what we really care about is the sum of artifacts and resources that together make what Carol Goble and others call research object <span class="citation" data-cites="bechhofer_2010ib">(Bechhofer et al., 2010)</span>, the journal article is an important part, but clearly doesn’t include everthing that is needed to understand and reproduce the work. Reference lists can help with linking to some of the resources not included in the article text, but they typically don’t link to supplementary information or other places where the underlying data are made available, or to the figures of the article. Although some publishers provide navigation tools for readers to get to this information, what we really need is a machine-readable list of all the resources used in an article.</p>
 <p>As it happens, this is exactly what the ePub format for electronic books is doing, as every ePub must include a manifest file that lists all the files that are part of the publication, defined in the <a href="http://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm">Open Packaging Format (OPF)</a>. I need to do more research to figure out how to do this with <a href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/index.html">JATS</a>, the standard for scholarly articles, and how to generate something similar to the manifest file when using different formats, e.g. html or markdown. This has to be linked to some of the information we are collecting already, e.g. described in JATS <span class="citation" data-cites="beck_2011hz">(Beck, 2011)</span>, or the <code>relatedIdentifier</code> in the DataCite metadata <span class="citation" data-cites="starr_2014cs">(Starr, 2014)</span>.</p>
-<div class="references">
-<h2 id="references" class="unnumbered">References</h2>
+<h2 id="references" class="references unnumbered">References</h2>
 <div id="ref-bechhofer_2010ib">
 <p>Bechhofer, S., Bechhofer, S., De Roure, D., Gamble, M., Goble, C., &amp; Buchan, I. (2010). Research Objects: Towards Exchange and Reuse of Digital Knowledge. <em>Nature Precedings</em>, (713). <a href="http://doi.org/10.1038/npre.2010.4626.1">doi:10.1038/npre.2010.4626.1</a></p>
 </div>
@@ -120,7 +119,6 @@
 </div>
 <div id="ref-starr_2014cs">
 <p>Starr, J. (2014). DataCite Metadata Schemafor the Publication and Citation of Research Data, 1–38. <a href="http://doi.org/10.5438/0010">doi:10.5438/0010</a></p>
-</div>
 </div>
 </body></html>
 

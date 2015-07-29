@@ -1,7 +1,7 @@
 ---
 orcid: 0000-0003-1419-2405
 created_at: '2012-10-08T20:49:20+00:00'
-updated_at: '2015-06-18T16:54:41+00:00'
+updated_at: '2015-07-28T07:56:51+00:00'
 biography: Martin Fenner is the technical lead for the PLOS Article-Level Metrics
   project. Before taking this position in 2012 he worked as a medical oncologist at
   the Hannover Medical School Cancer Center in Germany. He has served on the ORCID
@@ -9,6 +9,76 @@ biography: Martin Fenner is the technical lead for the PLOS Article-Level Metric
 given_names: Martin
 family_name: Fenner
 references:
+- DOI: 10.5281/ZENODO.21429
+  URL: http://dx.doi.org/10.5281/ZENODO.21429
+  author:
+  - family: Fenner
+  - family: Martin
+    given: Gudmundur A. Thorisson
+  publisher: Zenodo
+  title: ! 'omniauth-orcid: v.1.0'
+  genre: misc
+  id: fenner2015a
+  type: ''
+  issued:
+    date-parts:
+    - - 2015
+- DOI: 10.6084/M9.FIGSHARE.1393402
+  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.1393402
+  author:
+  - family: Fenner
+  - family: Martin
+    given: PLOS ALM John Kratz Matt Jones Jennifer Lin
+  publisher: Figshare
+  title: Make Data Count - April 2015 Progress Update
+  genre: misc
+  id: fenner2015b
+  type: ''
+  issued:
+    date-parts:
+    - - 2015
+- DOI: 10.5281/ZENODO.20046
+  URL: http://dx.doi.org/10.5281/ZENODO.20046
+  author:
+  - family: Chodacki
+  - family: John
+    given: Martin Fenner Jen Song Zach Dennis Martyn Whitwell Joe Osowski Ruth Ivimey-Cook
+      Richard Cave Jennifer Lin
+  publisher: Zenodo
+  title: Lagotto 4.2.1
+  genre: misc
+  id: chodacki2015a
+  type: ''
+  issued:
+    date-parts:
+    - - 2015
+- DOI: 10.5281/ZENODO.21430
+  URL: http://dx.doi.org/10.5281/ZENODO.21430
+  author:
+  - family: Peters
+  - family: Robert
+    given: Martin Fenner Karl Jonathan Ward Gudmundur A. Thorisson
+  publisher: Zenodo
+  title: ! 'DataCite-ORCID: 1.0'
+  genre: misc
+  id: peters2015a
+  type: ''
+  issued:
+    date-parts:
+    - - 2015
+- DOI: 10.2314/COSCV2
+  URL: http://dx.doi.org/10.2314/COSCV2
+  author:
+  - family: Fenner
+    given: Martin
+  publisher: Technische Informationsbibliothek (TIB), Hannover
+  title: CoScience - Gemeinsam forschen und publizieren mit dem Netz
+  genre: misc
+  id: fenner2015c
+  type: ''
+  issued:
+    date-parts:
+    - - 2015
 - title: Unique Identifiers for Researchers
   ISBN: 978-3-319-00025-1
   URL: http://dx.doi.org/10.1007/978-3-319-00026-8_21
@@ -107,6 +177,33 @@ references:
   issued:
     date-parts:
     - - 2014
+- DOI: 10.2314/COSCV1
+  URL: http://dx.doi.org/10.2314/COSCV1
+  author:
+  - family: Fenner
+    given: Martin
+  publisher: Technische Informationsbibliothek (TIB), Hannover
+  title: CoScience - Gemeinsam forschen und publizieren mit dem Netz
+  genre: misc
+  id: fenner2014c
+  type: ''
+  issued:
+    date-parts:
+    - - 2014
+- DOI: 10.6084/M9.FIGSHARE.1048991
+  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.1048991
+  author:
+  - family: Lin
+  - family: Jennifer
+    given: PLOS ALM Martin Fenner
+  publisher: Figshare
+  title: An analysis of Wikipedia references across PLOS publications
+  genre: misc
+  id: lin2014a
+  type: ''
+  issued:
+    date-parts:
+    - - 2014
 - title: Altmetrics and Other Novel Measures for Scientific Impact
   ISBN: 978-3-319-00025-1
   URL: http://dx.doi.org/10.1007/978-3-319-00026-8_12
@@ -117,12 +214,26 @@ references:
     given: Martin
   page: 179-189
   genre: book
-  id: fenner2014c
+  id: fenner2014d
   type: ''
   issued:
     date-parts:
     - - 2014
       - 12
+- DOI: 10.6084/M9.FIGSHARE.1066168
+  URL: http://dx.doi.org/10.6084/M9.FIGSHARE.1066168
+  author:
+  - family: Costas
+  - family: Rodrigo
+    given: Zohreh Zahedi Martin Fenner
+  publisher: Figshare
+  title: 1000 random PLOS ONE DOIs from 2013
+  genre: misc
+  id: costas2014b
+  type: ''
+  issued:
+    date-parts:
+    - - 2014
 - title: Prospective randomized double-blind multicenter phase II study comparing
     chemotherapy with gemcitabine and cisplatin plus sorafenib vs gemcitabine and
     cisplatin plus placebo in locally advanced and/or metastasized urothelial cancer
