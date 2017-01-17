@@ -1,12 +1,14 @@
 ---
 layout: post
-title: "Six Misunderstandings about Scholarly Markdown"
-tags: [markdown]
+title: Six Misunderstandings about Scholarly Markdown
+tags:
+  - markdown
+published: true
 ---
 In this post I want to talk about some of the misunderstandings I frequently encounter when discussing [markdown as a format for authoring scholarly documents](/2013/06/17/what-is-scholarly-markdown/).<!--more-->
 
 ## Scholars will always use Microsoft Word
-Microsoft Word is of course what almost all authors use in the life sciences and many other disciplines. One big reason for this is the file formats accepted my manuscript submission systems. By limiting the options to Microsoft Word (and maybe LaTeX), you make it impossible for authors to use other tools, even if they wanted to. Publishers should accept manuscripts in any reasonable file format, as I have [argued before](http://blog.martinfenner.org/2013/11/17/the-grammar-of-scholarly-communication/).
+Microsoft Word is of course what almost all authors use in the life sciences and many other disciplines. One big reason for this is the file formats accepted by manuscript submission systems. By limiting the options to Microsoft Word (and maybe LaTeX), you make it impossible for authors to use other tools, even if they wanted to. Publishers should accept manuscripts in any reasonable file format, as I have [argued before](http://blog.martinfenner.org/2013/11/17/the-grammar-of-scholarly-communication/).
 
 ## My markup language is better than markdown
 There are of course numerous alternatives to markdown, including [Textile](http://txstyle.org/), [AsciiDoc](http://www.methods.co.nz/asciidoc/), [MediaWiki Markup](http://www.mediawiki.org/wiki/Help:Formatting) and [reStructuredText](http://docutils.sourceforge.net/docs/ref/rst/introduction.html). There will always be features that are better implemented in one of these languages, but I don't think there is room for more than one major initiative for a scholarly markup language. And markdown has the right mix of features and broad support by tools and the community.
